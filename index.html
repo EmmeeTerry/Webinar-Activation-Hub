@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Webinar Activation Hub</title>
+<style>
+
+:root {
+  --red1:#FA000F; --red2:#CC0000; --red-half:#FAE6E6;
+  --black:#0C0C0C; --gray6:#222222; --gray5:#4D4D4D; --gray4:#737373;
+  --gray3:#B3B3B3; --gray2:#D9D9D9; --gray1:#F4F4F4; --white:#FFFFFF;
+  --ink:#222222; --muted:#737373; --line:#D9D9D9; --bg:#F4F4F4; --panel:#FFFFFF;
+  --shadow:0 12px 32px rgba(12,12,12,.09);
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Hitachi Sans",Arial,Helvetica,sans-serif;color:var(--ink);background:var(--bg);font-size:14px}
+a{color:inherit}
+.header{background:var(--white);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+.brandbar{height:6px;background:var(--red1)}
+.topbar{max-width:1450px;margin:auto;padding:22px 28px 20px;display:flex;align-items:flex-start;justify-content:space-between;gap:24px}
+.company{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gray5);margin-bottom:9px}
+h1{font-family:"Hitachi Sans",Arial,Helvetica,sans-serif;font-weight:400;font-size:34px;line-height:1.08;margin:0 0 8px;letter-spacing:-.02em;color:var(--black)}
+.sub{color:var(--gray4);font-size:14px;max-width:800px;line-height:1.5}
+.snapshot{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gray4);white-space:nowrap;text-align:right}
+.snapshot::before{content:"";display:inline-block;width:7px;height:7px;background:var(--red1);border-radius:50%;margin-right:7px;vertical-align:1px}
+.actions-top{display:flex;gap:8px;margin-top:10px;justify-content:flex-end}
+.btn{border:1px solid var(--black);background:var(--white);color:var(--black);padding:9px 12px;border-radius:2px;text-decoration:none;font-size:11px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:6px;transition:.15s ease}
+.btn.primary{background:var(--red1);color:var(--white);border-color:var(--red1)}
+.btn:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(12,12,12,.10)}
+.main{max-width:1450px;margin:auto;padding:24px 28px 70px}
+.toolbar{background:var(--white);border:1px solid var(--line);border-radius:4px;padding:16px;box-shadow:0 2px 8px rgba(12,12,12,.03)}
+.search{width:100%;border:1px solid var(--gray3);border-radius:2px;padding:12px 14px;font-size:14px;font-family:inherit;outline:none;background:var(--white)}
+.search:focus{border-color:var(--red1);box-shadow:0 0 0 3px rgba(250,0,15,.08)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.chip{border:1px solid var(--gray2);background:var(--white);border-radius:999px;padding:6px 10px;font-family:inherit;font-size:10px;cursor:pointer;color:var(--gray5)}
+.chip:hover{border-color:var(--gray4)}
+.chip.active{background:var(--black);color:var(--white);border-color:var(--black)}
+.summary{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 8px}
+.kpi{background:var(--white);border:1px solid var(--line);border-radius:3px;padding:10px 14px;min-width:135px}
+.kpi strong{font-size:20px;font-weight:700;display:block;color:var(--black)}
+.kpi span{font-size:10px;color:var(--gray4);text-transform:uppercase;letter-spacing:.04em}
+.section{margin-top:30px}
+.section-title{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gray5);margin:0 0 12px;display:flex;align-items:center;gap:9px}
+.section-title::before{content:"";width:20px;height:2px;background:var(--red1);display:inline-block}
+.feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:14px}
+.card{background:var(--white);border:1px solid var(--line);border-top:3px solid var(--red1);border-radius:3px;padding:16px;min-height:190px;display:flex;flex-direction:column;gap:10px;box-shadow:0 2px 8px rgba(12,12,12,.03)}
+.card.upcoming,.card.planned{border-top-color:var(--black)}
+.card.ondemand{border-top-color:var(--red2)}
+.card-title{font-family:"Hitachi Sans",Arial,Helvetica,sans-serif;font-size:18px;font-weight:700;line-height:1.25;cursor:pointer;color:var(--black)}
+.card-title:hover,.row-title:hover{text-decoration:underline;text-decoration-color:var(--red1);text-underline-offset:3px}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{font-size:9px;border:1px solid var(--gray2);border-radius:999px;padding:4px 7px;color:var(--gray5);background:var(--white)}
+.tag.green{background:var(--red-half);color:var(--red2);border-color:#F6BFC3}
+.tag.blue{background:var(--gray1);color:var(--black);border-color:var(--gray2)}
+.tag.orange{background:var(--red-half);color:var(--red2);border-color:#F6BFC3}
+.why{font-size:12px;line-height:1.5;color:var(--gray5)}
+.card-actions{display:flex;flex-wrap:wrap;gap:7px;margin-top:auto}
+.card-actions .btn{padding:7px 9px;font-size:10px}
+.list{background:var(--white);border:1px solid var(--line);border-radius:3px;overflow:hidden}
+.row{display:grid;grid-template-columns:minmax(290px,1.8fr) minmax(170px,.8fr) minmax(170px,.8fr) 170px 120px;gap:14px;padding:14px 16px;border-bottom:1px solid var(--line);align-items:center}
+.row:last-child{border-bottom:0}
+.row:hover{background:#FCFCFC}
+.row-title{font-family:"Hitachi Sans",Arial,Helvetica,sans-serif;font-size:15px;font-weight:700;line-height:1.35;cursor:pointer;color:var(--black)}
+.meta{font-size:11px;color:var(--gray4);line-height:1.5}
+.meta strong{color:var(--gray6)}
+.status{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gray5);margin-bottom:4px}
+.status.upcoming{color:var(--black)} .status.planned{color:var(--gray4)} .status.ondemand{color:var(--red2)}
+.ready{font-size:9px;font-weight:700;padding:6px 8px;border-radius:2px;text-align:center;text-transform:uppercase;letter-spacing:.03em}
+.ready.good{background:var(--red-half);color:var(--red2)} .ready.partial{background:var(--gray1);color:var(--gray5);border:1px solid var(--gray2)} .ready.plan{background:var(--gray1);color:var(--gray4)}
+.empty{padding:28px;text-align:center;color:var(--gray4);background:var(--white);border:1px dashed var(--gray3);border-radius:3px}
+.modal{position:fixed;inset:0;background:rgba(12,12,12,.56);display:none;align-items:flex-start;justify-content:center;padding:40px 18px;z-index:20;overflow:auto}
+.modal.open{display:flex}
+.modal-card{background:var(--white);width:min(980px,100%);border-radius:4px;box-shadow:var(--shadow);overflow:hidden;border-top:5px solid var(--red1)}
+.modal-head{padding:24px 26px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:20px}
+.modal-head h2{font-family:"Hitachi Sans",Arial,Helvetica,sans-serif;font-size:28px;font-weight:400;line-height:1.15;margin:0 0 9px;color:var(--black)}
+.close{border:1px solid var(--gray2);background:var(--white);border-radius:50%;width:34px;height:34px;font-size:20px;cursor:pointer;color:var(--black)}
+.modal-body{padding:24px 26px;display:grid;grid-template-columns:1.15fr .85fr;gap:24px}
+.box{border:1px solid var(--line);border-radius:3px;padding:15px;margin-bottom:12px;background:var(--white)}
+.box h3{font-size:10px;letter-spacing:.10em;text-transform:uppercase;margin:0 0 10px;color:var(--gray5)}
+.resource-list{display:grid;gap:8px}
+.resource{border:1px solid var(--line);border-left:3px solid var(--red1);border-radius:2px;padding:10px 11px;text-decoration:none;display:block;background:var(--white)}
+.resource:hover{background:var(--gray1);border-color:var(--gray3);border-left-color:var(--red1)}
+.resource strong{font-size:12px;display:block;margin-bottom:3px;color:var(--black)} .resource span{font-size:10px;color:var(--gray4)}
+.resource-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.resource-btn{padding:11px;border:1px solid var(--black);border-radius:2px;text-decoration:none;font-size:11px;font-weight:700;background:var(--white);color:var(--black)}
+.resource-btn:hover{background:var(--black);color:var(--white)}
+.resource-btn.unavailable{color:var(--gray3);border-color:var(--gray2);background:var(--gray1);pointer-events:none}
+.note{font-size:11px;color:var(--gray4);line-height:1.5}
+.footer{margin-top:36px;padding-top:18px;border-top:1px solid var(--gray2);font-size:10px;color:var(--gray4);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.footer strong{color:var(--gray6)}
+.footer a{text-decoration-color:var(--red1);text-underline-offset:2px}
+@media(max-width:900px){.row{grid-template-columns:1fr;gap:6px}.modal-body{grid-template-columns:1fr}.topbar{flex-direction:column}.snapshot{text-align:left}.actions-top{justify-content:flex-start}}
+
+</style>
+</head>
+<body>
+<header class="header">
+  <div class="brandbar"></div>
+  <div class="topbar">
+    <div>
+      <div class="company">Hitachi Vantara</div>
+      <h1>Webinar Activation Hub</h1>
+      <div class="sub">Find the right webinar, understand where it fits, and go directly to the resources needed to activate it. Webinar owners maintain Smartsheet; stakeholders use this hub.</div>
+    </div>
+    <div>
+      <div class="snapshot" id="snapshotLabel">Last refreshed · loading…</div>
+      <div class="actions-top">
+        <a class="btn" href="https://app.smartsheet.com/reports/j9GJ43PFjGMq7V4mPXmQchcwCjv6qxrCWxpXrHQ1" target="_blank">Open source calendar ↗</a>
+      </div>
+    </div>
+  </div>
+</header>
+<main class="main">
+  <div class="toolbar">
+    <input id="search" class="search" placeholder="Search by webinar, campaign, use case, owner, audience, region…">
+    <div id="chips" class="chips"></div>
+  </div>
+  <div id="summary" class="summary"></div>
+  <div id="content"></div>
+  <div class="footer">
+    <div><strong>Current pilot:</strong> exported Smartsheet snapshot. Production is designed to replace this snapshot with a secure live Smartsheet feed without rebuilding the hub.</div>
+    <div><a href="https://app.smartsheet.com/reports/j9GJ43PFjGMq7V4mPXmQchcwCjv6qxrCWxpXrHQ1" target="_blank">Source webinar calendar ↗</a></div>
+  </div>
+</main>
+
+<div id="modal" class="modal" onclick="if(event.target===this) closeModal()">
+ <div class="modal-card">
+  <div class="modal-head">
+    <div><h2 id="mTitle"></h2><div id="mTags" class="tags"></div></div>
+    <button class="close" onclick="closeModal()">×</button>
+  </div>
+  <div id="mBody" class="modal-body"></div>
+ </div>
+</div>
+
+<script>
+const EMBEDDED_DATA = [{"id": "is-object-storage-the-new-ai-foundation", "title": "Is Object Storage the New AI Foundation?", "date": "2026-06-04", "dateDisplay": "Jun 04, 2026", "status": "On Demand", "campaign": "AI Data Foundation", "useCase": "Data Readiness and Activation for AI", "audience": "Enterprise", "region": "Global", "owner": "Mark Geel, Sulochna Khokhrai", "quarter": "Q1", "partnerReady": true, "activationStatus": "Activation Ready", "readiness": "Activation ready", "whyUse": "Use this for enterprise conversations around data readiness and activation for ai.", "links": {"watch": "https://www.brighttalk.com/webcast/12821/665302?bt_tok=%7B%7Blead_id%7D%7D&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=665302", "marketingEmail": "https://brand.hitachivantara.com/guidelines/guide/207608cc-f422-4ffc-93b5-773dcdece4fb/page/7a2ed2c6-3b66-4ad4-ac47-e300d6d10135", "paidSocial": "https://app.smartsheet.com/reports/WRRxRxh9HMhcmp4h7cQ9wJg766r76R5rMCM3H7j1?view=grid", "salesEmail": "https://hitachivantara.sharepoint.com/:w:/s/GlobalCampaignsAssets505/IQBJelsvZa6BR4ZX6YmTSHMiASA6PMR83Sss1YcPKcyqoaM?e=Nvwuu4", "social": null, "attendance": "https://hdscorp.lightning.force.com/lightning/r/Report/00OaZ00000Cl4u5UAB/view?queryScope=userFolders"}, "relatedResources": [{"title": "2026 GigaOm Rader for Object Storage Analyst Report", "type": "3rd Party / Analyst/Industry Trends", "campaign": "AI Data Foundation", "useCase": "Data Readiness and Activation for AI", "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-radar-for-object-storage", "score": 6}, {"title": "2026 GigaOm for Unstructured Data Management (UDM)", "type": "3rd Party / Analyst/Industry Trends", "campaign": "AI Data Foundation", "useCase": "Data Readiness and Activation for AI", "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-unstructured-data-management-2026", "score": 6}, {"title": "FStech: How Financial Institutions Unlock More Value from Datawith Object Storage", "type": "3rd Party / Analyst/Industry Trends", "campaign": "AI Data Foundation", "useCase": "Data Readiness and Activation for AI", "url": "https://www.hitachivantara.com/en-us/pdfviewer/analyst-content/how-financial-institutions-unlock-more-value-from-data-object-storage", "score": 6}, {"title": "Hitachi Data Lakehouse: Powering Trusted AI and Analytics at Scale", "type": "Datasheet / Solution Brief / Technical", "campaign": "AI Data Foundation", "useCase": "Data Readiness and Activation for AI", "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/solution-profile/data-lakehouse-powering-trusted-ai-analytics-at-scale.pdf", "score": 6}], "sourceRow": 156}, {"id": "data-sovereignty-and-ai-rethinking-object-storage-in-financial-services", "title": "Data, Sovereignty and AI: Rethinking Object Storage in Financial Services", "date": "2026-07-14", "dateDisplay": "Jul 14, 2026", "status": "On Demand", "campaign": "AI Data Foundation", "useCase": "Data Readiness and Activation for AI", "audience": "Enterprise", "region": "AMER", "owner": "Karina Andrade, Mark Geel", "quarter": "Q2", "partnerReady": false, "activationStatus": "Partial", "readiness": "Partially ready", "whyUse": "Use this for enterprise conversations around data readiness and activation for ai.", "links": {"watch": "https://www.hitachivantara.com/en-us/company/events-and-webinars?commid=672306#tab-webinars", "marketingEmail": null, "paidSocial": null, "salesEmail": null, "social": null, "attendance": "https://hdscorp.lightning.force.com/lightning/r/sObject/00OaZ00000D0BTpUAN/view?queryScope=userFolders"}, "relatedResources": [{"title": "2026 GigaOm Rader for Object Storage Analyst Report", "type": "3rd Party / Analyst/Industry Trends", "campaign": "AI Data Foundation", "useCase": "Data Readiness and Activation for AI", "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-radar-for-object-storage", "score": 6}, {"title": "2026 GigaOm for Unstructured Data Management (UDM)", "type": "3rd Party / Analyst/Industry Trends", "campaign": "AI Data Foundation", "useCase": "Data Readiness and Activation for AI", "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-unstructured-data-management-2026", "score": 6}, {"title": "FStech: How Financial Institutions Unlock More Value from Datawith Object Storage", "type": "3rd Party / Analyst/Industry Trends", "campaign": "AI Data Foundation", "useCase": "Data Readiness and Activation for AI", "url": "https://www.hitachivantara.com/en-us/pdfviewer/analyst-content/how-financial-institutions-unlock-more-value-from-data-object-storage", "score": 6}, {"title": "Hitachi Data Lakehouse: Powering Trusted AI and Analytics at Scale", "type": "Datasheet / Solution Brief / Technical", "campaign": "AI Data Foundation", "useCase": "Data Readiness and Activation for AI", "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/solution-profile/data-lakehouse-powering-trusted-ai-analytics-at-scale.pdf", "score": 6}], "sourceRow": 175}, {"id": "cyber-security-month-webinar-with-index-engines", "title": "Cyber Security Month with Index Engines", "date": "2026-10-29", "dateDisplay": "Oct 29, 2026", "status": "Planned", "campaign": "AI Data Foundation", "useCase": "Cyber Risk Mitigation & Recovery", "audience": "Both", "region": "Global", "owner": "Macey Jones, Stephanie Thompson", "quarter": "Q3", "partnerReady": false, "activationStatus": "", "readiness": "Planning", "whyUse": "Use this for enterprise and midmarket conversations around cyber risk mitigation & recovery.", "links": {"watch": null, "marketingEmail": null, "paidSocial": null, "salesEmail": null, "social": null, "attendance": null}, "relatedResources": [{"title": "The Threats We See. The Risks We Don’t.", "type": "Blog / Executive POV", "campaign": "AI Data Foundation", "useCase": "Cyber Risk Mitigation & Recovery", "url": "https://www.hitachivantara.com/en-us/blog/threats-we-see-risks-we-dont", "score": 2}, {"title": "Campaign Landing Page - AI", "type": "Landing Page", "campaign": "AI Data Foundation", "useCase": "", "url": "https://www.hitachivantara.com/en-us/featured/ai-data-foundation", "score": 4}, {"title": "Messaging Framework - AI", "type": "Campaign Guide / Messaging Framework / Resource", "campaign": "AI Data Foundation", "useCase": "", "url": "https://brand.hitachivantara.com/guidelines/guide/5babc977-3a32-4b5d-a934-1034a8dbfe60/page/4c3f8205-fa2d-4047-890a-47809fb9b196", "score": 3}, {"title": "SDR Email Cadence ADF", "type": "Email / Nurture", "campaign": "AI Data Foundation", "useCase": "", "url": "https://hitachivantara.sharepoint.com/:p:/r/sites/PartnerandFieldMarketing/Shared%20Documents/Global%20Campaigns/FY26/AI%20Data%20Foundation%20-%20Working%20Deck.pptx?d=wf596d0152fef4fa384ef3a2ca4fe37b6&csf=1&web=1&e=dldNxg&nav=eyJzSWQiOjMwNSwiY0lkIjoxNzEwOTkzMDZ9", "score": 3}], "sourceRow": 269}, {"id": "2026-gigaom-radar-for-high-performance-storage-optimized-for-ai-workloads", "title": "2026 GigaOm Rader for High-Performance Storage Optimized for AI Workloads", "date": "2026-11-26", "dateDisplay": "Nov 26, 2026", "status": "Planned", "campaign": "AI Data Foundation", "useCase": "High Performance AI-Ready Infrastructure", "audience": "Enterprise", "region": "Global", "owner": "Jeff Lundberg, Stephanie Thompson", "quarter": "Q3", "partnerReady": true, "activationStatus": "Not Started", "readiness": "Planning", "whyUse": "Use this for enterprise conversations around high performance ai-ready infrastructure.", "links": {"watch": null, "marketingEmail": null, "paidSocial": null, "salesEmail": null, "social": null, "attendance": null}, "relatedResources": [{"title": "10 Reasons to Buy, Build, or Borrow AI Implementation", "type": "eBook/Whitepaper", "campaign": "AI Data Foundation", "useCase": "High Performance AI-Ready Infrastructure", "url": "https://www.hitachivantara.com/en-us/gated-forms/ten-reasons-buy-build-borrow-ai-implementation", "score": 6}, {"title": "2025 GigaOm Radar Report for AI Workloads - GigaOm Link", "type": "3rd Party / Analyst/Industry Trends", "campaign": "AI Data Foundation", "useCase": "High Performance AI-Ready Infrastructure", "url": "https://portal.gigaom.com/reprint/gigaom-radar-for-high-performance-storage-optimized-for-ai-workloads-hitachi-vantara", "score": 6}, {"title": "Accelerate Your AI Success: Use Case & ROI Guide eBook", "type": "eBook/Whitepaper", "campaign": "AI Data Foundation", "useCase": "High Performance AI-Ready Infrastructure", "url": "https://www.hitachivantara.com/en-us/gated-forms/accelerate-your-ai-success", "score": 6}, {"title": "Hitachi iQ Studio", "type": "Datasheet / Solution Brief / Technical", "campaign": "AI Data Foundation", "useCase": "High Performance AI-Ready Infrastructure", "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/solution-profile/iq-ai-solution-suite-tailored-industry-needs-ideal-organizations-investing-in-ai-ml-workloads.pdf", "score": 6}], "sourceRow": 183}, {"id": "idc-cyber-resilience", "title": "IDC Cyber Resilience", "date": "2027-01-28", "dateDisplay": "Jan 28, 2027", "status": "Planned", "campaign": "AI Data Foundation", "useCase": "Cyber Risk Mitigation & Recovery", "audience": "Both", "region": "Global", "owner": "Macey Jones, Stephanie Thompson", "quarter": "Q4", "partnerReady": false, "activationStatus": "", "readiness": "Planning", "whyUse": "Use this for enterprise and midmarket conversations around cyber risk mitigation & recovery.", "links": {"watch": null, "marketingEmail": null, "paidSocial": null, "salesEmail": null, "social": null, "attendance": null}, "relatedResources": [{"title": "The Threats We See. The Risks We Don’t.", "type": "Blog / Executive POV", "campaign": "AI Data Foundation", "useCase": "Cyber Risk Mitigation & Recovery", "url": "https://www.hitachivantara.com/en-us/blog/threats-we-see-risks-we-dont", "score": 2}, {"title": "Campaign Landing Page - AI", "type": "Landing Page", "campaign": "AI Data Foundation", "useCase": "", "url": "https://www.hitachivantara.com/en-us/featured/ai-data-foundation", "score": 4}, {"title": "Messaging Framework - AI", "type": "Campaign Guide / Messaging Framework / Resource", "campaign": "AI Data Foundation", "useCase": "", "url": "https://brand.hitachivantara.com/guidelines/guide/5babc977-3a32-4b5d-a934-1034a8dbfe60/page/4c3f8205-fa2d-4047-890a-47809fb9b196", "score": 3}, {"title": "SDR Email Cadence ADF", "type": "Email / Nurture", "campaign": "AI Data Foundation", "useCase": "", "url": "https://hitachivantara.sharepoint.com/:p:/r/sites/PartnerandFieldMarketing/Shared%20Documents/Global%20Campaigns/FY26/AI%20Data%20Foundation%20-%20Working%20Deck.pptx?d=wf596d0152fef4fa384ef3a2ca4fe37b6&csf=1&web=1&e=dldNxg&nav=eyJzSWQiOjMwNSwiY0lkIjoxNzEwOTkzMDZ9", "score": 3}], "sourceRow": 268}, {"id": "the-economics-of-modern-storage-infrastructure-lower-risk-faster-ai-value-better-roi", "title": "The Economics of Modern Storage Infrastructure: Lower Risk, Faster AI Value, Better ROI", "date": "2026-05-01", "dateDisplay": "May 01, 2026", "status": "On Demand", "campaign": "Data Modernization & Resilience", "useCase": "Data Platform Architectures & Economics", "audience": "Enterprise / Midmarket", "region": "AMER", "owner": "Karina Andrade", "quarter": "Q1", "partnerReady": false, "activationStatus": "Activation Ready", "readiness": "Activation ready", "whyUse": "Use this for enterprise and midmarket conversations around data platform architectures & economics.", "links": {"watch": "https://www.brighttalk.com/webcast/12821/659254?bt_tok=%7B%7Blead_id%7D%7D&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=659254", "marketingEmail": "https://brand.hitachivantara.com/guidelines/guide/00542d60-e1a7-4da7-9e5f-133c03191dbc/page/e5dcf9d5-8b2a-4907-86cf-6a7658fc8e08", "paidSocial": "https://app.smartsheet.com/reports/WRRxRxh9HMhcmp4h7cQ9wJg766r76R5rMCM3H7j1?view=grid", "salesEmail": "https://hitachivantara.sharepoint.com/:w:/s/GlobalCampaignsAssets505/IQAur_oA2tvSTI5WzUov9PsFAYnvUFXdD-1I-Gez-pspUL8?e=4ViuVh", "social": null, "attendance": "https://hdscorp.lightning.force.com/lightning/r/Report/00OaZ00000D0ByTUAV/view?queryScope=userFolders"}, "relatedResources": [{"title": "451 Research: Modernizing Mission-Critical Storage Analyst Report", "type": "3rd Party / Analyst/Industry Trends", "campaign": "Data Modernization & Resilience", "useCase": "Data Platform Architectures & Economics", "url": "https://www.hitachivantara.com/en-us/gated-forms/451-research-pathfinder-report-modernizing-mission-critical-storage", "score": 6}, {"title": "Farma Mondo", "type": "Case Study / Customer Story", "campaign": "Data Modernization & Resilience", "useCase": "Data Platform Architectures & Economics", "url": "https://www.hitachivantara.com/en-us/company/customer-stories/farmamondo-case-study", "score": 6}, {"title": "From Bottlenecks to Breakthroughs: Enterprise Applications eBook", "type": "eBook/Whitepaper", "campaign": "Data Modernization & Resilience", "useCase": "Data Platform Architectures & Economics", "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/enterprise-applications-ebook.pdf?bypassgated=true", "score": 6}, {"title": "From Legacy to Velocity: How VSP One Customers Turned Legacy Limits into Competitive Edge eBook / Customer Story", "type": "Case Study / Customer Story", "campaign": "Data Modernization & Resilience", "useCase": "Data Platform Architectures & Economics", "url": "https://www.hitachivantara.com/en-us/gated-forms/from-legacy-to-velocity", "score": 6}], "sourceRow": 111}, {"id": "resilient-by-design-how-hitachi-vantara-vm2020-and-index-engines-deliver-faster-validated-ransomware-recovery", "title": "Resilient by Design: How Hitachi Vantara, VM2020, and Index Engines Deliver Faster, Validated Ransomware Recovery", "date": "2026-06-18", "dateDisplay": "Jun 18, 2026", "status": "On Demand", "campaign": "Data Modernization & Resilience", "useCase": "Cyber Risk Mitigation & Recovery", "audience": "Enterprise / Midmarket", "region": "Global", "owner": "Macey Jones, Stephanie Thompson, Sulochna Khokhrai", "quarter": "Q1", "partnerReady": false, "activationStatus": "Activation Ready", "readiness": "Activation ready", "whyUse": "Use this for enterprise and midmarket conversations around cyber risk mitigation & recovery.", "links": {"watch": "https://www.brighttalk.com/webcast/12821/669090", "marketingEmail": "https://brand.hitachivantara.com/guidelines/guide/00542d60-e1a7-4da7-9e5f-133c03191dbc/page/e5dcf9d5-8b2a-4907-86cf-6a7658fc8e08", "paidSocial": "https://app.smartsheet.com/reports/WRRxRxh9HMhcmp4h7cQ9wJg766r76R5rMCM3H7j1?view=grid", "salesEmail": "https://hitachivantara.sharepoint.com/:w:/s/GlobalCampaignsAssets505/IQApDMrMycrJRKlYEziomY_mAYPXLb2ge3oyAduWSGZ0xa0?e=Ofgjf7", "social": null, "attendance": "https://hdscorp.lightning.force.com/lightning/r/Report/00OaZ00000Cs6uLUAR/view?queryScope=userFolders"}, "relatedResources": [{"title": "Buyer’s   Guide for   Cyber-Resilient   Data Infrastructure", "type": "eBook/Whitepaper", "campaign": "Data Modernization & Resilience", "useCase": "Cyber Risk Mitigation & Recovery", "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/cyber-resilient-data-infrastructure-buyers-guide.pdf", "score": 6}, {"title": "Cyber Resilience For Dummies eBook", "type": "eBook/Whitepaper", "campaign": "Data Modernization & Resilience", "useCase": "Cyber Risk Mitigation & Recovery", "url": "https://www.hitachivantara.com/en-us/gated-forms/cyber-resilience-for-dummies", "score": 6}, {"title": "Large Utility Company: Protect Key Systems and Disarm Ransomware Risks", "type": "Case Study / Customer Story", "campaign": "Data Modernization & Resilience", "useCase": "Cyber Risk Mitigation & Recovery", "url": "https://www.hitachivantara.com/en-us/company/customer-stories/large-utility-company-customer-story", "score": 6}, {"title": "MIT Tech Review: Adapting to New Threats with Proactive Cyber Risk Management", "type": "3rd Party / Analyst/Industry Trends", "campaign": "Data Modernization & Resilience", "useCase": "Cyber Risk Mitigation & Recovery", "url": "https://www.hitachivantara.com/en-us/gated-forms/adapting-to-new-threats-with-proactive-risk-management", "score": 6}], "sourceRow": 52}, {"id": "omdia-what-modern-data-infrastructure-looks-like-in-the-ai-era", "title": "Omdia: What Modern Data Infrastructure Looks Like in the AI Era", "date": "2026-09-24", "dateDisplay": "Sep 24, 2026", "status": "Upcoming", "campaign": "Data Modernization & Resilience", "useCase": "Data Platform Architectures & Economics", "audience": "Enterprise / Midmarket", "region": "Global", "owner": "Andy Gremett, Stephanie Thompson", "quarter": "Q2", "partnerReady": false, "activationStatus": "Partial", "readiness": "Partially ready", "whyUse": "Use this for enterprise and midmarket conversations around data platform architectures & economics.", "links": {"watch": "https://www.brighttalk.com/webcast/12821/675775", "marketingEmail": null, "paidSocial": null, "salesEmail": null, "social": null, "attendance": null}, "relatedResources": [{"title": "451 Research: Modernizing Mission-Critical Storage Analyst Report", "type": "3rd Party / Analyst/Industry Trends", "campaign": "Data Modernization & Resilience", "useCase": "Data Platform Architectures & Economics", "url": "https://www.hitachivantara.com/en-us/gated-forms/451-research-pathfinder-report-modernizing-mission-critical-storage", "score": 6}, {"title": "Farma Mondo", "type": "Case Study / Customer Story", "campaign": "Data Modernization & Resilience", "useCase": "Data Platform Architectures & Economics", "url": "https://www.hitachivantara.com/en-us/company/customer-stories/farmamondo-case-study", "score": 6}, {"title": "From Bottlenecks to Breakthroughs: Enterprise Applications eBook", "type": "eBook/Whitepaper", "campaign": "Data Modernization & Resilience", "useCase": "Data Platform Architectures & Economics", "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/enterprise-applications-ebook.pdf?bypassgated=true", "score": 6}, {"title": "From Legacy to Velocity: How VSP One Customers Turned Legacy Limits into Competitive Edge eBook / Customer Story", "type": "Case Study / Customer Story", "campaign": "Data Modernization & Resilience", "useCase": "Data Platform Architectures & Economics", "url": "https://www.hitachivantara.com/en-us/gated-forms/from-legacy-to-velocity", "score": 6}], "sourceRow": 113}, {"id": "cyber-resilience-trusted-data-foundation-for-ai", "title": "Cyber Resilience - Trusted Data Foundation for AI", "date": "2026-10-29", "dateDisplay": "Oct 29, 2026", "status": "Planned", "campaign": "Data Modernization & Resilience", "useCase": "Cyber Risk Mitigation & Recovery", "audience": "Enterprise", "region": "Global", "owner": "Macey Jones, Stephanie Thompson", "quarter": "Q3", "partnerReady": true, "activationStatus": "Not Started", "readiness": "Planning", "whyUse": "Use this for enterprise conversations around cyber risk mitigation & recovery.", "links": {"watch": null, "marketingEmail": null, "paidSocial": null, "salesEmail": null, "social": null, "attendance": null}, "relatedResources": [{"title": "Buyer’s   Guide for   Cyber-Resilient   Data Infrastructure", "type": "eBook/Whitepaper", "campaign": "Data Modernization & Resilience", "useCase": "Cyber Risk Mitigation & Recovery", "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/cyber-resilient-data-infrastructure-buyers-guide.pdf", "score": 6}, {"title": "Cyber Resilience For Dummies eBook", "type": "eBook/Whitepaper", "campaign": "Data Modernization & Resilience", "useCase": "Cyber Risk Mitigation & Recovery", "url": "https://www.hitachivantara.com/en-us/gated-forms/cyber-resilience-for-dummies", "score": 6}, {"title": "Large Utility Company: Protect Key Systems and Disarm Ransomware Risks", "type": "Case Study / Customer Story", "campaign": "Data Modernization & Resilience", "useCase": "Cyber Risk Mitigation & Recovery", "url": "https://www.hitachivantara.com/en-us/company/customer-stories/large-utility-company-customer-story", "score": 6}, {"title": "MIT Tech Review: Adapting to New Threats with Proactive Cyber Risk Management", "type": "3rd Party / Analyst/Industry Trends", "campaign": "Data Modernization & Resilience", "useCase": "Cyber Risk Mitigation & Recovery", "url": "https://www.hitachivantara.com/en-us/gated-forms/adapting-to-new-threats-with-proactive-risk-management", "score": 6}], "sourceRow": 65}, {"id": "tier-1-launch-midrange-refresh", "title": "Tier 1 Launch: Midrange Refresh", "date": "2027-02-25", "dateDisplay": "Feb 25, 2027", "status": "Planned", "campaign": "Data Modernization & Resilience", "useCase": "Data Platform Architectures & Economics", "audience": "Enterprise / Midmarket", "region": "Global", "owner": "Stephanie Thompson, Sulochna Khokhrai", "quarter": "Q4", "partnerReady": false, "activationStatus": "Not Started", "readiness": "Planning", "whyUse": "Use this for enterprise and midmarket conversations around data platform architectures & economics.", "links": {"watch": null, "marketingEmail": null, "paidSocial": null, "salesEmail": null, "social": null, "attendance": null}, "relatedResources": [{"title": "451 Research: Modernizing Mission-Critical Storage Analyst Report", "type": "3rd Party / Analyst/Industry Trends", "campaign": "Data Modernization & Resilience", "useCase": "Data Platform Architectures & Economics", "url": "https://www.hitachivantara.com/en-us/gated-forms/451-research-pathfinder-report-modernizing-mission-critical-storage", "score": 6}, {"title": "Farma Mondo", "type": "Case Study / Customer Story", "campaign": "Data Modernization & Resilience", "useCase": "Data Platform Architectures & Economics", "url": "https://www.hitachivantara.com/en-us/company/customer-stories/farmamondo-case-study", "score": 6}, {"title": "From Bottlenecks to Breakthroughs: Enterprise Applications eBook", "type": "eBook/Whitepaper", "campaign": "Data Modernization & Resilience", "useCase": "Data Platform Architectures & Economics", "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/enterprise-applications-ebook.pdf?bypassgated=true", "score": 6}, {"title": "From Legacy to Velocity: How VSP One Customers Turned Legacy Limits into Competitive Edge eBook / Customer Story", "type": "Case Study / Customer Story", "campaign": "Data Modernization & Resilience", "useCase": "Data Platform Architectures & Economics", "url": "https://www.hitachivantara.com/en-us/gated-forms/from-legacy-to-velocity", "score": 6}], "sourceRow": 115}, {"id": "energy-efficiency-sustainability-maybe-omdia-webinar-or-mit-report-including-customer", "title": "Energy Efficiency & Sustainability - maybe Omdia webinar or MIT report including customer", "date": "2027-04-27", "dateDisplay": "Apr 27, 2027", "status": "Planned", "campaign": "Data Modernization & Resilience", "useCase": "Data Platform Architectures & Economics", "audience": "Enterprise / Midmarket", "region": "TBD", "owner": "Liam Yu", "quarter": "Q1", "partnerReady": false, "activationStatus": "Not Required", "readiness": "Planning", "whyUse": "Use this for enterprise and midmarket conversations around data platform architectures & economics.", "links": {"watch": null, "marketingEmail": null, "paidSocial": null, "salesEmail": null, "social": null, "attendance": null}, "relatedResources": [{"title": "451 Research: Modernizing Mission-Critical Storage Analyst Report", "type": "3rd Party / Analyst/Industry Trends", "campaign": "Data Modernization & Resilience", "useCase": "Data Platform Architectures & Economics", "url": "https://www.hitachivantara.com/en-us/gated-forms/451-research-pathfinder-report-modernizing-mission-critical-storage", "score": 6}, {"title": "Farma Mondo", "type": "Case Study / Customer Story", "campaign": "Data Modernization & Resilience", "useCase": "Data Platform Architectures & Economics", "url": "https://www.hitachivantara.com/en-us/company/customer-stories/farmamondo-case-study", "score": 6}, {"title": "From Bottlenecks to Breakthroughs: Enterprise Applications eBook", "type": "eBook/Whitepaper", "campaign": "Data Modernization & Resilience", "useCase": "Data Platform Architectures & Economics", "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/enterprise-applications-ebook.pdf?bypassgated=true", "score": 6}, {"title": "From Legacy to Velocity: How VSP One Customers Turned Legacy Limits into Competitive Edge eBook / Customer Story", "type": "Case Study / Customer Story", "campaign": "Data Modernization & Resilience", "useCase": "Data Platform Architectures & Economics", "url": "https://www.hitachivantara.com/en-us/gated-forms/from-legacy-to-velocity", "score": 6}], "sourceRow": 74}, {"id": "451-research-vsp-360-aiops-sla-as-code", "title": "451 Research - VSP 360 AIOps SLA as Code", "date": "2027-04-30", "dateDisplay": "Apr 30, 2027", "status": "Planned", "campaign": "Data Modernization & Resilience", "useCase": "Data Platform Architectures & Economics", "audience": "Enterprise / Midmarket", "region": "Global", "owner": "Richard Jew", "quarter": "Q1", "partnerReady": false, "activationStatus": "Not Started", "readiness": "Planning", "whyUse": "Use this for enterprise and midmarket conversations around data platform architectures & economics.", "links": {"watch": null, "marketingEmail": null, "paidSocial": null, "salesEmail": null, "social": null, "attendance": null}, "relatedResources": [{"title": "451 Research: Modernizing Mission-Critical Storage Analyst Report", "type": "3rd Party / Analyst/Industry Trends", "campaign": "Data Modernization & Resilience", "useCase": "Data Platform Architectures & Economics", "url": "https://www.hitachivantara.com/en-us/gated-forms/451-research-pathfinder-report-modernizing-mission-critical-storage", "score": 6}, {"title": "Farma Mondo", "type": "Case Study / Customer Story", "campaign": "Data Modernization & Resilience", "useCase": "Data Platform Architectures & Economics", "url": "https://www.hitachivantara.com/en-us/company/customer-stories/farmamondo-case-study", "score": 6}, {"title": "From Bottlenecks to Breakthroughs: Enterprise Applications eBook", "type": "eBook/Whitepaper", "campaign": "Data Modernization & Resilience", "useCase": "Data Platform Architectures & Economics", "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/enterprise-applications-ebook.pdf?bypassgated=true", "score": 6}, {"title": "From Legacy to Velocity: How VSP One Customers Turned Legacy Limits into Competitive Edge eBook / Customer Story", "type": "Case Study / Customer Story", "campaign": "Data Modernization & Resilience", "useCase": "Data Platform Architectures & Economics", "url": "https://www.hitachivantara.com/en-us/gated-forms/from-legacy-to-velocity", "score": 6}], "sourceRow": 64}];
+const SOURCE_REPORT = "https://app.smartsheet.com/reports/j9GJ43PFjGMq7V4mPXmQchcwCjv6qxrCWxpXrHQ1";
+let DATA = EMBEDDED_DATA;
+let LAST_REFRESHED = null;
+let activeFilter='All';
+
+async function loadData(){
+  // Production hook: webinars.json is written on a schedule by the Smartsheet sync job
+  // (see sync_webinars.py). This hub updates on next page load without any HTML changes.
+  // If opened locally (file://) or the fetch fails, the embedded snapshot is used instead.
+  try {
+    if(location.protocol !== 'file:') {
+      const r=await fetch('./webinars.json?ts='+Date.now(), {cache:'no-store'});
+      if(r.ok) {
+        const j=await r.json();
+        if(Array.isArray(j.webinars)) DATA=j.webinars;
+        if(j.lastRefreshed) LAST_REFRESHED=j.lastRefreshed;
+      }
+    }
+  } catch(e){}
+  updateSnapshotLabel();
+  init();
+}
+function updateSnapshotLabel(){
+  const el=document.getElementById('snapshotLabel');
+  if(!el) return;
+  if(LAST_REFRESHED){
+    const d=new Date(LAST_REFRESHED);
+    const stamp=isNaN(d) ? LAST_REFRESHED : d.toLocaleString('en-US',{month:'short',day:'numeric',year:'numeric',hour:'numeric',minute:'2-digit'});
+    el.textContent='Last refreshed · '+stamp;
+  } else {
+    el.textContent='Preview data · embedded snapshot';
+  }
+}
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
+const statusClass=s=>String(s).toLowerCase().replace(/\s+/g,'');
+const readinessClass=s=>s==='Activation ready'?'good':(s==='Partially ready'?'partial':'plan');
+const prettyDate=d=>{if(!d)return'TBD'; const x=new Date(d+'T12:00:00'); return x.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'})};
+const linkBtn=(label,url,primary=false)=> url ? `<a class="btn ${primary?'primary':''}" target="_blank" href="${esc(url)}">${esc(label)} ↗</a>` : '';
+
+function filters(){
+  const campaigns=[...new Set(DATA.map(x=>x.campaign).filter(Boolean))];
+  const usecases=[...new Set(DATA.map(x=>x.useCase).filter(Boolean))];
+  return ['All','Upcoming','Planned','On Demand','Partner-ready',...campaigns,...usecases];
+}
+function makeChips(){
+  document.getElementById('chips').innerHTML=filters().map(f=>`<button class="chip ${activeFilter===f?'active':''}" onclick="setFilter('${esc(f).replace(/'/g,"\\'")}')">${esc(f)}</button>`).join('');
+}
+function setFilter(f){activeFilter=f; makeChips(); render();}
+function filtered(){
+ const q=document.getElementById('search').value.trim().toLowerCase();
+ return DATA.filter(w=>{
+   const hay=[w.title,w.campaign,w.useCase,w.audience,w.region,w.owner,w.status].join(' ').toLowerCase();
+   const qok=!q||hay.includes(q);
+   let fok=true;
+   if(activeFilter==='Upcoming'||activeFilter==='Planned'||activeFilter==='On Demand') fok=w.status===activeFilter;
+   else if(activeFilter==='Partner-ready') fok=w.partnerReady;
+   else if(activeFilter!=='All') fok=(w.campaign===activeFilter||w.useCase===activeFilter);
+   return qok&&fok;
+ });
+}
+function summary(){
+ const d=filtered();
+ const ready=d.filter(w=>w.readiness==='Activation ready').length;
+ document.getElementById('summary').innerHTML=`
+   <div class="kpi"><strong>${d.length}</strong><span>webinars shown</span></div>
+   <div class="kpi"><strong>${d.filter(w=>w.status==='Upcoming').length}</strong><span>upcoming</span></div>
+   <div class="kpi"><strong>${d.filter(w=>w.status==='On Demand').length}</strong><span>on demand</span></div>
+   <div class="kpi"><strong>${ready}</strong><span>activation ready</span></div>`;
+}
+function tags(w){
+ return [
+  w.status?`<span class="tag ${w.status==='On Demand'?'orange':(w.status==='Upcoming'?'blue':'')}">${esc(w.status)}</span>`:'',
+  w.campaign?`<span class="tag">${esc(w.campaign)}</span>`:'',
+  w.useCase?`<span class="tag">${esc(w.useCase)}</span>`:'',
+  w.region?`<span class="tag">${esc(w.region)}</span>`:'',
+  w.partnerReady?`<span class="tag green">Partner-ready</span>`:''
+ ].join('');
+}
+function card(w){
+ return `<div class="card ${statusClass(w.status)}">
+   <div class="status ${statusClass(w.status)}">${esc(w.status)} · ${esc(w.dateDisplay)}</div>
+   <div class="card-title" onclick="openModal('${w.id}')">${esc(w.title)}</div>
+   <div class="tags">${tags(w)}</div>
+   <div class="why">${esc(w.whyUse)}</div>
+   <div class="card-actions">
+     ${linkBtn(w.status==='On Demand'?'Watch':'Register',w.links.watch,true)}
+     <button class="btn" onclick="openModal('${w.id}')">Activation resources</button>
+   </div>
+ </div>`;
+}
+function listRow(w){
+ return `<div class="row">
+  <div><div class="status ${statusClass(w.status)}">${esc(w.status)} · ${esc(w.dateDisplay)}</div><div class="row-title" onclick="openModal('${w.id}')">${esc(w.title)}</div></div>
+  <div class="meta"><strong>${esc(w.campaign||'Campaign TBD')}</strong><br>${esc(w.useCase)}</div>
+  <div class="meta">${esc(w.audience)}<br>${esc(w.region)} · Owner: ${esc(w.owner)}</div>
+  <div class="ready ${readinessClass(w.readiness)}">${esc(w.readiness)}</div>
+  <div>${w.links.watch?linkBtn(w.status==='On Demand'?'Watch':'Open',w.links.watch,true):'<span class="meta">Link pending</span>'}</div>
+ </div>`;
+}
+function render(){
+ const d=filtered(); summary();
+ if(!d.length){document.getElementById('content').innerHTML='<div class="empty">No webinars match those filters.</div>';return;}
+ const now=new Date();
+ const promote=d.filter(w=>{
+   if(w.status==='Upcoming'&&w.date){const dd=(new Date(w.date+'T12:00:00')-now)/86400000; return dd>=0&&dd<=30;}
+   return w.status==='On Demand'&&w.readiness==='Activation ready';
+ }).slice(0,4);
+ const upcoming=d.filter(w=>w.status==='Upcoming');
+ const planned=d.filter(w=>w.status==='Planned').sort((a,b)=>(a.date||'9999').localeCompare(b.date||'9999'));
+ const ondemand=d.filter(w=>w.status==='On Demand').sort((a,b)=>(b.date||'').localeCompare(a.date||''));
+ let out='';
+ if(promote.length) out+=`<section class="section"><div class="section-title">Promote now · ${promote.length}</div><div class="feature-grid">${promote.map(card).join('')}</div></section>`;
+ if(upcoming.length) out+=`<section class="section"><div class="section-title">Upcoming · ${upcoming.length}</div><div class="list">${upcoming.map(listRow).join('')}</div></section>`;
+ if(planned.length) out+=`<section class="section"><div class="section-title">Planned · ${planned.length}</div><div class="list">${planned.map(listRow).join('')}</div></section>`;
+ if(ondemand.length) out+=`<section class="section"><div class="section-title">On demand · ready to reuse · ${ondemand.length}</div><div class="list">${ondemand.map(listRow).join('')}</div></section>`;
+ document.getElementById('content').innerHTML=out;
+}
+function openModal(id){
+ const w=DATA.find(x=>x.id===id); if(!w)return;
+ document.getElementById('mTitle').textContent=w.title;
+ document.getElementById('mTags').innerHTML=tags(w);
+ const resources=[
+   ['Webinar / registration',w.links.watch],
+   ['Marketing email',w.links.marketingEmail],
+   ['Sales outreach email',w.links.salesEmail],
+   ['Paid social ads',w.links.paidSocial],
+   ['Organic / social',w.links.social],
+   ['Attendee report',w.links.attendance]
+ ];
+ document.getElementById('mBody').innerHTML=`
+  <div>
+    <div class="box"><h3>When to use it</h3><div class="why">${esc(w.whyUse)}</div></div>
+    <div class="box"><h3>Activation resources</h3><div class="resource-grid">${resources.map(([n,u])=>u?`<a class="resource-btn" href="${esc(u)}" target="_blank">${esc(n)} ↗</a>`:`<div class="resource-btn unavailable">${esc(n)} · not available</div>`).join('')}</div></div>
+    <div class="box"><h3>Related campaign resources</h3><div class="resource-list">${(w.relatedResources||[]).map(r=>`<a class="resource" href="${esc(r.url)}" target="_blank"><strong>${esc(r.title)}</strong><span>${esc(r.type)}</span></a>`).join('')||'<div class="note">No related resources matched automatically.</div>'}</div></div>
+  </div>
+  <div>
+    <div class="box"><h3>Webinar details</h3>
+      <div class="meta"><strong>Date:</strong> ${esc(w.dateDisplay)}<br><strong>Status:</strong> ${esc(w.status)}<br><strong>Campaign:</strong> ${esc(w.campaign||'TBD')}<br><strong>Use case:</strong> ${esc(w.useCase)}<br><strong>Audience:</strong> ${esc(w.audience)}<br><strong>Region:</strong> ${esc(w.region)}<br><strong>Owner:</strong> ${esc(w.owner)}<br><strong>Quarter:</strong> ${esc(w.quarter)}<br><strong>Activation readiness:</strong> ${esc(w.readiness)}</div>
+    </div>
+    <div class="box"><h3>Source of truth</h3><div class="note">This prototype is populated from the FY26 Webinar Calendar and enriched from the Content Mapping Master List. Owners continue maintaining Smartsheet; the production integration should refresh this data feed automatically.</div><div style="margin-top:10px">${linkBtn('Open live Smartsheet',SOURCE_REPORT,true)}</div></div>
+  </div>`;
+ document.getElementById('modal').classList.add('open');
+}
+function closeModal(){document.getElementById('modal').classList.remove('open')}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+document.getElementById('search').addEventListener('input',render);
+function init(){makeChips();render()}
+loadData();
+</script>
+</body>
+</html>
