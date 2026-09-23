@@ -173,6 +173,7 @@ def readiness_from(activation_status):
 def fetch_report_rows(client, report_id, column_map, label, text_only_fields=frozenset()):
     report = client.Reports.get_report(report_id)
     col_id_by_title = {c.title: c.id for c in report.columns}
+    title_by_col_id = {c.id: c.title for c in report.columns}
 
     if DEBUG_COLUMNS:
         print(f"\n--- Columns Smartsheet returned for {label} ---")
@@ -181,6 +182,14 @@ def fetch_report_rows(client, report_id, column_map, label, text_only_fields=fro
         missing = [v for v in column_map.values() if v not in col_id_by_title]
         if missing:
             print(f"  ! Not found (fix COLUMN_MAP): {missing}")
+
+        if report.rows:
+            first = report.rows[0]
+            print(f"\n--- Raw first-row cells for {label} (id-matching diagnostic) ---")
+            for cell in first.cells:
+                matched_title = title_by_col_id.get(cell.column_id, "!!NO COLUMN MATCH!!")
+                print(f"  column_id={cell.column_id}  matched_title='{matched_title}'  "
+                      f"value={cell.value!r}  display_value={cell.display_value!r}")
 
     rows_out = []
     for row in report.rows:
