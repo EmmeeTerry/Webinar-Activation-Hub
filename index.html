@@ -178,7 +178,8 @@ const linkBtn=(label,url,primary=false)=> url ? `<a class="btn ${primary?'primar
 function filters(){
   const campaigns=[...new Set(DATA.map(x=>x.campaign).filter(Boolean))];
   const usecases=[...new Set(DATA.map(x=>x.useCase).filter(Boolean))];
-  return ['All','Upcoming','Planned','On Demand','Partner-ready',...campaigns,...usecases];
+  const regions=[...new Set(DATA.map(x=>x.region).filter(Boolean))];
+  return ['All','Upcoming','Planned','On Demand','Partner-ready',...regions,...campaigns,...usecases];
 }
 function makeChips(){
   document.getElementById('chips').innerHTML=filters().map(f=>`<button class="chip ${activeFilter===f?'active':''}" onclick="setFilter('${esc(f).replace(/'/g,"\\'")}')">${esc(f)}</button>`).join('');
@@ -192,7 +193,7 @@ function filtered(){
    let fok=true;
    if(activeFilter==='Upcoming'||activeFilter==='Planned'||activeFilter==='On Demand') fok=w.status===activeFilter;
    else if(activeFilter==='Partner-ready') fok=w.partnerReady;
-   else if(activeFilter!=='All') fok=(w.campaign===activeFilter||w.useCase===activeFilter);
+   else if(activeFilter!=='All') fok=(w.campaign===activeFilter||w.useCase===activeFilter||w.region===activeFilter);
    return qok&&fok;
  });
 }
