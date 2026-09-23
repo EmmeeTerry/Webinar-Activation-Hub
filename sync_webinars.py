@@ -47,32 +47,39 @@ except ImportError:
 # ---------------------------------------------------------------------------
 
 WEBINAR_COLUMN_MAP = {
-    "title":            "Webinar Title",
-    "date":             "Webinar Date",
-    "status":           "Status",              # expects: Upcoming / Planned / On Demand
-    "campaign":         "Campaign",
+    "title":            "Asset Title (with Link)",  # display text used; see TEXT_ONLY_FIELDS below
+    "date":             "Publish Date",
+    "status":           "Webinar Status",
+    "campaign":         "Campaign",             # TODO: confirm this column exists on the report (see README)
     "useCase":          "Use Case",
     "audience":         "Audience",
     "region":           "Region",
-    "owner":            "Owner",
-    "quarter":          "Quarter",
-    "partnerReady":     "Partner Ready",        # checkbox or Yes/No text
-    "activationStatus": "Activation Status",
-    "watch":            "Webinar / Registration Link",
-    "marketingEmail":   "Marketing Email",
-    "salesEmail":       "Sales Outreach Email",
+    "owner":            "Owner Individual",
+    "quarter":          "Fiscal Quarter",
+    "partnerReady":     "Partner Use (Y/N)",     # confirmed from live column list
+    "activationStatus": "Activation Status",     # TODO: confirm this column exists on the report
+    "watch":            "Gated URL",
+    "marketingEmail":   "Outbound Email",
+    "salesEmail":       "Sales Email",
     "paidSocial":       "Paid Social",
-    "social":           "Organic Social",
+    "social":           "Sprout Social",
     "attendance":       "Attendance Report",
 }
 
+# Fields whose Smartsheet column is a hyperlink cell, but where we want the visible
+# TEXT rather than the link target (because that same column also carries the URL
+# for another field, or because the field itself is meant to be plain text).
+WEBINAR_TEXT_ONLY_FIELDS = {"title"}
+
 CONTENT_COLUMN_MAP = {
-    "title":    "Resource Title",
-    "type":     "Resource Type",
+    "title":    "Asset Title",            # plain text column, not the linked one
+    "type":     "Type",
     "campaign": "Campaign",
     "useCase":  "Use Case",
-    "url":      "URL",
+    "url":      "Asset Title (with Link)",  # hyperlink cell -- we want the URL here
 }
+
+CONTENT_TEXT_ONLY_FIELDS = set()  # every mapped content field here should resolve to its natural value
 
 READINESS_FROM_ACTIVATION = {
     "activation ready": "Activation ready",
@@ -94,14 +101,17 @@ def slugify(text):
     return re.sub(r"-+", "-", text).strip("-")[:90] or "untitled"
 
 
-def cell_lookup(row, col_id_by_title, title):
-    """Return the best available text value for a given column title on a row."""
+def cell_lookup(row, col_id_by_title, title, text_only=False):
+    """Return the best available value for a given column title on a row.
+    If text_only is True, always return the visible text, even if the cell
+    also carries a hyperlink (used when the same column's link is being
+    read separately for a different field)."""
     col_id = col_id_by_title.get(title)
     if col_id is None:
         return None
     for cell in row.cells:
         if cell.column_id == col_id:
-            if getattr(cell, "hyperlink", None) and getattr(cell.hyperlink, "url", None):
+            if not text_only and getattr(cell, "hyperlink", None) and getattr(cell.hyperlink, "url", None):
                 return cell.hyperlink.url
             if cell.display_value is not None:
                 return cell.display_value
@@ -160,7 +170,7 @@ def readiness_from(activation_status):
 # Fetch + transform
 # ---------------------------------------------------------------------------
 
-def fetch_report_rows(client, report_id, column_map, label):
+def fetch_report_rows(client, report_id, column_map, label, text_only_fields=frozenset()):
     report = client.Reports.get_report(report_id)
     col_id_by_title = {c.title: c.id for c in report.columns}
 
@@ -174,13 +184,14 @@ def fetch_report_rows(client, report_id, column_map, label):
 
     rows_out = []
     for row in report.rows:
-        record = {k: cell_lookup(row, col_id_by_title, v) for k, v in column_map.items()}
+        record = {k: cell_lookup(row, col_id_by_title, v, text_only=k in text_only_fields)
+                  for k, v in column_map.items()}
         record["_sourceRow"] = row.row_number
         rows_out.append(record)
     return rows_out
 
 
-def fetch_sheet_rows(client, sheet_id, column_map, label):
+def fetch_sheet_rows(client, sheet_id, column_map, label, text_only_fields=frozenset()):
     sheet = client.Sheets.get_sheet(sheet_id)
     col_id_by_title = {c.title: c.id for c in sheet.columns}
 
@@ -194,7 +205,8 @@ def fetch_sheet_rows(client, sheet_id, column_map, label):
 
     rows_out = []
     for row in sheet.rows:
-        record = {k: cell_lookup(row, col_id_by_title, v) for k, v in column_map.items()}
+        record = {k: cell_lookup(row, col_id_by_title, v, text_only=k in text_only_fields)
+                  for k, v in column_map.items()}
         rows_out.append(record)
     return rows_out
 
@@ -317,11 +329,11 @@ def main():
     client.errors_as_exceptions(True)
 
     print("Fetching Webinar Calendar report...")
-    webinar_rows = fetch_report_rows(client, webinar_report_id, WEBINAR_COLUMN_MAP, "Webinar Calendar")
+    webinar_rows = fetch_report_rows(client, webinar_report_id, WEBINAR_COLUMN_MAP, "Webinar Calendar", WEBINAR_TEXT_ONLY_FIELDS)
     print(f"  {len(webinar_rows)} rows fetched.")
 
     print("Fetching Content Mapping Master List...")
-    content_rows = fetch_sheet_rows(client, content_sheet_id, CONTENT_COLUMN_MAP, "Content Mapping Master List")
+    content_rows = fetch_sheet_rows(client, content_sheet_id, CONTENT_COLUMN_MAP, "Content Mapping Master List", CONTENT_TEXT_ONLY_FIELDS)
     print(f"  {len(content_rows)} rows fetched.")
 
     webinars = transform(webinar_rows, content_rows)
