@@ -29,6 +29,7 @@ jobs:
           SMARTSHEET_API_TOKEN: ${{ secrets.SMARTSHEET_API_TOKEN }}
           WEBINAR_REPORT_ID: ${{ secrets.WEBINAR_REPORT_ID }}
           CONTENT_SHEET_ID: ${{ secrets.CONTENT_SHEET_ID }}
+          DEBUG_COLUMNS: "1"
         run: python sync_webinars.py
 
       - name: Commit updated webinars.json
