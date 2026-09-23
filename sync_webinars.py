@@ -101,22 +101,35 @@ def slugify(text):
     return re.sub(r"-+", "-", text).strip("-")[:90] or "untitled"
 
 
-def cell_lookup(row, col_id_by_title, title, text_only=False):
-    """Return the best available value for a given column title on a row.
-    If text_only is True, always return the visible text, even if the cell
-    also carries a hyperlink (used when the same column's link is being
-    read separately for a different field)."""
+def extract_value(cell, text_only=False):
+    """Pull the best available value out of a single cell object."""
+    if cell is None:
+        return None
+    if not text_only and getattr(cell, "hyperlink", None) and getattr(cell.hyperlink, "url", None):
+        return cell.hyperlink.url
+    if cell.display_value is not None:
+        return cell.display_value
+    return cell.value
+
+
+def cell_lookup_by_id(row, col_id_by_title, title, text_only=False):
+    """Match a cell to its column via column_id. Reliable for regular Sheets."""
     col_id = col_id_by_title.get(title)
     if col_id is None:
         return None
     for cell in row.cells:
         if cell.column_id == col_id:
-            if not text_only and getattr(cell, "hyperlink", None) and getattr(cell.hyperlink, "url", None):
-                return cell.hyperlink.url
-            if cell.display_value is not None:
-                return cell.display_value
-            return cell.value
+            return extract_value(cell, text_only)
     return None
+
+
+def cell_lookup_by_position(row, index_by_title, title, text_only=False):
+    """Match a cell to its column by position in the row. Needed for Reports,
+    where Smartsheet's cell.column_id does not reliably match column.id."""
+    idx = index_by_title.get(title)
+    if idx is None or idx >= len(row.cells):
+        return None
+    return extract_value(row.cells[idx], text_only)
 
 
 def truthy(value):
@@ -173,7 +186,7 @@ def readiness_from(activation_status):
 def fetch_report_rows(client, report_id, column_map, label, text_only_fields=frozenset()):
     report = client.Reports.get_report(report_id)
     col_id_by_title = {c.title: c.id for c in report.columns}
-    title_by_col_id = {c.id: c.title for c in report.columns}
+    index_by_title = {c.title: i for i, c in enumerate(report.columns)}
 
     if DEBUG_COLUMNS:
         print(f"\n--- Columns Smartsheet returned for {label} ---")
@@ -183,17 +196,11 @@ def fetch_report_rows(client, report_id, column_map, label, text_only_fields=fro
         if missing:
             print(f"  ! Not found (fix COLUMN_MAP): {missing}")
 
-        if report.rows:
-            first = report.rows[0]
-            print(f"\n--- Raw first-row cells for {label} (id-matching diagnostic) ---")
-            for cell in first.cells:
-                matched_title = title_by_col_id.get(cell.column_id, "!!NO COLUMN MATCH!!")
-                print(f"  column_id={cell.column_id}  matched_title='{matched_title}'  "
-                      f"value={cell.value!r}  display_value={cell.display_value!r}")
-
     rows_out = []
     for row in report.rows:
-        record = {k: cell_lookup(row, col_id_by_title, v, text_only=k in text_only_fields)
+        # NOTE: Smartsheet's Reports API does not reliably match cell.column_id
+        # to column.id, so we match cells to columns by position instead.
+        record = {k: cell_lookup_by_position(row, index_by_title, v, text_only=k in text_only_fields)
                   for k, v in column_map.items()}
         record["_sourceRow"] = row.row_number
         rows_out.append(record)
@@ -214,7 +221,7 @@ def fetch_sheet_rows(client, sheet_id, column_map, label, text_only_fields=froze
 
     rows_out = []
     for row in sheet.rows:
-        record = {k: cell_lookup(row, col_id_by_title, v, text_only=k in text_only_fields)
+        record = {k: cell_lookup_by_id(row, col_id_by_title, v, text_only=k in text_only_fields)
                   for k, v in column_map.items()}
         rows_out.append(record)
     return rows_out
