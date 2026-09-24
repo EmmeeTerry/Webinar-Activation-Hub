@@ -1,10 +1,10 @@
 {
-  "lastRefreshed": "2026-09-24T21:28:58.592787+00:00",
+  "lastRefreshed": "2026-09-24T21:41:27.627544+00:00",
   "items": [
     {
       "id": "2026-gigaom-rader-for-high-performance-storage-optimized-for-ai-workloads-1",
       "title": "2026 GigaOm Rader for High-Performance Storage Optimized for AI Workloads",
-      "url": "2026 GigaOm Rader for High-Performance Storage Optimized for AI Workloads",
+      "url": null,
       "type": "3rd Party / Analyst/Industry Trends",
       "campaign": "AI Data Foundation",
       "useCase": "High Performance AI-Ready Infrastructure",
@@ -25,7 +25,7 @@
     {
       "id": "2026-gigaom-rader-for-high-performance-storage-optimized-for-ai-workloads-2",
       "title": "2026 GigaOm Rader for High-Performance Storage Optimized for AI Workloads",
-      "url": "2026 GigaOm Rader for High-Performance Storage Optimized for AI Workloads",
+      "url": null,
       "type": "Webinar",
       "campaign": "AI Data Foundation",
       "useCase": "High Performance AI-Ready Infrastructure",
@@ -46,7 +46,7 @@
     {
       "id": "2027-gigaom-for-unstructured-data-management-udm-3",
       "title": "2027 GigaOm for Unstructured Data Management (UDM)",
-      "url": "2027 GigaOm for Unstructured Data Management (UDM)",
+      "url": null,
       "type": "3rd Party / Analyst/Industry Trends",
       "campaign": "AI Data Foundation",
       "useCase": "Data Readiness and Activation for AI",
@@ -67,7 +67,7 @@
     {
       "id": "2027-gigaom-radar-for-object-storage-4",
       "title": "2027 GigaOm Radar for Object Storage",
-      "url": "2027 GigaOm Radar for Object Storage",
+      "url": null,
       "type": "3rd Party / Analyst/Industry Trends",
       "campaign": "AI Data Foundation",
       "useCase": "Data Readiness and Activation for AI",
@@ -88,7 +88,7 @@
     {
       "id": "451-research-vsp-360-aiops-5",
       "title": "451 Research - VSP 360 AIOps",
-      "url": "451 Research - VSP 360 AIOps",
+      "url": null,
       "type": "3rd Party / Analyst/Industry Trends",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
@@ -109,7 +109,7 @@
     {
       "id": "451-research-vsp-360-aiops-sla-as-code-6",
       "title": "451 Research - VSP 360 AIOps SLA as Code",
-      "url": "451 Research - VSP 360 AIOps SLA as Code",
+      "url": null,
       "type": "Webinar",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
@@ -130,7 +130,7 @@
     {
       "id": "cyber-resilience-customer-outcomes-ebook-7",
       "title": "Cyber Resilience Customer Outcomes eBook",
-      "url": "Cyber Resilience Customer Outcomes eBook",
+      "url": null,
       "type": "eBook/Whitepaper",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Cyber Risk Mitigation & Recovery",
@@ -151,7 +151,7 @@
     {
       "id": "cyber-security-month-webinar-with-index-engines-8",
       "title": "Cyber Security Month Webinar with Index Engines",
-      "url": "Cyber Security Month Webinar with Index Engines",
+      "url": null,
       "type": "Webinar",
       "campaign": "AI Data Foundation",
       "useCase": "Cyber Risk Mitigation & Recovery",
@@ -172,7 +172,7 @@
     {
       "id": "data-modernization-dummies-guide-9",
       "title": "Data Modernization Dummies Guide",
-      "url": "Data Modernization Dummies Guide",
+      "url": null,
       "type": "3rd Party / Analyst/Industry Trends",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
@@ -193,7 +193,7 @@
     {
       "id": "data-resilience-as-a-service-ebook-10",
       "title": "Data Resilience as a Service eBook",
-      "url": "Data Resilience as a Service eBook",
+      "url": null,
       "type": "eBook/Whitepaper",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Cyber Risk Mitigation & Recovery",
@@ -214,7 +214,7 @@
     {
       "id": "ebook-title-trust-continuity-and-competitive-advantage-in-the-ai-era-11",
       "title": "eBook Title: Trust, Continuity, and Competitive Advantage in the AI Era\u200b\n\u200b",
-      "url": "eBook Title: Trust, Continuity, and Competitive Advantage in the AI Era\u200b\n\u200b",
+      "url": null,
       "type": "eBook/Whitepaper",
       "campaign": "AI Data Foundation",
       "useCase": "High Performance AI-Ready Infrastructure",
@@ -235,7 +235,7 @@
     {
       "id": "energy-efficiency-sustainability-12",
       "title": "Energy Efficiency & Sustainability",
-      "url": "Energy Efficiency & Sustainability",
+      "url": null,
       "type": "Webinar",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
@@ -277,7 +277,7 @@
     {
       "id": "gartner-peer-insights-asset-block-14",
       "title": "Gartner Peer Insights Asset - Block",
-      "url": "Gartner Peer Insights Asset - Block",
+      "url": null,
       "type": "eBook/Whitepaper",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
@@ -319,7 +319,7 @@
     {
       "id": "idc-cyber-resilience-webinar-16",
       "title": "IDC Cyber Resilience Webinar",
-      "url": "IDC Cyber Resilience Webinar",
+      "url": null,
       "type": "Webinar",
       "campaign": "AI Data Foundation",
       "useCase": "Cyber Risk Mitigation & Recovery",
@@ -340,7 +340,7 @@
     {
       "id": "idc-spotlight-report-cyber-resilience-17",
       "title": "IDC Spotlight Report - Cyber Resilience",
-      "url": "IDC Spotlight Report - Cyber Resilience",
+      "url": null,
       "type": "3rd Party / Analyst/Industry Trends",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Cyber Risk Mitigation & Recovery",
@@ -487,7 +487,7 @@
     {
       "id": "tier-1-launch-midrange-refresh-24",
       "title": "Tier 1 Launch: Midrange Refresh",
-      "url": "Tier 1 Launch: Midrange Refresh",
+      "url": null,
       "type": "Webinar",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
@@ -508,7 +508,7 @@
     {
       "id": "what-ctos-need-to-know-about-modern-ai-storage-25",
       "title": "What CTOs Need to Know About Modern AI Storage",
-      "url": "What CTOs Need to Know About Modern AI Storage",
+      "url": null,
       "type": "Blog / Executive POV",
       "campaign": "Data Modernization & Resilience",
       "useCase": "High Performance AI-Ready Infrastructure",
@@ -529,7 +529,7 @@
     {
       "id": "cyber-resilience-trusted-data-foundation-for-ai-26",
       "title": "Cyber Resilience - Trusted Data Foundation for AI",
-      "url": "Cyber Resilience - Trusted Data Foundation for AI",
+      "url": null,
       "type": "Webinar",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Cyber Risk Mitigation & Recovery",
@@ -613,7 +613,7 @@
     {
       "id": "2-additional-customer-story-videos-estako-1-other-30",
       "title": "2 Additional Customer Story Videos - Estako + 1 other",
-      "url": "2 Additional Customer Story Videos - Estako + 1 other",
+      "url": null,
       "type": "Video",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
@@ -718,7 +718,7 @@
     {
       "id": "451-research-vsp-360-aiops-sla-as-code-35",
       "title": "451 Research - VSP 360 AIOps SLA as Code",
-      "url": "451 Research - VSP 360 AIOps SLA as Code",
+      "url": null,
       "type": "3rd Party / Analyst/Industry Trends",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
@@ -991,7 +991,7 @@
     {
       "id": "ai-data-foundation-roadmap-guide-48",
       "title": "Ai Data Foundation Roadmap Guide",
-      "url": "Ai Data Foundation Roadmap Guide",
+      "url": null,
       "type": "eBook/Whitepaper",
       "campaign": "AI Data Foundation",
       "useCase": "Data Readiness and Activation for AI",
@@ -1012,7 +1012,7 @@
     {
       "id": "ai-data-foundation-roadmap-guide-49",
       "title": "Ai Data Foundation Roadmap Guide",
-      "url": "Ai Data Foundation Roadmap Guide",
+      "url": null,
       "type": "eBook/Whitepaper",
       "campaign": "AI Data Foundation",
       "useCase": "High Performance AI-Ready Infrastructure",
@@ -1096,7 +1096,7 @@
     {
       "id": "americas-midrange-road-show-blog-53",
       "title": "Americas Midrange Road Show\u200b blog",
-      "url": "Americas Midrange Road Show\u200b blog",
+      "url": null,
       "type": "Blog / Executive POV",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Cyber Risk Mitigation & Recovery",
@@ -1117,7 +1117,7 @@
     {
       "id": "app-data-consolidation-update-needed-54",
       "title": "App Data Consolidation (update needed)",
-      "url": "App Data Consolidation (update needed)",
+      "url": null,
       "type": "Video",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Hybrid Cloud Platform & Operations",
@@ -1243,7 +1243,7 @@
     {
       "id": "business-critical-cyber-recovery-60",
       "title": "Business-Critical Cyber Recovery",
-      "url": "Business-Critical Cyber Recovery",
+      "url": null,
       "type": "Datasheet / Solution Brief / Technical",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Cyber Risk Mitigation & Recovery",
@@ -1390,7 +1390,7 @@
     {
       "id": "clean-data-recovery-the-difference-between-best-effort-and-sla-backed-67",
       "title": "Clean Data Recovery: The Difference Between Best-Effort and SLA-Backed",
-      "url": "Clean Data Recovery: The Difference Between Best-Effort and SLA-Backed",
+      "url": null,
       "type": "Infographic",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Cyber Risk Mitigation & Recovery",
@@ -1537,7 +1537,7 @@
     {
       "id": "cyber-recovery-explainer-video-74",
       "title": "Cyber Recovery Explainer Video",
-      "url": "Cyber Recovery Explainer Video",
+      "url": null,
       "type": "Video",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Cyber Risk Mitigation & Recovery",
@@ -1642,7 +1642,7 @@
     {
       "id": "cyber-resilience-pov-ebook-79",
       "title": "Cyber Resilience PoV eBook",
-      "url": "Cyber Resilience PoV eBook",
+      "url": null,
       "type": "eBook/Whitepaper",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Cyber Risk Mitigation & Recovery",
@@ -1726,7 +1726,7 @@
     {
       "id": "data-modernization-demo-new-83",
       "title": "Data Modernization Demo (New)",
-      "url": "Data Modernization Demo (New)",
+      "url": null,
       "type": "Demo / Assessment / Tool / Offer",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Hybrid Cloud Platform & Operations",
@@ -1747,7 +1747,7 @@
     {
       "id": "data-modernization-for-ai-new-84",
       "title": "Data Modernization for AI (New)",
-      "url": "Data Modernization for AI (New)",
+      "url": null,
       "type": "Datasheet / Solution Brief / Technical",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Hybrid Cloud Platform & Operations",
@@ -1789,7 +1789,7 @@
     {
       "id": "data-resilience-as-a-service-solution-profile-86",
       "title": "Data Resilience as a Service Solution Profile",
-      "url": "Data Resilience as a Service Solution Profile",
+      "url": null,
       "type": "Datasheet / Solution Brief / Technical",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Cyber Risk Mitigation & Recovery",
@@ -1810,7 +1810,7 @@
     {
       "id": "data-resilience-assessment-emea-pilot-only-87",
       "title": "Data Resilience Assessment (EMEA Pilot Only)",
-      "url": "Data Resilience Assessment (EMEA Pilot Only)",
+      "url": null,
       "type": "Demo / Assessment / Tool / Offer",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Cyber Risk Mitigation & Recovery",
@@ -1873,7 +1873,7 @@
     {
       "id": "ebook-with-agency-on-turtl-90",
       "title": "eBook: with Agency on Turtl",
-      "url": "eBook: with Agency on Turtl",
+      "url": null,
       "type": "eBook/Whitepaper",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
@@ -1915,7 +1915,7 @@
     {
       "id": "enhancing-hybrid-cloud-management-with-unified-observability-tools-new-92",
       "title": "Enhancing hybrid cloud management with unified observability tools (New)",
-      "url": "Enhancing hybrid cloud management with unified observability tools (New)",
+      "url": null,
       "type": "Datasheet / Solution Brief / Technical",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Hybrid Cloud Platform & Operations",
@@ -1999,7 +1999,7 @@
     {
       "id": "everflex-capacity-on-demand-96",
       "title": "EverFlex Capacity on Demand",
-      "url": "EverFlex Capacity on Demand",
+      "url": null,
       "type": "Top 10",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Hybrid Cloud Platform & Operations",
@@ -2062,7 +2062,7 @@
     {
       "id": "everflex-managed-focus-on-multi-vendor-management-new-99",
       "title": "EverFlex Managed focus on Multi-vendor Management (new)",
-      "url": "EverFlex Managed focus on Multi-vendor Management (new)",
+      "url": null,
       "type": "Datasheet / Solution Brief / Technical",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Hybrid Cloud Platform & Operations",
@@ -2125,7 +2125,7 @@
     {
       "id": "executive-series-cyber-resilience-month-102",
       "title": "Executive Series: Cyber Resilience Month",
-      "url": "Executive Series: Cyber Resilience Month",
+      "url": null,
       "type": "Blog / Executive POV",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Cyber Risk Mitigation & Recovery",
@@ -2419,7 +2419,7 @@
     {
       "id": "gartner-emerging-market-quadrant-emq-ai-data-storage-116",
       "title": "Gartner Emerging Market Quadrant (EMQ) - AI Data Storage",
-      "url": "Gartner Emerging Market Quadrant (EMQ) - AI Data Storage",
+      "url": null,
       "type": "3rd Party / Analyst/Industry Trends",
       "campaign": "AI Data Foundation",
       "useCase": "High Performance AI-Ready Infrastructure",
@@ -2629,7 +2629,7 @@
     {
       "id": "hitachi-hmax-and-hitachi-iq-for-life-sciences-126",
       "title": "Hitachi HMAX and Hitachi iQ for Life Sciences",
-      "url": "Hitachi HMAX and Hitachi iQ for Life Sciences",
+      "url": null,
       "type": "Datasheet / Solution Brief / Technical",
       "campaign": "AI Data Foundation",
       "useCase": "High Performance AI-Ready Infrastructure",
@@ -2650,7 +2650,7 @@
     {
       "id": "hitachi-hmax-and-hitachi-iq-for-mining-127",
       "title": "Hitachi HMAX and Hitachi iQ for Mining",
-      "url": "Hitachi HMAX and Hitachi iQ for Mining",
+      "url": null,
       "type": "Datasheet / Solution Brief / Technical",
       "campaign": "AI Data Foundation",
       "useCase": "High Performance AI-Ready Infrastructure",
@@ -2671,7 +2671,7 @@
     {
       "id": "hitachi-hmax-and-hitachi-iq-for-power-grids-128",
       "title": "Hitachi HMAX and Hitachi iQ for Power Grids",
-      "url": "Hitachi HMAX and Hitachi iQ for Power Grids",
+      "url": null,
       "type": "Datasheet / Solution Brief / Technical",
       "campaign": "AI Data Foundation",
       "useCase": "High Performance AI-Ready Infrastructure",
@@ -2692,7 +2692,7 @@
     {
       "id": "hitachi-in-gartner-infrastructure-platform-129",
       "title": "Hitachi in Gartner Infrastructure Platform",
-      "url": "Hitachi in Gartner Infrastructure Platform",
+      "url": null,
       "type": "Blog / Executive POV",
       "campaign": "Data Modernization & Resilience",
       "useCase": "High Performance AI-Ready Infrastructure",
@@ -2713,7 +2713,7 @@
     {
       "id": "hitachi-in-gartner-primary-storage-platforms-mq-blog-130",
       "title": "Hitachi in Gartner Primary Storage Platforms MQ Blog",
-      "url": "Hitachi in Gartner Primary Storage Platforms MQ Blog",
+      "url": null,
       "type": "Blog / Executive POV",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
@@ -2818,7 +2818,7 @@
     {
       "id": "hitachi-leader-in-gigaom-primary-storage-platforms-radar-135",
       "title": "Hitachi Leader in GigaOm Primary Storage Platforms Radar",
-      "url": "Hitachi Leader in GigaOm Primary Storage Platforms Radar",
+      "url": null,
       "type": "Blog / Executive POV",
       "campaign": "AI Data Foundation",
       "useCase": "Hybrid Cloud Platform & Operations",
@@ -2986,7 +2986,7 @@
     {
       "id": "hitachi-vantara-flexible-consumption-and-financing-solutions-update-143",
       "title": "Hitachi Vantara Flexible Consumption and Financing Solutions (update)",
-      "url": "Hitachi Vantara Flexible Consumption and Financing Solutions (update)",
+      "url": null,
       "type": "Datasheet / Solution Brief / Technical",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Hybrid Cloud Platform & Operations",
@@ -3364,7 +3364,7 @@
     {
       "id": "hv-signature-support-new-161",
       "title": "HV Signature Support (new)",
-      "url": "HV Signature Support (new)",
+      "url": null,
       "type": "Datasheet / Solution Brief / Technical",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Hybrid Cloud Platform & Operations",
@@ -3448,7 +3448,7 @@
     {
       "id": "idc-marketscape-worldwide-private-ai-infrafrstucture-systems-165",
       "title": "IDC Marketscape - Worldwide Private AI Infrafrstucture Systems",
-      "url": "IDC Marketscape - Worldwide Private AI Infrafrstucture Systems",
+      "url": null,
       "type": "3rd Party / Analyst/Industry Trends",
       "campaign": "AI Data Foundation",
       "useCase": "High Performance AI-Ready Infrastructure",
@@ -3490,7 +3490,7 @@
     {
       "id": "influencer-blog-your-mainframe-decision-is-not-the-one-you-think-167",
       "title": "Influencer Blog:Your Mainframe Decision Is Not the One \nYou Think",
-      "url": "Influencer Blog:Your Mainframe Decision Is Not the One \nYou Think",
+      "url": null,
       "type": "Blog / Executive POV",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
@@ -3511,7 +3511,7 @@
     {
       "id": "infosec-blog-168",
       "title": "Infosec blog",
-      "url": "Infosec blog",
+      "url": null,
       "type": "Blog / Executive POV",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Hybrid Cloud Platform & Operations",
@@ -3532,7 +3532,7 @@
     {
       "id": "infrastructure-modernization-maturity-scorecard-169",
       "title": "Infrastructure Modernization Maturity Scorecard",
-      "url": "Infrastructure Modernization Maturity Scorecard",
+      "url": null,
       "type": "Demo / Assessment / Tool / Offer",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
@@ -3574,7 +3574,7 @@
     {
       "id": "it-decision-making-budget-and-geopolitical-risk-171",
       "title": "IT Decision-Making, Budget, and Geopolitical Risk",
-      "url": "IT Decision-Making, Budget, and Geopolitical Risk",
+      "url": null,
       "type": "Blog / Executive POV",
       "campaign": "AI Data Foundation",
       "useCase": "Cyber Risk Mitigation & Recovery",
@@ -3763,7 +3763,7 @@
     {
       "id": "mission-critical-cyber-recovery-180",
       "title": "Mission-Critical Cyber Recovery",
-      "url": "Mission-Critical Cyber Recovery",
+      "url": null,
       "type": "Demo / Assessment / Tool / Offer",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Cyber Risk Mitigation & Recovery",
@@ -3784,7 +3784,7 @@
     {
       "id": "mission-critical-cyber-recovery-181",
       "title": "Mission-Critical Cyber Recovery",
-      "url": "Mission-Critical Cyber Recovery",
+      "url": null,
       "type": "Datasheet / Solution Brief / Technical",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Cyber Risk Mitigation & Recovery",
@@ -3994,7 +3994,7 @@
     {
       "id": "omdia-modernization-guide-for-ai-readiness-191",
       "title": "Omdia: Modernization Guide for AI Readiness",
-      "url": "Omdia: Modernization Guide for AI Readiness",
+      "url": null,
       "type": "eBook/Whitepaper",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
@@ -4036,7 +4036,7 @@
     {
       "id": "omdia-the-five-new-essentials-for-data-storage-platforms-infographic-193",
       "title": "Omdia: The Five New Essentials for Data Storage Platforms Infographic",
-      "url": "Omdia: The Five New Essentials for Data Storage Platforms Infographic",
+      "url": null,
       "type": "Infographic",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
@@ -4099,7 +4099,7 @@
     {
       "id": "overcoming-gaps-with-hybrid-cloud-196",
       "title": "Overcoming Gaps with Hybrid Cloud",
-      "url": "Overcoming Gaps with Hybrid Cloud",
+      "url": null,
       "type": "eBook/Whitepaper",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Hybrid Cloud Platform & Operations",
@@ -4120,7 +4120,7 @@
     {
       "id": "overcoming-legacy-it-infrastructure-barriers-with-hybrid-cloud-new-197",
       "title": "Overcoming legacy IT infrastructure barriers with hybrid cloud (New)",
-      "url": "Overcoming legacy IT infrastructure barriers with hybrid cloud (New)",
+      "url": null,
       "type": "eBook/Whitepaper",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Hybrid Cloud Platform & Operations",
@@ -4141,7 +4141,7 @@
     {
       "id": "pearkmarks-results-on-bhe-for-oracle-tbd-2h-198",
       "title": "Pearkmarks Results on BHE for Oracle (TBD-2H)",
-      "url": "Pearkmarks Results on BHE for Oracle (TBD-2H)",
+      "url": null,
       "type": "3rd Party / Analyst/Industry Trends",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
@@ -4351,7 +4351,7 @@
     {
       "id": "rice-university-208",
       "title": "Rice University",
-      "url": "Rice University",
+      "url": null,
       "type": "Case Study / Customer Story",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
@@ -4477,7 +4477,7 @@
     {
       "id": "sds-tco-tool-blog-214",
       "title": "SDS TCO tool blog",
-      "url": "SDS TCO tool blog",
+      "url": null,
       "type": "Blog / Executive POV",
       "campaign": "",
       "useCase": "Data Platform Architectures & Economics",
@@ -4708,7 +4708,7 @@
     {
       "id": "state-of-data-infra-report-blog-225",
       "title": "State of Data Infra Report\u200b blog",
-      "url": "State of Data Infra Report\u200b blog",
+      "url": null,
       "type": "Blog / Executive POV",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
@@ -4771,7 +4771,7 @@
     {
       "id": "state-of-data-infrastructure-global-report-2025-228",
       "title": "State of Data Infrastructure Global Report 2025",
-      "url": "State of Data Infrastructure Global Report 2025 hhttps://www.hitachivantara.com/en-us/gated-forms/state-of-data-2025",
+      "url": null,
       "type": "eBook/Whitepaper",
       "campaign": "",
       "useCase": "Data Platform Architectures & Economics",
@@ -4813,7 +4813,7 @@
     {
       "id": "supercompute-blog-230",
       "title": "Supercompute blog",
-      "url": "Supercompute blog",
+      "url": null,
       "type": "Blog / Executive POV",
       "campaign": "Data Modernization & Resilience",
       "useCase": "High Performance AI-Ready Infrastructure",
@@ -4960,7 +4960,7 @@
     {
       "id": "the-storage-modernization-imperative-omdia-237",
       "title": "The Storage Modernization\nImperative - Omdia",
-      "url": "The Storage Modernization\nImperative - Omdia",
+      "url": null,
       "type": "3rd Party / Analyst/Industry Trends",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
@@ -5338,7 +5338,7 @@
     {
       "id": "unbreakable-gated-10min-video-255",
       "title": "Unbreakable - Gated 10min Video",
-      "url": "Unbreakable - Gated 10min Video",
+      "url": null,
       "type": "Video",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Cyber Risk Mitigation & Recovery",
@@ -5548,7 +5548,7 @@
     {
       "id": "vsp-one-object-architectural-overview-265",
       "title": "VSP One Object Architectural Overview",
-      "url": "VSP One Object Architectural Overview",
+      "url": null,
       "type": "eBook/Whitepaper",
       "campaign": "AI Data Foundation",
       "useCase": "Data Readiness and Activation for AI",
@@ -5611,7 +5611,7 @@
     {
       "id": "vsp-one-object-cohasset-compliance-assessment-paper-268",
       "title": "VSP One Object: Cohasset Compliance Assessment Paper",
-      "url": "VSP One Object: Cohasset Compliance Assessment Paper",
+      "url": null,
       "type": "3rd Party / Analyst/Industry Trends",
       "campaign": "AI Data Foundation",
       "useCase": "Cyber Risk Mitigation & Recovery",
@@ -5632,7 +5632,7 @@
     {
       "id": "webinar-title-tbd-gigaom-2027-radar-269",
       "title": "Webinar \u2013 Title TBD (GigaOm 2027 Radar)",
-      "url": "Webinar \u2013 Title TBD (GigaOm 2027 Radar)",
+      "url": null,
       "type": "Webinar",
       "campaign": "AI Data Foundation",
       "useCase": "Data Readiness and Activation for AI",
@@ -5695,7 +5695,7 @@
     {
       "id": "why-hitachi-vantara-272",
       "title": "Why Hitachi Vantara",
-      "url": "Why Hitachi Vantara",
+      "url": null,
       "type": "eBook/Whitepaper",
       "campaign": "",
       "useCase": "",
@@ -5800,7 +5800,7 @@
     {
       "id": "workload-placement-within-hybrid-clouds-277",
       "title": "Workload placement within Hybrid Clouds",
-      "url": "Workload placement within Hybrid Clouds",
+      "url": null,
       "type": "eBook/Whitepaper",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Hybrid Cloud Platform & Operations",
