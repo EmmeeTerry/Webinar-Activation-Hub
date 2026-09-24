@@ -100,7 +100,12 @@ def pretty_date(iso_date):
         return str(iso_date)
 
 
-def extract_value(cell, text_only=False):
+def looks_like_url(value):
+    return isinstance(value, str) and value.strip().lower().startswith(("http://", "https://"))
+
+
+def clean_url(value):
+    return value if looks_like_url(value) else None
     if cell is None:
         return None
     if not text_only and getattr(cell, "hyperlink", None) and getattr(cell.hyperlink, "url", None):
@@ -156,7 +161,7 @@ def fetch_content_rows(client, sheet_id):
         items.append({
             "id": slugify(title) + "-" + str(row.row_number),
             "title": title,
-            "url": raw.get("url"),
+            "url": clean_url(raw.get("url")),
             "type": raw.get("type") or "",
             "campaign": raw.get("campaign") or "",
             "useCase": raw.get("useCase") or "",
@@ -171,8 +176,8 @@ def fetch_content_rows(client, sheet_id):
             "paidMediaDate": paid_media_iso,
             "paidMediaDateDisplay": pretty_date(paid_media_iso) if paid_media_iso else "",
             "primaryActivation": raw.get("primaryActivation") or "",
-            "marketingEmail": raw.get("marketingEmail"),
-            "salesEmail": raw.get("salesEmail"),
+            "marketingEmail": clean_url(raw.get("marketingEmail")),
+            "salesEmail": clean_url(raw.get("salesEmail")),
         })
     return items
 
