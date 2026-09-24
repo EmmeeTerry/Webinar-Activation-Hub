@@ -109,6 +109,7 @@ const FILTER_FIELDS = [
 ];
 let activeFilters = {};
 FILTER_FIELDS.forEach(f => activeFilters[f.key] = 'All');
+activeFilters.status = 'Live';
 
 function esc(s){ return (s==null?'':String(s)).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
 
