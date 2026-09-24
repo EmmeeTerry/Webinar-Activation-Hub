@@ -45,12 +45,17 @@ COLUMN_MAP = {
     "region":      "Region",
     "publishDate": "Publish Date",
     "partnerUse":  "Partner Use (Y/N)",
+    "paidMediaDate":      "Paid Media Date (If any)",
+    "primaryActivation":  "Primary Activation Planned",
+    "marketingEmail":     "Marketing Email",
+    "salesEmail":         "Sales Outreach Email",
 }
 
 # Fields whose column is a hyperlink cell but where we want the visible text,
 # not the link target (the URL is read separately via the "url" field above,
-# from the same underlying column).
-TEXT_ONLY_FIELDS = {"title"}
+# from the same underlying column). marketingEmail/salesEmail are left OUT of
+# this set on purpose -- we want their hyperlink URL, same as webinar links.
+TEXT_ONLY_FIELDS = {"title", "primaryActivation"}
 
 OUTPUT_PATH = os.environ.get("OUTPUT_PATH", "content.json")
 DEBUG_COLUMNS = os.environ.get("DEBUG_COLUMNS") == "1"
@@ -147,6 +152,7 @@ def fetch_content_rows(client, sheet_id):
             continue  # skip only truly blank rows
 
         iso_date = normalize_date(raw.get("publishDate"))
+        paid_media_iso = normalize_date(raw.get("paidMediaDate"))
         items.append({
             "id": slugify(title) + "-" + str(row.row_number),
             "title": title,
@@ -162,6 +168,11 @@ def fetch_content_rows(client, sheet_id):
             "publishDate": iso_date,
             "publishDateDisplay": pretty_date(iso_date),
             "partnerUse": truthy(raw.get("partnerUse")),
+            "paidMediaDate": paid_media_iso,
+            "paidMediaDateDisplay": pretty_date(paid_media_iso) if paid_media_iso else "",
+            "primaryActivation": raw.get("primaryActivation") or "",
+            "marketingEmail": raw.get("marketingEmail"),
+            "salesEmail": raw.get("salesEmail"),
         })
     return items
 
