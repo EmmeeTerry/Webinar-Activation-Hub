@@ -42,7 +42,7 @@ h1{font-family:"Hitachi Sans",Arial,Helvetica,sans-serif;font-weight:400;font-si
 .kpi strong{font-size:20px;font-weight:700;display:block;color:var(--black)}
 .kpi span{font-size:10px;color:var(--gray4);text-transform:uppercase;letter-spacing:.04em}
 .list{background:var(--white);border:1px solid var(--line);border-radius:3px;overflow:hidden;margin-top:18px}
-.row{display:grid;grid-template-columns:minmax(260px,1.6fr) minmax(150px,.8fr) minmax(150px,.8fr) minmax(140px,.7fr) 120px 100px;gap:14px;padding:14px 16px;border-bottom:1px solid var(--line);align-items:center}
+.row{display:grid;grid-template-columns:minmax(260px,1.6fr) minmax(150px,.8fr) minmax(140px,.7fr) minmax(140px,.7fr) 120px 160px;gap:14px;padding:14px 16px;border-bottom:1px solid var(--line);align-items:center}
 .row:last-child{border-bottom:0}
 .row:hover{background:#FCFCFC}
 .row-title{font-family:"Hitachi Sans",Arial,Helvetica,sans-serif;font-size:14px;font-weight:700;line-height:1.35;color:var(--black)}
@@ -54,6 +54,8 @@ h1{font-family:"Hitachi Sans",Arial,Helvetica,sans-serif;font-weight:400;font-si
 .empty{padding:28px;text-align:center;color:var(--gray4);background:var(--white);border:1px dashed var(--gray3);border-radius:3px;margin-top:18px}
 .footer{margin-top:36px;padding-top:18px;border-top:1px solid var(--gray2);font-size:10px;color:var(--gray4);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 .footer strong{color:var(--gray6)}
+.btn.small{padding:6px 9px;font-size:9px;display:block;text-align:center;margin-bottom:5px;width:100%}
+.btn.small:last-child{margin-bottom:0}
 @media(max-width:900px){.row{grid-template-columns:1fr;gap:6px}.topbar{flex-direction:column}.snapshot{text-align:left}}
 
 </style>
@@ -67,7 +69,10 @@ h1{font-family:"Hitachi Sans",Arial,Helvetica,sans-serif;font-weight:400;font-si
       <h1>Content Library</h1>
       <div class="sub">Browse the full campaign and content inventory &mdash; filter by type, campaign, use case, funnel stage, owner team, audience, status, or region to find what you need.</div>
     </div>
-    <div class="snapshot" id="snapshotLabel">Last refreshed &middot; loading&hellip;</div>
+    <div style="text-align:right">
+      <div class="snapshot" id="snapshotLabel">Last refreshed &middot; loading&hellip;</div>
+      <a class="btn" style="margin-top:10px" href="https://app.smartsheet.com/sheets/F8fXxVqMxMvCV34xP76gvG72xPc5JvcMGQ9cXc91" target="_blank">Open source sheet &#8599;</a>
+    </div>
   </div>
 </header>
 
@@ -165,20 +170,24 @@ function filtered(){
 }
 function summary(){
   const d = filtered();
-  const partnerReady = d.filter(x => x.partnerUse).length;
+  const campaigns = uniqueValues('campaign');
+  const campaignCounts = campaigns.map(c => `<div class="kpi"><strong>${d.filter(x=>x.campaign===c).length}</strong><span>${esc(c)}</span></div>`).join('');
   document.getElementById('summary').innerHTML = `
     <div class="kpi"><strong>${d.length}</strong><span>items shown</span></div>
-    <div class="kpi"><strong>${uniqueValues('campaign').length}</strong><span>campaigns</span></div>
-    <div class="kpi"><strong>${partnerReady}</strong><span>partner-use approved</span></div>`;
+    ${campaignCounts}`;
 }
 function row(item){
+  const links = [];
+  if(item.url) links.push(`<a class="btn small" href="${esc(item.url)}" target="_blank">Open &#8599;</a>`);
+  if(item.marketingEmail) links.push(`<a class="btn small" href="${esc(item.marketingEmail)}" target="_blank">Marketing Email &#8599;</a>`);
+  if(item.salesEmail) links.push(`<a class="btn small" href="${esc(item.salesEmail)}" target="_blank">Sales Email &#8599;</a>`);
   return `<div class="row">
     <div><div class="row-title">${item.url?`<a href="${esc(item.url)}" target="_blank" style="color:inherit;text-decoration:none">${esc(item.title)}</a>`:esc(item.title)}</div>${item.type?`<span class="tag">${esc(item.type)}</span>`:''}${item.partnerUse?`<span class="tag green">Partner-use</span>`:''}</div>
     <div class="meta"><strong>${esc(item.campaign||'\u2014')}</strong><br>${esc(item.useCase||'')}</div>
-    <div class="meta">${esc(item.funnelStage||'\u2014')}<br>${esc(item.ownerTeam||'')}</div>
+    <div class="meta">${item.primaryActivation?`<strong>${esc(item.primaryActivation)}</strong><br>`:''}${item.paidMediaDateDisplay?'Paid media: '+esc(item.paidMediaDateDisplay):(item.primaryActivation?'':'\u2014')}</div>
     <div class="meta">${esc(item.audience||'\u2014')}<br>${esc(item.region||'')}</div>
     <div class="meta"><strong>${esc(item.status||'\u2014')}</strong><br>${esc(item.publishDateDisplay||'')}</div>
-    <div>${item.url?`<a class="btn" href="${esc(item.url)}" target="_blank">Open &#8599;</a>`:''}</div>
+    <div>${links.join('')}</div>
   </div>`;
 }
 function render(){
@@ -189,7 +198,7 @@ function render(){
     return;
   }
   const header = `<div class="row header-row">
-    <div>Title</div><div>Campaign / Use Case</div><div>Funnel Stage / Owner Team</div><div>Audience / Region</div><div>Status / Date</div><div>Link</div>
+    <div>Title</div><div>Campaign / Use Case</div><div>Primary Activation / Paid Media</div><div>Audience / Region</div><div>Status / Date</div><div>Links</div>
   </div>`;
   document.getElementById('content').innerHTML = `<div class="list">${header}${d.map(row).join('')}</div>`;
 }
