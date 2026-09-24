@@ -31,12 +31,12 @@ h1{font-family:"Hitachi Sans",Arial,Helvetica,sans-serif;font-weight:400;font-si
 .toolbar{background:var(--white);border:1px solid var(--line);border-radius:4px;padding:16px;box-shadow:0 2px 8px rgba(12,12,12,.03)}
 .search{width:100%;border:1px solid var(--gray3);border-radius:2px;padding:12px 14px;font-size:14px;font-family:inherit;outline:none;background:var(--white)}
 .search:focus{border-color:var(--red1);box-shadow:0 0 0 3px rgba(250,0,15,.08)}
-.filter-group{margin-top:14px}
-.filter-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gray4);margin-bottom:6px}
-.chips{display:flex;flex-wrap:wrap;gap:8px}
-.chip{border:1px solid var(--gray2);background:var(--white);border-radius:999px;padding:6px 10px;font-family:inherit;font-size:10px;cursor:pointer;color:var(--gray5)}
-.chip:hover{border-color:var(--gray4)}
-.chip.active{background:var(--black);color:var(--white);border-color:var(--black)}
+.filter-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin-top:14px}
+.filter-field label{display:block;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gray4);margin-bottom:5px}
+.filter-field select{width:100%;border:1px solid var(--gray2);border-radius:2px;padding:8px 9px;font-family:inherit;font-size:12px;color:var(--gray6);background:var(--white)}
+.filter-field select:focus{outline:none;border-color:var(--red1)}
+.row.header-row{background:var(--gray1);font-size:9px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--gray5);padding:10px 16px}
+.row.header-row:hover{background:var(--gray1)}
 .summary{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 8px}
 .kpi{background:var(--white);border:1px solid var(--line);border-radius:3px;padding:10px 14px;min-width:135px}
 .kpi strong{font-size:20px;font-weight:700;display:block;color:var(--black)}
@@ -74,7 +74,7 @@ h1{font-family:"Hitachi Sans",Arial,Helvetica,sans-serif;font-weight:400;font-si
 <div class="main">
   <div class="toolbar">
     <input class="search" id="search" placeholder="Search by title, campaign, use case, owner team, audience, region&hellip;">
-    <div id="filterGroups"></div>
+    <div class="filter-grid" id="filterGroups"></div>
   </div>
 
   <div class="summary" id="summary"></div>
@@ -140,10 +140,13 @@ function uniqueValues(key){
 function makeFilterGroups(){
   document.getElementById('filterGroups').innerHTML = FILTER_FIELDS.map(f => {
     const values = uniqueValues(f.key);
-    const chips = ['All', ...values].map(v =>
-      `<button class="chip ${activeFilters[f.key]===v?'active':''}" onclick="setFilter('${f.key}','${esc(v).replace(/'/g,"\\'")}')">${esc(v)}</button>`
+    const options = ['All', ...values].map(v =>
+      `<option value="${esc(v)}" ${activeFilters[f.key]===v?'selected':''}>${esc(v)}</option>`
     ).join('');
-    return `<div class="filter-group"><div class="filter-label">${esc(f.label)}</div><div class="chips">${chips}</div></div>`;
+    return `<div class="filter-field">
+      <label>${esc(f.label)}</label>
+      <select onchange="setFilter('${f.key}', this.value)">${options}</select>
+    </div>`;
   }).join('');
 }
 function setFilter(key, value){
@@ -185,7 +188,10 @@ function render(){
     document.getElementById('content').innerHTML = '<div class="empty">No content matches those filters.</div>';
     return;
   }
-  document.getElementById('content').innerHTML = `<div class="list">${d.map(row).join('')}</div>`;
+  const header = `<div class="row header-row">
+    <div>Title</div><div>Campaign / Use Case</div><div>Funnel Stage / Owner Team</div><div>Audience / Region</div><div>Status / Date</div><div>Link</div>
+  </div>`;
+  document.getElementById('content').innerHTML = `<div class="list">${header}${d.map(row).join('')}</div>`;
 }
 document.getElementById('search').addEventListener('input', render);
 function init(){ makeFilterGroups(); render(); }
