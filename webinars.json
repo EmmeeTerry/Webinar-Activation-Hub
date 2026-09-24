@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-09-24T10:06:11.554020+00:00",
+  "lastRefreshed": "2026-09-24T12:08:09.632635+00:00",
   "webinars": [
     {
       "id": "the-economics-of-modern-storage-infrastructure-lower-risk-faster-ai-value-better-roi-webin",
@@ -18,7 +18,7 @@
       "readiness": "Activation ready",
       "whyUse": "Use this for enterprise, midmarket conversations around data platform architectures & economics.",
       "links": {
-        "watch": "https://www.brighttalk.com/webcast/12821/659254?bt_tok={{lead_id}}&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=659254",
+        "watch": "https://www.brighttalk.com/webcast/12821/659254",
         "marketingEmail": "https://brand.hitachivantara.com/guidelines/guide/00542d60-e1a7-4da7-9e5f-133c03191dbc/page/e5dcf9d5-8b2a-4907-86cf-6a7658fc8e08",
         "salesEmail": "https://hitachivantara.sharepoint.com/:w:/s/GlobalCampaignsAssets505/IQAur_oA2tvSTI5WzUov9PsFAYnvUFXdD-1I-Gez-pspUL8?e=4ViuVh",
         "paidSocial": "https://app.smartsheet.com/reports/WRRxRxh9HMhcmp4h7cQ9wJg766r76R5rMCM3H7j1?view=grid",
@@ -78,7 +78,7 @@
       "readiness": "Activation ready",
       "whyUse": "Use this for enterprise conversations around data readiness and activation for ai.",
       "links": {
-        "watch": "https://www.brighttalk.com/webcast/12821/665302?bt_tok=%7b%7blead_id%7d%7d&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=665302",
+        "watch": "https://www.brighttalk.com/webcast/12821/665302",
         "marketingEmail": "https://brand.hitachivantara.com/guidelines/guide/207608cc-f422-4ffc-93b5-773dcdece4fb/page/7a2ed2c6-3b66-4ad4-ac47-e300d6d10135",
         "salesEmail": "https://hitachivantara.sharepoint.com/:w:/s/GlobalCampaignsAssets505/IQBJelsvZa6BR4ZX6YmTSHMiASA6PMR83Sss1YcPKcyqoaM?e=Nvwuu4",
         "paidSocial": "https://app.smartsheet.com/reports/WRRxRxh9HMhcmp4h7cQ9wJg766r76R5rMCM3H7j1?view=grid",
@@ -184,8 +184,8 @@
     {
       "id": "data-sovereignty-and-ai-rethinking-object-storage-in-financial-services",
       "title": "Data, Sovereignty and AI: Rethinking Object Storage in Financial Services",
-      "date": "2026-07-14",
-      "dateDisplay": "Jul 14, 2026",
+      "date": "2026-07-13",
+      "dateDisplay": "Jul 13, 2026",
       "status": "On Demand",
       "campaign": "AI Data Foundation",
       "useCase": "Data Readiness and Activation for AI",
@@ -198,7 +198,7 @@
       "readiness": "Partially ready",
       "whyUse": "Use this for enterprise conversations around data readiness and activation for ai.",
       "links": {
-        "watch": "https://www.hitachivantara.com/en-us/company/events-and-webinars?commid=672306#tab-webinars",
+        "watch": "https://www.brighttalk.com/webcast/12821/672306?",
         "marketingEmail": null,
         "salesEmail": null,
         "paidSocial": null,
@@ -311,7 +311,7 @@
       "useCase": "Cyber Risk Mitigation & Recovery",
       "audience": "Enterprise",
       "region": "AMER",
-      "owner": "Macey Jones, Stephanie Thompson",
+      "owner": "Macey Jones, Victoria Norvall",
       "quarter": "Q3",
       "partnerReady": true,
       "activationStatus": "Not Started",
@@ -369,14 +369,14 @@
       "status": "Planned",
       "campaign": "AI Data Foundation",
       "useCase": "Cyber Risk Mitigation & Recovery",
-      "audience": "Both",
+      "audience": "Enterprise, Midmarket",
       "region": "Global",
       "owner": "Macey Jones, Stephanie Thompson",
       "quarter": "Q3",
       "partnerReady": false,
       "activationStatus": "",
       "readiness": "Planning",
-      "whyUse": "Use this for both conversations around cyber risk mitigation & recovery.",
+      "whyUse": "Use this for enterprise, midmarket conversations around cyber risk mitigation & recovery.",
       "links": {
         "watch": null,
         "marketingEmail": null,
@@ -489,14 +489,14 @@
       "status": "Planned",
       "campaign": "AI Data Foundation",
       "useCase": "Cyber Risk Mitigation & Recovery",
-      "audience": "Both",
+      "audience": "Enterprise, Midmarket",
       "region": "Global",
       "owner": "Macey Jones, Stephanie Thompson",
       "quarter": "Q4",
       "partnerReady": false,
       "activationStatus": "",
       "readiness": "Planning",
-      "whyUse": "Use this for both conversations around cyber risk mitigation & recovery.",
+      "whyUse": "Use this for enterprise, midmarket conversations around cyber risk mitigation & recovery.",
       "links": {
         "watch": null,
         "marketingEmail": null,
@@ -602,8 +602,8 @@
       ]
     },
     {
-      "id": "energy-efficiency-sustainability-maybe-omdia-webinar-or-mit-report-including-customer",
-      "title": "Energy Efficiency & Sustainability - maybe Omdia webinar or MIT report including customer",
+      "id": "energy-efficiency-sustainability",
+      "title": "Energy Efficiency & Sustainability",
       "date": "2027-04-27",
       "dateDisplay": "Apr 27, 2027",
       "status": "Planned",
@@ -614,7 +614,7 @@
       "owner": "Liam Yu",
       "quarter": "Q1",
       "partnerReady": false,
-      "activationStatus": "Not Required",
+      "activationStatus": "Not Started",
       "readiness": "Planning",
       "whyUse": "Use this for enterprise, midmarket conversations around data platform architectures & economics.",
       "links": {
