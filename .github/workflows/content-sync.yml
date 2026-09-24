@@ -1,0 +1,39 @@
+name: Sync Content Library from Smartsheet
+
+on:
+  schedule:
+    - cron: "30 */2 * * *"  # offset by 30 min from the webinar sync so they don't collide
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run Content Library sync
+        env:
+          SMARTSHEET_API_TOKEN: ${{ secrets.SMARTSHEET_API_TOKEN }}
+          CONTENT_SHEET_ID: ${{ secrets.CONTENT_SHEET_ID }}
+          DEBUG_COLUMNS: "1"
+        run: python sync_content.py
+
+      - name: Commit updated content.json
+        run: |
+          git config user.name "content-hub-bot"
+          git config user.email "actions@github.com"
+          git add content.json
+          git diff --quiet --cached || git commit -m "Auto-refresh content library from Smartsheet"
+          git push
