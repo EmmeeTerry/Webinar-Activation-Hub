@@ -1,9 +1,9 @@
 {
-  "lastRefreshed": "2026-09-24T12:08:09.632635+00:00",
+  "lastRefreshed": "2026-09-24T14:06:41.531251+00:00",
   "webinars": [
     {
       "id": "the-economics-of-modern-storage-infrastructure-lower-risk-faster-ai-value-better-roi-webin",
-      "title": "The Economics of Modern Storage Infrastructure: Lower Risk, Faster AI Value, Better ROI Webinar",
+      "title": "The Economics of Modern Storage Infrastructure: Lower Risk, Faster AI Value, Better ROI | Webinar",
       "date": "2026-05-01",
       "dateDisplay": "May 01, 2026",
       "status": "On Demand",
@@ -63,7 +63,7 @@
     },
     {
       "id": "is-object-storage-the-new-ai-foundation-webinar",
-      "title": "Is Object Storage the New AI Foundation? Webinar",
+      "title": "Is Object Storage the New AI Foundation? | Webinar",
       "date": "2026-06-04",
       "dateDisplay": "Jun 04, 2026",
       "status": "On Demand",
@@ -123,7 +123,7 @@
     },
     {
       "id": "resilient-by-design-how-hitachi-vantara-vm2020-and-index-engines-deliver-faster-validated-",
-      "title": "Resilient by Design: How Hitachi Vantara, VM2020, and Index Engines Deliver Faster, Validated Ransomware Recovery Webinar",
+      "title": "Resilient by Design: How Hitachi Vantara, VM2020, and Index Engines Deliver Faster, Validated Ransomware Recovery | Webinar",
       "date": "2026-06-18",
       "dateDisplay": "Jun 18, 2026",
       "status": "On Demand",
@@ -182,8 +182,8 @@
       ]
     },
     {
-      "id": "data-sovereignty-and-ai-rethinking-object-storage-in-financial-services",
-      "title": "Data, Sovereignty and AI: Rethinking Object Storage in Financial Services",
+      "id": "data-sovereignty-and-ai-rethinking-object-storage-in-financial-services-webinar",
+      "title": "Data, Sovereignty and AI: Rethinking Object Storage in Financial Services | Webinar",
       "date": "2026-07-13",
       "dateDisplay": "Jul 13, 2026",
       "status": "On Demand",
@@ -242,8 +242,8 @@
       ]
     },
     {
-      "id": "omdia-what-modern-data-infrastructure-looks-like-in-the-ai-era",
-      "title": "Omdia: What Modern Data Infrastructure Looks Like in the AI Era",
+      "id": "omdia-what-modern-data-infrastructure-looks-like-in-the-ai-era-webinar",
+      "title": "Omdia: What Modern Data Infrastructure Looks Like in the AI Era | Webinar",
       "date": "2026-09-24",
       "dateDisplay": "Sep 24, 2026",
       "status": "Upcoming",
@@ -259,11 +259,11 @@
       "whyUse": "Use this for enterprise, midmarket conversations around data platform architectures & economics.",
       "links": {
         "watch": "https://www.brighttalk.com/webcast/12821/675775",
-        "marketingEmail": "Coming Soon",
+        "marketingEmail": "https://brand.hitachivantara.com/guidelines/guide/00542d60-e1a7-4da7-9e5f-133c03191dbc/page/e1ce0b1f-5759-4c1a-9b0b-3982483807cf",
         "salesEmail": "Coming Soon",
         "paidSocial": "Coming Soon",
         "social": "Coming Soon",
-        "attendance": "Coming Soon"
+        "attendance": "https://hdscorp.lightning.force.com/lightning/r/sObject/00OaZ00000DLYiLUAX/view?queryScope=userFolders"
       },
       "sourceRow": 5,
       "relatedResources": [
