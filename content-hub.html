@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Content Library</title>
+<style>
+
+:root {
+  --red1:#FA000F; --red2:#CC0000; --red-half:#FAE6E6;
+  --black:#0C0C0C; --gray6:#222222; --gray5:#4D4D4D; --gray4:#737373;
+  --gray3:#B3B3B3; --gray2:#D9D9D9; --gray1:#F4F4F4; --white:#FFFFFF;
+  --ink:#222222; --muted:#737373; --line:#D9D9D9; --bg:#F4F4F4; --panel:#FFFFFF;
+  --shadow:0 12px 32px rgba(12,12,12,.09);
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Hitachi Sans",Arial,Helvetica,sans-serif;color:var(--ink);background:var(--bg);font-size:14px}
+a{color:inherit}
+.header{background:var(--white);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+.brandbar{height:6px;background:var(--red1)}
+.topbar{max-width:1450px;margin:auto;padding:22px 28px 20px;display:flex;align-items:flex-start;justify-content:space-between;gap:24px}
+.company{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gray5);margin-bottom:9px}
+h1{font-family:"Hitachi Sans",Arial,Helvetica,sans-serif;font-weight:400;font-size:34px;line-height:1.08;margin:0 0 8px;letter-spacing:-.02em;color:var(--black)}
+.sub{color:var(--gray4);font-size:14px;max-width:800px;line-height:1.5}
+.snapshot{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gray4);white-space:nowrap;text-align:right}
+.snapshot::before{content:"";display:inline-block;width:7px;height:7px;background:var(--red1);border-radius:50%;margin-right:7px;vertical-align:1px}
+.btn{border:1px solid var(--black);background:var(--white);color:var(--black);padding:9px 12px;border-radius:2px;text-decoration:none;font-size:11px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:6px;transition:.15s ease}
+.btn.primary{background:var(--red1);color:var(--white);border-color:var(--red1)}
+.btn:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(12,12,12,.10)}
+.main{max-width:1450px;margin:auto;padding:24px 28px 70px}
+.toolbar{background:var(--white);border:1px solid var(--line);border-radius:4px;padding:16px;box-shadow:0 2px 8px rgba(12,12,12,.03)}
+.search{width:100%;border:1px solid var(--gray3);border-radius:2px;padding:12px 14px;font-size:14px;font-family:inherit;outline:none;background:var(--white)}
+.search:focus{border-color:var(--red1);box-shadow:0 0 0 3px rgba(250,0,15,.08)}
+.filter-group{margin-top:14px}
+.filter-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gray4);margin-bottom:6px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1px solid var(--gray2);background:var(--white);border-radius:999px;padding:6px 10px;font-family:inherit;font-size:10px;cursor:pointer;color:var(--gray5)}
+.chip:hover{border-color:var(--gray4)}
+.chip.active{background:var(--black);color:var(--white);border-color:var(--black)}
+.summary{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 8px}
+.kpi{background:var(--white);border:1px solid var(--line);border-radius:3px;padding:10px 14px;min-width:135px}
+.kpi strong{font-size:20px;font-weight:700;display:block;color:var(--black)}
+.kpi span{font-size:10px;color:var(--gray4);text-transform:uppercase;letter-spacing:.04em}
+.list{background:var(--white);border:1px solid var(--line);border-radius:3px;overflow:hidden;margin-top:18px}
+.row{display:grid;grid-template-columns:minmax(260px,1.6fr) minmax(150px,.8fr) minmax(150px,.8fr) minmax(140px,.7fr) 120px 100px;gap:14px;padding:14px 16px;border-bottom:1px solid var(--line);align-items:center}
+.row:last-child{border-bottom:0}
+.row:hover{background:#FCFCFC}
+.row-title{font-family:"Hitachi Sans",Arial,Helvetica,sans-serif;font-size:14px;font-weight:700;line-height:1.35;color:var(--black)}
+.row-title:hover{text-decoration:underline;text-decoration-color:var(--red1);text-underline-offset:3px}
+.meta{font-size:11px;color:var(--gray4);line-height:1.5}
+.meta strong{color:var(--gray6)}
+.tag{font-size:9px;border:1px solid var(--gray2);border-radius:999px;padding:3px 7px;color:var(--gray5);background:var(--white);display:inline-block;margin-top:4px}
+.tag.green{background:var(--red-half);color:var(--red2);border-color:#F6BFC3}
+.empty{padding:28px;text-align:center;color:var(--gray4);background:var(--white);border:1px dashed var(--gray3);border-radius:3px;margin-top:18px}
+.footer{margin-top:36px;padding-top:18px;border-top:1px solid var(--gray2);font-size:10px;color:var(--gray4);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.footer strong{color:var(--gray6)}
+@media(max-width:900px){.row{grid-template-columns:1fr;gap:6px}.topbar{flex-direction:column}.snapshot{text-align:left}}
+
+</style>
+</head>
+<body>
+<header class="header">
+  <div class="brandbar"></div>
+  <div class="topbar">
+    <div>
+      <div class="company">Hitachi Vantara</div>
+      <h1>Content Library</h1>
+      <div class="sub">Browse the full campaign and content inventory &mdash; filter by type, campaign, use case, funnel stage, owner team, audience, status, or region to find what you need.</div>
+    </div>
+    <div class="snapshot" id="snapshotLabel">Last refreshed &middot; loading&hellip;</div>
+  </div>
+</header>
+
+<div class="main">
+  <div class="toolbar">
+    <input class="search" id="search" placeholder="Search by title, campaign, use case, owner team, audience, region&hellip;">
+    <div id="filterGroups"></div>
+  </div>
+
+  <div class="summary" id="summary"></div>
+
+  <div id="content"></div>
+
+  <div class="footer">
+    <div><strong>Content Library</strong> &middot; sourced from the Content Mapping Master List in Smartsheet, refreshed automatically.</div>
+  </div>
+</div>
+
+<script>
+const EMBEDDED_DATA = [];
+
+let DATA = EMBEDDED_DATA;
+let LAST_REFRESHED = null;
+
+const FILTER_FIELDS = [
+  {key:'type', label:'Type'},
+  {key:'campaign', label:'Campaign'},
+  {key:'useCase', label:'Use Case'},
+  {key:'funnelStage', label:'Funnel Stage'},
+  {key:'ownerTeam', label:'Owner Team'},
+  {key:'audience', label:'Audience'},
+  {key:'status', label:'Status'},
+  {key:'region', label:'Region'},
+];
+let activeFilters = {};
+FILTER_FIELDS.forEach(f => activeFilters[f.key] = 'All');
+
+function esc(s){ return (s==null?'':String(s)).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+
+async function loadData(){
+  try {
+    if(location.protocol !== 'file:') {
+      const r = await fetch('./content.json?ts=' + Date.now(), {cache:'no-store'});
+      if(r.ok) {
+        const j = await r.json();
+        if(Array.isArray(j.items)) DATA = j.items;
+        if(j.lastRefreshed) LAST_REFRESHED = j.lastRefreshed;
+      }
+    }
+  } catch(e){}
+  updateSnapshotLabel();
+  init();
+}
+function updateSnapshotLabel(){
+  const el = document.getElementById('snapshotLabel');
+  if(!el) return;
+  if(LAST_REFRESHED){
+    const d = new Date(LAST_REFRESHED);
+    const stamp = isNaN(d) ? LAST_REFRESHED : d.toLocaleString('en-US',{month:'short',day:'numeric',year:'numeric',hour:'numeric',minute:'2-digit'});
+    el.textContent = 'Last refreshed \u00b7 ' + stamp;
+  } else {
+    el.textContent = 'No data loaded yet';
+  }
+}
+
+function uniqueValues(key){
+  return [...new Set(DATA.map(x => x[key]).filter(Boolean))].sort();
+}
+
+function makeFilterGroups(){
+  document.getElementById('filterGroups').innerHTML = FILTER_FIELDS.map(f => {
+    const values = uniqueValues(f.key);
+    const chips = ['All', ...values].map(v =>
+      `<button class="chip ${activeFilters[f.key]===v?'active':''}" onclick="setFilter('${f.key}','${esc(v).replace(/'/g,"\\'")}')">${esc(v)}</button>`
+    ).join('');
+    return `<div class="filter-group"><div class="filter-label">${esc(f.label)}</div><div class="chips">${chips}</div></div>`;
+  }).join('');
+}
+function setFilter(key, value){
+  activeFilters[key] = value;
+  makeFilterGroups();
+  render();
+}
+function filtered(){
+  const q = document.getElementById('search').value.trim().toLowerCase();
+  return DATA.filter(item => {
+    const hay = [item.title,item.campaign,item.useCase,item.ownerTeam,item.audience,item.region,item.type,item.status].join(' ').toLowerCase();
+    const qok = !q || hay.includes(q);
+    const fok = FILTER_FIELDS.every(f => activeFilters[f.key]==='All' || item[f.key]===activeFilters[f.key]);
+    return qok && fok;
+  });
+}
+function summary(){
+  const d = filtered();
+  const partnerReady = d.filter(x => x.partnerUse).length;
+  document.getElementById('summary').innerHTML = `
+    <div class="kpi"><strong>${d.length}</strong><span>items shown</span></div>
+    <div class="kpi"><strong>${uniqueValues('campaign').length}</strong><span>campaigns</span></div>
+    <div class="kpi"><strong>${partnerReady}</strong><span>partner-use approved</span></div>`;
+}
+function row(item){
+  return `<div class="row">
+    <div><div class="row-title">${item.url?`<a href="${esc(item.url)}" target="_blank" style="color:inherit;text-decoration:none">${esc(item.title)}</a>`:esc(item.title)}</div>${item.type?`<span class="tag">${esc(item.type)}</span>`:''}${item.partnerUse?`<span class="tag green">Partner-use</span>`:''}</div>
+    <div class="meta"><strong>${esc(item.campaign||'\u2014')}</strong><br>${esc(item.useCase||'')}</div>
+    <div class="meta">${esc(item.funnelStage||'\u2014')}<br>${esc(item.ownerTeam||'')}</div>
+    <div class="meta">${esc(item.audience||'\u2014')}<br>${esc(item.region||'')}</div>
+    <div class="meta"><strong>${esc(item.status||'\u2014')}</strong><br>${esc(item.publishDateDisplay||'')}</div>
+    <div>${item.url?`<a class="btn" href="${esc(item.url)}" target="_blank">Open &#8599;</a>`:''}</div>
+  </div>`;
+}
+function render(){
+  const d = filtered();
+  summary();
+  if(!d.length){
+    document.getElementById('content').innerHTML = '<div class="empty">No content matches those filters.</div>';
+    return;
+  }
+  document.getElementById('content').innerHTML = `<div class="list">${d.map(row).join('')}</div>`;
+}
+document.getElementById('search').addEventListener('input', render);
+function init(){ makeFilterGroups(); render(); }
+loadData();
+</script>
+</body>
+</html>
