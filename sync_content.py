@@ -106,6 +106,9 @@ def looks_like_url(value):
 
 def clean_url(value):
     return value if looks_like_url(value) else None
+
+
+def extract_value(cell, text_only=False):
     if cell is None:
         return None
     if not text_only and getattr(cell, "hyperlink", None) and getattr(cell.hyperlink, "url", None):
