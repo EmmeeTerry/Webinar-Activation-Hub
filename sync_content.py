@@ -140,7 +140,11 @@ def fetch_content_rows(client, sheet_id):
 
         title = raw.get("title")
         if not title:
-            continue  # skip fully blank rows
+            # Fall back to the display text of the linked title column, in case
+            # only that one was filled in for this row.
+            title = cell_lookup_by_id(row, col_id_by_title, COLUMN_MAP["url"], text_only=True)
+        if not title:
+            continue  # skip only truly blank rows
 
         iso_date = normalize_date(raw.get("publishDate"))
         items.append({
