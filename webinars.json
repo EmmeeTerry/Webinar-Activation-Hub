@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-09-25T12:08:03.273149+00:00",
+  "lastRefreshed": "2026-09-25T14:07:20.882634+00:00",
   "webinars": [
     {
       "id": "the-economics-of-modern-storage-infrastructure-lower-risk-faster-ai-value-better-roi-webin",
@@ -21,28 +21,12 @@
         "watch": "https://www.brighttalk.com/webcast/12821/659254",
         "marketingEmail": "https://brand.hitachivantara.com/guidelines/guide/00542d60-e1a7-4da7-9e5f-133c03191dbc/page/e5dcf9d5-8b2a-4907-86cf-6a7658fc8e08",
         "salesEmail": "https://hitachivantara.sharepoint.com/:w:/s/GlobalCampaignsAssets505/IQAur_oA2tvSTI5WzUov9PsFAYnvUFXdD-1I-Gez-pspUL8?e=4ViuVh",
-        "paidSocial": "https://app.smartsheet.com/reports/rpCfCv5HVf82Xx6rRRVfv4PMH3vVg4Q94MfMqMx1?view=grid",
+        "paidSocial": "https://app.smartsheet.com/reports/j9C8J8wjFRQ8v3m4jFrwr3WP95jC3j2H2XWR7xV1?view=grid",
         "social": "Coming Soon",
         "attendance": "https://hdscorp.lightning.force.com/lightning/r/Report/00OaZ00000D0ByTUAV/view?queryScope=userFolders"
       },
       "sourceRow": 1,
       "relatedResources": [
-        {
-          "title": "The Economics of Modern Storage Infrastructure: Lower Risk, Faster AI Value, Better ROI | Webinar Webinar",
-          "type": "Webinar",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.brighttalk.com/webcast/12821/659254?bt_tok={{lead_id}}&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=659254",
-          "score": 6
-        },
-        {
-          "title": "451 Research: Modernizing Mission-Critical Storage Analyst Report 3rd Party / Analyst/Industry Trends",
-          "type": "3rd Party / Analyst/Industry Trends",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/451-research-pathfinder-report-modernizing-mission-critical-storage",
-          "score": 6
-        },
         {
           "title": "Build Modern AI-Ready Infrastructure Without Starting Over Webinar",
           "type": "Webinar",
@@ -52,11 +36,27 @@
           "score": 6
         },
         {
-          "title": "Cutting Storage Media Costs and Risks in a Supply Chain Crunch Blog / Executive POV",
-          "type": "Blog / Executive POV",
+          "title": "State of Data Infrastructure Global Report 2025",
+          "type": "eBook/Whitepaper",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.hitachivantara.com/en-us/blog/cutting-storage-media-costs-and-risks-in-a-supply-chain-crunch",
+          "url": "https://www.hitachivantara.com/en-us/gated-forms/state-of-data-2025",
+          "score": 6
+        },
+        {
+          "title": "Unlocking ROI: the Forrester Study That Could Save Your Next Storage Investment Webinar",
+          "type": "Webinar",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "https://www.brighttalk.com/webcast/12821/651449?bt_tok={{lead_id}}&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=651449",
+          "score": 6
+        },
+        {
+          "title": "VSP One Block Buyer's Guide eBook/Whitepaper",
+          "type": "eBook/Whitepaper",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/buyers-guide-to-virtual-storage-platform-one-block.pdf",
           "score": 6
         }
       ]
@@ -81,18 +81,34 @@
         "watch": "https://www.brighttalk.com/webcast/12821/665302",
         "marketingEmail": "https://brand.hitachivantara.com/guidelines/guide/207608cc-f422-4ffc-93b5-773dcdece4fb/page/7a2ed2c6-3b66-4ad4-ac47-e300d6d10135",
         "salesEmail": "https://hitachivantara.sharepoint.com/:w:/s/GlobalCampaignsAssets505/IQBJelsvZa6BR4ZX6YmTSHMiASA6PMR83Sss1YcPKcyqoaM?e=Nvwuu4",
-        "paidSocial": "https://app.smartsheet.com/reports/WRRxRxh9HMhcmp4h7cQ9wJg766r76R5rMCM3H7j1?view=grid",
+        "paidSocial": "https://app.smartsheet.com/reports/m5c4WJPFq9X2m3273R2V7w9JRHPg5mrGvfgWjC91?view=grid",
         "social": "Coming Soon",
         "attendance": "https://hdscorp.lightning.force.com/lightning/r/Report/00OaZ00000Cl4u5UAB/view?queryScope=userFolders"
       },
       "sourceRow": 2,
       "relatedResources": [
         {
-          "title": "Is Object Storage the New AI Foundation? | Webinar Webinar",
-          "type": "Webinar",
+          "title": "Lakehouse Logic: Why Object Storage is the New Analytics Engine Blog / Executive POV",
+          "type": "Blog / Executive POV",
           "campaign": "AI Data Foundation",
           "useCase": "Data Readiness and Activation for AI",
-          "url": "https://www.brighttalk.com/webcast/12821/665302?bt_tok=%7b%7blead_id%7d%7d&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=665302",
+          "url": "https://www.hitachivantara.com/en-us/blog/lakehouse-logic-why-object-storage-is-new-analytics-engine",
+          "score": 6
+        },
+        {
+          "title": "VSP One Object with On-Premise Native S3 Tables for Data Lakehouse, AI and Analytic Workloads eBook/Whitepaper",
+          "type": "eBook/Whitepaper",
+          "campaign": "AI Data Foundation",
+          "useCase": "Data Readiness and Activation for AI",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/white-paper/on-prem-amazon-s3-tables-with-vsp-one-object.pdf",
+          "score": 6
+        },
+        {
+          "title": "Hitachi Data Lakehouse: Powering Trusted AI and Analytics at Scale Datasheet / Solution Brief / Technical",
+          "type": "Datasheet / Solution Brief / Technical",
+          "campaign": "AI Data Foundation",
+          "useCase": "Data Readiness and Activation for AI",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/solution-profile/data-lakehouse-powering-trusted-ai-analytics-at-scale.pdf",
           "score": 6
         },
         {
@@ -101,22 +117,6 @@
           "campaign": "AI Data Foundation",
           "useCase": "Data Readiness and Activation for AI",
           "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-unstructured-data-management-2026",
-          "score": 6
-        },
-        {
-          "title": "2026 GigaOm Rader for Object Storage Analyst Report 3rd Party / Analyst/Industry Trends",
-          "type": "3rd Party / Analyst/Industry Trends",
-          "campaign": "AI Data Foundation",
-          "useCase": "Data Readiness and Activation for AI",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-radar-for-object-storage",
-          "score": 6
-        },
-        {
-          "title": "AI Data Centers are Pushing U.S. Power Grids to the Brink Blog / Executive POV",
-          "type": "Blog / Executive POV",
-          "campaign": "AI Data Foundation",
-          "useCase": "Data Readiness and Activation for AI",
-          "url": "https://www.hitachivantara.com/en-us/blog/ai-data-centers-are-pushing-us-power-grids-to-the-brink",
           "score": 6
         }
       ]
@@ -141,26 +141,26 @@
         "watch": "https://www.brighttalk.com/webcast/12821/669090",
         "marketingEmail": "https://brand.hitachivantara.com/guidelines/guide/00542d60-e1a7-4da7-9e5f-133c03191dbc/page/e5dcf9d5-8b2a-4907-86cf-6a7658fc8e08",
         "salesEmail": "https://hitachivantara.sharepoint.com/:w:/s/GlobalCampaignsAssets505/IQApDMrMycrJRKlYEziomY_mAYPXLb2ge3oyAduWSGZ0xa0?e=Ofgjf7",
-        "paidSocial": "https://app.smartsheet.com/reports/rpCfCv5HVf82Xx6rRRVfv4PMH3vVg4Q94MfMqMx1?view=grid",
+        "paidSocial": "https://app.smartsheet.com/reports/j9C8J8wjFRQ8v3m4jFrwr3WP95jC3j2H2XWR7xV1?view=grid",
         "social": "Coming Soon",
         "attendance": "https://hdscorp.lightning.force.com/lightning/r/Report/00OaZ00000Cs6uLUAR/view?queryScope=userFolders"
       },
       "sourceRow": 3,
       "relatedResources": [
         {
-          "title": "Resilient by Design: How Hitachi Vantara, VM2020, and Index Engines Deliver Faster, Validated Ransomware Recovery | Webinar Webinar",
+          "title": "Cyberattacks: Is Predictable Business Continuity Possible? Webinar",
           "type": "Webinar",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.brighttalk.com/webcast/12821/669090",
+          "url": "https://www.brighttalk.com/webcast/12821/654892?bt_tok={{lead_id}}&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=654892",
           "score": 6
         },
         {
-          "title": "451 Research: Boost Resiliency and Performance for Modern Data Infrastructures 3rd Party / Analyst/Industry Trends",
-          "type": "3rd Party / Analyst/Industry Trends",
+          "title": "Data Modernization & Resilience Campaign Page Landing Page/Campaign Page",
+          "type": "Landing Page/Campaign Page",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/451-research-market-insight-report-vsp-one-block-high-end",
+          "url": "https://www.hitachivantara.com/en-us/featured/data-modernization-resilience",
           "score": 6
         },
         {
@@ -172,11 +172,11 @@
           "score": 6
         },
         {
-          "title": "Cyber Resilience For Dummies eBook eBook/Whitepaper",
-          "type": "eBook/Whitepaper",
+          "title": "From Reactive to Resilient: Rethinking Cybersecurity for the Evolving Threat Landscape Webinar Webinar",
+          "type": "Webinar",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/cyber-resilience-for-dummies",
+          "url": "https://www.brighttalk.com/webcast/12821/641032?bt_tok={{lead_id}}&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=641032",
           "score": 6
         }
       ]
@@ -208,11 +208,27 @@
       "sourceRow": 4,
       "relatedResources": [
         {
-          "title": "Is Object Storage the New AI Foundation? | Webinar Webinar",
-          "type": "Webinar",
+          "title": "Lakehouse Logic: Why Object Storage is the New Analytics Engine Blog / Executive POV",
+          "type": "Blog / Executive POV",
           "campaign": "AI Data Foundation",
           "useCase": "Data Readiness and Activation for AI",
-          "url": "https://www.brighttalk.com/webcast/12821/665302?bt_tok=%7b%7blead_id%7d%7d&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=665302",
+          "url": "https://www.hitachivantara.com/en-us/blog/lakehouse-logic-why-object-storage-is-new-analytics-engine",
+          "score": 6
+        },
+        {
+          "title": "VSP One Object with On-Premise Native S3 Tables for Data Lakehouse, AI and Analytic Workloads eBook/Whitepaper",
+          "type": "eBook/Whitepaper",
+          "campaign": "AI Data Foundation",
+          "useCase": "Data Readiness and Activation for AI",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/white-paper/on-prem-amazon-s3-tables-with-vsp-one-object.pdf",
+          "score": 6
+        },
+        {
+          "title": "Hitachi Data Lakehouse: Powering Trusted AI and Analytics at Scale Datasheet / Solution Brief / Technical",
+          "type": "Datasheet / Solution Brief / Technical",
+          "campaign": "AI Data Foundation",
+          "useCase": "Data Readiness and Activation for AI",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/solution-profile/data-lakehouse-powering-trusted-ai-analytics-at-scale.pdf",
           "score": 6
         },
         {
@@ -221,22 +237,6 @@
           "campaign": "AI Data Foundation",
           "useCase": "Data Readiness and Activation for AI",
           "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-unstructured-data-management-2026",
-          "score": 6
-        },
-        {
-          "title": "2026 GigaOm Rader for Object Storage Analyst Report 3rd Party / Analyst/Industry Trends",
-          "type": "3rd Party / Analyst/Industry Trends",
-          "campaign": "AI Data Foundation",
-          "useCase": "Data Readiness and Activation for AI",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-radar-for-object-storage",
-          "score": 6
-        },
-        {
-          "title": "AI Data Centers are Pushing U.S. Power Grids to the Brink Blog / Executive POV",
-          "type": "Blog / Executive POV",
-          "campaign": "AI Data Foundation",
-          "useCase": "Data Readiness and Activation for AI",
-          "url": "https://www.hitachivantara.com/en-us/blog/ai-data-centers-are-pushing-us-power-grids-to-the-brink",
           "score": 6
         }
       ]
@@ -268,22 +268,6 @@
       "sourceRow": 5,
       "relatedResources": [
         {
-          "title": "The Economics of Modern Storage Infrastructure: Lower Risk, Faster AI Value, Better ROI | Webinar Webinar",
-          "type": "Webinar",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.brighttalk.com/webcast/12821/659254?bt_tok={{lead_id}}&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=659254",
-          "score": 6
-        },
-        {
-          "title": "451 Research: Modernizing Mission-Critical Storage Analyst Report 3rd Party / Analyst/Industry Trends",
-          "type": "3rd Party / Analyst/Industry Trends",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/451-research-pathfinder-report-modernizing-mission-critical-storage",
-          "score": 6
-        },
-        {
           "title": "Build Modern AI-Ready Infrastructure Without Starting Over Webinar",
           "type": "Webinar",
           "campaign": "Data Modernization & Resilience",
@@ -292,11 +276,27 @@
           "score": 6
         },
         {
-          "title": "Cutting Storage Media Costs and Risks in a Supply Chain Crunch Blog / Executive POV",
-          "type": "Blog / Executive POV",
+          "title": "State of Data Infrastructure Global Report 2025",
+          "type": "eBook/Whitepaper",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.hitachivantara.com/en-us/blog/cutting-storage-media-costs-and-risks-in-a-supply-chain-crunch",
+          "url": "https://www.hitachivantara.com/en-us/gated-forms/state-of-data-2025",
+          "score": 6
+        },
+        {
+          "title": "Unlocking ROI: the Forrester Study That Could Save Your Next Storage Investment Webinar",
+          "type": "Webinar",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "https://www.brighttalk.com/webcast/12821/651449?bt_tok={{lead_id}}&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=651449",
+          "score": 6
+        },
+        {
+          "title": "VSP One Block Buyer's Guide eBook/Whitepaper",
+          "type": "eBook/Whitepaper",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/buyers-guide-to-virtual-storage-platform-one-block.pdf",
           "score": 6
         }
       ]
@@ -328,19 +328,19 @@
       "sourceRow": 6,
       "relatedResources": [
         {
-          "title": "Resilient by Design: How Hitachi Vantara, VM2020, and Index Engines Deliver Faster, Validated Ransomware Recovery | Webinar Webinar",
+          "title": "Cyberattacks: Is Predictable Business Continuity Possible? Webinar",
           "type": "Webinar",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.brighttalk.com/webcast/12821/669090",
+          "url": "https://www.brighttalk.com/webcast/12821/654892?bt_tok={{lead_id}}&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=654892",
           "score": 6
         },
         {
-          "title": "451 Research: Boost Resiliency and Performance for Modern Data Infrastructures 3rd Party / Analyst/Industry Trends",
-          "type": "3rd Party / Analyst/Industry Trends",
+          "title": "Data Modernization & Resilience Campaign Page Landing Page/Campaign Page",
+          "type": "Landing Page/Campaign Page",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/451-research-market-insight-report-vsp-one-block-high-end",
+          "url": "https://www.hitachivantara.com/en-us/featured/data-modernization-resilience",
           "score": 6
         },
         {
@@ -352,11 +352,11 @@
           "score": 6
         },
         {
-          "title": "Cyber Resilience For Dummies eBook eBook/Whitepaper",
-          "type": "eBook/Whitepaper",
+          "title": "From Reactive to Resilient: Rethinking Cybersecurity for the Evolving Threat Landscape Webinar Webinar",
+          "type": "Webinar",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/cyber-resilience-for-dummies",
+          "url": "https://www.brighttalk.com/webcast/12821/641032?bt_tok={{lead_id}}&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=641032",
           "score": 6
         }
       ]
@@ -388,35 +388,35 @@
       "sourceRow": 7,
       "relatedResources": [
         {
-          "title": "Is Object Storage the New AI Foundation? | Webinar Webinar",
-          "type": "Webinar",
+          "title": "Campaign Landing Page - AI Landing Page",
+          "type": "Landing Page",
           "campaign": "AI Data Foundation",
-          "useCase": "Data Readiness and Activation for AI",
-          "url": "https://www.brighttalk.com/webcast/12821/665302?bt_tok=%7b%7blead_id%7d%7d&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=665302",
+          "useCase": "",
+          "url": "https://www.hitachivantara.com/en-us/featured/ai-data-foundation",
           "score": 3
         },
         {
-          "title": "Resilient by Design: How Hitachi Vantara, VM2020, and Index Engines Deliver Faster, Validated Ransomware Recovery | Webinar Webinar",
+          "title": "Cyberattacks: Is Predictable Business Continuity Possible? Webinar",
           "type": "Webinar",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.brighttalk.com/webcast/12821/669090",
+          "url": "https://www.brighttalk.com/webcast/12821/654892?bt_tok={{lead_id}}&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=654892",
           "score": 3
         },
         {
-          "title": "2025 GigaOm Radar Report for AI Workloads - GigaOm Link 3rd Party / Analyst/Industry Trends",
-          "type": "3rd Party / Analyst/Industry Trends",
-          "campaign": "AI Data Foundation",
-          "useCase": "High Performance AI-Ready Infrastructure",
-          "url": "https://portal.gigaom.com/reprint/gigaom-radar-for-high-performance-storage-optimized-for-ai-workloads-hitachi-vantara",
+          "title": "Data Modernization & Resilience Campaign Page Landing Page/Campaign Page",
+          "type": "Landing Page/Campaign Page",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Cyber Risk Mitigation & Recovery",
+          "url": "https://www.hitachivantara.com/en-us/featured/data-modernization-resilience",
           "score": 3
         },
         {
-          "title": "2026 GigaOm for Unstructured Data Management (UDM) 3rd Party / Analyst/Industry Trends",
-          "type": "3rd Party / Analyst/Industry Trends",
+          "title": "SDR Email Cadence ADF Email / Nurture",
+          "type": "Email / Nurture",
           "campaign": "AI Data Foundation",
-          "useCase": "Data Readiness and Activation for AI",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-unstructured-data-management-2026",
+          "useCase": "",
+          "url": "https://hitachivantara.sharepoint.com/:p:/r/sites/PartnerandFieldMarketing/Shared%20Documents/Global%20Campaigns/FY26/AI%20Data%20Foundation%20-%20Working%20Deck.pptx?d=wf596d0152fef4fa384ef3a2ca4fe37b6&csf=1&web=1&e=dldNxg&nav=eyJzSWQiOjMwNSwiY0lkIjoxNzEwOTkzMDZ9",
           "score": 3
         }
       ]
@@ -448,6 +448,14 @@
       "sourceRow": 8,
       "relatedResources": [
         {
+          "title": "Thrive in an AI-Driven Future eBook eBook/Whitepaper",
+          "type": "eBook/Whitepaper",
+          "campaign": "AI Data Foundation",
+          "useCase": "High Performance AI-Ready Infrastructure",
+          "url": "https://www.hitachivantara.com/en-us/pdfviewer/ebook/thrive-in-ai-driven-future-eBook",
+          "score": 6
+        },
+        {
           "title": "2025 GigaOm Radar Report for AI Workloads - GigaOm Link 3rd Party / Analyst/Industry Trends",
           "type": "3rd Party / Analyst/Industry Trends",
           "campaign": "AI Data Foundation",
@@ -461,14 +469,6 @@
           "campaign": "AI Data Foundation",
           "useCase": "High Performance AI-Ready Infrastructure",
           "url": "https://www.hitachivantara.com/en-us/gated-forms/accelerate-your-ai-success",
-          "score": 6
-        },
-        {
-          "title": "AI Discovery Service Booking Form Demo / Assessment / Tool / Offer",
-          "type": "Demo / Assessment / Tool / Offer",
-          "campaign": "AI Data Foundation",
-          "useCase": "High Performance AI-Ready Infrastructure",
-          "url": "https://www.hitachivantara.com/en-us/company/contact-sales",
           "score": 6
         },
         {
@@ -508,35 +508,35 @@
       "sourceRow": 9,
       "relatedResources": [
         {
-          "title": "Is Object Storage the New AI Foundation? | Webinar Webinar",
-          "type": "Webinar",
+          "title": "Campaign Landing Page - AI Landing Page",
+          "type": "Landing Page",
           "campaign": "AI Data Foundation",
-          "useCase": "Data Readiness and Activation for AI",
-          "url": "https://www.brighttalk.com/webcast/12821/665302?bt_tok=%7b%7blead_id%7d%7d&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=665302",
+          "useCase": "",
+          "url": "https://www.hitachivantara.com/en-us/featured/ai-data-foundation",
           "score": 3
         },
         {
-          "title": "Resilient by Design: How Hitachi Vantara, VM2020, and Index Engines Deliver Faster, Validated Ransomware Recovery | Webinar Webinar",
+          "title": "Cyberattacks: Is Predictable Business Continuity Possible? Webinar",
           "type": "Webinar",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.brighttalk.com/webcast/12821/669090",
+          "url": "https://www.brighttalk.com/webcast/12821/654892?bt_tok={{lead_id}}&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=654892",
           "score": 3
         },
         {
-          "title": "2025 GigaOm Radar Report for AI Workloads - GigaOm Link 3rd Party / Analyst/Industry Trends",
-          "type": "3rd Party / Analyst/Industry Trends",
-          "campaign": "AI Data Foundation",
-          "useCase": "High Performance AI-Ready Infrastructure",
-          "url": "https://portal.gigaom.com/reprint/gigaom-radar-for-high-performance-storage-optimized-for-ai-workloads-hitachi-vantara",
+          "title": "Data Modernization & Resilience Campaign Page Landing Page/Campaign Page",
+          "type": "Landing Page/Campaign Page",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Cyber Risk Mitigation & Recovery",
+          "url": "https://www.hitachivantara.com/en-us/featured/data-modernization-resilience",
           "score": 3
         },
         {
-          "title": "2026 GigaOm for Unstructured Data Management (UDM) 3rd Party / Analyst/Industry Trends",
-          "type": "3rd Party / Analyst/Industry Trends",
+          "title": "SDR Email Cadence ADF Email / Nurture",
+          "type": "Email / Nurture",
           "campaign": "AI Data Foundation",
-          "useCase": "Data Readiness and Activation for AI",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-unstructured-data-management-2026",
+          "useCase": "",
+          "url": "https://hitachivantara.sharepoint.com/:p:/r/sites/PartnerandFieldMarketing/Shared%20Documents/Global%20Campaigns/FY26/AI%20Data%20Foundation%20-%20Working%20Deck.pptx?d=wf596d0152fef4fa384ef3a2ca4fe37b6&csf=1&web=1&e=dldNxg&nav=eyJzSWQiOjMwNSwiY0lkIjoxNzEwOTkzMDZ9",
           "score": 3
         }
       ]
@@ -568,22 +568,6 @@
       "sourceRow": 10,
       "relatedResources": [
         {
-          "title": "The Economics of Modern Storage Infrastructure: Lower Risk, Faster AI Value, Better ROI | Webinar Webinar",
-          "type": "Webinar",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.brighttalk.com/webcast/12821/659254?bt_tok={{lead_id}}&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=659254",
-          "score": 6
-        },
-        {
-          "title": "451 Research: Modernizing Mission-Critical Storage Analyst Report 3rd Party / Analyst/Industry Trends",
-          "type": "3rd Party / Analyst/Industry Trends",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/451-research-pathfinder-report-modernizing-mission-critical-storage",
-          "score": 6
-        },
-        {
           "title": "Build Modern AI-Ready Infrastructure Without Starting Over Webinar",
           "type": "Webinar",
           "campaign": "Data Modernization & Resilience",
@@ -592,11 +576,27 @@
           "score": 6
         },
         {
-          "title": "Cutting Storage Media Costs and Risks in a Supply Chain Crunch Blog / Executive POV",
-          "type": "Blog / Executive POV",
+          "title": "State of Data Infrastructure Global Report 2025",
+          "type": "eBook/Whitepaper",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.hitachivantara.com/en-us/blog/cutting-storage-media-costs-and-risks-in-a-supply-chain-crunch",
+          "url": "https://www.hitachivantara.com/en-us/gated-forms/state-of-data-2025",
+          "score": 6
+        },
+        {
+          "title": "Unlocking ROI: the Forrester Study That Could Save Your Next Storage Investment Webinar",
+          "type": "Webinar",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "https://www.brighttalk.com/webcast/12821/651449?bt_tok={{lead_id}}&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=651449",
+          "score": 6
+        },
+        {
+          "title": "VSP One Block Buyer's Guide eBook/Whitepaper",
+          "type": "eBook/Whitepaper",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/buyers-guide-to-virtual-storage-platform-one-block.pdf",
           "score": 6
         }
       ]
@@ -628,22 +628,6 @@
       "sourceRow": 11,
       "relatedResources": [
         {
-          "title": "The Economics of Modern Storage Infrastructure: Lower Risk, Faster AI Value, Better ROI | Webinar Webinar",
-          "type": "Webinar",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.brighttalk.com/webcast/12821/659254?bt_tok={{lead_id}}&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=659254",
-          "score": 6
-        },
-        {
-          "title": "451 Research: Modernizing Mission-Critical Storage Analyst Report 3rd Party / Analyst/Industry Trends",
-          "type": "3rd Party / Analyst/Industry Trends",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/451-research-pathfinder-report-modernizing-mission-critical-storage",
-          "score": 6
-        },
-        {
           "title": "Build Modern AI-Ready Infrastructure Without Starting Over Webinar",
           "type": "Webinar",
           "campaign": "Data Modernization & Resilience",
@@ -652,11 +636,27 @@
           "score": 6
         },
         {
-          "title": "Cutting Storage Media Costs and Risks in a Supply Chain Crunch Blog / Executive POV",
-          "type": "Blog / Executive POV",
+          "title": "State of Data Infrastructure Global Report 2025",
+          "type": "eBook/Whitepaper",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.hitachivantara.com/en-us/blog/cutting-storage-media-costs-and-risks-in-a-supply-chain-crunch",
+          "url": "https://www.hitachivantara.com/en-us/gated-forms/state-of-data-2025",
+          "score": 6
+        },
+        {
+          "title": "Unlocking ROI: the Forrester Study That Could Save Your Next Storage Investment Webinar",
+          "type": "Webinar",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "https://www.brighttalk.com/webcast/12821/651449?bt_tok={{lead_id}}&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=651449",
+          "score": 6
+        },
+        {
+          "title": "VSP One Block Buyer's Guide eBook/Whitepaper",
+          "type": "eBook/Whitepaper",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/buyers-guide-to-virtual-storage-platform-one-block.pdf",
           "score": 6
         }
       ]
@@ -688,22 +688,6 @@
       "sourceRow": 12,
       "relatedResources": [
         {
-          "title": "The Economics of Modern Storage Infrastructure: Lower Risk, Faster AI Value, Better ROI | Webinar Webinar",
-          "type": "Webinar",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.brighttalk.com/webcast/12821/659254?bt_tok={{lead_id}}&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=659254",
-          "score": 6
-        },
-        {
-          "title": "451 Research: Modernizing Mission-Critical Storage Analyst Report 3rd Party / Analyst/Industry Trends",
-          "type": "3rd Party / Analyst/Industry Trends",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/451-research-pathfinder-report-modernizing-mission-critical-storage",
-          "score": 6
-        },
-        {
           "title": "Build Modern AI-Ready Infrastructure Without Starting Over Webinar",
           "type": "Webinar",
           "campaign": "Data Modernization & Resilience",
@@ -712,11 +696,27 @@
           "score": 6
         },
         {
-          "title": "Cutting Storage Media Costs and Risks in a Supply Chain Crunch Blog / Executive POV",
-          "type": "Blog / Executive POV",
+          "title": "State of Data Infrastructure Global Report 2025",
+          "type": "eBook/Whitepaper",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.hitachivantara.com/en-us/blog/cutting-storage-media-costs-and-risks-in-a-supply-chain-crunch",
+          "url": "https://www.hitachivantara.com/en-us/gated-forms/state-of-data-2025",
+          "score": 6
+        },
+        {
+          "title": "Unlocking ROI: the Forrester Study That Could Save Your Next Storage Investment Webinar",
+          "type": "Webinar",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "https://www.brighttalk.com/webcast/12821/651449?bt_tok={{lead_id}}&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=651449",
+          "score": 6
+        },
+        {
+          "title": "VSP One Block Buyer's Guide eBook/Whitepaper",
+          "type": "eBook/Whitepaper",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/buyers-guide-to-virtual-storage-platform-one-block.pdf",
           "score": 6
         }
       ]
