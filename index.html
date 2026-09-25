@@ -90,7 +90,14 @@ h1{font-family:"Hitachi Sans",Arial,Helvetica,sans-serif;font-weight:400;font-si
 .footer{margin-top:36px;padding-top:18px;border-top:1px solid var(--gray2);font-size:10px;color:var(--gray4);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 .footer strong{color:var(--gray6)}
 .footer a{text-decoration-color:var(--red1);text-underline-offset:2px}
-@media(max-width:900px){.row{grid-template-columns:1fr;gap:6px}.modal-body{grid-template-columns:1fr}.topbar{flex-direction:column}.snapshot{text-align:left}.actions-top{justify-content:flex-start}}
+.spotlight{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px}
+.spotlight-card{background:var(--white);border:1px solid var(--line);border-left:4px solid var(--red1);border-radius:3px;padding:18px 20px;cursor:pointer;transition:.15s ease}
+.spotlight-card:hover{transform:translateY(-1px);box-shadow:0 6px 16px rgba(12,12,12,.08)}
+.spotlight-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--red1);margin-bottom:8px}
+.spotlight-title{font-family:"Hitachi Sans",Arial,Helvetica,sans-serif;font-size:18px;font-weight:700;color:var(--black);line-height:1.3;margin-bottom:6px}
+.spotlight-meta{font-size:12px;color:var(--gray4)}
+.spotlight-empty{color:var(--gray4);font-size:13px;font-style:italic}
+@media(max-width:900px){.row{grid-template-columns:1fr;gap:6px}.modal-body{grid-template-columns:1fr}.topbar{flex-direction:column}.snapshot{text-align:left}.actions-top{justify-content:flex-start}.spotlight{grid-template-columns:1fr}}
 
 </style>
 </head>
@@ -101,7 +108,7 @@ h1{font-family:"Hitachi Sans",Arial,Helvetica,sans-serif;font-weight:400;font-si
     <div>
       <div class="company">Hitachi Vantara</div>
       <h1>Webinar Activation Hub</h1>
-      <div class="sub">Find the right webinar, understand where it fits, and go directly to the resources needed to activate it. Webinar owners maintain Smartsheet; stakeholders use this hub.</div>
+      <div class="sub">Find the right webinar, understand where it fits, and go directly to the resources needed to activate it.</div>
     </div>
     <div>
       <div class="snapshot" id="snapshotLabel">Last refreshed · loading…</div>
@@ -112,6 +119,7 @@ h1{font-family:"Hitachi Sans",Arial,Helvetica,sans-serif;font-weight:400;font-si
   </div>
 </header>
 <main class="main">
+  <div id="spotlight" class="spotlight"></div>
   <div class="toolbar">
     <input id="search" class="search" placeholder="Search by webinar, campaign, use case, owner, audience, region…">
     <div id="chips" class="chips"></div>
@@ -254,6 +262,30 @@ function render(){
  if(ondemand.length) out+=`<section class="section"><div class="section-title">On demand · ready to reuse · ${ondemand.length}</div><div class="list">${ondemand.map(listRow).join('')}</div></section>`;
  document.getElementById('content').innerHTML=out;
 }
+function renderSpotlight(){
+ const now=new Date();
+ const withDates=DATA.filter(w=>w.date);
+ const future=withDates.filter(w=>new Date(w.date+'T12:00:00')>=now).sort((a,b)=>a.date.localeCompare(b.date));
+ const past=withDates.filter(w=>new Date(w.date+'T12:00:00')<now).sort((a,b)=>b.date.localeCompare(a.date));
+ const todayStr=now.toISOString().slice(0,10);
+ const happeningToday=withDates.find(w=>w.date===todayStr);
+
+ const next=future.find(w=>w.status==='Upcoming')||future[0];
+ const current=happeningToday||past[0];
+
+ function block(label,w){
+   if(!w) return `<div class="spotlight-card" style="cursor:default"><div class="spotlight-label">${esc(label)}</div><div class="spotlight-empty">Nothing to show right now.</div></div>`;
+   return `<div class="spotlight-card" onclick="openModal('${w.id}')">
+     <div class="spotlight-label">${esc(label)}</div>
+     <div class="spotlight-title">${esc(w.title)}</div>
+     <div class="spotlight-meta">${esc(w.dateDisplay||'')} · ${esc(w.campaign||'')}</div>
+   </div>`;
+ }
+
+ document.getElementById('spotlight').innerHTML =
+   block(happeningToday?'Happening today':'Most recent', current) +
+   block('Coming up next', next===current?null:next);
+}
 function openModal(id){
  const w=DATA.find(x=>x.id===id); if(!w)return;
  document.getElementById('mTitle').textContent=w.title;
@@ -283,7 +315,7 @@ function openModal(id){
 function closeModal(){document.getElementById('modal').classList.remove('open')}
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
 document.getElementById('search').addEventListener('input',render);
-function init(){makeChips();render()}
+function init(){makeChips();render();renderSpotlight()}
 loadData();
 </script>
 </body>
