@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-09-25T16:38:23.615968+00:00",
+  "lastRefreshed": "2026-09-25T18:38:08.723261+00:00",
   "items": [
     {
       "id": "2026-gigaom-rader-for-high-performance-storage-optimized-for-ai-workloads-analyst-report-1",
@@ -2266,27 +2266,6 @@
       "paidMediaDate": null,
       "paidMediaDateDisplay": "",
       "primaryActivation": "",
-      "marketingEmail": null,
-      "salesEmail": null
-    },
-    {
-      "id": "overcoming-legacy-it-infrastructure-barriers-with-hybrid-cloud-new-109",
-      "title": "Overcoming legacy IT infrastructure barriers with hybrid cloud (New)",
-      "url": null,
-      "type": "eBook/Whitepaper",
-      "campaign": "Data Modernization & Resilience",
-      "useCase": "Hybrid Cloud Platform & Operations",
-      "funnelStage": "MOFU",
-      "ownerTeam": "PMM",
-      "audience": "Enterprise, Midmarket",
-      "status": "Proposed",
-      "region": "Global",
-      "publishDate": "2026-12-07",
-      "publishDateDisplay": "Dec 07, 2026",
-      "partnerUse": true,
-      "paidMediaDate": null,
-      "paidMediaDateDisplay": "",
-      "primaryActivation": "Content Syndication, Webinar Syndication, Outbound Email, Paid Social, No Planned Promotion, Campaign Landing Page",
       "marketingEmail": null,
       "salesEmail": null
     },
@@ -5458,27 +5437,6 @@
       "paidMediaDate": null,
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
-      "marketingEmail": null,
-      "salesEmail": null
-    },
-    {
-      "id": "workload-placement-within-hybrid-clouds-263",
-      "title": "Workload placement within Hybrid Clouds",
-      "url": null,
-      "type": "eBook/Whitepaper",
-      "campaign": "Data Modernization & Resilience",
-      "useCase": "Hybrid Cloud Platform & Operations",
-      "funnelStage": "MOFU",
-      "ownerTeam": "PMM",
-      "audience": "Enterprise",
-      "status": "In Production",
-      "region": "Global",
-      "publishDate": "2026-11-16",
-      "publishDateDisplay": "Nov 16, 2026",
-      "partnerUse": true,
-      "paidMediaDate": null,
-      "paidMediaDateDisplay": "",
-      "primaryActivation": "",
       "marketingEmail": null,
       "salesEmail": null
     },
