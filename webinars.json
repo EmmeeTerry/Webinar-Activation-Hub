@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-09-28T12:07:48.884094+00:00",
+  "lastRefreshed": "2026-09-28T14:09:04.086129+00:00",
   "webinars": [
     {
       "id": "the-economics-of-modern-storage-infrastructure-lower-risk-faster-ai-value-better-roi-webin",
@@ -8,7 +8,7 @@
       "dateDisplay": "May 01, 2026",
       "status": "On Demand",
       "campaign": "Data Modernization & Resilience",
-      "useCase": "Data Platform Architectures & Economics",
+      "useCase": "",
       "audience": "Enterprise, Midmarket",
       "region": "AMER",
       "owner": "Karina Andrade",
@@ -16,7 +16,7 @@
       "partnerReady": false,
       "activationStatus": "Activation Ready",
       "readiness": "Activation ready",
-      "whyUse": "Use this for enterprise, midmarket conversations around data platform architectures & economics.",
+      "whyUse": "",
       "links": {
         "watch": "https://www.brighttalk.com/webcast/12821/659254",
         "marketingEmail": "https://brand.hitachivantara.com/guidelines/guide/00542d60-e1a7-4da7-9e5f-133c03191dbc/page/e5dcf9d5-8b2a-4907-86cf-6a7658fc8e08",
@@ -28,12 +28,20 @@
       "sourceRow": 1,
       "relatedResources": [
         {
+          "title": "Campaign Landing Page - DMR Landing Page",
+          "type": "Landing Page",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "",
+          "url": "https://www.hitachivantara.com/en-us/featured/data-modernization-resilience",
+          "score": 3
+        },
+        {
           "title": "Capacity on Demand Scalable Pay\u2011for\u2011Use Capacity",
           "type": "Solution Brief / Technical",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Data Platform Architectures & Economics",
           "url": "https://www.hitachivantara.com/en-us/pdfviewer/solution-profile/capacity-on-demand",
-          "score": 6
+          "score": 3
         },
         {
           "title": "Top Ten Reasons Why Pay as You Grow With Capacity on Demand\nOn-premises baseline ownership plus on-demand expansion",
@@ -41,23 +49,15 @@
           "campaign": "Data Modernization & Resilience",
           "useCase": "Data Platform Architectures & Economics",
           "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/datasheet/top-10-reasons-why-capacity-on-demand.pdf",
-          "score": 6
+          "score": 3
         },
         {
-          "title": "Navigating Complexity and Cost With Hitachi EverFlex",
-          "type": "eBook/Whitepaper",
+          "title": "Cyber Resilience Beyond Traditional Security in the Age of Inevitable Breaches",
+          "type": "eBook",
           "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/white-paper/navigating-complexity-and-cost-with-hitachi-everflex.pdf",
-          "score": 6
-        },
-        {
-          "title": "Build Modern AI-Ready Infrastructure Without Starting Over Webinar",
-          "type": "Webinar",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.brighttalk.com/webcast/12821/653652?bt_tok={{lead_id}}&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=653652",
-          "score": 6
+          "useCase": "Cyber Risk Mitigation & Recovery",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/cyber-resilience-beyond-traditional.pdf",
+          "score": 3
         }
       ]
     },
@@ -68,7 +68,7 @@
       "dateDisplay": "Jun 04, 2026",
       "status": "On Demand",
       "campaign": "AI Data Foundation",
-      "useCase": "Data Readiness and Activation for AI",
+      "useCase": "",
       "audience": "Enterprise",
       "region": "Global",
       "owner": "Mark Geel, Sulochna Khokhrai",
@@ -76,7 +76,7 @@
       "partnerReady": true,
       "activationStatus": "Activation Ready",
       "readiness": "Activation ready",
-      "whyUse": "Use this for enterprise conversations around data readiness and activation for ai.",
+      "whyUse": "",
       "links": {
         "watch": "https://www.brighttalk.com/webcast/12821/665302",
         "marketingEmail": "https://brand.hitachivantara.com/guidelines/guide/207608cc-f422-4ffc-93b5-773dcdece4fb/page/7a2ed2c6-3b66-4ad4-ac47-e300d6d10135",
@@ -88,36 +88,36 @@
       "sourceRow": 2,
       "relatedResources": [
         {
-          "title": "Lakehouse Logic: Why Object Storage is the New Analytics Engine Blog / Executive POV",
+          "title": "Campaign Landing Page - AI Landing Page",
+          "type": "Landing Page",
+          "campaign": "AI Data Foundation",
+          "useCase": "",
+          "url": "https://www.hitachivantara.com/en-us/featured/ai-data-foundation",
+          "score": 3
+        },
+        {
+          "title": "Hitachi iQ with NVIDIA HGX",
+          "type": "FAQ / Reference / Use Case Guide",
+          "campaign": "AI Data Foundation",
+          "useCase": "High Performance AI-Ready Infrastructure",
+          "url": "https://docs.hitachivantara.com/v/u/en-us/mk-sl-324/latest",
+          "score": 3
+        },
+        {
+          "title": "Explore and Build AI Solutions with iQ Studio",
+          "type": "Demo / Assessment / Tool / Offer",
+          "campaign": "AI Data Foundation",
+          "useCase": "High Performance AI-Ready Infrastructure",
+          "url": "https://www.hitachivantara.com/en-us/featured/experience-ai-iq-studio",
+          "score": 3
+        },
+        {
+          "title": "From Science Fiction to Factory Floor: The Physical AI Revolution Takes Shape",
           "type": "Blog / Executive POV",
           "campaign": "AI Data Foundation",
-          "useCase": "Data Readiness and Activation for AI",
-          "url": "https://www.hitachivantara.com/en-us/blog/lakehouse-logic-why-object-storage-is-new-analytics-engine",
-          "score": 6
-        },
-        {
-          "title": "VSP One Object with On-Premise Native S3 Tables for Data Lakehouse, AI and Analytic Workloads eBook/Whitepaper",
-          "type": "eBook/Whitepaper",
-          "campaign": "AI Data Foundation",
-          "useCase": "Data Readiness and Activation for AI",
-          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/white-paper/on-prem-amazon-s3-tables-with-vsp-one-object.pdf",
-          "score": 6
-        },
-        {
-          "title": "Hitachi Data Lakehouse: Powering Trusted AI and Analytics at Scale Datasheet / Solution Brief / Technical",
-          "type": "Datasheet / Solution Brief / Technical",
-          "campaign": "AI Data Foundation",
-          "useCase": "Data Readiness and Activation for AI",
-          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/solution-profile/data-lakehouse-powering-trusted-ai-analytics-at-scale.pdf",
-          "score": 6
-        },
-        {
-          "title": "2026 GigaOm for Unstructured Data Management (UDM) 3rd Party / Analyst/Industry Trends",
-          "type": "3rd Party / Analyst/Industry Trends",
-          "campaign": "AI Data Foundation",
-          "useCase": "Data Readiness and Activation for AI",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-unstructured-data-management-2026",
-          "score": 6
+          "useCase": "High Performance AI-Ready Infrastructure",
+          "url": "https://www.hitachivantara.com/en-us/blog/from-science-fiction-factory-floor-physical-ai-revolution-takes-shape",
+          "score": 3
         }
       ]
     },
@@ -128,7 +128,7 @@
       "dateDisplay": "Jun 18, 2026",
       "status": "On Demand",
       "campaign": "Data Modernization & Resilience",
-      "useCase": "Cyber Risk Mitigation & Recovery",
+      "useCase": "",
       "audience": "Enterprise, Midmarket",
       "region": "Global",
       "owner": "Macey Jones, Stephanie Thompson, Sulochna Khokhrai",
@@ -136,7 +136,7 @@
       "partnerReady": false,
       "activationStatus": "Activation Ready",
       "readiness": "Activation ready",
-      "whyUse": "Use this for enterprise, midmarket conversations around cyber risk mitigation & recovery.",
+      "whyUse": "",
       "links": {
         "watch": "https://www.brighttalk.com/webcast/12821/669090",
         "marketingEmail": "https://brand.hitachivantara.com/guidelines/guide/00542d60-e1a7-4da7-9e5f-133c03191dbc/page/e5dcf9d5-8b2a-4907-86cf-6a7658fc8e08",
@@ -148,36 +148,36 @@
       "sourceRow": 3,
       "relatedResources": [
         {
+          "title": "Campaign Landing Page - DMR Landing Page",
+          "type": "Landing Page",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "",
+          "url": "https://www.hitachivantara.com/en-us/featured/data-modernization-resilience",
+          "score": 3
+        },
+        {
+          "title": "Capacity on Demand Scalable Pay\u2011for\u2011Use Capacity",
+          "type": "Solution Brief / Technical",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "https://www.hitachivantara.com/en-us/pdfviewer/solution-profile/capacity-on-demand",
+          "score": 3
+        },
+        {
+          "title": "Top Ten Reasons Why Pay as You Grow With Capacity on Demand\nOn-premises baseline ownership plus on-demand expansion",
+          "type": "Top 10",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/datasheet/top-10-reasons-why-capacity-on-demand.pdf",
+          "score": 3
+        },
+        {
           "title": "Cyber Resilience Beyond Traditional Security in the Age of Inevitable Breaches",
           "type": "eBook",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Cyber Risk Mitigation & Recovery",
           "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/cyber-resilience-beyond-traditional.pdf",
-          "score": 6
-        },
-        {
-          "title": "Cyberattacks: Is Predictable Business Continuity Possible? Webinar",
-          "type": "Webinar",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.brighttalk.com/webcast/12821/654892?bt_tok={{lead_id}}&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=654892",
-          "score": 6
-        },
-        {
-          "title": "Data Modernization & Resilience Campaign Page Landing Page/Campaign Page",
-          "type": "Landing Page/Campaign Page",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/en-us/featured/data-modernization-resilience",
-          "score": 6
-        },
-        {
-          "title": "Modernizing Data Protection With Hitachi and Commvault",
-          "type": "Infographic",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/infographic/modernizing-data-protection-hitachi-and-commvault.pdf",
-          "score": 6
+          "score": 3
         }
       ]
     },
@@ -188,7 +188,7 @@
       "dateDisplay": "Jul 13, 2026",
       "status": "On Demand",
       "campaign": "AI Data Foundation",
-      "useCase": "Data Readiness and Activation for AI",
+      "useCase": "",
       "audience": "Enterprise",
       "region": "AMER",
       "owner": "Karina Andrade, Mark Geel",
@@ -196,7 +196,7 @@
       "partnerReady": false,
       "activationStatus": "Partial",
       "readiness": "Partially ready",
-      "whyUse": "Use this for enterprise conversations around data readiness and activation for ai.",
+      "whyUse": "",
       "links": {
         "watch": "https://www.brighttalk.com/webcast/12821/672306?",
         "marketingEmail": null,
@@ -208,36 +208,36 @@
       "sourceRow": 4,
       "relatedResources": [
         {
-          "title": "Lakehouse Logic: Why Object Storage is the New Analytics Engine Blog / Executive POV",
+          "title": "Campaign Landing Page - AI Landing Page",
+          "type": "Landing Page",
+          "campaign": "AI Data Foundation",
+          "useCase": "",
+          "url": "https://www.hitachivantara.com/en-us/featured/ai-data-foundation",
+          "score": 3
+        },
+        {
+          "title": "Hitachi iQ with NVIDIA HGX",
+          "type": "FAQ / Reference / Use Case Guide",
+          "campaign": "AI Data Foundation",
+          "useCase": "High Performance AI-Ready Infrastructure",
+          "url": "https://docs.hitachivantara.com/v/u/en-us/mk-sl-324/latest",
+          "score": 3
+        },
+        {
+          "title": "Explore and Build AI Solutions with iQ Studio",
+          "type": "Demo / Assessment / Tool / Offer",
+          "campaign": "AI Data Foundation",
+          "useCase": "High Performance AI-Ready Infrastructure",
+          "url": "https://www.hitachivantara.com/en-us/featured/experience-ai-iq-studio",
+          "score": 3
+        },
+        {
+          "title": "From Science Fiction to Factory Floor: The Physical AI Revolution Takes Shape",
           "type": "Blog / Executive POV",
           "campaign": "AI Data Foundation",
-          "useCase": "Data Readiness and Activation for AI",
-          "url": "https://www.hitachivantara.com/en-us/blog/lakehouse-logic-why-object-storage-is-new-analytics-engine",
-          "score": 6
-        },
-        {
-          "title": "VSP One Object with On-Premise Native S3 Tables for Data Lakehouse, AI and Analytic Workloads eBook/Whitepaper",
-          "type": "eBook/Whitepaper",
-          "campaign": "AI Data Foundation",
-          "useCase": "Data Readiness and Activation for AI",
-          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/white-paper/on-prem-amazon-s3-tables-with-vsp-one-object.pdf",
-          "score": 6
-        },
-        {
-          "title": "Hitachi Data Lakehouse: Powering Trusted AI and Analytics at Scale Datasheet / Solution Brief / Technical",
-          "type": "Datasheet / Solution Brief / Technical",
-          "campaign": "AI Data Foundation",
-          "useCase": "Data Readiness and Activation for AI",
-          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/solution-profile/data-lakehouse-powering-trusted-ai-analytics-at-scale.pdf",
-          "score": 6
-        },
-        {
-          "title": "2026 GigaOm for Unstructured Data Management (UDM) 3rd Party / Analyst/Industry Trends",
-          "type": "3rd Party / Analyst/Industry Trends",
-          "campaign": "AI Data Foundation",
-          "useCase": "Data Readiness and Activation for AI",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-unstructured-data-management-2026",
-          "score": 6
+          "useCase": "High Performance AI-Ready Infrastructure",
+          "url": "https://www.hitachivantara.com/en-us/blog/from-science-fiction-factory-floor-physical-ai-revolution-takes-shape",
+          "score": 3
         }
       ]
     },
@@ -248,7 +248,7 @@
       "dateDisplay": "Sep 24, 2026",
       "status": "On Demand",
       "campaign": "Data Modernization & Resilience",
-      "useCase": "Data Platform Architectures & Economics",
+      "useCase": "",
       "audience": "Enterprise, Midmarket",
       "region": "Global",
       "owner": "Andy Gremett, Stephanie Thompson",
@@ -256,7 +256,7 @@
       "partnerReady": false,
       "activationStatus": "Partial",
       "readiness": "Partially ready",
-      "whyUse": "Use this for enterprise, midmarket conversations around data platform architectures & economics.",
+      "whyUse": "",
       "links": {
         "watch": "https://www.brighttalk.com/webcast/12821/675775",
         "marketingEmail": "https://brand.hitachivantara.com/guidelines/guide/00542d60-e1a7-4da7-9e5f-133c03191dbc/page/e1ce0b1f-5759-4c1a-9b0b-3982483807cf",
@@ -268,12 +268,20 @@
       "sourceRow": 5,
       "relatedResources": [
         {
+          "title": "Campaign Landing Page - DMR Landing Page",
+          "type": "Landing Page",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "",
+          "url": "https://www.hitachivantara.com/en-us/featured/data-modernization-resilience",
+          "score": 3
+        },
+        {
           "title": "Capacity on Demand Scalable Pay\u2011for\u2011Use Capacity",
           "type": "Solution Brief / Technical",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Data Platform Architectures & Economics",
           "url": "https://www.hitachivantara.com/en-us/pdfviewer/solution-profile/capacity-on-demand",
-          "score": 6
+          "score": 3
         },
         {
           "title": "Top Ten Reasons Why Pay as You Grow With Capacity on Demand\nOn-premises baseline ownership plus on-demand expansion",
@@ -281,23 +289,15 @@
           "campaign": "Data Modernization & Resilience",
           "useCase": "Data Platform Architectures & Economics",
           "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/datasheet/top-10-reasons-why-capacity-on-demand.pdf",
-          "score": 6
+          "score": 3
         },
         {
-          "title": "Navigating Complexity and Cost With Hitachi EverFlex",
-          "type": "eBook/Whitepaper",
+          "title": "Cyber Resilience Beyond Traditional Security in the Age of Inevitable Breaches",
+          "type": "eBook",
           "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/white-paper/navigating-complexity-and-cost-with-hitachi-everflex.pdf",
-          "score": 6
-        },
-        {
-          "title": "Build Modern AI-Ready Infrastructure Without Starting Over Webinar",
-          "type": "Webinar",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.brighttalk.com/webcast/12821/653652?bt_tok={{lead_id}}&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=653652",
-          "score": 6
+          "useCase": "Cyber Risk Mitigation & Recovery",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/cyber-resilience-beyond-traditional.pdf",
+          "score": 3
         }
       ]
     },
@@ -308,7 +308,7 @@
       "dateDisplay": "Oct 08, 2026",
       "status": "Planned",
       "campaign": "Data Modernization & Resilience",
-      "useCase": "Cyber Risk Mitigation & Recovery",
+      "useCase": "",
       "audience": "Enterprise",
       "region": "AMER",
       "owner": "Macey Jones, Victoria Norvall",
@@ -316,7 +316,7 @@
       "partnerReady": true,
       "activationStatus": "Not Started",
       "readiness": "Planning",
-      "whyUse": "Use this for enterprise conversations around cyber risk mitigation & recovery.",
+      "whyUse": "",
       "links": {
         "watch": null,
         "marketingEmail": null,
@@ -328,36 +328,36 @@
       "sourceRow": 6,
       "relatedResources": [
         {
+          "title": "Campaign Landing Page - DMR Landing Page",
+          "type": "Landing Page",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "",
+          "url": "https://www.hitachivantara.com/en-us/featured/data-modernization-resilience",
+          "score": 3
+        },
+        {
+          "title": "Capacity on Demand Scalable Pay\u2011for\u2011Use Capacity",
+          "type": "Solution Brief / Technical",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "https://www.hitachivantara.com/en-us/pdfviewer/solution-profile/capacity-on-demand",
+          "score": 3
+        },
+        {
+          "title": "Top Ten Reasons Why Pay as You Grow With Capacity on Demand\nOn-premises baseline ownership plus on-demand expansion",
+          "type": "Top 10",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/datasheet/top-10-reasons-why-capacity-on-demand.pdf",
+          "score": 3
+        },
+        {
           "title": "Cyber Resilience Beyond Traditional Security in the Age of Inevitable Breaches",
           "type": "eBook",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Cyber Risk Mitigation & Recovery",
           "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/cyber-resilience-beyond-traditional.pdf",
-          "score": 6
-        },
-        {
-          "title": "Cyberattacks: Is Predictable Business Continuity Possible? Webinar",
-          "type": "Webinar",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.brighttalk.com/webcast/12821/654892?bt_tok={{lead_id}}&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=654892",
-          "score": 6
-        },
-        {
-          "title": "Data Modernization & Resilience Campaign Page Landing Page/Campaign Page",
-          "type": "Landing Page/Campaign Page",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/en-us/featured/data-modernization-resilience",
-          "score": 6
-        },
-        {
-          "title": "Modernizing Data Protection With Hitachi and Commvault",
-          "type": "Infographic",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/infographic/modernizing-data-protection-hitachi-and-commvault.pdf",
-          "score": 6
+          "score": 3
         }
       ]
     },
@@ -368,7 +368,7 @@
       "dateDisplay": "Oct 29, 2026",
       "status": "Planned",
       "campaign": "AI Data Foundation",
-      "useCase": "Cyber Risk Mitigation & Recovery",
+      "useCase": "",
       "audience": "Enterprise, Midmarket",
       "region": "Global",
       "owner": "Macey Jones, Stephanie Thompson",
@@ -376,7 +376,7 @@
       "partnerReady": false,
       "activationStatus": "",
       "readiness": "Planning",
-      "whyUse": "Use this for enterprise, midmarket conversations around cyber risk mitigation & recovery.",
+      "whyUse": "",
       "links": {
         "watch": null,
         "marketingEmail": null,
@@ -388,14 +388,6 @@
       "sourceRow": 7,
       "relatedResources": [
         {
-          "title": "IT Decision-Making, Budget, and Geopolitical Risk",
-          "type": "Blog / Executive POV",
-          "campaign": "AI Data Foundation",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "IT Decision-Making, Budget, and Geopolitical Risk",
-          "score": 6
-        },
-        {
           "title": "Campaign Landing Page - AI Landing Page",
           "type": "Landing Page",
           "campaign": "AI Data Foundation",
@@ -404,19 +396,27 @@
           "score": 3
         },
         {
-          "title": "Cyber Resilience Beyond Traditional Security in the Age of Inevitable Breaches",
-          "type": "eBook",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/cyber-resilience-beyond-traditional.pdf",
+          "title": "Hitachi iQ with NVIDIA HGX",
+          "type": "FAQ / Reference / Use Case Guide",
+          "campaign": "AI Data Foundation",
+          "useCase": "High Performance AI-Ready Infrastructure",
+          "url": "https://docs.hitachivantara.com/v/u/en-us/mk-sl-324/latest",
           "score": 3
         },
         {
-          "title": "Cyberattacks: Is Predictable Business Continuity Possible? Webinar",
-          "type": "Webinar",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.brighttalk.com/webcast/12821/654892?bt_tok={{lead_id}}&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=654892",
+          "title": "Explore and Build AI Solutions with iQ Studio",
+          "type": "Demo / Assessment / Tool / Offer",
+          "campaign": "AI Data Foundation",
+          "useCase": "High Performance AI-Ready Infrastructure",
+          "url": "https://www.hitachivantara.com/en-us/featured/experience-ai-iq-studio",
+          "score": 3
+        },
+        {
+          "title": "From Science Fiction to Factory Floor: The Physical AI Revolution Takes Shape",
+          "type": "Blog / Executive POV",
+          "campaign": "AI Data Foundation",
+          "useCase": "High Performance AI-Ready Infrastructure",
+          "url": "https://www.hitachivantara.com/en-us/blog/from-science-fiction-factory-floor-physical-ai-revolution-takes-shape",
           "score": 3
         }
       ]
@@ -428,7 +428,7 @@
       "dateDisplay": "Dec 03, 2026",
       "status": "Planned",
       "campaign": "AI Data Foundation",
-      "useCase": "High Performance AI-Ready Infrastructure",
+      "useCase": "",
       "audience": "Enterprise",
       "region": "Global",
       "owner": "Jeff Lundberg, Stephanie Thompson",
@@ -436,7 +436,7 @@
       "partnerReady": true,
       "activationStatus": "Not Started",
       "readiness": "Planning",
-      "whyUse": "Use this for enterprise conversations around high performance ai-ready infrastructure.",
+      "whyUse": "",
       "links": {
         "watch": null,
         "marketingEmail": null,
@@ -448,36 +448,36 @@
       "sourceRow": 8,
       "relatedResources": [
         {
-          "title": "Thrive in an AI-Driven Future eBook eBook/Whitepaper",
-          "type": "eBook/Whitepaper",
+          "title": "Campaign Landing Page - AI Landing Page",
+          "type": "Landing Page",
           "campaign": "AI Data Foundation",
-          "useCase": "High Performance AI-Ready Infrastructure",
-          "url": "https://www.hitachivantara.com/en-us/pdfviewer/ebook/thrive-in-ai-driven-future-eBook",
-          "score": 6
+          "useCase": "",
+          "url": "https://www.hitachivantara.com/en-us/featured/ai-data-foundation",
+          "score": 3
         },
         {
-          "title": "2025 GigaOm Radar Report for AI Workloads - GigaOm Link 3rd Party / Analyst/Industry Trends",
-          "type": "3rd Party / Analyst/Industry Trends",
+          "title": "Hitachi iQ with NVIDIA HGX",
+          "type": "FAQ / Reference / Use Case Guide",
           "campaign": "AI Data Foundation",
           "useCase": "High Performance AI-Ready Infrastructure",
-          "url": "https://portal.gigaom.com/reprint/gigaom-radar-for-high-performance-storage-optimized-for-ai-workloads-hitachi-vantara",
-          "score": 6
+          "url": "https://docs.hitachivantara.com/v/u/en-us/mk-sl-324/latest",
+          "score": 3
         },
         {
-          "title": "Accelerate Your AI Success: Use Case & ROI Guide eBook eBook/Whitepaper",
-          "type": "eBook/Whitepaper",
+          "title": "Explore and Build AI Solutions with iQ Studio",
+          "type": "Demo / Assessment / Tool / Offer",
           "campaign": "AI Data Foundation",
           "useCase": "High Performance AI-Ready Infrastructure",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/accelerate-your-ai-success",
-          "score": 6
+          "url": "https://www.hitachivantara.com/en-us/featured/experience-ai-iq-studio",
+          "score": 3
         },
         {
-          "title": "Hitachi iQ Studio Datasheet / Solution Brief / Technical",
-          "type": "Datasheet / Solution Brief / Technical",
+          "title": "From Science Fiction to Factory Floor: The Physical AI Revolution Takes Shape",
+          "type": "Blog / Executive POV",
           "campaign": "AI Data Foundation",
           "useCase": "High Performance AI-Ready Infrastructure",
-          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/solution-profile/iq-ai-solution-suite-tailored-industry-needs-ideal-organizations-investing-in-ai-ml-workloads.pdf",
-          "score": 6
+          "url": "https://www.hitachivantara.com/en-us/blog/from-science-fiction-factory-floor-physical-ai-revolution-takes-shape",
+          "score": 3
         }
       ]
     },
@@ -488,7 +488,7 @@
       "dateDisplay": "Jan 28, 2027",
       "status": "Planned",
       "campaign": "AI Data Foundation",
-      "useCase": "Cyber Risk Mitigation & Recovery",
+      "useCase": "",
       "audience": "Enterprise, Midmarket",
       "region": "Global",
       "owner": "Macey Jones, Stephanie Thompson",
@@ -496,7 +496,7 @@
       "partnerReady": false,
       "activationStatus": "",
       "readiness": "Planning",
-      "whyUse": "Use this for enterprise, midmarket conversations around cyber risk mitigation & recovery.",
+      "whyUse": "",
       "links": {
         "watch": null,
         "marketingEmail": null,
@@ -508,14 +508,6 @@
       "sourceRow": 9,
       "relatedResources": [
         {
-          "title": "IT Decision-Making, Budget, and Geopolitical Risk",
-          "type": "Blog / Executive POV",
-          "campaign": "AI Data Foundation",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "IT Decision-Making, Budget, and Geopolitical Risk",
-          "score": 6
-        },
-        {
           "title": "Campaign Landing Page - AI Landing Page",
           "type": "Landing Page",
           "campaign": "AI Data Foundation",
@@ -524,19 +516,27 @@
           "score": 3
         },
         {
-          "title": "Cyber Resilience Beyond Traditional Security in the Age of Inevitable Breaches",
-          "type": "eBook",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/cyber-resilience-beyond-traditional.pdf",
+          "title": "Hitachi iQ with NVIDIA HGX",
+          "type": "FAQ / Reference / Use Case Guide",
+          "campaign": "AI Data Foundation",
+          "useCase": "High Performance AI-Ready Infrastructure",
+          "url": "https://docs.hitachivantara.com/v/u/en-us/mk-sl-324/latest",
           "score": 3
         },
         {
-          "title": "Cyberattacks: Is Predictable Business Continuity Possible? Webinar",
-          "type": "Webinar",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.brighttalk.com/webcast/12821/654892?bt_tok={{lead_id}}&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=654892",
+          "title": "Explore and Build AI Solutions with iQ Studio",
+          "type": "Demo / Assessment / Tool / Offer",
+          "campaign": "AI Data Foundation",
+          "useCase": "High Performance AI-Ready Infrastructure",
+          "url": "https://www.hitachivantara.com/en-us/featured/experience-ai-iq-studio",
+          "score": 3
+        },
+        {
+          "title": "From Science Fiction to Factory Floor: The Physical AI Revolution Takes Shape",
+          "type": "Blog / Executive POV",
+          "campaign": "AI Data Foundation",
+          "useCase": "High Performance AI-Ready Infrastructure",
+          "url": "https://www.hitachivantara.com/en-us/blog/from-science-fiction-factory-floor-physical-ai-revolution-takes-shape",
           "score": 3
         }
       ]
@@ -548,7 +548,7 @@
       "dateDisplay": "Feb 25, 2027",
       "status": "Planned",
       "campaign": "Data Modernization & Resilience",
-      "useCase": "Data Platform Architectures & Economics",
+      "useCase": "",
       "audience": "Enterprise, Midmarket",
       "region": "Global",
       "owner": "Stephanie Thompson, Sulochna Khokhrai",
@@ -556,7 +556,7 @@
       "partnerReady": false,
       "activationStatus": "Not Started",
       "readiness": "Planning",
-      "whyUse": "Use this for enterprise, midmarket conversations around data platform architectures & economics.",
+      "whyUse": "",
       "links": {
         "watch": null,
         "marketingEmail": null,
@@ -568,12 +568,20 @@
       "sourceRow": 10,
       "relatedResources": [
         {
+          "title": "Campaign Landing Page - DMR Landing Page",
+          "type": "Landing Page",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "",
+          "url": "https://www.hitachivantara.com/en-us/featured/data-modernization-resilience",
+          "score": 3
+        },
+        {
           "title": "Capacity on Demand Scalable Pay\u2011for\u2011Use Capacity",
           "type": "Solution Brief / Technical",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Data Platform Architectures & Economics",
           "url": "https://www.hitachivantara.com/en-us/pdfviewer/solution-profile/capacity-on-demand",
-          "score": 6
+          "score": 3
         },
         {
           "title": "Top Ten Reasons Why Pay as You Grow With Capacity on Demand\nOn-premises baseline ownership plus on-demand expansion",
@@ -581,23 +589,15 @@
           "campaign": "Data Modernization & Resilience",
           "useCase": "Data Platform Architectures & Economics",
           "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/datasheet/top-10-reasons-why-capacity-on-demand.pdf",
-          "score": 6
+          "score": 3
         },
         {
-          "title": "Navigating Complexity and Cost With Hitachi EverFlex",
-          "type": "eBook/Whitepaper",
+          "title": "Cyber Resilience Beyond Traditional Security in the Age of Inevitable Breaches",
+          "type": "eBook",
           "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/white-paper/navigating-complexity-and-cost-with-hitachi-everflex.pdf",
-          "score": 6
-        },
-        {
-          "title": "Build Modern AI-Ready Infrastructure Without Starting Over Webinar",
-          "type": "Webinar",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.brighttalk.com/webcast/12821/653652?bt_tok={{lead_id}}&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=653652",
-          "score": 6
+          "useCase": "Cyber Risk Mitigation & Recovery",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/cyber-resilience-beyond-traditional.pdf",
+          "score": 3
         }
       ]
     },
@@ -608,7 +608,7 @@
       "dateDisplay": "Apr 27, 2027",
       "status": "Planned",
       "campaign": "Data Modernization & Resilience",
-      "useCase": "Data Platform Architectures & Economics",
+      "useCase": "",
       "audience": "Enterprise, Midmarket",
       "region": "Global",
       "owner": "Liam Yu",
@@ -616,7 +616,7 @@
       "partnerReady": false,
       "activationStatus": "Not Started",
       "readiness": "Planning",
-      "whyUse": "Use this for enterprise, midmarket conversations around data platform architectures & economics.",
+      "whyUse": "",
       "links": {
         "watch": null,
         "marketingEmail": null,
@@ -628,12 +628,20 @@
       "sourceRow": 11,
       "relatedResources": [
         {
+          "title": "Campaign Landing Page - DMR Landing Page",
+          "type": "Landing Page",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "",
+          "url": "https://www.hitachivantara.com/en-us/featured/data-modernization-resilience",
+          "score": 3
+        },
+        {
           "title": "Capacity on Demand Scalable Pay\u2011for\u2011Use Capacity",
           "type": "Solution Brief / Technical",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Data Platform Architectures & Economics",
           "url": "https://www.hitachivantara.com/en-us/pdfviewer/solution-profile/capacity-on-demand",
-          "score": 6
+          "score": 3
         },
         {
           "title": "Top Ten Reasons Why Pay as You Grow With Capacity on Demand\nOn-premises baseline ownership plus on-demand expansion",
@@ -641,23 +649,15 @@
           "campaign": "Data Modernization & Resilience",
           "useCase": "Data Platform Architectures & Economics",
           "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/datasheet/top-10-reasons-why-capacity-on-demand.pdf",
-          "score": 6
+          "score": 3
         },
         {
-          "title": "Navigating Complexity and Cost With Hitachi EverFlex",
-          "type": "eBook/Whitepaper",
+          "title": "Cyber Resilience Beyond Traditional Security in the Age of Inevitable Breaches",
+          "type": "eBook",
           "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/white-paper/navigating-complexity-and-cost-with-hitachi-everflex.pdf",
-          "score": 6
-        },
-        {
-          "title": "Build Modern AI-Ready Infrastructure Without Starting Over Webinar",
-          "type": "Webinar",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.brighttalk.com/webcast/12821/653652?bt_tok={{lead_id}}&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=653652",
-          "score": 6
+          "useCase": "Cyber Risk Mitigation & Recovery",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/cyber-resilience-beyond-traditional.pdf",
+          "score": 3
         }
       ]
     },
@@ -668,7 +668,7 @@
       "dateDisplay": "Apr 30, 2027",
       "status": "Planned",
       "campaign": "Data Modernization & Resilience",
-      "useCase": "Data Platform Architectures & Economics",
+      "useCase": "",
       "audience": "Enterprise, Midmarket",
       "region": "Global",
       "owner": "Richard Jew",
@@ -676,7 +676,7 @@
       "partnerReady": false,
       "activationStatus": "Not Started",
       "readiness": "Planning",
-      "whyUse": "Use this for enterprise, midmarket conversations around data platform architectures & economics.",
+      "whyUse": "",
       "links": {
         "watch": null,
         "marketingEmail": null,
@@ -688,12 +688,20 @@
       "sourceRow": 12,
       "relatedResources": [
         {
+          "title": "Campaign Landing Page - DMR Landing Page",
+          "type": "Landing Page",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "",
+          "url": "https://www.hitachivantara.com/en-us/featured/data-modernization-resilience",
+          "score": 3
+        },
+        {
           "title": "Capacity on Demand Scalable Pay\u2011for\u2011Use Capacity",
           "type": "Solution Brief / Technical",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Data Platform Architectures & Economics",
           "url": "https://www.hitachivantara.com/en-us/pdfviewer/solution-profile/capacity-on-demand",
-          "score": 6
+          "score": 3
         },
         {
           "title": "Top Ten Reasons Why Pay as You Grow With Capacity on Demand\nOn-premises baseline ownership plus on-demand expansion",
@@ -701,23 +709,15 @@
           "campaign": "Data Modernization & Resilience",
           "useCase": "Data Platform Architectures & Economics",
           "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/datasheet/top-10-reasons-why-capacity-on-demand.pdf",
-          "score": 6
+          "score": 3
         },
         {
-          "title": "Navigating Complexity and Cost With Hitachi EverFlex",
-          "type": "eBook/Whitepaper",
+          "title": "Cyber Resilience Beyond Traditional Security in the Age of Inevitable Breaches",
+          "type": "eBook",
           "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/white-paper/navigating-complexity-and-cost-with-hitachi-everflex.pdf",
-          "score": 6
-        },
-        {
-          "title": "Build Modern AI-Ready Infrastructure Without Starting Over Webinar",
-          "type": "Webinar",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.brighttalk.com/webcast/12821/653652?bt_tok={{lead_id}}&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=653652",
-          "score": 6
+          "useCase": "Cyber Risk Mitigation & Recovery",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/cyber-resilience-beyond-traditional.pdf",
+          "score": 3
         }
       ]
     }
