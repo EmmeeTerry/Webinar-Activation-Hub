@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-09-28T10:08:05.526180+00:00",
+  "lastRefreshed": "2026-09-28T12:07:48.884094+00:00",
   "webinars": [
     {
       "id": "the-economics-of-modern-storage-infrastructure-lower-risk-faster-ai-value-better-roi-webin",
@@ -28,35 +28,35 @@
       "sourceRow": 1,
       "relatedResources": [
         {
+          "title": "Capacity on Demand Scalable Pay\u2011for\u2011Use Capacity",
+          "type": "Solution Brief / Technical",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "https://www.hitachivantara.com/en-us/pdfviewer/solution-profile/capacity-on-demand",
+          "score": 6
+        },
+        {
+          "title": "Top Ten Reasons Why Pay as You Grow With Capacity on Demand\nOn-premises baseline ownership plus on-demand expansion",
+          "type": "Top 10",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/datasheet/top-10-reasons-why-capacity-on-demand.pdf",
+          "score": 6
+        },
+        {
+          "title": "Navigating Complexity and Cost With Hitachi EverFlex",
+          "type": "eBook/Whitepaper",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/white-paper/navigating-complexity-and-cost-with-hitachi-everflex.pdf",
+          "score": 6
+        },
+        {
           "title": "Build Modern AI-Ready Infrastructure Without Starting Over Webinar",
           "type": "Webinar",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Data Platform Architectures & Economics",
           "url": "https://www.brighttalk.com/webcast/12821/653652?bt_tok={{lead_id}}&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=653652",
-          "score": 6
-        },
-        {
-          "title": "State of Data Infrastructure Global Report 2025",
-          "type": "eBook/Whitepaper",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/state-of-data-2025",
-          "score": 6
-        },
-        {
-          "title": "Unlocking ROI: the Forrester Study That Could Save Your Next Storage Investment Webinar",
-          "type": "Webinar",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.brighttalk.com/webcast/12821/651449?bt_tok={{lead_id}}&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=651449",
-          "score": 6
-        },
-        {
-          "title": "VSP One Block Buyer's Guide eBook/Whitepaper",
-          "type": "eBook/Whitepaper",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/buyers-guide-to-virtual-storage-platform-one-block.pdf",
           "score": 6
         }
       ]
@@ -148,6 +148,14 @@
       "sourceRow": 3,
       "relatedResources": [
         {
+          "title": "Cyber Resilience Beyond Traditional Security in the Age of Inevitable Breaches",
+          "type": "eBook",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Cyber Risk Mitigation & Recovery",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/cyber-resilience-beyond-traditional.pdf",
+          "score": 6
+        },
+        {
           "title": "Cyberattacks: Is Predictable Business Continuity Possible? Webinar",
           "type": "Webinar",
           "campaign": "Data Modernization & Resilience",
@@ -164,19 +172,11 @@
           "score": 6
         },
         {
-          "title": "Boost Cyber Resilience with Superhero Powers (and Hitachi VSP One) Blog / Executive POV",
-          "type": "Blog / Executive POV",
+          "title": "Modernizing Data Protection With Hitachi and Commvault",
+          "type": "Infographic",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/en-us/blog/boost-cyber-resilience-superhero-powers-and-vsp-one",
-          "score": 6
-        },
-        {
-          "title": "From Reactive to Resilient: Rethinking Cybersecurity for the Evolving Threat Landscape Webinar Webinar",
-          "type": "Webinar",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.brighttalk.com/webcast/12821/641032?bt_tok={{lead_id}}&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=641032",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/infographic/modernizing-data-protection-hitachi-and-commvault.pdf",
           "score": 6
         }
       ]
@@ -268,35 +268,35 @@
       "sourceRow": 5,
       "relatedResources": [
         {
+          "title": "Capacity on Demand Scalable Pay\u2011for\u2011Use Capacity",
+          "type": "Solution Brief / Technical",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "https://www.hitachivantara.com/en-us/pdfviewer/solution-profile/capacity-on-demand",
+          "score": 6
+        },
+        {
+          "title": "Top Ten Reasons Why Pay as You Grow With Capacity on Demand\nOn-premises baseline ownership plus on-demand expansion",
+          "type": "Top 10",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/datasheet/top-10-reasons-why-capacity-on-demand.pdf",
+          "score": 6
+        },
+        {
+          "title": "Navigating Complexity and Cost With Hitachi EverFlex",
+          "type": "eBook/Whitepaper",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/white-paper/navigating-complexity-and-cost-with-hitachi-everflex.pdf",
+          "score": 6
+        },
+        {
           "title": "Build Modern AI-Ready Infrastructure Without Starting Over Webinar",
           "type": "Webinar",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Data Platform Architectures & Economics",
           "url": "https://www.brighttalk.com/webcast/12821/653652?bt_tok={{lead_id}}&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=653652",
-          "score": 6
-        },
-        {
-          "title": "State of Data Infrastructure Global Report 2025",
-          "type": "eBook/Whitepaper",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/state-of-data-2025",
-          "score": 6
-        },
-        {
-          "title": "Unlocking ROI: the Forrester Study That Could Save Your Next Storage Investment Webinar",
-          "type": "Webinar",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.brighttalk.com/webcast/12821/651449?bt_tok={{lead_id}}&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=651449",
-          "score": 6
-        },
-        {
-          "title": "VSP One Block Buyer's Guide eBook/Whitepaper",
-          "type": "eBook/Whitepaper",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/buyers-guide-to-virtual-storage-platform-one-block.pdf",
           "score": 6
         }
       ]
@@ -328,6 +328,14 @@
       "sourceRow": 6,
       "relatedResources": [
         {
+          "title": "Cyber Resilience Beyond Traditional Security in the Age of Inevitable Breaches",
+          "type": "eBook",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Cyber Risk Mitigation & Recovery",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/cyber-resilience-beyond-traditional.pdf",
+          "score": 6
+        },
+        {
           "title": "Cyberattacks: Is Predictable Business Continuity Possible? Webinar",
           "type": "Webinar",
           "campaign": "Data Modernization & Resilience",
@@ -344,19 +352,11 @@
           "score": 6
         },
         {
-          "title": "Boost Cyber Resilience with Superhero Powers (and Hitachi VSP One) Blog / Executive POV",
-          "type": "Blog / Executive POV",
+          "title": "Modernizing Data Protection With Hitachi and Commvault",
+          "type": "Infographic",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/en-us/blog/boost-cyber-resilience-superhero-powers-and-vsp-one",
-          "score": 6
-        },
-        {
-          "title": "From Reactive to Resilient: Rethinking Cybersecurity for the Evolving Threat Landscape Webinar Webinar",
-          "type": "Webinar",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.brighttalk.com/webcast/12821/641032?bt_tok={{lead_id}}&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=641032",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/infographic/modernizing-data-protection-hitachi-and-commvault.pdf",
           "score": 6
         }
       ]
@@ -388,6 +388,14 @@
       "sourceRow": 7,
       "relatedResources": [
         {
+          "title": "IT Decision-Making, Budget, and Geopolitical Risk",
+          "type": "Blog / Executive POV",
+          "campaign": "AI Data Foundation",
+          "useCase": "Cyber Risk Mitigation & Recovery",
+          "url": "IT Decision-Making, Budget, and Geopolitical Risk",
+          "score": 6
+        },
+        {
           "title": "Campaign Landing Page - AI Landing Page",
           "type": "Landing Page",
           "campaign": "AI Data Foundation",
@@ -396,27 +404,19 @@
           "score": 3
         },
         {
+          "title": "Cyber Resilience Beyond Traditional Security in the Age of Inevitable Breaches",
+          "type": "eBook",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Cyber Risk Mitigation & Recovery",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/cyber-resilience-beyond-traditional.pdf",
+          "score": 3
+        },
+        {
           "title": "Cyberattacks: Is Predictable Business Continuity Possible? Webinar",
           "type": "Webinar",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Cyber Risk Mitigation & Recovery",
           "url": "https://www.brighttalk.com/webcast/12821/654892?bt_tok={{lead_id}}&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=654892",
-          "score": 3
-        },
-        {
-          "title": "Data Modernization & Resilience Campaign Page Landing Page/Campaign Page",
-          "type": "Landing Page/Campaign Page",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/en-us/featured/data-modernization-resilience",
-          "score": 3
-        },
-        {
-          "title": "SDR Email Cadence ADF Email / Nurture",
-          "type": "Email / Nurture",
-          "campaign": "AI Data Foundation",
-          "useCase": "",
-          "url": "https://hitachivantara.sharepoint.com/:p:/r/sites/PartnerandFieldMarketing/Shared%20Documents/Global%20Campaigns/FY26/AI%20Data%20Foundation%20-%20Working%20Deck.pptx?d=wf596d0152fef4fa384ef3a2ca4fe37b6&csf=1&web=1&e=dldNxg&nav=eyJzSWQiOjMwNSwiY0lkIjoxNzEwOTkzMDZ9",
           "score": 3
         }
       ]
@@ -508,6 +508,14 @@
       "sourceRow": 9,
       "relatedResources": [
         {
+          "title": "IT Decision-Making, Budget, and Geopolitical Risk",
+          "type": "Blog / Executive POV",
+          "campaign": "AI Data Foundation",
+          "useCase": "Cyber Risk Mitigation & Recovery",
+          "url": "IT Decision-Making, Budget, and Geopolitical Risk",
+          "score": 6
+        },
+        {
           "title": "Campaign Landing Page - AI Landing Page",
           "type": "Landing Page",
           "campaign": "AI Data Foundation",
@@ -516,27 +524,19 @@
           "score": 3
         },
         {
+          "title": "Cyber Resilience Beyond Traditional Security in the Age of Inevitable Breaches",
+          "type": "eBook",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Cyber Risk Mitigation & Recovery",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/cyber-resilience-beyond-traditional.pdf",
+          "score": 3
+        },
+        {
           "title": "Cyberattacks: Is Predictable Business Continuity Possible? Webinar",
           "type": "Webinar",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Cyber Risk Mitigation & Recovery",
           "url": "https://www.brighttalk.com/webcast/12821/654892?bt_tok={{lead_id}}&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=654892",
-          "score": 3
-        },
-        {
-          "title": "Data Modernization & Resilience Campaign Page Landing Page/Campaign Page",
-          "type": "Landing Page/Campaign Page",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/en-us/featured/data-modernization-resilience",
-          "score": 3
-        },
-        {
-          "title": "SDR Email Cadence ADF Email / Nurture",
-          "type": "Email / Nurture",
-          "campaign": "AI Data Foundation",
-          "useCase": "",
-          "url": "https://hitachivantara.sharepoint.com/:p:/r/sites/PartnerandFieldMarketing/Shared%20Documents/Global%20Campaigns/FY26/AI%20Data%20Foundation%20-%20Working%20Deck.pptx?d=wf596d0152fef4fa384ef3a2ca4fe37b6&csf=1&web=1&e=dldNxg&nav=eyJzSWQiOjMwNSwiY0lkIjoxNzEwOTkzMDZ9",
           "score": 3
         }
       ]
@@ -568,35 +568,35 @@
       "sourceRow": 10,
       "relatedResources": [
         {
+          "title": "Capacity on Demand Scalable Pay\u2011for\u2011Use Capacity",
+          "type": "Solution Brief / Technical",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "https://www.hitachivantara.com/en-us/pdfviewer/solution-profile/capacity-on-demand",
+          "score": 6
+        },
+        {
+          "title": "Top Ten Reasons Why Pay as You Grow With Capacity on Demand\nOn-premises baseline ownership plus on-demand expansion",
+          "type": "Top 10",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/datasheet/top-10-reasons-why-capacity-on-demand.pdf",
+          "score": 6
+        },
+        {
+          "title": "Navigating Complexity and Cost With Hitachi EverFlex",
+          "type": "eBook/Whitepaper",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/white-paper/navigating-complexity-and-cost-with-hitachi-everflex.pdf",
+          "score": 6
+        },
+        {
           "title": "Build Modern AI-Ready Infrastructure Without Starting Over Webinar",
           "type": "Webinar",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Data Platform Architectures & Economics",
           "url": "https://www.brighttalk.com/webcast/12821/653652?bt_tok={{lead_id}}&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=653652",
-          "score": 6
-        },
-        {
-          "title": "State of Data Infrastructure Global Report 2025",
-          "type": "eBook/Whitepaper",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/state-of-data-2025",
-          "score": 6
-        },
-        {
-          "title": "Unlocking ROI: the Forrester Study That Could Save Your Next Storage Investment Webinar",
-          "type": "Webinar",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.brighttalk.com/webcast/12821/651449?bt_tok={{lead_id}}&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=651449",
-          "score": 6
-        },
-        {
-          "title": "VSP One Block Buyer's Guide eBook/Whitepaper",
-          "type": "eBook/Whitepaper",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/buyers-guide-to-virtual-storage-platform-one-block.pdf",
           "score": 6
         }
       ]
@@ -628,35 +628,35 @@
       "sourceRow": 11,
       "relatedResources": [
         {
+          "title": "Capacity on Demand Scalable Pay\u2011for\u2011Use Capacity",
+          "type": "Solution Brief / Technical",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "https://www.hitachivantara.com/en-us/pdfviewer/solution-profile/capacity-on-demand",
+          "score": 6
+        },
+        {
+          "title": "Top Ten Reasons Why Pay as You Grow With Capacity on Demand\nOn-premises baseline ownership plus on-demand expansion",
+          "type": "Top 10",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/datasheet/top-10-reasons-why-capacity-on-demand.pdf",
+          "score": 6
+        },
+        {
+          "title": "Navigating Complexity and Cost With Hitachi EverFlex",
+          "type": "eBook/Whitepaper",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/white-paper/navigating-complexity-and-cost-with-hitachi-everflex.pdf",
+          "score": 6
+        },
+        {
           "title": "Build Modern AI-Ready Infrastructure Without Starting Over Webinar",
           "type": "Webinar",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Data Platform Architectures & Economics",
           "url": "https://www.brighttalk.com/webcast/12821/653652?bt_tok={{lead_id}}&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=653652",
-          "score": 6
-        },
-        {
-          "title": "State of Data Infrastructure Global Report 2025",
-          "type": "eBook/Whitepaper",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/state-of-data-2025",
-          "score": 6
-        },
-        {
-          "title": "Unlocking ROI: the Forrester Study That Could Save Your Next Storage Investment Webinar",
-          "type": "Webinar",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.brighttalk.com/webcast/12821/651449?bt_tok={{lead_id}}&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=651449",
-          "score": 6
-        },
-        {
-          "title": "VSP One Block Buyer's Guide eBook/Whitepaper",
-          "type": "eBook/Whitepaper",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/buyers-guide-to-virtual-storage-platform-one-block.pdf",
           "score": 6
         }
       ]
@@ -688,35 +688,35 @@
       "sourceRow": 12,
       "relatedResources": [
         {
+          "title": "Capacity on Demand Scalable Pay\u2011for\u2011Use Capacity",
+          "type": "Solution Brief / Technical",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "https://www.hitachivantara.com/en-us/pdfviewer/solution-profile/capacity-on-demand",
+          "score": 6
+        },
+        {
+          "title": "Top Ten Reasons Why Pay as You Grow With Capacity on Demand\nOn-premises baseline ownership plus on-demand expansion",
+          "type": "Top 10",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/datasheet/top-10-reasons-why-capacity-on-demand.pdf",
+          "score": 6
+        },
+        {
+          "title": "Navigating Complexity and Cost With Hitachi EverFlex",
+          "type": "eBook/Whitepaper",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/white-paper/navigating-complexity-and-cost-with-hitachi-everflex.pdf",
+          "score": 6
+        },
+        {
           "title": "Build Modern AI-Ready Infrastructure Without Starting Over Webinar",
           "type": "Webinar",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Data Platform Architectures & Economics",
           "url": "https://www.brighttalk.com/webcast/12821/653652?bt_tok={{lead_id}}&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=653652",
-          "score": 6
-        },
-        {
-          "title": "State of Data Infrastructure Global Report 2025",
-          "type": "eBook/Whitepaper",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/state-of-data-2025",
-          "score": 6
-        },
-        {
-          "title": "Unlocking ROI: the Forrester Study That Could Save Your Next Storage Investment Webinar",
-          "type": "Webinar",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.brighttalk.com/webcast/12821/651449?bt_tok={{lead_id}}&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=651449",
-          "score": 6
-        },
-        {
-          "title": "VSP One Block Buyer's Guide eBook/Whitepaper",
-          "type": "eBook/Whitepaper",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/buyers-guide-to-virtual-storage-platform-one-block.pdf",
           "score": 6
         }
       ]
