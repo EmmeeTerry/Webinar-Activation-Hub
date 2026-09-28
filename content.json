@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-09-28T08:39:15.729502+00:00",
+  "lastRefreshed": "2026-09-28T10:38:13.525002+00:00",
   "items": [
     {
       "id": "2026-gigaom-rader-for-high-performance-storage-optimized-for-ai-workloads-analyst-report-1",
@@ -2029,8 +2029,8 @@
       "audience": "Midmarket",
       "status": "Live",
       "region": "Global",
-      "publishDate": null,
-      "publishDateDisplay": "TBD",
+      "publishDate": "2026-01-28",
+      "publishDateDisplay": "Jan 28, 2026",
       "partnerUse": true,
       "paidMediaDate": null,
       "paidMediaDateDisplay": "",
@@ -2069,7 +2069,7 @@
       "funnelStage": "TOFU",
       "ownerTeam": "PMM",
       "audience": "Enterprise, Midmarket",
-      "status": "In Production",
+      "status": "Live",
       "region": "Global",
       "publishDate": "2026-09-24",
       "publishDateDisplay": "Sep 24, 2026",
