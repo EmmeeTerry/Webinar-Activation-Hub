@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-09-29T14:39:38.442011+00:00",
+  "lastRefreshed": "2026-09-29T16:39:52.645494+00:00",
   "items": [
     {
       "id": "2026-gigaom-rader-for-high-performance-storage-optimized-for-ai-workloads-analyst-report-1",
@@ -1815,7 +1815,7 @@
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
       "funnelStage": "MOFU",
-      "ownerTeam": "Brand",
+      "ownerTeam": "PMM",
       "audience": "Enterprise, Midmarket",
       "status": "Live",
       "region": "Global",
@@ -5431,8 +5431,8 @@
       "audience": "Enterprise",
       "status": "Planned",
       "region": "AMER",
-      "publishDate": "2026-10-08",
-      "publishDateDisplay": "Oct 08, 2026",
+      "publishDate": "2026-10-21",
+      "publishDateDisplay": "Oct 21, 2026",
       "partnerUse": true,
       "paidMediaDate": null,
       "paidMediaDateDisplay": "",
