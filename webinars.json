@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-09-29T08:09:11.239639+00:00",
+  "lastRefreshed": "2026-09-29T10:07:26.358687+00:00",
   "webinars": [
     {
       "id": "the-economics-of-modern-storage-infrastructure-lower-risk-faster-ai-value-better-roi-webin",
@@ -31,13 +31,13 @@
           "title": "Campaign Landing Page - DMR Landing Page",
           "type": "Landing Page",
           "campaign": "Data Modernization & Resilience",
-          "useCase": "",
+          "useCase": "Cyber Risk Mitigation & Recovery, Data Platform Architectures & Economics, Hybrid Cloud Platform & Operations",
           "url": "https://www.hitachivantara.com/en-us/featured/data-modernization-resilience",
           "score": 3
         },
         {
           "title": "Capacity on Demand Scalable Pay\u2011for\u2011Use Capacity",
-          "type": "Solution Brief / Technical",
+          "type": "Datasheet / Solution Brief / Technical",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Data Platform Architectures & Economics",
           "url": "https://www.hitachivantara.com/en-us/pdfviewer/solution-profile/capacity-on-demand",
@@ -53,7 +53,7 @@
         },
         {
           "title": "Cyber Resilience Beyond Traditional Security in the Age of Inevitable Breaches",
-          "type": "eBook",
+          "type": "eBook/Whitepaper",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Cyber Risk Mitigation & Recovery",
           "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/cyber-resilience-beyond-traditional.pdf",
@@ -91,7 +91,7 @@
           "title": "Campaign Landing Page - AI Landing Page",
           "type": "Landing Page",
           "campaign": "AI Data Foundation",
-          "useCase": "",
+          "useCase": "Data Readiness and Activation for AI, High Performance AI-Ready Infrastructure",
           "url": "https://www.hitachivantara.com/en-us/featured/ai-data-foundation",
           "score": 3
         },
@@ -151,13 +151,13 @@
           "title": "Campaign Landing Page - DMR Landing Page",
           "type": "Landing Page",
           "campaign": "Data Modernization & Resilience",
-          "useCase": "",
+          "useCase": "Cyber Risk Mitigation & Recovery, Data Platform Architectures & Economics, Hybrid Cloud Platform & Operations",
           "url": "https://www.hitachivantara.com/en-us/featured/data-modernization-resilience",
           "score": 3
         },
         {
           "title": "Capacity on Demand Scalable Pay\u2011for\u2011Use Capacity",
-          "type": "Solution Brief / Technical",
+          "type": "Datasheet / Solution Brief / Technical",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Data Platform Architectures & Economics",
           "url": "https://www.hitachivantara.com/en-us/pdfviewer/solution-profile/capacity-on-demand",
@@ -173,7 +173,7 @@
         },
         {
           "title": "Cyber Resilience Beyond Traditional Security in the Age of Inevitable Breaches",
-          "type": "eBook",
+          "type": "eBook/Whitepaper",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Cyber Risk Mitigation & Recovery",
           "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/cyber-resilience-beyond-traditional.pdf",
@@ -211,7 +211,7 @@
           "title": "Campaign Landing Page - AI Landing Page",
           "type": "Landing Page",
           "campaign": "AI Data Foundation",
-          "useCase": "",
+          "useCase": "Data Readiness and Activation for AI, High Performance AI-Ready Infrastructure",
           "url": "https://www.hitachivantara.com/en-us/featured/ai-data-foundation",
           "score": 3
         },
@@ -271,13 +271,13 @@
           "title": "Campaign Landing Page - DMR Landing Page",
           "type": "Landing Page",
           "campaign": "Data Modernization & Resilience",
-          "useCase": "",
+          "useCase": "Cyber Risk Mitigation & Recovery, Data Platform Architectures & Economics, Hybrid Cloud Platform & Operations",
           "url": "https://www.hitachivantara.com/en-us/featured/data-modernization-resilience",
           "score": 3
         },
         {
           "title": "Capacity on Demand Scalable Pay\u2011for\u2011Use Capacity",
-          "type": "Solution Brief / Technical",
+          "type": "Datasheet / Solution Brief / Technical",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Data Platform Architectures & Economics",
           "url": "https://www.hitachivantara.com/en-us/pdfviewer/solution-profile/capacity-on-demand",
@@ -293,7 +293,7 @@
         },
         {
           "title": "Cyber Resilience Beyond Traditional Security in the Age of Inevitable Breaches",
-          "type": "eBook",
+          "type": "eBook/Whitepaper",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Cyber Risk Mitigation & Recovery",
           "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/cyber-resilience-beyond-traditional.pdf",
@@ -331,13 +331,13 @@
           "title": "Campaign Landing Page - DMR Landing Page",
           "type": "Landing Page",
           "campaign": "Data Modernization & Resilience",
-          "useCase": "",
+          "useCase": "Cyber Risk Mitigation & Recovery, Data Platform Architectures & Economics, Hybrid Cloud Platform & Operations",
           "url": "https://www.hitachivantara.com/en-us/featured/data-modernization-resilience",
           "score": 3
         },
         {
           "title": "Capacity on Demand Scalable Pay\u2011for\u2011Use Capacity",
-          "type": "Solution Brief / Technical",
+          "type": "Datasheet / Solution Brief / Technical",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Data Platform Architectures & Economics",
           "url": "https://www.hitachivantara.com/en-us/pdfviewer/solution-profile/capacity-on-demand",
@@ -353,7 +353,7 @@
         },
         {
           "title": "Cyber Resilience Beyond Traditional Security in the Age of Inevitable Breaches",
-          "type": "eBook",
+          "type": "eBook/Whitepaper",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Cyber Risk Mitigation & Recovery",
           "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/cyber-resilience-beyond-traditional.pdf",
@@ -391,7 +391,7 @@
           "title": "Campaign Landing Page - AI Landing Page",
           "type": "Landing Page",
           "campaign": "AI Data Foundation",
-          "useCase": "",
+          "useCase": "Data Readiness and Activation for AI, High Performance AI-Ready Infrastructure",
           "url": "https://www.hitachivantara.com/en-us/featured/ai-data-foundation",
           "score": 3
         },
@@ -451,7 +451,7 @@
           "title": "Campaign Landing Page - AI Landing Page",
           "type": "Landing Page",
           "campaign": "AI Data Foundation",
-          "useCase": "",
+          "useCase": "Data Readiness and Activation for AI, High Performance AI-Ready Infrastructure",
           "url": "https://www.hitachivantara.com/en-us/featured/ai-data-foundation",
           "score": 3
         },
@@ -511,7 +511,7 @@
           "title": "Campaign Landing Page - AI Landing Page",
           "type": "Landing Page",
           "campaign": "AI Data Foundation",
-          "useCase": "",
+          "useCase": "Data Readiness and Activation for AI, High Performance AI-Ready Infrastructure",
           "url": "https://www.hitachivantara.com/en-us/featured/ai-data-foundation",
           "score": 3
         },
@@ -571,13 +571,13 @@
           "title": "Campaign Landing Page - DMR Landing Page",
           "type": "Landing Page",
           "campaign": "Data Modernization & Resilience",
-          "useCase": "",
+          "useCase": "Cyber Risk Mitigation & Recovery, Data Platform Architectures & Economics, Hybrid Cloud Platform & Operations",
           "url": "https://www.hitachivantara.com/en-us/featured/data-modernization-resilience",
           "score": 3
         },
         {
           "title": "Capacity on Demand Scalable Pay\u2011for\u2011Use Capacity",
-          "type": "Solution Brief / Technical",
+          "type": "Datasheet / Solution Brief / Technical",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Data Platform Architectures & Economics",
           "url": "https://www.hitachivantara.com/en-us/pdfviewer/solution-profile/capacity-on-demand",
@@ -593,7 +593,7 @@
         },
         {
           "title": "Cyber Resilience Beyond Traditional Security in the Age of Inevitable Breaches",
-          "type": "eBook",
+          "type": "eBook/Whitepaper",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Cyber Risk Mitigation & Recovery",
           "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/cyber-resilience-beyond-traditional.pdf",
@@ -631,13 +631,13 @@
           "title": "Campaign Landing Page - DMR Landing Page",
           "type": "Landing Page",
           "campaign": "Data Modernization & Resilience",
-          "useCase": "",
+          "useCase": "Cyber Risk Mitigation & Recovery, Data Platform Architectures & Economics, Hybrid Cloud Platform & Operations",
           "url": "https://www.hitachivantara.com/en-us/featured/data-modernization-resilience",
           "score": 3
         },
         {
           "title": "Capacity on Demand Scalable Pay\u2011for\u2011Use Capacity",
-          "type": "Solution Brief / Technical",
+          "type": "Datasheet / Solution Brief / Technical",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Data Platform Architectures & Economics",
           "url": "https://www.hitachivantara.com/en-us/pdfviewer/solution-profile/capacity-on-demand",
@@ -653,7 +653,7 @@
         },
         {
           "title": "Cyber Resilience Beyond Traditional Security in the Age of Inevitable Breaches",
-          "type": "eBook",
+          "type": "eBook/Whitepaper",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Cyber Risk Mitigation & Recovery",
           "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/cyber-resilience-beyond-traditional.pdf",
@@ -691,13 +691,13 @@
           "title": "Campaign Landing Page - DMR Landing Page",
           "type": "Landing Page",
           "campaign": "Data Modernization & Resilience",
-          "useCase": "",
+          "useCase": "Cyber Risk Mitigation & Recovery, Data Platform Architectures & Economics, Hybrid Cloud Platform & Operations",
           "url": "https://www.hitachivantara.com/en-us/featured/data-modernization-resilience",
           "score": 3
         },
         {
           "title": "Capacity on Demand Scalable Pay\u2011for\u2011Use Capacity",
-          "type": "Solution Brief / Technical",
+          "type": "Datasheet / Solution Brief / Technical",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Data Platform Architectures & Economics",
           "url": "https://www.hitachivantara.com/en-us/pdfviewer/solution-profile/capacity-on-demand",
@@ -713,7 +713,7 @@
         },
         {
           "title": "Cyber Resilience Beyond Traditional Security in the Age of Inevitable Breaches",
-          "type": "eBook",
+          "type": "eBook/Whitepaper",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Cyber Risk Mitigation & Recovery",
           "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/cyber-resilience-beyond-traditional.pdf",
