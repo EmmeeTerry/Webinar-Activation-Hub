@@ -263,7 +263,7 @@ function toggleMultiFilter(key, value){
 function filtered(){
   const q = document.getElementById('search').value.trim().toLowerCase();
   return DATA.filter(item => {
-    const hay = [item.title,item.campaign,item.useCase,item.ownerTeam,item.audience,item.region,item.type,item.status,item.usedInCampaign,item.promotionPeriod].join(' ').toLowerCase();
+    const hay = [item.title,item.campaign,item.useCase,item.ownerTeam,item.audience,item.region,item.type,item.status,item.usedInCampaign,item.promotionPeriod,item.funnelStage,item.primaryActivation,item.ownerIndividual,item.publishedByVendor,item.notes].join(' ').toLowerCase();
     const qok = !q || hay.includes(q);
     const fok = FILTER_FIELDS.every(f => {
       const v = activeFilters[f.key];
