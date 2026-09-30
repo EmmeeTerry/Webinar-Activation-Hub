@@ -128,10 +128,10 @@ const FILTER_FIELDS = [
   {key:'region', label:'Region'},
   {key:'usedInCampaign', label:'Used in Campaign'},
   {key:'promotionPeriod', label:'Promotion Period'},
-  {key:'salesEmailStatus', label:'Sales Outreach Email'},
+  {key:'salesEmailStatus', label:'Sales Outreach Email', fixedOptions:['Available','Not available']},
 ];
 let activeFilters = {};
-FILTER_FIELDS.forEach(f => activeFilters[f.key] = f.multi ? [] : 'All');
+FILTER_FIELDS.forEach(f => activeFilters[f.key] = f.multi ? [] : (f.fixedOptions ? f.fixedOptions[0] : 'All'));
 activeFilters.status = ['Live'];
 
 function esc(s){ return (s==null?'':String(s)).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
@@ -230,7 +230,7 @@ function uniqueValues(key){
 
 function makeFilterGroups(){
   document.getElementById('filterGroups').innerHTML = FILTER_FIELDS.map(f => {
-    const values = uniqueValues(f.key);
+    const values = f.fixedOptions || uniqueValues(f.key);
     if(f.multi){
       const checks = values.map(v => {
         const checked = activeFilters[f.key].includes(v);
@@ -238,7 +238,7 @@ function makeFilterGroups(){
       }).join('');
       return `<div class="filter-field"><label>${esc(f.label)}</label><div class="status-checks">${checks}</div></div>`;
     }
-    const options = ['All', ...values].map(v =>
+    const options = (f.fixedOptions ? values : ['All', ...values]).map(v =>
       `<option value="${esc(v)}" ${activeFilters[f.key]===v?'selected':''}>${esc(v)}</option>`
     ).join('');
     return `<div class="filter-field">
