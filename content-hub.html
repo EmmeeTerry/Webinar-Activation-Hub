@@ -36,6 +36,13 @@ h1{font-family:"Hitachi Sans",Arial,Helvetica,sans-serif;font-weight:400;font-si
 .filter-field select{width:100%;border:1px solid var(--gray2);border-radius:2px;padding:8px 9px;font-family:inherit;font-size:12px;color:var(--gray6);background:var(--white)}
 .filter-field select:focus{outline:none;border-color:var(--red1)}
 .status-checks{display:flex;flex-wrap:wrap;gap:6px}
+.multi-dropdown{position:relative}
+.multi-dropdown-btn{width:100%;border:1px solid var(--gray2);border-radius:2px;padding:8px 9px;font-family:inherit;font-size:12px;color:var(--gray6);background:var(--white);text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+.multi-dropdown-btn:hover{border-color:var(--gray4)}
+.multi-dropdown-panel{display:none;position:absolute;top:calc(100% + 4px);left:0;z-index:30;background:var(--white);border:1px solid var(--gray2);border-radius:3px;box-shadow:0 8px 20px rgba(12,12,12,.14);padding:8px;max-height:240px;overflow-y:auto;min-width:220px}
+.multi-dropdown-panel.open{display:block}
+.multi-dropdown-panel label{display:flex;align-items:center;gap:7px;padding:5px 4px;font-size:12px;color:var(--gray6);white-space:nowrap;cursor:pointer}
+.multi-dropdown-panel label:hover{background:var(--gray1)}
 .status-check{display:flex;align-items:center;gap:5px;border:1px solid var(--gray2);border-radius:999px;padding:5px 9px;font-size:11px;color:var(--gray6);cursor:pointer;background:var(--white)}
 .status-check input{margin:0}
 .toolbar-actions{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
@@ -265,15 +272,27 @@ function uniqueValues(key){
   return [...new Set(vals)].sort();
 }
 
+function multiSummaryLabel(f){
+  const v = activeFilters[f.key];
+  if(!v.length) return 'All';
+  if(v.length <= 2) return v.join(', ');
+  return v.length + ' selected';
+}
 function makeFilterGroups(){
   document.getElementById('filterGroups').innerHTML = FILTER_FIELDS.map(f => {
     const values = f.fixedOptions || uniqueValues(f.key);
     if(f.multi){
       const checks = values.map(v => {
         const checked = activeFilters[f.key].includes(v);
-        return `<label class="status-check"><input type="checkbox" ${checked?'checked':''} onchange="toggleMultiFilter('${f.key}','${esc(v).replace(/'/g,"\\'")}')">${esc(v)}</label>`;
+        return `<label><input type="checkbox" ${checked?'checked':''} onchange="toggleMultiFilter('${f.key}','${esc(v).replace(/'/g,"\\'")}')">${esc(v)}</label>`;
       }).join('');
-      return `<div class="filter-field"><label>${esc(f.label)}</label><div class="status-checks">${checks}</div></div>`;
+      return `<div class="filter-field multi-dropdown">
+        <label>${esc(f.label)}</label>
+        <button type="button" class="multi-dropdown-btn" onclick="toggleDropdownPanel('${f.key}', event)">
+          <span id="summary-${f.key}">${esc(multiSummaryLabel(f))}</span><span>&#9662;</span>
+        </button>
+        <div class="multi-dropdown-panel" id="panel-${f.key}" onclick="event.stopPropagation()">${checks}</div>
+      </div>`;
     }
     const options = (f.fixedOptions ? values : ['All', ...values]).map(v =>
       `<option value="${esc(v)}" ${activeFilters[f.key]===v?'selected':''}>${esc(v)}</option>`
@@ -284,6 +303,16 @@ function makeFilterGroups(){
     </div>`;
   }).join('');
 }
+function toggleDropdownPanel(key, evt){
+  if(evt) evt.stopPropagation();
+  document.querySelectorAll('.multi-dropdown-panel').forEach(p => {
+    if(p.id === 'panel-' + key) p.classList.toggle('open');
+    else p.classList.remove('open');
+  });
+}
+document.addEventListener('click', () => {
+  document.querySelectorAll('.multi-dropdown-panel.open').forEach(p => p.classList.remove('open'));
+});
 function setFilter(key, value){
   activeFilters[key] = value;
   makeFilterGroups();
@@ -294,6 +323,9 @@ function toggleMultiFilter(key, value){
   const arr = activeFilters[key];
   const i = arr.indexOf(value);
   if(i === -1) arr.push(value); else arr.splice(i,1);
+  const f = FILTER_FIELDS.find(x => x.key === key);
+  const summaryEl = document.getElementById('summary-' + key);
+  if(f && summaryEl) summaryEl.textContent = multiSummaryLabel(f);
   updateURL();
   render();
 }
