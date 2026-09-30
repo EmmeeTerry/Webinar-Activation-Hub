@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-09-30T20:37:45.883354+00:00",
+  "lastRefreshed": "2026-09-30T22:17:45.919353+00:00",
   "items": [
     {
       "id": "rabobank-leads-the-field-with-compliance-discovery-search-time-reduced-from-weeks-to-hours-1",
@@ -20,7 +20,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "rwth-aachen-university-enhances-cybersecurity-2",
@@ -41,7 +43,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "raiffeisen-informatik-enabling-rapid-cyber-recovery-for-critical-mainframe-environments-3",
@@ -62,7 +66,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Nurture Email",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "2H"
     },
     {
       "id": "delivering-secure-always-on-digital-services-for-students-faculty-and-researchers-4",
@@ -83,7 +89,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "simplify-compliance-and-improve-productivity-5",
@@ -104,7 +112,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "kbc-group-and-k-h-bank-improve-business-critical-data-resilience-recovery-customer-story-6",
@@ -125,7 +135,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "large-utility-company-protect-key-systems-and-disarm-ransomware-risks-customer-story-7",
@@ -146,7 +158,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Nurture Email",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "1H"
     },
     {
       "id": "sfs-group-advances-digitization-disaster-recovery-and-lowers-tco-with-unified-solution-cus-8",
@@ -167,7 +181,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "european-financial-services-company-resilience-compliance-and-cost-savings-with-dpaas-cust-9",
@@ -188,7 +204,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "data-resilience-assessment-emea-pilot-only-10",
@@ -209,7 +227,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "everflex-tco-calculator-demo-assessment-tool-offer-11",
@@ -230,7 +250,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "mission-critical-cyber-recovery-12",
@@ -251,7 +273,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "SDR Email Cadence",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "2H"
     },
     {
       "id": "modernizing-data-protection-with-hitachi-and-commvault-13",
@@ -272,7 +296,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "clean-data-recovery-the-difference-between-best-effort-and-sla-backed-14",
@@ -293,7 +319,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "unbreakable-gated-10min-video-15",
@@ -314,7 +342,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "cyber-recovery-explainer-video-video-16",
@@ -335,7 +365,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "everflex-data-protection-as-a-service-video-17",
@@ -356,7 +388,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "cyber-resilience-guarantee-18",
@@ -377,7 +411,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "cyberattacks-is-predictable-business-continuity-possible-webinar-19",
@@ -398,7 +434,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Nurture Email",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "1H"
     },
     {
       "id": "cyber-security-month-webinar-with-index-engines-20",
@@ -419,7 +457,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "from-reactive-to-resilient-rethinking-cybersecurity-for-the-evolving-threat-landscape-webi-21",
@@ -440,7 +480,9 @@
       "paidMediaDateDisplay": "Jun 01, 2026",
       "primaryActivation": "Webinar Syndication, Outbound Email, Paid Social",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "1H"
     },
     {
       "id": "resilience-by-design-reducing-data-risk-downtime-and-regulatory-exposure-22",
@@ -461,7 +503,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "resilient-by-design-how-hitachi-vantara-vm2020-and-index-engines-deliver-faster-validated--23",
@@ -482,7 +526,9 @@
       "paidMediaDateDisplay": "Jun 01, 2026",
       "primaryActivation": "Webinar Syndication, Outbound Email, Paid Social",
       "marketingEmail": "https://brand.hitachivantara.com/guidelines/guide/00542d60-e1a7-4da7-9e5f-133c03191dbc/page/e5dcf9d5-8b2a-4907-86cf-6a7658fc8e08",
-      "salesEmail": "https://hitachivantara.sharepoint.com/:w:/s/GlobalCampaignsAssets505/IQApDMrMycrJRKlYEziomY_mAYPXLb2ge3oyAduWSGZ0xa0?e=Ofgjf7"
+      "salesEmail": "https://hitachivantara.sharepoint.com/:w:/s/GlobalCampaignsAssets505/IQApDMrMycrJRKlYEziomY_mAYPXLb2ge3oyAduWSGZ0xa0?e=Ofgjf7",
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "1H"
     },
     {
       "id": "idc-cyber-resilience-webinar-24",
@@ -503,7 +549,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Webinar Syndication, Outbound Email, Paid Social, Organic Social",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "cyber-resilience-trusted-data-foundation-for-ai-25",
@@ -524,7 +572,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "2H"
     },
     {
       "id": "elevate-your-cyber-resiliency-posture-protect-detect-recover-26",
@@ -545,7 +595,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "hitachi-vantara-and-veeam-for-cyber-resilience-enhancing-cyber-resilience-while-improving--27",
@@ -566,7 +618,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "vsp-one-object-cohasset-compliance-assessment-paper-3rd-party-analyst-report-28",
@@ -587,7 +641,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Content Syndication, Paid Social, Paid Search, Campaign Landing Page",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "2H"
     },
     {
       "id": "451-research-boost-resiliency-and-performance-for-modern-data-infrastructures-3rd-party-an-29",
@@ -608,7 +664,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "mit-tech-review-adapting-to-new-threats-with-proactive-cyber-risk-management-3rd-party-ana-30",
@@ -629,7 +687,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Nurture Email",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "1H"
     },
     {
       "id": "idc-spotlight-report-cyber-resilience-31",
@@ -650,7 +710,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Content Syndication, Outbound Email, Paid Social, Organic Social, Campaign Landing Page",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "idc-dora-mandates-financial-firms-shift-to-cyber-resilience-32",
@@ -671,7 +733,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "americas-midrange-road-show-blog-33",
@@ -692,7 +756,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "boost-cyber-resilience-with-superhero-powers-and-hitachi-vsp-one-blog-executive-pov-34",
@@ -713,7 +779,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Nurture Email",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "1H"
     },
     {
       "id": "executive-series-cyber-resilience-month-35",
@@ -734,7 +802,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "the-threats-we-see-the-risks-we-don-t-36",
@@ -755,7 +825,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "the-new-requirements-for-mission-critical-storage-in-an-ai-driven-enterprise-37",
@@ -776,7 +848,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Nurture Email",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "it-decision-making-budget-and-geopolitical-risk-blog-executive-pov-38",
@@ -797,7 +871,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "why-sap-hana-resilience-matters-as-much-as-scale-39",
@@ -818,7 +894,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": ""
     },
     {
       "id": "business-critical-cyber-recovery-40",
@@ -839,7 +917,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "SDR Email Cadence",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "data-resilience-as-a-service-solution-profile-41",
@@ -860,7 +940,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "7-layer-defense-one-trusted-partner-simplify-the-complexity-of-data-protection-and-cyber-r-42",
@@ -881,7 +963,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "SDR Email Cadence",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "hitachi-vantara-ransomware-detection-powered-by-cybersense-from-ransomware-chaos-to-predic-43",
@@ -902,7 +986,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "SDR Email Cadence",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "mission-critical-cyber-recovery-44",
@@ -923,7 +1009,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "cyber-resilience-45",
@@ -944,7 +1032,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "cyber-resilience-guarantee-46",
@@ -965,7 +1055,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "cyber-resilience-beyond-traditional-security-in-the-age-of-inevitable-breaches-47",
@@ -986,7 +1078,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "cyber-resilience-customer-outcomes-ebook-48",
@@ -1007,7 +1101,9 @@
       "paidMediaDateDisplay": "Oct 01, 2026",
       "primaryActivation": "Content Syndication, Paid Social, Paid Search, Campaign Landing Page",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "businesses-modernize-data-protection-with-hitachi-and-commvault-49",
@@ -1028,7 +1124,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "buyer-s-guide-for-cyber-resilient-data-infrastructure-recommendations-for-mitigating-cyber-50",
@@ -1049,7 +1147,9 @@
       "paidMediaDateDisplay": "Jun 01, 2026",
       "primaryActivation": "Content Syndication, Outbound Email, Paid Social",
       "marketingEmail": "https://brand.hitachivantara.com/guidelines/guide/00542d60-e1a7-4da7-9e5f-133c03191dbc/page/e5dcf9d5-8b2a-4907-86cf-6a7658fc8e08",
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "1H"
     },
     {
       "id": "data-resilience-as-a-service-ebook-51",
@@ -1070,7 +1170,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Content Syndication, Outbound Email, Paid Social, Organic Social, Campaign Landing Page",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "protect-smarter-recover-faster-your-guide-to-data-protection-as-a-service-dpaas-52",
@@ -1091,7 +1193,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Nurture Email",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "1H"
     },
     {
       "id": "hitachi-mainframe-cyber-resiliency-solution-ebook-whitepaper-53",
@@ -1112,7 +1216,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "SDR Email Cadence",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "cyber-resilience-for-dummies-ebook-ebook-whitepaper-54",
@@ -1133,7 +1239,9 @@
       "paidMediaDateDisplay": "Jun 01, 2026",
       "primaryActivation": "Content Syndication, Outbound Email, Paid Social, Paid Search",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "1H"
     },
     {
       "id": "cyber-resilience-pov-ebook-55",
@@ -1154,7 +1262,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "campaign-landing-page-dmr-landing-page-56",
@@ -1175,7 +1285,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Paid Social, Campaign Landing Page",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "1H"
     },
     {
       "id": "tate-of-data-infrastructure-global-report-2025-from-fragile-to-optimized-what-more-than-1--57",
@@ -1196,7 +1308,9 @@
       "paidMediaDateDisplay": "Jun 01, 2026",
       "primaryActivation": "Outbound Email, Paid Social, Paid Search",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "1H"
     },
     {
       "id": "rice-university-58",
@@ -1217,7 +1331,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "shaping-outstanding-digital-learning-experiences-with-a-reliable-easy-to-manage-storage-pl-59",
@@ -1238,7 +1354,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "innovating-mission-critical-data-storage-with-cloud-operations-model-for-the-bmw-group-60",
@@ -1259,7 +1377,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "from-legacy-to-velocity-how-vsp-one-customers-turned-legacy-limits-into-competitive-edge-61",
@@ -1280,7 +1400,9 @@
       "paidMediaDateDisplay": "Jun 01, 2026",
       "primaryActivation": "Content Syndication, Nurture Email, Paid Social",
       "marketingEmail": "https://brand.hitachivantara.com/guidelines/guide/00542d60-e1a7-4da7-9e5f-133c03191dbc/page/22f0aed8-642a-42fb-8a9f-f0758cd0355c",
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "1H"
     },
     {
       "id": "la-molisana-optimizing-it-and-scalability-customer-story-62",
@@ -1301,7 +1423,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "malayala-manorama-delivering-24-7-availability-for-24-hour-news-customer-story-63",
@@ -1322,7 +1446,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "alior-bank-customer-story-customer-story-64",
@@ -1343,7 +1469,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "techniklotsen-customer-story-customer-story-65",
@@ -1364,7 +1492,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "ama-agrarmarkt-customer-story-66",
@@ -1385,7 +1515,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "farma-mondo-customer-story-67",
@@ -1406,7 +1538,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Nurture Email",
       "marketingEmail": "https://brand.hitachivantara.com/guidelines/guide/00542d60-e1a7-4da7-9e5f-133c03191dbc/page/22f0aed8-642a-42fb-8a9f-f0758cd0355c",
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "1H"
     },
     {
       "id": "how-pakistan-s-financial-backbone-is-using-ai-to-strengthen-resilience-blog-customer-story-68",
@@ -1427,7 +1561,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "garanti-customer-story-customer-story-69",
@@ -1448,7 +1584,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Nurture Email",
       "marketingEmail": "https://brand.hitachivantara.com/guidelines/guide/00542d60-e1a7-4da7-9e5f-133c03191dbc/page/22f0aed8-642a-42fb-8a9f-f0758cd0355c",
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "2H"
     },
     {
       "id": "yapi-kredi-70",
@@ -1469,7 +1607,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "https-www-hitachivantara-com-en-us-company-customer-stories-ayuntamiento-de-aviles-custome-71",
@@ -1490,7 +1630,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "https-www-hitachivantara-com-en-us-company-customer-stories-public-sector-customer-story-72",
@@ -1511,7 +1653,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "everflex-tco-calculator-demo-assessment-tool-offer-73",
@@ -1532,7 +1676,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "infrastructure-modernization-maturity-scorecard-74",
@@ -1553,7 +1699,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Outbound Email, Paid Social, Organic Social, Campaign Landing Page",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "2H"
     },
     {
       "id": "sds-tco-tool-75",
@@ -1574,7 +1722,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": ""
     },
     {
       "id": "hitachi-everflex-sla-guarantees-reference-guide-76",
@@ -1595,7 +1745,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "SDR Email Cadence",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "storage-as-a-service-modernization-made-simple-77",
@@ -1616,7 +1768,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "omdia-the-five-new-essentials-for-data-storage-platforms-infographic-infographic-78",
@@ -1637,7 +1791,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "top-ten-reasons-why-pay-as-you-grow-with-capacity-on-demand-on-premises-baseline-ownership-79",
@@ -1658,7 +1814,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "top-ten-reasons-why-storage-as-a-service-enterprise-storage-delivered-with-a-simple-subscr-80",
@@ -1679,7 +1837,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "2-additional-customer-story-videos-estako-1-other-video-81",
@@ -1700,7 +1860,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Content Syndication, Webinar Syndication, Outbound Email, Paid Social, Paid Search, Organic Social, Campaign Landing Page",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "2H"
     },
     {
       "id": "staas-explainer-video-video-82",
@@ -1721,7 +1883,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "umhb-video-video-83",
@@ -1742,7 +1906,9 @@
       "paidMediaDateDisplay": "Jun 01, 2026",
       "primaryActivation": "Content Syndication, Nurture Email, Paid Social",
       "marketingEmail": "https://brand.hitachivantara.com/guidelines/guide/00542d60-e1a7-4da7-9e5f-133c03191dbc/page/22f0aed8-642a-42fb-8a9f-f0758cd0355c",
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "1H"
     },
     {
       "id": "build-modern-ai-ready-infrastructure-without-starting-over-webinar-84",
@@ -1763,7 +1929,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Nurture Email",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "1H"
     },
     {
       "id": "unlocking-roi-the-forrester-study-that-could-save-your-next-storage-investment-85",
@@ -1784,7 +1952,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Webinar Syndication, Outbound Email",
       "marketingEmail": "https://hitachivantara.sharepoint.com/:f:/s/GlobalCampaignsAssets505/IgDvXXOHwB0QTZr954NvYpGiAfsBxNWiWByU1vO2MGqi8u4?e=WQaNjz",
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "1H"
     },
     {
       "id": "451-research-vsp-360-aiops-sla-as-code-86",
@@ -1805,7 +1975,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Webinar Syndication, Outbound Email, Paid Social, Organic Social, Campaign Landing Page",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "2H"
     },
     {
       "id": "from-data-chaos-to-clarity-strategies-for-scalable-storage-87",
@@ -1826,7 +1998,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Webinar Syndication",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "1H"
     },
     {
       "id": "what-modern-data-infrastructure-looks-like-in-the-ai-era-88",
@@ -1847,7 +2021,9 @@
       "paidMediaDateDisplay": "Sep 14, 2026",
       "primaryActivation": "Webinar Syndication, Outbound Email, Paid Social, Organic Social",
       "marketingEmail": "https://brand.hitachivantara.com/guidelines/guide/00542d60-e1a7-4da7-9e5f-133c03191dbc/page/e1ce0b1f-5759-4c1a-9b0b-3982483807cf",
-      "salesEmail": "https://hitachivantara.sharepoint.com/:w:/s/PartnerandFieldMarketing/IQArBW5yyCqhToXU190allGgAcy2Y4POKjVN1O2xp-ScrU4?e=dLeVDo"
+      "salesEmail": "https://hitachivantara.sharepoint.com/:w:/s/PartnerandFieldMarketing/IQArBW5yyCqhToXU190allGgAcy2Y4POKjVN1O2xp-ScrU4?e=dLeVDo",
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "2H"
     },
     {
       "id": "the-economics-of-modern-storage-infrastructure-lower-risk-faster-ai-value-better-roi-webin-89",
@@ -1868,7 +2044,9 @@
       "paidMediaDateDisplay": "Jun 01, 2026",
       "primaryActivation": "Webinar Syndication, Outbound Email, Paid Social",
       "marketingEmail": "https://brand.hitachivantara.com/guidelines/guide/00542d60-e1a7-4da7-9e5f-133c03191dbc/page/e5dcf9d5-8b2a-4907-86cf-6a7658fc8e08",
-      "salesEmail": "https://hitachivantara.sharepoint.com/:w:/s/GlobalCampaignsAssets505/IQAur_oA2tvSTI5WzUov9PsFAYnvUFXdD-1I-Gez-pspUL8?e=4ViuVh"
+      "salesEmail": "https://hitachivantara.sharepoint.com/:w:/s/GlobalCampaignsAssets505/IQAur_oA2tvSTI5WzUov9PsFAYnvUFXdD-1I-Gez-pspUL8?e=4ViuVh",
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "1H"
     },
     {
       "id": "energy-efficiency-sustainability-webinar-90",
@@ -1889,7 +2067,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "data-modernization-for-the-ai-era-simple-secure-and-sustainable-webinar-91",
@@ -1910,7 +2090,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "tier-1-launch-midrange-refresh-92",
@@ -1931,7 +2113,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "2H"
     },
     {
       "id": "the-total-economic-impact-of-hitachi-vantara-virtual-storage-platform-one-cost-savings-and-93",
@@ -1952,7 +2136,9 @@
       "paidMediaDateDisplay": "Jun 01, 2026",
       "primaryActivation": "Outbound Email, Paid Social",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "1H"
     },
     {
       "id": "451-research-vsp-360-aiops-sla-as-code-94",
@@ -1973,7 +2159,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": ""
     },
     {
       "id": "451-research-vsp-360-aiops-95",
@@ -1994,7 +2182,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Content Syndication, Outbound Email, Paid Social",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "2H"
     },
     {
       "id": "451-research-modernizing-mission-critical-storage-analyst-report-3rd-party-analyst-report-96",
@@ -2015,7 +2205,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Content Syndication, Outbound Email",
       "marketingEmail": "https://brand.hitachivantara.com/guidelines/guide/00542d60-e1a7-4da7-9e5f-133c03191dbc/page/cc37a87e-5ef8-4597-805d-3293eb994e38",
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "1H"
     },
     {
       "id": "451-research-rising-data-challenges-drive-storage-modernization-3rd-party-analyst-report-97",
@@ -2036,7 +2228,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "omdia-the-five-new-essentials-for-data-storage-platforms-3rd-party-analyst-report-98",
@@ -2057,7 +2251,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Content Syndication, Outbound Email",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "1H"
     },
     {
       "id": "hitachi-named-a-challenger-in-the-2025-gartner-magic-quadrant-for-infrastructure-platform--99",
@@ -2078,7 +2274,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Nurture Email",
       "marketingEmail": "https://brand.hitachivantara.com/guidelines/guide/00542d60-e1a7-4da7-9e5f-133c03191dbc/page/22f0aed8-642a-42fb-8a9f-f0758cd0355c",
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "1H"
     },
     {
       "id": "hitachi-vantara-named-primary-storage-leader-gigaom-radar-2025-analyst-report-3rd-party-an-100",
@@ -2099,7 +2297,9 @@
       "paidMediaDateDisplay": "Jun 01, 2026",
       "primaryActivation": "Content Syndication, Outbound Email, Paid Social",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "1H"
     },
     {
       "id": "mit-tech-review-the-rise-of-the-data-platform-for-hybrid-cloud-3rd-party-analyst-report-101",
@@ -2120,7 +2320,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Nurture Email",
       "marketingEmail": "https://brand.hitachivantara.com/guidelines/guide/00542d60-e1a7-4da7-9e5f-133c03191dbc/page/22f0aed8-642a-42fb-8a9f-f0758cd0355c",
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "1H"
     },
     {
       "id": "pearkmarks-results-on-bhe-for-oracle-tbd-2h-102",
@@ -2141,7 +2343,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "data-modernization-dummies-guide-103",
@@ -2162,7 +2366,9 @@
       "paidMediaDateDisplay": "Oct 01, 2026",
       "primaryActivation": "Content Syndication, Outbound Email, Paid Social, Paid Search, Organic Social, Campaign Landing Page",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "2H"
     },
     {
       "id": "the-storage-modernization-imperative-omdia-104",
@@ -2183,7 +2389,9 @@
       "paidMediaDateDisplay": "Oct 01, 2026",
       "primaryActivation": "Content Syndication, Outbound Email, Paid Social, Paid Search, Campaign Landing Page",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "2H"
     },
     {
       "id": "reclaim-data-sovereignty-for-the-ai-era-blog-executive-pov-105",
@@ -2204,7 +2412,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "what-s-next-is-not-more-ai-it-s-better-foundations-blog-executive-pov-106",
@@ -2225,7 +2435,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": ""
     },
     {
       "id": "how-to-avoid-the-hidden-costs-of-slow-it-infrastructure-deployments-blog-executive-pov-107",
@@ -2246,7 +2458,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Nurture Email",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "hitachi-in-gartner-primary-storage-platforms-mq-blog-blog-executive-pov-108",
@@ -2267,7 +2481,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "the-cost-of-good-vs-excellent-blog-executive-pov-109",
@@ -2288,7 +2504,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "cutting-storage-media-costs-and-risks-in-a-supply-chain-crunch-blog-executive-pov-110",
@@ -2309,7 +2527,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Nurture Email",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "1H"
     },
     {
       "id": "sds-tco-tool-blog-111",
@@ -2330,7 +2550,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": ""
     },
     {
       "id": "influencer-blog-your-mainframe-decision-is-not-the-one-you-think-112",
@@ -2351,7 +2573,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": ""
     },
     {
       "id": "capacity-on-demand-scalable-pay-for-use-capacity-113",
@@ -2372,7 +2596,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "hitachi-vantara-virtual-storage-platform-one-block-high-end-storage-innovation-s-most-powe-114",
@@ -2393,7 +2619,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "SDR Email Cadence",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "modernize-storage-with-storage-as-a-service-simplify-storage-consumption-and-management-wi-115",
@@ -2414,7 +2642,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "fueling-oil-and-gas-with-fast-secure-and-always-available-data-116",
@@ -2435,7 +2665,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "modernize-your-environment-with-vsp-one-object-datasheet-solution-brief-technical-117",
@@ -2456,7 +2688,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "remove-the-chaos-of-data-complexity-with-virtual-storage-platform-one-block-storage-for-mi-118",
@@ -2477,7 +2711,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "SDR Email Cadence",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "staas-datasheet-datasheet-solution-brief-technical-119",
@@ -2498,7 +2734,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "power-your-ai-future-on-a-foundation-of-trusted-modernized-data-datasheet-solution-brief-t-120",
@@ -2519,7 +2757,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Nurture Email",
       "marketingEmail": "https://brand.hitachivantara.com/guidelines/guide/00542d60-e1a7-4da7-9e5f-133c03191dbc/page/22f0aed8-642a-42fb-8a9f-f0758cd0355c",
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "1H"
     },
     {
       "id": "navigating-complexity-and-cost-with-hitachi-everflex-121",
@@ -2540,7 +2780,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "ebook-with-agency-on-turtl-122",
@@ -2561,7 +2803,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": ""
     },
     {
       "id": "unified-data-management-buyer-s-guide-strategies-to-simplify-and-elevate-data-management-o-123",
@@ -2582,7 +2826,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "a-buyer-s-guide-to-hitachi-vantara-virtual-storage-platform-one-block-simple-secure-sustai-124",
@@ -2603,7 +2849,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Nurture Email",
       "marketingEmail": "https://brand.hitachivantara.com/guidelines/guide/00542d60-e1a7-4da7-9e5f-133c03191dbc/page/22f0aed8-642a-42fb-8a9f-f0758cd0355c",
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "1H"
     },
     {
       "id": "keeping-the-lights-on-vs-funding-the-future-125",
@@ -2624,7 +2872,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "SDR Email Cadence",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "2H"
     },
     {
       "id": "virtual-storage-platform-one-one-data-platform-no-limits-ebook-whitepaper-126",
@@ -2645,7 +2895,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "vsp-one-guarantees-ebook-whitepaper-127",
@@ -2666,7 +2918,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "omdia-modernization-guide-for-ai-readiness-ebook-whitepaper-128",
@@ -2687,7 +2941,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Outbound Email, Paid Social, Paid Search, No Planned Promotion, Campaign Landing Page",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "2H"
     },
     {
       "id": "gartner-peer-insights-asset-block-ebook-whitepaper-129",
@@ -2708,7 +2964,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Content Syndication, Outbound Email, Paid Social",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "2H"
     },
     {
       "id": "how-hitachi-block-storage-delivers-eight-nines-availability-whitepaper-ebook-whitepaper-130",
@@ -2729,7 +2987,9 @@
       "paidMediaDateDisplay": "Jun 01, 2026",
       "primaryActivation": "Content Syndication, Outbound Email, Paid Social",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "1H"
     },
     {
       "id": "from-bottlenecks-to-breakthroughs-enterprise-applications-ebook-ebook-whitepaper-131",
@@ -2750,7 +3010,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Content Syndication, Outbound Email",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "1H"
     },
     {
       "id": "hitachi-everflex-success-stories-ebook-132",
@@ -2771,7 +3033,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "solve-the-six-data-storage-challenges-ebook-ebook-whitepaper-133",
@@ -2792,7 +3056,9 @@
       "paidMediaDateDisplay": "Jun 01, 2026",
       "primaryActivation": "Content Syndication, Outbound Email, Paid Social, Paid Search",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "1H"
     },
     {
       "id": "hitachi-data-lakehouse-reference-architecture-campaign-guide-messaging-framework-resource-134",
@@ -2813,7 +3079,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "hitachi-enables-real-time-analytics-and-data-lake-platform-for-manufacturing-customer-stor-135",
@@ -2834,7 +3102,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "how-pakistan-s-financial-backbone-is-using-ai-to-strengthen-resilience-blog-customer-story-136",
@@ -2855,7 +3125,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "isle-of-wight-nhs-digitalizing-pathology-storage-137",
@@ -2876,7 +3148,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "zhejiang-daily-press-group-optimizes-the-user-experience-with-hitachi-content-platform-138",
@@ -2897,7 +3171,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "https-www-hitachivantara-com-en-us-company-customer-stories-public-sector-customer-story-139",
@@ -2918,7 +3194,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "kafka-broker-recovery-with-vsp-one-file-140",
@@ -2939,7 +3217,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "vsp-one-object-on-premises-s3-tables-explainer-video-video-141",
@@ -2960,7 +3240,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "the-future-of-vsp-one-object-video-142",
@@ -2981,7 +3263,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "hitachi-vantara-modern-lakehouse-for-ai-143",
@@ -3002,7 +3286,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "webinar-title-tbd-gigaom-2027-radar-webinar-144",
@@ -3023,7 +3309,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "modernize-your-data-lakehouse-with-object-storage-trends-tech-and-the-road-ahead-webinar-145",
@@ -3044,7 +3332,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Nurture Email",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "1H"
     },
     {
       "id": "is-object-storage-the-new-ai-foundation-webinar-webinar-146",
@@ -3065,7 +3355,9 @@
       "paidMediaDateDisplay": "Jun 04, 2026",
       "primaryActivation": "Content Syndication, Outbound Email, Paid Social",
       "marketingEmail": "https://brand.hitachivantara.com/guidelines/guide/207608cc-f422-4ffc-93b5-773dcdece4fb/page/7a2ed2c6-3b66-4ad4-ac47-e300d6d10135",
-      "salesEmail": "https://hitachivantara.sharepoint.com/:w:/s/GlobalCampaignsAssets505/IQBJelsvZa6BR4ZX6YmTSHMiASA6PMR83Sss1YcPKcyqoaM?e=Nvwuu4"
+      "salesEmail": "https://hitachivantara.sharepoint.com/:w:/s/GlobalCampaignsAssets505/IQBJelsvZa6BR4ZX6YmTSHMiASA6PMR83Sss1YcPKcyqoaM?e=Nvwuu4",
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "1H"
     },
     {
       "id": "data-sovereignty-and-ai-rethinking-object-storage-in-financial-services-webinar-147",
@@ -3086,7 +3378,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "2025-gigaom-rader-for-high-perfomance-storage-optimized-for-ai-workloads-3rd-party-analyst-148",
@@ -3107,7 +3401,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Nurture Email",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "2026-gigaom-for-unstructured-data-management-udm-3rd-party-analyst-report-149",
@@ -3128,7 +3424,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Nurture Email",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "1H"
     },
     {
       "id": "2026-gigaom-rader-for-object-storage-analyst-report-3rd-party-analyst-report-150",
@@ -3149,7 +3447,9 @@
       "paidMediaDateDisplay": "Jun 01, 2026",
       "primaryActivation": "Content Syndication, Outbound Email, Paid Social",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "1H"
     },
     {
       "id": "2027-gigaom-for-unstructured-data-management-udm-3rd-party-analyst-report-151",
@@ -3170,7 +3470,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Content Syndication, Outbound Email, Paid Social, Organic Social",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "2H"
     },
     {
       "id": "2027-gigaom-radar-for-object-storage-3rd-party-analyst-report-152",
@@ -3191,7 +3493,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Content Syndication, Outbound Email, Paid Social, Organic Social",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "2H"
     },
     {
       "id": "451-research-the-rising-data-challenges-driving-storage-modernization-3rd-party-analyst-re-153",
@@ -3212,7 +3516,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "fstech-how-financial-institutions-unlock-more-value-from-datawith-object-storage-3rd-party-154",
@@ -3233,7 +3539,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "mit-technology-review-ai-based-data-analytics-enable-business-insight-155",
@@ -3254,7 +3562,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "five-steps-to-intelligent-automation-success-blog-bytesize-executive-pov-156",
@@ -3275,7 +3585,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "balancing-esg-with-the-power-needed-for-ai-blog-bytesize-executive-pov-157",
@@ -3296,7 +3608,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "lakehouse-logic-why-object-storage-is-the-new-analytics-engine-blog-executive-pov-158",
@@ -3317,7 +3631,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "ai-data-centers-are-pushing-u-s-power-grids-to-the-brink-blog-executive-pov-159",
@@ -3338,7 +3654,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Nurture Email",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "1H"
     },
     {
       "id": "ai-data-centers-are-pushing-u-s-power-grids-to-the-brink-blog-executive-pov-160",
@@ -3359,7 +3677,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Nurture Email",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "1H"
     },
     {
       "id": "the-gap-between-ai-ambition-and-ai-readiness-blog-executive-pov-161",
@@ -3380,7 +3700,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Nurture Email",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "2H"
     },
     {
       "id": "why-your-ai-strategy-needs-both-shared-and-shared-nothing-storage-162",
@@ -3401,7 +3723,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": ""
     },
     {
       "id": "real-time-redefined-rethinking-kafka-s-potential-163",
@@ -3422,7 +3746,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "supercharge-kafka-accelerate-real-time-innovation-at-scale-164",
@@ -3443,7 +3769,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "hitachi-data-lakehouse-powering-trusted-ai-and-analytics-at-scale-datasheet-solution-brief-165",
@@ -3464,7 +3792,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Nurture Email",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "1H"
     },
     {
       "id": "hitachi-vantara-virtual-storage-platform-one-object-vsp-one-object-datasheet-solution-brie-166",
@@ -3485,7 +3815,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Nurture Email",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "1H"
     },
     {
       "id": "hybrid-cloud-storage-for-native-amazon-s3-workloads-167",
@@ -3506,7 +3838,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "modernize-data-lakehouse-environments-with-vsp-one-object-storage-168",
@@ -3527,7 +3861,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Nurture Email",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "1H"
     },
     {
       "id": "secure-document-management-solutions-for-insurance-169",
@@ -3548,7 +3884,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": ""
     },
     {
       "id": "vsp-one-object-architectural-overview-ebook-whitepaper-170",
@@ -3569,7 +3907,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "2H"
     },
     {
       "id": "vsp-one-object-with-on-premise-native-s3-tables-for-data-lakehouse-ai-and-analytic-workloa-171",
@@ -3590,7 +3930,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "ai-data-foundation-roadmap-guide-ebook-whitepaper-172",
@@ -3611,7 +3953,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": ""
     },
     {
       "id": "top-10-reasons-hitachi-vantara-virtual-storage-platform-one-object-ebook-whitepaper-173",
@@ -3632,7 +3976,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "from-data-chaos-to-ai-clarity-data-readiness-and-the-modern-lakehouse-174",
@@ -3653,7 +3999,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "top-10-reasons-why-hitachi-data-lakehouse-175",
@@ -3674,7 +4022,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "hitachi-data-lakehouse-unified-data-lakehouse-for-ai-and-analytics-landing-page-campaign-p-176",
@@ -3695,7 +4045,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "ai-data-foundation-landing-page-landing-page-campaign-page-177",
@@ -3716,7 +4068,9 @@
       "paidMediaDateDisplay": "Jun 01, 2026",
       "primaryActivation": "Paid Social",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "1H"
     },
     {
       "id": "on-premises-amazon-s3-tables-with-vsp-one-object-on-premises-amazon-s3-tables-with-vsp-one-178",
@@ -3737,7 +4091,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "campaign-landing-page-ai-landing-page-179",
@@ -3758,7 +4114,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Paid Social, Campaign Landing Page",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "1H"
     },
     {
       "id": "southwest-power-pool-180",
@@ -3779,7 +4137,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "explore-and-build-ai-solutions-with-iq-studio-181",
@@ -3800,7 +4160,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "SDR Email Cadence",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "ai-discovery-service-booking-form-demo-assessment-tool-offer-182",
@@ -3821,7 +4183,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Nurture Email",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "1H"
     },
     {
       "id": "hitachi-iq-with-nvidia-hgx-183",
@@ -3842,7 +4206,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "2026-gigaom-rader-for-high-performance-storage-optimized-for-ai-workloads-184",
@@ -3863,7 +4229,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Webinar Syndication, Outbound Email, Paid Social",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "mastering-the-art-of-ai-success-webinar-185",
@@ -3884,7 +4252,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Nurture Email",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "1H"
     },
     {
       "id": "ai-success-starts-with-the-right-data-foundation-186",
@@ -3905,7 +4275,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Webinar Syndication, Outbound Email",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "1H"
     },
     {
       "id": "2026-gigaom-rader-for-high-performance-storage-optimized-for-ai-workloads-analyst-report-187",
@@ -3926,7 +4298,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Content Syndication, Outbound Email, Paid Social, Organic Social",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "hitachi-vantara-s-iq-increases-ai-storage-momentum-adds-ai-recovery-capabilities-188",
@@ -3947,7 +4321,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "gartner-emerging-market-quadrant-emq-ai-data-storage-189",
@@ -3968,7 +4344,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": ""
     },
     {
       "id": "2025-gigaom-radar-report-for-ai-workloads-gigaom-link-3rd-party-analyst-report-190",
@@ -3989,7 +4367,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Nurture Email",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "1H"
     },
     {
       "id": "idc-marketscape-worldwide-private-ai-infrafrstucture-systems-191",
@@ -4010,7 +4390,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": ""
     },
     {
       "id": "from-science-fiction-to-factory-floor-the-physical-ai-revolution-takes-shape-192",
@@ -4031,7 +4413,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "raising-the-stakes-for-sustainable-ai-ready-infrastructure-193",
@@ -4052,7 +4436,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": ""
     },
     {
       "id": "supercompute-blog-194",
@@ -4073,7 +4459,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "reclaim-data-sovereignty-for-the-ai-era-blog-executive-pov-195",
@@ -4094,7 +4482,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "what-ctos-need-to-know-about-modern-ai-storage-blog-executive-pov-196",
@@ -4115,7 +4505,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "blog-executive-pov-197",
@@ -4136,7 +4528,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "how-pakistan-s-financial-backbone-is-using-ai-to-strengthen-banking-resilience-at-national-198",
@@ -4157,7 +4551,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "the-future-of-hybrid-cloud-consumption-is-flexible-blog-executive-pov-199",
@@ -4178,7 +4574,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Nurture Email",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "2H"
     },
     {
       "id": "hitachi-in-gartner-infrastructure-platform-200",
@@ -4199,7 +4597,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "why-zero-trust-storage-eight-9s-availability-are-non-negotiable-201",
@@ -4220,7 +4620,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "what-ctos-need-to-know-about-modern-ai-storage-202",
@@ -4241,7 +4643,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Nurture Email",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "hgx-reference-architecture-203",
@@ -4262,7 +4666,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "hitachi-hmax-and-hitachi-iq-for-life-sciences-204",
@@ -4283,7 +4689,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "hitachi-hmax-and-hitachi-iq-for-mining-205",
@@ -4304,7 +4712,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "hitachi-hmax-and-hitachi-iq-for-power-grids-206",
@@ -4325,7 +4735,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "hitachi-iq-m-series-207",
@@ -4346,7 +4758,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "SDR Email Cadence",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "hitachi-iq-studio-datasheet-solution-brief-technical-208",
@@ -4367,7 +4781,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Nurture Email",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "1H"
     },
     {
       "id": "hitachi-iq-with-nvidia-hgx-209",
@@ -4388,7 +4804,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "SDR Email Cadence",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "hmax-and-iq-solutions-for-mining-and-mineral-exploration-210",
@@ -4409,7 +4827,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": ""
     },
     {
       "id": "ebook-title-trust-continuity-and-competitive-advantage-in-the-ai-era-211",
@@ -4430,7 +4850,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Content Syndication, Outbound Email, Paid Social",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "thrive-in-an-ai-driven-future-212",
@@ -4451,7 +4873,9 @@
       "paidMediaDateDisplay": "Jun 01, 2026",
       "primaryActivation": "Content Syndication, Outbound Email, Paid Social",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "1H"
     },
     {
       "id": "10-reasons-to-buy-build-or-borrow-ai-implementation-ebook-whitepaper-213",
@@ -4472,7 +4896,9 @@
       "paidMediaDateDisplay": "Jun 01, 2026",
       "primaryActivation": "Outbound Email, Paid Social",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "1H"
     },
     {
       "id": "ai-data-foundation-roadmap-guide-ebook-whitepaper-214",
@@ -4493,7 +4919,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": ""
     },
     {
       "id": "accelerate-your-ai-success-use-case-roi-guide-ebook-ebook-whitepaper-215",
@@ -4514,7 +4942,9 @@
       "paidMediaDateDisplay": "Jun 01, 2026",
       "primaryActivation": "Content Syndication, Outbound Email, Paid Social, Paid Search",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "1H"
     },
     {
       "id": "how-to-inject-agility-into-your-infrastructure-ebook-ebook-whitepaper-216",
@@ -4535,7 +4965,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Nurture Email",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "1H"
     },
     {
       "id": "top-10-reasons-hitachi-content-software-for-file-217",
@@ -4556,7 +4988,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "top-10-reasons-hitachi-iq-218",
@@ -4577,7 +5011,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "hitachi-delivers-managed-storage-solution-with-large-all-flash-deployment-219",
@@ -4598,7 +5034,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "boe-technology-group-transforms-operations-implements-a-virtual-desktop-cloud-with-hitachi-220",
@@ -4619,7 +5057,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "cbts-meets-customer-demand-for-agile-and-cost-effective-cloud-services-with-hitachi-everfl-221",
@@ -4640,7 +5080,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "sfs-group-advances-digitization-with-high-performance-private-cloud-222",
@@ -4661,7 +5103,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "suva-supports-its-digitization-strategy-with-high-performance-innovative-storage-solutions-223",
@@ -4682,7 +5126,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "alior-bank-customer-story-customer-story-224",
@@ -4703,7 +5149,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "from-bottlenecks-to-breakthroughs-integrated-solutions-customer-story-ebook-customer-story-225",
@@ -4724,7 +5172,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Content Syndication, Outbound Email",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "1H"
     },
     {
       "id": "government-agency-case-study-customer-story-226",
@@ -4745,7 +5195,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Nurture Email",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "1H"
     },
     {
       "id": "performance-scale-and-flexibility-in-one-try-vsp-one-sds-free-227",
@@ -4766,7 +5218,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "hitachi-everflex-one-of-the-highest-rated-vendors-by-it-professionals-on-gartner-peer-insi-228",
@@ -4787,7 +5241,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "your-postgresql-environment-with-hitachi-vsp-one-and-integrated-systems-229",
@@ -4808,7 +5264,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "top-10-reasons-why-solutions-for-oracle-turbocharge-your-database-performance-230",
@@ -4829,7 +5287,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "top-10-reasons-why-vsp-one-sds-block-storage-hybrid-cloud-ready-software-defined-storage-f-231",
@@ -4850,7 +5310,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "everflex-capacity-on-demand-top-10-232",
@@ -4871,7 +5333,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "top-10-reasons-why-integrated-solutions-for-sap-233",
@@ -4892,7 +5356,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "2H"
     },
     {
       "id": "app-data-consolidation-update-needed-234",
@@ -4913,7 +5379,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "why-is-software-defined-storage-critical-for-unlocking-the-power-of-data-webinar-235",
@@ -4934,7 +5402,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Nurture Email",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "1H"
     },
     {
       "id": "2025-26-dcig-top-5-enterprise-sds-block-storage-solutions-hitachi-vantara-vsp-one-block-so-236",
@@ -4955,7 +5425,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Nurture Email",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "1H"
     },
     {
       "id": "a-common-data-plane-simplifies-hybrid-cloud-and-ai-237",
@@ -4976,7 +5448,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Nurture Email",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "2H"
     },
     {
       "id": "five-habits-that-cut-it-energy-waste-without-spending-more-blog-executive-pov-238",
@@ -4997,7 +5471,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "the-power-of-distributed-infrastructure-and-storage-at-the-edge-blog-executive-pov-239",
@@ -5018,7 +5494,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Nurture Email",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "turning-virtualization-modernization-into-business-outcomes-blog-executive-pov-240",
@@ -5039,7 +5517,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "how-to-avoid-the-hidden-costs-of-slow-it-infrastructure-deployments-blog-executive-pov-241",
@@ -5060,7 +5540,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "hitachi-leader-in-gigaom-primary-storage-platforms-radar-242",
@@ -5081,7 +5563,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "the-reason-behind-stalled-ai-projects-243",
@@ -5102,7 +5586,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": ""
     },
     {
       "id": "enhancing-it-operational-excellence-with-infrastructure-as-a-service-244",
@@ -5123,7 +5609,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "drive-your-ai-innovation-with-hitachi-hybrid-cloud-platform-and-red-hat-openshift-powered--245",
@@ -5144,7 +5632,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "SDR Email Cadence",
       "marketingEmail": null,
-      "salesEmail": "https://hitachivantara.sharepoint.com/:w:/s/GlobalCampaignsAssets505/IQAE-pcxLgAcSpuVp3CvclGxAVmiEkktv8b6JX01mBxu-eQ?e=T7uliC"
+      "salesEmail": "https://hitachivantara.sharepoint.com/:w:/s/GlobalCampaignsAssets505/IQAE-pcxLgAcSpuVp3CvclGxAVmiEkktv8b6JX01mBxu-eQ?e=T7uliC",
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "mission-critical-guarantees-and-slas-from-hitachi-vantara-246",
@@ -5165,7 +5655,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "SDR Email Cadence",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "accelerate-and-automate-modernization-with-hitachi-vantara-and-red-hat-247",
@@ -5186,7 +5678,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "SDR Email Cadence",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "2H"
     },
     {
       "id": "hitachi-vantara-flexible-consumption-and-financing-solutions-update-248",
@@ -5207,7 +5701,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "hitachi-integrated-solutions-agility-redefined-resilience-guaranteed-249",
@@ -5228,7 +5724,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "hv-signature-support-new-datasheet-solution-brief-technical-250",
@@ -5249,7 +5747,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "hybrid-cloud-2-0-evolution-modernization-datasheet-solution-brief-technical-251",
@@ -5270,7 +5770,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Nurture Email",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "1H"
     },
     {
       "id": "hitachi-integrated-systems-solution-with-microsoft-sql-server-datasheet-solution-brief-tec-252",
@@ -5291,7 +5793,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "everflex-managed-focus-on-itil-services-new-datasheet-solution-brief-technical-253",
@@ -5312,7 +5816,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "everflex-managed-focus-on-multi-vendor-management-new-datasheet-solution-brief-technical-254",
@@ -5333,7 +5839,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "enhancing-hybrid-cloud-management-with-unified-observability-tools-new-255",
@@ -5354,7 +5862,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "ensuring-business-continuity-vmware-environments-enterprise-data-resilience-256",
@@ -5375,7 +5885,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "overcoming-gaps-with-hybrid-cloud-ebook-whitepaper-257",
@@ -5396,7 +5908,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "2H"
     },
     {
       "id": "shared-nothing-architecture-for-ai-ebook-whitepaper-258",
@@ -5417,7 +5931,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "SDR Email Cadence",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "hybrid-cloud-buyer-s-guide-ebook-ebook-whitepaper-259",
@@ -5438,7 +5954,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Content Syndication, Nurture Email",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "1H"
     },
     {
       "id": "top-5-reasons-to-build-resilient-cloud-infrastructure-with-hitachi-storage-and-vmware-clou-260",
@@ -5459,7 +5977,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "top-5-reasons-to-choose-hitachi-storage-for-vmware-virtualization-success-ebook-whitepaper-261",
@@ -5480,7 +6000,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "hitachi-storage-and-hitachi-integrated-systems-solutions-in-vmware-vsphere-environments-eb-262",
@@ -5501,7 +6023,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "SDR Email Cadence",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "top-10-reasons-flexible-hybrid-cloud-with-hitachi-and-red-hat-openshift-virtualization-263",
@@ -5522,7 +6046,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "top-10-reasons-to-choose-hitachi-everflex-264",
@@ -5543,7 +6069,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "1H"
     },
     {
       "id": "top-10-reasons-to-choose-hitachi-vantara-for-microsoft-sql-server-infrastructure-m-ebook-w-265",
@@ -5564,7 +6092,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Nurture Email",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "1H"
     },
     {
       "id": "americas-midrange-road-show-blog-266",
@@ -5585,7 +6115,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "state-of-data-infra-report-blog-267",
@@ -5606,7 +6138,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "hitachi-leader-in-gigaom-primary-storage-platforms-radar-blog-268",
@@ -5627,7 +6161,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "t-systems-customer-transcript-blog-269",
@@ -5648,7 +6184,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "corporate-sustainability-needs-integration-not-another-goal-post-270",
@@ -5669,7 +6207,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "why-infrastructure-platform-consumption-services-matter-now-271",
@@ -5690,7 +6230,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "what-it-teams-need-to-know-before-a-mainframe-refresh-272",
@@ -5711,7 +6253,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "joe-morris-cio-infosec-blog-273",
@@ -5732,7 +6276,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "how-to-beat-rising-storage-costs-and-spread-your-budget-274",
@@ -5753,7 +6299,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "supercompute-blog-product-announcement-275",
@@ -5774,7 +6322,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "2H"
     },
     {
       "id": "messaging-framework-ai-campaign-guide-messaging-framework-resource-276",
@@ -5795,7 +6345,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Resouce",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "1H"
     },
     {
       "id": "messaging-framework-dmr-campaign-guide-messaging-framework-resource-277",
@@ -5816,7 +6368,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Resouce",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "1H"
     },
     {
       "id": "why-hitachi-vantara-278",
@@ -5837,7 +6391,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "Yes",
+      "promotionPeriod": "2H"
     },
     {
       "id": "untitled-279",
@@ -5858,7 +6414,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": ""
     },
     {
       "id": "untitled-280",
@@ -5879,7 +6437,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": ""
     },
     {
       "id": "untitled-281",
@@ -5900,7 +6460,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": ""
     },
     {
       "id": "untitled-282",
@@ -5921,7 +6483,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": ""
     },
     {
       "id": "untitled-283",
@@ -5942,7 +6506,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": ""
     },
     {
       "id": "untitled-284",
@@ -5963,7 +6529,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": ""
     },
     {
       "id": "untitled-285",
@@ -5984,7 +6552,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": ""
     },
     {
       "id": "untitled-286",
@@ -6005,7 +6575,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": ""
     },
     {
       "id": "untitled-287",
@@ -6026,7 +6598,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": ""
     },
     {
       "id": "untitled-288",
@@ -6047,7 +6621,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": ""
     },
     {
       "id": "untitled-289",
@@ -6068,7 +6644,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": ""
     },
     {
       "id": "untitled-290",
@@ -6089,7 +6667,9 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "No Planned Promotion",
       "marketingEmail": null,
-      "salesEmail": null
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": ""
     }
   ]
 }
