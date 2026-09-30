@@ -35,8 +35,23 @@ h1{font-family:"Hitachi Sans",Arial,Helvetica,sans-serif;font-weight:400;font-si
 .filter-field label{display:block;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gray4);margin-bottom:5px}
 .filter-field select{width:100%;border:1px solid var(--gray2);border-radius:2px;padding:8px 9px;font-family:inherit;font-size:12px;color:var(--gray6);background:var(--white)}
 .filter-field select:focus{outline:none;border-color:var(--red1)}
+.status-checks{display:flex;flex-wrap:wrap;gap:6px}
+.status-check{display:flex;align-items:center;gap:5px;border:1px solid var(--gray2);border-radius:999px;padding:5px 9px;font-size:11px;color:var(--gray6);cursor:pointer;background:var(--white)}
+.status-check input{margin:0}
+.toolbar-actions{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.spotlight{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px}
+.spotlight-card{background:var(--white);border:1px solid var(--line);border-left:4px solid var(--red1);border-radius:3px;padding:18px 20px;text-decoration:none;display:block;transition:.15s ease}
+.spotlight-card:hover{transform:translateY(-1px);box-shadow:0 6px 16px rgba(12,12,12,.08)}
+.spotlight-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--red1);margin-bottom:8px}
+.spotlight-title{font-family:"Hitachi Sans",Arial,Helvetica,sans-serif;font-size:18px;font-weight:700;color:var(--black);line-height:1.3;margin-bottom:6px}
+.spotlight-meta{font-size:12px;color:var(--gray4)}
+.spotlight-empty{color:var(--gray4);font-size:13px;font-style:italic}
+@media(max-width:900px){.spotlight{grid-template-columns:1fr}}
 .row.header-row{background:var(--gray1);font-size:9px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--gray5);padding:10px 16px}
 .row.header-row:hover{background:var(--gray1)}
+.row.header-row div{cursor:pointer;user-select:none}
+.row.header-row div:hover{color:var(--red1)}
+.sort-arrow{margin-left:4px;font-size:8px;opacity:.7}
 .summary{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 8px}
 .kpi{background:var(--white);border:1px solid var(--line);border-radius:3px;padding:10px 14px;min-width:135px}
 .kpi strong{font-size:20px;font-weight:700;display:block;color:var(--black)}
@@ -77,9 +92,14 @@ h1{font-family:"Hitachi Sans",Arial,Helvetica,sans-serif;font-weight:400;font-si
 </header>
 
 <div class="main">
+  <div id="spotlight" class="spotlight"></div>
   <div class="toolbar">
     <input class="search" id="search" placeholder="Search by title, campaign, use case, owner team, audience, region&hellip;">
     <div class="filter-grid" id="filterGroups"></div>
+    <div class="toolbar-actions">
+      <button class="btn" id="copyLinkBtn" onclick="copyShareLink()">Copy link to this view</button>
+      <button class="btn" onclick="downloadCSV()">Download CSV of filtered list</button>
+    </div>
   </div>
 
   <div class="summary" id="summary"></div>
@@ -104,14 +124,78 @@ const FILTER_FIELDS = [
   {key:'funnelStage', label:'Funnel Stage'},
   {key:'ownerTeam', label:'Owner Team'},
   {key:'audience', label:'Audience'},
-  {key:'status', label:'Status'},
+  {key:'status', label:'Status', multi:true},
   {key:'region', label:'Region'},
+  {key:'usedInCampaign', label:'Used in Campaign'},
+  {key:'promotionPeriod', label:'Promotion Period'},
+  {key:'salesEmailStatus', label:'Sales Outreach Email'},
 ];
 let activeFilters = {};
-FILTER_FIELDS.forEach(f => activeFilters[f.key] = 'All');
-activeFilters.status = 'Live';
+FILTER_FIELDS.forEach(f => activeFilters[f.key] = f.multi ? [] : 'All');
+activeFilters.status = ['Live'];
 
 function esc(s){ return (s==null?'':String(s)).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+
+// ---- Shareable-link support: read/write filter state to the URL's query string ----
+function applyFiltersFromURL(){
+  const params = new URLSearchParams(location.search);
+  FILTER_FIELDS.forEach(f => {
+    if(!params.has(f.key)) return;
+    const raw = params.get(f.key);
+    activeFilters[f.key] = f.multi ? (raw ? raw.split(',') : []) : raw;
+  });
+  if(params.has('q')) {
+    const s = document.getElementById('search');
+    if(s) s.value = params.get('q');
+  }
+}
+function updateURL(){
+  const params = new URLSearchParams();
+  FILTER_FIELDS.forEach(f => {
+    const v = activeFilters[f.key];
+    if(f.multi){ if(v && v.length) params.set(f.key, v.join(',')); }
+    else if(v && v !== 'All') params.set(f.key, v);
+  });
+  const q = document.getElementById('search').value.trim();
+  if(q) params.set('q', q);
+  const qs = params.toString();
+  const newUrl = location.pathname + (qs ? '?' + qs : '');
+  history.replaceState(null, '', newUrl);
+}
+function copyShareLink(){
+  updateURL();
+  const btn = document.getElementById('copyLinkBtn');
+  navigator.clipboard.writeText(location.href).then(() => {
+    const original = btn.textContent;
+    btn.textContent = 'Link copied!';
+    setTimeout(() => { btn.textContent = original; }, 1800);
+  });
+}
+
+// ---- CSV export of the currently filtered list ----
+function csvEscape(v){
+  const s = v==null ? '' : String(v);
+  return /[",\n]/.test(s) ? '"' + s.replace(/"/g,'""') + '"' : s;
+}
+function toCSV(items){
+  const cols = ['title','type','campaign','useCase','funnelStage','ownerTeam','audience','status','region',
+                'publishDateDisplay','usedInCampaign','promotionPeriod','primaryActivation','paidMediaDateDisplay','url'];
+  const header = cols.join(',');
+  const rows = items.map(it => cols.map(c => csvEscape(it[c])).join(','));
+  return [header, ...rows].join('\n');
+}
+function downloadCSV(){
+  const csv = toCSV(filtered());
+  const blob = new Blob([csv], {type:'text/csv;charset=utf-8;'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'content-library-filtered.csv';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
 
 async function loadData(){
   try {
@@ -121,6 +205,7 @@ async function loadData(){
         const j = await r.json();
         if(Array.isArray(j.items)) DATA = j.items;
         if(j.lastRefreshed) LAST_REFRESHED = j.lastRefreshed;
+        DATA.forEach(it => { it.salesEmailStatus = it.salesEmail ? 'Available' : 'Not available'; });
       }
     }
   } catch(e){}
@@ -146,6 +231,13 @@ function uniqueValues(key){
 function makeFilterGroups(){
   document.getElementById('filterGroups').innerHTML = FILTER_FIELDS.map(f => {
     const values = uniqueValues(f.key);
+    if(f.multi){
+      const checks = values.map(v => {
+        const checked = activeFilters[f.key].includes(v);
+        return `<label class="status-check"><input type="checkbox" ${checked?'checked':''} onchange="toggleMultiFilter('${f.key}','${esc(v).replace(/'/g,"\\'")}')">${esc(v)}</label>`;
+      }).join('');
+      return `<div class="filter-field"><label>${esc(f.label)}</label><div class="status-checks">${checks}</div></div>`;
+    }
     const options = ['All', ...values].map(v =>
       `<option value="${esc(v)}" ${activeFilters[f.key]===v?'selected':''}>${esc(v)}</option>`
     ).join('');
@@ -158,14 +250,26 @@ function makeFilterGroups(){
 function setFilter(key, value){
   activeFilters[key] = value;
   makeFilterGroups();
+  updateURL();
+  render();
+}
+function toggleMultiFilter(key, value){
+  const arr = activeFilters[key];
+  const i = arr.indexOf(value);
+  if(i === -1) arr.push(value); else arr.splice(i,1);
+  updateURL();
   render();
 }
 function filtered(){
   const q = document.getElementById('search').value.trim().toLowerCase();
   return DATA.filter(item => {
-    const hay = [item.title,item.campaign,item.useCase,item.ownerTeam,item.audience,item.region,item.type,item.status].join(' ').toLowerCase();
+    const hay = [item.title,item.campaign,item.useCase,item.ownerTeam,item.audience,item.region,item.type,item.status,item.usedInCampaign,item.promotionPeriod].join(' ').toLowerCase();
     const qok = !q || hay.includes(q);
-    const fok = FILTER_FIELDS.every(f => activeFilters[f.key]==='All' || item[f.key]===activeFilters[f.key]);
+    const fok = FILTER_FIELDS.every(f => {
+      const v = activeFilters[f.key];
+      if(f.multi) return !v.length || v.includes(item[f.key]);
+      return v==='All' || item[f.key]===v;
+    });
     return qok && fok;
   });
 }
@@ -191,20 +295,75 @@ function row(item){
     <div>${links.join('')}</div>
   </div>`;
 }
+const SORT_COLUMNS = [
+  {label:'Title', key:'title'},
+  {label:'Campaign / Use Case', key:'campaign'},
+  {label:'Primary Activation / Paid Media', key:'paidMediaDate'},
+  {label:'Audience / Region', key:'audience'},
+  {label:'Status / Date', key:'publishDate'},
+  {label:'Links', key:null},
+];
+let sortKey = null, sortDir = 1;
+function setSort(key){
+  if(!key) return;
+  if(sortKey === key) sortDir *= -1; else { sortKey = key; sortDir = 1; }
+  render();
+}
+function applySort(items){
+  if(!sortKey) return items;
+  const out = [...items];
+  out.sort((a,b) => {
+    let av = a[sortKey], bv = b[sortKey];
+    if(av == null && bv == null) return 0;
+    if(av == null) return 1;   // blanks sort to the end regardless of direction
+    if(bv == null) return -1;
+    if(typeof av === 'string') return av.localeCompare(bv) * sortDir;
+    return (av > bv ? 1 : av < bv ? -1 : 0) * sortDir;
+  });
+  return out;
+}
+function buildHeader(){
+  return `<div class="row header-row">${SORT_COLUMNS.map(c => {
+    const arrow = (c.key && sortKey===c.key) ? `<span class="sort-arrow">${sortDir===1?'\u25B2':'\u25BC'}</span>` : '';
+    return `<div onclick="setSort(${c.key?`'${c.key}'`:'null'})">${esc(c.label)}${arrow}</div>`;
+  }).join('')}</div>`;
+}
 function render(){
-  const d = filtered();
+  const d = applySort(filtered());
   summary();
   if(!d.length){
     document.getElementById('content').innerHTML = '<div class="empty">No content matches those filters.</div>';
     return;
   }
-  const header = `<div class="row header-row">
-    <div>Title</div><div>Campaign / Use Case</div><div>Primary Activation / Paid Media</div><div>Audience / Region</div><div>Status / Date</div><div>Links</div>
-  </div>`;
-  document.getElementById('content').innerHTML = `<div class="list">${header}${d.map(row).join('')}</div>`;
+  document.getElementById('content').innerHTML = `<div class="list">${buildHeader()}${d.map(row).join('')}</div>`;
 }
-document.getElementById('search').addEventListener('input', render);
-function init(){ makeFilterGroups(); render(); }
+document.getElementById('search').addEventListener('input', () => { updateURL(); render(); });
+function renderSpotlight(){
+  const now = new Date();
+  const withDates = DATA.filter(x => x.publishDate);
+  const future = withDates.filter(x => new Date(x.publishDate+'T12:00:00') >= now).sort((a,b) => a.publishDate.localeCompare(b.publishDate));
+  const past = withDates.filter(x => new Date(x.publishDate+'T12:00:00') < now).sort((a,b) => b.publishDate.localeCompare(a.publishDate));
+  const todayStr = now.toISOString().slice(0,10);
+  const publishingToday = withDates.find(x => x.publishDate === todayStr);
+
+  const next = future[0];
+  const recent = publishingToday || past[0];
+
+  function block(label, item){
+    if(!item) return `<div class="spotlight-card" style="cursor:default"><div class="spotlight-label">${esc(label)}</div><div class="spotlight-empty">Nothing to show right now.</div></div>`;
+    const inner = `<div class="spotlight-label">${esc(label)}</div>
+      <div class="spotlight-title">${esc(item.title)}</div>
+      <div class="spotlight-meta">${esc(item.publishDateDisplay||'')} &middot; ${esc(item.campaign||'')}</div>`;
+    return item.url
+      ? `<a class="spotlight-card" href="${esc(item.url)}" target="_blank">${inner}</a>`
+      : `<div class="spotlight-card" style="cursor:default">${inner}</div>`;
+  }
+
+  document.getElementById('spotlight').innerHTML =
+    block(publishingToday ? 'Published today' : 'Most recently published', recent) +
+    block('Coming up next', next===recent ? null : next);
+}
+function init(){ applyFiltersFromURL(); makeFilterGroups(); render(); renderSpotlight(); }
 loadData();
 </script>
 </body>
