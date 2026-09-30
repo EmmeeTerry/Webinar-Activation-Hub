@@ -49,6 +49,8 @@ COLUMN_MAP = {
     "primaryActivation":  "Primary Activation Planned",
     "marketingEmail":     "Marketing Email",
     "salesEmail":         "Sales Outreach Email",
+    "usedInCampaign":     "Used in Campaign",
+    "promotionPeriod":    "Promotion Period",
 }
 
 # Fields whose column is a hyperlink cell but where we want the visible text,
@@ -146,6 +148,18 @@ def fetch_content_rows(client, sheet_id):
         if missing:
             print(f"  ! Not found (fix COLUMN_MAP): {missing}")
 
+    if DEBUG_COLUMNS:
+        print(f"\n--- Raw values for 'Promotion Period' / 'Used in Campaign' (first 8 rows) ---")
+        for row in sheet.rows[:8]:
+            pp = cell_lookup_by_id(row, col_id_by_title, "Promotion Period")
+            uic = cell_lookup_by_id(row, col_id_by_title, "Used in Campaign")
+            pp_col_id = col_id_by_title.get("Promotion Period")
+            pp_cell = next((c for c in row.cells if c.column_id == pp_col_id), None)
+            print(f"  row {row.row_number}: Promotion Period lookup={pp!r} "
+                  f"(raw cell value={getattr(pp_cell,'value',None)!r}, display_value={getattr(pp_cell,'display_value',None)!r}, "
+                  f"object_value={getattr(pp_cell,'object_value',None)!r})  "
+                  f"Used in Campaign lookup={uic!r}")
+
     items = []
     for row in sheet.rows:
         raw = {k: cell_lookup_by_id(row, col_id_by_title, v, text_only=k in TEXT_ONLY_FIELDS)
@@ -181,6 +195,8 @@ def fetch_content_rows(client, sheet_id):
             "primaryActivation": raw.get("primaryActivation") or "",
             "marketingEmail": clean_url(raw.get("marketingEmail")),
             "salesEmail": clean_url(raw.get("salesEmail")),
+            "usedInCampaign": "Yes" if truthy(raw.get("usedInCampaign")) else "No",
+            "promotionPeriod": raw.get("promotionPeriod") or "",
         })
     return items
 
