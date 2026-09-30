@@ -98,7 +98,7 @@ def normalize_date(raw):
 
 def pretty_date(iso_date):
     if not iso_date:
-        return "TBD"
+        return ""
     try:
         return datetime.strptime(iso_date, "%Y-%m-%d").strftime("%b %d, %Y")
     except ValueError:
