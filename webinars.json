@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-09-30T16:09:15.600125+00:00",
+  "lastRefreshed": "2026-09-30T18:08:27.101548+00:00",
   "webinars": [
     {
       "id": "the-economics-of-modern-storage-infrastructure-lower-risk-faster-ai-value-better-roi-webin",
@@ -28,35 +28,35 @@
       "sourceRow": 1,
       "relatedResources": [
         {
-          "title": "Campaign Landing Page - DMR Landing Page",
-          "type": "Landing Page",
+          "title": "Messaging Framework - DMR Campaign Guide / Messaging Framework / Resource",
+          "type": "Campaign Guide / Messaging Framework / Resource",
           "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery, Data Platform Architectures & Economics, Hybrid Cloud Platform & Operations",
-          "url": "https://www.hitachivantara.com/en-us/featured/data-modernization-resilience",
+          "useCase": "",
+          "url": "https://brand.hitachivantara.com/guidelines/guide/fa011283-0c02-48c7-80a0-17744b115f06",
           "score": 3
         },
         {
-          "title": "Capacity on Demand Scalable Pay\u2011for\u2011Use Capacity",
-          "type": "Datasheet / Solution Brief / Technical",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.hitachivantara.com/en-us/pdfviewer/solution-profile/capacity-on-demand",
-          "score": 3
-        },
-        {
-          "title": "Top Ten Reasons Why Pay as You Grow With Capacity on Demand\nOn-premises baseline ownership plus on-demand expansion",
-          "type": "Top 10",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/datasheet/top-10-reasons-why-capacity-on-demand.pdf",
-          "score": 3
-        },
-        {
-          "title": "Cyber Resilience Beyond Traditional Security in the Age of Inevitable Breaches",
-          "type": "eBook/Whitepaper",
+          "title": "Rabobank Leads the Field With Compliance Discovery Search Time Reduced From Weeks to Hours With Hitachi Content Platform",
+          "type": "Customer Story",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/cyber-resilience-beyond-traditional.pdf",
+          "url": "https://www.hitachivantara.com/en-us/company/customer-stories/rabobank-case-study",
+          "score": 3
+        },
+        {
+          "title": "RWTH Aachen University Enhances Cybersecurity",
+          "type": "Customer Story",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Cyber Risk Mitigation & Recovery",
+          "url": "RWTH Aachen University Enhances Cybersecurity",
+          "score": 3
+        },
+        {
+          "title": "Shaping Outstanding Digital Learning Experiences with a Reliable, Easy-to-Manage Storage Platform",
+          "type": "Customer Story",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "https://www.hitachivantara.com/en-us/company/customer-stories/umhb-case-study",
           "score": 3
         }
       ]
@@ -88,19 +88,19 @@
       "sourceRow": 2,
       "relatedResources": [
         {
-          "title": "Campaign Landing Page - AI Landing Page",
-          "type": "Landing Page",
+          "title": "Messaging Framework - AI Campaign Guide / Messaging Framework / Resource",
+          "type": "Campaign Guide / Messaging Framework / Resource",
           "campaign": "AI Data Foundation",
-          "useCase": "Data Readiness and Activation for AI, High Performance AI-Ready Infrastructure",
-          "url": "https://www.hitachivantara.com/en-us/featured/ai-data-foundation",
+          "useCase": "",
+          "url": "https://brand.hitachivantara.com/guidelines/guide/5babc977-3a32-4b5d-a934-1034a8dbfe60/page/4c3f8205-fa2d-4047-890a-47809fb9b196",
           "score": 3
         },
         {
-          "title": "Hitachi iQ with NVIDIA HGX",
-          "type": "FAQ / Reference / Use Case Guide",
+          "title": "Hitachi Enables Real Time Analytics and Data Lake Platform for Manufacturing | Customer Story",
+          "type": "Customer Story",
           "campaign": "AI Data Foundation",
-          "useCase": "High Performance AI-Ready Infrastructure",
-          "url": "https://docs.hitachivantara.com/v/u/en-us/mk-sl-324/latest",
+          "useCase": "Data Readiness and Activation for AI",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/customer-story/hitachi-enables-real-time-analytics-data-lake-platform-manufacturing.pdf",
           "score": 3
         },
         {
@@ -112,11 +112,11 @@
           "score": 3
         },
         {
-          "title": "From Science Fiction to Factory Floor: The Physical AI Revolution Takes Shape",
-          "type": "Blog / Executive POV",
+          "title": "AI Discovery Service Booking Form Demo / Assessment / Tool / Offer",
+          "type": "Demo / Assessment / Tool / Offer",
           "campaign": "AI Data Foundation",
           "useCase": "High Performance AI-Ready Infrastructure",
-          "url": "https://www.hitachivantara.com/en-us/blog/from-science-fiction-factory-floor-physical-ai-revolution-takes-shape",
+          "url": "https://www.hitachivantara.com/en-us/company/contact-sales",
           "score": 3
         }
       ]
@@ -148,35 +148,35 @@
       "sourceRow": 3,
       "relatedResources": [
         {
-          "title": "Campaign Landing Page - DMR Landing Page",
-          "type": "Landing Page",
+          "title": "Messaging Framework - DMR Campaign Guide / Messaging Framework / Resource",
+          "type": "Campaign Guide / Messaging Framework / Resource",
           "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery, Data Platform Architectures & Economics, Hybrid Cloud Platform & Operations",
-          "url": "https://www.hitachivantara.com/en-us/featured/data-modernization-resilience",
+          "useCase": "",
+          "url": "https://brand.hitachivantara.com/guidelines/guide/fa011283-0c02-48c7-80a0-17744b115f06",
           "score": 3
         },
         {
-          "title": "Capacity on Demand Scalable Pay\u2011for\u2011Use Capacity",
-          "type": "Datasheet / Solution Brief / Technical",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.hitachivantara.com/en-us/pdfviewer/solution-profile/capacity-on-demand",
-          "score": 3
-        },
-        {
-          "title": "Top Ten Reasons Why Pay as You Grow With Capacity on Demand\nOn-premises baseline ownership plus on-demand expansion",
-          "type": "Top 10",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/datasheet/top-10-reasons-why-capacity-on-demand.pdf",
-          "score": 3
-        },
-        {
-          "title": "Cyber Resilience Beyond Traditional Security in the Age of Inevitable Breaches",
-          "type": "eBook/Whitepaper",
+          "title": "Rabobank Leads the Field With Compliance Discovery Search Time Reduced From Weeks to Hours With Hitachi Content Platform",
+          "type": "Customer Story",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/cyber-resilience-beyond-traditional.pdf",
+          "url": "https://www.hitachivantara.com/en-us/company/customer-stories/rabobank-case-study",
+          "score": 3
+        },
+        {
+          "title": "RWTH Aachen University Enhances Cybersecurity",
+          "type": "Customer Story",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Cyber Risk Mitigation & Recovery",
+          "url": "RWTH Aachen University Enhances Cybersecurity",
+          "score": 3
+        },
+        {
+          "title": "Shaping Outstanding Digital Learning Experiences with a Reliable, Easy-to-Manage Storage Platform",
+          "type": "Customer Story",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "https://www.hitachivantara.com/en-us/company/customer-stories/umhb-case-study",
           "score": 3
         }
       ]
@@ -208,19 +208,19 @@
       "sourceRow": 4,
       "relatedResources": [
         {
-          "title": "Campaign Landing Page - AI Landing Page",
-          "type": "Landing Page",
+          "title": "Messaging Framework - AI Campaign Guide / Messaging Framework / Resource",
+          "type": "Campaign Guide / Messaging Framework / Resource",
           "campaign": "AI Data Foundation",
-          "useCase": "Data Readiness and Activation for AI, High Performance AI-Ready Infrastructure",
-          "url": "https://www.hitachivantara.com/en-us/featured/ai-data-foundation",
+          "useCase": "",
+          "url": "https://brand.hitachivantara.com/guidelines/guide/5babc977-3a32-4b5d-a934-1034a8dbfe60/page/4c3f8205-fa2d-4047-890a-47809fb9b196",
           "score": 3
         },
         {
-          "title": "Hitachi iQ with NVIDIA HGX",
-          "type": "FAQ / Reference / Use Case Guide",
+          "title": "Hitachi Enables Real Time Analytics and Data Lake Platform for Manufacturing | Customer Story",
+          "type": "Customer Story",
           "campaign": "AI Data Foundation",
-          "useCase": "High Performance AI-Ready Infrastructure",
-          "url": "https://docs.hitachivantara.com/v/u/en-us/mk-sl-324/latest",
+          "useCase": "Data Readiness and Activation for AI",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/customer-story/hitachi-enables-real-time-analytics-data-lake-platform-manufacturing.pdf",
           "score": 3
         },
         {
@@ -232,11 +232,11 @@
           "score": 3
         },
         {
-          "title": "From Science Fiction to Factory Floor: The Physical AI Revolution Takes Shape",
-          "type": "Blog / Executive POV",
+          "title": "AI Discovery Service Booking Form Demo / Assessment / Tool / Offer",
+          "type": "Demo / Assessment / Tool / Offer",
           "campaign": "AI Data Foundation",
           "useCase": "High Performance AI-Ready Infrastructure",
-          "url": "https://www.hitachivantara.com/en-us/blog/from-science-fiction-factory-floor-physical-ai-revolution-takes-shape",
+          "url": "https://www.hitachivantara.com/en-us/company/contact-sales",
           "score": 3
         }
       ]
@@ -268,35 +268,35 @@
       "sourceRow": 5,
       "relatedResources": [
         {
-          "title": "Campaign Landing Page - DMR Landing Page",
-          "type": "Landing Page",
+          "title": "Messaging Framework - DMR Campaign Guide / Messaging Framework / Resource",
+          "type": "Campaign Guide / Messaging Framework / Resource",
           "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery, Data Platform Architectures & Economics, Hybrid Cloud Platform & Operations",
-          "url": "https://www.hitachivantara.com/en-us/featured/data-modernization-resilience",
+          "useCase": "",
+          "url": "https://brand.hitachivantara.com/guidelines/guide/fa011283-0c02-48c7-80a0-17744b115f06",
           "score": 3
         },
         {
-          "title": "Capacity on Demand Scalable Pay\u2011for\u2011Use Capacity",
-          "type": "Datasheet / Solution Brief / Technical",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.hitachivantara.com/en-us/pdfviewer/solution-profile/capacity-on-demand",
-          "score": 3
-        },
-        {
-          "title": "Top Ten Reasons Why Pay as You Grow With Capacity on Demand\nOn-premises baseline ownership plus on-demand expansion",
-          "type": "Top 10",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/datasheet/top-10-reasons-why-capacity-on-demand.pdf",
-          "score": 3
-        },
-        {
-          "title": "Cyber Resilience Beyond Traditional Security in the Age of Inevitable Breaches",
-          "type": "eBook/Whitepaper",
+          "title": "Rabobank Leads the Field With Compliance Discovery Search Time Reduced From Weeks to Hours With Hitachi Content Platform",
+          "type": "Customer Story",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/cyber-resilience-beyond-traditional.pdf",
+          "url": "https://www.hitachivantara.com/en-us/company/customer-stories/rabobank-case-study",
+          "score": 3
+        },
+        {
+          "title": "RWTH Aachen University Enhances Cybersecurity",
+          "type": "Customer Story",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Cyber Risk Mitigation & Recovery",
+          "url": "RWTH Aachen University Enhances Cybersecurity",
+          "score": 3
+        },
+        {
+          "title": "Shaping Outstanding Digital Learning Experiences with a Reliable, Easy-to-Manage Storage Platform",
+          "type": "Customer Story",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "https://www.hitachivantara.com/en-us/company/customer-stories/umhb-case-study",
           "score": 3
         }
       ]
@@ -328,35 +328,35 @@
       "sourceRow": 6,
       "relatedResources": [
         {
-          "title": "Campaign Landing Page - DMR Landing Page",
-          "type": "Landing Page",
+          "title": "Messaging Framework - DMR Campaign Guide / Messaging Framework / Resource",
+          "type": "Campaign Guide / Messaging Framework / Resource",
           "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery, Data Platform Architectures & Economics, Hybrid Cloud Platform & Operations",
-          "url": "https://www.hitachivantara.com/en-us/featured/data-modernization-resilience",
+          "useCase": "",
+          "url": "https://brand.hitachivantara.com/guidelines/guide/fa011283-0c02-48c7-80a0-17744b115f06",
           "score": 3
         },
         {
-          "title": "Capacity on Demand Scalable Pay\u2011for\u2011Use Capacity",
-          "type": "Datasheet / Solution Brief / Technical",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.hitachivantara.com/en-us/pdfviewer/solution-profile/capacity-on-demand",
-          "score": 3
-        },
-        {
-          "title": "Top Ten Reasons Why Pay as You Grow With Capacity on Demand\nOn-premises baseline ownership plus on-demand expansion",
-          "type": "Top 10",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/datasheet/top-10-reasons-why-capacity-on-demand.pdf",
-          "score": 3
-        },
-        {
-          "title": "Cyber Resilience Beyond Traditional Security in the Age of Inevitable Breaches",
-          "type": "eBook/Whitepaper",
+          "title": "Rabobank Leads the Field With Compliance Discovery Search Time Reduced From Weeks to Hours With Hitachi Content Platform",
+          "type": "Customer Story",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/cyber-resilience-beyond-traditional.pdf",
+          "url": "https://www.hitachivantara.com/en-us/company/customer-stories/rabobank-case-study",
+          "score": 3
+        },
+        {
+          "title": "RWTH Aachen University Enhances Cybersecurity",
+          "type": "Customer Story",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Cyber Risk Mitigation & Recovery",
+          "url": "RWTH Aachen University Enhances Cybersecurity",
+          "score": 3
+        },
+        {
+          "title": "Shaping Outstanding Digital Learning Experiences with a Reliable, Easy-to-Manage Storage Platform",
+          "type": "Customer Story",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "https://www.hitachivantara.com/en-us/company/customer-stories/umhb-case-study",
           "score": 3
         }
       ]
@@ -388,19 +388,19 @@
       "sourceRow": 7,
       "relatedResources": [
         {
-          "title": "Campaign Landing Page - AI Landing Page",
-          "type": "Landing Page",
+          "title": "Messaging Framework - AI Campaign Guide / Messaging Framework / Resource",
+          "type": "Campaign Guide / Messaging Framework / Resource",
           "campaign": "AI Data Foundation",
-          "useCase": "Data Readiness and Activation for AI, High Performance AI-Ready Infrastructure",
-          "url": "https://www.hitachivantara.com/en-us/featured/ai-data-foundation",
+          "useCase": "",
+          "url": "https://brand.hitachivantara.com/guidelines/guide/5babc977-3a32-4b5d-a934-1034a8dbfe60/page/4c3f8205-fa2d-4047-890a-47809fb9b196",
           "score": 3
         },
         {
-          "title": "Hitachi iQ with NVIDIA HGX",
-          "type": "FAQ / Reference / Use Case Guide",
+          "title": "Hitachi Enables Real Time Analytics and Data Lake Platform for Manufacturing | Customer Story",
+          "type": "Customer Story",
           "campaign": "AI Data Foundation",
-          "useCase": "High Performance AI-Ready Infrastructure",
-          "url": "https://docs.hitachivantara.com/v/u/en-us/mk-sl-324/latest",
+          "useCase": "Data Readiness and Activation for AI",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/customer-story/hitachi-enables-real-time-analytics-data-lake-platform-manufacturing.pdf",
           "score": 3
         },
         {
@@ -412,11 +412,11 @@
           "score": 3
         },
         {
-          "title": "From Science Fiction to Factory Floor: The Physical AI Revolution Takes Shape",
-          "type": "Blog / Executive POV",
+          "title": "AI Discovery Service Booking Form Demo / Assessment / Tool / Offer",
+          "type": "Demo / Assessment / Tool / Offer",
           "campaign": "AI Data Foundation",
           "useCase": "High Performance AI-Ready Infrastructure",
-          "url": "https://www.hitachivantara.com/en-us/blog/from-science-fiction-factory-floor-physical-ai-revolution-takes-shape",
+          "url": "https://www.hitachivantara.com/en-us/company/contact-sales",
           "score": 3
         }
       ]
@@ -448,19 +448,19 @@
       "sourceRow": 8,
       "relatedResources": [
         {
-          "title": "Campaign Landing Page - AI Landing Page",
-          "type": "Landing Page",
+          "title": "Messaging Framework - AI Campaign Guide / Messaging Framework / Resource",
+          "type": "Campaign Guide / Messaging Framework / Resource",
           "campaign": "AI Data Foundation",
-          "useCase": "Data Readiness and Activation for AI, High Performance AI-Ready Infrastructure",
-          "url": "https://www.hitachivantara.com/en-us/featured/ai-data-foundation",
+          "useCase": "",
+          "url": "https://brand.hitachivantara.com/guidelines/guide/5babc977-3a32-4b5d-a934-1034a8dbfe60/page/4c3f8205-fa2d-4047-890a-47809fb9b196",
           "score": 3
         },
         {
-          "title": "Hitachi iQ with NVIDIA HGX",
-          "type": "FAQ / Reference / Use Case Guide",
+          "title": "Hitachi Enables Real Time Analytics and Data Lake Platform for Manufacturing | Customer Story",
+          "type": "Customer Story",
           "campaign": "AI Data Foundation",
-          "useCase": "High Performance AI-Ready Infrastructure",
-          "url": "https://docs.hitachivantara.com/v/u/en-us/mk-sl-324/latest",
+          "useCase": "Data Readiness and Activation for AI",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/customer-story/hitachi-enables-real-time-analytics-data-lake-platform-manufacturing.pdf",
           "score": 3
         },
         {
@@ -472,11 +472,11 @@
           "score": 3
         },
         {
-          "title": "From Science Fiction to Factory Floor: The Physical AI Revolution Takes Shape",
-          "type": "Blog / Executive POV",
+          "title": "AI Discovery Service Booking Form Demo / Assessment / Tool / Offer",
+          "type": "Demo / Assessment / Tool / Offer",
           "campaign": "AI Data Foundation",
           "useCase": "High Performance AI-Ready Infrastructure",
-          "url": "https://www.hitachivantara.com/en-us/blog/from-science-fiction-factory-floor-physical-ai-revolution-takes-shape",
+          "url": "https://www.hitachivantara.com/en-us/company/contact-sales",
           "score": 3
         }
       ]
@@ -508,19 +508,19 @@
       "sourceRow": 9,
       "relatedResources": [
         {
-          "title": "Campaign Landing Page - AI Landing Page",
-          "type": "Landing Page",
+          "title": "Messaging Framework - AI Campaign Guide / Messaging Framework / Resource",
+          "type": "Campaign Guide / Messaging Framework / Resource",
           "campaign": "AI Data Foundation",
-          "useCase": "Data Readiness and Activation for AI, High Performance AI-Ready Infrastructure",
-          "url": "https://www.hitachivantara.com/en-us/featured/ai-data-foundation",
+          "useCase": "",
+          "url": "https://brand.hitachivantara.com/guidelines/guide/5babc977-3a32-4b5d-a934-1034a8dbfe60/page/4c3f8205-fa2d-4047-890a-47809fb9b196",
           "score": 3
         },
         {
-          "title": "Hitachi iQ with NVIDIA HGX",
-          "type": "FAQ / Reference / Use Case Guide",
+          "title": "Hitachi Enables Real Time Analytics and Data Lake Platform for Manufacturing | Customer Story",
+          "type": "Customer Story",
           "campaign": "AI Data Foundation",
-          "useCase": "High Performance AI-Ready Infrastructure",
-          "url": "https://docs.hitachivantara.com/v/u/en-us/mk-sl-324/latest",
+          "useCase": "Data Readiness and Activation for AI",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/customer-story/hitachi-enables-real-time-analytics-data-lake-platform-manufacturing.pdf",
           "score": 3
         },
         {
@@ -532,11 +532,11 @@
           "score": 3
         },
         {
-          "title": "From Science Fiction to Factory Floor: The Physical AI Revolution Takes Shape",
-          "type": "Blog / Executive POV",
+          "title": "AI Discovery Service Booking Form Demo / Assessment / Tool / Offer",
+          "type": "Demo / Assessment / Tool / Offer",
           "campaign": "AI Data Foundation",
           "useCase": "High Performance AI-Ready Infrastructure",
-          "url": "https://www.hitachivantara.com/en-us/blog/from-science-fiction-factory-floor-physical-ai-revolution-takes-shape",
+          "url": "https://www.hitachivantara.com/en-us/company/contact-sales",
           "score": 3
         }
       ]
@@ -568,35 +568,35 @@
       "sourceRow": 10,
       "relatedResources": [
         {
-          "title": "Campaign Landing Page - DMR Landing Page",
-          "type": "Landing Page",
+          "title": "Messaging Framework - DMR Campaign Guide / Messaging Framework / Resource",
+          "type": "Campaign Guide / Messaging Framework / Resource",
           "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery, Data Platform Architectures & Economics, Hybrid Cloud Platform & Operations",
-          "url": "https://www.hitachivantara.com/en-us/featured/data-modernization-resilience",
+          "useCase": "",
+          "url": "https://brand.hitachivantara.com/guidelines/guide/fa011283-0c02-48c7-80a0-17744b115f06",
           "score": 3
         },
         {
-          "title": "Capacity on Demand Scalable Pay\u2011for\u2011Use Capacity",
-          "type": "Datasheet / Solution Brief / Technical",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.hitachivantara.com/en-us/pdfviewer/solution-profile/capacity-on-demand",
-          "score": 3
-        },
-        {
-          "title": "Top Ten Reasons Why Pay as You Grow With Capacity on Demand\nOn-premises baseline ownership plus on-demand expansion",
-          "type": "Top 10",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/datasheet/top-10-reasons-why-capacity-on-demand.pdf",
-          "score": 3
-        },
-        {
-          "title": "Cyber Resilience Beyond Traditional Security in the Age of Inevitable Breaches",
-          "type": "eBook/Whitepaper",
+          "title": "Rabobank Leads the Field With Compliance Discovery Search Time Reduced From Weeks to Hours With Hitachi Content Platform",
+          "type": "Customer Story",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/cyber-resilience-beyond-traditional.pdf",
+          "url": "https://www.hitachivantara.com/en-us/company/customer-stories/rabobank-case-study",
+          "score": 3
+        },
+        {
+          "title": "RWTH Aachen University Enhances Cybersecurity",
+          "type": "Customer Story",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Cyber Risk Mitigation & Recovery",
+          "url": "RWTH Aachen University Enhances Cybersecurity",
+          "score": 3
+        },
+        {
+          "title": "Shaping Outstanding Digital Learning Experiences with a Reliable, Easy-to-Manage Storage Platform",
+          "type": "Customer Story",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "https://www.hitachivantara.com/en-us/company/customer-stories/umhb-case-study",
           "score": 3
         }
       ]
@@ -628,35 +628,35 @@
       "sourceRow": 11,
       "relatedResources": [
         {
-          "title": "Campaign Landing Page - DMR Landing Page",
-          "type": "Landing Page",
+          "title": "Messaging Framework - DMR Campaign Guide / Messaging Framework / Resource",
+          "type": "Campaign Guide / Messaging Framework / Resource",
           "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery, Data Platform Architectures & Economics, Hybrid Cloud Platform & Operations",
-          "url": "https://www.hitachivantara.com/en-us/featured/data-modernization-resilience",
+          "useCase": "",
+          "url": "https://brand.hitachivantara.com/guidelines/guide/fa011283-0c02-48c7-80a0-17744b115f06",
           "score": 3
         },
         {
-          "title": "Capacity on Demand Scalable Pay\u2011for\u2011Use Capacity",
-          "type": "Datasheet / Solution Brief / Technical",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.hitachivantara.com/en-us/pdfviewer/solution-profile/capacity-on-demand",
-          "score": 3
-        },
-        {
-          "title": "Top Ten Reasons Why Pay as You Grow With Capacity on Demand\nOn-premises baseline ownership plus on-demand expansion",
-          "type": "Top 10",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/datasheet/top-10-reasons-why-capacity-on-demand.pdf",
-          "score": 3
-        },
-        {
-          "title": "Cyber Resilience Beyond Traditional Security in the Age of Inevitable Breaches",
-          "type": "eBook/Whitepaper",
+          "title": "Rabobank Leads the Field With Compliance Discovery Search Time Reduced From Weeks to Hours With Hitachi Content Platform",
+          "type": "Customer Story",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/cyber-resilience-beyond-traditional.pdf",
+          "url": "https://www.hitachivantara.com/en-us/company/customer-stories/rabobank-case-study",
+          "score": 3
+        },
+        {
+          "title": "RWTH Aachen University Enhances Cybersecurity",
+          "type": "Customer Story",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Cyber Risk Mitigation & Recovery",
+          "url": "RWTH Aachen University Enhances Cybersecurity",
+          "score": 3
+        },
+        {
+          "title": "Shaping Outstanding Digital Learning Experiences with a Reliable, Easy-to-Manage Storage Platform",
+          "type": "Customer Story",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "https://www.hitachivantara.com/en-us/company/customer-stories/umhb-case-study",
           "score": 3
         }
       ]
@@ -688,35 +688,35 @@
       "sourceRow": 12,
       "relatedResources": [
         {
-          "title": "Campaign Landing Page - DMR Landing Page",
-          "type": "Landing Page",
+          "title": "Messaging Framework - DMR Campaign Guide / Messaging Framework / Resource",
+          "type": "Campaign Guide / Messaging Framework / Resource",
           "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery, Data Platform Architectures & Economics, Hybrid Cloud Platform & Operations",
-          "url": "https://www.hitachivantara.com/en-us/featured/data-modernization-resilience",
+          "useCase": "",
+          "url": "https://brand.hitachivantara.com/guidelines/guide/fa011283-0c02-48c7-80a0-17744b115f06",
           "score": 3
         },
         {
-          "title": "Capacity on Demand Scalable Pay\u2011for\u2011Use Capacity",
-          "type": "Datasheet / Solution Brief / Technical",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.hitachivantara.com/en-us/pdfviewer/solution-profile/capacity-on-demand",
-          "score": 3
-        },
-        {
-          "title": "Top Ten Reasons Why Pay as You Grow With Capacity on Demand\nOn-premises baseline ownership plus on-demand expansion",
-          "type": "Top 10",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/datasheet/top-10-reasons-why-capacity-on-demand.pdf",
-          "score": 3
-        },
-        {
-          "title": "Cyber Resilience Beyond Traditional Security in the Age of Inevitable Breaches",
-          "type": "eBook/Whitepaper",
+          "title": "Rabobank Leads the Field With Compliance Discovery Search Time Reduced From Weeks to Hours With Hitachi Content Platform",
+          "type": "Customer Story",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/cyber-resilience-beyond-traditional.pdf",
+          "url": "https://www.hitachivantara.com/en-us/company/customer-stories/rabobank-case-study",
+          "score": 3
+        },
+        {
+          "title": "RWTH Aachen University Enhances Cybersecurity",
+          "type": "Customer Story",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Cyber Risk Mitigation & Recovery",
+          "url": "RWTH Aachen University Enhances Cybersecurity",
+          "score": 3
+        },
+        {
+          "title": "Shaping Outstanding Digital Learning Experiences with a Reliable, Easy-to-Manage Storage Platform",
+          "type": "Customer Story",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "https://www.hitachivantara.com/en-us/company/customer-stories/umhb-case-study",
           "score": 3
         }
       ]
