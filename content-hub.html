@@ -129,6 +129,8 @@ const FILTER_FIELDS = [
   {key:'usedInCampaign', label:'Used in Campaign'},
   {key:'promotionPeriod', label:'Promotion Period'},
   {key:'salesEmailStatus', label:'Sales Outreach Email'},
+  {key:'paidMediaStatus', label:'Paid Media'},
+  {key:'primaryActivationTags', label:'Primary Activation', multi:true, arrayField:true},
 ];
 let activeFilters = {};
 FILTER_FIELDS.forEach(f => activeFilters[f.key] = f.multi ? [] : 'All');
@@ -234,7 +236,11 @@ async function loadData(){
         const j = await r.json();
         if(Array.isArray(j.items)) DATA = j.items;
         if(j.lastRefreshed) LAST_REFRESHED = j.lastRefreshed;
-        DATA.forEach(it => { it.salesEmailStatus = it.salesEmail ? 'Available' : 'Not available'; });
+        DATA.forEach(it => {
+          it.salesEmailStatus = it.salesEmail ? 'Available' : 'Not available';
+          it.paidMediaStatus = it.paidMediaDate ? 'Yes' : 'No';
+          it.primaryActivationTags = it.primaryActivation ? it.primaryActivation.split(',').map(s=>s.trim()).filter(Boolean) : [];
+        });
       }
     }
   } catch(e){}
@@ -254,7 +260,9 @@ function updateSnapshotLabel(){
 }
 
 function uniqueValues(key){
-  return [...new Set(DATA.map(x => x[key]).filter(Boolean))].sort();
+  const vals = DATA.map(x => x[key]).filter(x => x != null && x !== '' && !(Array.isArray(x) && x.length===0));
+  if(vals.length && Array.isArray(vals[0])) return [...new Set(vals.flat())].sort();
+  return [...new Set(vals)].sort();
 }
 
 function makeFilterGroups(){
@@ -296,7 +304,11 @@ function filtered(){
     const qok = !q || hay.includes(q);
     const fok = FILTER_FIELDS.every(f => {
       const v = activeFilters[f.key];
-      if(f.multi) return !v.length || v.includes(item[f.key]);
+      if(f.multi){
+        if(!v.length) return true;
+        if(f.arrayField) return v.some(sel => (item[f.key]||[]).includes(sel));
+        return v.includes(item[f.key]);
+      }
       return v==='All' || item[f.key]===v;
     });
     return qok && fok;
