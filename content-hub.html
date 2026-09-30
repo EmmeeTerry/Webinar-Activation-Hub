@@ -128,10 +128,10 @@ const FILTER_FIELDS = [
   {key:'region', label:'Region'},
   {key:'usedInCampaign', label:'Used in Campaign'},
   {key:'promotionPeriod', label:'Promotion Period'},
-  {key:'salesEmailStatus', label:'Sales Outreach Email', fixedOptions:['Available','Not available']},
+  {key:'salesEmailStatus', label:'Sales Outreach Email'},
 ];
 let activeFilters = {};
-FILTER_FIELDS.forEach(f => activeFilters[f.key] = f.multi ? [] : (f.fixedOptions ? f.fixedOptions[0] : 'All'));
+FILTER_FIELDS.forEach(f => activeFilters[f.key] = f.multi ? [] : 'All');
 activeFilters.status = ['Live'];
 
 function esc(s){ return (s==null?'':String(s)).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
