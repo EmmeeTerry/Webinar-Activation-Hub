@@ -51,6 +51,9 @@ COLUMN_MAP = {
     "salesEmail":         "Sales Outreach Email",
     "usedInCampaign":     "Used in Campaign",
     "promotionPeriod":    "Promotion Period",
+    "ownerIndividual":    "Owner Individual",
+    "publishedByVendor":  "Published By (Vendor)",
+    "notes":              "Notes",
 }
 
 # Fields whose column is a hyperlink cell but where we want the visible text,
@@ -197,6 +200,9 @@ def fetch_content_rows(client, sheet_id):
             "salesEmail": clean_url(raw.get("salesEmail")),
             "usedInCampaign": "Yes" if truthy(raw.get("usedInCampaign")) else "No",
             "promotionPeriod": raw.get("promotionPeriod") or "",
+            "ownerIndividual": raw.get("ownerIndividual") or "",
+            "publishedByVendor": raw.get("publishedByVendor") or "",
+            "notes": raw.get("notes") or "",
         })
     return items
 
