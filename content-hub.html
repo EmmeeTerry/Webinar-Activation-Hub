@@ -162,14 +162,43 @@ function updateURL(){
   const newUrl = location.pathname + (qs ? '?' + qs : '');
   history.replaceState(null, '', newUrl);
 }
+function flashButton(btn, text){
+  const original = btn.textContent;
+  btn.textContent = text;
+  setTimeout(() => { btn.textContent = original; }, 2200);
+}
+function fallbackCopy(text, btn){
+  // Clipboard API is often blocked inside nested cross-origin iframes
+  // (e.g. SharePoint -> StructuredWeb -> GitHub Pages). Try an older
+  // textarea+execCommand approach next, then fall back to a manual prompt.
+  try {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.left = '-9999px';
+    document.body.appendChild(ta);
+    ta.focus();
+    ta.select();
+    const ok = document.execCommand('copy');
+    document.body.removeChild(ta);
+    if(ok){ flashButton(btn, 'Link copied!'); return; }
+  } catch(e) {}
+  // Last resort: show it so the person can copy manually.
+  window.prompt('Copy this link:', text);
+}
 function copyShareLink(){
   updateURL();
   const btn = document.getElementById('copyLinkBtn');
-  navigator.clipboard.writeText(location.href).then(() => {
-    const original = btn.textContent;
-    btn.textContent = 'Link copied!';
-    setTimeout(() => { btn.textContent = original; }, 1800);
-  });
+  const url = location.href;
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(url).then(() => {
+      flashButton(btn, 'Link copied!');
+    }).catch(() => {
+      fallbackCopy(url, btn);
+    });
+  } else {
+    fallbackCopy(url, btn);
+  }
 }
 
 // ---- CSV export of the currently filtered list ----
