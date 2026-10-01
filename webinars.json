@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-09-30T22:06:26.718660+00:00",
+  "lastRefreshed": "2026-10-01T00:09:29.029446+00:00",
   "webinars": [
     {
       "id": "the-economics-of-modern-storage-infrastructure-lower-risk-faster-ai-value-better-roi-webin",
@@ -28,22 +28,6 @@
       "sourceRow": 1,
       "relatedResources": [
         {
-          "title": "Rabobank Leads the Field With Compliance Discovery Search Time Reduced From Weeks to Hours With Hitachi Content Platform",
-          "type": "Customer Story",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/en-us/company/customer-stories/rabobank-case-study",
-          "score": 3
-        },
-        {
-          "title": "RWTH Aachen University Enhances Cybersecurity",
-          "type": "Customer Story",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "RWTH Aachen University Enhances Cybersecurity",
-          "score": 3
-        },
-        {
           "title": "Delivering Secure, Always-On Digital Services for Students, Faculty and Researchers",
           "type": "Customer Story",
           "campaign": "Data Modernization & Resilience",
@@ -52,11 +36,27 @@
           "score": 3
         },
         {
-          "title": "Simplify Compliance and Improve Productivity",
-          "type": "Customer Story",
+          "title": "Hitachi Vantara and Veeam for Cyber Resilience Enhancing Cyber Resilience While Improving Data Management",
+          "type": "3rd Party / Analyst Report",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/en-us/company/customer-stories/banco-de-brasilia-case-study",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/white-paper/hitachi-vantara-and-veeam-for-cyber-resilience.pdf",
+          "score": 3
+        },
+        {
+          "title": "MIT Tech Review: Adapting to New Threats with Proactive Cyber Risk Management 3rd Party / Analyst Report",
+          "type": "3rd Party / Analyst Report",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Cyber Risk Mitigation & Recovery",
+          "url": "https://www.hitachivantara.com/en-us/gated-forms/adapting-to-new-threats-with-proactive-risk-management",
+          "score": 3
+        },
+        {
+          "title": "Campaign Landing Page - DMR Landing Page",
+          "type": "Landing Page",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Cyber Risk Mitigation & Recovery, Data Platform Architectures & Economics, Hybrid Cloud Platform & Operations",
+          "url": "https://www.hitachivantara.com/en-us/featured/data-modernization-resilience",
           "score": 3
         }
       ]
@@ -112,11 +112,11 @@
           "score": 3
         },
         {
-          "title": "What\u2019s Next Is Not More AI. It\u2019s Better Foundations. | Blog / Executive POV",
-          "type": "Blog / Executive POV",
+          "title": "Hitachi Data Lakehouse - Reference Architecture | Campaign Guide / Messaging Framework / Resource",
+          "type": "Campaign Guide / Messaging Framework / Resource",
           "campaign": "AI Data Foundation",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.hitachivantara.com/en-us/blog/whats-next-is-not-more-ai-its-better-foundations",
+          "useCase": "Data Readiness and Activation for AI",
+          "url": "https://docs.hitachivantara.com/v/u/en-us/mk-sl-401/latest",
           "score": 3
         }
       ]
@@ -148,22 +148,6 @@
       "sourceRow": 3,
       "relatedResources": [
         {
-          "title": "Rabobank Leads the Field With Compliance Discovery Search Time Reduced From Weeks to Hours With Hitachi Content Platform",
-          "type": "Customer Story",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/en-us/company/customer-stories/rabobank-case-study",
-          "score": 3
-        },
-        {
-          "title": "RWTH Aachen University Enhances Cybersecurity",
-          "type": "Customer Story",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "RWTH Aachen University Enhances Cybersecurity",
-          "score": 3
-        },
-        {
           "title": "Delivering Secure, Always-On Digital Services for Students, Faculty and Researchers",
           "type": "Customer Story",
           "campaign": "Data Modernization & Resilience",
@@ -172,11 +156,27 @@
           "score": 3
         },
         {
-          "title": "Simplify Compliance and Improve Productivity",
-          "type": "Customer Story",
+          "title": "Hitachi Vantara and Veeam for Cyber Resilience Enhancing Cyber Resilience While Improving Data Management",
+          "type": "3rd Party / Analyst Report",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/en-us/company/customer-stories/banco-de-brasilia-case-study",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/white-paper/hitachi-vantara-and-veeam-for-cyber-resilience.pdf",
+          "score": 3
+        },
+        {
+          "title": "MIT Tech Review: Adapting to New Threats with Proactive Cyber Risk Management 3rd Party / Analyst Report",
+          "type": "3rd Party / Analyst Report",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Cyber Risk Mitigation & Recovery",
+          "url": "https://www.hitachivantara.com/en-us/gated-forms/adapting-to-new-threats-with-proactive-risk-management",
+          "score": 3
+        },
+        {
+          "title": "Campaign Landing Page - DMR Landing Page",
+          "type": "Landing Page",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Cyber Risk Mitigation & Recovery, Data Platform Architectures & Economics, Hybrid Cloud Platform & Operations",
+          "url": "https://www.hitachivantara.com/en-us/featured/data-modernization-resilience",
           "score": 3
         }
       ]
@@ -232,11 +232,11 @@
           "score": 3
         },
         {
-          "title": "What\u2019s Next Is Not More AI. It\u2019s Better Foundations. | Blog / Executive POV",
-          "type": "Blog / Executive POV",
+          "title": "Hitachi Data Lakehouse - Reference Architecture | Campaign Guide / Messaging Framework / Resource",
+          "type": "Campaign Guide / Messaging Framework / Resource",
           "campaign": "AI Data Foundation",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.hitachivantara.com/en-us/blog/whats-next-is-not-more-ai-its-better-foundations",
+          "useCase": "Data Readiness and Activation for AI",
+          "url": "https://docs.hitachivantara.com/v/u/en-us/mk-sl-401/latest",
           "score": 3
         }
       ]
@@ -268,22 +268,6 @@
       "sourceRow": 5,
       "relatedResources": [
         {
-          "title": "Rabobank Leads the Field With Compliance Discovery Search Time Reduced From Weeks to Hours With Hitachi Content Platform",
-          "type": "Customer Story",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/en-us/company/customer-stories/rabobank-case-study",
-          "score": 3
-        },
-        {
-          "title": "RWTH Aachen University Enhances Cybersecurity",
-          "type": "Customer Story",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "RWTH Aachen University Enhances Cybersecurity",
-          "score": 3
-        },
-        {
           "title": "Delivering Secure, Always-On Digital Services for Students, Faculty and Researchers",
           "type": "Customer Story",
           "campaign": "Data Modernization & Resilience",
@@ -292,11 +276,27 @@
           "score": 3
         },
         {
-          "title": "Simplify Compliance and Improve Productivity",
-          "type": "Customer Story",
+          "title": "Hitachi Vantara and Veeam for Cyber Resilience Enhancing Cyber Resilience While Improving Data Management",
+          "type": "3rd Party / Analyst Report",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/en-us/company/customer-stories/banco-de-brasilia-case-study",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/white-paper/hitachi-vantara-and-veeam-for-cyber-resilience.pdf",
+          "score": 3
+        },
+        {
+          "title": "MIT Tech Review: Adapting to New Threats with Proactive Cyber Risk Management 3rd Party / Analyst Report",
+          "type": "3rd Party / Analyst Report",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Cyber Risk Mitigation & Recovery",
+          "url": "https://www.hitachivantara.com/en-us/gated-forms/adapting-to-new-threats-with-proactive-risk-management",
+          "score": 3
+        },
+        {
+          "title": "Campaign Landing Page - DMR Landing Page",
+          "type": "Landing Page",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Cyber Risk Mitigation & Recovery, Data Platform Architectures & Economics, Hybrid Cloud Platform & Operations",
+          "url": "https://www.hitachivantara.com/en-us/featured/data-modernization-resilience",
           "score": 3
         }
       ]
@@ -328,22 +328,6 @@
       "sourceRow": 6,
       "relatedResources": [
         {
-          "title": "Rabobank Leads the Field With Compliance Discovery Search Time Reduced From Weeks to Hours With Hitachi Content Platform",
-          "type": "Customer Story",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/en-us/company/customer-stories/rabobank-case-study",
-          "score": 3
-        },
-        {
-          "title": "RWTH Aachen University Enhances Cybersecurity",
-          "type": "Customer Story",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "RWTH Aachen University Enhances Cybersecurity",
-          "score": 3
-        },
-        {
           "title": "Delivering Secure, Always-On Digital Services for Students, Faculty and Researchers",
           "type": "Customer Story",
           "campaign": "Data Modernization & Resilience",
@@ -352,11 +336,27 @@
           "score": 3
         },
         {
-          "title": "Simplify Compliance and Improve Productivity",
-          "type": "Customer Story",
+          "title": "Hitachi Vantara and Veeam for Cyber Resilience Enhancing Cyber Resilience While Improving Data Management",
+          "type": "3rd Party / Analyst Report",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/en-us/company/customer-stories/banco-de-brasilia-case-study",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/white-paper/hitachi-vantara-and-veeam-for-cyber-resilience.pdf",
+          "score": 3
+        },
+        {
+          "title": "MIT Tech Review: Adapting to New Threats with Proactive Cyber Risk Management 3rd Party / Analyst Report",
+          "type": "3rd Party / Analyst Report",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Cyber Risk Mitigation & Recovery",
+          "url": "https://www.hitachivantara.com/en-us/gated-forms/adapting-to-new-threats-with-proactive-risk-management",
+          "score": 3
+        },
+        {
+          "title": "Campaign Landing Page - DMR Landing Page",
+          "type": "Landing Page",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Cyber Risk Mitigation & Recovery, Data Platform Architectures & Economics, Hybrid Cloud Platform & Operations",
+          "url": "https://www.hitachivantara.com/en-us/featured/data-modernization-resilience",
           "score": 3
         }
       ]
@@ -412,11 +412,11 @@
           "score": 3
         },
         {
-          "title": "What\u2019s Next Is Not More AI. It\u2019s Better Foundations. | Blog / Executive POV",
-          "type": "Blog / Executive POV",
+          "title": "Hitachi Data Lakehouse - Reference Architecture | Campaign Guide / Messaging Framework / Resource",
+          "type": "Campaign Guide / Messaging Framework / Resource",
           "campaign": "AI Data Foundation",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.hitachivantara.com/en-us/blog/whats-next-is-not-more-ai-its-better-foundations",
+          "useCase": "Data Readiness and Activation for AI",
+          "url": "https://docs.hitachivantara.com/v/u/en-us/mk-sl-401/latest",
           "score": 3
         }
       ]
@@ -472,11 +472,11 @@
           "score": 3
         },
         {
-          "title": "What\u2019s Next Is Not More AI. It\u2019s Better Foundations. | Blog / Executive POV",
-          "type": "Blog / Executive POV",
+          "title": "Hitachi Data Lakehouse - Reference Architecture | Campaign Guide / Messaging Framework / Resource",
+          "type": "Campaign Guide / Messaging Framework / Resource",
           "campaign": "AI Data Foundation",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.hitachivantara.com/en-us/blog/whats-next-is-not-more-ai-its-better-foundations",
+          "useCase": "Data Readiness and Activation for AI",
+          "url": "https://docs.hitachivantara.com/v/u/en-us/mk-sl-401/latest",
           "score": 3
         }
       ]
@@ -532,11 +532,11 @@
           "score": 3
         },
         {
-          "title": "What\u2019s Next Is Not More AI. It\u2019s Better Foundations. | Blog / Executive POV",
-          "type": "Blog / Executive POV",
+          "title": "Hitachi Data Lakehouse - Reference Architecture | Campaign Guide / Messaging Framework / Resource",
+          "type": "Campaign Guide / Messaging Framework / Resource",
           "campaign": "AI Data Foundation",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.hitachivantara.com/en-us/blog/whats-next-is-not-more-ai-its-better-foundations",
+          "useCase": "Data Readiness and Activation for AI",
+          "url": "https://docs.hitachivantara.com/v/u/en-us/mk-sl-401/latest",
           "score": 3
         }
       ]
@@ -568,22 +568,6 @@
       "sourceRow": 10,
       "relatedResources": [
         {
-          "title": "Rabobank Leads the Field With Compliance Discovery Search Time Reduced From Weeks to Hours With Hitachi Content Platform",
-          "type": "Customer Story",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/en-us/company/customer-stories/rabobank-case-study",
-          "score": 3
-        },
-        {
-          "title": "RWTH Aachen University Enhances Cybersecurity",
-          "type": "Customer Story",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "RWTH Aachen University Enhances Cybersecurity",
-          "score": 3
-        },
-        {
           "title": "Delivering Secure, Always-On Digital Services for Students, Faculty and Researchers",
           "type": "Customer Story",
           "campaign": "Data Modernization & Resilience",
@@ -592,11 +576,27 @@
           "score": 3
         },
         {
-          "title": "Simplify Compliance and Improve Productivity",
-          "type": "Customer Story",
+          "title": "Hitachi Vantara and Veeam for Cyber Resilience Enhancing Cyber Resilience While Improving Data Management",
+          "type": "3rd Party / Analyst Report",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/en-us/company/customer-stories/banco-de-brasilia-case-study",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/white-paper/hitachi-vantara-and-veeam-for-cyber-resilience.pdf",
+          "score": 3
+        },
+        {
+          "title": "MIT Tech Review: Adapting to New Threats with Proactive Cyber Risk Management 3rd Party / Analyst Report",
+          "type": "3rd Party / Analyst Report",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Cyber Risk Mitigation & Recovery",
+          "url": "https://www.hitachivantara.com/en-us/gated-forms/adapting-to-new-threats-with-proactive-risk-management",
+          "score": 3
+        },
+        {
+          "title": "Campaign Landing Page - DMR Landing Page",
+          "type": "Landing Page",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Cyber Risk Mitigation & Recovery, Data Platform Architectures & Economics, Hybrid Cloud Platform & Operations",
+          "url": "https://www.hitachivantara.com/en-us/featured/data-modernization-resilience",
           "score": 3
         }
       ]
@@ -628,22 +628,6 @@
       "sourceRow": 11,
       "relatedResources": [
         {
-          "title": "Rabobank Leads the Field With Compliance Discovery Search Time Reduced From Weeks to Hours With Hitachi Content Platform",
-          "type": "Customer Story",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/en-us/company/customer-stories/rabobank-case-study",
-          "score": 3
-        },
-        {
-          "title": "RWTH Aachen University Enhances Cybersecurity",
-          "type": "Customer Story",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "RWTH Aachen University Enhances Cybersecurity",
-          "score": 3
-        },
-        {
           "title": "Delivering Secure, Always-On Digital Services for Students, Faculty and Researchers",
           "type": "Customer Story",
           "campaign": "Data Modernization & Resilience",
@@ -652,11 +636,27 @@
           "score": 3
         },
         {
-          "title": "Simplify Compliance and Improve Productivity",
-          "type": "Customer Story",
+          "title": "Hitachi Vantara and Veeam for Cyber Resilience Enhancing Cyber Resilience While Improving Data Management",
+          "type": "3rd Party / Analyst Report",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/en-us/company/customer-stories/banco-de-brasilia-case-study",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/white-paper/hitachi-vantara-and-veeam-for-cyber-resilience.pdf",
+          "score": 3
+        },
+        {
+          "title": "MIT Tech Review: Adapting to New Threats with Proactive Cyber Risk Management 3rd Party / Analyst Report",
+          "type": "3rd Party / Analyst Report",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Cyber Risk Mitigation & Recovery",
+          "url": "https://www.hitachivantara.com/en-us/gated-forms/adapting-to-new-threats-with-proactive-risk-management",
+          "score": 3
+        },
+        {
+          "title": "Campaign Landing Page - DMR Landing Page",
+          "type": "Landing Page",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Cyber Risk Mitigation & Recovery, Data Platform Architectures & Economics, Hybrid Cloud Platform & Operations",
+          "url": "https://www.hitachivantara.com/en-us/featured/data-modernization-resilience",
           "score": 3
         }
       ]
@@ -688,22 +688,6 @@
       "sourceRow": 12,
       "relatedResources": [
         {
-          "title": "Rabobank Leads the Field With Compliance Discovery Search Time Reduced From Weeks to Hours With Hitachi Content Platform",
-          "type": "Customer Story",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/en-us/company/customer-stories/rabobank-case-study",
-          "score": 3
-        },
-        {
-          "title": "RWTH Aachen University Enhances Cybersecurity",
-          "type": "Customer Story",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "RWTH Aachen University Enhances Cybersecurity",
-          "score": 3
-        },
-        {
           "title": "Delivering Secure, Always-On Digital Services for Students, Faculty and Researchers",
           "type": "Customer Story",
           "campaign": "Data Modernization & Resilience",
@@ -712,11 +696,27 @@
           "score": 3
         },
         {
-          "title": "Simplify Compliance and Improve Productivity",
-          "type": "Customer Story",
+          "title": "Hitachi Vantara and Veeam for Cyber Resilience Enhancing Cyber Resilience While Improving Data Management",
+          "type": "3rd Party / Analyst Report",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/en-us/company/customer-stories/banco-de-brasilia-case-study",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/white-paper/hitachi-vantara-and-veeam-for-cyber-resilience.pdf",
+          "score": 3
+        },
+        {
+          "title": "MIT Tech Review: Adapting to New Threats with Proactive Cyber Risk Management 3rd Party / Analyst Report",
+          "type": "3rd Party / Analyst Report",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Cyber Risk Mitigation & Recovery",
+          "url": "https://www.hitachivantara.com/en-us/gated-forms/adapting-to-new-threats-with-proactive-risk-management",
+          "score": 3
+        },
+        {
+          "title": "Campaign Landing Page - DMR Landing Page",
+          "type": "Landing Page",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Cyber Risk Mitigation & Recovery, Data Platform Architectures & Economics, Hybrid Cloud Platform & Operations",
+          "url": "https://www.hitachivantara.com/en-us/featured/data-modernization-resilience",
           "score": 3
         }
       ]
