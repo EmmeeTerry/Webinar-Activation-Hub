@@ -264,10 +264,10 @@ function render(){
 }
 function renderSpotlight(){
  const now=new Date();
- const withDates=DATA.filter(w=>w.date);
- const future=withDates.filter(w=>new Date(w.date+'T12:00:00')>=now).sort((a,b)=>a.date.localeCompare(b.date));
- const past=withDates.filter(w=>new Date(w.date+'T12:00:00')<now).sort((a,b)=>b.date.localeCompare(a.date));
  const todayStr=now.getFullYear()+'-'+String(now.getMonth()+1).padStart(2,'0')+'-'+String(now.getDate()).padStart(2,'0');
+ const withDates=DATA.filter(w=>w.date);
+ const future=withDates.filter(w=>w.date>todayStr).sort((a,b)=>a.date.localeCompare(b.date));
+ const past=withDates.filter(w=>w.date<todayStr).sort((a,b)=>b.date.localeCompare(a.date));
  const happeningToday=withDates.find(w=>w.date===todayStr);
 
  const next=future.find(w=>w.status==='Upcoming')||future[0];
@@ -284,7 +284,7 @@ function renderSpotlight(){
 
  document.getElementById('spotlight').innerHTML =
    block(happeningToday?'Happening today':'Most recent', current) +
-   block('Coming up next', next===current?null:next);
+   block('Coming up next', next);
 }
 function openModal(id){
  const w=DATA.find(x=>x.id===id); if(!w)return;
