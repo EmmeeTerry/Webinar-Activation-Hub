@@ -413,10 +413,10 @@ function render(){
 document.getElementById('search').addEventListener('input', () => { updateURL(); render(); });
 function renderSpotlight(){
   const now = new Date();
-  const withDates = DATA.filter(x => x.publishDate);
-  const future = withDates.filter(x => new Date(x.publishDate+'T12:00:00') >= now).sort((a,b) => a.publishDate.localeCompare(b.publishDate));
-  const past = withDates.filter(x => new Date(x.publishDate+'T12:00:00') < now).sort((a,b) => b.publishDate.localeCompare(a.publishDate));
   const todayStr = now.getFullYear() + '-' + String(now.getMonth()+1).padStart(2,'0') + '-' + String(now.getDate()).padStart(2,'0');
+  const withDates = DATA.filter(x => x.publishDate);
+  const future = withDates.filter(x => x.publishDate > todayStr).sort((a,b) => a.publishDate.localeCompare(b.publishDate));
+  const past = withDates.filter(x => x.publishDate < todayStr).sort((a,b) => b.publishDate.localeCompare(a.publishDate));
   const publishingToday = withDates.find(x => x.publishDate === todayStr);
 
   const next = future[0];
@@ -434,7 +434,7 @@ function renderSpotlight(){
 
   document.getElementById('spotlight').innerHTML =
     block(publishingToday ? 'Published today' : 'Most recently published', recent) +
-    block('Coming up next', next===recent ? null : next);
+    block('Coming up next', next);
 }
 function init(){ applyFiltersFromURL(); makeFilterGroups(); render(); renderSpotlight(); }
 loadData();
