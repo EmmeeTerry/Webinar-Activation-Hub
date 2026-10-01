@@ -416,7 +416,7 @@ function renderSpotlight(){
   const withDates = DATA.filter(x => x.publishDate);
   const future = withDates.filter(x => new Date(x.publishDate+'T12:00:00') >= now).sort((a,b) => a.publishDate.localeCompare(b.publishDate));
   const past = withDates.filter(x => new Date(x.publishDate+'T12:00:00') < now).sort((a,b) => b.publishDate.localeCompare(a.publishDate));
-  const todayStr = now.toISOString().slice(0,10);
+  const todayStr = now.getFullYear() + '-' + String(now.getMonth()+1).padStart(2,'0') + '-' + String(now.getDate()).padStart(2,'0');
   const publishingToday = withDates.find(x => x.publishDate === todayStr);
 
   const next = future[0];
