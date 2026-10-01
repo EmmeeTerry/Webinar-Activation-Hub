@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-10-01T00:09:29.029446+00:00",
+  "lastRefreshed": "2026-10-01T02:07:19.103882+00:00",
   "webinars": [
     {
       "id": "the-economics-of-modern-storage-infrastructure-lower-risk-faster-ai-value-better-roi-webin",
@@ -28,14 +28,6 @@
       "sourceRow": 1,
       "relatedResources": [
         {
-          "title": "Delivering Secure, Always-On Digital Services for Students, Faculty and Researchers",
-          "type": "Customer Story",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/en-us/company/customer-stories/university-of-kent-customer-story",
-          "score": 3
-        },
-        {
           "title": "Hitachi Vantara and Veeam for Cyber Resilience Enhancing Cyber Resilience While Improving Data Management",
           "type": "3rd Party / Analyst Report",
           "campaign": "Data Modernization & Resilience",
@@ -52,11 +44,19 @@
           "score": 3
         },
         {
-          "title": "Campaign Landing Page - DMR Landing Page",
-          "type": "Landing Page",
+          "title": "451 Research: Modernizing Mission-Critical Storage Analyst Report | 3rd Party / Analyst Report",
+          "type": "3rd Party / Analyst Report",
           "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery, Data Platform Architectures & Economics, Hybrid Cloud Platform & Operations",
-          "url": "https://www.hitachivantara.com/en-us/featured/data-modernization-resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "https://www.hitachivantara.com/en-us/gated-forms/451-research-pathfinder-report-modernizing-mission-critical-storage",
+          "score": 3
+        },
+        {
+          "title": "Omdia: The Five New Essentials for Data Storage Platforms | 3rd Party / Analyst Report",
+          "type": "3rd Party / Analyst Report",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/analyst-content/omdia-ebook-five-new-essentials-for-data-storage-platforms.pdf",
           "score": 3
         }
       ]
@@ -96,27 +96,27 @@
           "score": 3
         },
         {
-          "title": "The Threats We See. The Risks We Don't",
-          "type": "Blog / Executive POV",
-          "campaign": "AI Data Foundation",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/en-us/blog/threats-we-see-risks-we-dont",
-          "score": 3
-        },
-        {
-          "title": "IT Decision-Making, Budget, and Geopolitical Risk | Blog / Executive POV",
-          "type": "Blog / Executive POV",
-          "campaign": "AI Data Foundation",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "IT Decision-Making, Budget, and Geopolitical Risk",
-          "score": 3
-        },
-        {
-          "title": "Hitachi Data Lakehouse - Reference Architecture | Campaign Guide / Messaging Framework / Resource",
-          "type": "Campaign Guide / Messaging Framework / Resource",
+          "title": "2025 GigaOm Rader for High-Perfomance Storage Optimized for AI Workloads | 3rd Party / Analyst Report",
+          "type": "3rd Party / Analyst Report",
           "campaign": "AI Data Foundation",
           "useCase": "Data Readiness and Activation for AI",
-          "url": "https://docs.hitachivantara.com/v/u/en-us/mk-sl-401/latest",
+          "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-ai-storage-radar",
+          "score": 3
+        },
+        {
+          "title": "2026 GigaOm for Unstructured Data Management (UDM) | 3rd Party / Analyst Report",
+          "type": "3rd Party / Analyst Report",
+          "campaign": "AI Data Foundation",
+          "useCase": "Data Readiness and Activation for AI",
+          "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-unstructured-data-management-2026",
+          "score": 3
+        },
+        {
+          "title": "2026 GigaOm Rader for Object Storage Analyst Report | 3rd Party / Analyst Report",
+          "type": "3rd Party / Analyst Report",
+          "campaign": "AI Data Foundation",
+          "useCase": "Data Readiness and Activation for AI",
+          "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-radar-for-object-storage",
           "score": 3
         }
       ]
@@ -148,14 +148,6 @@
       "sourceRow": 3,
       "relatedResources": [
         {
-          "title": "Delivering Secure, Always-On Digital Services for Students, Faculty and Researchers",
-          "type": "Customer Story",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/en-us/company/customer-stories/university-of-kent-customer-story",
-          "score": 3
-        },
-        {
           "title": "Hitachi Vantara and Veeam for Cyber Resilience Enhancing Cyber Resilience While Improving Data Management",
           "type": "3rd Party / Analyst Report",
           "campaign": "Data Modernization & Resilience",
@@ -172,11 +164,19 @@
           "score": 3
         },
         {
-          "title": "Campaign Landing Page - DMR Landing Page",
-          "type": "Landing Page",
+          "title": "451 Research: Modernizing Mission-Critical Storage Analyst Report | 3rd Party / Analyst Report",
+          "type": "3rd Party / Analyst Report",
           "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery, Data Platform Architectures & Economics, Hybrid Cloud Platform & Operations",
-          "url": "https://www.hitachivantara.com/en-us/featured/data-modernization-resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "https://www.hitachivantara.com/en-us/gated-forms/451-research-pathfinder-report-modernizing-mission-critical-storage",
+          "score": 3
+        },
+        {
+          "title": "Omdia: The Five New Essentials for Data Storage Platforms | 3rd Party / Analyst Report",
+          "type": "3rd Party / Analyst Report",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/analyst-content/omdia-ebook-five-new-essentials-for-data-storage-platforms.pdf",
           "score": 3
         }
       ]
@@ -216,27 +216,27 @@
           "score": 3
         },
         {
-          "title": "The Threats We See. The Risks We Don't",
-          "type": "Blog / Executive POV",
-          "campaign": "AI Data Foundation",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/en-us/blog/threats-we-see-risks-we-dont",
-          "score": 3
-        },
-        {
-          "title": "IT Decision-Making, Budget, and Geopolitical Risk | Blog / Executive POV",
-          "type": "Blog / Executive POV",
-          "campaign": "AI Data Foundation",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "IT Decision-Making, Budget, and Geopolitical Risk",
-          "score": 3
-        },
-        {
-          "title": "Hitachi Data Lakehouse - Reference Architecture | Campaign Guide / Messaging Framework / Resource",
-          "type": "Campaign Guide / Messaging Framework / Resource",
+          "title": "2025 GigaOm Rader for High-Perfomance Storage Optimized for AI Workloads | 3rd Party / Analyst Report",
+          "type": "3rd Party / Analyst Report",
           "campaign": "AI Data Foundation",
           "useCase": "Data Readiness and Activation for AI",
-          "url": "https://docs.hitachivantara.com/v/u/en-us/mk-sl-401/latest",
+          "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-ai-storage-radar",
+          "score": 3
+        },
+        {
+          "title": "2026 GigaOm for Unstructured Data Management (UDM) | 3rd Party / Analyst Report",
+          "type": "3rd Party / Analyst Report",
+          "campaign": "AI Data Foundation",
+          "useCase": "Data Readiness and Activation for AI",
+          "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-unstructured-data-management-2026",
+          "score": 3
+        },
+        {
+          "title": "2026 GigaOm Rader for Object Storage Analyst Report | 3rd Party / Analyst Report",
+          "type": "3rd Party / Analyst Report",
+          "campaign": "AI Data Foundation",
+          "useCase": "Data Readiness and Activation for AI",
+          "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-radar-for-object-storage",
           "score": 3
         }
       ]
@@ -268,14 +268,6 @@
       "sourceRow": 5,
       "relatedResources": [
         {
-          "title": "Delivering Secure, Always-On Digital Services for Students, Faculty and Researchers",
-          "type": "Customer Story",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/en-us/company/customer-stories/university-of-kent-customer-story",
-          "score": 3
-        },
-        {
           "title": "Hitachi Vantara and Veeam for Cyber Resilience Enhancing Cyber Resilience While Improving Data Management",
           "type": "3rd Party / Analyst Report",
           "campaign": "Data Modernization & Resilience",
@@ -292,11 +284,19 @@
           "score": 3
         },
         {
-          "title": "Campaign Landing Page - DMR Landing Page",
-          "type": "Landing Page",
+          "title": "451 Research: Modernizing Mission-Critical Storage Analyst Report | 3rd Party / Analyst Report",
+          "type": "3rd Party / Analyst Report",
           "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery, Data Platform Architectures & Economics, Hybrid Cloud Platform & Operations",
-          "url": "https://www.hitachivantara.com/en-us/featured/data-modernization-resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "https://www.hitachivantara.com/en-us/gated-forms/451-research-pathfinder-report-modernizing-mission-critical-storage",
+          "score": 3
+        },
+        {
+          "title": "Omdia: The Five New Essentials for Data Storage Platforms | 3rd Party / Analyst Report",
+          "type": "3rd Party / Analyst Report",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/analyst-content/omdia-ebook-five-new-essentials-for-data-storage-platforms.pdf",
           "score": 3
         }
       ]
@@ -328,14 +328,6 @@
       "sourceRow": 6,
       "relatedResources": [
         {
-          "title": "Delivering Secure, Always-On Digital Services for Students, Faculty and Researchers",
-          "type": "Customer Story",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/en-us/company/customer-stories/university-of-kent-customer-story",
-          "score": 3
-        },
-        {
           "title": "Hitachi Vantara and Veeam for Cyber Resilience Enhancing Cyber Resilience While Improving Data Management",
           "type": "3rd Party / Analyst Report",
           "campaign": "Data Modernization & Resilience",
@@ -352,11 +344,19 @@
           "score": 3
         },
         {
-          "title": "Campaign Landing Page - DMR Landing Page",
-          "type": "Landing Page",
+          "title": "451 Research: Modernizing Mission-Critical Storage Analyst Report | 3rd Party / Analyst Report",
+          "type": "3rd Party / Analyst Report",
           "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery, Data Platform Architectures & Economics, Hybrid Cloud Platform & Operations",
-          "url": "https://www.hitachivantara.com/en-us/featured/data-modernization-resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "https://www.hitachivantara.com/en-us/gated-forms/451-research-pathfinder-report-modernizing-mission-critical-storage",
+          "score": 3
+        },
+        {
+          "title": "Omdia: The Five New Essentials for Data Storage Platforms | 3rd Party / Analyst Report",
+          "type": "3rd Party / Analyst Report",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/analyst-content/omdia-ebook-five-new-essentials-for-data-storage-platforms.pdf",
           "score": 3
         }
       ]
@@ -396,27 +396,27 @@
           "score": 3
         },
         {
-          "title": "The Threats We See. The Risks We Don't",
-          "type": "Blog / Executive POV",
-          "campaign": "AI Data Foundation",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/en-us/blog/threats-we-see-risks-we-dont",
-          "score": 3
-        },
-        {
-          "title": "IT Decision-Making, Budget, and Geopolitical Risk | Blog / Executive POV",
-          "type": "Blog / Executive POV",
-          "campaign": "AI Data Foundation",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "IT Decision-Making, Budget, and Geopolitical Risk",
-          "score": 3
-        },
-        {
-          "title": "Hitachi Data Lakehouse - Reference Architecture | Campaign Guide / Messaging Framework / Resource",
-          "type": "Campaign Guide / Messaging Framework / Resource",
+          "title": "2025 GigaOm Rader for High-Perfomance Storage Optimized for AI Workloads | 3rd Party / Analyst Report",
+          "type": "3rd Party / Analyst Report",
           "campaign": "AI Data Foundation",
           "useCase": "Data Readiness and Activation for AI",
-          "url": "https://docs.hitachivantara.com/v/u/en-us/mk-sl-401/latest",
+          "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-ai-storage-radar",
+          "score": 3
+        },
+        {
+          "title": "2026 GigaOm for Unstructured Data Management (UDM) | 3rd Party / Analyst Report",
+          "type": "3rd Party / Analyst Report",
+          "campaign": "AI Data Foundation",
+          "useCase": "Data Readiness and Activation for AI",
+          "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-unstructured-data-management-2026",
+          "score": 3
+        },
+        {
+          "title": "2026 GigaOm Rader for Object Storage Analyst Report | 3rd Party / Analyst Report",
+          "type": "3rd Party / Analyst Report",
+          "campaign": "AI Data Foundation",
+          "useCase": "Data Readiness and Activation for AI",
+          "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-radar-for-object-storage",
           "score": 3
         }
       ]
@@ -456,27 +456,27 @@
           "score": 3
         },
         {
-          "title": "The Threats We See. The Risks We Don't",
-          "type": "Blog / Executive POV",
-          "campaign": "AI Data Foundation",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/en-us/blog/threats-we-see-risks-we-dont",
-          "score": 3
-        },
-        {
-          "title": "IT Decision-Making, Budget, and Geopolitical Risk | Blog / Executive POV",
-          "type": "Blog / Executive POV",
-          "campaign": "AI Data Foundation",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "IT Decision-Making, Budget, and Geopolitical Risk",
-          "score": 3
-        },
-        {
-          "title": "Hitachi Data Lakehouse - Reference Architecture | Campaign Guide / Messaging Framework / Resource",
-          "type": "Campaign Guide / Messaging Framework / Resource",
+          "title": "2025 GigaOm Rader for High-Perfomance Storage Optimized for AI Workloads | 3rd Party / Analyst Report",
+          "type": "3rd Party / Analyst Report",
           "campaign": "AI Data Foundation",
           "useCase": "Data Readiness and Activation for AI",
-          "url": "https://docs.hitachivantara.com/v/u/en-us/mk-sl-401/latest",
+          "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-ai-storage-radar",
+          "score": 3
+        },
+        {
+          "title": "2026 GigaOm for Unstructured Data Management (UDM) | 3rd Party / Analyst Report",
+          "type": "3rd Party / Analyst Report",
+          "campaign": "AI Data Foundation",
+          "useCase": "Data Readiness and Activation for AI",
+          "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-unstructured-data-management-2026",
+          "score": 3
+        },
+        {
+          "title": "2026 GigaOm Rader for Object Storage Analyst Report | 3rd Party / Analyst Report",
+          "type": "3rd Party / Analyst Report",
+          "campaign": "AI Data Foundation",
+          "useCase": "Data Readiness and Activation for AI",
+          "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-radar-for-object-storage",
           "score": 3
         }
       ]
@@ -516,27 +516,27 @@
           "score": 3
         },
         {
-          "title": "The Threats We See. The Risks We Don't",
-          "type": "Blog / Executive POV",
-          "campaign": "AI Data Foundation",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/en-us/blog/threats-we-see-risks-we-dont",
-          "score": 3
-        },
-        {
-          "title": "IT Decision-Making, Budget, and Geopolitical Risk | Blog / Executive POV",
-          "type": "Blog / Executive POV",
-          "campaign": "AI Data Foundation",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "IT Decision-Making, Budget, and Geopolitical Risk",
-          "score": 3
-        },
-        {
-          "title": "Hitachi Data Lakehouse - Reference Architecture | Campaign Guide / Messaging Framework / Resource",
-          "type": "Campaign Guide / Messaging Framework / Resource",
+          "title": "2025 GigaOm Rader for High-Perfomance Storage Optimized for AI Workloads | 3rd Party / Analyst Report",
+          "type": "3rd Party / Analyst Report",
           "campaign": "AI Data Foundation",
           "useCase": "Data Readiness and Activation for AI",
-          "url": "https://docs.hitachivantara.com/v/u/en-us/mk-sl-401/latest",
+          "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-ai-storage-radar",
+          "score": 3
+        },
+        {
+          "title": "2026 GigaOm for Unstructured Data Management (UDM) | 3rd Party / Analyst Report",
+          "type": "3rd Party / Analyst Report",
+          "campaign": "AI Data Foundation",
+          "useCase": "Data Readiness and Activation for AI",
+          "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-unstructured-data-management-2026",
+          "score": 3
+        },
+        {
+          "title": "2026 GigaOm Rader for Object Storage Analyst Report | 3rd Party / Analyst Report",
+          "type": "3rd Party / Analyst Report",
+          "campaign": "AI Data Foundation",
+          "useCase": "Data Readiness and Activation for AI",
+          "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-radar-for-object-storage",
           "score": 3
         }
       ]
@@ -568,14 +568,6 @@
       "sourceRow": 10,
       "relatedResources": [
         {
-          "title": "Delivering Secure, Always-On Digital Services for Students, Faculty and Researchers",
-          "type": "Customer Story",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/en-us/company/customer-stories/university-of-kent-customer-story",
-          "score": 3
-        },
-        {
           "title": "Hitachi Vantara and Veeam for Cyber Resilience Enhancing Cyber Resilience While Improving Data Management",
           "type": "3rd Party / Analyst Report",
           "campaign": "Data Modernization & Resilience",
@@ -592,11 +584,19 @@
           "score": 3
         },
         {
-          "title": "Campaign Landing Page - DMR Landing Page",
-          "type": "Landing Page",
+          "title": "451 Research: Modernizing Mission-Critical Storage Analyst Report | 3rd Party / Analyst Report",
+          "type": "3rd Party / Analyst Report",
           "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery, Data Platform Architectures & Economics, Hybrid Cloud Platform & Operations",
-          "url": "https://www.hitachivantara.com/en-us/featured/data-modernization-resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "https://www.hitachivantara.com/en-us/gated-forms/451-research-pathfinder-report-modernizing-mission-critical-storage",
+          "score": 3
+        },
+        {
+          "title": "Omdia: The Five New Essentials for Data Storage Platforms | 3rd Party / Analyst Report",
+          "type": "3rd Party / Analyst Report",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/analyst-content/omdia-ebook-five-new-essentials-for-data-storage-platforms.pdf",
           "score": 3
         }
       ]
@@ -628,14 +628,6 @@
       "sourceRow": 11,
       "relatedResources": [
         {
-          "title": "Delivering Secure, Always-On Digital Services for Students, Faculty and Researchers",
-          "type": "Customer Story",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/en-us/company/customer-stories/university-of-kent-customer-story",
-          "score": 3
-        },
-        {
           "title": "Hitachi Vantara and Veeam for Cyber Resilience Enhancing Cyber Resilience While Improving Data Management",
           "type": "3rd Party / Analyst Report",
           "campaign": "Data Modernization & Resilience",
@@ -652,11 +644,19 @@
           "score": 3
         },
         {
-          "title": "Campaign Landing Page - DMR Landing Page",
-          "type": "Landing Page",
+          "title": "451 Research: Modernizing Mission-Critical Storage Analyst Report | 3rd Party / Analyst Report",
+          "type": "3rd Party / Analyst Report",
           "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery, Data Platform Architectures & Economics, Hybrid Cloud Platform & Operations",
-          "url": "https://www.hitachivantara.com/en-us/featured/data-modernization-resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "https://www.hitachivantara.com/en-us/gated-forms/451-research-pathfinder-report-modernizing-mission-critical-storage",
+          "score": 3
+        },
+        {
+          "title": "Omdia: The Five New Essentials for Data Storage Platforms | 3rd Party / Analyst Report",
+          "type": "3rd Party / Analyst Report",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/analyst-content/omdia-ebook-five-new-essentials-for-data-storage-platforms.pdf",
           "score": 3
         }
       ]
@@ -688,14 +688,6 @@
       "sourceRow": 12,
       "relatedResources": [
         {
-          "title": "Delivering Secure, Always-On Digital Services for Students, Faculty and Researchers",
-          "type": "Customer Story",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/en-us/company/customer-stories/university-of-kent-customer-story",
-          "score": 3
-        },
-        {
           "title": "Hitachi Vantara and Veeam for Cyber Resilience Enhancing Cyber Resilience While Improving Data Management",
           "type": "3rd Party / Analyst Report",
           "campaign": "Data Modernization & Resilience",
@@ -712,11 +704,19 @@
           "score": 3
         },
         {
-          "title": "Campaign Landing Page - DMR Landing Page",
-          "type": "Landing Page",
+          "title": "451 Research: Modernizing Mission-Critical Storage Analyst Report | 3rd Party / Analyst Report",
+          "type": "3rd Party / Analyst Report",
           "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery, Data Platform Architectures & Economics, Hybrid Cloud Platform & Operations",
-          "url": "https://www.hitachivantara.com/en-us/featured/data-modernization-resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "https://www.hitachivantara.com/en-us/gated-forms/451-research-pathfinder-report-modernizing-mission-critical-storage",
+          "score": 3
+        },
+        {
+          "title": "Omdia: The Five New Essentials for Data Storage Platforms | 3rd Party / Analyst Report",
+          "type": "3rd Party / Analyst Report",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/analyst-content/omdia-ebook-five-new-essentials-for-data-storage-platforms.pdf",
           "score": 3
         }
       ]
