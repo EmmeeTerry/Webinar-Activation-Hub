@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-10-01T16:07:27.556881+00:00",
+  "lastRefreshed": "2026-10-01T18:09:57.081617+00:00",
   "webinars": [
     {
       "id": "the-economics-of-modern-storage-infrastructure-lower-risk-faster-ai-value-better-roi-webin",
@@ -28,11 +28,11 @@
       "sourceRow": 1,
       "relatedResources": [
         {
-          "title": "Hitachi Vantara and Veeam for Cyber Resilience Enhancing Cyber Resilience While Improving Data Management",
-          "type": "3rd Party / Analyst Report",
+          "title": "Cyber Resilience For Dummies eBook eBook/Whitepaper",
+          "type": "eBook/Whitepaper",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/white-paper/hitachi-vantara-and-veeam-for-cyber-resilience.pdf",
+          "url": "https://www.hitachivantara.com/en-us/gated-forms/cyber-resilience-for-dummies",
           "score": 3
         },
         {
@@ -44,19 +44,19 @@
           "score": 3
         },
         {
-          "title": "451 Research: Modernizing Mission-Critical Storage Analyst Report | 3rd Party / Analyst Report",
-          "type": "3rd Party / Analyst Report",
+          "title": "2 Additional Customer Story Videos - Estako + 1 other | Video",
+          "type": "Video",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/451-research-pathfinder-report-modernizing-mission-critical-storage",
+          "url": "2 Additional Customer Story Videos - Estako + 1 other",
           "score": 3
         },
         {
-          "title": "Omdia: The Five New Essentials for Data Storage Platforms | 3rd Party / Analyst Report",
-          "type": "3rd Party / Analyst Report",
+          "title": "Hitachi in Gartner Primary Storage Platforms MQ Blog | Blog",
+          "type": "Blog",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/analyst-content/omdia-ebook-five-new-essentials-for-data-storage-platforms.pdf",
+          "url": "Hitachi in Gartner Primary Storage Platforms MQ Blog",
           "score": 3
         }
       ]
@@ -88,22 +88,6 @@
       "sourceRow": 2,
       "relatedResources": [
         {
-          "title": "VSP One Object: Cohasset Compliance Assessment Paper | 3rd Party / Analyst Report",
-          "type": "3rd Party / Analyst Report",
-          "campaign": "AI Data Foundation",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "VSP One Object: Cohasset Compliance Assessment Paper",
-          "score": 3
-        },
-        {
-          "title": "2025 GigaOm Rader for High-Perfomance Storage Optimized for AI Workloads | 3rd Party / Analyst Report",
-          "type": "3rd Party / Analyst Report",
-          "campaign": "AI Data Foundation",
-          "useCase": "Data Readiness and Activation for AI",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-ai-storage-radar",
-          "score": 3
-        },
-        {
           "title": "2026 GigaOm for Unstructured Data Management (UDM) | 3rd Party / Analyst Report",
           "type": "3rd Party / Analyst Report",
           "campaign": "AI Data Foundation",
@@ -112,11 +96,27 @@
           "score": 3
         },
         {
-          "title": "2026 GigaOm Rader for Object Storage Analyst Report | 3rd Party / Analyst Report",
+          "title": "Hitachi Vantara\u2019s iQ increases AI storage \nmomentum, adds AI recovery capabilities",
           "type": "3rd Party / Analyst Report",
           "campaign": "AI Data Foundation",
+          "useCase": "High Performance AI-Ready Infrastructure",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/analyst-content/iq-increases-ai-storage-momentum-adds-ai-recovery-capabilities.pdf",
+          "score": 3
+        },
+        {
+          "title": "2025 GigaOm Radar Report for AI Workloads - GigaOm Link | 3rd Party / Analyst Report",
+          "type": "3rd Party / Analyst Report",
+          "campaign": "AI Data Foundation",
+          "useCase": "High Performance AI-Ready Infrastructure",
+          "url": "https://portal.gigaom.com/reprint/gigaom-radar-for-high-performance-storage-optimized-for-ai-workloads-hitachi-vantara",
+          "score": 3
+        },
+        {
+          "title": "Hitachi Enables Real Time Analytics and Data Lake Platform for Manufacturing | Customer Story",
+          "type": "Customer Story",
+          "campaign": "AI Data Foundation",
           "useCase": "Data Readiness and Activation for AI",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-radar-for-object-storage",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/customer-story/hitachi-enables-real-time-analytics-data-lake-platform-manufacturing.pdf",
           "score": 3
         }
       ]
@@ -148,11 +148,11 @@
       "sourceRow": 3,
       "relatedResources": [
         {
-          "title": "Hitachi Vantara and Veeam for Cyber Resilience Enhancing Cyber Resilience While Improving Data Management",
-          "type": "3rd Party / Analyst Report",
+          "title": "Cyber Resilience For Dummies eBook eBook/Whitepaper",
+          "type": "eBook/Whitepaper",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/white-paper/hitachi-vantara-and-veeam-for-cyber-resilience.pdf",
+          "url": "https://www.hitachivantara.com/en-us/gated-forms/cyber-resilience-for-dummies",
           "score": 3
         },
         {
@@ -164,19 +164,19 @@
           "score": 3
         },
         {
-          "title": "451 Research: Modernizing Mission-Critical Storage Analyst Report | 3rd Party / Analyst Report",
-          "type": "3rd Party / Analyst Report",
+          "title": "2 Additional Customer Story Videos - Estako + 1 other | Video",
+          "type": "Video",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/451-research-pathfinder-report-modernizing-mission-critical-storage",
+          "url": "2 Additional Customer Story Videos - Estako + 1 other",
           "score": 3
         },
         {
-          "title": "Omdia: The Five New Essentials for Data Storage Platforms | 3rd Party / Analyst Report",
-          "type": "3rd Party / Analyst Report",
+          "title": "Hitachi in Gartner Primary Storage Platforms MQ Blog | Blog",
+          "type": "Blog",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/analyst-content/omdia-ebook-five-new-essentials-for-data-storage-platforms.pdf",
+          "url": "Hitachi in Gartner Primary Storage Platforms MQ Blog",
           "score": 3
         }
       ]
@@ -208,22 +208,6 @@
       "sourceRow": 4,
       "relatedResources": [
         {
-          "title": "VSP One Object: Cohasset Compliance Assessment Paper | 3rd Party / Analyst Report",
-          "type": "3rd Party / Analyst Report",
-          "campaign": "AI Data Foundation",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "VSP One Object: Cohasset Compliance Assessment Paper",
-          "score": 3
-        },
-        {
-          "title": "2025 GigaOm Rader for High-Perfomance Storage Optimized for AI Workloads | 3rd Party / Analyst Report",
-          "type": "3rd Party / Analyst Report",
-          "campaign": "AI Data Foundation",
-          "useCase": "Data Readiness and Activation for AI",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-ai-storage-radar",
-          "score": 3
-        },
-        {
           "title": "2026 GigaOm for Unstructured Data Management (UDM) | 3rd Party / Analyst Report",
           "type": "3rd Party / Analyst Report",
           "campaign": "AI Data Foundation",
@@ -232,11 +216,27 @@
           "score": 3
         },
         {
-          "title": "2026 GigaOm Rader for Object Storage Analyst Report | 3rd Party / Analyst Report",
+          "title": "Hitachi Vantara\u2019s iQ increases AI storage \nmomentum, adds AI recovery capabilities",
           "type": "3rd Party / Analyst Report",
           "campaign": "AI Data Foundation",
+          "useCase": "High Performance AI-Ready Infrastructure",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/analyst-content/iq-increases-ai-storage-momentum-adds-ai-recovery-capabilities.pdf",
+          "score": 3
+        },
+        {
+          "title": "2025 GigaOm Radar Report for AI Workloads - GigaOm Link | 3rd Party / Analyst Report",
+          "type": "3rd Party / Analyst Report",
+          "campaign": "AI Data Foundation",
+          "useCase": "High Performance AI-Ready Infrastructure",
+          "url": "https://portal.gigaom.com/reprint/gigaom-radar-for-high-performance-storage-optimized-for-ai-workloads-hitachi-vantara",
+          "score": 3
+        },
+        {
+          "title": "Hitachi Enables Real Time Analytics and Data Lake Platform for Manufacturing | Customer Story",
+          "type": "Customer Story",
+          "campaign": "AI Data Foundation",
           "useCase": "Data Readiness and Activation for AI",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-radar-for-object-storage",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/customer-story/hitachi-enables-real-time-analytics-data-lake-platform-manufacturing.pdf",
           "score": 3
         }
       ]
@@ -268,11 +268,11 @@
       "sourceRow": 5,
       "relatedResources": [
         {
-          "title": "Hitachi Vantara and Veeam for Cyber Resilience Enhancing Cyber Resilience While Improving Data Management",
-          "type": "3rd Party / Analyst Report",
+          "title": "Cyber Resilience For Dummies eBook eBook/Whitepaper",
+          "type": "eBook/Whitepaper",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/white-paper/hitachi-vantara-and-veeam-for-cyber-resilience.pdf",
+          "url": "https://www.hitachivantara.com/en-us/gated-forms/cyber-resilience-for-dummies",
           "score": 3
         },
         {
@@ -284,19 +284,19 @@
           "score": 3
         },
         {
-          "title": "451 Research: Modernizing Mission-Critical Storage Analyst Report | 3rd Party / Analyst Report",
-          "type": "3rd Party / Analyst Report",
+          "title": "2 Additional Customer Story Videos - Estako + 1 other | Video",
+          "type": "Video",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/451-research-pathfinder-report-modernizing-mission-critical-storage",
+          "url": "2 Additional Customer Story Videos - Estako + 1 other",
           "score": 3
         },
         {
-          "title": "Omdia: The Five New Essentials for Data Storage Platforms | 3rd Party / Analyst Report",
-          "type": "3rd Party / Analyst Report",
+          "title": "Hitachi in Gartner Primary Storage Platforms MQ Blog | Blog",
+          "type": "Blog",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/analyst-content/omdia-ebook-five-new-essentials-for-data-storage-platforms.pdf",
+          "url": "Hitachi in Gartner Primary Storage Platforms MQ Blog",
           "score": 3
         }
       ]
@@ -328,11 +328,11 @@
       "sourceRow": 6,
       "relatedResources": [
         {
-          "title": "Hitachi Vantara and Veeam for Cyber Resilience Enhancing Cyber Resilience While Improving Data Management",
-          "type": "3rd Party / Analyst Report",
+          "title": "Cyber Resilience For Dummies eBook eBook/Whitepaper",
+          "type": "eBook/Whitepaper",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/white-paper/hitachi-vantara-and-veeam-for-cyber-resilience.pdf",
+          "url": "https://www.hitachivantara.com/en-us/gated-forms/cyber-resilience-for-dummies",
           "score": 3
         },
         {
@@ -344,19 +344,19 @@
           "score": 3
         },
         {
-          "title": "451 Research: Modernizing Mission-Critical Storage Analyst Report | 3rd Party / Analyst Report",
-          "type": "3rd Party / Analyst Report",
+          "title": "2 Additional Customer Story Videos - Estako + 1 other | Video",
+          "type": "Video",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/451-research-pathfinder-report-modernizing-mission-critical-storage",
+          "url": "2 Additional Customer Story Videos - Estako + 1 other",
           "score": 3
         },
         {
-          "title": "Omdia: The Five New Essentials for Data Storage Platforms | 3rd Party / Analyst Report",
-          "type": "3rd Party / Analyst Report",
+          "title": "Hitachi in Gartner Primary Storage Platforms MQ Blog | Blog",
+          "type": "Blog",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/analyst-content/omdia-ebook-five-new-essentials-for-data-storage-platforms.pdf",
+          "url": "Hitachi in Gartner Primary Storage Platforms MQ Blog",
           "score": 3
         }
       ]
@@ -388,22 +388,6 @@
       "sourceRow": 7,
       "relatedResources": [
         {
-          "title": "VSP One Object: Cohasset Compliance Assessment Paper | 3rd Party / Analyst Report",
-          "type": "3rd Party / Analyst Report",
-          "campaign": "AI Data Foundation",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "VSP One Object: Cohasset Compliance Assessment Paper",
-          "score": 3
-        },
-        {
-          "title": "2025 GigaOm Rader for High-Perfomance Storage Optimized for AI Workloads | 3rd Party / Analyst Report",
-          "type": "3rd Party / Analyst Report",
-          "campaign": "AI Data Foundation",
-          "useCase": "Data Readiness and Activation for AI",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-ai-storage-radar",
-          "score": 3
-        },
-        {
           "title": "2026 GigaOm for Unstructured Data Management (UDM) | 3rd Party / Analyst Report",
           "type": "3rd Party / Analyst Report",
           "campaign": "AI Data Foundation",
@@ -412,11 +396,27 @@
           "score": 3
         },
         {
-          "title": "2026 GigaOm Rader for Object Storage Analyst Report | 3rd Party / Analyst Report",
+          "title": "Hitachi Vantara\u2019s iQ increases AI storage \nmomentum, adds AI recovery capabilities",
           "type": "3rd Party / Analyst Report",
           "campaign": "AI Data Foundation",
+          "useCase": "High Performance AI-Ready Infrastructure",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/analyst-content/iq-increases-ai-storage-momentum-adds-ai-recovery-capabilities.pdf",
+          "score": 3
+        },
+        {
+          "title": "2025 GigaOm Radar Report for AI Workloads - GigaOm Link | 3rd Party / Analyst Report",
+          "type": "3rd Party / Analyst Report",
+          "campaign": "AI Data Foundation",
+          "useCase": "High Performance AI-Ready Infrastructure",
+          "url": "https://portal.gigaom.com/reprint/gigaom-radar-for-high-performance-storage-optimized-for-ai-workloads-hitachi-vantara",
+          "score": 3
+        },
+        {
+          "title": "Hitachi Enables Real Time Analytics and Data Lake Platform for Manufacturing | Customer Story",
+          "type": "Customer Story",
+          "campaign": "AI Data Foundation",
           "useCase": "Data Readiness and Activation for AI",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-radar-for-object-storage",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/customer-story/hitachi-enables-real-time-analytics-data-lake-platform-manufacturing.pdf",
           "score": 3
         }
       ]
@@ -448,22 +448,6 @@
       "sourceRow": 8,
       "relatedResources": [
         {
-          "title": "VSP One Object: Cohasset Compliance Assessment Paper | 3rd Party / Analyst Report",
-          "type": "3rd Party / Analyst Report",
-          "campaign": "AI Data Foundation",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "VSP One Object: Cohasset Compliance Assessment Paper",
-          "score": 3
-        },
-        {
-          "title": "2025 GigaOm Rader for High-Perfomance Storage Optimized for AI Workloads | 3rd Party / Analyst Report",
-          "type": "3rd Party / Analyst Report",
-          "campaign": "AI Data Foundation",
-          "useCase": "Data Readiness and Activation for AI",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-ai-storage-radar",
-          "score": 3
-        },
-        {
           "title": "2026 GigaOm for Unstructured Data Management (UDM) | 3rd Party / Analyst Report",
           "type": "3rd Party / Analyst Report",
           "campaign": "AI Data Foundation",
@@ -472,11 +456,27 @@
           "score": 3
         },
         {
-          "title": "2026 GigaOm Rader for Object Storage Analyst Report | 3rd Party / Analyst Report",
+          "title": "Hitachi Vantara\u2019s iQ increases AI storage \nmomentum, adds AI recovery capabilities",
           "type": "3rd Party / Analyst Report",
           "campaign": "AI Data Foundation",
+          "useCase": "High Performance AI-Ready Infrastructure",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/analyst-content/iq-increases-ai-storage-momentum-adds-ai-recovery-capabilities.pdf",
+          "score": 3
+        },
+        {
+          "title": "2025 GigaOm Radar Report for AI Workloads - GigaOm Link | 3rd Party / Analyst Report",
+          "type": "3rd Party / Analyst Report",
+          "campaign": "AI Data Foundation",
+          "useCase": "High Performance AI-Ready Infrastructure",
+          "url": "https://portal.gigaom.com/reprint/gigaom-radar-for-high-performance-storage-optimized-for-ai-workloads-hitachi-vantara",
+          "score": 3
+        },
+        {
+          "title": "Hitachi Enables Real Time Analytics and Data Lake Platform for Manufacturing | Customer Story",
+          "type": "Customer Story",
+          "campaign": "AI Data Foundation",
           "useCase": "Data Readiness and Activation for AI",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-radar-for-object-storage",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/customer-story/hitachi-enables-real-time-analytics-data-lake-platform-manufacturing.pdf",
           "score": 3
         }
       ]
@@ -508,22 +508,6 @@
       "sourceRow": 9,
       "relatedResources": [
         {
-          "title": "VSP One Object: Cohasset Compliance Assessment Paper | 3rd Party / Analyst Report",
-          "type": "3rd Party / Analyst Report",
-          "campaign": "AI Data Foundation",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "VSP One Object: Cohasset Compliance Assessment Paper",
-          "score": 3
-        },
-        {
-          "title": "2025 GigaOm Rader for High-Perfomance Storage Optimized for AI Workloads | 3rd Party / Analyst Report",
-          "type": "3rd Party / Analyst Report",
-          "campaign": "AI Data Foundation",
-          "useCase": "Data Readiness and Activation for AI",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-ai-storage-radar",
-          "score": 3
-        },
-        {
           "title": "2026 GigaOm for Unstructured Data Management (UDM) | 3rd Party / Analyst Report",
           "type": "3rd Party / Analyst Report",
           "campaign": "AI Data Foundation",
@@ -532,11 +516,27 @@
           "score": 3
         },
         {
-          "title": "2026 GigaOm Rader for Object Storage Analyst Report | 3rd Party / Analyst Report",
+          "title": "Hitachi Vantara\u2019s iQ increases AI storage \nmomentum, adds AI recovery capabilities",
           "type": "3rd Party / Analyst Report",
           "campaign": "AI Data Foundation",
+          "useCase": "High Performance AI-Ready Infrastructure",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/analyst-content/iq-increases-ai-storage-momentum-adds-ai-recovery-capabilities.pdf",
+          "score": 3
+        },
+        {
+          "title": "2025 GigaOm Radar Report for AI Workloads - GigaOm Link | 3rd Party / Analyst Report",
+          "type": "3rd Party / Analyst Report",
+          "campaign": "AI Data Foundation",
+          "useCase": "High Performance AI-Ready Infrastructure",
+          "url": "https://portal.gigaom.com/reprint/gigaom-radar-for-high-performance-storage-optimized-for-ai-workloads-hitachi-vantara",
+          "score": 3
+        },
+        {
+          "title": "Hitachi Enables Real Time Analytics and Data Lake Platform for Manufacturing | Customer Story",
+          "type": "Customer Story",
+          "campaign": "AI Data Foundation",
           "useCase": "Data Readiness and Activation for AI",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-radar-for-object-storage",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/customer-story/hitachi-enables-real-time-analytics-data-lake-platform-manufacturing.pdf",
           "score": 3
         }
       ]
@@ -568,11 +568,11 @@
       "sourceRow": 10,
       "relatedResources": [
         {
-          "title": "Hitachi Vantara and Veeam for Cyber Resilience Enhancing Cyber Resilience While Improving Data Management",
-          "type": "3rd Party / Analyst Report",
+          "title": "Cyber Resilience For Dummies eBook eBook/Whitepaper",
+          "type": "eBook/Whitepaper",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/white-paper/hitachi-vantara-and-veeam-for-cyber-resilience.pdf",
+          "url": "https://www.hitachivantara.com/en-us/gated-forms/cyber-resilience-for-dummies",
           "score": 3
         },
         {
@@ -584,19 +584,19 @@
           "score": 3
         },
         {
-          "title": "451 Research: Modernizing Mission-Critical Storage Analyst Report | 3rd Party / Analyst Report",
-          "type": "3rd Party / Analyst Report",
+          "title": "2 Additional Customer Story Videos - Estako + 1 other | Video",
+          "type": "Video",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/451-research-pathfinder-report-modernizing-mission-critical-storage",
+          "url": "2 Additional Customer Story Videos - Estako + 1 other",
           "score": 3
         },
         {
-          "title": "Omdia: The Five New Essentials for Data Storage Platforms | 3rd Party / Analyst Report",
-          "type": "3rd Party / Analyst Report",
+          "title": "Hitachi in Gartner Primary Storage Platforms MQ Blog | Blog",
+          "type": "Blog",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/analyst-content/omdia-ebook-five-new-essentials-for-data-storage-platforms.pdf",
+          "url": "Hitachi in Gartner Primary Storage Platforms MQ Blog",
           "score": 3
         }
       ]
@@ -628,11 +628,11 @@
       "sourceRow": 11,
       "relatedResources": [
         {
-          "title": "Hitachi Vantara and Veeam for Cyber Resilience Enhancing Cyber Resilience While Improving Data Management",
-          "type": "3rd Party / Analyst Report",
+          "title": "Cyber Resilience For Dummies eBook eBook/Whitepaper",
+          "type": "eBook/Whitepaper",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/white-paper/hitachi-vantara-and-veeam-for-cyber-resilience.pdf",
+          "url": "https://www.hitachivantara.com/en-us/gated-forms/cyber-resilience-for-dummies",
           "score": 3
         },
         {
@@ -644,19 +644,19 @@
           "score": 3
         },
         {
-          "title": "451 Research: Modernizing Mission-Critical Storage Analyst Report | 3rd Party / Analyst Report",
-          "type": "3rd Party / Analyst Report",
+          "title": "2 Additional Customer Story Videos - Estako + 1 other | Video",
+          "type": "Video",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/451-research-pathfinder-report-modernizing-mission-critical-storage",
+          "url": "2 Additional Customer Story Videos - Estako + 1 other",
           "score": 3
         },
         {
-          "title": "Omdia: The Five New Essentials for Data Storage Platforms | 3rd Party / Analyst Report",
-          "type": "3rd Party / Analyst Report",
+          "title": "Hitachi in Gartner Primary Storage Platforms MQ Blog | Blog",
+          "type": "Blog",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/analyst-content/omdia-ebook-five-new-essentials-for-data-storage-platforms.pdf",
+          "url": "Hitachi in Gartner Primary Storage Platforms MQ Blog",
           "score": 3
         }
       ]
@@ -688,11 +688,11 @@
       "sourceRow": 12,
       "relatedResources": [
         {
-          "title": "Hitachi Vantara and Veeam for Cyber Resilience Enhancing Cyber Resilience While Improving Data Management",
-          "type": "3rd Party / Analyst Report",
+          "title": "Cyber Resilience For Dummies eBook eBook/Whitepaper",
+          "type": "eBook/Whitepaper",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/white-paper/hitachi-vantara-and-veeam-for-cyber-resilience.pdf",
+          "url": "https://www.hitachivantara.com/en-us/gated-forms/cyber-resilience-for-dummies",
           "score": 3
         },
         {
@@ -704,19 +704,19 @@
           "score": 3
         },
         {
-          "title": "451 Research: Modernizing Mission-Critical Storage Analyst Report | 3rd Party / Analyst Report",
-          "type": "3rd Party / Analyst Report",
+          "title": "2 Additional Customer Story Videos - Estako + 1 other | Video",
+          "type": "Video",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/451-research-pathfinder-report-modernizing-mission-critical-storage",
+          "url": "2 Additional Customer Story Videos - Estako + 1 other",
           "score": 3
         },
         {
-          "title": "Omdia: The Five New Essentials for Data Storage Platforms | 3rd Party / Analyst Report",
-          "type": "3rd Party / Analyst Report",
+          "title": "Hitachi in Gartner Primary Storage Platforms MQ Blog | Blog",
+          "type": "Blog",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Data Platform Architectures & Economics",
-          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/analyst-content/omdia-ebook-five-new-essentials-for-data-storage-platforms.pdf",
+          "url": "Hitachi in Gartner Primary Storage Platforms MQ Blog",
           "score": 3
         }
       ]
