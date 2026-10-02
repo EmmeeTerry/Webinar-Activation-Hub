@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-10-02T10:38:41.381554+00:00",
+  "lastRefreshed": "2026-10-02T12:44:48.477365+00:00",
   "items": [
     {
       "id": "cyber-resilience-for-dummies-ebook-ebook-1",
@@ -28,10 +28,10 @@
       "notes": "Built for Technical Persona"
     },
     {
-      "id": "mit-tech-review-adapting-to-new-threats-with-proactive-cyber-risk-management-3rd-party-ana-2",
-      "title": "MIT Tech Review: Adapting to New Threats with Proactive Cyber Risk Management | 3rd Party / Analyst Report",
+      "id": "mit-tech-review-adapting-to-new-threats-with-proactive-cyber-risk-management-analyst-repor-2",
+      "title": "MIT Tech Review: Adapting to New Threats with Proactive Cyber Risk Management | Analyst Report",
       "url": "https://www.hitachivantara.com/en-us/gated-forms/adapting-to-new-threats-with-proactive-risk-management",
-      "type": "3rd Party / Analyst Report",
+      "type": "Analyst Report",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Cyber Risk Mitigation & Recovery",
       "funnelStage": "Hero",
@@ -54,10 +54,10 @@
       "notes": "Exec Audience"
     },
     {
-      "id": "2026-gigaom-for-unstructured-data-management-udm-3rd-party-analyst-report-3",
-      "title": "2026 GigaOm for Unstructured Data Management (UDM) | 3rd Party / Analyst Report",
+      "id": "2026-gigaom-for-unstructured-data-management-udm-analyst-report-3",
+      "title": "2026 GigaOm for Unstructured Data Management (UDM) | Analyst Report",
       "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-unstructured-data-management-2026",
-      "type": "3rd Party / Analyst Report",
+      "type": "Analyst Report",
       "campaign": "AI Data Foundation",
       "useCase": "Data Readiness and Activation for AI",
       "funnelStage": "MOFU",
@@ -81,9 +81,9 @@
     },
     {
       "id": "451-research-market-hitachi-vantara-s-iq-increases-ai-storage-momentum-adds-ai-recovery-ca-4",
-      "title": "451 Research Market Hitachi Vantara's iQ Increases AI Storage Momentum, Adds AI Recovery Capabilities | 3rd Party / Analyst Report",
+      "title": "451 Research Market Hitachi Vantara's iQ Increases AI Storage Momentum, Adds AI Recovery Capabilities | Analyst Report",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/analyst-content/iq-increases-ai-storage-momentum-adds-ai-recovery-capabilities.pdf",
-      "type": "3rd Party / Analyst Report",
+      "type": "Analyst Report",
       "campaign": "AI Data Foundation",
       "useCase": "High Performance AI-Ready Infrastructure",
       "funnelStage": "MOFU",
@@ -106,10 +106,10 @@
       "notes": "H1"
     },
     {
-      "id": "2025-gigaom-radar-report-for-ai-workloads-gigaom-link-3rd-party-analyst-report-5",
-      "title": "2025 GigaOm Radar Report for AI Workloads - GigaOm Link | 3rd Party / Analyst Report",
+      "id": "2025-gigaom-radar-report-for-ai-workloads-gigaom-link-analyst-report-5",
+      "title": "2025 GigaOm Radar Report for AI Workloads - GigaOm Link | Analyst Report",
       "url": "https://portal.gigaom.com/reprint/gigaom-radar-for-high-performance-storage-optimized-for-ai-workloads-hitachi-vantara",
-      "type": "3rd Party / Analyst Report",
+      "type": "Analyst Report",
       "campaign": "AI Data Foundation",
       "useCase": "High Performance AI-Ready Infrastructure",
       "funnelStage": "MOFU",
@@ -210,8 +210,8 @@
       "notes": "H1"
     },
     {
-      "id": "southwest-power-pool-customer-story-9",
-      "title": "Southwest Power Pool | Customer Story",
+      "id": "southwest-power-pool-spp-partners-with-hitachi-to-develop-advanced-ai-solution-for-critica-9",
+      "title": "Southwest Power Pool (SPP): Partners with Hitachi to Develop Advanced AI Solution for Critical Power Transmission Reliability and Flexibility Challenges | Customer Story",
       "url": "https://www.hitachivantara.com/en-us/news/gl250605",
       "type": "Customer Story",
       "campaign": "AI Data Foundation",
@@ -236,10 +236,10 @@
       "notes": "H1"
     },
     {
-      "id": "ai-discovery-service-booking-form-demo-assessment-tool-offer-10",
-      "title": "AI Discovery Service Booking Form Demo / Assessment / Tool / Offer",
+      "id": "ai-discovery-service-booking-form-assessment-10",
+      "title": "AI Discovery Service Booking Form | Assessment",
       "url": "https://www.hitachivantara.com/en-us/company/contact-sales",
-      "type": "Demo / Assessment / Tool / Offer",
+      "type": "Assessment",
       "campaign": "AI Data Foundation",
       "useCase": "High Performance AI-Ready Infrastructure",
       "funnelStage": "BOFU",
@@ -262,10 +262,10 @@
       "notes": "H1"
     },
     {
-      "id": "hitachi-iq-with-nvidia-hgx-11",
-      "title": "Hitachi iQ with NVIDIA HGX",
+      "id": "nvidia-cloud-partner-hitachi-iq-architecture-guide-reference-architecture-11",
+      "title": "NVIDIA Cloud Partner: Hitachi iQ Architecture Guide | Reference Architecture",
       "url": "https://docs.hitachivantara.com/v/u/en-us/mk-sl-324/latest",
-      "type": "FAQ / Reference / Use Case Guide",
+      "type": "Reference Architecture",
       "campaign": "AI Data Foundation",
       "useCase": "High Performance AI-Ready Infrastructure",
       "funnelStage": "BOFU",
@@ -340,8 +340,8 @@
       "notes": "H1"
     },
     {
-      "id": "hitachi-vantara-modern-lakehouse-for-ai-14",
-      "title": "Hitachi Vantara - Modern Lakehouse for AI",
+      "id": "hitachi-vantara-modern-lakehouse-for-ai-video-14",
+      "title": "Hitachi Vantara - Modern Lakehouse for AI | Video",
       "url": "https://www.hitachivantara.com/en-us/resources.html#vid=6376066120112",
       "type": "Video",
       "campaign": "AI Data Foundation",
@@ -418,8 +418,8 @@
       "notes": "H1"
     },
     {
-      "id": "the-threats-we-see-the-risks-we-don-t-17",
-      "title": "The Threats We See. The Risks We Don't",
+      "id": "the-threats-we-see-the-risks-we-don-t-blog-17",
+      "title": "The Threats We See. The Risks We Don\u2019t. | Blog",
       "url": "https://www.hitachivantara.com/en-us/blog/threats-we-see-risks-we-dont",
       "type": "Blog",
       "campaign": "AI Data Foundation",
@@ -496,8 +496,8 @@
       "notes": "H1"
     },
     {
-      "id": "from-science-fiction-to-factory-floor-the-physical-ai-revolution-takes-shape-20",
-      "title": "From Science Fiction to Factory Floor: The Physical AI Revolution Takes Shape",
+      "id": "from-science-fiction-to-factory-floor-the-physical-ai-revolution-takes-shape-blog-20",
+      "title": "From Science Fiction to Factory Floor: The Physical AI Revolution Takes Shape | Blog",
       "url": "https://www.hitachivantara.com/en-us/blog/from-science-fiction-factory-floor-physical-ai-revolution-takes-shape",
       "type": "Blog",
       "campaign": "AI Data Foundation",
@@ -522,33 +522,7 @@
       "notes": "H1"
     },
     {
-      "id": "blog-21",
-      "title": "| Blog",
-      "url": null,
-      "type": "Blog",
-      "campaign": "AI Data Foundation",
-      "useCase": "High Performance AI-Ready Infrastructure",
-      "funnelStage": "TOFU",
-      "ownerTeam": "Brand",
-      "audience": "Enterprise",
-      "status": "Planned",
-      "region": "Global",
-      "publishDate": null,
-      "publishDateDisplay": "",
-      "partnerUse": true,
-      "paidMediaDate": null,
-      "paidMediaDateDisplay": "",
-      "primaryActivation": "No Planned Promotion",
-      "marketingEmail": null,
-      "salesEmail": null,
-      "usedInCampaign": "No",
-      "promotionPeriod": "2H",
-      "ownerIndividual": "Emily Smith",
-      "publishedByVendor": "Hitachi Vantara",
-      "notes": "H1"
-    },
-    {
-      "id": "how-pakistan-s-financial-backbone-is-using-ai-to-strengthen-banking-resilience-at-national-22",
+      "id": "how-pakistan-s-financial-backbone-is-using-ai-to-strengthen-banking-resilience-at-national-21",
       "title": "How Pakistan's Financial Backbone Is Using AI to Strengthen Banking Resilience at National Scale | Blog",
       "url": "https://www.hitachivantara.com/en-us/blog/how-pakistans-financial-backbone-is-using-ai-to-strengthen-resilience",
       "type": "Blog",
@@ -574,12 +548,12 @@
       "notes": "H1"
     },
     {
-      "id": "the-future-of-hybrid-cloud-consumption-is-flexible-blog-23",
+      "id": "the-future-of-hybrid-cloud-consumption-is-flexible-blog-22",
       "title": "The Future of Hybrid Cloud Consumption is Flexible | Blog",
       "url": "https://www.hitachivantara.com/en-us/blog/drive-flexible-infrastructure-consumption-automation-orchestration-all-platform-savings-hybrid-cloud",
       "type": "Blog",
-      "campaign": "AI Data Foundation",
-      "useCase": "High Performance AI-Ready Infrastructure",
+      "campaign": "Data Modernization & Resilience",
+      "useCase": "Hybrid Cloud Platform & Operations",
       "funnelStage": "TOFU",
       "ownerTeam": "Brand",
       "audience": "Enterprise",
@@ -594,14 +568,14 @@
       "marketingEmail": null,
       "salesEmail": null,
       "usedInCampaign": "Yes",
-      "promotionPeriod": "2H",
+      "promotionPeriod": "1H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "H1"
     },
     {
-      "id": "why-zero-trust-storage-eight-9s-availability-are-non-negotiable-24",
-      "title": "Why Zero Trust Storage + Eight 9s Availability are Non-Negotiable",
+      "id": "why-zero-trust-storage-eight-9s-availability-are-non-negotiable-blog-23",
+      "title": "Why Zero Trust Storage + Eight 9s Availability are Non-Negotiable | Blog",
       "url": "https://www.hitachivantara.com/en-us/blog/why-zero-trust-storage-eight-9s-availability-is-non-negotiable",
       "type": "Blog",
       "campaign": "AI Data Foundation",
@@ -626,7 +600,7 @@
       "notes": "H1"
     },
     {
-      "id": "five-habits-that-cut-it-energy-waste-without-spending-more-blog-25",
+      "id": "five-habits-that-cut-it-energy-waste-without-spending-more-blog-24",
       "title": "Five Habits That Cut IT Energy Waste, Without Spending More | Blog",
       "url": "https://hitachivantara.com/en-us/blog/five-habits-that-cut-it-energy-waste-without-spending-more",
       "type": "Blog",
@@ -652,10 +626,10 @@
       "notes": "H1"
     },
     {
-      "id": "hybrid-cloud-storage-for-native-amazon-s3-workloads-26",
-      "title": "Hybrid Cloud Storage for Native Amazon S3 Workloads",
+      "id": "hybrid-cloud-storage-for-native-amazon-s3-workloads-solution-profile-25",
+      "title": "Hybrid Cloud Storage for Native Amazon S3 Workloads | Solution Profile",
       "url": "https://www.hitachivantara.com/en-us/pdf/solution-profile/hybrid-cloud-storage-with-content-platform-solution-profile.pdf",
-      "type": "Datasheet / Solution Brief / Technical",
+      "type": "Solution Profile",
       "campaign": "AI Data Foundation",
       "useCase": "Data Readiness and Activation for AI",
       "funnelStage": "BOFU",
@@ -678,10 +652,10 @@
       "notes": "H1"
     },
     {
-      "id": "modernize-data-lakehouse-environments-with-vsp-one-object-storage-27",
-      "title": "Modernize Data Lakehouse Environments With VSP One Object Storage",
+      "id": "modernize-data-lakehouse-environments-with-vsp-one-object-storage-solution-profile-26",
+      "title": "Modernize Data Lakehouse Environments With VSP One Object Storage | Solution Profile",
       "url": "https://www.hitachivantara.com/en-us/pdf/solution-profile/vsp-one-object-data-lakehouse.pdf",
-      "type": "Datasheet / Solution Brief / Technical",
+      "type": "Solution Profile",
       "campaign": "AI Data Foundation",
       "useCase": "Data Readiness and Activation for AI",
       "funnelStage": "BOFU",
@@ -704,10 +678,10 @@
       "notes": "H1"
     },
     {
-      "id": "hgx-reference-architecture-28",
-      "title": "HGX Reference Architecture",
+      "id": "hgx-reference-architecture-solution-profile-27",
+      "title": "HGX Reference Architecture | Solution Profile",
       "url": "https://docs.hitachivantara.com/api/khub/documents/u390xbBRC9vEFy~dSnC7Tg/content",
-      "type": "Datasheet / Solution Brief / Technical",
+      "type": "Solution Profile",
       "campaign": "AI Data Foundation",
       "useCase": "High Performance AI-Ready Infrastructure",
       "funnelStage": "BOFU",
@@ -730,10 +704,10 @@
       "notes": "H1"
     },
     {
-      "id": "hitachi-iq-m-series-29",
-      "title": "Hitachi iQ M Series",
+      "id": "hitachi-iq-m-series-solution-profile-28",
+      "title": "Hitachi iQ M Series | Solution Profile",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/solution-profile/iq-m-series-product-brief.pdf",
-      "type": "Datasheet / Solution Brief / Technical",
+      "type": "Solution Profile",
       "campaign": "AI Data Foundation",
       "useCase": "High Performance AI-Ready Infrastructure",
       "funnelStage": "BOFU",
@@ -756,10 +730,10 @@
       "notes": "H1"
     },
     {
-      "id": "hitachi-iq-studio-datasheet-solution-brief-technical-30",
-      "title": "Hitachi iQ Studio Datasheet / Solution Brief / Technical",
+      "id": "hitachi-iq-studio-solution-profile-29",
+      "title": "Hitachi iQ Studio | Solution Profile",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/solution-profile/iq-ai-solution-suite-tailored-industry-needs-ideal-organizations-investing-in-ai-ml-workloads.pdf",
-      "type": "Datasheet / Solution Brief / Technical",
+      "type": "Solution Profile",
       "campaign": "AI Data Foundation",
       "useCase": "High Performance AI-Ready Infrastructure",
       "funnelStage": "MOFU",
@@ -782,10 +756,10 @@
       "notes": "H1"
     },
     {
-      "id": "hitachi-iq-with-nvidia-hgx-31",
-      "title": "Hitachi iQ with NVIDIA HGX",
+      "id": "hitachi-iq-with-nvidia-hgx-reference-architecture-30",
+      "title": "Hitachi iQ with NVIDIA HGX | Reference Architecture",
       "url": "https://www.hitachivantara.com/en-us/gated-forms/iq-with-hgx-h100-powered-with-hcsf-hcp",
-      "type": "Datasheet / Solution Brief / Technical",
+      "type": "Reference Architecture",
       "campaign": "AI Data Foundation",
       "useCase": "High Performance AI-Ready Infrastructure",
       "funnelStage": "BOFU",
@@ -808,10 +782,10 @@
       "notes": "H1"
     },
     {
-      "id": "from-data-chaos-to-ai-clarity-data-readiness-and-the-modern-lakehouse-32",
-      "title": "From Data Chaos to AI Clarity: Data Readiness and the Modern Lakehouse",
+      "id": "from-data-chaos-to-ai-clarity-data-readiness-and-the-modern-lakehouse-ebook-31",
+      "title": "From Data Chaos to AI Clarity: Data Readiness and the Modern Lakehouse | eBook",
       "url": "https://www.hitachivantara.com/en-us/gated-forms/from-data-chaos-to-ai-clarity-data-readiness-modern-lakehouse",
-      "type": "eBook/Whitepaper",
+      "type": "eBook",
       "campaign": "AI Data Foundation",
       "useCase": "Data Readiness and Activation for AI",
       "funnelStage": "MOFU",
@@ -834,10 +808,10 @@
       "notes": "H1"
     },
     {
-      "id": "thrive-in-an-ai-driven-future-33",
-      "title": "Thrive in an  AI-driven future",
+      "id": "thrive-in-an-ai-driven-future-ebook-ebook-32",
+      "title": "Thrive in an AI-Driven Future eBook | eBook",
       "url": "https://www.hitachivantara.com/en-us/pdfviewer/ebook/thrive-in-ai-driven-future-eBook",
-      "type": "eBook/Whitepaper",
+      "type": "eBook",
       "campaign": "AI Data Foundation",
       "useCase": "High Performance AI-Ready Infrastructure",
       "funnelStage": "MOFU",
@@ -860,10 +834,10 @@
       "notes": "H1"
     },
     {
-      "id": "accelerate-your-ai-success-use-case-roi-guide-ebook-ebook-whitepaper-34",
-      "title": "Accelerate Your AI Success: Use Case & ROI Guide eBook | eBook/Whitepaper",
+      "id": "accelerate-your-ai-success-use-case-roi-guide-ebook-ebook-33",
+      "title": "Accelerate Your AI Success: Use Case & ROI Guide eBook | eBook",
       "url": "https://www.hitachivantara.com/en-us/gated-forms/accelerate-your-ai-success",
-      "type": "eBook/Whitepaper",
+      "type": "eBook",
       "campaign": "AI Data Foundation",
       "useCase": "High Performance AI-Ready Infrastructure",
       "funnelStage": "MOFU",
@@ -886,10 +860,10 @@
       "notes": "H1"
     },
     {
-      "id": "top-10-reasons-hitachi-content-software-for-file-35",
-      "title": "Top 10 Reasons: Hitachi Content Software for File",
+      "id": "top-10-reasons-hitachi-content-software-for-file-top-10-34",
+      "title": "Top 10 Reasons: Hitachi Content Software for File | Top 10",
       "url": "https://www.hitachivantara.com/en-us/pdf/brochure/top-ten-reasons-why-hcsf.pdf",
-      "type": "eBook/Whitepaper",
+      "type": "Top 10",
       "campaign": "AI Data Foundation",
       "useCase": "High Performance AI-Ready Infrastructure",
       "funnelStage": "TOFU",
@@ -912,10 +886,10 @@
       "notes": "H1"
     },
     {
-      "id": "top-10-reasons-hitachi-iq-36",
-      "title": "Top 10 Reasons: Hitachi iQ",
+      "id": "top-10-reasons-hitachi-iq-top-10-35",
+      "title": "Top 10 Reasons: Hitachi iQ | Top 10",
       "url": "https://www.hitachivantara.com/en-us/pdf/ebook/top-ten-reasons-why-hitachi-iq.pdf",
-      "type": "eBook/Whitepaper",
+      "type": "Top 10",
       "campaign": "AI Data Foundation",
       "useCase": "High Performance AI-Ready Infrastructure",
       "funnelStage": "TOFU",
@@ -938,10 +912,10 @@
       "notes": "H1"
     },
     {
-      "id": "on-premises-amazon-s3-tables-with-vsp-one-object-datasheet-solution-brief-technical-37",
-      "title": "On-Premises Amazon S3 Tables with VSP One Object | Datasheet / Solution Brief / Technical",
+      "id": "on-premises-amazon-s3-tables-with-vsp-one-object-datasheet-36",
+      "title": "On-Premises Amazon S3 Tables with VSP One Object | Datasheet",
       "url": "https://docs.hitachivantara.com/api/khub/documents/3gy1qAHBg5xiEaPQYljiaw/content",
-      "type": "Datasheet / Solution Brief / Technical",
+      "type": "Datasheet",
       "campaign": "AI Data Foundation",
       "useCase": "Data Readiness and Activation for AI",
       "funnelStage": "BOFU",
@@ -964,10 +938,10 @@
       "notes": "H1"
     },
     {
-      "id": "hitachi-hmax-and-hitachi-iq-for-life-sciences-38",
-      "title": "Hitachi HMAX and Hitachi iQ for Life Sciences",
+      "id": "hitachi-hmax-and-hitachi-iq-for-life-sciences-datasheet-37",
+      "title": "Hitachi HMAX and Hitachi iQ for Life Sciences | Datasheet",
       "url": null,
-      "type": "Datasheet / Solution Brief / Technical",
+      "type": "Datasheet",
       "campaign": "AI Data Foundation",
       "useCase": "High Performance AI-Ready Infrastructure",
       "funnelStage": "BOFU",
@@ -990,10 +964,10 @@
       "notes": "H2"
     },
     {
-      "id": "hitachi-hmax-and-hitachi-iq-for-mining-39",
-      "title": "Hitachi HMAX and Hitachi iQ for Mining",
+      "id": "hitachi-hmax-and-hitachi-iq-for-mining-datasheet-38",
+      "title": "Hitachi HMAX and Hitachi iQ for Mining | Datasheet",
       "url": null,
-      "type": "Datasheet / Solution Brief / Technical",
+      "type": "Datasheet",
       "campaign": "AI Data Foundation",
       "useCase": "High Performance AI-Ready Infrastructure",
       "funnelStage": "BOFU",
@@ -1016,10 +990,10 @@
       "notes": "H2"
     },
     {
-      "id": "hitachi-hmax-and-hitachi-iq-for-power-grids-40",
-      "title": "Hitachi HMAX and Hitachi iQ for Power Grids",
+      "id": "hitachi-hmax-and-hitachi-iq-for-power-grids-datasheet-39",
+      "title": "Hitachi HMAX and Hitachi iQ for Power Grids | Datasheet",
       "url": null,
-      "type": "Datasheet / Solution Brief / Technical",
+      "type": "Datasheet",
       "campaign": "AI Data Foundation",
       "useCase": "High Performance AI-Ready Infrastructure",
       "funnelStage": "BOFU",
@@ -1042,10 +1016,10 @@
       "notes": "H2"
     },
     {
-      "id": "vsp-one-object-architectural-overview-ebook-whitepaper-41",
-      "title": "VSP One Object Architectural Overview | eBook/Whitepaper",
+      "id": "vsp-one-object-architectural-overview-reference-architecture-40",
+      "title": "VSP One Object Architectural Overview | Reference Architecture",
       "url": null,
-      "type": "eBook/Whitepaper",
+      "type": "Reference Architecture",
       "campaign": "AI Data Foundation",
       "useCase": "Data Readiness and Activation for AI",
       "funnelStage": "BOFU",
@@ -1068,10 +1042,10 @@
       "notes": "H2 -  being updated for september"
     },
     {
-      "id": "2027-gigaom-radar-for-object-storage-3rd-party-analyst-report-42",
-      "title": "2027 GigaOm Radar for Object Storage | 3rd Party / Analyst Report",
+      "id": "2027-gigaom-radar-for-object-storage-analyst-report-41",
+      "title": "2027 GigaOm Radar for Object Storage | Analyst Report",
       "url": null,
-      "type": "3rd Party / Analyst Report",
+      "type": "Analyst Report",
       "campaign": "AI Data Foundation",
       "useCase": "Data Readiness and Activation for AI",
       "funnelStage": "Hero",
@@ -1094,10 +1068,10 @@
       "notes": "H2; planned \u2013 contingent on 2027 report purchase (March 2027)"
     },
     {
-      "id": "pearkmarks-results-on-bhe-for-oracle-tbd-2h-43",
-      "title": "Pearkmarks Results on BHE for Oracle (TBD-2H)",
+      "id": "pearkmarks-results-on-bhe-for-oracle-tbd-2h-analyst-report-42",
+      "title": "Pearkmarks Results on BHE for Oracle (TBD-2H) | Analyst Report",
       "url": null,
-      "type": "3rd Party / Analyst Report",
+      "type": "Analyst Report",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
       "funnelStage": "MOFU",
@@ -1120,10 +1094,10 @@
       "notes": "planned"
     },
     {
-      "id": "data-modernization-dummies-guide-44",
-      "title": "Data Modernization Dummies Guide",
+      "id": "data-modernization-dummies-guide-ebook-43",
+      "title": "Data Modernization Dummies Guide | eBook",
       "url": null,
-      "type": "3rd Party / Analyst Report",
+      "type": "eBook",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
       "funnelStage": "Hero",
@@ -1146,7 +1120,7 @@
       "notes": "planned"
     },
     {
-      "id": "2-additional-customer-story-videos-estako-1-other-video-45",
+      "id": "2-additional-customer-story-videos-estako-1-other-video-44",
       "title": "2 Additional Customer Story Videos - Estako + 1 other | Video",
       "url": null,
       "type": "Video",
@@ -1172,10 +1146,10 @@
       "notes": "planned"
     },
     {
-      "id": "business-critical-cyber-recovery-46",
-      "title": "Business-Critical Cyber Recovery",
+      "id": "business-critical-cyber-recovery-solution-profile-45",
+      "title": "Business-Critical Cyber Recovery | Solution Profile",
       "url": null,
-      "type": "Datasheet / Solution Brief / Technical",
+      "type": "Solution Profile",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Cyber Risk Mitigation & Recovery",
       "funnelStage": "MOFU",
@@ -1198,10 +1172,10 @@
       "notes": "planned"
     },
     {
-      "id": "cyber-resilience-customer-outcomes-ebook-47",
-      "title": "Cyber Resilience Customer Outcomes eBook",
+      "id": "cyber-resilience-customer-outcomes-ebook-ebook-46",
+      "title": "Cyber Resilience Customer Outcomes eBook | eBook",
       "url": null,
-      "type": "eBook/Whitepaper",
+      "type": "eBook",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Cyber Risk Mitigation & Recovery",
       "funnelStage": "MOFU",
@@ -1224,10 +1198,10 @@
       "notes": "planned"
     },
     {
-      "id": "data-resilience-assessment-emea-pilot-only-48",
-      "title": "Data Resilience Assessment (EMEA Pilot Only)",
+      "id": "data-resilience-assessment-emea-pilot-only-assessment-47",
+      "title": "Data Resilience Assessment (EMEA Pilot Only) | Assessment",
       "url": null,
-      "type": "Demo / Assessment / Tool / Offer",
+      "type": "Assessment",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Cyber Risk Mitigation & Recovery",
       "funnelStage": "BOFU",
@@ -1250,8 +1224,8 @@
       "notes": "planned, EMEA pilot only"
     },
     {
-      "id": "raiffeisen-informatik-enabling-rapid-cyber-recovery-for-critical-mainframe-environments-49",
-      "title": "Raiffeisen Informatik: Enabling Rapid Cyber Recovery for Critical Mainframe Environments",
+      "id": "raiffeisen-informatik-enabling-rapid-cyber-recovery-for-critical-mainframe-environments-cu-48",
+      "title": "Raiffeisen Informatik: Enabling Rapid Cyber Recovery for Critical Mainframe Environments | Customer Story",
       "url": "https://www.hitachivantara.com/en-us/company/customer-stories/raiffesien-informatik-customer-story",
       "type": "Customer Story",
       "campaign": "Data Modernization & Resilience",
@@ -1276,7 +1250,7 @@
       "notes": "This was a DS story and no longer resides on HV.com"
     },
     {
-      "id": "hitachi-in-gartner-primary-storage-platforms-mq-blog-blog-50",
+      "id": "hitachi-in-gartner-primary-storage-platforms-mq-blog-blog-49",
       "title": "Hitachi in Gartner Primary Storage Platforms MQ Blog | Blog",
       "url": null,
       "type": "Blog",
@@ -1302,8 +1276,8 @@
       "notes": "tie to Gartner Primary Storage MQ"
     },
     {
-      "id": "app-data-consolidation-update-needed-51",
-      "title": "App Data Consolidation (update needed)",
+      "id": "app-data-consolidation-update-needed-video-50",
+      "title": "App Data Consolidation (update needed) | Video",
       "url": null,
       "type": "Video",
       "campaign": "Data Modernization & Resilience",
@@ -1328,8 +1302,8 @@
       "notes": "update needed"
     },
     {
-      "id": "clean-data-recovery-the-difference-between-best-effort-and-sla-backed-52",
-      "title": "Clean Data Recovery: The Difference Between Best-Effort and SLA-Backed",
+      "id": "clean-data-recovery-the-difference-between-best-effort-and-sla-backed-infographic-51",
+      "title": "Clean Data Recovery: The Difference Between Best-Effort and SLA-Backed | Infographic",
       "url": null,
       "type": "Infographic",
       "campaign": "Data Modernization & Resilience",
@@ -1354,10 +1328,10 @@
       "notes": "VSP One Block + Cyber Resilience Guarantee"
     },
     {
-      "id": "451-research-modernizing-mission-critical-storage-analyst-report-3rd-party-analyst-report-53",
-      "title": "451 Research: Modernizing Mission-Critical Storage Analyst Report | 3rd Party / Analyst Report",
+      "id": "451-research-modernizing-mission-critical-storage-analyst-report-analyst-report-52",
+      "title": "451 Research: Modernizing Mission-Critical Storage Analyst Report | Analyst Report",
       "url": "https://www.hitachivantara.com/en-us/gated-forms/451-research-pathfinder-report-modernizing-mission-critical-storage",
-      "type": "3rd Party / Analyst Report",
+      "type": "Analyst Report",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
       "funnelStage": "MOFU",
@@ -1380,10 +1354,10 @@
       "notes": "\u00a0"
     },
     {
-      "id": "omdia-the-five-new-essentials-for-data-storage-platforms-3rd-party-analyst-report-54",
-      "title": "Omdia: The Five New Essentials for Data Storage Platforms | 3rd Party / Analyst Report",
+      "id": "omdia-the-five-new-essentials-for-data-storage-platforms-analyst-report-53",
+      "title": "Omdia: The Five New Essentials for Data Storage Platforms | Analyst Report",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/analyst-content/omdia-ebook-five-new-essentials-for-data-storage-platforms.pdf",
-      "type": "3rd Party / Analyst Report",
+      "type": "Analyst Report",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
       "funnelStage": "TOFU",
@@ -1406,10 +1380,10 @@
       "notes": "\u00a0"
     },
     {
-      "id": "451-research-boost-resiliency-and-performance-for-modern-data-infrastructures-3rd-party-an-55",
-      "title": "451 Research: Boost Resiliency and Performance for Modern Data Infrastructures | 3rd Party / Analyst Report",
+      "id": "451-research-boost-resiliency-and-performance-for-modern-data-infrastructures-analyst-repo-54",
+      "title": "451 Research: Boost Resiliency and Performance for Modern Data Infrastructures | Analyst Report",
       "url": "https://www.hitachivantara.com/en-us/gated-forms/451-research-market-insight-report-vsp-one-block-high-end",
-      "type": "3rd Party / Analyst Report",
+      "type": "Analyst Report",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Cyber Risk Mitigation & Recovery",
       "funnelStage": "BOFU",
@@ -1432,10 +1406,10 @@
       "notes": "\u00a0"
     },
     {
-      "id": "idc-dora-mandates-financial-firms-shift-to-cyber-resilience-56",
-      "title": "IDC: DORA Mandates Financial Firms Shift to Cyber Resilience",
+      "id": "idc-dora-mandates-financial-firms-shift-to-cyber-resilience-analyst-report-55",
+      "title": "IDC: DORA Mandates Financial Firms Shift to Cyber Resilience | Analyst Report",
       "url": "https://www.hitachivantara.com/en-us/gated-forms/idc-dora-mandates-financial-firms-shift-to-cyber-resilience",
-      "type": "3rd Party / Analyst Report",
+      "type": "Analyst Report",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Cyber Risk Mitigation & Recovery",
       "funnelStage": "MOFU",
@@ -1458,10 +1432,10 @@
       "notes": "\u00a0"
     },
     {
-      "id": "the-total-economic-impact-of-hitachi-vantara-virtual-storage-platform-one-cost-savings-and-57",
-      "title": "The Total Economic Impact\u2122 Of Hitachi Vantara Virtual Storage Platform One Cost Savings And Business Benefits Enabled By VSP One",
+      "id": "the-total-economic-impact-of-virtual-storage-platform-one-analyst-report-56",
+      "title": "The Total Economic Impact of Virtual Storage Platform One | Analyst Report",
       "url": "https://www.hitachivantara.com/en-us/gated-forms/cost-savings-and-business-benefits-enabled-by-vsp-one",
-      "type": "3rd Party / Analyst Report",
+      "type": "Analyst Report",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
       "funnelStage": "BOFU",
@@ -1484,10 +1458,10 @@
       "notes": "\u00a0"
     },
     {
-      "id": "451-research-rising-data-challenges-drive-storage-modernization-3rd-party-analyst-report-58",
-      "title": "451 Research: Rising Data Challenges Drive Storage Modernization | 3rd Party / Analyst Report",
+      "id": "451-research-rising-data-challenges-drive-storage-modernization-analyst-report-57",
+      "title": "451 Research: Rising Data Challenges Drive Storage Modernization | Analyst Report",
       "url": "https://www.hitachivantara.com/en-us/gated-forms/451-research-rising-data-challenges-storage-modernization",
-      "type": "3rd Party / Analyst Report",
+      "type": "Analyst Report",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
       "funnelStage": "MOFU",
@@ -1510,10 +1484,10 @@
       "notes": "\u00a0"
     },
     {
-      "id": "mit-tech-review-the-rise-of-the-data-platform-for-hybrid-cloud-3rd-party-analyst-report-59",
-      "title": "MIT Tech Review: The Rise of the Data Platform for Hybrid Cloud 3rd Party / Analyst Report",
+      "id": "mit-tech-review-the-rise-of-the-data-platform-for-hybrid-cloud-analyst-report-58",
+      "title": "MIT Tech Review: The Rise of the Data Platform for Hybrid Cloud | Analyst Report",
       "url": "https://www.hitachivantara.com/en-us/gated-forms/mit-tech-review-rise-of-data-platform-hybrid-cloud",
-      "type": "3rd Party / Analyst Report",
+      "type": "Analyst Report",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
       "funnelStage": "MOFU",
@@ -1536,10 +1510,10 @@
       "notes": "\u00a0"
     },
     {
-      "id": "hitachi-vantara-named-primary-storage-leader-gigaom-radar-2025-analyst-report-3rd-party-an-60",
-      "title": "Hitachi Vantara Named Primary Storage Leader | GigaOm Radar 2025 Analyst Report 3rd Party / Analyst Report",
+      "id": "hitachi-vantara-named-primary-storage-leader-gigaom-radar-2025-analyst-report-analyst-repo-59",
+      "title": "Hitachi Vantara Named Primary Storage Leader | GigaOm Radar 2025 Analyst Report | Analyst Report",
       "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-radar-for-primary-storage-2025",
-      "type": "3rd Party / Analyst Report",
+      "type": "Analyst Report",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
       "funnelStage": "MOFU",
@@ -1562,10 +1536,10 @@
       "notes": "\u00a0"
     },
     {
-      "id": "2025-26-dcig-top-5-enterprise-sds-block-storage-solutions-hitachi-vantara-vsp-one-block-so-61",
-      "title": "2025-26  DCIG TOP 5 ENTERPRISE SDS BLOCK STORAGE SOLUTIONS\nHitachi Vantara VSP One Block Solution Profile",
+      "id": "dcig-top-5-hitachi-vantara-vsp-one-block-analyst-report-60",
+      "title": "DCIG Top 5 Hitachi Vantara VSP One Block | Analyst Report",
       "url": "https://www.hitachivantara.com/en-us/gated-forms/dcig-top-5-midrange-hybrid-cloud-vsp-one-block",
-      "type": "3rd Party / Analyst Report",
+      "type": "Analyst Report",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Hybrid Cloud Platform & Operations",
       "funnelStage": "MOFU",
@@ -1588,8 +1562,8 @@
       "notes": "\u00a0"
     },
     {
-      "id": "innovating-mission-critical-data-storage-with-cloud-operations-model-for-the-bmw-group-62",
-      "title": "Innovating Mission-Critical Data Storage with Cloud Operations Model for the BMW Group",
+      "id": "bmw-group-innovating-mission-critical-data-storage-customer-story-61",
+      "title": "BMW Group: Innovating Mission-Critical Data Storage | Customer Story",
       "url": "https://www.hitachivantara.com/en-us/company/customer-stories/bmw-group-innovates-case-study",
       "type": "Customer Story",
       "campaign": "Data Modernization & Resilience",
@@ -1614,8 +1588,8 @@
       "notes": "\u00a0"
     },
     {
-      "id": "hitachi-delivers-managed-storage-solution-with-large-all-flash-deployment-63",
-      "title": "Hitachi Delivers Managed Storage Solution With Large All-Flash Deployment",
+      "id": "customer-story-bmw-group-hitachi-delivers-managed-storage-solution-with-large-all-flash-de-62",
+      "title": "Customer Story \u2013 BMW Group: Hitachi Delivers Managed Storage Solution With Large All-Flash Deployment | Customer Story",
       "url": "https://www.hitachivantara.com/en-us/company/customer-stories/bmw-group-case-study",
       "type": "Customer Story",
       "campaign": "Data Modernization & Resilience",
@@ -1640,8 +1614,8 @@
       "notes": "\u00a0"
     },
     {
-      "id": "suva-supports-its-digitization-strategy-with-high-performance-innovative-storage-solutions-64",
-      "title": "Suva Supports Its Digitization Strategy With High-Performance, Innovative Storage Solutions",
+      "id": "customer-story-suva-customer-story-63",
+      "title": "Customer Story \u2013 Suva | Customer Story",
       "url": "https://www.hitachivantara.com/en-us/company/customer-stories/suva-case-study",
       "type": "Customer Story",
       "campaign": "Data Modernization & Resilience",
@@ -1666,8 +1640,8 @@
       "notes": "\u00a0"
     },
     {
-      "id": "rabobank-leads-the-field-with-compliance-discovery-search-time-reduced-from-weeks-to-hours-65",
-      "title": "Rabobank Leads the Field With Compliance Discovery Search Time Reduced From Weeks to Hours With Hitachi Content Platform",
+      "id": "rabobank-compliance-discovery-search-time-reduced-from-weeks-to-hours-customer-story-64",
+      "title": "Rabobank: Compliance Discovery Search Time Reduced From Weeks to Hours | Customer Story",
       "url": "https://www.hitachivantara.com/en-us/company/customer-stories/rabobank-case-study",
       "type": "Customer Story",
       "campaign": "Data Modernization & Resilience",
@@ -1692,9 +1666,9 @@
       "notes": "\u00a0"
     },
     {
-      "id": "rwth-aachen-university-enhances-cybersecurity-66",
-      "title": "RWTH Aachen University Enhances Cybersecurity",
-      "url": null,
+      "id": "rwth-aachen-university-consolidate-digital-backup-to-object-services-at-scale-and-boost-cy-65",
+      "title": "RWTH Aachen University: Consolidate Digital Backup to Object Services at Scale and Boost Cybersecurity | Customer Story",
+      "url": "https://www.hitachivantara.com/en-us/company/customer-stories/rwth-aachen-university",
       "type": "Customer Story",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Cyber Risk Mitigation & Recovery",
@@ -1718,8 +1692,8 @@
       "notes": "\u00a0"
     },
     {
-      "id": "simplify-compliance-and-improve-productivity-67",
-      "title": "Simplify Compliance and Improve Productivity",
+      "id": "banco-de-brasilia-customer-story-66",
+      "title": "Banco De Brasilia | Customer Story",
       "url": "https://www.hitachivantara.com/en-us/company/customer-stories/banco-de-brasilia-case-study",
       "type": "Customer Story",
       "campaign": "Data Modernization & Resilience",
@@ -1744,7 +1718,7 @@
       "notes": "\u00a0"
     },
     {
-      "id": "kbc-group-and-k-h-bank-improve-business-critical-data-resilience-recovery-customer-story-68",
+      "id": "kbc-group-and-k-h-bank-improve-business-critical-data-resilience-recovery-customer-story-67",
       "title": "KBC Group and K&H Bank: Improve Business-Critical Data Resilience & Recovery | Customer Story",
       "url": "https://www.hitachivantara.com/en-us/company/customer-stories/kbc-group-customer-story",
       "type": "Customer Story",
@@ -1770,7 +1744,7 @@
       "notes": "\u00a0"
     },
     {
-      "id": "large-utility-company-protect-key-systems-and-disarm-ransomware-risks-customer-story-69",
+      "id": "large-utility-company-protect-key-systems-and-disarm-ransomware-risks-customer-story-68",
       "title": "Large Utility Company: Protect Key Systems and Disarm Ransomware Risks | Customer Story",
       "url": "https://www.hitachivantara.com/en-us/company/customer-stories/large-utility-company-case-study",
       "type": "Customer Story",
@@ -1796,7 +1770,7 @@
       "notes": "\u00a0"
     },
     {
-      "id": "sfs-group-advances-digitization-disaster-recovery-and-lowers-tco-with-unified-solution-cus-70",
+      "id": "sfs-group-advances-digitization-disaster-recovery-and-lowers-tco-with-unified-solution-cus-69",
       "title": "SFS Group: Advances Digitization/Disaster Recovery and Lowers TCO with Unified Solution | Customer Story",
       "url": "https://www.hitachivantara.com/en-us/company/customer-stories/sfs-group-case-study",
       "type": "Customer Story",
@@ -1822,7 +1796,7 @@
       "notes": "\u00a0"
     },
     {
-      "id": "european-financial-services-company-resilience-compliance-and-cost-savings-with-dpaas-cust-71",
+      "id": "european-financial-services-company-resilience-compliance-and-cost-savings-with-dpaas-cust-70",
       "title": "European Financial Services Company: Resilience, Compliance and Cost Savings with DPaaS | Customer Story",
       "url": "https://www.hitachivantara.com/en-us/company/customer-stories/european-financial-services-dpaas-customer-story",
       "type": "Customer Story",
@@ -1848,7 +1822,7 @@
       "notes": "\u00a0"
     },
     {
-      "id": "malayala-manorama-delivering-24-7-availability-for-24-hour-news-customer-story-72",
+      "id": "malayala-manorama-delivering-24-7-availability-for-24-hour-news-customer-story-71",
       "title": "Malayala Manorama: Delivering 24/7 Availability for 24-Hour News | Customer Story",
       "url": "https://www.hitachivantara.com/en-us/company/customer-stories/malayala-manorama-customer-story",
       "type": "Customer Story",
@@ -1874,9 +1848,9 @@
       "notes": "\u00a0"
     },
     {
-      "id": "ama-agrarmarkt-customer-story-73",
-      "title": "AMA Agrarmarkt | Customer Story",
-      "url": "https://www.hitachivantara.com/en-us/company/customer-stories/ama-agrarmarkt-case-study",
+      "id": "ama-agrarmarkt-supporting-austria-s-agriculture-with-robust-and-reliable-storage-infrastru-72",
+      "title": "AMA Agrarmarkt: Supporting Austria\u2019s Agriculture with Robust and Reliable Storage Infrastructure | Customer Story",
+      "url": "https://www.hitachivantara.com/en-us/company/customer-stories/agrarmarkt-austria-case-study",
       "type": "Customer Story",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
@@ -1900,8 +1874,8 @@
       "notes": "\u00a0"
     },
     {
-      "id": "yapi-kredi-74",
-      "title": "Yapi Kredi",
+      "id": "yapi-kredi-delivering-banking-services-to-millions-of-customers-with-sustainable-cost-effi-73",
+      "title": "Yapi Kredi: Delivering Banking Services to Millions of Customers with Sustainable, Cost-Efficient Infrastructure | Customer Story",
       "url": "https://www.hitachivantara.com/en-us/company/customer-stories/yap-kredi-customer-story",
       "type": "Customer Story",
       "campaign": "Data Modernization & Resilience",
@@ -1926,8 +1900,8 @@
       "notes": "\u00a0"
     },
     {
-      "id": "boe-technology-group-transforms-operations-implements-a-virtual-desktop-cloud-with-hitachi-75",
-      "title": "BOE Technology Group Transforms Operations, Implements a Virtual Desktop Cloud With Hitachi Solutions",
+      "id": "boe-technology-group-transforms-operations-implements-a-virtual-desktop-cloud-customer-sto-74",
+      "title": "BOE Technology Group: Transforms Operations, Implements a Virtual Desktop Cloud | Customer Story",
       "url": "https://www.hitachivantara.com/en-us/company/customer-stories/boe-technology-group-case-study",
       "type": "Customer Story",
       "campaign": "Data Modernization & Resilience",
@@ -1952,8 +1926,8 @@
       "notes": "\u00a0"
     },
     {
-      "id": "cbts-meets-customer-demand-for-agile-and-cost-effective-cloud-services-with-hitachi-everfl-76",
-      "title": "CBTS Meets Customer Demand for Agile and Cost-effective Cloud Services With Hitachi Everflex",
+      "id": "cbts-meets-customer-demand-for-agile-and-cost-effective-cloud-services-with-hitachi-everfl-75",
+      "title": "CBTS: Meets Customer Demand for Agile and Cost-Effective Cloud Services With Hitachi EverFlex | Customer Story",
       "url": "https://www.hitachivantara.com/en-us/company/customer-stories/cbts-case-study",
       "type": "Customer Story",
       "campaign": "Data Modernization & Resilience",
@@ -1978,8 +1952,8 @@
       "notes": "\u00a0"
     },
     {
-      "id": "sfs-group-advances-digitization-with-high-performance-private-cloud-77",
-      "title": "SFS Group Advances Digitization with High Performance Private Cloud",
+      "id": "sfs-group-high-performance-private-cloud-customer-story-76",
+      "title": "SFS Group: High-Performance Private Cloud | Customer Story",
       "url": "https://www.hitachivantara.com/en-us/company/customer-stories/sfs-group-case-study",
       "type": "Customer Story",
       "campaign": "Data Modernization & Resilience",
@@ -2004,9 +1978,9 @@
       "notes": "\u00a0"
     },
     {
-      "id": "shaping-outstanding-digital-learning-experiences-with-a-reliable-easy-to-manage-storage-pl-78",
-      "title": "Shaping Outstanding Digital Learning Experiences with a Reliable, Easy-to-Manage Storage Platform",
-      "url": "https://www.hitachivantara.com/en-us/company/customer-stories/umhb-case-study",
+      "id": "university-mary-hardin-baylor-shaping-outstanding-digital-learning-experiences-with-a-reli-77",
+      "title": "University Mary Hardin Baylor: Shaping Outstanding Digital Learning Experiences with a Reliable, Easy-to-Manage Storage Platform | Customer Story",
+      "url": "https://www.hitachivantara.com/en-us/company/customer-stories/university-of-mary-hardin-baylor-customer-story",
       "type": "Customer Story",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
@@ -2030,8 +2004,8 @@
       "notes": "\u00a0"
     },
     {
-      "id": "from-legacy-to-velocity-how-vsp-one-customers-turned-legacy-limits-into-competitive-edge-79",
-      "title": "From Legacy to Velocity:\nHow VSP One Customers Turned Legacy Limits into Competitive Edge",
+      "id": "from-legacy-to-velocity-how-vsp-one-customers-turned-legacy-limits-into-competitive-edge-e-78",
+      "title": "From Legacy to Velocity: How VSP One Customers Turned Legacy Limits into Competitive Edge eBook / Customer Story | Customer Story",
       "url": "https://www.hitachivantara.com/en-us/gated-forms/from-legacy-to-velocity",
       "type": "Customer Story",
       "campaign": "Data Modernization & Resilience",
@@ -2056,8 +2030,8 @@
       "notes": "\u00a0"
     },
     {
-      "id": "la-molisana-optimizing-it-and-scalability-customer-story-80",
-      "title": "La Molisana: Optimizing IT and Scalability | Customer Story",
+      "id": "la-molisana-supporting-ambitious-growth-plans-with-scalable-secure-and-sustainable-hitachi-79",
+      "title": "La Molisana: Supporting Ambitious Growth Plans with Scalable, Secure and Sustainable Hitachi VSP One Block | Customer Story",
       "url": "https://www.hitachivantara.com/en-us/company/customer-stories/la-molisana-case-study",
       "type": "Customer Story",
       "campaign": "Data Modernization & Resilience",
@@ -2082,8 +2056,8 @@
       "notes": "\u00a0"
     },
     {
-      "id": "farma-mondo-customer-story-81",
-      "title": "Farma Mondo | Customer Story",
+      "id": "farma-mondo-delivering-vital-medicines-24-7-with-a-highly-available-infrastructure-custome-80",
+      "title": "Farma Mondo: Delivering Vital Medicines 24/7 with a Highly Available Infrastructure | Customer Story",
       "url": "https://www.hitachivantara.com/en-us/company/customer-stories/farmamondo-case-study",
       "type": "Customer Story",
       "campaign": "Data Modernization & Resilience",
@@ -2108,10 +2082,10 @@
       "notes": "\u00a0"
     },
     {
-      "id": "performance-scale-and-flexibility-in-one-try-vsp-one-sds-free-82",
-      "title": "Performance, Scale, and Flexibility in One\u2014Try VSP One SDS Free",
+      "id": "sds-90-day-free-trial-offer-81",
+      "title": "SDS 90-Day Free Trial | Offer",
       "url": "https://www.hitachivantara.com/en-us/gated-forms/free-trial-of-vsp-one-software-defined-storage",
-      "type": "Demo / Assessment / Tool / Offer",
+      "type": "Offer",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Hybrid Cloud Platform & Operations",
       "funnelStage": "BOFU",
@@ -2134,10 +2108,10 @@
       "notes": "\u00a0"
     },
     {
-      "id": "hitachi-everflex-sla-guarantees-reference-guide-83",
-      "title": "Hitachi EverFlex SLA Guarantees Reference Guide",
+      "id": "hitachi-everflex-sla-guarantees-reference-guide-reference-architecture-82",
+      "title": "Hitachi EverFlex SLA Guarantees Reference Guide | Reference Architecture",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/specifications/everflex-sla-guarantees-reference-guide.pdf",
-      "type": "FAQ / Reference / Use Case Guide",
+      "type": "Reference Architecture",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
       "funnelStage": "MOFU",
@@ -2160,7 +2134,7 @@
       "notes": "\u00a0"
     },
     {
-      "id": "hitachi-everflex-one-of-the-highest-rated-vendors-by-it-professionals-on-gartner-peer-insi-84",
+      "id": "hitachi-everflex-one-of-the-highest-rated-vendors-by-it-professionals-on-gartner-peer-insi-83",
       "title": "Hitachi EverFlex One of the Highest Rated Vendors by IT Professionals on Gartner Peer Insights | Infographic",
       "url": "https://www.hitachivantara.com/en-us/gated-forms/everflex-gartner-peer-insights",
       "type": "Infographic",
@@ -2186,8 +2160,8 @@
       "notes": "\u00a0"
     },
     {
-      "id": "top-10-reasons-why-solutions-for-oracle-turbocharge-your-database-performance-85",
-      "title": "Top 10 Reasons Why Solutions for Oracle  \nTurbocharge Your Database Performance",
+      "id": "top-10-reasons-why-hitachi-for-oracle-top-10-84",
+      "title": "Top  10 Reasons why Hitachi for Oracle | Top 10",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/checklist/top-ten-reasons-why-solutions-oracle.pdf",
       "type": "Top 10",
       "campaign": "Data Modernization & Resilience",
@@ -2212,8 +2186,8 @@
       "notes": "\u00a0"
     },
     {
-      "id": "top-10-reasons-why-integrated-solutions-for-sap-86",
-      "title": "Top 10 Reasons Why Integrated Solutions for SAP",
+      "id": "top-10-reasons-why-integrated-solutions-for-sap-top-10-85",
+      "title": "Top 10 Reasons Why Integrated Solutions for SAP | Top 10",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/checklist/solutions-for-sap-hana.pdf",
       "type": "Top 10",
       "campaign": "Data Modernization & Resilience",
@@ -2238,7 +2212,7 @@
       "notes": "\u00a0"
     },
     {
-      "id": "everflex-data-protection-as-a-service-video-87",
+      "id": "everflex-data-protection-as-a-service-video-86",
       "title": "EverFlex Data Protection as a Service | Video",
       "url": "https://www.hitachivantara.com/en-us/resources.html#vid=6361187882112",
       "type": "Video",
@@ -2264,8 +2238,8 @@
       "notes": "\u00a0"
     },
     {
-      "id": "cyber-resilience-guarantee-88",
-      "title": "Cyber Resilience Guarantee",
+      "id": "cyber-resilience-guarantee-video-87",
+      "title": "Cyber Resilience Guarantee | Video",
       "url": "https://www.hitachivantara.com/en-us/resources.html#vid=6350078372112",
       "type": "Video",
       "campaign": "Data Modernization & Resilience",
@@ -2290,8 +2264,8 @@
       "notes": "\u00a0"
     },
     {
-      "id": "umhb-video-video-89",
-      "title": "UMHB Video Video",
+      "id": "umhb-video-video-88",
+      "title": "UMHB Video | Video",
       "url": "https://www.brighttalk.com/webcast/12821/667466?bt_tok=%7B%7Blead_id%7D%7D&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=667466",
       "type": "Video",
       "campaign": "Data Modernization & Resilience",
@@ -2316,8 +2290,8 @@
       "notes": "\u00a0"
     },
     {
-      "id": "build-modern-ai-ready-infrastructure-without-starting-over-webinar-90",
-      "title": "Build Modern AI-Ready Infrastructure Without Starting Over Webinar",
+      "id": "build-modern-ai-ready-infrastructure-without-starting-over-webinar-89",
+      "title": "Build Modern AI-Ready Infrastructure Without Starting Over | Webinar",
       "url": "https://www.brighttalk.com/webcast/12821/653652?bt_tok={{lead_id}}&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=653652",
       "type": "Webinar",
       "campaign": "Data Modernization & Resilience",
@@ -2342,8 +2316,8 @@
       "notes": "\u00a0"
     },
     {
-      "id": "cyberattacks-is-predictable-business-continuity-possible-webinar-91",
-      "title": "Cyberattacks: Is Predictable Business Continuity Possible? Webinar",
+      "id": "cyberattacks-is-predictable-business-continuity-possible-webinar-90",
+      "title": "Cyberattacks: Is Predictable Business Continuity Possible? | Webinar",
       "url": "https://www.brighttalk.com/webcast/12821/654892?bt_tok={{lead_id}}&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=654892",
       "type": "Webinar",
       "campaign": "Data Modernization & Resilience",
@@ -2368,8 +2342,8 @@
       "notes": "\u00a0"
     },
     {
-      "id": "from-reactive-to-resilient-rethinking-cybersecurity-for-the-evolving-threat-landscape-webi-92",
-      "title": "From Reactive to Resilient: Rethinking Cybersecurity for the Evolving Threat Landscape Webinar Webinar",
+      "id": "from-reactive-to-resilient-rethinking-cybersecurity-for-the-evolving-threat-landscape-webi-91",
+      "title": "From Reactive to Resilient: Rethinking Cybersecurity for the Evolving Threat Landscape Webinar | Webinar",
       "url": "https://www.brighttalk.com/webcast/12821/641032?bt_tok={{lead_id}}&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=641032",
       "type": "Webinar",
       "campaign": "Data Modernization & Resilience",
@@ -2394,8 +2368,8 @@
       "notes": "\u00a0"
     },
     {
-      "id": "unlocking-roi-the-forrester-study-that-could-save-your-next-storage-investment-93",
-      "title": "Unlocking ROI: The Forrester Study That Could Save Your Next Storage Investment",
+      "id": "unlocking-roi-the-forrester-study-that-could-save-your-next-storage-investment-webinar-92",
+      "title": "Unlocking ROI: the Forrester Study That Could Save Your Next Storage Investment | Webinar",
       "url": "https://www.brighttalk.com/webcast/12821/651449?bt_tok={{lead_id}}&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=651449",
       "type": "Webinar",
       "campaign": "Data Modernization & Resilience",
@@ -2420,7 +2394,7 @@
       "notes": "\u00a0"
     },
     {
-      "id": "data-modernization-for-the-ai-era-simple-secure-and-sustainable-webinar-94",
+      "id": "data-modernization-for-the-ai-era-simple-secure-and-sustainable-webinar-93",
       "title": "Data Modernization for the AI Era: Simple, Secure and Sustainable | Webinar",
       "url": "https://www.brighttalk.com/webcast/12821/664668?bt_tok={{lead_id}}&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=664668",
       "type": "Webinar",
@@ -2446,8 +2420,8 @@
       "notes": "\u00a0"
     },
     {
-      "id": "from-data-chaos-to-clarity-strategies-for-scalable-storage-95",
-      "title": "From Data Chaos to Clarity: Strategies for Scalable Storage",
+      "id": "from-data-chaos-to-clarity-strategies-for-scalable-storage-webinar-webinar-94",
+      "title": "From Data Chaos to Clarity: Strategies for Scalable Storage Webinar | Webinar",
       "url": "https://www.brighttalk.com/webcast/12821/662717?bt_tok={{lead_id}}&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=662717",
       "type": "Webinar",
       "campaign": "Data Modernization & Resilience",
@@ -2472,7 +2446,7 @@
       "notes": "\u00a0"
     },
     {
-      "id": "the-cost-of-good-vs-excellent-blog-96",
+      "id": "the-cost-of-good-vs-excellent-blog-95",
       "title": "The Cost of Good vs. Excellent | Blog",
       "url": "https://www.hitachivantara.com/en-us/blog/the-cost-of-good-versus-excellent",
       "type": "Blog",
@@ -2498,8 +2472,8 @@
       "notes": "\u00a0"
     },
     {
-      "id": "boost-cyber-resilience-with-superhero-powers-and-hitachi-vsp-one-blog-97",
-      "title": "Boost Cyber Resilience with Superhero Powers (and Hitachi VSP One) Blog",
+      "id": "boost-cyber-resilience-with-superhero-powers-and-hitachi-vsp-one-blog-96",
+      "title": "Boost Cyber Resilience with Superhero Powers (and Hitachi VSP One) | Blog",
       "url": "https://www.hitachivantara.com/en-us/blog/boost-cyber-resilience-superhero-powers-and-vsp-one",
       "type": "Blog",
       "campaign": "Data Modernization & Resilience",
@@ -2524,7 +2498,7 @@
       "notes": "\u00a0"
     },
     {
-      "id": "cutting-storage-media-costs-and-risks-in-a-supply-chain-crunch-blog-98",
+      "id": "cutting-storage-media-costs-and-risks-in-a-supply-chain-crunch-blog-97",
       "title": "Cutting Storage Media Costs and Risks in a Supply Chain Crunch | Blog",
       "url": "https://www.hitachivantara.com/en-us/blog/cutting-storage-media-costs-and-risks-in-a-supply-chain-crunch",
       "type": "Blog",
@@ -2550,8 +2524,8 @@
       "notes": "\u00a0"
     },
     {
-      "id": "supercompute-blog-99",
-      "title": "Supercompute blog",
+      "id": "supercompute-blog-blog-98",
+      "title": "Supercompute blog | Blog",
       "url": null,
       "type": "Blog",
       "campaign": "Data Modernization & Resilience",
@@ -2576,8 +2550,8 @@
       "notes": "\u00a0"
     },
     {
-      "id": "a-common-data-plane-simplifies-hybrid-cloud-and-ai-100",
-      "title": "A Common Data Plane Simplifies Hybrid Cloud and AI",
+      "id": "a-common-data-plane-is-the-solution-to-cloud-complexity-blog-99",
+      "title": "A Common Data Plane is the Solution to Cloud Complexity | Blog",
       "url": "https://www.hitachivantara.com/en-us/blog/a-common-data-plane-simplifies-hybrid-cloud-and-ai",
       "type": "Blog",
       "campaign": "Data Modernization & Resilience",
@@ -2602,7 +2576,7 @@
       "notes": "\u00a0"
     },
     {
-      "id": "how-to-avoid-the-hidden-costs-of-slow-it-infrastructure-deployments-blog-101",
+      "id": "how-to-avoid-the-hidden-costs-of-slow-it-infrastructure-deployments-blog-100",
       "title": "How to Avoid the Hidden Costs of Slow IT Infrastructure Deployments | Blog",
       "url": "https://www.hitachivantara.com/en-us/blog/how-to-avoid-the-hidden-costs-of-slow-it-infrastructure-deployments",
       "type": "Blog",
@@ -2628,8 +2602,8 @@
       "notes": "\u00a0"
     },
     {
-      "id": "enhancing-it-operational-excellence-with-infrastructure-as-a-service-102",
-      "title": "Enhancing IT Operational Excellence with Infrastructure as a Service",
+      "id": "enhancing-it-operational-excellence-with-infrastructure-as-a-service-blog-101",
+      "title": "Enhancing IT Operational Excellence with Infrastructure as a Service | Blog",
       "url": "https://www.hitachivantara.com/en-us/blog/enhancing-it-operational-excellence-with-infrastructure-as-a-service",
       "type": "Blog",
       "campaign": "Data Modernization & Resilience",
@@ -2654,10 +2628,10 @@
       "notes": "\u00a0"
     },
     {
-      "id": "cyber-resilience-103",
-      "title": "Cyber Resilience",
+      "id": "cyber-resilience-solution-profile-102",
+      "title": "Cyber Resilience | Solution Profile",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/solution-profile/cyber-resilience-solution-profile.pdf",
-      "type": "Datasheet / Solution Brief / Technical",
+      "type": "Solution Profile",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Cyber Risk Mitigation & Recovery",
       "funnelStage": "MOFU",
@@ -2680,10 +2654,10 @@
       "notes": "\u00a0"
     },
     {
-      "id": "cyber-resilience-guarantee-104",
-      "title": "Cyber Resilience Guarantee",
+      "id": "cyber-resilience-guarantee-solution-profile-103",
+      "title": "Cyber Resilience Guarantee | Solution Profile",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/solution-profile/vsp-one-cyber-resilience-guarantee.pdf",
-      "type": "Datasheet / Solution Brief / Technical",
+      "type": "Solution Profile",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Cyber Risk Mitigation & Recovery",
       "funnelStage": "BOFU",
@@ -2706,10 +2680,10 @@
       "notes": "\u00a0"
     },
     {
-      "id": "fueling-oil-and-gas-with-fast-secure-and-always-available-data-105",
-      "title": "Fueling Oil and Gas With Fast, Secure \nand Always-Available Data",
+      "id": "fueling-oil-and-gas-with-fast-secure-always-available-data-solution-profile-104",
+      "title": "Fueling Oil and Gas with Fast, Secure, Always-Available Data | Solution Profile",
       "url": "https://www.hitachivantara.com/en-us/pdf/solution-profile/fueling-oil-and-gas-with-fast-secure-always-available-data.pdf",
-      "type": "Datasheet / Solution Brief / Technical",
+      "type": "Solution Profile",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
       "funnelStage": "BOFU",
@@ -2732,10 +2706,10 @@
       "notes": "\u00a0"
     },
     {
-      "id": "drive-your-ai-innovation-with-hitachi-hybrid-cloud-platform-and-red-hat-openshift-powered--106",
-      "title": "Drive Your AI Innovation With Hitachi Hybrid Cloud Platform and Red Hat OpenShift\nPowered by Hitachi Integrated Systems and VSP One Storage",
+      "id": "drive-your-ai-innovation-with-hitachi-vantara-hybrid-cloud-platform-and-red-hat-openshift--105",
+      "title": "Drive Your AI Innovation With Hitachi Vantara Hybrid Cloud Platform and Red Hat OpenShift | Solution Profile",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/solution-profile/drive-your-ai-innovation-with-hitachi-vantara-hybrid-cloud-platform-red-hat-openshift.pdf",
-      "type": "Datasheet / Solution Brief / Technical",
+      "type": "Solution Profile",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Hybrid Cloud Platform & Operations",
       "funnelStage": "BOFU",
@@ -2758,10 +2732,10 @@
       "notes": "\u00a0"
     },
     {
-      "id": "accelerate-and-automate-modernization-with-hitachi-vantara-and-red-hat-107",
-      "title": "Accelerate and Automate Modernization With Hitachi Vantara and Red Hat",
+      "id": "accelerate-and-automate-modernization-with-hitachi-vantara-and-red-hat-solution-profile-106",
+      "title": "Accelerate  and Automate  Modernization With  Hitachi Vantara and  Red Hat | Solution Profile",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/solution-profile/accelerate-automate-modernization-with-hitachi-vantara-red-hat.pdf",
-      "type": "Datasheet / Solution Brief / Technical",
+      "type": "Solution Profile",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Hybrid Cloud Platform & Operations",
       "funnelStage": "BOFU",
@@ -2784,10 +2758,10 @@
       "notes": "\u00a0"
     },
     {
-      "id": "hitachi-integrated-solutions-agility-redefined-resilience-guaranteed-108",
-      "title": "Hitachi Integrated Solutions    \nAgility redefined, resilience guaranteed",
+      "id": "hitachi-integrated-systems-pdf-datasheet-107",
+      "title": "hitachi-integrated-systems.pdf | Datasheet",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/datasheet/hitachi-integrated-systems.pdf",
-      "type": "Datasheet / Solution Brief / Technical",
+      "type": "Datasheet",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Hybrid Cloud Platform & Operations",
       "funnelStage": "BOFU",
@@ -2810,10 +2784,10 @@
       "notes": "\u00a0"
     },
     {
-      "id": "hitachi-integrated-systems-solution-with-microsoft-sql-server-datasheet-solution-brief-tec-109",
-      "title": "Hitachi Integrated Systems Solution with Microsoft SQL Server | Datasheet / Solution Brief / Technical",
+      "id": "hitachi-integrated-systems-solution-with-microsoft-sql-server-reference-architecture-108",
+      "title": "Hitachi Integrated Systems Solution with Microsoft SQL Server | Reference Architecture",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/architecture-guide/integrated-systems-solution-with-microsoft-sql-server-reference.pdf",
-      "type": "Datasheet / Solution Brief / Technical",
+      "type": "Reference Architecture",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Hybrid Cloud Platform & Operations",
       "funnelStage": "BOFU",
@@ -2836,10 +2810,10 @@
       "notes": "\u00a0"
     },
     {
-      "id": "cyber-resilience-beyond-traditional-security-in-the-age-of-inevitable-breaches-110",
-      "title": "Cyber Resilience Beyond Traditional Security in the Age of Inevitable Breaches",
+      "id": "cyber-resilience-beyond-traditional-security-in-the-age-of-inevitable-breaches-ebook-109",
+      "title": "Cyber Resilience: Beyond Traditional Security in the Age of Inevitable Breaches | eBook",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/cyber-resilience-beyond-traditional.pdf",
-      "type": "eBook/Whitepaper",
+      "type": "eBook",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Cyber Risk Mitigation & Recovery",
       "funnelStage": "TOFU",
@@ -2862,10 +2836,10 @@
       "notes": "\u00a0"
     },
     {
-      "id": "protect-smarter-recover-faster-your-guide-to-data-protection-as-a-service-dpaas-111",
-      "title": "Protect Smarter, Recover Faster: Your Guide to Data Protection as a Service (DPaaS)",
+      "id": "protect-smarter-recover-faster-your-guide-to-data-protection-as-a-service-ebook-110",
+      "title": "Protect Smarter, Recover Faster: Your Guide to Data Protection as a Service | eBook",
       "url": "https://www.hitachivantara.com/en-us/gated-forms/protect-smarter-recover-faster-your-guide-to-data-protection-as-a-service",
-      "type": "eBook/Whitepaper",
+      "type": "eBook",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Cyber Risk Mitigation & Recovery",
       "funnelStage": "MOFU",
@@ -2888,10 +2862,10 @@
       "notes": "\u00a0"
     },
     {
-      "id": "hitachi-mainframe-cyber-resiliency-solution-ebook-whitepaper-112",
-      "title": "Hitachi Mainframe Cyber Resiliency Solution | eBook/Whitepaper",
+      "id": "hitachi-mainframe-cyber-resiliency-solution-whitepaper-111",
+      "title": "Hitachi Mainframe Cyber Resiliency Solution | Whitepaper",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/white-paper/mainframe-cyber-resiliency-solution-whitepaper.pdf",
-      "type": "eBook/Whitepaper",
+      "type": "Whitepaper",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Cyber Risk Mitigation & Recovery",
       "funnelStage": "BOFU",
@@ -2914,10 +2888,10 @@
       "notes": "\u00a0"
     },
     {
-      "id": "navigating-complexity-and-cost-with-hitachi-everflex-113",
-      "title": "Navigating Complexity and Cost With Hitachi EverFlex",
+      "id": "navigating-complexity-and-cost-with-hitachi-everflex-whitepaper-112",
+      "title": "Navigating Complexity and Cost With Hitachi EverFlex | Whitepaper",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/white-paper/navigating-complexity-and-cost-with-hitachi-everflex.pdf",
-      "type": "eBook/Whitepaper",
+      "type": "Whitepaper",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
       "funnelStage": "MOFU",
@@ -2940,10 +2914,10 @@
       "notes": "\u00a0"
     },
     {
-      "id": "unified-data-management-buyer-s-guide-strategies-to-simplify-and-elevate-data-management-o-114",
-      "title": "Unified Data Management Buyer\u2019s Guide\nStrategies to Simplify and Elevate Data  \nManagement Operations",
+      "id": "unified-data-management-buyer-s-guide-ebook-113",
+      "title": "Unified Data Management Buyer's Guide | eBook",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/unified-data-management-buyers-guide.pdf",
-      "type": "eBook/Whitepaper",
+      "type": "eBook",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
       "funnelStage": "MOFU",
@@ -2966,10 +2940,10 @@
       "notes": "\u00a0"
     },
     {
-      "id": "virtual-storage-platform-one-one-data-platform-no-limits-ebook-whitepaper-115",
-      "title": "Virtual Storage Platform One: One Data Platform. No Limits | eBook/Whitepaper",
+      "id": "virtual-storage-platform-one-one-data-platform-no-limits-ebook-114",
+      "title": "Virtual Storage Platform One: One Data Platform. No Limits | eBook",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/one-data-platform-no-limits-ebook.pdf",
-      "type": "eBook/Whitepaper",
+      "type": "eBook",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
       "funnelStage": "MOFU",
@@ -2992,10 +2966,10 @@
       "notes": "\u00a0"
     },
     {
-      "id": "vsp-one-guarantees-ebook-whitepaper-116",
-      "title": "VSP One Guarantees | eBook/Whitepaper",
+      "id": "vsp-one-guarantees-ebook-115",
+      "title": "VSP One Guarantees | eBook",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/vsp-one-extends-guarantees-across-entire-data-plane.pdf",
-      "type": "eBook/Whitepaper",
+      "type": "eBook",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
       "funnelStage": "MOFU",
@@ -3018,10 +2992,10 @@
       "notes": "\u00a0"
     },
     {
-      "id": "from-bottlenecks-to-breakthroughs-enterprise-applications-ebook-ebook-whitepaper-117",
-      "title": "From Bottlenecks to Breakthroughs: Enterprise Applications eBook | eBook/Whitepaper",
+      "id": "from-bottlenecks-to-breakthroughs-enterprise-applications-ebook-ebook-116",
+      "title": "From Bottlenecks to Breakthroughs: Enterprise Applications eBook | eBook",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/enterprise-applications-ebook.pdf?bypassgated=true",
-      "type": "eBook/Whitepaper",
+      "type": "eBook",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
       "funnelStage": "MOFU",
@@ -3044,10 +3018,10 @@
       "notes": "\u00a0"
     },
     {
-      "id": "hybrid-cloud-buyer-s-guide-ebook-ebook-whitepaper-118",
-      "title": "Hybrid Cloud Buyer's Guide eBook | eBook/Whitepaper",
+      "id": "hybrid-cloud-buyer-s-guide-ebook-ebook-117",
+      "title": "Hybrid Cloud Buyer's Guide eBook | eBook",
       "url": "https://www.hitachivantara.com/en-us/pdf/ebook/hybrid-cloud-buyers-guide.pdf",
-      "type": "eBook/Whitepaper",
+      "type": "eBook",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Hybrid Cloud Platform & Operations",
       "funnelStage": "MOFU",
@@ -3070,10 +3044,10 @@
       "notes": "\u00a0"
     },
     {
-      "id": "top-5-reasons-to-choose-hitachi-storage-for-vmware-virtualization-success-ebook-whitepaper-119",
-      "title": "Top 5 Reasons To Choose Hitachi Storage for VMware Virtualization Success | eBook/Whitepaper",
+      "id": "top-5-reasons-to-choose-hitachi-storage-for-vmware-virtualization-success-ebook-118",
+      "title": "Top 5 Reasons To Choose Hitachi Storage for VMware Virtualization Success | eBook",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/top-five-reasons-choose-hitachi-storage-vmware-virtualization-success.pdf",
-      "type": "eBook/Whitepaper",
+      "type": "eBook",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Hybrid Cloud Platform & Operations",
       "funnelStage": "TOFU",
@@ -3096,10 +3070,10 @@
       "notes": "\u00a0"
     },
     {
-      "id": "top-10-reasons-flexible-hybrid-cloud-with-hitachi-and-red-hat-openshift-virtualization-120",
-      "title": "Top 10 Reasons: Flexible Hybrid Cloud with Hitachi and Red Hat OpenShift Virtualization",
+      "id": "top-10-reasons-flexible-hybrid-cloud-with-hitachi-and-red-hat-openshift-virtualization-top-119",
+      "title": "Top 10 Reasons: Flexible Hybrid Cloud with Hitachi and Red Hat OpenShift Virtualization | Top 10",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/top-ten-reasons-why-flexible-hybrid-cloud-with-red-hat-openshift-virtualization.pdf",
-      "type": "eBook/Whitepaper",
+      "type": "Top 10",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Hybrid Cloud Platform & Operations",
       "funnelStage": "TOFU",
@@ -3122,10 +3096,10 @@
       "notes": "\u00a0"
     },
     {
-      "id": "top-10-reasons-to-choose-hitachi-everflex-121",
-      "title": "Top 10 Reasons to Choose Hitachi EverFlex",
+      "id": "top-10-reasons-to-choose-hitachi-everflex-top-10-120",
+      "title": "Top 10 Reasons to Choose Hitachi EverFlex | Top 10",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/checklist/top-10-reasons-hitachi-everflex.pdf",
-      "type": "eBook/Whitepaper",
+      "type": "Top 10",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Hybrid Cloud Platform & Operations",
       "funnelStage": "TOFU",
@@ -3148,10 +3122,10 @@
       "notes": "\u00a0"
     },
     {
-      "id": "a-buyer-s-guide-to-hitachi-vantara-virtual-storage-platform-one-block-simple-secure-sustai-122",
-      "title": "A Buyer\u2019s Guide to Hitachi  Vantara Virtual Storage Platform One Block\nSimple, Secure, Sustainable",
+      "id": "vsp-one-block-buyer-s-guide-ebook-121",
+      "title": "VSP One Block Buyer's Guide | eBook",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/buyers-guide-to-virtual-storage-platform-one-block.pdf",
-      "type": "eBook/Whitepaper",
+      "type": "eBook",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
       "funnelStage": "MOFU",
@@ -3174,10 +3148,10 @@
       "notes": "\u00a0"
     },
     {
-      "id": "solve-the-six-data-storage-challenges-ebook-ebook-whitepaper-123",
-      "title": "Solve the Six Data Storage Challenges eBook eBook/Whitepaper",
+      "id": "solve-the-six-data-storage-challenges-ebook-ebook-122",
+      "title": "Solve the Six Data Storage Challenges eBook | eBook",
       "url": "https://www.hitachivantara.com/en-us/gated-forms/solve-six-biggest-data-storage-challenges-ebook",
-      "type": "eBook/Whitepaper",
+      "type": "eBook",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
       "funnelStage": "Hero",
@@ -3200,10 +3174,10 @@
       "notes": "\u00a0"
     },
     {
-      "id": "top-10-reasons-to-choose-hitachi-vantara-for-microsoft-sql-server-infrastructure-m-ebook-w-124",
-      "title": "Top 10 Reasons To Choose Hitachi Vantara for Microsoft SQL Server Infrastructure (M) eBook/Whitepaper",
+      "id": "top-10-reasons-to-choose-hitachi-vantara-for-microsoft-sql-server-infrastructure-m-top-10-123",
+      "title": "Top 10 Reasons To Choose Hitachi Vantara for Microsoft SQL Server Infrastructure (M) | Top 10",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/microsoft-sql-server-infrastructure.pdf",
-      "type": "eBook/Whitepaper",
+      "type": "Top 10",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Hybrid Cloud Platform & Operations",
       "funnelStage": "MOFU",
@@ -3226,7 +3200,7 @@
       "notes": "\u00a0"
     },
     {
-      "id": "ai-data-centers-are-pushing-u-s-power-grids-to-the-brink-blog-125",
+      "id": "ai-data-centers-are-pushing-u-s-power-grids-to-the-brink-blog-124",
       "title": "AI Data Centers are Pushing U.S. Power Grids to the Brink | Blog",
       "url": "https://www.hitachivantara.com/en-us/blog/ai-data-centers-are-pushing-us-power-grids-to-the-brink",
       "type": "Blog",
@@ -3252,12 +3226,12 @@
       "notes": "\u26a0\ufe0f POTENTIAL DUPLICATE \u2014 Review with \"AI Data Centers are Pushing U.S. Power Grids to the Brink\" (row with gated link). @stephanie.thompson@hitachivantara.com @sulochna.khokhrai@hitachivantara.com \u2014 Flagged by Smart Assist 10/1/2026."
     },
     {
-      "id": "ai-data-foundation-roadmap-guide-ebook-whitepaper-126",
-      "title": "Ai Data Foundation Roadmap Guide | eBook/Whitepaper",
+      "id": "ai-data-foundation-roadmap-guide-ebook-125",
+      "title": "Ai Data Foundation Roadmap Guide | eBook",
       "url": null,
-      "type": "eBook/Whitepaper",
+      "type": "eBook",
       "campaign": "AI Data Foundation",
-      "useCase": "High Performance AI-Ready Infrastructure",
+      "useCase": "Data Readiness and Activation for AI, High Performance AI-Ready Infrastructure",
       "funnelStage": "TOFU",
       "ownerTeam": "Global Campaigns",
       "audience": "Enterprise",
@@ -3278,34 +3252,8 @@
       "notes": "\u26a0\ufe0f POTENTIAL DUPLICATE \u2014 Review with \"Ai Data Foundation Roadmap Guide\" (Use Case: Data Readiness and Activation for AI). @stephanie.thompson@hitachivantara.com @sulochna.khokhrai@hitachivantara.com \u2014 Flagged by Smart Assist 10/1/2026."
     },
     {
-      "id": "ai-data-foundation-roadmap-guide-ebook-whitepaper-127",
-      "title": "Ai Data Foundation Roadmap Guide | eBook/Whitepaper",
-      "url": null,
-      "type": "eBook/Whitepaper",
-      "campaign": "AI Data Foundation",
-      "useCase": "Data Readiness and Activation for AI",
-      "funnelStage": "TOFU",
-      "ownerTeam": "Global Campaigns",
-      "audience": "Enterprise",
-      "status": "Planned",
-      "region": "Global",
-      "publishDate": "2026-11-09",
-      "publishDateDisplay": "Nov 09, 2026",
-      "partnerUse": false,
-      "paidMediaDate": null,
-      "paidMediaDateDisplay": "",
-      "primaryActivation": "No Planned Promotion",
-      "marketingEmail": null,
-      "salesEmail": null,
-      "usedInCampaign": "No",
-      "promotionPeriod": "",
-      "ownerIndividual": "Sulochna Khokhrai",
-      "publishedByVendor": "",
-      "notes": "\u26a0\ufe0f POTENTIAL DUPLICATE \u2014 Review with \"Ai Data Foundation Roadmap Guide\" (Use Case: High Performance AI-Ready Infrastructure). @stephanie.thompson@hitachivantara.com @sulochna.khokhrai@hitachivantara.com \u2014 Flagged by Smart Assist 10/1/2026."
-    },
-    {
-      "id": "alior-bank-customer-story-customer-story-128",
-      "title": "Alior Bank | Customer Story | Customer Story",
+      "id": "alior-bank-enabling-strategic-growth-and-innovation-with-a-pioneering-move-to-red-hat-open-126",
+      "title": "Alior Bank: Enabling strategic growth and innovation with a pioneering move to Red Hat OpenShift | Customer Story",
       "url": "https://www.hitachivantara.com/en-us/company/customer-stories/alior-bank-customer-story",
       "type": "Customer Story",
       "campaign": "Data Modernization & Resilience",
@@ -3330,34 +3278,8 @@
       "notes": "\u26a0\ufe0f POTENTIAL DUPLICATE \u2014 Review with \"Alior Bank | Customer Story\" (Use Case: Data Platform Architectures & Economics). @stephanie.thompson@hitachivantara.com @sulochna.khokhrai@hitachivantara.com \u2014 Flagged by Smart Assist 10/1/2026."
     },
     {
-      "id": "alior-bank-customer-story-customer-story-129",
-      "title": "Alior Bank | Customer Story | Customer Story",
-      "url": "https://www.hitachivantara.com/en-us/company/customer-stories/alior-bank-customer-story",
-      "type": "Customer Story",
-      "campaign": "Data Modernization & Resilience",
-      "useCase": "Data Platform Architectures & Economics",
-      "funnelStage": "BOFU",
-      "ownerTeam": "Customer Marketing",
-      "audience": "",
-      "status": "Live",
-      "region": "Global",
-      "publishDate": null,
-      "publishDateDisplay": "",
-      "partnerUse": false,
-      "paidMediaDate": null,
-      "paidMediaDateDisplay": "",
-      "primaryActivation": "No Planned Promotion",
-      "marketingEmail": null,
-      "salesEmail": null,
-      "usedInCampaign": "No",
-      "promotionPeriod": "2H",
-      "ownerIndividual": "",
-      "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u26a0\ufe0f POTENTIAL DUPLICATE \u2014 Review with \"Alior Bank | Customer Story\" (Use Case: Hybrid Cloud Platform & Operations). @stephanie.thompson@hitachivantara.com @sulochna.khokhrai@hitachivantara.com \u2014 Flagged by Smart Assist 10/1/2026."
-    },
-    {
-      "id": "americas-midrange-road-show-blog-130",
-      "title": "Americas Midrange Road Show\u200b blog",
+      "id": "americas-midrange-road-show-blog-blog-127",
+      "title": "Americas Midrange Road Show\u200b blog | Blog",
       "url": null,
       "type": "Blog",
       "campaign": "Data Modernization & Resilience",
@@ -3382,36 +3304,10 @@
       "notes": "\u26a0\ufe0f POTENTIAL DUPLICATE \u2014 Review with \"Americas Midrange Road Show Blog\" (without Use Case). @stephanie.thompson@hitachivantara.com @sulochna.khokhrai@hitachivantara.com \u2014 Flagged by Smart Assist 10/1/2026."
     },
     {
-      "id": "americas-midrange-road-show-blog-131",
-      "title": "Americas Midrange Road Show Blog",
-      "url": null,
-      "type": "Blog",
-      "campaign": "Data Modernization & Resilience",
-      "useCase": "",
-      "funnelStage": "TOFU",
-      "ownerTeam": "Brand",
-      "audience": "Midmarket",
-      "status": "Planned",
-      "region": "Global",
-      "publishDate": "2027-02-09",
-      "publishDateDisplay": "Feb 09, 2027",
-      "partnerUse": false,
-      "paidMediaDate": null,
-      "paidMediaDateDisplay": "",
-      "primaryActivation": "No Planned Promotion",
-      "marketingEmail": null,
-      "salesEmail": null,
-      "usedInCampaign": "No",
-      "promotionPeriod": "2H",
-      "ownerIndividual": "Emily Smith",
-      "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u26a0\ufe0f POTENTIAL DUPLICATE \u2014 Review with \"Americas Midrange Road Show\u200b blog\" (with Use Case). @stephanie.thompson@hitachivantara.com @sulochna.khokhrai@hitachivantara.com \u2014 Flagged by Smart Assist 10/1/2026."
-    },
-    {
-      "id": "everflex-tco-calculator-demo-assessment-tool-offer-132",
-      "title": "EverFlex TCO Calculator | Demo / Assessment / Tool / Offer",
+      "id": "everflex-tco-calculator-calculator-128",
+      "title": "EverFlex TCO Calculator | Calculator",
       "url": "https://www.hitachivantara.com/en-us/services/infrastructure-as-a-service/iaas-tco-assessment",
-      "type": "Demo / Assessment / Tool / Offer",
+      "type": "Calculator",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
       "funnelStage": "BOFU",
@@ -3434,60 +3330,8 @@
       "notes": "\u26a0\ufe0f POTENTIAL DUPLICATE \u2014 Review with \"EverFlex TCO Calculator\" (Use Case: Cyber Risk Mitigation & Recovery). @stephanie.thompson@hitachivantara.com @sulochna.khokhrai@hitachivantara.com \u2014 Flagged by Smart Assist 10/1/2026."
     },
     {
-      "id": "everflex-tco-calculator-demo-assessment-tool-offer-133",
-      "title": "EverFlex TCO Calculator | Demo / Assessment / Tool / Offer",
-      "url": "https://www.hitachivantara.com/en-us/services/infrastructure-as-a-service/iaas-tco-assessment",
-      "type": "Demo / Assessment / Tool / Offer",
-      "campaign": "Data Modernization & Resilience",
-      "useCase": "Cyber Risk Mitigation & Recovery",
-      "funnelStage": "BOFU",
-      "ownerTeam": "PMM",
-      "audience": "Enterprise, Midmarket",
-      "status": "Live",
-      "region": "Global",
-      "publishDate": null,
-      "publishDateDisplay": "",
-      "partnerUse": true,
-      "paidMediaDate": null,
-      "paidMediaDateDisplay": "",
-      "primaryActivation": "No Planned Promotion",
-      "marketingEmail": null,
-      "salesEmail": null,
-      "usedInCampaign": "No",
-      "promotionPeriod": "1H",
-      "ownerIndividual": "Steven Garbrecht",
-      "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u26a0\ufe0f POTENTIAL DUPLICATE \u2014 Review with \"EverFlex TCO Calculator\" (Use Case: Data Platform Architectures & Economics). @stephanie.thompson@hitachivantara.com @sulochna.khokhrai@hitachivantara.com \u2014 Flagged by Smart Assist 10/1/2026."
-    },
-    {
-      "id": "hitachi-leader-in-gigaom-primary-storage-platforms-radar-134",
-      "title": "Hitachi Leader in GigaOm Primary Storage Platforms Radar",
-      "url": null,
-      "type": "Blog",
-      "campaign": "AI Data Foundation",
-      "useCase": "Hybrid Cloud Platform & Operations",
-      "funnelStage": "TOFU",
-      "ownerTeam": "Brand",
-      "audience": "Enterprise",
-      "status": "Planned",
-      "region": "Global",
-      "publishDate": "2026-12-02",
-      "publishDateDisplay": "Dec 02, 2026",
-      "partnerUse": true,
-      "paidMediaDate": null,
-      "paidMediaDateDisplay": "",
-      "primaryActivation": "No Planned Promotion",
-      "marketingEmail": null,
-      "salesEmail": null,
-      "usedInCampaign": "No",
-      "promotionPeriod": "2H",
-      "ownerIndividual": "Emily Smith",
-      "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u26a0\ufe0f POTENTIAL DUPLICATE \u2014 Review with \"Hitachi Leader in GigaOm Primary Storage Platforms Radar Blog\" (Campaign: Data Modernization & Resilience). @stephanie.thompson@hitachivantara.com @sulochna.khokhrai@hitachivantara.com \u2014 Flagged by Smart Assist 10/1/2026."
-    },
-    {
-      "id": "hitachi-leader-in-gigaom-primary-storage-platforms-radar-blog-135",
-      "title": "Hitachi Leader in GigaOm Primary Storage Platforms Radar Blog",
+      "id": "hitachi-leader-in-gigaom-primary-storage-platforms-radar-blog-blog-129",
+      "title": "Hitachi Leader in GigaOm Primary Storage Platforms Radar Blog | Blog",
       "url": null,
       "type": "Blog",
       "campaign": "Data Modernization & Resilience",
@@ -3512,36 +3356,10 @@
       "notes": "\u26a0\ufe0f POTENTIAL DUPLICATE \u2014 Review with \"Hitachi Leader in GigaOm Primary Storage Platforms Radar\" (Campaign: AI Data Foundation). @stephanie.thompson@hitachivantara.com @sulochna.khokhrai@hitachivantara.com \u2014 Flagged by Smart Assist 10/1/2026."
     },
     {
-      "id": "how-pakistan-s-financial-backbone-is-using-ai-to-strengthen-resilience-blog-customer-story-136",
-      "title": "How Pakistan\u2019s Financial Backbone Is Using AI to Strengthen Resilience | Blog | Customer Story",
+      "id": "how-pakistan-s-financial-backbone-is-using-ai-to-strengthen-resilience-blog-blog-130",
+      "title": "How Pakistan\u2019s Financial Backbone Is Using AI to Strengthen Resilience | Blog | Blog",
       "url": "https://www.hitachivantara.com/en-us/blog/how-pakistans-financial-backbone-is-using-ai-to-strengthen-resilience",
-      "type": "Customer Story",
-      "campaign": "Data Modernization & Resilience",
-      "useCase": "Data Platform Architectures & Economics",
-      "funnelStage": "BOFU",
-      "ownerTeam": "Customer Marketing",
-      "audience": "",
-      "status": "Live",
-      "region": "Global",
-      "publishDate": null,
-      "publishDateDisplay": "",
-      "partnerUse": false,
-      "paidMediaDate": null,
-      "paidMediaDateDisplay": "",
-      "primaryActivation": "No Planned Promotion",
-      "marketingEmail": null,
-      "salesEmail": null,
-      "usedInCampaign": "No",
-      "promotionPeriod": "2H",
-      "ownerIndividual": "",
-      "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u26a0\ufe0f POTENTIAL DUPLICATE \u2014 Review with \"How Pakistan's Financial Backbone Is Using AI to Strengthen Resilience | Blog\" (Campaign: AI Data Foundation). @stephanie.thompson@hitachivantara.com @sulochna.khokhrai@hitachivantara.com \u2014 Flagged by Smart Assist 10/1/2026."
-    },
-    {
-      "id": "how-pakistan-s-financial-backbone-is-using-ai-to-strengthen-resilience-blog-customer-story-137",
-      "title": "How Pakistan\u2019s Financial Backbone Is Using AI to Strengthen Resilience | Blog | Customer Story",
-      "url": "https://www.hitachivantara.com/en-us/blog/how-pakistans-financial-backbone-is-using-ai-to-strengthen-resilience",
-      "type": "Customer Story",
+      "type": "Blog",
       "campaign": "AI Data Foundation",
       "useCase": "Data Readiness and Activation for AI",
       "funnelStage": "BOFU",
@@ -3564,10 +3382,10 @@
       "notes": "\u26a0\ufe0f POTENTIAL DUPLICATE \u2014 Review with \"How Pakistan's Financial Backbone Is Using AI to Strengthen Resilience | Blog\" (Campaign: Data Modernization & Resilience). @stephanie.thompson@hitachivantara.com @sulochna.khokhrai@hitachivantara.com \u2014 Flagged by Smart Assist 10/1/2026."
     },
     {
-      "id": "mission-critical-cyber-recovery-138",
-      "title": "Mission-Critical Cyber Recovery",
+      "id": "mission-critical-cyber-recovery-assessment-131",
+      "title": "Mission-Critical Cyber Recovery | Assessment",
       "url": null,
-      "type": "Demo / Assessment / Tool / Offer",
+      "type": "Assessment",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Cyber Risk Mitigation & Recovery",
       "funnelStage": "BOFU",
@@ -3590,10 +3408,10 @@
       "notes": "\u26a0\ufe0f POTENTIAL DUPLICATE \u2014 Review with \"Mission-Critical Cyber Recovery\" (Type: Datasheet / Solution Brief / Technical). @stephanie.thompson@hitachivantara.com @sulochna.khokhrai@hitachivantara.com \u2014 Flagged by Smart Assist 10/1/2026."
     },
     {
-      "id": "mission-critical-cyber-recovery-139",
-      "title": "Mission-Critical Cyber Recovery",
+      "id": "mission-critical-cyber-recovery-solution-profile-132",
+      "title": "Mission-Critical Cyber Recovery | Solution Profile",
       "url": null,
-      "type": "Datasheet / Solution Brief / Technical",
+      "type": "Solution Profile",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Cyber Risk Mitigation & Recovery",
       "funnelStage": "BOFU",
@@ -3616,12 +3434,12 @@
       "notes": "\u26a0\ufe0f POTENTIAL DUPLICATE \u2014 Review with \"Mission-Critical Cyber Recovery\" (Type: Demo / Assessment / Tool / Offer). @stephanie.thompson@hitachivantara.com @sulochna.khokhrai@hitachivantara.com \u2014 Flagged by Smart Assist 10/1/2026."
     },
     {
-      "id": "reclaim-data-sovereignty-for-the-ai-era-blog-140",
+      "id": "reclaim-data-sovereignty-for-the-ai-era-blog-133",
       "title": "Reclaim Data Sovereignty for the AI Era | Blog",
       "url": "https://www.hitachivantara.com/en-us/blog/reclaim-data-sovereignty-for-the-ai-era",
       "type": "Blog",
       "campaign": "Data Modernization & Resilience",
-      "useCase": "Data Platform Architectures & Economics",
+      "useCase": "Data Platform Architectures & Economics, Hybrid Cloud Platform & Operations",
       "funnelStage": "TOFU",
       "ownerTeam": "Brand",
       "audience": "Enterprise",
@@ -3642,37 +3460,11 @@
       "notes": "\u26a0\ufe0f POTENTIAL DUPLICATE \u2014 Review with \"Reclaim Data Sovereignty for the AI Era\" (Campaign: AI Data Foundation). @stephanie.thompson@hitachivantara.com @sulochna.khokhrai@hitachivantara.com \u2014 Flagged by Smart Assist 10/1/2026."
     },
     {
-      "id": "reclaim-data-sovereignty-for-the-ai-era-blog-141",
-      "title": "Reclaim Data Sovereignty for the AI Era | Blog",
-      "url": "https://www.hitachivantara.com/en-us/blog/reclaim-data-sovereignty-for-the-ai-era",
-      "type": "Blog",
-      "campaign": "AI Data Foundation",
-      "useCase": "High Performance AI-Ready Infrastructure",
-      "funnelStage": "TOFU",
-      "ownerTeam": "Brand",
-      "audience": "Enterprise",
-      "status": "Live",
-      "region": "Global",
-      "publishDate": "2026-04-30",
-      "publishDateDisplay": "Apr 30, 2026",
-      "partnerUse": true,
-      "paidMediaDate": null,
-      "paidMediaDateDisplay": "",
-      "primaryActivation": "No Planned Promotion",
-      "marketingEmail": null,
-      "salesEmail": null,
-      "usedInCampaign": "No",
-      "promotionPeriod": "1H",
-      "ownerIndividual": "Emily Smith",
-      "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u26a0\ufe0f POTENTIAL DUPLICATE \u2014 Review with \"Reclaim Data Sovereignty for the AI Era\" (Campaign: Data Modernization & Resilience). @stephanie.thompson@hitachivantara.com @sulochna.khokhrai@hitachivantara.com \u2014 Flagged by Smart Assist 10/1/2026."
-    },
-    {
-      "id": "what-ctos-need-to-know-about-modern-ai-storage-142",
-      "title": "What CTOs Need to Know About Modern AI Storage",
+      "id": "what-ctos-need-to-know-about-modern-ai-storage-blog-134",
+      "title": "What CTOs Need to Know About Modern AI Storage | Blog",
       "url": null,
       "type": "Blog",
-      "campaign": "Data Modernization & Resilience",
+      "campaign": "AI Data Foundation",
       "useCase": "High Performance AI-Ready Infrastructure",
       "funnelStage": "TOFU",
       "ownerTeam": "Brand",
@@ -3690,40 +3482,14 @@
       "usedInCampaign": "No",
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
-      "publishedByVendor": "",
+      "publishedByVendor": "Hitachi Vantara",
       "notes": "\u26a0\ufe0f POTENTIAL DUPLICATE \u2014 Review with \"What CTOs Need to Know About Modern AI Storage\" (Campaign: AI Data Foundation). @stephanie.thompson@hitachivantara.com @sulochna.khokhrai@hitachivantara.com \u2014 Flagged by Smart Assist 10/1/2026."
     },
     {
-      "id": "what-ctos-need-to-know-about-modern-ai-storage-blog-143",
-      "title": "What CTOs Need to Know About Modern AI Storage | Blog",
-      "url": "https://www.hitachivantara.com/en-us/blog/what-ctos-need-to-know-about-modern-ai-storage",
-      "type": "Blog",
-      "campaign": "AI Data Foundation",
-      "useCase": "High Performance AI-Ready Infrastructure",
-      "funnelStage": "TOFU",
-      "ownerTeam": "Brand",
-      "audience": "Enterprise",
-      "status": "Live",
-      "region": "Global",
-      "publishDate": "2026-03-20",
-      "publishDateDisplay": "Mar 20, 2026",
-      "partnerUse": true,
-      "paidMediaDate": null,
-      "paidMediaDateDisplay": "",
-      "primaryActivation": "No Planned Promotion",
-      "marketingEmail": null,
-      "salesEmail": null,
-      "usedInCampaign": "No",
-      "promotionPeriod": "1H",
-      "ownerIndividual": "Emily Smith",
-      "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u26a0\ufe0f POTENTIAL DUPLICATE \u2014 Review with \"What CTOs Need to Know About Modern AI Storage\" (Campaign: Data Modernization & Resilience). @stephanie.thompson@hitachivantara.com @sulochna.khokhrai@hitachivantara.com \u2014 Flagged by Smart Assist 10/1/2026."
-    },
-    {
-      "id": "hitachi-vantara-and-veeam-for-cyber-resilience-enhancing-cyber-resilience-while-improving--144",
-      "title": "Hitachi Vantara and Veeam for Cyber Resilience Enhancing Cyber Resilience While Improving Data Management",
+      "id": "hitachi-vantara-and-veeam-for-cyber-resilience-whitepaper-135",
+      "title": "Hitachi Vantara and Veeam for Cyber Resilience | Whitepaper",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/white-paper/hitachi-vantara-and-veeam-for-cyber-resilience.pdf",
-      "type": "3rd Party / Analyst Report",
+      "type": "Whitepaper",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Cyber Risk Mitigation & Recovery",
       "funnelStage": "MOFU",
@@ -3746,10 +3512,10 @@
       "notes": ""
     },
     {
-      "id": "vsp-one-object-cohasset-compliance-assessment-paper-3rd-party-analyst-report-145",
-      "title": "VSP One Object: Cohasset Compliance Assessment Paper | 3rd Party / Analyst Report",
+      "id": "vsp-one-object-cohasset-compliance-assessment-paper-analyst-report-136",
+      "title": "VSP One Object: Cohasset Compliance Assessment Paper | Analyst Report",
       "url": null,
-      "type": "3rd Party / Analyst Report",
+      "type": "Analyst Report",
       "campaign": "AI Data Foundation",
       "useCase": "Cyber Risk Mitigation & Recovery",
       "funnelStage": "MOFU",
@@ -3772,10 +3538,10 @@
       "notes": ""
     },
     {
-      "id": "2025-gigaom-rader-for-high-perfomance-storage-optimized-for-ai-workloads-3rd-party-analyst-146",
-      "title": "2025 GigaOm Rader for High-Perfomance Storage Optimized for AI Workloads | 3rd Party / Analyst Report",
+      "id": "2025-gigaom-rader-for-high-perfomance-storage-optimized-for-ai-workloads-analyst-report-137",
+      "title": "2025 GigaOm Rader for High-Perfomance Storage Optimized for AI Workloads | Analyst Report",
       "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-ai-storage-radar",
-      "type": "3rd Party / Analyst Report",
+      "type": "Analyst Report",
       "campaign": "AI Data Foundation",
       "useCase": "Data Readiness and Activation for AI",
       "funnelStage": "TOFU",
@@ -3798,10 +3564,10 @@
       "notes": ""
     },
     {
-      "id": "2026-gigaom-rader-for-object-storage-analyst-report-3rd-party-analyst-report-147",
-      "title": "2026 GigaOm Rader for Object Storage Analyst Report | 3rd Party / Analyst Report",
+      "id": "2026-gigaom-rader-for-object-storage-analyst-report-analyst-report-138",
+      "title": "2026 GigaOm Rader for Object Storage Analyst Report | Analyst Report",
       "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-radar-for-object-storage",
-      "type": "3rd Party / Analyst Report",
+      "type": "Analyst Report",
       "campaign": "AI Data Foundation",
       "useCase": "Data Readiness and Activation for AI",
       "funnelStage": "Hero",
@@ -3824,10 +3590,10 @@
       "notes": ""
     },
     {
-      "id": "2027-gigaom-for-unstructured-data-management-udm-3rd-party-analyst-report-148",
-      "title": "2027 GigaOm for Unstructured Data Management (UDM) | 3rd Party / Analyst Report",
+      "id": "2027-gigaom-for-unstructured-data-management-udm-analyst-report-139",
+      "title": "2027 GigaOm for Unstructured Data Management (UDM) | Analyst Report",
       "url": null,
-      "type": "3rd Party / Analyst Report",
+      "type": "Analyst Report",
       "campaign": "AI Data Foundation",
       "useCase": "Data Readiness and Activation for AI",
       "funnelStage": "Hero",
@@ -3850,10 +3616,10 @@
       "notes": ""
     },
     {
-      "id": "451-research-the-rising-data-challenges-driving-storage-modernization-3rd-party-analyst-re-149",
-      "title": "451 Research: The Rising Data Challenges Driving Storage Modernization | 3rd Party / Analyst Report",
+      "id": "451-research-the-rising-data-challenges-driving-storage-modernization-analyst-report-140",
+      "title": "451 Research: The Rising Data Challenges Driving Storage Modernization | Analyst Report",
       "url": "https://www.hitachivantara.com/en-us/gated-forms/451-analyst-research-validation-information-brief",
-      "type": "3rd Party / Analyst Report",
+      "type": "Analyst Report",
       "campaign": "AI Data Foundation",
       "useCase": "Data Readiness and Activation for AI",
       "funnelStage": "TOFU",
@@ -3876,10 +3642,10 @@
       "notes": ""
     },
     {
-      "id": "fstech-how-financial-institutions-unlock-more-value-from-datawith-object-storage-3rd-party-150",
-      "title": "FStech: How Financial Institutions Unlock More Value from Datawith Object Storage | 3rd Party / Analyst Report",
+      "id": "fstech-how-financial-institutions-unlock-more-value-from-datawith-object-storage-analyst-r-141",
+      "title": "FStech: How Financial Institutions Unlock More Value from Datawith Object Storage | Analyst Report",
       "url": "https://www.hitachivantara.com/en-us/pdfviewer/analyst-content/how-financial-institutions-unlock-more-value-from-data-object-storage",
-      "type": "3rd Party / Analyst Report",
+      "type": "Analyst Report",
       "campaign": "AI Data Foundation",
       "useCase": "Data Readiness and Activation for AI",
       "funnelStage": "TOFU",
@@ -3902,10 +3668,10 @@
       "notes": ""
     },
     {
-      "id": "mit-technology-review-ai-based-data-analytics-enable-business-insight-3rd-party-analyst-re-151",
-      "title": "MIT Technology Review: AI-based data analytics enable business insight | 3rd Party / Analyst Report",
+      "id": "mit-technology-review-ai-based-data-analytics-enable-business-insight-analyst-report-142",
+      "title": "MIT Technology Review: AI-based data analytics enable business insight | Analyst Report",
       "url": "https://www.hitachivantara.com/en-us/gated-forms/ai-based-data-analytics-enable-business-insight",
-      "type": "3rd Party / Analyst Report",
+      "type": "Analyst Report",
       "campaign": "AI Data Foundation",
       "useCase": "Data Readiness and Activation for AI",
       "funnelStage": "TOFU",
@@ -3928,10 +3694,10 @@
       "notes": ""
     },
     {
-      "id": "2026-gigaom-rader-for-high-performance-storage-optimized-for-ai-workloads-analyst-report-3-152",
-      "title": "2026 GigaOm Rader for High-Performance Storage Optimized for AI Workloads | Analyst Report | 3rd Party / Analyst Report",
+      "id": "2026-gigaom-rader-for-high-performance-storage-optimized-for-ai-workloads-analyst-report-a-143",
+      "title": "2026 GigaOm Rader for High-Performance Storage Optimized for AI Workloads | Analyst Report | Analyst Report",
       "url": null,
-      "type": "3rd Party / Analyst Report",
+      "type": "Analyst Report",
       "campaign": "AI Data Foundation",
       "useCase": "High Performance AI-Ready Infrastructure",
       "funnelStage": "Hero",
@@ -3954,10 +3720,10 @@
       "notes": ""
     },
     {
-      "id": "gartner-emerging-market-quadrant-emq-ai-data-storage-3rd-party-analyst-report-153",
-      "title": "Gartner Emerging Market Quadrant (EMQ) - AI Data Storage | 3rd Party / Analyst Report",
+      "id": "gartner-emerging-market-quadrant-emq-ai-data-storage-analyst-report-144",
+      "title": "Gartner Emerging Market Quadrant (EMQ) - AI Data Storage | Analyst Report",
       "url": null,
-      "type": "3rd Party / Analyst Report",
+      "type": "Analyst Report",
       "campaign": "AI Data Foundation",
       "useCase": "High Performance AI-Ready Infrastructure",
       "funnelStage": "TOFU",
@@ -3980,10 +3746,10 @@
       "notes": ""
     },
     {
-      "id": "idc-marketscape-worldwide-private-ai-infrafrstucture-systems-3rd-party-analyst-report-154",
-      "title": "IDC Marketscape - Worldwide Private AI Infrafrstucture Systems | 3rd Party / Analyst Report",
+      "id": "idc-marketscape-worldwide-private-ai-infrafrstucture-systems-analyst-report-145",
+      "title": "IDC Marketscape - Worldwide Private AI Infrafrstucture Systems | Analyst Report",
       "url": null,
-      "type": "3rd Party / Analyst Report",
+      "type": "Analyst Report",
       "campaign": "AI Data Foundation",
       "useCase": "High Performance AI-Ready Infrastructure",
       "funnelStage": "TOFU",
@@ -4006,10 +3772,10 @@
       "notes": ""
     },
     {
-      "id": "idc-spotlight-report-cyber-resilience-3rd-party-analyst-report-155",
-      "title": "IDC Spotlight Report - Cyber Resilience | 3rd Party / Analyst Report",
+      "id": "idc-spotlight-report-cyber-resilience-analyst-report-146",
+      "title": "IDC Spotlight Report - Cyber Resilience | Analyst Report",
       "url": null,
-      "type": "3rd Party / Analyst Report",
+      "type": "Analyst Report",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Cyber Risk Mitigation & Recovery",
       "funnelStage": "Hero",
@@ -4032,10 +3798,10 @@
       "notes": ""
     },
     {
-      "id": "451-research-vsp-360-aiops-sla-as-code-3rd-party-analyst-report-156",
-      "title": "451 Research - VSP 360 AIOps SLA as Code | 3rd Party / Analyst Report",
+      "id": "451-research-vsp-360-aiops-sla-as-code-analyst-report-147",
+      "title": "451 Research - VSP 360 AIOps SLA as Code | Analyst Report",
       "url": null,
-      "type": "3rd Party / Analyst Report",
+      "type": "Analyst Report",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
       "funnelStage": "TOFU",
@@ -4052,16 +3818,16 @@
       "marketingEmail": null,
       "salesEmail": null,
       "usedInCampaign": "No",
-      "promotionPeriod": "",
+      "promotionPeriod": "2H",
       "ownerIndividual": "Richard Jew",
       "publishedByVendor": "",
       "notes": ""
     },
     {
-      "id": "451-research-vsp-360-aiops-3rd-party-analyst-report-157",
-      "title": "451 Research - VSP 360 AIOps | 3rd Party / Analyst Report",
+      "id": "451-research-vsp-360-aiops-analyst-report-148",
+      "title": "451 Research - VSP 360 AIOps | Analyst Report",
       "url": null,
-      "type": "3rd Party / Analyst Report",
+      "type": "Analyst Report",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
       "funnelStage": "TOFU",
@@ -4084,10 +3850,10 @@
       "notes": ""
     },
     {
-      "id": "hitachi-named-a-challenger-in-the-2025-gartner-magic-quadrant-for-infrastructure-platform--158",
-      "title": "Hitachi Named a Challenger in the 2025 Gartner Magic Quadrant for Infrastructure Platform Consumption Services (IPCS) | 3rd Party / Analyst Report",
+      "id": "hitachi-named-a-challenger-in-the-2025-gartner-magic-quadrant-for-infrastructure-platform--149",
+      "title": "Hitachi Named a Challenger in the 2025 Gartner Magic Quadrant for Infrastructure Platform Consumption Services (IPCS) | Analyst Report",
       "url": "https://www.hitachivantara.com/en-us/ext/gartner-magic-quadrant-for-infrastructure-platform-consumption-services",
-      "type": "3rd Party / Analyst Report",
+      "type": "Analyst Report",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
       "funnelStage": "TOFU",
@@ -4110,10 +3876,10 @@
       "notes": ""
     },
     {
-      "id": "the-storage-modernization-imperative-omdia-159",
-      "title": "The Storage Modernization\nImperative - Omdia",
+      "id": "the-storage-modernization-imperative-omdia-analyst-report-150",
+      "title": "The Storage Modernization\nImperative - Omdia | Analyst Report",
       "url": null,
-      "type": "3rd Party / Analyst Report",
+      "type": "Analyst Report",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
       "funnelStage": "Hero",
@@ -4136,8 +3902,8 @@
       "notes": ""
     },
     {
-      "id": "state-of-data-infra-report-blog-160",
-      "title": "State of Data Infra Report Blog",
+      "id": "state-of-data-infra-report-blog-blog-151",
+      "title": "State of Data Infra Report Blog | Blog",
       "url": null,
       "type": "Blog",
       "campaign": "AI Data Foundation",
@@ -4162,8 +3928,8 @@
       "notes": ""
     },
     {
-      "id": "t-systems-customer-transcript-blog-161",
-      "title": "T-Systems Customer Transcript Blog",
+      "id": "t-systems-customer-transcript-blog-blog-152",
+      "title": "T-Systems Customer Transcript Blog | Blog",
       "url": null,
       "type": "Blog",
       "campaign": "AI Data Foundation",
@@ -4188,8 +3954,8 @@
       "notes": ""
     },
     {
-      "id": "corporate-sustainability-needs-integration-not-another-goal-post-162",
-      "title": "Corporate Sustainability Needs Integration, Not Another Goal Post",
+      "id": "corporate-sustainability-needs-integration-not-another-goal-post-blog-153",
+      "title": "Corporate Sustainability Needs Integration, Not Another Goal Post | Blog",
       "url": null,
       "type": "Blog",
       "campaign": "",
@@ -4214,8 +3980,8 @@
       "notes": ""
     },
     {
-      "id": "why-infrastructure-platform-consumption-services-matter-now-163",
-      "title": "Why Infrastructure Platform Consumption Services Matter Now",
+      "id": "why-infrastructure-platform-consumption-services-matter-now-blog-154",
+      "title": "Why Infrastructure Platform Consumption Services Matter Now | Blog",
       "url": null,
       "type": "Blog",
       "campaign": "Data Modernization & Resilience",
@@ -4240,8 +4006,8 @@
       "notes": ""
     },
     {
-      "id": "what-it-teams-need-to-know-before-a-mainframe-refresh-164",
-      "title": "What IT Teams Need to Know Before a Mainframe Refresh",
+      "id": "what-it-teams-need-to-know-before-a-mainframe-refresh-blog-155",
+      "title": "What IT Teams Need to Know Before a Mainframe Refresh | Blog",
       "url": null,
       "type": "Blog",
       "campaign": "Data Modernization & Resilience",
@@ -4266,8 +4032,8 @@
       "notes": ""
     },
     {
-      "id": "joe-morris-cio-infosec-blog-165",
-      "title": "Joe Morris/CIO/InfoSec Blog",
+      "id": "joe-morris-cio-infosec-blog-blog-156",
+      "title": "Joe Morris/CIO/InfoSec Blog | Blog",
       "url": null,
       "type": "Blog",
       "campaign": "Data Modernization & Resilience",
@@ -4292,8 +4058,8 @@
       "notes": ""
     },
     {
-      "id": "how-to-beat-rising-storage-costs-and-spread-your-budget-166",
-      "title": "How to Beat Rising Storage Costs and Spread Your Budget",
+      "id": "how-to-beat-rising-storage-costs-and-spread-your-budget-blog-157",
+      "title": "How to Beat Rising Storage Costs and Spread Your Budget | Blog",
       "url": null,
       "type": "Blog",
       "campaign": "Data Modernization & Resilience",
@@ -4318,8 +4084,8 @@
       "notes": ""
     },
     {
-      "id": "supercompute-blog-product-announcement-167",
-      "title": "SuperCompute Blog/Product Announcement",
+      "id": "supercompute-blog-product-announcement-blog-158",
+      "title": "SuperCompute Blog/Product Announcement | Blog",
       "url": null,
       "type": "Blog",
       "campaign": "AI Data Foundation",
@@ -4344,10 +4110,10 @@
       "notes": ""
     },
     {
-      "id": "hitachi-data-lakehouse-reference-architecture-campaign-guide-messaging-framework-resource-168",
-      "title": "Hitachi Data Lakehouse - Reference Architecture | Campaign Guide / Messaging Framework / Resource",
+      "id": "hitachi-data-lakehouse-reference-architecture-reference-architecture-159",
+      "title": "Hitachi Data Lakehouse - Reference Architecture | Reference Architecture",
       "url": "https://docs.hitachivantara.com/v/u/en-us/mk-sl-401/latest",
-      "type": "Campaign Guide / Messaging Framework / Resource",
+      "type": "Reference Architecture",
       "campaign": "AI Data Foundation",
       "useCase": "Data Readiness and Activation for AI",
       "funnelStage": "BOFU",
@@ -4370,8 +4136,8 @@
       "notes": ""
     },
     {
-      "id": "delivering-secure-always-on-digital-services-for-students-faculty-and-researchers-169",
-      "title": "Delivering Secure, Always-On Digital Services for Students, Faculty and Researchers",
+      "id": "university-of-kent-delivering-secure-always-on-digital-services-for-students-faculty-and-r-160",
+      "title": "University of Kent: Delivering Secure, Always-On Digital Services for Students, Faculty and Researchers | Customer Story",
       "url": "https://www.hitachivantara.com/en-us/company/customer-stories/university-of-kent-customer-story",
       "type": "Customer Story",
       "campaign": "Data Modernization & Resilience",
@@ -4396,8 +4162,8 @@
       "notes": ""
     },
     {
-      "id": "government-agency-case-study-customer-story-170",
-      "title": "Government Agency Case Study Customer Story",
+      "id": "government-agency-transforms-operations-with-flexible-all-in-one-hybrid-cloud-solution-bre-161",
+      "title": "Government Agency: Transforms Operations With Flexible, All-in-One Hybrid Cloud Solution, Breaks Down Information Silos | Customer Story",
       "url": "https://www.hitachivantara.com/en-us/company/customer-stories/government-agency-case-study",
       "type": "Customer Story",
       "campaign": "Data Modernization & Resilience",
@@ -4422,8 +4188,8 @@
       "notes": ""
     },
     {
-      "id": "rice-university-171",
-      "title": "Rice University",
+      "id": "rice-university-customer-story-162",
+      "title": "Rice University | Customer Story",
       "url": null,
       "type": "Customer Story",
       "campaign": "Data Modernization & Resilience",
@@ -4448,8 +4214,8 @@
       "notes": ""
     },
     {
-      "id": "garanti-customer-story-customer-story-172",
-      "title": "Garanti Customer Story | Customer Story",
+      "id": "garanti-bbva-powering-banking-excellence-with-storage-designed-for-continuous-availability-163",
+      "title": "Garanti BBVA: Powering banking excellence with storage designed for continuous availability and growth | Customer Story",
       "url": "https://www.hitachivantara.com/en-us/company/customer-stories/garanti-bbva-powering-banking-excellence-case-study",
       "type": "Customer Story",
       "campaign": "Data Modernization & Resilience",
@@ -4474,10 +4240,10 @@
       "notes": ""
     },
     {
-      "id": "from-bottlenecks-to-breakthroughs-integrated-solutions-customer-story-ebook-customer-story-173",
-      "title": "From Bottlenecks to Breakthroughs (Integrated Solutions Customer Story eBook) | Customer Story",
+      "id": "from-bottlenecks-to-breakthroughs-integrated-solutions-customer-story-ebook-ebook-164",
+      "title": "From Bottlenecks to Breakthroughs (Integrated Solutions Customer Story eBook) | eBook",
       "url": "https://www.hitachivantara.com/en-us/pdfviewer/ebook/enterprise-applications-ebook",
-      "type": "Customer Story",
+      "type": "eBook",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Hybrid Cloud Platform & Operations",
       "funnelStage": "TOFU",
@@ -4500,8 +4266,8 @@
       "notes": ""
     },
     {
-      "id": "techniklotsen-customer-story-customer-story-174",
-      "title": "Techniklotsen | Customer Story | Customer Story",
+      "id": "techniklotsen-boosting-business-agility-and-reducing-costs-with-future-proof-dynamic-infra-165",
+      "title": "Techniklotsen: Boosting Business Agility and Reducing Costs with Future-Proof, Dynamic Infrastructure as a Service | Customer Story",
       "url": "https://www.hitachivantara.com/en-us/company/customer-stories/techniklotsen-case-study",
       "type": "Customer Story",
       "campaign": "Data Modernization & Resilience",
@@ -4526,8 +4292,8 @@
       "notes": ""
     },
     {
-      "id": "https-www-hitachivantara-com-en-us-company-customer-stories-ayuntamiento-de-aviles-custome-175",
-      "title": "https://www.hitachivantara.com/en-us/company/customer-stories/ayuntamiento-de-aviles-customer-story",
+      "id": "ayuntamiento-de-avil-s-avil-s-city-council-pioneering-digital-transformation-to-deliver-pu-166",
+      "title": "Ayuntamiento de Avil\u00e9s (Avil\u00e9s City Council): Pioneering digital transformation to deliver public services | Customer Story",
       "url": "https://www.hitachivantara.com/en-us/company/customer-stories/ayuntamiento-de-aviles-customer-story",
       "type": "Customer Story",
       "campaign": "Data Modernization & Resilience",
@@ -4552,8 +4318,8 @@
       "notes": ""
     },
     {
-      "id": "https-www-hitachivantara-com-en-us-company-customer-stories-public-sector-customer-story-176",
-      "title": "https://www.hitachivantara.com/en-us/company/customer-stories/public-sector-customer-story",
+      "id": "public-sector-agency-protecting-vital-hr-data-for-government-employees-customer-story-167",
+      "title": "Public-sector Agency: Protecting vital HR data for government employees | Customer Story",
       "url": "https://www.hitachivantara.com/en-us/company/customer-stories/public-sector-customer-story",
       "type": "Customer Story",
       "campaign": "Data Modernization & Resilience",
@@ -4578,36 +4344,10 @@
       "notes": ""
     },
     {
-      "id": "https-www-hitachivantara-com-en-us-company-customer-stories-public-sector-customer-story-177",
-      "title": "https://www.hitachivantara.com/en-us/company/customer-stories/public-sector-customer-story",
-      "url": "https://www.hitachivantara.com/en-us/company/customer-stories/public-sector-customer-story",
-      "type": "Customer Story",
-      "campaign": "AI Data Foundation",
-      "useCase": "Data Readiness and Activation for AI",
-      "funnelStage": "BOFU",
-      "ownerTeam": "Customer Marketing",
-      "audience": "",
-      "status": "Live",
-      "region": "Global",
-      "publishDate": null,
-      "publishDateDisplay": "",
-      "partnerUse": false,
-      "paidMediaDate": null,
-      "paidMediaDateDisplay": "",
-      "primaryActivation": "No Planned Promotion",
-      "marketingEmail": null,
-      "salesEmail": null,
-      "usedInCampaign": "No",
-      "promotionPeriod": "2H",
-      "ownerIndividual": "",
-      "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
-    },
-    {
-      "id": "explore-and-build-ai-solutions-with-iq-studio-178",
-      "title": "Explore and Build AI Solutions with iQ Studio",
+      "id": "explore-and-build-ai-solutions-with-iq-studio-demo-168",
+      "title": "Explore and Build AI Solutions with iQ Studio | Demo",
       "url": "https://www.hitachivantara.com/en-us/featured/experience-ai-iq-studio",
-      "type": "Demo / Assessment / Tool / Offer",
+      "type": "Demo",
       "campaign": "AI Data Foundation",
       "useCase": "High Performance AI-Ready Infrastructure",
       "funnelStage": "MOFU",
@@ -4630,10 +4370,10 @@
       "notes": ""
     },
     {
-      "id": "infrastructure-modernization-maturity-scorecard-179",
-      "title": "Infrastructure Modernization Maturity Scorecard",
+      "id": "infrastructure-modernization-maturity-scorecard-assessment-169",
+      "title": "Infrastructure Modernization Maturity Scorecard | Assessment",
       "url": null,
-      "type": "Demo / Assessment / Tool / Offer",
+      "type": "Assessment",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
       "funnelStage": "TOFU",
@@ -4656,10 +4396,10 @@
       "notes": ""
     },
     {
-      "id": "sds-tco-tool-180",
-      "title": "SDS TCO tool",
+      "id": "sds-tco-tool-calculator-170",
+      "title": "SDS TCO tool | Calculator",
       "url": "https://tco.hitachivantara.com/",
-      "type": "Demo / Assessment / Tool / Offer",
+      "type": "Calculator",
       "campaign": "",
       "useCase": "Data Platform Architectures & Economics",
       "funnelStage": "MOFU",
@@ -4682,8 +4422,8 @@
       "notes": ""
     },
     {
-      "id": "storage-as-a-service-modernization-made-simple-181",
-      "title": "Storage as a Service\nModernization Made Simple",
+      "id": "staas-infographic-infographic-171",
+      "title": "STaaS Infographic | Infographic",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/infographic/staas-infographic.pdf",
       "type": "Infographic",
       "campaign": "Data Modernization & Resilience",
@@ -4708,7 +4448,7 @@
       "notes": ""
     },
     {
-      "id": "omdia-the-five-new-essentials-for-data-storage-platforms-infographic-infographic-182",
+      "id": "omdia-the-five-new-essentials-for-data-storage-platforms-infographic-infographic-172",
       "title": "Omdia: The Five New Essentials for Data Storage Platforms Infographic | Infographic",
       "url": null,
       "type": "Infographic",
@@ -4734,8 +4474,8 @@
       "notes": ""
     },
     {
-      "id": "modernizing-data-protection-with-hitachi-and-commvault-183",
-      "title": "Modernizing Data Protection With Hitachi and Commvault",
+      "id": "modernizing-data-protection-with-hitachi-and-commvault-infographic-infographic-173",
+      "title": "Modernizing Data Protection With Hitachi and Commvault Infographic | Infographic",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/infographic/modernizing-data-protection-hitachi-and-commvault.pdf",
       "type": "Infographic",
       "campaign": "Data Modernization & Resilience",
@@ -4760,8 +4500,8 @@
       "notes": ""
     },
     {
-      "id": "your-postgresql-environment-with-hitachi-vsp-one-and-integrated-systems-184",
-      "title": "Your PostgreSQL Environment With Hitachi VSP One and Integrated Systems",
+      "id": "your-postgresql-environment-with-hitachi-vsp-one-and-integrated-systems-infographic-174",
+      "title": "Your PostgreSQL Environment With Hitachi VSP One and Integrated Systems | Infographic",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/infographic/solutions-postgresql-infographic.pdf",
       "type": "Infographic",
       "campaign": "Data Modernization & Resilience",
@@ -4786,8 +4526,8 @@
       "notes": ""
     },
     {
-      "id": "top-ten-reasons-why-pay-as-you-grow-with-capacity-on-demand-on-premises-baseline-ownership-185",
-      "title": "Top Ten Reasons Why Pay as You Grow With Capacity on Demand\nOn-premises baseline ownership plus on-demand expansion",
+      "id": "capacity-on-demand-top-ten-reasons-why-top-10-175",
+      "title": "Capacity on Demand Top Ten Reasons Why | Top 10",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/datasheet/top-10-reasons-why-capacity-on-demand.pdf",
       "type": "Top 10",
       "campaign": "Data Modernization & Resilience",
@@ -4812,8 +4552,8 @@
       "notes": ""
     },
     {
-      "id": "top-ten-reasons-why-storage-as-a-service-enterprise-storage-delivered-with-a-simple-subscr-186",
-      "title": "Top Ten Reasons Why Storage as a Service\nEnterprise Storage Delivered With a Simple Subscription",
+      "id": "staas-top-ten-reasons-why-top-10-176",
+      "title": "STaaS Top Ten Reasons Why | Top 10",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/datasheet/staas-top-ten-reasons-why.pdf",
       "type": "Top 10",
       "campaign": "Data Modernization & Resilience",
@@ -4838,8 +4578,8 @@
       "notes": ""
     },
     {
-      "id": "top-10-reasons-why-vsp-one-sds-block-storage-hybrid-cloud-ready-software-defined-storage-f-187",
-      "title": "Top 10 Reasons Why VSP One SDS: Block Storage  \nHybrid-Cloud-Ready Software-Defined Storage for \nDistributed Block Applications",
+      "id": "top-10-reasons-sds-top-10-177",
+      "title": "Top 10 Reasons SDS | Top 10",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/brochure/top-ten-reasons-why-vsp-one-sds-block-storage-hybrid-cloud-ready-sds-distributed-block-applications-drives-business-agility-cost-savings.pdf",
       "type": "Top 10",
       "campaign": "Data Modernization & Resilience",
@@ -4864,7 +4604,7 @@
       "notes": ""
     },
     {
-      "id": "everflex-capacity-on-demand-top-10-188",
+      "id": "everflex-capacity-on-demand-top-10-178",
       "title": "EverFlex Capacity on Demand | Top 10",
       "url": null,
       "type": "Top 10",
@@ -4890,8 +4630,8 @@
       "notes": ""
     },
     {
-      "id": "campaign-landing-page-dmr-landing-page-189",
-      "title": "Campaign Landing Page - DMR Landing Page",
+      "id": "campaign-landing-page-dmr-landing-page-179",
+      "title": "Campaign Landing Page - DMR | Landing Page",
       "url": "https://www.hitachivantara.com/en-us/featured/data-modernization-resilience",
       "type": "Landing Page",
       "campaign": "Data Modernization & Resilience",
@@ -4916,8 +4656,8 @@
       "notes": ""
     },
     {
-      "id": "campaign-landing-page-ai-landing-page-190",
-      "title": "Campaign Landing Page - AI Landing Page",
+      "id": "campaign-landing-page-ai-landing-page-180",
+      "title": "Campaign Landing Page - AI | Landing Page",
       "url": "https://www.hitachivantara.com/en-us/featured/ai-data-foundation",
       "type": "Landing Page",
       "campaign": "AI Data Foundation",
@@ -4942,8 +4682,8 @@
       "notes": ""
     },
     {
-      "id": "unbreakable-gated-10min-video-191",
-      "title": "Unbreakable - Gated 10min Video",
+      "id": "unbreakable-gated-10min-video-video-181",
+      "title": "Unbreakable - Gated 10min Video | Video",
       "url": null,
       "type": "Video",
       "campaign": "Data Modernization & Resilience",
@@ -4968,7 +4708,7 @@
       "notes": ""
     },
     {
-      "id": "staas-explainer-video-video-192",
+      "id": "staas-explainer-video-video-182",
       "title": "STaaS Explainer Video | Video",
       "url": "https://www.hitachivantara.com/en-us/resources.html#vid=6398568823112",
       "type": "Video",
@@ -4994,8 +4734,8 @@
       "notes": ""
     },
     {
-      "id": "kafka-broker-recovery-with-vsp-one-file-193",
-      "title": "Kafka Broker Recovery with VSP One File",
+      "id": "vsp-one-file-kafka-data-streaming-video-183",
+      "title": "VSP One File - Kafka Data Streaming | Video",
       "url": "https://www.youtube.com/watch?v=q2XyaSoCu2U",
       "type": "Video",
       "campaign": "AI Data Foundation",
@@ -5020,7 +4760,7 @@
       "notes": ""
     },
     {
-      "id": "cyber-recovery-explainer-video-video-194",
+      "id": "cyber-recovery-explainer-video-video-184",
       "title": "Cyber Recovery Explainer Video | Video",
       "url": null,
       "type": "Video",
@@ -5046,8 +4786,8 @@
       "notes": ""
     },
     {
-      "id": "cyber-resilience-trusted-data-foundation-for-ai-195",
-      "title": "Cyber Resilience - Trusted Data Foundation for AI",
+      "id": "cyber-resilience-trusted-data-foundation-for-ai-webinar-185",
+      "title": "Cyber Resilience - Trusted Data Foundation for AI | Webinar",
       "url": null,
       "type": "Webinar",
       "campaign": "Data Modernization & Resilience",
@@ -5072,7 +4812,7 @@
       "notes": ""
     },
     {
-      "id": "webinar-title-tbd-gigaom-2027-radar-webinar-196",
+      "id": "webinar-title-tbd-gigaom-2027-radar-webinar-186",
       "title": "Webinar \u2013 Title TBD (GigaOm 2027 Radar) | Webinar",
       "url": null,
       "type": "Webinar",
@@ -5098,8 +4838,8 @@
       "notes": ""
     },
     {
-      "id": "modernize-your-data-lakehouse-with-object-storage-trends-tech-and-the-road-ahead-webinar-197",
-      "title": "Modernize your Data Lakehouse with Object Storage - Trends, Tech, and the Road Ahead Webinar",
+      "id": "modernize-your-data-lakehouse-with-object-storage-trends-tech-and-the-road-ahead-webinar-187",
+      "title": "Modernize your Data Lakehouse with Object Storage - Trends, Tech, and the Road Ahead | Webinar",
       "url": "https://www.brighttalk.com/webcast/12821/647941",
       "type": "Webinar",
       "campaign": "AI Data Foundation",
@@ -5124,8 +4864,8 @@
       "notes": ""
     },
     {
-      "id": "is-object-storage-the-new-ai-foundation-webinar-webinar-198",
-      "title": "Is Object Storage the New AI Foundation? | Webinar Webinar",
+      "id": "is-object-storage-the-new-ai-foundation-webinar-webinar-188",
+      "title": "Is Object Storage the New AI Foundation? | Webinar | Webinar",
       "url": "https://www.brighttalk.com/webcast/12821/665302?bt_tok=%7b%7blead_id%7d%7d&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=665302",
       "type": "Webinar",
       "campaign": "AI Data Foundation",
@@ -5150,8 +4890,8 @@
       "notes": ""
     },
     {
-      "id": "data-sovereignty-and-ai-rethinking-object-storage-in-financial-services-webinar-199",
-      "title": "Data, Sovereignty and AI: Rethinking Object Storage in Financial Services | Webinar",
+      "id": "data-sovereignty-and-ai-rethinking-object-storage-in-financial-services-webinar-webinar-189",
+      "title": "Data, Sovereignty and AI: Rethinking Object Storage in Financial Services | Webinar | Webinar",
       "url": "https://www.hitachivantara.com/en-us/company/events-and-webinars?commid=672306#tab-webinars",
       "type": "Webinar",
       "campaign": "AI Data Foundation",
@@ -5176,8 +4916,8 @@
       "notes": ""
     },
     {
-      "id": "2026-gigaom-rader-for-high-performance-storage-optimized-for-ai-workloads-200",
-      "title": "2026 GigaOm Rader for High-Performance Storage Optimized for AI Workloads",
+      "id": "2026-gigaom-rader-for-high-performance-storage-optimized-for-ai-workloads-webinar-190",
+      "title": "2026 GigaOm Rader for High-Performance Storage Optimized for AI Workloads | Webinar",
       "url": null,
       "type": "Webinar",
       "campaign": "AI Data Foundation",
@@ -5202,8 +4942,8 @@
       "notes": ""
     },
     {
-      "id": "mastering-the-art-of-ai-success-webinar-201",
-      "title": "\u201cMastering the Art of Ai success\u201d Webinar",
+      "id": "mastering-the-art-of-ai-success-webinar-191",
+      "title": "\u201cMastering the Art of Ai success\u201d | Webinar",
       "url": "https://www.brighttalk.com/webcast/12821/645010?bt_tok={{lead_id}}&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=645010",
       "type": "Webinar",
       "campaign": "AI Data Foundation",
@@ -5228,8 +4968,8 @@
       "notes": ""
     },
     {
-      "id": "ai-success-starts-with-the-right-data-foundation-202",
-      "title": "AI Success Starts with the Right Data Foundation",
+      "id": "ai-success-starts-with-the-right-data-foundation-webinar-192",
+      "title": "AI Success Starts with the Right Data Foundation | Webinar",
       "url": "https://www.hitachivantara.com/en-us/company/events-and-webinars?commid=664810",
       "type": "Webinar",
       "campaign": "AI Data Foundation",
@@ -5254,8 +4994,8 @@
       "notes": ""
     },
     {
-      "id": "why-is-software-defined-storage-critical-for-unlocking-the-power-of-data-webinar-203",
-      "title": "Why is software defined storage critical for unlocking the power of data? Webinar",
+      "id": "why-is-software-defined-storage-critical-for-unlocking-the-power-of-data-webinar-193",
+      "title": "Why is software defined storage critical for unlocking the power of data? | Webinar",
       "url": "https://www.brighttalk.com/webcast/12821/636063?bt_tok={{lead_id}}&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=636063",
       "type": "Webinar",
       "campaign": "Data Modernization & Resilience",
@@ -5280,8 +5020,8 @@
       "notes": ""
     },
     {
-      "id": "cyber-security-month-webinar-with-index-engines-204",
-      "title": "Cyber Security Month Webinar with Index Engines",
+      "id": "cyber-security-month-webinar-with-index-engines-webinar-194",
+      "title": "Cyber Security Month Webinar with Index Engines | Webinar",
       "url": null,
       "type": "Webinar",
       "campaign": "AI Data Foundation",
@@ -5306,8 +5046,8 @@
       "notes": ""
     },
     {
-      "id": "resilience-by-design-reducing-data-risk-downtime-and-regulatory-exposure-205",
-      "title": "Resilience by Design: Reducing Data Risk, Downtime, and Regulatory Exposure",
+      "id": "resilience-by-design-reducing-data-risk-downtime-and-regulatory-exposure-webinar-195",
+      "title": "Resilience by Design: Reducing Data Risk, Downtime, and Regulatory Exposure | Webinar",
       "url": "https://www.brighttalk.com/webcast/12821/650879?utm_source=brighttalk-portal&utm_medium=web&utm_content=hitachi+vantara+cyber&utm_term=search-result-33&utm_campaign=webcasts-search-results-feed&q=hitachi+vantara+cyber",
       "type": "Webinar",
       "campaign": "Data Modernization & Resilience",
@@ -5332,8 +5072,8 @@
       "notes": ""
     },
     {
-      "id": "resilient-by-design-how-hitachi-vantara-vm2020-and-index-engines-deliver-faster-validated--206",
-      "title": "Resilient by Design: How Hitachi Vantara, VM2020, and Index Engines Deliver Faster, Validated Ransomware Recovery | Webinar Webinar",
+      "id": "resilient-by-design-how-hitachi-vantara-vm2020-and-index-engines-deliver-faster-validated--196",
+      "title": "Resilient by Design: How Hitachi Vantara, VM2020, and Index Engines Deliver Faster, Validated Ransomware Recovery | Webinar | Webinar",
       "url": "https://www.brighttalk.com/webcast/12821/669090",
       "type": "Webinar",
       "campaign": "Data Modernization & Resilience",
@@ -5358,8 +5098,8 @@
       "notes": ""
     },
     {
-      "id": "idc-cyber-resilience-webinar-207",
-      "title": "IDC Cyber Resilience Webinar",
+      "id": "idc-cyber-resilience-webinar-webinar-197",
+      "title": "IDC Cyber Resilience Webinar | Webinar",
       "url": null,
       "type": "Webinar",
       "campaign": "AI Data Foundation",
@@ -5384,8 +5124,8 @@
       "notes": ""
     },
     {
-      "id": "elevate-your-cyber-resiliency-posture-protect-detect-recover-208",
-      "title": "Elevate Your Cyber Resiliency Posture: Protect, Detect, Recover",
+      "id": "elevate-your-cyber-resiliency-posture-protect-detect-recover-webinar-198",
+      "title": "Elevate Your Cyber Resiliency Posture: Protect, Detect, Recover | Webinar",
       "url": "https://www.brighttalk.com/webcast/12821/649236?bt_tok={{lead_id}}&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=649236",
       "type": "Webinar",
       "campaign": "Data Modernization & Resilience",
@@ -5410,8 +5150,8 @@
       "notes": ""
     },
     {
-      "id": "451-research-vsp-360-aiops-sla-as-code-209",
-      "title": "451 Research - VSP 360 AIOps SLA as Code",
+      "id": "451-research-vsp-360-aiops-sla-as-code-webinar-199",
+      "title": "451 Research - VSP 360 AIOps SLA as Code | Webinar",
       "url": null,
       "type": "Webinar",
       "campaign": "Data Modernization & Resilience",
@@ -5436,8 +5176,8 @@
       "notes": ""
     },
     {
-      "id": "what-modern-data-infrastructure-looks-like-in-the-ai-era-210",
-      "title": "What Modern Data Infrastructure Looks Like in the AI Era",
+      "id": "omdia-what-modern-data-infrastructure-looks-like-in-the-ai-era-webinar-webinar-200",
+      "title": "Omdia: What Modern Data Infrastructure Looks Like in the AI Era | Webinar | Webinar",
       "url": "https://www.brighttalk.com/webcast/12821/675775",
       "type": "Webinar",
       "campaign": "Data Modernization & Resilience",
@@ -5462,7 +5202,7 @@
       "notes": ""
     },
     {
-      "id": "the-economics-of-modern-storage-infrastructure-lower-risk-faster-ai-value-better-roi-webin-211",
+      "id": "the-economics-of-modern-storage-infrastructure-lower-risk-faster-ai-value-better-roi-webin-201",
       "title": "The Economics of Modern Storage Infrastructure: Lower Risk, Faster AI Value, Better ROI | Webinar | Webinar",
       "url": "https://www.brighttalk.com/webcast/12821/659254?bt_tok={{lead_id}}&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=659254",
       "type": "Webinar",
@@ -5488,7 +5228,7 @@
       "notes": ""
     },
     {
-      "id": "energy-efficiency-sustainability-webinar-212",
+      "id": "energy-efficiency-sustainability-webinar-202",
       "title": "Energy Efficiency & Sustainability | Webinar",
       "url": null,
       "type": "Webinar",
@@ -5514,8 +5254,8 @@
       "notes": ""
     },
     {
-      "id": "tier-1-launch-midrange-refresh-213",
-      "title": "Tier 1 Launch: Midrange Refresh",
+      "id": "tier-1-launch-midrange-refresh-webinar-203",
+      "title": "Tier 1 Launch: Midrange Refresh | Webinar",
       "url": null,
       "type": "Webinar",
       "campaign": "Data Modernization & Resilience",
@@ -5540,7 +5280,7 @@
       "notes": ""
     },
     {
-      "id": "lakehouse-logic-why-object-storage-is-the-new-analytics-engine-blog-214",
+      "id": "lakehouse-logic-why-object-storage-is-the-new-analytics-engine-blog-204",
       "title": "Lakehouse Logic: Why Object Storage is the New Analytics Engine | Blog",
       "url": "https://www.hitachivantara.com/en-us/blog/lakehouse-logic-why-object-storage-is-new-analytics-engine",
       "type": "Blog",
@@ -5566,8 +5306,8 @@
       "notes": ""
     },
     {
-      "id": "real-time-redefined-rethinking-kafka-s-potential-215",
-      "title": "Real-Time Redefined: Rethinking Kafka\u2019s Potential",
+      "id": "real-time-redefined-rethinking-kafka-s-potential-blog-205",
+      "title": "Real-Time Redefined: Rethinking Kafka\u2019s Potential | Blog",
       "url": "https://www.hitachivantara.com/en-us/blog/real-time-redefined-rethinking-kafka-potential",
       "type": "Blog",
       "campaign": "AI Data Foundation",
@@ -5592,8 +5332,8 @@
       "notes": ""
     },
     {
-      "id": "executive-series-cyber-resilience-month-216",
-      "title": "Executive Series: Cyber Resilience Month",
+      "id": "executive-series-cyber-resilience-month-blog-206",
+      "title": "Executive Series: Cyber Resilience Month | Blog",
       "url": null,
       "type": "Blog",
       "campaign": "Data Modernization & Resilience",
@@ -5618,8 +5358,8 @@
       "notes": ""
     },
     {
-      "id": "the-new-requirements-for-mission-critical-storage-in-an-ai-driven-enterprise-217",
-      "title": "The New Requirements for Mission-Critical Storage in an AI-Driven Enterprise",
+      "id": "the-new-requirements-for-mission-critical-storage-in-an-ai-driven-enterprise-blog-207",
+      "title": "The New Requirements for Mission-Critical Storage in an AI-Driven Enterprise | Blog",
       "url": "https://www.hitachivantara.com/en-us/blog/the-new-requirements-for-mission-critical-storage-in-an-ai-driven-enterprise",
       "type": "Blog",
       "campaign": "Data Modernization & Resilience",
@@ -5644,8 +5384,8 @@
       "notes": ""
     },
     {
-      "id": "why-sap-hana-resilience-matters-as-much-as-scale-218",
-      "title": "Why SAP HANA Resilience Matters as Much as Scale",
+      "id": "why-sap-hana-resilience-matters-as-much-as-scale-blog-208",
+      "title": "Why SAP HANA Resilience Matters as Much as Scale | Blog",
       "url": "https://www.hitachivantara.com/en-us/blog/why-sap-hana-resilience-matters-as-much-as-scale",
       "type": "Blog",
       "campaign": "Data Modernization & Resilience",
@@ -5670,7 +5410,7 @@
       "notes": ""
     },
     {
-      "id": "what-s-next-is-not-more-ai-it-s-better-foundations-blog-219",
+      "id": "what-s-next-is-not-more-ai-it-s-better-foundations-blog-209",
       "title": "What\u2019s Next Is Not More AI. It\u2019s Better Foundations. | Blog",
       "url": "https://www.hitachivantara.com/en-us/blog/whats-next-is-not-more-ai-its-better-foundations",
       "type": "Blog",
@@ -5696,7 +5436,7 @@
       "notes": ""
     },
     {
-      "id": "how-to-avoid-the-hidden-costs-of-slow-it-infrastructure-deployments-blog-220",
+      "id": "how-to-avoid-the-hidden-costs-of-slow-it-infrastructure-deployments-blog-210",
       "title": "How to Avoid the Hidden Costs of Slow IT Infrastructure Deployments\" | Blog",
       "url": "https://www.hitachivantara.com/en-us/blog/how-to-avoid-the-hidden-costs-of-slow-it-infrastructure-deployments",
       "type": "Blog",
@@ -5722,8 +5462,8 @@
       "notes": ""
     },
     {
-      "id": "sds-tco-tool-blog-221",
-      "title": "SDS TCO tool blog",
+      "id": "sds-tco-tool-blog-blog-211",
+      "title": "SDS TCO tool blog | Blog",
       "url": null,
       "type": "Blog",
       "campaign": "",
@@ -5748,8 +5488,8 @@
       "notes": ""
     },
     {
-      "id": "influencer-blog-your-mainframe-decision-is-not-the-one-you-think-222",
-      "title": "Influencer Blog:Your Mainframe Decision Is Not the One \nYou Think",
+      "id": "influencer-blog-your-mainframe-decision-is-not-the-one-you-think-blog-212",
+      "title": "Influencer Blog:Your Mainframe Decision Is Not the One \nYou Think | Blog",
       "url": null,
       "type": "Blog",
       "campaign": "Data Modernization & Resilience",
@@ -5774,8 +5514,8 @@
       "notes": ""
     },
     {
-      "id": "why-your-ai-strategy-needs-both-shared-and-shared-nothing-storage-223",
-      "title": "Why Your AI Strategy Needs Both Shared and Shared-Nothing Storage",
+      "id": "why-your-ai-strategy-needs-both-shared-and-shared-nothing-storage-blog-213",
+      "title": "Why Your AI Strategy Needs Both Shared and Shared-Nothing Storage | Blog",
       "url": "https://www.hitachivantara.com/en-us/blog/why-your-ai-strategy-needs-both-shared-and-shared-nothing-storage",
       "type": "Blog",
       "campaign": "Data Modernization & Resilience",
@@ -5800,8 +5540,8 @@
       "notes": ""
     },
     {
-      "id": "raising-the-stakes-for-sustainable-ai-ready-infrastructure-224",
-      "title": "Raising the Stakes for Sustainable, AI-ready Infrastructure",
+      "id": "raising-the-stakes-for-sustainable-ai-ready-infrastructure-blog-214",
+      "title": "Raising the Stakes for Sustainable, AI-ready Infrastructure | Blog",
       "url": "https://www.hitachivantara.com/en-us/blog/raising-the-stakes-for-sustainable-ai-ready-infrastructure?b",
       "type": "Blog",
       "campaign": "AI Data Foundation",
@@ -5826,8 +5566,8 @@
       "notes": ""
     },
     {
-      "id": "hitachi-in-gartner-infrastructure-platform-225",
-      "title": "Hitachi in Gartner Infrastructure Platform",
+      "id": "hitachi-in-gartner-infrastructure-platform-blog-215",
+      "title": "Hitachi in Gartner Infrastructure Platform | Blog",
       "url": null,
       "type": "Blog",
       "campaign": "Data Modernization & Resilience",
@@ -5852,7 +5592,7 @@
       "notes": ""
     },
     {
-      "id": "the-power-of-distributed-infrastructure-and-storage-at-the-edge-blog-226",
+      "id": "the-power-of-distributed-infrastructure-and-storage-at-the-edge-blog-216",
       "title": "The Power of Distributed Infrastructure and Storage at the Edge | Blog",
       "url": "https://www.hitachivantara.com/en-us/blog/power-of-distributed-infrastructure-and-storage-at-the-edge",
       "type": "Blog",
@@ -5878,7 +5618,7 @@
       "notes": ""
     },
     {
-      "id": "turning-virtualization-modernization-into-business-outcomes-blog-227",
+      "id": "turning-virtualization-modernization-into-business-outcomes-blog-217",
       "title": "Turning Virtualization Modernization Into Business Outcomes | Blog",
       "url": "https://www.hitachivantara.com/en-us/blog/business-outcomes-to-expect-after-modernizing-virtualization-infrastructure",
       "type": "Blog",
@@ -5904,8 +5644,8 @@
       "notes": ""
     },
     {
-      "id": "the-reason-behind-stalled-ai-projects-228",
-      "title": "The Reason Behind Stalled AI Projects",
+      "id": "the-reason-behind-stalled-ai-projects-blog-218",
+      "title": "The Reason Behind Stalled AI Projects | Blog",
       "url": "https://www.hitachivantara.com/en-us/blog/reason-behind-stalled-ai-projects",
       "type": "Blog",
       "campaign": "AI Data Foundation",
@@ -5930,10 +5670,10 @@
       "notes": ""
     },
     {
-      "id": "capacity-on-demand-scalable-pay-for-use-capacity-229",
-      "title": "Capacity on Demand Scalable Pay\u2011for\u2011Use Capacity",
+      "id": "capacity-on-demand-solution-brief-solution-profile-219",
+      "title": "Capacity on Demand Solution Brief | Solution Profile",
       "url": "https://www.hitachivantara.com/en-us/pdfviewer/solution-profile/capacity-on-demand",
-      "type": "Datasheet / Solution Brief / Technical",
+      "type": "Solution Profile",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
       "funnelStage": "BOFU",
@@ -5956,10 +5696,10 @@
       "notes": ""
     },
     {
-      "id": "hitachi-vantara-virtual-storage-platform-one-block-high-end-storage-innovation-s-most-powe-230",
-      "title": "Hitachi Vantara Virtual Storage Platform One Block High End Storage  \nInnovation\u2019s most powerful data engine",
+      "id": "virtual-storage-platform-one-block-high-end-storage-datasheet-220",
+      "title": "Virtual Storage Platform One Block High End Storage | Datasheet",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/datasheet/virtual-storage-platform-one-block-high-end-storage.pdf",
-      "type": "Datasheet / Solution Brief / Technical",
+      "type": "Datasheet",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
       "funnelStage": "BOFU",
@@ -5982,10 +5722,10 @@
       "notes": ""
     },
     {
-      "id": "modernize-storage-with-storage-as-a-service-simplify-storage-consumption-and-management-wi-231",
-      "title": "Modernize Storage With Storage as a Service\nSimplify storage consumption and management \nwith flexible, predictable outcomes",
+      "id": "staas-solution-brief-solution-profile-221",
+      "title": "STaaS Solution Brief | Solution Profile",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/solution-profile/storage-as-a-service-solution-profile.pdf",
-      "type": "Datasheet / Solution Brief / Technical",
+      "type": "Solution Profile",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
       "funnelStage": "MOFU",
@@ -6008,10 +5748,10 @@
       "notes": ""
     },
     {
-      "id": "remove-the-chaos-of-data-complexity-with-virtual-storage-platform-one-block-storage-for-mi-232",
-      "title": "Remove the Chaos of Data Complexity With Virtual Storage Platform One Block Storage for Mid-sized Enterprises | Datasheet / Solution Brief / Technical",
+      "id": "remove-the-chaos-of-data-complexity-with-virtual-storage-platform-one-block-storage-for-mi-222",
+      "title": "Remove the Chaos of Data Complexity With Virtual Storage Platform One Block Storage for Mid-sized Enterprises | Datasheet",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/datasheet/hitachi-virtual-storage-platform-one-block-datasheet.pdf",
-      "type": "Datasheet / Solution Brief / Technical",
+      "type": "Datasheet",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
       "funnelStage": "BOFU",
@@ -6034,10 +5774,10 @@
       "notes": ""
     },
     {
-      "id": "staas-datasheet-datasheet-solution-brief-technical-233",
-      "title": "STaaS Datasheet | Datasheet / Solution Brief / Technical",
+      "id": "staas-datasheet-datasheet-223",
+      "title": "STaaS Datasheet | Datasheet",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/datasheet/storage-as-a-service.pdf",
-      "type": "Datasheet / Solution Brief / Technical",
+      "type": "Datasheet",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
       "funnelStage": "BOFU",
@@ -6060,10 +5800,10 @@
       "notes": ""
     },
     {
-      "id": "supercharge-kafka-accelerate-real-time-innovation-at-scale-234",
-      "title": "Supercharge Kafka: Accelerate Real-Time Innovation at Scale",
+      "id": "supercharge-kafka-accelerate-real-time-innovation-at-scale-solution-profile-224",
+      "title": "Supercharge Kafka:  Accelerate Real-Time Innovation at Scale | Solution Profile",
       "url": "https://www.hitachivantara.com/en-us/pdf/solution-profile/supercharge-kafka-accelerate-real-time-innovation-at-scale.pdf",
-      "type": "Datasheet / Solution Brief / Technical",
+      "type": "Solution Profile",
       "campaign": "AI Data Foundation",
       "useCase": "Data Readiness and Activation for AI",
       "funnelStage": "BOFU",
@@ -6086,10 +5826,10 @@
       "notes": ""
     },
     {
-      "id": "hitachi-data-lakehouse-powering-trusted-ai-and-analytics-at-scale-datasheet-solution-brief-235",
-      "title": "Hitachi Data Lakehouse: Powering Trusted AI and Analytics at Scale | Datasheet / Solution Brief / Technical",
+      "id": "hitachi-data-lakehouse-powering-trusted-ai-and-analytics-at-scale-solution-profile-225",
+      "title": "Hitachi Data Lakehouse: Powering Trusted AI and Analytics at Scale | Solution Profile",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/solution-profile/data-lakehouse-powering-trusted-ai-analytics-at-scale.pdf",
-      "type": "Datasheet / Solution Brief / Technical",
+      "type": "Solution Profile",
       "campaign": "AI Data Foundation",
       "useCase": "Data Readiness and Activation for AI",
       "funnelStage": "TOFU",
@@ -6112,10 +5852,10 @@
       "notes": ""
     },
     {
-      "id": "secure-document-management-solutions-for-insurance-236",
-      "title": "Secure Document Management Solutions for Insurance",
+      "id": "secure-document-management-solutions-for-insurance-solution-profile-226",
+      "title": "Secure Document Management Solutions for Insurance | Solution Profile",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/solution-profile/secure-document-management-solutions-insurance.pdf",
-      "type": "Datasheet / Solution Brief / Technical",
+      "type": "Solution Profile",
       "campaign": "AI Data Foundation",
       "useCase": "Data Readiness and Activation for AI",
       "funnelStage": "MOFU",
@@ -6138,10 +5878,10 @@
       "notes": ""
     },
     {
-      "id": "hybrid-cloud-2-0-evolution-modernization-datasheet-solution-brief-technical-237",
-      "title": "Hybrid Cloud 2.0:  Evolution & Modernization | Datasheet / Solution Brief / Technical",
+      "id": "hybrid-cloud-2-0-evolution-modernization-whitepaper-227",
+      "title": "Hybrid Cloud 2.0:  Evolution & Modernization | Whitepaper",
       "url": "https://www.hitachivantara.com/en-us/pdf/white-paper/hybrid-cloud-evolution-modernization.pdf",
-      "type": "Datasheet / Solution Brief / Technical",
+      "type": "Whitepaper",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Hybrid Cloud Platform & Operations",
       "funnelStage": "BOFU",
@@ -6164,10 +5904,10 @@
       "notes": ""
     },
     {
-      "id": "data-resilience-as-a-service-solution-profile-238",
-      "title": "Data Resilience as a Service Solution Profile",
+      "id": "data-resilience-as-a-service-solution-profile-solution-profile-228",
+      "title": "Data Resilience as a Service Solution Profile | Solution Profile",
       "url": null,
-      "type": "Datasheet / Solution Brief / Technical",
+      "type": "Solution Profile",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Cyber Risk Mitigation & Recovery",
       "funnelStage": "BOFU",
@@ -6190,10 +5930,10 @@
       "notes": ""
     },
     {
-      "id": "7-layer-defense-one-trusted-partner-simplify-the-complexity-of-data-protection-and-cyber-r-239",
-      "title": "7-Layer Defense. One Trusted Partner.\nSimplify the Complexity of Data Protection and \nCyber Resiliency",
+      "id": "7-layer-defense-one-trusted-partner-solution-profile-229",
+      "title": "7-Layer Defense. One Trusted Partner | Solution Profile",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/solution-profile/7-layer-defense-one-trusted-partner.pdf",
-      "type": "Datasheet / Solution Brief / Technical",
+      "type": "Solution Profile",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Cyber Risk Mitigation & Recovery",
       "funnelStage": "BOFU",
@@ -6216,10 +5956,10 @@
       "notes": ""
     },
     {
-      "id": "hitachi-vantara-ransomware-detection-powered-by-cybersense-from-ransomware-chaos-to-predic-240",
-      "title": "Hitachi Vantara: Ransomware Detection Powered by CyberSense\u00ae\nFrom ransomware chaos to predictable clean data recovery \u2014 guaranteed",
+      "id": "hitachi-vantara-ransomware-detection-powered-by-cybersense-datasheet-230",
+      "title": "Hitachi Vantara: Ransomware Detection Powered by CyberSense\u00ae | Datasheet",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/datasheet/hitachi-vantara-ransomware-detection-powered-by-cybersense.pdf",
-      "type": "Datasheet / Solution Brief / Technical",
+      "type": "Datasheet",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Cyber Risk Mitigation & Recovery",
       "funnelStage": "BOFU",
@@ -6242,10 +5982,10 @@
       "notes": ""
     },
     {
-      "id": "modernize-your-environment-with-vsp-one-object-datasheet-solution-brief-technical-241",
-      "title": "Modernize your environment with VSP One Object | Datasheet / Solution Brief / Technical",
+      "id": "modernize-your-environment-with-vsp-one-object-solution-profile-231",
+      "title": "Modernize your environment with VSP One Object | Solution Profile",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/solution-profile/virtual-storage-platform-one-object-solution-profile.pdf",
-      "type": "Datasheet / Solution Brief / Technical",
+      "type": "Solution Profile",
       "campaign": "AI Data Foundation",
       "useCase": "Data Platform Architectures & Economics",
       "funnelStage": "MOFU",
@@ -6268,10 +6008,10 @@
       "notes": ""
     },
     {
-      "id": "power-your-ai-future-on-a-foundation-of-trusted-modernized-data-datasheet-solution-brief-t-242",
-      "title": "Power Your AI Future on a Foundation of Trusted, Modernized Data Datasheet / Solution Brief / Technical",
+      "id": "power-your-ai-future-on-a-foundation-of-trusted-modernized-data-solution-profile-232",
+      "title": "Power Your AI Future on a Foundation of Trusted, Modernized Data | Solution Profile",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/solution-profile/modernize-data-for-ai-era.pdf",
-      "type": "Datasheet / Solution Brief / Technical",
+      "type": "Solution Profile",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
       "funnelStage": "BOFU",
@@ -6294,10 +6034,10 @@
       "notes": ""
     },
     {
-      "id": "hitachi-vantara-virtual-storage-platform-one-object-vsp-one-object-datasheet-solution-brie-243",
-      "title": "Hitachi Vantara Virtual Storage Platform One Object (VSP One Object) Datasheet / Solution Brief / Technical",
+      "id": "hitachi-vantara-virtual-storage-platform-one-object-vsp-one-object-datasheet-233",
+      "title": "Hitachi Vantara Virtual Storage Platform One Object (VSP One Object) | Datasheet",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/datasheet/vsp-one-object.pdf",
-      "type": "Datasheet / Solution Brief / Technical",
+      "type": "Datasheet",
       "campaign": "AI Data Foundation",
       "useCase": "Data Readiness and Activation for AI",
       "funnelStage": "BOFU",
@@ -6320,10 +6060,10 @@
       "notes": ""
     },
     {
-      "id": "hmax-and-iq-solutions-for-mining-and-mineral-exploration-244",
-      "title": "HMAX and iQ Solutions for Mining and Mineral Exploration",
+      "id": "hmax-and-iq-solutions-for-mining-and-mineral-exploration-solution-profile-234",
+      "title": "HMAX and iQ Solutions for Mining and Mineral Exploration | Solution Profile",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/solution-profile/hmax-iq-solutions-for-mining-mineral-exploration.pdf",
-      "type": "Datasheet / Solution Brief / Technical",
+      "type": "Solution Profile",
       "campaign": "AI Data Foundation",
       "useCase": "High Performance AI-Ready Infrastructure",
       "funnelStage": "MOFU",
@@ -6346,10 +6086,10 @@
       "notes": ""
     },
     {
-      "id": "mission-critical-guarantees-and-slas-from-hitachi-vantara-245",
-      "title": "Mission-Critical Guarantees and SLAs From Hitachi Vantara",
+      "id": "mission-critical-guarantees-and-slas-new-solution-profile-235",
+      "title": "Mission Critical Guarantees and SLAs (new) | Solution Profile",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/solution-profile/mission-critical-guarantees-and-slas.pdf",
-      "type": "Datasheet / Solution Brief / Technical",
+      "type": "Solution Profile",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Hybrid Cloud Platform & Operations",
       "funnelStage": "MOFU",
@@ -6372,10 +6112,10 @@
       "notes": ""
     },
     {
-      "id": "hitachi-vantara-flexible-consumption-and-financing-solutions-update-246",
-      "title": "Hitachi Vantara Flexible Consumption and Financing Solutions (update)",
+      "id": "hitachi-vantara-flexible-consumption-and-financing-solutions-update-solution-profile-236",
+      "title": "Hitachi Vantara Flexible Consumption and Financing Solutions (update) | Solution Profile",
       "url": null,
-      "type": "Datasheet / Solution Brief / Technical",
+      "type": "Solution Profile",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Hybrid Cloud Platform & Operations",
       "funnelStage": "BOFU",
@@ -6398,10 +6138,10 @@
       "notes": ""
     },
     {
-      "id": "hv-signature-support-new-datasheet-solution-brief-technical-247",
-      "title": "HV Signature Support (new) | Datasheet / Solution Brief / Technical",
+      "id": "hv-signature-support-new-solution-profile-237",
+      "title": "HV Signature Support (new) | Solution Profile",
       "url": null,
-      "type": "Datasheet / Solution Brief / Technical",
+      "type": "Solution Profile",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Hybrid Cloud Platform & Operations",
       "funnelStage": "MOFU",
@@ -6424,10 +6164,10 @@
       "notes": ""
     },
     {
-      "id": "everflex-managed-focus-on-itil-services-new-datasheet-solution-brief-technical-248",
-      "title": "EverFlex Managed focus on ITIL Services (new) | Datasheet / Solution Brief / Technical",
+      "id": "everflex-managed-focus-on-itil-services-new-solution-profile-238",
+      "title": "EverFlex Managed focus on ITIL Services (new) | Solution Profile",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/solution-profile/mission-critical-it-service-management-guaranteed-outcomes.pdf",
-      "type": "Datasheet / Solution Brief / Technical",
+      "type": "Solution Profile",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Hybrid Cloud Platform & Operations",
       "funnelStage": "MOFU",
@@ -6450,10 +6190,10 @@
       "notes": ""
     },
     {
-      "id": "everflex-managed-focus-on-multi-vendor-management-new-datasheet-solution-brief-technical-249",
-      "title": "EverFlex Managed focus on Multi-vendor Management (new) | Datasheet / Solution Brief / Technical",
+      "id": "everflex-managed-focus-on-multi-vendor-management-new-solution-profile-239",
+      "title": "EverFlex Managed focus on Multi-vendor Management (new) | Solution Profile",
       "url": null,
-      "type": "Datasheet / Solution Brief / Technical",
+      "type": "Solution Profile",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Hybrid Cloud Platform & Operations",
       "funnelStage": "MOFU",
@@ -6476,10 +6216,10 @@
       "notes": ""
     },
     {
-      "id": "enhancing-hybrid-cloud-management-with-unified-observability-tools-new-250",
-      "title": "Enhancing hybrid cloud management with unified observability tools (New)",
+      "id": "enhancing-hybrid-cloud-management-with-unified-observability-tools-new-solution-profile-240",
+      "title": "Enhancing hybrid cloud management with unified observability tools (New) | Solution Profile",
       "url": null,
-      "type": "Datasheet / Solution Brief / Technical",
+      "type": "Solution Profile",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Hybrid Cloud Platform & Operations",
       "funnelStage": "BOFU",
@@ -6502,10 +6242,10 @@
       "notes": ""
     },
     {
-      "id": "ensuring-business-continuity-vmware-environments-enterprise-data-resilience-251",
-      "title": "Ensuring Business Continuity VMware Environments_Enterprise Data Resilience",
+      "id": "ensuring-business-continuity-vmware-environments-enterprise-data-resilience-solution-profi-241",
+      "title": "Ensuring Business Continuity VMware Environments_Enterprise Data Resilience | Solution Profile",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/solution-profile/ensuring-business-continuity-vmware-environments-enterprise-data-resilience.pdf",
-      "type": "Datasheet / Solution Brief / Technical",
+      "type": "Solution Profile",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Hybrid Cloud Platform & Operations",
       "funnelStage": "MOFU",
@@ -6528,10 +6268,10 @@
       "notes": ""
     },
     {
-      "id": "hitachi-everflex-success-stories-ebook-252",
-      "title": "Hitachi EverFlex Success Stories eBook",
+      "id": "hitachi-everflex-success-stories-ebook-ebook-242",
+      "title": "Hitachi EverFlex Success Stories eBook | eBook",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/hitachi-everflex-success-stories-ebook.pdf",
-      "type": "eBook/Whitepaper",
+      "type": "eBook",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
       "funnelStage": "TOFU",
@@ -6554,10 +6294,10 @@
       "notes": ""
     },
     {
-      "id": "vsp-one-object-with-on-premise-native-s3-tables-for-data-lakehouse-ai-and-analytic-workloa-253",
-      "title": "VSP One Object with On-Premise Native S3 Tables for Data Lakehouse, AI and Analytic Workloads | eBook/Whitepaper",
+      "id": "vsp-one-object-with-on-premise-native-s3-tables-for-data-lakehouse-ai-and-analytic-workloa-243",
+      "title": "VSP One Object with On-Premise Native S3 Tables for Data Lakehouse, AI and Analytic Workloads | Whitepaper",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/white-paper/on-prem-amazon-s3-tables-with-vsp-one-object.pdf",
-      "type": "eBook/Whitepaper",
+      "type": "Whitepaper",
       "campaign": "AI Data Foundation",
       "useCase": "Data Readiness and Activation for AI",
       "funnelStage": "BOFU",
@@ -6580,10 +6320,10 @@
       "notes": ""
     },
     {
-      "id": "top-10-reasons-hitachi-vantara-virtual-storage-platform-one-object-ebook-whitepaper-254",
-      "title": "Top 10 Reasons: Hitachi Vantara Virtual Storage Platform One Object | eBook/Whitepaper",
+      "id": "top-10-reasons-hitachi-vantara-virtual-storage-platform-one-object-top-10-244",
+      "title": "Top 10 Reasons: Hitachi Vantara Virtual Storage Platform One Object | Top 10",
       "url": "https://www.hitachivantara.com/en-us/pdf/solution-profile/top-10-reasons-why-vsp-one-object.pdf",
-      "type": "eBook/Whitepaper",
+      "type": "Top 10",
       "campaign": "AI Data Foundation",
       "useCase": "Data Readiness and Activation for AI",
       "funnelStage": "MOFU",
@@ -6606,10 +6346,10 @@
       "notes": ""
     },
     {
-      "id": "top-10-reasons-why-hitachi-data-lakehouse-255",
-      "title": "Top 10 Reasons Why Hitachi Data Lakehouse",
+      "id": "top-10-reasons-why-hitachi-data-lakehouse-top-10-245",
+      "title": "Top 10 Reasons Why Hitachi Data Lakehouse | Top 10",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/datasheet/data-lakehouse-top-10-reasons-why.pdf",
-      "type": "eBook/Whitepaper",
+      "type": "Top 10",
       "campaign": "AI Data Foundation",
       "useCase": "Data Readiness and Activation for AI",
       "funnelStage": "MOFU",
@@ -6632,10 +6372,10 @@
       "notes": ""
     },
     {
-      "id": "ebook-title-trust-continuity-and-competitive-advantage-in-the-ai-era-256",
-      "title": "eBook Title: Trust, Continuity, and Competitive Advantage in the AI Era\u200b\n\u200b",
+      "id": "ebook-title-trust-continuity-and-competitive-advantage-in-the-ai-era-ebook-246",
+      "title": "eBook Title: Trust, Continuity, and Competitive Advantage in the AI Era\u200b\n\u200b | eBook",
       "url": null,
-      "type": "eBook/Whitepaper",
+      "type": "eBook",
       "campaign": "AI Data Foundation",
       "useCase": "High Performance AI-Ready Infrastructure",
       "funnelStage": "TOFU",
@@ -6658,10 +6398,10 @@
       "notes": ""
     },
     {
-      "id": "10-reasons-to-buy-build-or-borrow-ai-implementation-ebook-whitepaper-257",
-      "title": "10 Reasons to Buy, Build, or Borrow AI Implementation | eBook/Whitepaper",
+      "id": "10-reasons-to-buy-build-or-borrow-ai-implementation-ebook-247",
+      "title": "10 Reasons to Buy, Build, or Borrow AI Implementation | eBook",
       "url": "https://www.hitachivantara.com/en-us/gated-forms/ten-reasons-buy-build-borrow-ai-implementation",
-      "type": "eBook/Whitepaper",
+      "type": "eBook",
       "campaign": "AI Data Foundation",
       "useCase": "High Performance AI-Ready Infrastructure",
       "funnelStage": "TOFU",
@@ -6684,10 +6424,10 @@
       "notes": ""
     },
     {
-      "id": "how-to-inject-agility-into-your-infrastructure-ebook-ebook-whitepaper-258",
-      "title": "How to Inject agility into your infrastructure eBook eBook/Whitepaper",
+      "id": "how-to-inject-agility-into-your-infrastructure-ebook-ebook-248",
+      "title": "How to Inject agility into your infrastructure eBook | eBook",
       "url": "https://www.hitachivantara.com/en-us/gated-forms/inject-agility-into-your-infrastructure",
-      "type": "eBook/Whitepaper",
+      "type": "eBook",
       "campaign": "AI Data Foundation",
       "useCase": "High Performance AI-Ready Infrastructure",
       "funnelStage": "MOFU",
@@ -6710,10 +6450,10 @@
       "notes": ""
     },
     {
-      "id": "shared-nothing-architecture-for-ai-ebook-whitepaper-259",
-      "title": "Shared-Nothing Architecture for AI | eBook/Whitepaper",
+      "id": "shared-nothing-architecture-for-ai-whitepaper-249",
+      "title": "Shared-Nothing Architecture for AI | Whitepaper",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/white-paper/shared-nothing-architecture-for-ai.pdf",
-      "type": "eBook/Whitepaper",
+      "type": "Whitepaper",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Hybrid Cloud Platform & Operations",
       "funnelStage": "BOFU",
@@ -6736,10 +6476,10 @@
       "notes": ""
     },
     {
-      "id": "hitachi-storage-and-hitachi-integrated-systems-solutions-in-vmware-vsphere-environments-eb-260",
-      "title": "Hitachi Storage and Hitachi Integrated Systems Solutions in VMware vSphere Environments | eBook/Whitepaper",
+      "id": "hitachi-storage-and-hitachi-integrated-systems-solutions-in-vmware-vsphere-environments-re-250",
+      "title": "Hitachi Storage and Hitachi Integrated Systems Solutions in VMware vSphere Environments | Reference Architecture",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/architecture-guide/optimize-storage-compute-platforms-in-vmware-vsphere-environments-best-practices-guide.pdf",
-      "type": "eBook/Whitepaper",
+      "type": "Reference Architecture",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Hybrid Cloud Platform & Operations",
       "funnelStage": "BOFU",
@@ -6762,10 +6502,10 @@
       "notes": ""
     },
     {
-      "id": "businesses-modernize-data-protection-with-hitachi-and-commvault-261",
-      "title": "Businesses Modernize Data Protection With Hitachi and Commvault",
+      "id": "businesses-modernize-data-protection-with-hitachi-and-commvault-whitepaper-251",
+      "title": "Businesses Modernize Data Protection With Hitachi and Commvault | Whitepaper",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/white-paper/commvault-case-study-sep-2025.pdf",
-      "type": "eBook/Whitepaper",
+      "type": "Whitepaper",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Cyber Risk Mitigation & Recovery",
       "funnelStage": "MOFU",
@@ -6788,10 +6528,10 @@
       "notes": ""
     },
     {
-      "id": "buyer-s-guide-for-cyber-resilient-data-infrastructure-recommendations-for-mitigating-cyber-262",
-      "title": "Buyer\u2019s Guide for Cyber-Resilient Data Infrastructure Recommendations for mitigating  \ncyber threats and attacks",
+      "id": "buyer-s-guide-for-cyber-resilient-data-infrastructure-ebook-252",
+      "title": "Buyer\u2019s   Guide for   Cyber-Resilient   Data Infrastructure | eBook",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/cyber-resilient-data-infrastructure-buyers-guide.pdf",
-      "type": "eBook/Whitepaper",
+      "type": "eBook",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Cyber Risk Mitigation & Recovery",
       "funnelStage": "MOFU",
@@ -6814,10 +6554,10 @@
       "notes": ""
     },
     {
-      "id": "data-resilience-as-a-service-ebook-263",
-      "title": "Data Resilience as a Service eBook",
+      "id": "data-resilience-as-a-service-ebook-ebook-253",
+      "title": "Data Resilience as a Service eBook | eBook",
       "url": null,
-      "type": "eBook/Whitepaper",
+      "type": "eBook",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Cyber Risk Mitigation & Recovery",
       "funnelStage": "MOFU",
@@ -6840,10 +6580,10 @@
       "notes": ""
     },
     {
-      "id": "cyber-resilience-pov-ebook-264",
-      "title": "Cyber Resilience PoV eBook",
+      "id": "cyber-resilience-pov-ebook-ebook-254",
+      "title": "Cyber Resilience PoV eBook | eBook",
       "url": null,
-      "type": "eBook/Whitepaper",
+      "type": "eBook",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Cyber Risk Mitigation & Recovery",
       "funnelStage": "MOFU",
@@ -6866,10 +6606,10 @@
       "notes": ""
     },
     {
-      "id": "tate-of-data-infrastructure-global-report-2025-from-fragile-to-optimized-what-more-than-1--265",
-      "title": "tate of Data Infrastructure Global Report 2025 From Fragile  to Optimized What more than 1,200 IT leaders reveal about AI readiness",
+      "id": "state-of-data-infrastructure-global-report-2025-ebook-ebook-255",
+      "title": "State of Data Infrastructure Global Report 2025 eBook | eBook",
       "url": "https://www.hitachivantara.com/en-us/gated-forms/state-of-data-2025",
-      "type": "eBook/Whitepaper",
+      "type": "eBook",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Cyber Risk Mitigation & Recovery, Data Platform Architectures & Economics, Hybrid Cloud Platform & Operations",
       "funnelStage": "TOFU",
@@ -6892,10 +6632,10 @@
       "notes": ""
     },
     {
-      "id": "ebook-with-agency-on-turtl-266",
-      "title": "eBook: with Agency on Turtl",
+      "id": "ebook-with-agency-on-turtl-ebook-256",
+      "title": "eBook: with Agency on Turtl | eBook",
       "url": null,
-      "type": "eBook/Whitepaper",
+      "type": "eBook",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
       "funnelStage": "MOFU",
@@ -6918,10 +6658,10 @@
       "notes": ""
     },
     {
-      "id": "keeping-the-lights-on-vs-funding-the-future-267",
-      "title": "Keeping the Lights on vs. Funding the Future",
+      "id": "keeping-the-lights-on-or-funding-innovation-whitepaper-257",
+      "title": "Keeping the lights on or funding innovation | Whitepaper",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/white-paper/turn-storage-costs-into-innovation-funding.pdf",
-      "type": "eBook/Whitepaper",
+      "type": "Whitepaper",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
       "funnelStage": "MOFU",
@@ -6944,10 +6684,10 @@
       "notes": ""
     },
     {
-      "id": "omdia-modernization-guide-for-ai-readiness-ebook-whitepaper-268",
-      "title": "Omdia: Modernization Guide for AI Readiness | eBook/Whitepaper",
+      "id": "omdia-modernization-guide-for-ai-readiness-analyst-report-258",
+      "title": "Omdia: Modernization Guide for AI Readiness | Analyst Report",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/new-omdia-report-storage-ai-cyber-resilience.pdf",
-      "type": "eBook/Whitepaper",
+      "type": "Analyst Report",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
       "funnelStage": "MOFU",
@@ -6970,10 +6710,10 @@
       "notes": ""
     },
     {
-      "id": "gartner-peer-insights-asset-block-ebook-whitepaper-269",
-      "title": "Gartner Peer Insights Asset - Block | eBook/Whitepaper",
+      "id": "gartner-peer-insights-asset-block-analyst-report-259",
+      "title": "Gartner Peer Insights Asset - Block | Analyst Report",
       "url": null,
-      "type": "eBook/Whitepaper",
+      "type": "Analyst Report",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
       "funnelStage": "MOFU",
@@ -6996,10 +6736,10 @@
       "notes": ""
     },
     {
-      "id": "how-hitachi-block-storage-delivers-eight-nines-availability-whitepaper-ebook-whitepaper-270",
-      "title": "How Hitachi Block Storage Delivers Eight Nines Availability Whitepaper | eBook/Whitepaper",
+      "id": "how-hitachi-block-storage-delivers-eight-nines-availability-whitepaper-whitepaper-260",
+      "title": "How Hitachi Block Storage Delivers Eight Nines Availability Whitepaper | Whitepaper",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/white-paper/how-block-storage-delivers-eight-nines-availability.pdf",
-      "type": "eBook/Whitepaper",
+      "type": "Whitepaper",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
       "funnelStage": "MOFU",
@@ -7022,10 +6762,10 @@
       "notes": ""
     },
     {
-      "id": "overcoming-gaps-with-hybrid-cloud-ebook-whitepaper-271",
-      "title": "Overcoming Gaps with Hybrid Cloud | eBook/Whitepaper",
+      "id": "overcoming-gaps-with-hybrid-cloud-ebook-261",
+      "title": "Overcoming Gaps with Hybrid Cloud | eBook",
       "url": null,
-      "type": "eBook/Whitepaper",
+      "type": "eBook",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Hybrid Cloud Platform & Operations",
       "funnelStage": "MOFU",
@@ -7048,10 +6788,10 @@
       "notes": ""
     },
     {
-      "id": "top-5-reasons-to-build-resilient-cloud-infrastructure-with-hitachi-storage-and-vmware-clou-272",
-      "title": "Top 5 Reasons to Build  Resilient Cloud Infrastructure With Hitachi Storage and  VMware Cloud Foundation | eBook/Whitepaper",
+      "id": "top-5-reasons-to-build-resilient-cloud-infrastructure-with-hitachi-storage-and-vmware-clou-262",
+      "title": "Top 5 Reasons to Build  Resilient Cloud Infrastructure With Hitachi Storage and  VMware Cloud Foundation | eBook",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/top-5-reasons-build-resilient-cloud-infrastructure-with-storage-vmware-cloud-foundation.pdf",
-      "type": "eBook/Whitepaper",
+      "type": "eBook",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Hybrid Cloud Platform & Operations",
       "funnelStage": "MOFU",
@@ -7074,10 +6814,10 @@
       "notes": ""
     },
     {
-      "id": "why-hitachi-vantara-273",
-      "title": "Why Hitachi Vantara",
+      "id": "why-hitachi-vantara-ebook-263",
+      "title": "Why Hitachi Vantara | eBook",
       "url": null,
-      "type": "eBook/Whitepaper",
+      "type": "eBook",
       "campaign": "",
       "useCase": "",
       "funnelStage": "TOFU",
@@ -7100,10 +6840,10 @@
       "notes": ""
     },
     {
-      "id": "hitachi-data-lakehouse-unified-data-lakehouse-for-ai-and-analytics-landing-page-campaign-p-274",
-      "title": "Hitachi Data Lakehouse:  Unified Data Lakehouse for AI and Analytics | Landing Page/Campaign Page",
+      "id": "hitachi-data-lakehouse-unified-data-lakehouse-for-ai-and-analytics-landing-page-264",
+      "title": "Hitachi Data Lakehouse:  Unified Data Lakehouse for AI and Analytics | Landing Page",
       "url": "https://www.hitachivantara.com/en-us/solutions/ai-analytics/hitachi-data-lakehouse",
-      "type": "Landing Page/Campaign Page",
+      "type": "Landing Page",
       "campaign": "AI Data Foundation",
       "useCase": "Data Readiness and Activation for AI",
       "funnelStage": "TOFU",
@@ -7126,10 +6866,10 @@
       "notes": ""
     },
     {
-      "id": "ai-data-foundation-landing-page-landing-page-campaign-page-275",
-      "title": "AI Data Foundation Landing Page | Landing Page/Campaign Page",
+      "id": "ai-data-foundation-landing-page-landing-page-265",
+      "title": "AI Data Foundation Landing Page | Landing Page",
       "url": "https://www.hitachivantara.com/en-us/featured/ai-data-foundation",
-      "type": "Landing Page/Campaign Page",
+      "type": "Landing Page",
       "campaign": "AI Data Foundation",
       "useCase": "Data Readiness and Activation for AI",
       "funnelStage": "TOFU",
@@ -7149,318 +6889,6 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Stephanie Thompson, Sulochna Khokhrai",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
-    },
-    {
-      "id": "untitled-276",
-      "title": "|",
-      "url": null,
-      "type": "",
-      "campaign": "",
-      "useCase": "",
-      "funnelStage": "",
-      "ownerTeam": "",
-      "audience": "",
-      "status": "",
-      "region": "",
-      "publishDate": null,
-      "publishDateDisplay": "",
-      "partnerUse": false,
-      "paidMediaDate": null,
-      "paidMediaDateDisplay": "",
-      "primaryActivation": "No Planned Promotion",
-      "marketingEmail": null,
-      "salesEmail": null,
-      "usedInCampaign": "No",
-      "promotionPeriod": "",
-      "ownerIndividual": "",
-      "publishedByVendor": "",
-      "notes": ""
-    },
-    {
-      "id": "untitled-277",
-      "title": "|",
-      "url": null,
-      "type": "",
-      "campaign": "",
-      "useCase": "",
-      "funnelStage": "",
-      "ownerTeam": "",
-      "audience": "",
-      "status": "",
-      "region": "",
-      "publishDate": null,
-      "publishDateDisplay": "",
-      "partnerUse": false,
-      "paidMediaDate": null,
-      "paidMediaDateDisplay": "",
-      "primaryActivation": "No Planned Promotion",
-      "marketingEmail": null,
-      "salesEmail": null,
-      "usedInCampaign": "No",
-      "promotionPeriod": "",
-      "ownerIndividual": "",
-      "publishedByVendor": "",
-      "notes": ""
-    },
-    {
-      "id": "untitled-278",
-      "title": "|",
-      "url": null,
-      "type": "",
-      "campaign": "",
-      "useCase": "",
-      "funnelStage": "",
-      "ownerTeam": "",
-      "audience": "",
-      "status": "",
-      "region": "",
-      "publishDate": null,
-      "publishDateDisplay": "",
-      "partnerUse": false,
-      "paidMediaDate": null,
-      "paidMediaDateDisplay": "",
-      "primaryActivation": "No Planned Promotion",
-      "marketingEmail": null,
-      "salesEmail": null,
-      "usedInCampaign": "No",
-      "promotionPeriod": "",
-      "ownerIndividual": "",
-      "publishedByVendor": "",
-      "notes": ""
-    },
-    {
-      "id": "untitled-279",
-      "title": "|",
-      "url": null,
-      "type": "",
-      "campaign": "",
-      "useCase": "",
-      "funnelStage": "",
-      "ownerTeam": "",
-      "audience": "",
-      "status": "",
-      "region": "",
-      "publishDate": null,
-      "publishDateDisplay": "",
-      "partnerUse": false,
-      "paidMediaDate": null,
-      "paidMediaDateDisplay": "",
-      "primaryActivation": "No Planned Promotion",
-      "marketingEmail": null,
-      "salesEmail": null,
-      "usedInCampaign": "No",
-      "promotionPeriod": "",
-      "ownerIndividual": "",
-      "publishedByVendor": "",
-      "notes": ""
-    },
-    {
-      "id": "untitled-280",
-      "title": "|",
-      "url": null,
-      "type": "",
-      "campaign": "",
-      "useCase": "",
-      "funnelStage": "",
-      "ownerTeam": "",
-      "audience": "",
-      "status": "",
-      "region": "",
-      "publishDate": null,
-      "publishDateDisplay": "",
-      "partnerUse": false,
-      "paidMediaDate": null,
-      "paidMediaDateDisplay": "",
-      "primaryActivation": "No Planned Promotion",
-      "marketingEmail": null,
-      "salesEmail": null,
-      "usedInCampaign": "No",
-      "promotionPeriod": "",
-      "ownerIndividual": "",
-      "publishedByVendor": "",
-      "notes": ""
-    },
-    {
-      "id": "untitled-281",
-      "title": "|",
-      "url": null,
-      "type": "",
-      "campaign": "",
-      "useCase": "",
-      "funnelStage": "",
-      "ownerTeam": "",
-      "audience": "",
-      "status": "",
-      "region": "",
-      "publishDate": null,
-      "publishDateDisplay": "",
-      "partnerUse": false,
-      "paidMediaDate": null,
-      "paidMediaDateDisplay": "",
-      "primaryActivation": "No Planned Promotion",
-      "marketingEmail": null,
-      "salesEmail": null,
-      "usedInCampaign": "No",
-      "promotionPeriod": "",
-      "ownerIndividual": "",
-      "publishedByVendor": "",
-      "notes": ""
-    },
-    {
-      "id": "untitled-282",
-      "title": "|",
-      "url": null,
-      "type": "",
-      "campaign": "",
-      "useCase": "",
-      "funnelStage": "",
-      "ownerTeam": "",
-      "audience": "",
-      "status": "",
-      "region": "",
-      "publishDate": null,
-      "publishDateDisplay": "",
-      "partnerUse": false,
-      "paidMediaDate": null,
-      "paidMediaDateDisplay": "",
-      "primaryActivation": "No Planned Promotion",
-      "marketingEmail": null,
-      "salesEmail": null,
-      "usedInCampaign": "No",
-      "promotionPeriod": "",
-      "ownerIndividual": "",
-      "publishedByVendor": "",
-      "notes": ""
-    },
-    {
-      "id": "untitled-283",
-      "title": "|",
-      "url": null,
-      "type": "",
-      "campaign": "",
-      "useCase": "",
-      "funnelStage": "",
-      "ownerTeam": "",
-      "audience": "",
-      "status": "",
-      "region": "",
-      "publishDate": null,
-      "publishDateDisplay": "",
-      "partnerUse": false,
-      "paidMediaDate": null,
-      "paidMediaDateDisplay": "",
-      "primaryActivation": "No Planned Promotion",
-      "marketingEmail": null,
-      "salesEmail": null,
-      "usedInCampaign": "No",
-      "promotionPeriod": "",
-      "ownerIndividual": "",
-      "publishedByVendor": "",
-      "notes": ""
-    },
-    {
-      "id": "untitled-284",
-      "title": "|",
-      "url": null,
-      "type": "",
-      "campaign": "",
-      "useCase": "",
-      "funnelStage": "",
-      "ownerTeam": "",
-      "audience": "",
-      "status": "",
-      "region": "",
-      "publishDate": null,
-      "publishDateDisplay": "",
-      "partnerUse": false,
-      "paidMediaDate": null,
-      "paidMediaDateDisplay": "",
-      "primaryActivation": "No Planned Promotion",
-      "marketingEmail": null,
-      "salesEmail": null,
-      "usedInCampaign": "No",
-      "promotionPeriod": "",
-      "ownerIndividual": "",
-      "publishedByVendor": "",
-      "notes": ""
-    },
-    {
-      "id": "untitled-285",
-      "title": "|",
-      "url": null,
-      "type": "",
-      "campaign": "",
-      "useCase": "",
-      "funnelStage": "",
-      "ownerTeam": "",
-      "audience": "",
-      "status": "",
-      "region": "",
-      "publishDate": null,
-      "publishDateDisplay": "",
-      "partnerUse": false,
-      "paidMediaDate": null,
-      "paidMediaDateDisplay": "",
-      "primaryActivation": "No Planned Promotion",
-      "marketingEmail": null,
-      "salesEmail": null,
-      "usedInCampaign": "No",
-      "promotionPeriod": "",
-      "ownerIndividual": "",
-      "publishedByVendor": "",
-      "notes": ""
-    },
-    {
-      "id": "untitled-286",
-      "title": "|",
-      "url": null,
-      "type": "",
-      "campaign": "",
-      "useCase": "",
-      "funnelStage": "",
-      "ownerTeam": "",
-      "audience": "",
-      "status": "",
-      "region": "",
-      "publishDate": null,
-      "publishDateDisplay": "",
-      "partnerUse": false,
-      "paidMediaDate": null,
-      "paidMediaDateDisplay": "",
-      "primaryActivation": "No Planned Promotion",
-      "marketingEmail": null,
-      "salesEmail": null,
-      "usedInCampaign": "No",
-      "promotionPeriod": "",
-      "ownerIndividual": "",
-      "publishedByVendor": "",
-      "notes": ""
-    },
-    {
-      "id": "untitled-287",
-      "title": "|",
-      "url": null,
-      "type": "",
-      "campaign": "",
-      "useCase": "",
-      "funnelStage": "",
-      "ownerTeam": "",
-      "audience": "",
-      "status": "",
-      "region": "",
-      "publishDate": null,
-      "publishDateDisplay": "",
-      "partnerUse": false,
-      "paidMediaDate": null,
-      "paidMediaDateDisplay": "",
-      "primaryActivation": "No Planned Promotion",
-      "marketingEmail": null,
-      "salesEmail": null,
-      "usedInCampaign": "No",
-      "promotionPeriod": "",
-      "ownerIndividual": "",
-      "publishedByVendor": "",
       "notes": ""
     }
   ]
