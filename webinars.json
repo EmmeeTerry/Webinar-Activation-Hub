@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-10-02T12:08:24.526107+00:00",
+  "lastRefreshed": "2026-10-02T14:08:38.721360+00:00",
   "webinars": [
     {
       "id": "the-economics-of-modern-storage-infrastructure-lower-risk-faster-ai-value-better-roi-webin",
@@ -7,7 +7,7 @@
       "date": "2026-05-01",
       "dateDisplay": "May 01, 2026",
       "status": "On Demand",
-      "campaign": "Data Modernization & Resilience",
+      "campaign": "",
       "useCase": "",
       "audience": "Enterprise, Midmarket",
       "region": "AMER",
@@ -26,40 +26,7 @@
         "attendance": "https://hdscorp.lightning.force.com/lightning/r/Report/00OaZ00000D0ByTUAV/view?queryScope=userFolders"
       },
       "sourceRow": 1,
-      "relatedResources": [
-        {
-          "title": "Cyber Resilience For Dummies eBook | eBook",
-          "type": "eBook",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/cyber-resilience-for-dummies",
-          "score": 3
-        },
-        {
-          "title": "MIT Tech Review: Adapting to New Threats with Proactive Cyber Risk Management | Analyst Report",
-          "type": "Analyst Report",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/adapting-to-new-threats-with-proactive-risk-management",
-          "score": 3
-        },
-        {
-          "title": "Pearkmarks Results on BHE for Oracle (TBD-2H) | Analyst Report",
-          "type": "Analyst Report",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "Pearkmarks Results on BHE for Oracle (TBD-2H)",
-          "score": 3
-        },
-        {
-          "title": "Data Modernization Dummies Guide | eBook",
-          "type": "eBook",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "Data Modernization Dummies Guide",
-          "score": 3
-        }
-      ]
+      "relatedResources": []
     },
     {
       "id": "is-object-storage-the-new-ai-foundation-webinar",
@@ -67,7 +34,7 @@
       "date": "2026-06-04",
       "dateDisplay": "Jun 04, 2026",
       "status": "On Demand",
-      "campaign": "AI Data Foundation",
+      "campaign": "",
       "useCase": "",
       "audience": "Enterprise",
       "region": "Global",
@@ -86,40 +53,7 @@
         "attendance": "https://hdscorp.lightning.force.com/lightning/r/Report/00OaZ00000Cl4u5UAB/view?queryScope=userFolders"
       },
       "sourceRow": 2,
-      "relatedResources": [
-        {
-          "title": "2026 GigaOm for Unstructured Data Management (UDM) | Analyst Report",
-          "type": "Analyst Report",
-          "campaign": "AI Data Foundation",
-          "useCase": "Data Readiness and Activation for AI",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-unstructured-data-management-2026",
-          "score": 3
-        },
-        {
-          "title": "451 Research Market Hitachi Vantara's iQ Increases AI Storage Momentum, Adds AI Recovery Capabilities | Analyst Report",
-          "type": "Analyst Report",
-          "campaign": "AI Data Foundation",
-          "useCase": "High Performance AI-Ready Infrastructure",
-          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/analyst-content/iq-increases-ai-storage-momentum-adds-ai-recovery-capabilities.pdf",
-          "score": 3
-        },
-        {
-          "title": "2025 GigaOm Radar Report for AI Workloads - GigaOm Link | Analyst Report",
-          "type": "Analyst Report",
-          "campaign": "AI Data Foundation",
-          "useCase": "High Performance AI-Ready Infrastructure",
-          "url": "https://portal.gigaom.com/reprint/gigaom-radar-for-high-performance-storage-optimized-for-ai-workloads-hitachi-vantara",
-          "score": 3
-        },
-        {
-          "title": "Hitachi Enables Real Time Analytics and Data Lake Platform for Manufacturing | Customer Story",
-          "type": "Customer Story",
-          "campaign": "AI Data Foundation",
-          "useCase": "Data Readiness and Activation for AI",
-          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/customer-story/hitachi-enables-real-time-analytics-data-lake-platform-manufacturing.pdf",
-          "score": 3
-        }
-      ]
+      "relatedResources": []
     },
     {
       "id": "resilient-by-design-how-hitachi-vantara-vm2020-and-index-engines-deliver-faster-validated-",
@@ -127,7 +61,7 @@
       "date": "2026-06-18",
       "dateDisplay": "Jun 18, 2026",
       "status": "On Demand",
-      "campaign": "Data Modernization & Resilience",
+      "campaign": "",
       "useCase": "",
       "audience": "Enterprise, Midmarket",
       "region": "Global",
@@ -146,48 +80,15 @@
         "attendance": "https://hdscorp.lightning.force.com/lightning/r/Report/00OaZ00000Cs6uLUAR/view?queryScope=userFolders"
       },
       "sourceRow": 3,
-      "relatedResources": [
-        {
-          "title": "Cyber Resilience For Dummies eBook | eBook",
-          "type": "eBook",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/cyber-resilience-for-dummies",
-          "score": 3
-        },
-        {
-          "title": "MIT Tech Review: Adapting to New Threats with Proactive Cyber Risk Management | Analyst Report",
-          "type": "Analyst Report",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/adapting-to-new-threats-with-proactive-risk-management",
-          "score": 3
-        },
-        {
-          "title": "Pearkmarks Results on BHE for Oracle (TBD-2H) | Analyst Report",
-          "type": "Analyst Report",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "Pearkmarks Results on BHE for Oracle (TBD-2H)",
-          "score": 3
-        },
-        {
-          "title": "Data Modernization Dummies Guide | eBook",
-          "type": "eBook",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "Data Modernization Dummies Guide",
-          "score": 3
-        }
-      ]
+      "relatedResources": []
     },
     {
-      "id": "data-sovereignty-and-ai-rethinking-object-storage-in-financial-services-webinar",
-      "title": "Data, Sovereignty and AI: Rethinking Object Storage in Financial Services | Webinar",
+      "id": "data-sovereignty-and-ai-rethinking-object-storage-in-financial-services",
+      "title": "Data, Sovereignty and AI: Rethinking Object Storage in Financial Services",
       "date": "2026-07-13",
       "dateDisplay": "Jul 13, 2026",
       "status": "On Demand",
-      "campaign": "AI Data Foundation",
+      "campaign": "",
       "useCase": "",
       "audience": "Enterprise",
       "region": "AMER",
@@ -206,40 +107,7 @@
         "attendance": "https://hdscorp.lightning.force.com/lightning/r/sObject/00OaZ00000D0BTpUAN/view?queryScope=userFolders"
       },
       "sourceRow": 4,
-      "relatedResources": [
-        {
-          "title": "2026 GigaOm for Unstructured Data Management (UDM) | Analyst Report",
-          "type": "Analyst Report",
-          "campaign": "AI Data Foundation",
-          "useCase": "Data Readiness and Activation for AI",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-unstructured-data-management-2026",
-          "score": 3
-        },
-        {
-          "title": "451 Research Market Hitachi Vantara's iQ Increases AI Storage Momentum, Adds AI Recovery Capabilities | Analyst Report",
-          "type": "Analyst Report",
-          "campaign": "AI Data Foundation",
-          "useCase": "High Performance AI-Ready Infrastructure",
-          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/analyst-content/iq-increases-ai-storage-momentum-adds-ai-recovery-capabilities.pdf",
-          "score": 3
-        },
-        {
-          "title": "2025 GigaOm Radar Report for AI Workloads - GigaOm Link | Analyst Report",
-          "type": "Analyst Report",
-          "campaign": "AI Data Foundation",
-          "useCase": "High Performance AI-Ready Infrastructure",
-          "url": "https://portal.gigaom.com/reprint/gigaom-radar-for-high-performance-storage-optimized-for-ai-workloads-hitachi-vantara",
-          "score": 3
-        },
-        {
-          "title": "Hitachi Enables Real Time Analytics and Data Lake Platform for Manufacturing | Customer Story",
-          "type": "Customer Story",
-          "campaign": "AI Data Foundation",
-          "useCase": "Data Readiness and Activation for AI",
-          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/customer-story/hitachi-enables-real-time-analytics-data-lake-platform-manufacturing.pdf",
-          "score": 3
-        }
-      ]
+      "relatedResources": []
     },
     {
       "id": "omdia-what-modern-data-infrastructure-looks-like-in-the-ai-era-webinar",
@@ -247,7 +115,7 @@
       "date": "2026-09-24",
       "dateDisplay": "Sep 24, 2026",
       "status": "On Demand",
-      "campaign": "Data Modernization & Resilience",
+      "campaign": "",
       "useCase": "",
       "audience": "Enterprise, Midmarket",
       "region": "Global",
@@ -266,40 +134,7 @@
         "attendance": "https://hdscorp.lightning.force.com/lightning/r/sObject/00OaZ00000DLYiLUAX/view?queryScope=userFolders"
       },
       "sourceRow": 5,
-      "relatedResources": [
-        {
-          "title": "Cyber Resilience For Dummies eBook | eBook",
-          "type": "eBook",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/cyber-resilience-for-dummies",
-          "score": 3
-        },
-        {
-          "title": "MIT Tech Review: Adapting to New Threats with Proactive Cyber Risk Management | Analyst Report",
-          "type": "Analyst Report",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/adapting-to-new-threats-with-proactive-risk-management",
-          "score": 3
-        },
-        {
-          "title": "Pearkmarks Results on BHE for Oracle (TBD-2H) | Analyst Report",
-          "type": "Analyst Report",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "Pearkmarks Results on BHE for Oracle (TBD-2H)",
-          "score": 3
-        },
-        {
-          "title": "Data Modernization Dummies Guide | eBook",
-          "type": "eBook",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "Data Modernization Dummies Guide",
-          "score": 3
-        }
-      ]
+      "relatedResources": []
     },
     {
       "id": "cyber-resilience-trusted-data-foundation-for-ai",
@@ -307,7 +142,7 @@
       "date": "2026-10-21",
       "dateDisplay": "Oct 21, 2026",
       "status": "Planned",
-      "campaign": "Data Modernization & Resilience",
+      "campaign": "",
       "useCase": "",
       "audience": "Enterprise",
       "region": "AMER",
@@ -326,40 +161,7 @@
         "attendance": null
       },
       "sourceRow": 6,
-      "relatedResources": [
-        {
-          "title": "Cyber Resilience For Dummies eBook | eBook",
-          "type": "eBook",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/cyber-resilience-for-dummies",
-          "score": 3
-        },
-        {
-          "title": "MIT Tech Review: Adapting to New Threats with Proactive Cyber Risk Management | Analyst Report",
-          "type": "Analyst Report",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/adapting-to-new-threats-with-proactive-risk-management",
-          "score": 3
-        },
-        {
-          "title": "Pearkmarks Results on BHE for Oracle (TBD-2H) | Analyst Report",
-          "type": "Analyst Report",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "Pearkmarks Results on BHE for Oracle (TBD-2H)",
-          "score": 3
-        },
-        {
-          "title": "Data Modernization Dummies Guide | eBook",
-          "type": "eBook",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "Data Modernization Dummies Guide",
-          "score": 3
-        }
-      ]
+      "relatedResources": []
     },
     {
       "id": "cyber-security-month-webinar-with-index-engines",
@@ -367,7 +169,7 @@
       "date": "2026-10-29",
       "dateDisplay": "Oct 29, 2026",
       "status": "Planned",
-      "campaign": "AI Data Foundation",
+      "campaign": "",
       "useCase": "",
       "audience": "Enterprise, Midmarket",
       "region": "Global",
@@ -386,40 +188,7 @@
         "attendance": null
       },
       "sourceRow": 7,
-      "relatedResources": [
-        {
-          "title": "2026 GigaOm for Unstructured Data Management (UDM) | Analyst Report",
-          "type": "Analyst Report",
-          "campaign": "AI Data Foundation",
-          "useCase": "Data Readiness and Activation for AI",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-unstructured-data-management-2026",
-          "score": 3
-        },
-        {
-          "title": "451 Research Market Hitachi Vantara's iQ Increases AI Storage Momentum, Adds AI Recovery Capabilities | Analyst Report",
-          "type": "Analyst Report",
-          "campaign": "AI Data Foundation",
-          "useCase": "High Performance AI-Ready Infrastructure",
-          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/analyst-content/iq-increases-ai-storage-momentum-adds-ai-recovery-capabilities.pdf",
-          "score": 3
-        },
-        {
-          "title": "2025 GigaOm Radar Report for AI Workloads - GigaOm Link | Analyst Report",
-          "type": "Analyst Report",
-          "campaign": "AI Data Foundation",
-          "useCase": "High Performance AI-Ready Infrastructure",
-          "url": "https://portal.gigaom.com/reprint/gigaom-radar-for-high-performance-storage-optimized-for-ai-workloads-hitachi-vantara",
-          "score": 3
-        },
-        {
-          "title": "Hitachi Enables Real Time Analytics and Data Lake Platform for Manufacturing | Customer Story",
-          "type": "Customer Story",
-          "campaign": "AI Data Foundation",
-          "useCase": "Data Readiness and Activation for AI",
-          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/customer-story/hitachi-enables-real-time-analytics-data-lake-platform-manufacturing.pdf",
-          "score": 3
-        }
-      ]
+      "relatedResources": []
     },
     {
       "id": "2026-gigaom-rader-for-high-performance-storage-optimized-for-ai-workloads",
@@ -427,7 +196,7 @@
       "date": "2026-12-03",
       "dateDisplay": "Dec 03, 2026",
       "status": "Planned",
-      "campaign": "AI Data Foundation",
+      "campaign": "",
       "useCase": "",
       "audience": "Enterprise",
       "region": "Global",
@@ -446,40 +215,7 @@
         "attendance": null
       },
       "sourceRow": 8,
-      "relatedResources": [
-        {
-          "title": "2026 GigaOm for Unstructured Data Management (UDM) | Analyst Report",
-          "type": "Analyst Report",
-          "campaign": "AI Data Foundation",
-          "useCase": "Data Readiness and Activation for AI",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-unstructured-data-management-2026",
-          "score": 3
-        },
-        {
-          "title": "451 Research Market Hitachi Vantara's iQ Increases AI Storage Momentum, Adds AI Recovery Capabilities | Analyst Report",
-          "type": "Analyst Report",
-          "campaign": "AI Data Foundation",
-          "useCase": "High Performance AI-Ready Infrastructure",
-          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/analyst-content/iq-increases-ai-storage-momentum-adds-ai-recovery-capabilities.pdf",
-          "score": 3
-        },
-        {
-          "title": "2025 GigaOm Radar Report for AI Workloads - GigaOm Link | Analyst Report",
-          "type": "Analyst Report",
-          "campaign": "AI Data Foundation",
-          "useCase": "High Performance AI-Ready Infrastructure",
-          "url": "https://portal.gigaom.com/reprint/gigaom-radar-for-high-performance-storage-optimized-for-ai-workloads-hitachi-vantara",
-          "score": 3
-        },
-        {
-          "title": "Hitachi Enables Real Time Analytics and Data Lake Platform for Manufacturing | Customer Story",
-          "type": "Customer Story",
-          "campaign": "AI Data Foundation",
-          "useCase": "Data Readiness and Activation for AI",
-          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/customer-story/hitachi-enables-real-time-analytics-data-lake-platform-manufacturing.pdf",
-          "score": 3
-        }
-      ]
+      "relatedResources": []
     },
     {
       "id": "idc-cyber-resilience-webinar",
@@ -487,7 +223,7 @@
       "date": "2027-01-28",
       "dateDisplay": "Jan 28, 2027",
       "status": "Planned",
-      "campaign": "AI Data Foundation",
+      "campaign": "",
       "useCase": "",
       "audience": "Enterprise, Midmarket",
       "region": "Global",
@@ -506,40 +242,7 @@
         "attendance": null
       },
       "sourceRow": 9,
-      "relatedResources": [
-        {
-          "title": "2026 GigaOm for Unstructured Data Management (UDM) | Analyst Report",
-          "type": "Analyst Report",
-          "campaign": "AI Data Foundation",
-          "useCase": "Data Readiness and Activation for AI",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-unstructured-data-management-2026",
-          "score": 3
-        },
-        {
-          "title": "451 Research Market Hitachi Vantara's iQ Increases AI Storage Momentum, Adds AI Recovery Capabilities | Analyst Report",
-          "type": "Analyst Report",
-          "campaign": "AI Data Foundation",
-          "useCase": "High Performance AI-Ready Infrastructure",
-          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/analyst-content/iq-increases-ai-storage-momentum-adds-ai-recovery-capabilities.pdf",
-          "score": 3
-        },
-        {
-          "title": "2025 GigaOm Radar Report for AI Workloads - GigaOm Link | Analyst Report",
-          "type": "Analyst Report",
-          "campaign": "AI Data Foundation",
-          "useCase": "High Performance AI-Ready Infrastructure",
-          "url": "https://portal.gigaom.com/reprint/gigaom-radar-for-high-performance-storage-optimized-for-ai-workloads-hitachi-vantara",
-          "score": 3
-        },
-        {
-          "title": "Hitachi Enables Real Time Analytics and Data Lake Platform for Manufacturing | Customer Story",
-          "type": "Customer Story",
-          "campaign": "AI Data Foundation",
-          "useCase": "Data Readiness and Activation for AI",
-          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/customer-story/hitachi-enables-real-time-analytics-data-lake-platform-manufacturing.pdf",
-          "score": 3
-        }
-      ]
+      "relatedResources": []
     },
     {
       "id": "tier-1-launch-midrange-refresh",
@@ -547,7 +250,7 @@
       "date": "2027-02-25",
       "dateDisplay": "Feb 25, 2027",
       "status": "Planned",
-      "campaign": "Data Modernization & Resilience",
+      "campaign": "",
       "useCase": "",
       "audience": "Enterprise, Midmarket",
       "region": "Global",
@@ -566,40 +269,7 @@
         "attendance": null
       },
       "sourceRow": 10,
-      "relatedResources": [
-        {
-          "title": "Cyber Resilience For Dummies eBook | eBook",
-          "type": "eBook",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/cyber-resilience-for-dummies",
-          "score": 3
-        },
-        {
-          "title": "MIT Tech Review: Adapting to New Threats with Proactive Cyber Risk Management | Analyst Report",
-          "type": "Analyst Report",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/adapting-to-new-threats-with-proactive-risk-management",
-          "score": 3
-        },
-        {
-          "title": "Pearkmarks Results on BHE for Oracle (TBD-2H) | Analyst Report",
-          "type": "Analyst Report",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "Pearkmarks Results on BHE for Oracle (TBD-2H)",
-          "score": 3
-        },
-        {
-          "title": "Data Modernization Dummies Guide | eBook",
-          "type": "eBook",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "Data Modernization Dummies Guide",
-          "score": 3
-        }
-      ]
+      "relatedResources": []
     },
     {
       "id": "energy-efficiency-sustainability",
@@ -607,7 +277,7 @@
       "date": "2027-04-27",
       "dateDisplay": "Apr 27, 2027",
       "status": "Planned",
-      "campaign": "Data Modernization & Resilience",
+      "campaign": "",
       "useCase": "",
       "audience": "Enterprise, Midmarket",
       "region": "Global",
@@ -626,40 +296,7 @@
         "attendance": null
       },
       "sourceRow": 11,
-      "relatedResources": [
-        {
-          "title": "Cyber Resilience For Dummies eBook | eBook",
-          "type": "eBook",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/cyber-resilience-for-dummies",
-          "score": 3
-        },
-        {
-          "title": "MIT Tech Review: Adapting to New Threats with Proactive Cyber Risk Management | Analyst Report",
-          "type": "Analyst Report",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/adapting-to-new-threats-with-proactive-risk-management",
-          "score": 3
-        },
-        {
-          "title": "Pearkmarks Results on BHE for Oracle (TBD-2H) | Analyst Report",
-          "type": "Analyst Report",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "Pearkmarks Results on BHE for Oracle (TBD-2H)",
-          "score": 3
-        },
-        {
-          "title": "Data Modernization Dummies Guide | eBook",
-          "type": "eBook",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "Data Modernization Dummies Guide",
-          "score": 3
-        }
-      ]
+      "relatedResources": []
     },
     {
       "id": "451-research-vsp-360-aiops-sla-as-code",
@@ -667,7 +304,7 @@
       "date": "2027-04-30",
       "dateDisplay": "Apr 30, 2027",
       "status": "Planned",
-      "campaign": "Data Modernization & Resilience",
+      "campaign": "",
       "useCase": "",
       "audience": "Enterprise, Midmarket",
       "region": "Global",
@@ -686,40 +323,7 @@
         "attendance": null
       },
       "sourceRow": 12,
-      "relatedResources": [
-        {
-          "title": "Cyber Resilience For Dummies eBook | eBook",
-          "type": "eBook",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/cyber-resilience-for-dummies",
-          "score": 3
-        },
-        {
-          "title": "MIT Tech Review: Adapting to New Threats with Proactive Cyber Risk Management | Analyst Report",
-          "type": "Analyst Report",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/adapting-to-new-threats-with-proactive-risk-management",
-          "score": 3
-        },
-        {
-          "title": "Pearkmarks Results on BHE for Oracle (TBD-2H) | Analyst Report",
-          "type": "Analyst Report",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "Pearkmarks Results on BHE for Oracle (TBD-2H)",
-          "score": 3
-        },
-        {
-          "title": "Data Modernization Dummies Guide | eBook",
-          "type": "eBook",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "Data Modernization Dummies Guide",
-          "score": 3
-        }
-      ]
+      "relatedResources": []
     }
   ]
 }
