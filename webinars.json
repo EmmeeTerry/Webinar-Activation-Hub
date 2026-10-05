@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-10-05T12:09:43.332776+00:00",
+  "lastRefreshed": "2026-10-05T14:11:00.554625+00:00",
   "webinars": [
     {
       "id": "the-economics-of-modern-storage-infrastructure-lower-risk-faster-ai-value-better-roi-webin",
@@ -100,10 +100,10 @@
       "whyUse": "",
       "links": {
         "watch": "https://www.brighttalk.com/webcast/12821/672306?",
-        "marketingEmail": null,
-        "salesEmail": null,
-        "paidSocial": null,
-        "social": null,
+        "marketingEmail": "N/A",
+        "salesEmail": "N/A",
+        "paidSocial": "N/A",
+        "social": "N/A",
         "attendance": "https://hdscorp.lightning.force.com/lightning/r/sObject/00OaZ00000D0BTpUAN/view?queryScope=userFolders"
       },
       "sourceRow": 4,
