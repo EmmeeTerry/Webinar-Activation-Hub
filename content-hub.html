@@ -43,6 +43,17 @@ h1{font-family:"Hitachi Sans",Arial,Helvetica,sans-serif;font-weight:400;font-si
 .multi-dropdown-panel.open{display:block}
 .multi-dropdown-panel label{display:flex;align-items:center;gap:7px;padding:5px 4px;font-size:12px;color:var(--gray6);white-space:nowrap;cursor:pointer}
 .multi-dropdown-panel label:hover{background:var(--gray1)}
+.attention-banner{background:#FFFBEB;border:1px solid #FDE68A;border-radius:3px;padding:16px 20px;margin-bottom:20px}
+.attention-header{display:flex;justify-content:space-between;align-items:center;cursor:pointer}
+.attention-title{font-size:13px;font-weight:700;color:#92400E}
+.attention-sub{font-size:11px;color:#92400E;opacity:.8;margin-top:2px}
+.attention-toggle{font-size:11px;font-weight:700;color:#92400E;text-decoration:underline;white-space:nowrap}
+.attention-counts{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.attention-tag{background:#FEF3C7;color:#92400E;border-radius:999px;padding:4px 10px;font-size:11px;font-weight:700}
+.attention-list{margin-top:14px;border-top:1px solid #FDE68A;padding-top:10px}
+.attention-row{display:grid;grid-template-columns:1fr 200px 140px 110px;gap:10px;padding:8px 0;font-size:12px;border-bottom:1px solid #FEF3C7;align-items:center}
+.attention-row:last-child{border-bottom:0}
+.attention-reason{color:#92400E;font-size:10px}
 .status-check{display:flex;align-items:center;gap:5px;border:1px solid var(--gray2);border-radius:999px;padding:5px 9px;font-size:11px;color:var(--gray6);cursor:pointer;background:var(--white)}
 .status-check input{margin:0}
 .toolbar-actions{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
@@ -100,6 +111,7 @@ h1{font-family:"Hitachi Sans",Arial,Helvetica,sans-serif;font-weight:400;font-si
 
 <div class="main">
   <div id="spotlight" class="spotlight"></div>
+  <div id="needsAttention"></div>
   <div class="toolbar">
     <input class="search" id="search" placeholder="Search by title, campaign, use case, owner team, audience, region&hellip;">
     <div class="filter-grid" id="filterGroups"></div>
@@ -436,7 +448,70 @@ function renderSpotlight(){
     block(publishingToday ? 'Published today' : 'Most recently published', recent) +
     block('Coming up next', next);
 }
-function init(){ applyFiltersFromURL(); makeFilterGroups(); render(); renderSpotlight(); }
+let attentionExpanded = false;
+function findAttentionItems(){
+  const now = new Date();
+  const todayStr = now.getFullYear() + '-' + String(now.getMonth()+1).padStart(2,'0') + '-' + String(now.getDate()).padStart(2,'0');
+  const activeStatuses = ['Planned', 'Proposed', 'In Production'];
+  const flagged = [];
+  DATA.forEach(item => {
+    const reasons = [];
+    if(activeStatuses.includes(item.status) && item.publishDate && item.publishDate < todayStr){
+      reasons.push('Publish date has passed, but status is still "' + item.status + '"');
+    }
+    const promoSet = !!(item.promotionPeriod && item.promotionPeriod.trim());
+    const noActivation = !item.primaryActivation || !item.primaryActivation.trim() ||
+      (item.primaryActivationTags || []).includes('No Planned Promotion');
+    if(promoSet && noActivation){
+      reasons.push('Promotion Period is set ("' + item.promotionPeriod + '") but no activation channel is planned');
+    }
+    if(reasons.length) flagged.push({ item, reasons });
+  });
+  return flagged;
+}
+function toggleAttention(){
+  attentionExpanded = !attentionExpanded;
+  renderNeedsAttention();
+}
+function renderNeedsAttention(){
+  const flagged = findAttentionItems();
+  const el = document.getElementById('needsAttention');
+  if(!flagged.length){
+    el.innerHTML = '';
+    return;
+  }
+  const byTeam = {};
+  flagged.forEach(f => {
+    const team = f.item.ownerTeam || 'Unassigned';
+    byTeam[team] = (byTeam[team] || 0) + 1;
+  });
+  const tags = Object.entries(byTeam).sort((a,b) => b[1]-a[1])
+    .map(([team, n]) => `<span class="attention-tag">${esc(team)}: ${n}</span>`).join('');
+
+  let list = '';
+  if(attentionExpanded){
+    const rows = flagged.map(f => `<div class="attention-row">
+        <div><strong>${esc(f.item.title)}</strong><div class="attention-reason">${f.reasons.map(esc).join(' &middot; ')}</div></div>
+        <div>${esc(f.item.ownerTeam || '\u2014')}</div>
+        <div>${esc(f.item.status || '\u2014')}</div>
+        <div>${esc(f.item.publishDateDisplay || '')}</div>
+      </div>`).join('');
+    list = `<div class="attention-list">${rows}</div>`;
+  }
+
+  el.innerHTML = `<div class="attention-banner">
+    <div class="attention-header" onclick="toggleAttention()">
+      <div>
+        <div class="attention-title">\u26A0 Needs Attention &mdash; ${flagged.length} item${flagged.length===1?'':'s'}</div>
+        <div class="attention-sub">Stale status (publish date passed) or promotion planned with no activation channel set</div>
+      </div>
+      <div class="attention-toggle">${attentionExpanded ? 'Hide details' : 'Show details'}</div>
+    </div>
+    <div class="attention-counts">${tags}</div>
+    ${list}
+  </div>`;
+}
+function init(){ applyFiltersFromURL(); makeFilterGroups(); render(); renderSpotlight(); renderNeedsAttention(); }
 loadData();
 </script>
 </body>
