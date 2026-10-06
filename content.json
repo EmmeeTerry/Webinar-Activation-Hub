@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-10-06T20:40:17.150737+00:00",
+  "lastRefreshed": "2026-10-06T22:38:22.050566+00:00",
   "items": [
     {
       "id": "10-reasons-to-buy-build-or-borrow-ai-implementation-ebook-1",
@@ -6655,6 +6655,32 @@
       "promotionPeriod": "",
       "ownerIndividual": "Sakina Peshawarwala",
       "publishedByVendor": "",
+      "notes": ""
+    },
+    {
+      "id": "educause-webinar-resilience-in-the-ai-era-257",
+      "title": "EDUCAUSE Webinar: Resilience in the AI Era",
+      "url": null,
+      "type": "Webinar",
+      "campaign": "AI Data Foundation",
+      "useCase": "Data Readiness and Activation for AI",
+      "funnelStage": "BOFU",
+      "ownerTeam": "Regional Marketing",
+      "audience": "Enterprise",
+      "status": "Proposed",
+      "region": "AMER",
+      "publishDate": "2026-11-12",
+      "publishDateDisplay": "Nov 12, 2026",
+      "partnerUse": false,
+      "paidMediaDate": null,
+      "paidMediaDateDisplay": "",
+      "primaryActivation": "",
+      "marketingEmail": null,
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "",
+      "ownerIndividual": "Karina Andrade",
+      "publishedByVendor": "EDUCAUSE",
       "notes": ""
     }
   ]
