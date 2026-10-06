@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-10-06T18:07:21.972482+00:00",
+  "lastRefreshed": "2026-10-06T20:06:27.423358+00:00",
   "webinars": [
     {
       "id": "the-economics-of-modern-storage-infrastructure-lower-risk-faster-ai-value-better-roi-webin",
@@ -137,6 +137,33 @@
       "relatedResources": []
     },
     {
+      "id": "share-your-mainframe-isn-t-designed-to-go-down-neither-is-our-storage",
+      "title": "Share- Your Mainframe isn't Designed to Go Down. Neither is Our Storage",
+      "date": "2026-10-06",
+      "dateDisplay": "Oct 06, 2026",
+      "status": "Planned",
+      "campaign": "",
+      "useCase": "",
+      "audience": "",
+      "region": "AMER",
+      "owner": "Sakina Peshawarwala",
+      "quarter": "Q3",
+      "partnerReady": false,
+      "activationStatus": "",
+      "readiness": "Planning",
+      "whyUse": "",
+      "links": {
+        "watch": null,
+        "marketingEmail": null,
+        "salesEmail": null,
+        "paidSocial": null,
+        "social": null,
+        "attendance": null
+      },
+      "sourceRow": 6,
+      "relatedResources": []
+    },
+    {
       "id": "cyber-resilience-trusted-data-foundation-for-ai",
       "title": "Cyber Resilience - Trusted Data Foundation for AI",
       "date": "2026-10-21",
@@ -160,7 +187,34 @@
         "social": null,
         "attendance": null
       },
-      "sourceRow": 6,
+      "sourceRow": 7,
+      "relatedResources": []
+    },
+    {
+      "id": "starcio-with-isaac-ai-infrastructure-debt-capacity-resiliency-and-modernization-strategies",
+      "title": "StarCIO with Isaac-AI Infrastructure Debt: Capacity, Resiliency, and Modernization Strategies",
+      "date": "2026-10-23",
+      "dateDisplay": "Oct 23, 2026",
+      "status": "Planned",
+      "campaign": "",
+      "useCase": "",
+      "audience": "",
+      "region": "AMER",
+      "owner": "Sakina Peshawarwala",
+      "quarter": "Q3",
+      "partnerReady": false,
+      "activationStatus": "",
+      "readiness": "Planning",
+      "whyUse": "",
+      "links": {
+        "watch": null,
+        "marketingEmail": null,
+        "salesEmail": null,
+        "paidSocial": null,
+        "social": null,
+        "attendance": null
+      },
+      "sourceRow": 8,
       "relatedResources": []
     },
     {
@@ -187,7 +241,61 @@
         "social": null,
         "attendance": null
       },
-      "sourceRow": 7,
+      "sourceRow": 9,
+      "relatedResources": []
+    },
+    {
+      "id": "cio-with-joe-morris-the-cio-balancing-act-business-continuity-and-ai-ambition",
+      "title": "CIO with Joe Morris- The CIO Balancing Act: Business Continuity and AI Ambition",
+      "date": "2026-11-11",
+      "dateDisplay": "Nov 11, 2026",
+      "status": "Planned",
+      "campaign": "",
+      "useCase": "",
+      "audience": "",
+      "region": "AMER",
+      "owner": "Sakina Peshawarwala",
+      "quarter": "Q3",
+      "partnerReady": false,
+      "activationStatus": "",
+      "readiness": "Planning",
+      "whyUse": "",
+      "links": {
+        "watch": null,
+        "marketingEmail": null,
+        "salesEmail": null,
+        "paidSocial": null,
+        "social": null,
+        "attendance": null
+      },
+      "sourceRow": 10,
+      "relatedResources": []
+    },
+    {
+      "id": "influencer-fireside-chat",
+      "title": "Influencer Fireside chat",
+      "date": "2026-11-18",
+      "dateDisplay": "Nov 18, 2026",
+      "status": "Planned",
+      "campaign": "",
+      "useCase": "",
+      "audience": "",
+      "region": "",
+      "owner": "Sakina Peshawarwala",
+      "quarter": "Q3",
+      "partnerReady": false,
+      "activationStatus": "",
+      "readiness": "Planning",
+      "whyUse": "",
+      "links": {
+        "watch": null,
+        "marketingEmail": null,
+        "salesEmail": null,
+        "paidSocial": null,
+        "social": null,
+        "attendance": null
+      },
+      "sourceRow": 11,
       "relatedResources": []
     },
     {
@@ -214,7 +322,7 @@
         "social": null,
         "attendance": null
       },
-      "sourceRow": 8,
+      "sourceRow": 12,
       "relatedResources": []
     },
     {
@@ -241,7 +349,7 @@
         "social": null,
         "attendance": null
       },
-      "sourceRow": 9,
+      "sourceRow": 13,
       "relatedResources": []
     },
     {
@@ -268,7 +376,7 @@
         "social": null,
         "attendance": null
       },
-      "sourceRow": 10,
+      "sourceRow": 14,
       "relatedResources": []
     },
     {
@@ -295,7 +403,7 @@
         "social": null,
         "attendance": null
       },
-      "sourceRow": 11,
+      "sourceRow": 15,
       "relatedResources": []
     },
     {
@@ -322,7 +430,7 @@
         "social": null,
         "attendance": null
       },
-      "sourceRow": 12,
+      "sourceRow": 16,
       "relatedResources": []
     },
     {
@@ -349,7 +457,7 @@
         "social": null,
         "attendance": null
       },
-      "sourceRow": 13,
+      "sourceRow": 17,
       "relatedResources": []
     }
   ]
