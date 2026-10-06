@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-10-06T08:40:05.376192+00:00",
+  "lastRefreshed": "2026-10-06T10:39:38.018027+00:00",
   "items": [
     {
       "id": "10-reasons-to-buy-build-or-borrow-ai-implementation-ebook-1",
@@ -203,7 +203,7 @@
       "primaryActivation": "Content Syndication, Outbound Email, Paid Social, Organic Social",
       "marketingEmail": null,
       "salesEmail": null,
-      "usedInCampaign": "Yes",
+      "usedInCampaign": "No",
       "promotionPeriod": "2H",
       "ownerIndividual": "Mark Geel",
       "publishedByVendor": "GigaOm",
@@ -229,7 +229,7 @@
       "primaryActivation": "Content Syndication, Outbound Email, Paid Social, Organic Social",
       "marketingEmail": null,
       "salesEmail": null,
-      "usedInCampaign": "Yes",
+      "usedInCampaign": "No",
       "promotionPeriod": "2H",
       "ownerIndividual": "Mark Geel",
       "publishedByVendor": "GigaOm",
@@ -281,7 +281,7 @@
       "primaryActivation": "Webinar Syndication, Outbound Email, Paid Social, Organic Social, Campaign Landing Page",
       "marketingEmail": null,
       "salesEmail": null,
-      "usedInCampaign": "Yes",
+      "usedInCampaign": "No",
       "promotionPeriod": "2H",
       "ownerIndividual": "Richard Jew",
       "publishedByVendor": "451 Research",
@@ -307,7 +307,7 @@
       "primaryActivation": "Content Syndication, Outbound Email, Paid Social",
       "marketingEmail": null,
       "salesEmail": null,
-      "usedInCampaign": "Yes",
+      "usedInCampaign": "No",
       "promotionPeriod": "2H",
       "ownerIndividual": "Richard Jew",
       "publishedByVendor": "451 Research",
@@ -594,7 +594,7 @@
       "marketingEmail": null,
       "salesEmail": null,
       "usedInCampaign": "No",
-      "promotionPeriod": "",
+      "promotionPeriod": "2H",
       "ownerIndividual": "Sulochna Khokhrai",
       "publishedByVendor": "",
       "notes": "\u26a0\ufe0f POTENTIAL DUPLICATE \u2014 Review with \"Ai Data Foundation Roadmap Guide\" (Use Case: Data Readiness and Activation for AI). @stephanie.thompson@hitachivantara.com @sulochna.khokhrai@hitachivantara.com \u2014 Flagged by Smart Assist 10/1/2026."
