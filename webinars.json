@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-10-06T14:10:01.340206+00:00",
+  "lastRefreshed": "2026-10-06T16:09:08.901578+00:00",
   "webinars": [
     {
       "id": "the-economics-of-modern-storage-infrastructure-lower-risk-faster-ai-value-better-roi-webin",
@@ -13,7 +13,7 @@
       "region": "AMER",
       "owner": "Karina Andrade",
       "quarter": "Q1",
-      "partnerReady": false,
+      "partnerReady": true,
       "activationStatus": "Activation Ready",
       "readiness": "Activation ready",
       "whyUse": "",
@@ -164,8 +164,8 @@
       "relatedResources": []
     },
     {
-      "id": "cyber-security-month-webinar-with-index-engines",
-      "title": "Cyber Security Month Webinar with Index Engines",
+      "id": "data-resilience-attack-ready-ai-ready",
+      "title": "Data Resilience: Attack-Ready. AI-Ready.",
       "date": "2026-10-29",
       "dateDisplay": "Oct 29, 2026",
       "status": "Planned",
@@ -175,7 +175,7 @@
       "region": "Global",
       "owner": "Macey Jones, Stephanie Thompson",
       "quarter": "Q3",
-      "partnerReady": false,
+      "partnerReady": true,
       "activationStatus": "",
       "readiness": "Planning",
       "whyUse": "",
@@ -272,6 +272,33 @@
       "relatedResources": []
     },
     {
+      "id": "webinar-title-tbd-gigaom-2027-radar",
+      "title": "Webinar \u2013 Title TBD (GigaOm 2027 Radar)",
+      "date": "2027-04-01",
+      "dateDisplay": "Apr 01, 2027",
+      "status": "On Demand",
+      "campaign": "",
+      "useCase": "",
+      "audience": "Enterprise",
+      "region": "Global",
+      "owner": "Mark Geel",
+      "quarter": "Q1",
+      "partnerReady": true,
+      "activationStatus": "Not Required",
+      "readiness": "Planning",
+      "whyUse": "",
+      "links": {
+        "watch": "https://www.brighttalk.com/webcast/12821/665302?bt_tok={{lead_id}}&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=665302",
+        "marketingEmail": null,
+        "salesEmail": null,
+        "paidSocial": null,
+        "social": null,
+        "attendance": null
+      },
+      "sourceRow": 11,
+      "relatedResources": []
+    },
+    {
       "id": "energy-efficiency-sustainability",
       "title": "Energy Efficiency & Sustainability",
       "date": "2027-04-27",
@@ -295,7 +322,7 @@
         "social": null,
         "attendance": null
       },
-      "sourceRow": 11,
+      "sourceRow": 12,
       "relatedResources": []
     },
     {
@@ -322,7 +349,7 @@
         "social": null,
         "attendance": null
       },
-      "sourceRow": 12,
+      "sourceRow": 13,
       "relatedResources": []
     }
   ]
