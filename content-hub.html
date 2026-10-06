@@ -105,6 +105,7 @@ h1{font-family:"Hitachi Sans",Arial,Helvetica,sans-serif;font-weight:400;font-si
     <div style="text-align:right">
       <div class="snapshot" id="snapshotLabel">Last refreshed &middot; loading&hellip;</div>
       <a class="btn" style="margin-top:10px" href="https://hitachivantara.sharepoint.com/:u:/r/sites/To-PartnerCommunicationsFY23/SitePages/Content-Library.aspx?d=wa1ad7c7656ce495da240fdebbb45e4a3&csf=1&web=2&share=IQB2fK2hzlZdSaJA_eu7ReSjASm3oLaRXIZfOD92UrUfz-M&e=HZU5ul" target="_blank">Search All Content &#8599;</a>
+      <a class="btn primary" style="margin-top:10px" href="./add-content.html">+ Submit New Content</a>
     </div>
   </div>
 </header>
@@ -465,6 +466,9 @@ function findAttentionItems(){
     if(promoSet && noActivation){
       reasons.push('Promotion Period is set ("' + item.promotionPeriod + '") but no activation channel is planned');
     }
+    if(item.status !== 'Live' && promoSet && noActivation){
+      reasons.push('In development for "' + item.promotionPeriod + '" with no promotion plan in place \u2014 should not proceed without one');
+    }
     if(reasons.length) flagged.push({ item, reasons });
   });
   return flagged;
@@ -511,7 +515,10 @@ function renderNeedsAttention(){
     ${list}
   </div>`;
 }
-function init(){ applyFiltersFromURL(); makeFilterGroups(); render(); renderSpotlight(); renderNeedsAttention(); }
+function init(){ applyFiltersFromURL(); makeFilterGroups(); render(); renderSpotlight(); }
+// renderNeedsAttention() is intentionally not called here -- the banner was removed from
+// the public-facing page since external stakeholders see this page. The detection logic
+// is left in place in case an internal-only version of this page gets built later.
 loadData();
 </script>
 </body>
