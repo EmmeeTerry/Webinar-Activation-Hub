@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-10-07T06:45:34.375796+00:00",
+  "lastRefreshed": "2026-10-07T08:41:35.234926+00:00",
   "items": [
     {
       "id": "10-reasons-to-buy-build-or-borrow-ai-implementation-ebook-1",
@@ -1963,8 +1963,8 @@
       "audience": "Enterprise, Midmarket",
       "status": "In Production",
       "region": "Global",
-      "publishDate": "2026-04-01",
-      "publishDateDisplay": "Apr 01, 2026",
+      "publishDate": "2026-10-30",
+      "publishDateDisplay": "Oct 30, 2026",
       "partnerUse": true,
       "paidMediaDate": null,
       "paidMediaDateDisplay": "",
@@ -2030,9 +2030,9 @@
       "notes": ""
     },
     {
-      "id": "everflex-managed-focus-on-multi-vendor-management-solution-profile-79",
-      "title": "EverFlex Managed focus on Multi-vendor Management | Solution Profile",
-      "url": null,
+      "id": "hitachi-everflex-multivendor-infrastructure-management-solution-profile-79",
+      "title": "Hitachi EverFlex Multivendor Infrastructure Management | Solution Profile",
+      "url": "https://www.hitachivantara.com/en-us/pdfviewer/solution-profile/multivendor-model-solution-profile",
       "type": "Solution Profile",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Hybrid Cloud Platform & Operations",
@@ -2041,8 +2041,8 @@
       "audience": "Enterprise, Midmarket",
       "status": "In Production",
       "region": "Global",
-      "publishDate": "2026-04-01",
-      "publishDateDisplay": "Apr 01, 2026",
+      "publishDate": "2026-05-01",
+      "publishDateDisplay": "May 01, 2026",
       "partnerUse": true,
       "paidMediaDate": null,
       "paidMediaDateDisplay": "",
@@ -3072,7 +3072,7 @@
     {
       "id": "hitachi-vantara-flexible-consumption-and-financing-solutions-solution-profile-119",
       "title": "Hitachi Vantara Flexible Consumption and Financing Solutions | Solution Profile",
-      "url": null,
+      "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/solution-profile/flexible-consumption-financial-solutions.pdf",
       "type": "Solution Profile",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Hybrid Cloud Platform & Operations",
@@ -3081,8 +3081,8 @@
       "audience": "Enterprise, Midmarket",
       "status": "In Production",
       "region": "Global",
-      "publishDate": "2026-04-01",
-      "publishDateDisplay": "Apr 01, 2026",
+      "publishDate": "2026-04-29",
+      "publishDateDisplay": "Apr 29, 2026",
       "partnerUse": true,
       "paidMediaDate": null,
       "paidMediaDateDisplay": "",
