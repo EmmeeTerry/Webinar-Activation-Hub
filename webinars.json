@@ -1,9 +1,9 @@
 {
-  "lastRefreshed": "2026-10-07T16:10:40.686020+00:00",
+  "lastRefreshed": "2026-10-07T18:09:09.355931+00:00",
   "webinars": [
     {
-      "id": "the-economics-of-modern-storage-infrastructure-lower-risk-faster-ai-value-better-roi-webin",
-      "title": "The Economics of Modern Storage Infrastructure: Lower Risk, Faster AI Value, Better ROI | Webinar",
+      "id": "the-economics-of-modern-storage-infrastructure-lower-risk-faster-ai-value-better-roi",
+      "title": "The Economics of Modern Storage Infrastructure: Lower Risk, Faster AI Value, Better ROI",
       "date": "2026-05-01",
       "dateDisplay": "May 01, 2026",
       "status": "On Demand",
@@ -29,8 +29,8 @@
       "relatedResources": []
     },
     {
-      "id": "is-object-storage-the-new-ai-foundation-webinar",
-      "title": "Is Object Storage the New AI Foundation? | Webinar",
+      "id": "is-object-storage-the-new-ai-foundation",
+      "title": "Is Object Storage the New AI Foundation?",
       "date": "2026-06-04",
       "dateDisplay": "Jun 04, 2026",
       "status": "On Demand",
@@ -57,7 +57,7 @@
     },
     {
       "id": "resilient-by-design-how-hitachi-vantara-vm2020-and-index-engines-deliver-faster-validated-",
-      "title": "Resilient by Design: How Hitachi Vantara, VM2020, and Index Engines Deliver Faster, Validated Ransomware Recovery | Webinar",
+      "title": "Resilient by Design: How Hitachi Vantara, VM2020, and Index Engines Deliver Faster, Validated Ransomware Recovery",
       "date": "2026-06-18",
       "dateDisplay": "Jun 18, 2026",
       "status": "On Demand",
@@ -110,8 +110,8 @@
       "relatedResources": []
     },
     {
-      "id": "omdia-what-modern-data-infrastructure-looks-like-in-the-ai-era-webinar",
-      "title": "Omdia: What Modern Data Infrastructure Looks Like in the AI Era | Webinar",
+      "id": "omdia-what-modern-data-infrastructure-looks-like-in-the-ai-era",
+      "title": "Omdia: What Modern Data Infrastructure Looks Like in the AI Era",
       "date": "2026-09-24",
       "dateDisplay": "Sep 24, 2026",
       "status": "On Demand",
