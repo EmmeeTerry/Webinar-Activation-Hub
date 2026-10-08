@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-10-08T12:47:57.843155+00:00",
+  "lastRefreshed": "2026-10-08T14:43:16.772672+00:00",
   "items": [
     {
       "id": "10-reasons-to-buy-build-or-borrow-ai-implementation-ebook-1",
@@ -1745,15 +1745,15 @@
     },
     {
       "id": "ebook-title-trust-continuity-and-competitive-advantage-in-the-ai-era-ebook-68",
-      "title": "eBook Title: Trust, Continuity, and Competitive Advantage in the AI Era\u200b\n\u200b | eBook",
-      "url": null,
+      "title": "eBook Title: Trust, Continuity, and Competitive Advantage in the AI Era\u200b\u200b | eBook",
+      "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/trust-continuity-competitive-advantage-ai-era.pdf",
       "type": "eBook",
       "campaign": "AI Data Foundation",
       "useCase": "High Performance AI-Ready Infrastructure",
       "funnelStage": "TOFU",
       "ownerTeam": "Brand",
       "audience": "Enterprise",
-      "status": "In Production",
+      "status": "Live",
       "region": "Global",
       "publishDate": "2026-10-13",
       "publishDateDisplay": "Oct 13, 2026",
@@ -3970,13 +3970,13 @@
       "partnerUse": false,
       "paidMediaDate": null,
       "paidMediaDateDisplay": "",
-      "primaryActivation": "Outbound Email",
+      "primaryActivation": "Outbound Email, Sales Email",
       "marketingEmail": null,
-      "salesEmail": null,
+      "salesEmail": "https://hitachivantara.sharepoint.com/:w:/s/GlobalCampaignsAssets505/IQBKrnqZGehWQa7d8acovOsNAY8w3gZMq7QWjjLjeM1YV8I?e=EpDZSO",
       "usedInCampaign": "Yes",
       "promotionPeriod": "1H",
       "ownerIndividual": "Macey Jones, Nick Howell",
-      "publishedByVendor": "Hitachi Vantara",
+      "publishedByVendor": "MIT Technology Review",
       "notes": ""
     },
     {
