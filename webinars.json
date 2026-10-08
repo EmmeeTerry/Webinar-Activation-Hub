@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-10-08T08:09:01.392058+00:00",
+  "lastRefreshed": "2026-10-08T10:09:25.089599+00:00",
   "webinars": [
     {
       "id": "the-economics-of-modern-storage-infrastructure-lower-risk-faster-ai-value-better-roi",
@@ -164,33 +164,6 @@
       "relatedResources": []
     },
     {
-      "id": "cyber-resilience-trusted-data-foundation-for-ai",
-      "title": "Cyber Resilience - Trusted Data Foundation for AI",
-      "date": "2026-10-21",
-      "dateDisplay": "Oct 21, 2026",
-      "status": "Planned",
-      "campaign": "",
-      "useCase": "",
-      "audience": "Enterprise",
-      "region": "AMER",
-      "owner": "Macey Jones, Victoria Norvall",
-      "quarter": "Q3",
-      "partnerReady": true,
-      "activationStatus": "Not Started",
-      "readiness": "Planning",
-      "whyUse": "",
-      "links": {
-        "watch": null,
-        "marketingEmail": null,
-        "salesEmail": null,
-        "paidSocial": null,
-        "social": null,
-        "attendance": null
-      },
-      "sourceRow": 7,
-      "relatedResources": []
-    },
-    {
       "id": "starcio-with-isaac-ai-infrastructure-debt-capacity-resiliency-and-modernization-strategies",
       "title": "StarCIO with Isaac-AI Infrastructure Debt: Capacity, Resiliency, and Modernization Strategies",
       "date": "2026-10-23",
@@ -214,7 +187,7 @@
         "social": null,
         "attendance": null
       },
-      "sourceRow": 8,
+      "sourceRow": 7,
       "relatedResources": []
     },
     {
@@ -241,7 +214,7 @@
         "social": "Coming Soon",
         "attendance": null
       },
-      "sourceRow": 9,
+      "sourceRow": 8,
       "relatedResources": []
     },
     {
@@ -268,7 +241,7 @@
         "social": null,
         "attendance": null
       },
-      "sourceRow": 10,
+      "sourceRow": 9,
       "relatedResources": []
     },
     {
@@ -295,7 +268,7 @@
         "social": null,
         "attendance": null
       },
-      "sourceRow": 11,
+      "sourceRow": 10,
       "relatedResources": []
     },
     {
@@ -322,7 +295,7 @@
         "social": null,
         "attendance": null
       },
-      "sourceRow": 12,
+      "sourceRow": 11,
       "relatedResources": []
     },
     {
@@ -349,7 +322,7 @@
         "social": "Coming Soon",
         "attendance": null
       },
-      "sourceRow": 13,
+      "sourceRow": 12,
       "relatedResources": []
     },
     {
@@ -376,7 +349,7 @@
         "social": "Coming Soon",
         "attendance": null
       },
-      "sourceRow": 14,
+      "sourceRow": 13,
       "relatedResources": []
     },
     {
@@ -403,7 +376,7 @@
         "social": null,
         "attendance": null
       },
-      "sourceRow": 15,
+      "sourceRow": 14,
       "relatedResources": []
     },
     {
@@ -430,7 +403,7 @@
         "social": null,
         "attendance": null
       },
-      "sourceRow": 16,
+      "sourceRow": 15,
       "relatedResources": []
     },
     {
@@ -457,7 +430,7 @@
         "social": null,
         "attendance": null
       },
-      "sourceRow": 17,
+      "sourceRow": 16,
       "relatedResources": []
     },
     {
@@ -484,7 +457,7 @@
         "social": "Coming Soon",
         "attendance": null
       },
-      "sourceRow": 18,
+      "sourceRow": 17,
       "relatedResources": []
     }
   ]
