@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-10-08T18:45:07.486493+00:00",
+  "lastRefreshed": "2026-10-08T20:41:14.335139+00:00",
   "items": [
     {
       "id": "10-reasons-to-buy-build-or-borrow-ai-implementation-ebook-1",
@@ -1708,7 +1708,7 @@
       "partnerUse": false,
       "paidMediaDate": null,
       "paidMediaDateDisplay": "",
-      "primaryActivation": "Nurture Email",
+      "primaryActivation": "Outbound Email",
       "marketingEmail": null,
       "salesEmail": null,
       "usedInCampaign": "Yes",
@@ -2628,8 +2628,8 @@
       "notes": "\u00a0"
     },
     {
-      "id": "hitachi-everflex-success-stories-ebook-ebook-102",
-      "title": "Hitachi EverFlex Success Stories eBook | eBook",
+      "id": "hitachi-everflex-success-stories-how-six-organizations-modernized-without-owning-the-risk--102",
+      "title": "Hitachi EverFlex Success Stories - How Six Organizations Modernized Without Owning the Risk | eBook",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/hitachi-everflex-success-stories-ebook.pdf",
       "type": "eBook",
       "campaign": "Data Modernization & Resilience",
@@ -2644,10 +2644,10 @@
       "partnerUse": true,
       "paidMediaDate": null,
       "paidMediaDateDisplay": "",
-      "primaryActivation": "Sales Enablement",
+      "primaryActivation": "Outbound Email, Sales Enablement",
       "marketingEmail": null,
-      "salesEmail": null,
-      "usedInCampaign": "No",
+      "salesEmail": "https://hitachivantara.sharepoint.com/:w:/s/GlobalCampaignsAssets505/IQDZoF0Gs6oiRIyv0NuMLx5eAU7RnXhvABDfWrfCbTJ5LtI?e=jJ83nv",
+      "usedInCampaign": "Yes",
       "promotionPeriod": "2H",
       "ownerIndividual": "Victor Lin",
       "publishedByVendor": "Hitachi Vantara",
