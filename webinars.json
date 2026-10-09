@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-10-09T12:09:24.423799+00:00",
+  "lastRefreshed": "2026-10-09T14:09:53.615861+00:00",
   "webinars": [
     {
       "id": "the-economics-of-modern-storage-infrastructure-lower-risk-faster-ai-value-better-roi",
@@ -319,10 +319,10 @@
       "whyUse": "Use this for enterprise conversations around data platform architectures & economics.",
       "links": {
         "watch": "https://www.brighttalk.com/webcast/12821/677181",
-        "marketingEmail": null,
-        "salesEmail": null,
-        "paidSocial": null,
-        "social": null,
+        "marketingEmail": "N/A",
+        "salesEmail": "N/A",
+        "paidSocial": "N/A",
+        "social": "N/A",
         "attendance": "https://hdscorp.lightning.force.com/lightning/r/sObject/00OaZ00000DjKXlUAN/view?queryScope=userFolders"
       },
       "sourceRow": 6,
@@ -379,10 +379,10 @@
       "whyUse": "",
       "links": {
         "watch": null,
-        "marketingEmail": null,
-        "salesEmail": null,
-        "paidSocial": null,
-        "social": null,
+        "marketingEmail": "N/A",
+        "salesEmail": "N/A",
+        "paidSocial": "N/A",
+        "social": "N/A",
         "attendance": null
       },
       "sourceRow": 7,
@@ -466,10 +466,10 @@
       "whyUse": "",
       "links": {
         "watch": null,
-        "marketingEmail": null,
-        "salesEmail": null,
-        "paidSocial": null,
-        "social": null,
+        "marketingEmail": "N/A",
+        "salesEmail": "N/A",
+        "paidSocial": "N/A",
+        "social": "N/A",
         "attendance": null
       },
       "sourceRow": 9,
@@ -494,9 +494,9 @@
       "links": {
         "watch": null,
         "marketingEmail": "N/A",
-        "salesEmail": null,
-        "paidSocial": null,
-        "social": null,
+        "salesEmail": "N/A",
+        "paidSocial": "N/A",
+        "social": "N/A",
         "attendance": null
       },
       "sourceRow": 10,
@@ -553,10 +553,10 @@
       "whyUse": "",
       "links": {
         "watch": null,
-        "marketingEmail": null,
-        "salesEmail": null,
-        "paidSocial": null,
-        "social": null,
+        "marketingEmail": "N/A",
+        "salesEmail": "N/A",
+        "paidSocial": "N/A",
+        "social": "N/A",
         "attendance": null
       },
       "sourceRow": 11,
@@ -580,10 +580,10 @@
       "whyUse": "Use this for enterprise conversations around high performance ai-ready infrastructure.",
       "links": {
         "watch": null,
-        "marketingEmail": null,
-        "salesEmail": null,
-        "paidSocial": null,
-        "social": null,
+        "marketingEmail": "Coming Soon",
+        "salesEmail": "N/A",
+        "paidSocial": "Coming Soon",
+        "social": "N/A",
         "attendance": null
       },
       "sourceRow": 12,
@@ -640,10 +640,10 @@
       "whyUse": "Use this for enterprise, midmarket conversations around cyber risk mitigation & recovery.",
       "links": {
         "watch": null,
-        "marketingEmail": null,
-        "salesEmail": null,
-        "paidSocial": null,
-        "social": null,
+        "marketingEmail": "Coming Soon",
+        "salesEmail": "N/A",
+        "paidSocial": "N/A",
+        "social": "N/A",
         "attendance": null
       },
       "sourceRow": 13,
@@ -700,10 +700,10 @@
       "whyUse": "Use this for enterprise, midmarket conversations around data platform architectures & economics.",
       "links": {
         "watch": null,
-        "marketingEmail": null,
-        "salesEmail": null,
-        "paidSocial": null,
-        "social": null,
+        "marketingEmail": "N/A",
+        "salesEmail": "N/A",
+        "paidSocial": "N/A",
+        "social": "N/A",
         "attendance": null
       },
       "sourceRow": 14,
@@ -760,10 +760,10 @@
       "whyUse": "Use this for enterprise conversations around data readiness and activation for ai.",
       "links": {
         "watch": null,
-        "marketingEmail": null,
-        "salesEmail": null,
-        "paidSocial": null,
-        "social": null,
+        "marketingEmail": "N/A",
+        "salesEmail": "N/A",
+        "paidSocial": "N/A",
+        "social": "N/A",
         "attendance": null
       },
       "sourceRow": 15,
@@ -820,10 +820,10 @@
       "whyUse": "Use this for enterprise, midmarket conversations around data platform architectures & economics.",
       "links": {
         "watch": null,
-        "marketingEmail": null,
-        "salesEmail": null,
-        "paidSocial": null,
-        "social": null,
+        "marketingEmail": "N/A",
+        "salesEmail": "N/A",
+        "paidSocial": "N/A",
+        "social": "N/A",
         "attendance": null
       },
       "sourceRow": 16,
@@ -880,10 +880,10 @@
       "whyUse": "Use this for enterprise, midmarket conversations around data platform architectures & economics.",
       "links": {
         "watch": null,
-        "marketingEmail": null,
-        "salesEmail": null,
-        "paidSocial": null,
-        "social": null,
+        "marketingEmail": "Coming Soon",
+        "salesEmail": "N/A",
+        "paidSocial": "N/A",
+        "social": "N/A",
         "attendance": null
       },
       "sourceRow": 17,
