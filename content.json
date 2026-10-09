@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-10-09T16:40:51.378909+00:00",
+  "lastRefreshed": "2026-10-09T18:43:29.006037+00:00",
   "items": [
     {
       "id": "10-reasons-to-buy-build-or-borrow-ai-implementation-ebook-1",
@@ -25,7 +25,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "esteyco-customer-story-video-2",
@@ -51,7 +55,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Angela Romberg, Michelle Salta",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "planned"
+      "notes": "planned",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "2025-gigaom-rader-for-high-perfomance-storage-optimized-for-ai-workloads-analyst-report-3",
@@ -77,7 +85,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Jeff Lundberg",
       "publishedByVendor": "GigaOm",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "Retire, replace, or update content",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; Expired/Update"
     },
     {
       "id": "2026-gigaom-radar-for-unstructured-data-management-udm-analyst-report-4",
@@ -103,7 +115,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Mark Geel",
       "publishedByVendor": "GigaOm",
-      "notes": "H1"
+      "notes": "H1",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "2026-gigaom-rader-for-high-performance-storage-optimized-for-ai-workloads-analyst-report-a-5",
@@ -129,7 +145,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Jeff Lundberg",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "2026-gigaom-rader-for-high-performance-storage-optimized-for-ai-workloads-webinar-6",
@@ -155,7 +175,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Jeff Lundberg, Stephanie Thompson",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "2026-gigaom-rader-for-object-storage-analyst-report-analyst-report-7",
@@ -181,7 +205,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Mark Geel",
       "publishedByVendor": "Gigaom",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "2027-gigaom-for-unstructured-data-management-udm-analyst-report-8",
@@ -207,7 +235,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Mark Geel",
       "publishedByVendor": "GigaOm",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "2027-gigaom-radar-for-object-storage-analyst-report-9",
@@ -233,7 +265,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Mark Geel",
       "publishedByVendor": "GigaOm",
-      "notes": "H2; planned \u2013 contingent on 2027 report purchase (March 2027)"
+      "notes": "H2; planned \u2013 contingent on 2027 report purchase (March 2027)",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "451-research-vsp-360-aiops-sla-as-code-analyst-report-10",
@@ -259,7 +295,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Richard Jew",
       "publishedByVendor": "",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "451-research-vsp-360-aiops-sla-as-code-webinar-11",
@@ -285,7 +325,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Richard Jew",
       "publishedByVendor": "451 Research",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "451-research-vsp-360-aiops-analyst-report-12",
@@ -311,7 +355,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Richard Jew",
       "publishedByVendor": "451 Research",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "451-research-market-hitachi-vantara-s-iq-increases-ai-storage-momentum-adds-ai-recovery-ca-13",
@@ -337,7 +385,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Jeff Lundberg",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "H1"
+      "notes": "H1",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "451-research-boost-resiliency-and-performance-for-modern-data-infrastructures-analyst-repo-14",
@@ -363,7 +415,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Liam Yu",
       "publishedByVendor": "451 Research",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "Create promotion plan",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; No Promo"
     },
     {
       "id": "451-research-modernizing-mission-critical-storage-analyst-report-analyst-report-15",
@@ -389,7 +445,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Richard Jew",
       "publishedByVendor": "451 Research",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "Review content freshness (12+ months)",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; 12+ Months Old"
     },
     {
       "id": "451-research-rising-data-challenges-drive-storage-modernization-analyst-report-16",
@@ -415,7 +475,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Richard Jew",
       "publishedByVendor": "451 Research",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "7-layer-defense-one-trusted-partner-solution-profile-17",
@@ -441,7 +505,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Macey Jones",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "Review content freshness (12+ months)",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; 12+ Months Old"
     },
     {
       "id": "a-common-data-plane-is-the-solution-to-cloud-complexity-blog-18",
@@ -467,7 +535,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "accelerate-and-automate-modernization-with-hitachi-vantara-and-red-hat-solution-profile-19",
@@ -493,7 +565,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "melissa.zelyez@hitachivantara.com",
       "publishedByVendor": "Hitachi Vantara / Red Hat",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "Review content freshness (12+ months)",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; 12+ Months Old"
     },
     {
       "id": "accelerate-your-ai-success-use-case-roi-guide-ebook-ebook-20",
@@ -519,7 +595,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Jeff Lundberg",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "H1"
+      "notes": "H1",
+      "actionRequired": "Review content freshness (12+ months)",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; 12+ Months Old"
     },
     {
       "id": "ai-data-centers-are-pushing-u-s-power-grids-to-the-brink-blog-21",
@@ -545,7 +625,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u26a0\ufe0f POTENTIAL DUPLICATE \u2014 Review with \"AI Data Centers are Pushing U.S. Power Grids to the Brink\" (row with gated link). @stephanie.thompson@hitachivantara.com @sulochna.khokhrai@hitachivantara.com \u2014 Flagged by Smart Assist 10/1/2026."
+      "notes": "\u26a0\ufe0f POTENTIAL DUPLICATE \u2014 Review with \"AI Data Centers are Pushing U.S. Power Grids to the Brink\" (row with gated link). @stephanie.thompson@hitachivantara.com @sulochna.khokhrai@hitachivantara.com \u2014 Flagged by Smart Assist 10/1/2026.",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "ai-data-foundation-landing-page-landing-page-22",
@@ -571,7 +655,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Stephanie Thompson, Sulochna Khokhrai",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "ai-data-foundation-roadmap-guide-ebook-23",
@@ -597,7 +685,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Sulochna Khokhrai",
       "publishedByVendor": "",
-      "notes": "\u26a0\ufe0f POTENTIAL DUPLICATE \u2014 Review with \"Ai Data Foundation Roadmap Guide\" (Use Case: Data Readiness and Activation for AI). @stephanie.thompson@hitachivantara.com @sulochna.khokhrai@hitachivantara.com \u2014 Flagged by Smart Assist 10/1/2026."
+      "notes": "\u26a0\ufe0f POTENTIAL DUPLICATE \u2014 Review with \"Ai Data Foundation Roadmap Guide\" (Use Case: Data Readiness and Activation for AI). @stephanie.thompson@hitachivantara.com @sulochna.khokhrai@hitachivantara.com \u2014 Flagged by Smart Assist 10/1/2026.",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "ai-discovery-service-booking-form-assessment-24",
@@ -623,7 +715,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Jeff Lundberg",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "H1"
+      "notes": "H1",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "ai-success-starts-with-the-right-data-foundation-how-to-improve-ai-outcomes-and-reduce-fai-25",
@@ -649,7 +745,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Stephanie Thompson",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "alior-bank-enabling-strategic-growth-and-innovation-with-a-pioneering-move-to-red-hat-open-26",
@@ -675,7 +775,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Jennifer Schmitz",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u26a0\ufe0f POTENTIAL DUPLICATE \u2014 Review with \"Alior Bank | Customer Story\" (Use Case: Data Platform Architectures & Economics). @stephanie.thompson@hitachivantara.com @sulochna.khokhrai@hitachivantara.com \u2014 Flagged by Smart Assist 10/1/2026."
+      "notes": "\u26a0\ufe0f POTENTIAL DUPLICATE \u2014 Review with \"Alior Bank | Customer Story\" (Use Case: Data Platform Architectures & Economics). @stephanie.thompson@hitachivantara.com @sulochna.khokhrai@hitachivantara.com \u2014 Flagged by Smart Assist 10/1/2026.",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "ama-agrarmarkt-supporting-austria-s-agriculture-with-robust-and-reliable-storage-infrastru-27",
@@ -701,7 +805,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Jennifer Schmitz",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "americas-midrange-road-show-blog-blog-28",
@@ -727,7 +835,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u26a0\ufe0f POTENTIAL DUPLICATE \u2014 Review with \"Americas Midrange Road Show Blog\" (without Use Case). @stephanie.thompson@hitachivantara.com @sulochna.khokhrai@hitachivantara.com \u2014 Flagged by Smart Assist 10/1/2026."
+      "notes": "\u26a0\ufe0f POTENTIAL DUPLICATE \u2014 Review with \"Americas Midrange Road Show Blog\" (without Use Case). @stephanie.thompson@hitachivantara.com @sulochna.khokhrai@hitachivantara.com \u2014 Flagged by Smart Assist 10/1/2026.",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "app-data-consolidation-update-needed-video-29",
@@ -753,7 +865,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "update needed"
+      "notes": "update needed",
+      "actionRequired": "Retire, replace, or update content",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; Expired/Update"
     },
     {
       "id": "ayuntamiento-de-avil-s-avil-s-city-council-pioneering-digital-transformation-to-deliver-pu-30",
@@ -779,7 +895,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Jennifer Schmitz",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "balancing-esg-with-the-power-needed-for-ai-blog-31",
@@ -805,7 +925,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "H1"
+      "notes": "H1",
+      "actionRequired": "Review content freshness (12+ months)",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; 12+ Months Old"
     },
     {
       "id": "banco-de-brasilia-simplify-compliance-and-improve-productivity-customer-story-32",
@@ -831,7 +955,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Jennifer Schmitz",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "bmw-group-innovating-mission-critical-data-storage-customer-story-33",
@@ -857,7 +985,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Jennifer Schmitz",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "boe-technology-group-transforms-operations-implements-a-virtual-desktop-cloud-customer-sto-34",
@@ -883,7 +1015,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Jennifer Schmitz, Steven Garbrecht",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "boost-cyber-resilience-with-superhero-powers-and-hitachi-vsp-one-blog-35",
@@ -909,7 +1045,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "Review content freshness (12+ months)",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; 12+ Months Old"
     },
     {
       "id": "build-modern-ai-ready-infrastructure-without-starting-over-webinar-36",
@@ -935,7 +1075,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Liam Yu, Stephanie Thompson",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "business-critical-cyber-recovery-solution-profile-37",
@@ -961,7 +1105,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Macey Jones",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "planned"
+      "notes": "planned",
+      "actionRequired": "Update status or revise publish date",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "Overdue"
     },
     {
       "id": "businesses-modernize-data-protection-with-hitachi-and-commvault-whitepaper-38",
@@ -987,7 +1135,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Barbara Goetz",
       "publishedByVendor": "ESG",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "buyer-s-guide-for-cyber-resilient-data-infrastructure-ebook-39",
@@ -1013,7 +1165,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Macey Jones",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "campaign-landing-page-ai-landing-page-40",
@@ -1039,7 +1195,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Stephanie Thompson, Sulochna Khokhrai",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "campaign-landing-page-dmr-landing-page-41",
@@ -1065,7 +1225,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Stephanie Thompson, Sulochna Khokhrai",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "capacity-on-demand-solution-brief-solution-profile-42",
@@ -1091,7 +1255,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Victor Lin",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "capacity-on-demand-top-ten-reasons-why-top-10-43",
@@ -1117,7 +1285,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Victor Lin",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "cbts-meets-customer-demand-for-agile-and-cost-effective-cloud-services-with-hitachi-everfl-44",
@@ -1143,7 +1315,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Jennifer Schmitz, Steven Garbrecht",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "clean-data-recovery-the-difference-between-best-effort-and-sla-backed-infographic-45",
@@ -1169,7 +1345,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "VSP One Block + Cyber Resilience Guarantee"
+      "notes": "VSP One Block + Cyber Resilience Guarantee",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "corporate-sustainability-needs-integration-not-another-goal-post-blog-46",
@@ -1195,7 +1375,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "Add customer-facing URL",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; No URL"
     },
     {
       "id": "hitachi-delivers-managed-storage-solution-with-large-all-flash-deployment-47",
@@ -1221,7 +1405,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Jennifer Schmitz, Steven Garbrecht",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "suva-supports-its-digitization-strategy-with-high-performance-innovative-storage-solutions-48",
@@ -1247,7 +1435,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Jennifer Schmitz, Steven Garbrecht",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "cutting-storage-media-costs-and-risks-in-a-supply-chain-crunch-blog-49",
@@ -1273,7 +1465,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "cyber-recovery-explainer-video-video-50",
@@ -1299,7 +1495,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Macey Jones",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "cyber-resilience-customer-outcomes-ebook-ebook-51",
@@ -1325,7 +1525,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Macey Jones",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "planned"
+      "notes": "planned",
+      "actionRequired": "Update status or revise publish date",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "Overdue"
     },
     {
       "id": "cyber-resilience-for-dummies-ebook-52",
@@ -1351,7 +1555,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Macey Jones",
       "publishedByVendor": "Wiley",
-      "notes": "Built for Technical Persona"
+      "notes": "Built for Technical Persona",
+      "actionRequired": "Review content freshness (12+ months)",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; 12+ Months Old"
     },
     {
       "id": "cyber-resilience-guarantee-solution-profile-53",
@@ -1377,7 +1585,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Macey Jones",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "cyber-resilience-guarantee-video-54",
@@ -1403,7 +1615,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "cyber-resilience-pov-ebook-ebook-55",
@@ -1429,7 +1645,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Macey Jones",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "Update status or revise publish date",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "Overdue"
     },
     {
       "id": "achieve-cyber-resilience-with-a-risk-optimized-data-foundation-solution-profile-56",
@@ -1455,7 +1675,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Macey Jones",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "cyber-resilience-beyond-traditional-security-in-the-age-of-inevitable-breaches-ebook-57",
@@ -1481,7 +1705,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Macey Jones",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "Review content freshness (12+ months)",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; 12+ Months Old"
     },
     {
       "id": "data-resilience-attack-ready-ai-ready-webinar-58",
@@ -1507,7 +1735,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Macey Jones, Stephanie Thompson",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "cyberattacks-is-predictable-business-continuity-possible-webinar-59",
@@ -1533,7 +1765,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Stephanie Thompson, Sulochna Khokhrai",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "Review content freshness (12+ months)",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; 12+ Months Old"
     },
     {
       "id": "data-modernization-dummies-guide-ebook-60",
@@ -1559,7 +1795,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Andy Gremett",
       "publishedByVendor": "Wiley",
-      "notes": "planned"
+      "notes": "planned",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "data-modernization-for-the-ai-era-simple-secure-and-sustainable-webinar-61",
@@ -1585,7 +1825,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Andy Gremett",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "data-resilience-as-a-service-ebook-ebook-62",
@@ -1611,7 +1855,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Macey Jones, Steven Garbrecht",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "data-resilience-as-a-service-solution-profile-solution-profile-63",
@@ -1637,7 +1885,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Macey Jones, Steven Garbrecht",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "Update status or revise publish date",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "Overdue"
     },
     {
       "id": "data-resilience-assessment-emea-pilot-only-assessment-64",
@@ -1663,7 +1915,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Macey Jones, Scott Jones",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "planned, EMEA pilot only"
+      "notes": "planned, EMEA pilot only",
+      "actionRequired": "Create promotion plan",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; No Promo"
     },
     {
       "id": "data-sovereignty-and-ai-rethinking-object-storage-in-financial-services-webinar-65",
@@ -1689,7 +1945,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Karina Andrade, Mark Geel",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": "https://stwb.co/eheazlr",
+      "issueType": ""
     },
     {
       "id": "dcig-top-5-hitachi-vantara-vsp-one-block-analyst-report-66",
@@ -1715,7 +1975,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Angela Romberg, Shari Gardner",
       "publishedByVendor": "DCIG",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "drive-your-ai-innovation-with-hitachi-vantara-hybrid-cloud-platform-and-red-hat-openshift--67",
@@ -1741,7 +2005,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "melissa.zelyez@hitachivantara.com",
       "publishedByVendor": "Hitachi Vantara / Red Hat",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "Review content freshness (12+ months)",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; 12+ Months Old"
     },
     {
       "id": "ebook-title-trust-continuity-and-competitive-advantage-in-the-ai-era-ebook-68",
@@ -1767,7 +2035,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "mainframe-validation-proof-points-ebook-69",
@@ -1793,7 +2065,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Sakina Peshawarwala",
       "publishedByVendor": "",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "elevate-your-cyber-resiliency-posture-protect-detect-recover-webinar-70",
@@ -1819,7 +2095,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Stephanie Thompson, Sulochna Khokhrai",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "Review content freshness (12+ months)",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; 12+ Months Old"
     },
     {
       "id": "energy-efficiency-sustainability-webinar-71",
@@ -1845,7 +2125,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Liam Yu",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "enhancing-it-operational-excellence-with-infrastructure-as-a-service-blog-72",
@@ -1871,7 +2155,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Emily Smith, Steven Garbrecht",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "Review content freshness (12+ months)",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; 12+ Months Old"
     },
     {
       "id": "ensuring-business-continuity-vmware-environments-enterprise-data-resilience-solution-profi-73",
@@ -1897,7 +2185,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Dinesh Singh",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "european-financial-services-company-resilience-compliance-and-cost-savings-with-dpaas-cust-74",
@@ -1923,7 +2215,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Jennifer Schmitz",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "everflex-capacity-on-demand-top-10-75",
@@ -1949,7 +2245,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Steven Garbrecht",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "everflex-data-protection-as-a-service-video-76",
@@ -1975,7 +2275,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Macey Jones, Steven Garbrecht",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "everflex-managed-focus-on-itil-services-solution-profile-77",
@@ -2001,7 +2305,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Steven Garbrecht",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "Add customer-facing URL",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; No URL"
     },
     {
       "id": "hitachi-everflex-multivendor-infrastructure-management-solution-profile-78",
@@ -2027,7 +2335,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Steven Garbrecht",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "Add customer-facing URL",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; No URL"
     },
     {
       "id": "everflex-tco-calculator-calculator-79",
@@ -2053,7 +2365,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Steven Garbrecht",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u26a0\ufe0f POTENTIAL DUPLICATE \u2014 Review with \"EverFlex TCO Calculator\" (Use Case: Cyber Risk Mitigation & Recovery). @stephanie.thompson@hitachivantara.com @sulochna.khokhrai@hitachivantara.com \u2014 Flagged by Smart Assist 10/1/2026."
+      "notes": "\u26a0\ufe0f POTENTIAL DUPLICATE \u2014 Review with \"EverFlex TCO Calculator\" (Use Case: Cyber Risk Mitigation & Recovery). @stephanie.thompson@hitachivantara.com @sulochna.khokhrai@hitachivantara.com \u2014 Flagged by Smart Assist 10/1/2026.",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "explore-and-build-ai-solutions-with-iq-studio-demo-80",
@@ -2079,7 +2395,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Jeff Lundberg",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "farma-mondo-delivering-vital-medicines-24-7-with-a-highly-available-infrastructure-custome-81",
@@ -2105,7 +2425,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Jennifer Schmitz",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "five-habits-that-cut-it-energy-waste-without-spending-more-blog-82",
@@ -2131,7 +2455,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "H1"
+      "notes": "H1",
+      "actionRequired": "Add customer-facing URL",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; No URL"
     },
     {
       "id": "five-steps-to-intelligent-automation-success-blog-83",
@@ -2157,7 +2485,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Sulochna Khokhrai",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "H1"
+      "notes": "H1",
+      "actionRequired": "Review content freshness (12+ months)",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; 12+ Months Old"
     },
     {
       "id": "from-bottlenecks-to-breakthroughs-integrated-solutions-customer-story-ebook-ebook-84",
@@ -2183,7 +2515,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "melissa.zelyez@hitachivantara.com",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "from-data-chaos-to-ai-clarity-data-readiness-and-the-modern-lakehouse-ebook-85",
@@ -2209,7 +2545,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Jeff Lundberg",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "H1"
+      "notes": "H1",
+      "actionRequired": "Review content freshness (12+ months)",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; 12+ Months Old"
     },
     {
       "id": "from-data-chaos-to-clarity-strategies-for-scalable-storage-webinar-webinar-86",
@@ -2235,7 +2575,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Sulochna Khokhrai",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "from-reactive-to-resilient-rethinking-cybersecurity-for-the-evolving-threat-landscape-webi-87",
@@ -2261,7 +2605,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Stephanie Thompson, Sulochna Khokhrai",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "Review content freshness (12+ months)",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; 12+ Months Old"
     },
     {
       "id": "from-science-fiction-to-factory-floor-the-physical-ai-revolution-takes-shape-blog-88",
@@ -2287,7 +2635,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "H1"
+      "notes": "H1",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "fstech-how-financial-institutions-unlock-more-value-from-datawith-object-storage-analyst-r-89",
@@ -2313,7 +2665,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Karina Andrade, Mark Geel",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "Create promotion plan",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; No Promo"
     },
     {
       "id": "fueling-oil-and-gas-with-fast-secure-always-available-data-solution-profile-90",
@@ -2339,7 +2695,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Jeff Lundberg",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "Review content freshness (12+ months)",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; 12+ Months Old"
     },
     {
       "id": "garanti-bbva-powering-banking-excellence-with-storage-designed-for-continuous-availability-91",
@@ -2365,7 +2725,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Jennifer Schmitz",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "Add customer-facing URL",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; No URL"
     },
     {
       "id": "gartner-emerging-market-quadrant-emq-ai-data-storage-analyst-report-92",
@@ -2391,7 +2755,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Tanya Loughlin",
       "publishedByVendor": "",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "gartner-peer-insights-asset-ebook-ebook-93",
@@ -2417,7 +2785,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Angela Romberg, Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "government-agency-transforms-operations-with-flexible-all-in-one-hybrid-cloud-solution-bre-94",
@@ -2443,7 +2815,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Jennifer Schmitz",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "hgx-reference-architecture-solution-profile-95",
@@ -2469,7 +2845,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Jeff Lundberg",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "H1"
+      "notes": "H1",
+      "actionRequired": "Review content freshness (12+ months)",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; 12+ Months Old"
     },
     {
       "id": "hitachi-data-lakehouse-reference-architecture-reference-architecture-96",
@@ -2495,7 +2875,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Jeff Lundberg",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "hitachi-data-lakehouse-unified-data-lakehouse-for-ai-and-analytics-landing-page-97",
@@ -2521,7 +2905,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Michael Pacheco",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "Review content freshness (12+ months)",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; No Promo; 12+ Months Old"
     },
     {
       "id": "hitachi-data-lakehouse-powering-trusted-ai-and-analytics-at-scale-solution-profile-98",
@@ -2547,7 +2935,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Jeff Lundberg",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "hitachi-enables-real-time-analytics-and-data-lake-platform-for-manufacturing-customer-stor-99",
@@ -2573,7 +2965,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Jeff Lundberg",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "H1"
+      "notes": "H1",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "hitachi-everflex-one-of-the-highest-rated-vendors-by-it-professionals-on-gartner-peer-insi-100",
@@ -2599,7 +2995,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Steven Garbrecht",
       "publishedByVendor": "Hitachi Vantara / Gartner",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "hitachi-everflex-sla-guarantees-reference-guide-reference-architecture-101",
@@ -2625,7 +3025,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Steven Garbrecht",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "Review content freshness (12+ months)",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; 12+ Months Old"
     },
     {
       "id": "hitachi-everflex-success-stories-how-six-organizations-modernized-without-owning-the-risk--102",
@@ -2651,7 +3055,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Victor Lin",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "hitachi-hmax-and-hitachi-iq-for-life-sciences-datasheet-103",
@@ -2677,7 +3085,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Jeff Lundberg",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "H2"
+      "notes": "H2",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "hitachi-hmax-and-hitachi-iq-for-mining-datasheet-104",
@@ -2703,7 +3115,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Jeff Lundberg",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "H2"
+      "notes": "H2",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "hitachi-hmax-and-hitachi-iq-for-power-grids-datasheet-105",
@@ -2729,7 +3145,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Jeff Lundberg",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "H2"
+      "notes": "H2",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "hitachi-integrated-systems-solution-with-microsoft-sql-server-reference-architecture-106",
@@ -2755,7 +3175,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Dinesh Singh, Shari Gardner",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "Review content freshness (12+ months)",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; 12+ Months Old"
     },
     {
       "id": "hitachi-iq-m-series-solution-profile-107",
@@ -2781,7 +3205,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Jeff Lundberg",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "H1"
+      "notes": "H1",
+      "actionRequired": "Review content freshness (12+ months)",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; 12+ Months Old"
     },
     {
       "id": "hitachi-iq-studio-solution-profile-108",
@@ -2807,7 +3235,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Jeff Lundberg",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "H1"
+      "notes": "H1",
+      "actionRequired": "Review content freshness (12+ months)",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; 12+ Months Old"
     },
     {
       "id": "hitachi-iq-with-nvidia-hgx-reference-architecture-109",
@@ -2833,7 +3265,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Jeff Lundberg",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "H1"
+      "notes": "H1",
+      "actionRequired": "Review content freshness (12+ months)",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; 12+ Months Old"
     },
     {
       "id": "hitachi-leader-in-gigaom-primary-storage-platforms-radar-blog-110",
@@ -2859,7 +3295,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u26a0\ufe0f POTENTIAL DUPLICATE \u2014 Review with \"Hitachi Leader in GigaOm Primary Storage Platforms Radar\" (Campaign: AI Data Foundation). @stephanie.thompson@hitachivantara.com @sulochna.khokhrai@hitachivantara.com \u2014 Flagged by Smart Assist 10/1/2026."
+      "notes": "\u26a0\ufe0f POTENTIAL DUPLICATE \u2014 Review with \"Hitachi Leader in GigaOm Primary Storage Platforms Radar\" (Campaign: AI Data Foundation). @stephanie.thompson@hitachivantara.com @sulochna.khokhrai@hitachivantara.com \u2014 Flagged by Smart Assist 10/1/2026.",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "hitachi-mainframe-cyber-resiliency-solution-whitepaper-111",
@@ -2885,7 +3325,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Liam Yu",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "Review content freshness (12+ months)",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; 12+ Months Old"
     },
     {
       "id": "hitachi-named-a-challenger-in-the-2025-gartner-magic-quadrant-for-infrastructure-platform--112",
@@ -2911,7 +3355,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Steven Garbrecht",
       "publishedByVendor": "Gartner",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "Retire, replace, or update content",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; Expired/Update; Duplicate"
     },
     {
       "id": "2026-magic-quadrant-for-infrastructure-platform-consumption-services-analyst-report-113",
@@ -2937,7 +3385,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Steven Garbrecht",
       "publishedByVendor": "Gartner",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "Review for possible duplicate",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; Duplicate"
     },
     {
       "id": "hitachi-storage-and-hitachi-integrated-systems-solutions-in-vmware-vsphere-environments-re-114",
@@ -2963,7 +3415,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Dinesh Singh, Shari Gardner",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "hitachi-vantara-modern-lakehouse-for-ai-video-115",
@@ -2989,7 +3445,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Michelle Salta",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "H1"
+      "notes": "H1",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "hitachi-vantara-and-veeam-for-cyber-resilience-whitepaper-116",
@@ -3015,7 +3475,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Scott Jones",
       "publishedByVendor": "ESG",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "Review content freshness (12+ months)",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; No Promo; 12+ Months Old"
     },
     {
       "id": "hitachi-vantara-flexible-consumption-and-financing-solutions-solution-profile-117",
@@ -3041,7 +3505,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Steven Garbrecht",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "Add customer-facing URL",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; No URL"
     },
     {
       "id": "hitachi-vantara-named-primary-storage-leader-gigaom-radar-2025-analyst-report-analyst-repo-118",
@@ -3067,7 +3535,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Nick Howell",
       "publishedByVendor": "GigaOm",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "Review content freshness (12+ months)",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; 12+ Months Old"
     },
     {
       "id": "hitachi-vantara-virtual-storage-platform-one-object-vsp-one-object-datasheet-119",
@@ -3093,7 +3565,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Mark Geel",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "hitachi-vantara-ransomware-detection-powered-by-cybersense-datasheet-120",
@@ -3119,7 +3595,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Macey Jones",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "Review content freshness (12+ months)",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; 12+ Months Old"
     },
     {
       "id": "hitachi-integrated-systems-pdf-datasheet-121",
@@ -3145,7 +3625,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "melissa.zelyez@hitachivantara.com",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "hmax-and-iq-solutions-for-mining-and-mineral-exploration-solution-profile-122",
@@ -3171,7 +3655,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Jeff Lundberg",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "Add customer-facing URL",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; No URL"
     },
     {
       "id": "how-hitachi-block-storage-delivers-eight-nines-availability-whitepaper-whitepaper-123",
@@ -3197,7 +3685,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Andy Gremett",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "how-pakistan-s-financial-backbone-is-using-ai-to-strengthen-banking-resilience-at-national-124",
@@ -3223,7 +3715,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "H1"
+      "notes": "H1",
+      "actionRequired": "Add customer-facing URL",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; No URL"
     },
     {
       "id": "how-to-avoid-the-hidden-costs-of-slow-it-infrastructure-deployments-blog-125",
@@ -3249,7 +3745,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "your-mainframe-storage-decision-is-not-the-one-you-think-it-is-blog-126",
@@ -3275,7 +3775,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "Create promotion plan",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; No Promo"
     },
     {
       "id": "how-to-beat-rising-storage-costs-and-spread-your-budget-blog-127",
@@ -3301,7 +3805,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "how-to-inject-agility-into-your-infrastructure-ebook-ebook-128",
@@ -3327,7 +3835,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Stephanie Thompson, Sulochna Khokhrai",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "Review content freshness (12+ months)",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; 12+ Months Old"
     },
     {
       "id": "hybrid-cloud-2-0-evolution-modernization-whitepaper-129",
@@ -3353,7 +3865,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Nick Howell",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "Review content freshness (12+ months)",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; 12+ Months Old"
     },
     {
       "id": "hybrid-cloud-buyer-s-guide-ebook-ebook-130",
@@ -3379,7 +3895,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Andy Gremett",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "hybrid-cloud-storage-for-native-amazon-s3-workloads-solution-profile-131",
@@ -3405,7 +3925,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Mark Geel",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "H1"
+      "notes": "H1",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "idc-cyber-resilience-webinar-webinar-132",
@@ -3431,7 +3955,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Macey Jones, Stephanie Thompson",
       "publishedByVendor": "",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "idc-marketscape-worldwide-private-ai-infrafrstucture-systems-analyst-report-133",
@@ -3457,7 +3985,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Jeff Lundberg",
       "publishedByVendor": "",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "idc-spotlight-report-cyber-resilience-analyst-report-134",
@@ -3483,7 +4015,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Macey Jones",
       "publishedByVendor": "IDC",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "idc-dora-mandates-financial-firms-shift-to-cyber-resilience-analyst-report-135",
@@ -3509,7 +4045,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Macey Jones",
       "publishedByVendor": "IDC",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "Review content freshness (12+ months)",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; 12+ Months Old"
     },
     {
       "id": "influencer-blog-your-mainframe-decision-is-not-the-one-you-think-blog-136",
@@ -3535,7 +4075,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Sakina Peshawarwala",
       "publishedByVendor": "",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "infrastructure-modernization-maturity-scorecard-assessment-137",
@@ -3561,7 +4105,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Liam Yu",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "is-object-storage-the-new-ai-foundation-webinar-138",
@@ -3587,7 +4135,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Mark Geel, Sulochna Khokhrai",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": "https://stwb.co/eheazzh",
+      "issueType": ""
     },
     {
       "id": "isle-of-wight-nhs-digitalizing-pathology-storage-customer-story-139",
@@ -3613,7 +4165,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Jennifer Schmitz",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "H1"
+      "notes": "H1",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "it-decision-making-budget-and-geopolitical-risk-blog-140",
@@ -3639,7 +4195,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "H1"
+      "notes": "H1",
+      "actionRequired": "Retire, replace, or update content",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; Expired/Update"
     },
     {
       "id": "joe-morris-cio-infosec-blog-blog-141",
@@ -3665,7 +4225,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "kbc-group-and-k-h-bank-improve-business-critical-data-resilience-recovery-customer-story-142",
@@ -3691,7 +4255,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Jennifer Schmitz",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "keeping-the-lights-on-or-funding-innovation-whitepaper-143",
@@ -3717,7 +4285,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Andy Gremett, Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "la-molisana-supporting-ambitious-growth-plans-with-scalable-secure-and-sustainable-hitachi-144",
@@ -3743,7 +4315,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Jennifer Schmitz",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "Review content freshness (12+ months)",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; 12+ Months Old"
     },
     {
       "id": "lakehouse-logic-why-object-storage-is-the-new-analytics-engine-blog-145",
@@ -3769,7 +4345,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Mark Geel",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "Review content freshness (12+ months)",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; 12+ Months Old"
     },
     {
       "id": "large-utility-company-protect-key-systems-and-disarm-ransomware-risks-customer-story-146",
@@ -3795,7 +4375,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Jennifer Schmitz",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "malayala-manorama-delivering-24-7-availability-for-24-hour-news-customer-story-147",
@@ -3821,7 +4405,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Jennifer Schmitz",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "mission-critical-guarantees-and-slas-new-solution-profile-148",
@@ -3847,7 +4435,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Angela Romberg, Steven Garbrecht",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "mission-critical-cyber-recovery-solution-profile-149",
@@ -3873,7 +4465,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Macey Jones",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u26a0\ufe0f POTENTIAL DUPLICATE \u2014 Review with \"Mission-Critical Cyber Recovery\" (Type: Demo / Assessment / Tool / Offer). @stephanie.thompson@hitachivantara.com @sulochna.khokhrai@hitachivantara.com \u2014 Flagged by Smart Assist 10/1/2026."
+      "notes": "\u26a0\ufe0f POTENTIAL DUPLICATE \u2014 Review with \"Mission-Critical Cyber Recovery\" (Type: Demo / Assessment / Tool / Offer). @stephanie.thompson@hitachivantara.com @sulochna.khokhrai@hitachivantara.com \u2014 Flagged by Smart Assist 10/1/2026.",
+      "actionRequired": "Update status or revise publish date",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "Overdue"
     },
     {
       "id": "mit-tech-review-adapting-to-new-threats-with-proactive-cyber-risk-management-analyst-repor-150",
@@ -3899,7 +4495,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Macey Jones",
       "publishedByVendor": "MIT Technology Review",
-      "notes": "Exec Audience"
+      "notes": "Exec Audience",
+      "actionRequired": "Review content freshness (12+ months)",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; 12+ Months Old"
     },
     {
       "id": "mit-tech-review-the-rise-of-the-data-platform-for-hybrid-cloud-analyst-report-151",
@@ -3925,7 +4525,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Nick Howell",
       "publishedByVendor": "MIT Technology Review",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "Retire, replace, or update content",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; Expired/Update"
     },
     {
       "id": "mit-technology-review-ai-based-data-analytics-enable-business-insight-analyst-report-152",
@@ -3951,7 +4555,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Macey Jones, Nick Howell",
       "publishedByVendor": "MIT Technology Review",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "Review content freshness (12+ months)",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; 12+ Months Old"
     },
     {
       "id": "modernize-data-lakehouse-environments-with-vsp-one-object-storage-solution-profile-153",
@@ -3977,7 +4585,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Mark Geel",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "H1"
+      "notes": "H1",
+      "actionRequired": "Create promotion plan",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; No Promo"
     },
     {
       "id": "modernize-your-data-lakehouse-with-object-storage-trends-tech-and-the-road-ahead-webinar-154",
@@ -4003,7 +4615,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Mark Geel",
       "publishedByVendor": "GigaOm / Hitachi Vantara",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "modernize-your-environment-with-vsp-one-object-solution-profile-155",
@@ -4029,7 +4645,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Mark Geel",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "Retire, replace, or update content",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; Expired/Update"
     },
     {
       "id": "modernizing-data-protection-with-hitachi-and-commvault-infographic-156",
@@ -4055,7 +4675,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Barbara Goetz",
       "publishedByVendor": "ESG",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "Review content freshness (12+ months)",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; 12+ Months Old"
     },
     {
       "id": "navigating-complexity-and-cost-with-hitachi-everflex-whitepaper-157",
@@ -4081,7 +4705,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Steven Garbrecht",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "Review content freshness (12+ months)",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; No Promo; 12+ Months Old"
     },
     {
       "id": "nvidia-cloud-partner-hitachi-iq-architecture-guide-reference-architecture-158",
@@ -4107,7 +4735,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Jeff Lundberg",
       "publishedByVendor": "Hitachi Vantara / NVIDIA",
-      "notes": "H1"
+      "notes": "H1",
+      "actionRequired": "Review content freshness (12+ months)",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; 12+ Months Old"
     },
     {
       "id": "omdia-the-storage-modernization-imperative-analyst-report-159",
@@ -4133,7 +4765,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Andy Gremett",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "omdia-the-five-new-essentials-for-data-storage-platforms-infographic-160",
@@ -4159,7 +4795,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Victoria Norvall",
       "publishedByVendor": "Omdia",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "Update status or revise publish date",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "Overdue; No Promo"
     },
     {
       "id": "omdia-the-five-new-essentials-for-data-storage-platforms-analyst-report-161",
@@ -4185,7 +4825,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Liam Yu",
       "publishedByVendor": "Omdia",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "omdia-what-modern-data-infrastructure-looks-like-in-the-ai-era-webinar-162",
@@ -4211,7 +4855,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Andy Gremett, Stephanie Thompson",
       "publishedByVendor": "Omdia",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": "https://stwb.co/eheazzl",
+      "issueType": ""
     },
     {
       "id": "on-premises-amazon-s3-tables-with-vsp-one-object-datasheet-163",
@@ -4237,7 +4885,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Mark Geel",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "H1"
+      "notes": "H1",
+      "actionRequired": "Review content freshness (12+ months)",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; 12+ Months Old"
     },
     {
       "id": "overcoming-gaps-with-hybrid-cloud-ebook-164",
@@ -4263,7 +4915,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Andy Gremett",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "pearkmarks-results-on-bhe-for-oracle-tbd-2h-analyst-report-165",
@@ -4289,7 +4945,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Liam Yu, Melissa Zelyez",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "planned"
+      "notes": "planned",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "power-your-ai-future-on-a-foundation-of-trusted-modernized-data-solution-profile-166",
@@ -4315,7 +4975,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Andy Gremett",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "protect-smarter-recover-faster-your-guide-to-data-protection-as-a-service-ebook-167",
@@ -4341,7 +5005,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Steven Garbrecht",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "Review content freshness (12+ months)",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; 12+ Months Old"
     },
     {
       "id": "public-sector-agency-protecting-vital-hr-data-for-government-employees-customer-story-168",
@@ -4367,7 +5035,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Jennifer Schmitz",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "Add customer-facing URL",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; No URL; 12+ Months Old"
     },
     {
       "id": "rabobank-compliance-discovery-search-time-reduced-from-weeks-to-hours-customer-story-169",
@@ -4393,7 +5065,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Jennifer Schmitz",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "raiffeisen-informatik-enabling-rapid-cyber-recovery-for-critical-mainframe-environments-cu-170",
@@ -4419,7 +5095,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Jennifer Schmitz",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "This was a DS story and no longer resides on HV.com"
+      "notes": "This was a DS story and no longer resides on HV.com",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "raising-the-stakes-for-sustainable-ai-ready-infrastructure-blog-171",
@@ -4445,7 +5125,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "real-time-redefined-rethinking-kafka-s-potential-blog-172",
@@ -4471,7 +5155,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Michael Pacheco",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "Review content freshness (12+ months)",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; 12+ Months Old"
     },
     {
       "id": "reclaim-data-sovereignty-for-the-ai-era-blog-173",
@@ -4497,7 +5185,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Andy Gremett",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u26a0\ufe0f POTENTIAL DUPLICATE \u2014 Review with \"Reclaim Data Sovereignty for the AI Era\" (Campaign: AI Data Foundation). @stephanie.thompson@hitachivantara.com @sulochna.khokhrai@hitachivantara.com \u2014 Flagged by Smart Assist 10/1/2026."
+      "notes": "\u26a0\ufe0f POTENTIAL DUPLICATE \u2014 Review with \"Reclaim Data Sovereignty for the AI Era\" (Campaign: AI Data Foundation). @stephanie.thompson@hitachivantara.com @sulochna.khokhrai@hitachivantara.com \u2014 Flagged by Smart Assist 10/1/2026.",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "remove-the-chaos-of-data-complexity-with-virtual-storage-platform-one-block-storage-for-mi-174",
@@ -4523,7 +5215,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Angela Romberg",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "resilience-by-design-reducing-data-risk-downtime-and-regulatory-exposure-webinar-175",
@@ -4549,7 +5245,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Macey Jones",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "Review content freshness (12+ months)",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; No Promo; 12+ Months Old"
     },
     {
       "id": "resilient-by-design-how-hitachi-vantara-vm2020-and-index-engines-deliver-faster-validated--176",
@@ -4575,7 +5275,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Macey Jones, Stephanie Thompson, Sulochna Khokhrai",
       "publishedByVendor": "Hitachi Vantara + Index Engines + VM2020",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": "https://stwb.co/eheazzp",
+      "issueType": ""
     },
     {
       "id": "rice-university-customer-story-177",
@@ -4601,7 +5305,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Jennifer Schmitz",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "rwth-aachen-university-consolidate-digital-backup-to-object-services-at-scale-and-boost-cy-178",
@@ -4627,7 +5335,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Jennifer Schmitz",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "Add customer-facing URL",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; No URL"
     },
     {
       "id": "sds-90-day-free-trial-offer-179",
@@ -4653,7 +5365,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Andy Gremett",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "Create promotion plan",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; No Promo"
     },
     {
       "id": "sds-tco-tool-calculator-180",
@@ -4679,7 +5395,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Andy Gremett",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "Add customer-facing URL",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; No Promo; No URL"
     },
     {
       "id": "secure-document-management-solutions-for-insurance-solution-profile-181",
@@ -4705,7 +5425,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Macey Jones",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "Add customer-facing URL",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; No URL"
     },
     {
       "id": "sfs-group-advances-digitization-disaster-recovery-and-lowers-tco-with-unified-solution-cus-182",
@@ -4731,7 +5455,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Jennifer Schmitz",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "sfs-group-high-performance-private-cloud-customer-story-183",
@@ -4757,7 +5485,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Jennifer Schmitz, Steven Garbrecht",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "shared-nothing-architecture-for-ai-whitepaper-184",
@@ -4783,7 +5515,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Andy Gremett",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "solve-the-six-data-storage-challenges-ebook-ebook-185",
@@ -4809,7 +5545,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Angela Romberg",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "Review content freshness (12+ months)",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; 12+ Months Old"
     },
     {
       "id": "southwest-power-pool-spp-partners-with-hitachi-to-develop-advanced-ai-solution-for-critica-186",
@@ -4835,7 +5575,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Jennifer Schmitz",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "H1"
+      "notes": "H1",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "storage-as-a-service-standard-enterprise-grade-storage-with-flexible-consumption-datasheet-187",
@@ -4861,7 +5605,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Victor Lin",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "Add customer-facing URL",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; No URL"
     },
     {
       "id": "staas-explainer-video-video-188",
@@ -4887,7 +5635,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Victor Lin",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "Add customer-facing URL",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; No URL"
     },
     {
       "id": "storage-as-a-service-modernization-made-simple-infographic-189",
@@ -4913,7 +5665,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Victor Lin",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "modernize-storage-with-storage-as-a-service-solution-profile-190",
@@ -4939,7 +5695,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Victor Lin",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "storage-as-a-service-enterprise-storage-delivered-with-a-simple-subscription-top-10-191",
@@ -4965,7 +5725,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Victor Lin",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "state-of-data-infra-report-blog-blog-192",
@@ -4991,7 +5755,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "state-of-data-infrastructure-global-report-2025-ebook-ebook-193",
@@ -5017,7 +5785,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "supercharge-kafka-accelerate-real-time-innovation-at-scale-solution-profile-194",
@@ -5043,7 +5815,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Michael Pacheco",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "supercompute-blog-product-announcement-blog-195",
@@ -5069,7 +5845,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "t-systems-customer-transcript-blog-blog-196",
@@ -5095,7 +5875,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "techniklotsen-boosting-business-agility-and-reducing-costs-with-future-proof-dynamic-infra-197",
@@ -5121,7 +5905,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Jennifer Schmitz",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "Add customer-facing URL",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; No URL"
     },
     {
       "id": "the-cost-of-good-vs-excellent-blog-198",
@@ -5147,7 +5935,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "Add customer-facing URL",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; No URL"
     },
     {
       "id": "the-economics-of-modern-storage-infrastructure-lower-risk-faster-ai-value-better-roi-webin-199",
@@ -5173,7 +5965,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Karina Andrade",
       "publishedByVendor": "CIO.com",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": "https://stwb.co/eheazlh",
+      "issueType": ""
     },
     {
       "id": "the-future-of-hybrid-cloud-consumption-is-flexible-blog-200",
@@ -5199,7 +5995,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "H1"
+      "notes": "H1",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "the-future-of-vsp-one-object-video-201",
@@ -5225,7 +6025,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Michelle Salta",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "H1"
+      "notes": "H1",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "the-key-to-automating-cloud-storage-a-single-unified-platform-202",
@@ -5251,7 +6055,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "the-new-requirements-for-mission-critical-storage-in-an-ai-driven-enterprise-blog-203",
@@ -5277,7 +6085,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "the-power-of-distributed-infrastructure-and-storage-at-the-edge-blog-204",
@@ -5303,7 +6115,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "Add customer-facing URL",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; No URL"
     },
     {
       "id": "the-reason-behind-stalled-ai-projects-blog-205",
@@ -5329,7 +6145,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "Add customer-facing URL",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; No URL"
     },
     {
       "id": "the-threats-we-see-the-risks-we-don-t-blog-206",
@@ -5355,7 +6175,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "H1"
+      "notes": "H1",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "the-total-economic-impact-of-virtual-storage-platform-one-analyst-report-207",
@@ -5381,7 +6205,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Angela Romberg, Shari Gardner",
       "publishedByVendor": "Forrester",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "Review content freshness (12+ months)",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; 12+ Months Old"
     },
     {
       "id": "thrive-in-an-ai-driven-future-ebook-ebook-208",
@@ -5407,7 +6235,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Jeff Lundberg",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "H1"
+      "notes": "H1",
+      "actionRequired": "Review content freshness (12+ months)",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; 12+ Months Old"
     },
     {
       "id": "tier-1-launch-midrange-refresh-webinar-209",
@@ -5433,7 +6265,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Stephanie Thompson, Sulochna Khokhrai",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "Create promotion plan",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; No Promo"
     },
     {
       "id": "top-10-reasons-why-solutions-for-oracle-turbocharge-your-database-performance-top-10-210",
@@ -5459,7 +6295,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "melissa.zelyez@hitachivantara.com",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "top-10-reasons-why-vsp-one-sds-block-storage-hybrid-cloud-ready-software-defined-storage-f-211",
@@ -5485,7 +6325,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Andy Gremett",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "top-10-reasons-why-hitachi-everflex-top-10-212",
@@ -5511,7 +6355,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Steven Garbrecht",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "Review content freshness (12+ months)",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; 12+ Months Old"
     },
     {
       "id": "top-10-reasons-to-choose-hitachi-vantara-for-microsoft-sql-server-infrastructure-top-10-213",
@@ -5537,7 +6385,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Dinesh Singh, Shari Gardner",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "Review content freshness (12+ months)",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; 12+ Months Old"
     },
     {
       "id": "top-10-reasons-why-hitachi-data-lakehouse-top-10-214",
@@ -5563,7 +6415,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Michael Pacheco",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "top-ten-reasons-why-hitachi-integrated-solutions-for-sap-future-ready-sap-proven-at-scale--215",
@@ -5589,7 +6445,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Melissa Zelyez",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "top-10-reasons-flexible-hybrid-cloud-with-hitachi-and-red-hat-openshift-virtualization-top-216",
@@ -5615,7 +6475,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Dinesh Singh, Shari Gardner",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "Review content freshness (12+ months)",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; 12+ Months Old"
     },
     {
       "id": "top-10-reasons-hitachi-content-software-for-file-top-10-217",
@@ -5641,7 +6505,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Jeff Lundberg",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "H1"
+      "notes": "H1",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "top-10-reasons-hitachi-iq-top-10-218",
@@ -5667,7 +6535,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Jeff Lundberg",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "H1"
+      "notes": "H1",
+      "actionRequired": "Review content freshness (12+ months)",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; 12+ Months Old"
     },
     {
       "id": "top-10-reasons-hitachi-vantara-virtual-storage-platform-one-object-top-10-219",
@@ -5693,7 +6565,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Mark Geel",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "top-5-reasons-to-build-resilient-cloud-infrastructure-with-hitachi-storage-and-vmware-clou-220",
@@ -5719,7 +6595,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Dinesh Singh",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "top-5-reasons-to-choose-hitachi-storage-for-vmware-virtualization-success-ebook-221",
@@ -5745,7 +6625,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Dinesh Singh, Shari Gardner",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "Review content freshness (12+ months)",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; 12+ Months Old"
     },
     {
       "id": "turning-virtualization-modernization-into-business-outcomes-blog-222",
@@ -5771,7 +6655,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Dinesh Singh",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "unified-data-management-buyer-s-guide-ebook-223",
@@ -5797,7 +6685,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Richard Jew",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "Review content freshness (12+ months)",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; 12+ Months Old"
     },
     {
       "id": "university-mary-hardin-baylor-shaping-outstanding-digital-learning-experiences-with-a-reli-224",
@@ -5823,7 +6715,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Angela Romberg, Jennifer Schmitz",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "university-of-kent-delivering-secure-always-on-digital-services-for-students-faculty-and-r-225",
@@ -5849,7 +6745,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Mark Geel",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "unlocking-roi-the-forrester-study-that-could-save-your-next-storage-investment-webinar-226",
@@ -5875,7 +6775,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Stephanie Thompson, Sulochna Khokhrai",
       "publishedByVendor": "Forrester",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "Review content freshness (12+ months)",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; 12+ Months Old"
     },
     {
       "id": "virtual-storage-platform-one-block-high-end-storage-datasheet-227",
@@ -5901,7 +6805,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Liam Yu",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "Review content freshness (12+ months)",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; 12+ Months Old"
     },
     {
       "id": "virtual-storage-platform-one-one-data-platform-no-limits-ebook-228",
@@ -5927,7 +6835,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Shari Gardner",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "a-buyer-s-guide-to-hitachi-vantara-virtual-storage-platform-one-bloc-ebook-229",
@@ -5953,7 +6865,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Angela Romberg, Liam Yu",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "Retire, replace, or update content",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; Expired/Update"
     },
     {
       "id": "vsp-one-file-kafka-data-streaming-video-230",
@@ -5979,7 +6895,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Michael Pacheco",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "unbreakable-core-vsp-one-guarantees-proven-results-guaranteed-outcomes-ebook-231",
@@ -6005,7 +6925,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Nick Howell",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "vsp-one-object-architectural-overview-reference-architecture-232",
@@ -6031,7 +6955,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Mark Geel",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "H2 -  being updated for september"
+      "notes": "H2 -  being updated for september",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "vsp-one-object-on-premises-s3-tables-video-233",
@@ -6057,7 +6985,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Mark Geel, Michelle Salta",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "H1"
+      "notes": "H1",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "vsp-one-object-with-on-premise-native-s3-tables-for-data-lakehouse-ai-and-analytic-workloa-234",
@@ -6083,7 +7015,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Mark Geel",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "Create promotion plan",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; No Promo"
     },
     {
       "id": "vsp-one-object-cohasset-compliance-assessment-paper-analyst-report-235",
@@ -6109,7 +7045,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Mark Geel",
       "publishedByVendor": "Cohasset",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "Retire, replace, or update content",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; Expired/Update"
     },
     {
       "id": "webinar-title-tbd-gigaom-2027-radar-webinar-236",
@@ -6135,7 +7075,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Mark Geel",
       "publishedByVendor": "GigaOm / Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "what-ctos-need-to-know-about-modern-ai-storage-blog-237",
@@ -6161,7 +7105,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u26a0\ufe0f POTENTIAL DUPLICATE \u2014 Review with \"What CTOs Need to Know About Modern AI Storage\" (Campaign: AI Data Foundation). @stephanie.thompson@hitachivantara.com @sulochna.khokhrai@hitachivantara.com \u2014 Flagged by Smart Assist 10/1/2026."
+      "notes": "\u26a0\ufe0f POTENTIAL DUPLICATE \u2014 Review with \"What CTOs Need to Know About Modern AI Storage\" (Campaign: AI Data Foundation). @stephanie.thompson@hitachivantara.com @sulochna.khokhrai@hitachivantara.com \u2014 Flagged by Smart Assist 10/1/2026.",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "what-it-teams-need-to-know-before-a-mainframe-refresh-blog-238",
@@ -6187,7 +7135,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "what-s-next-is-not-more-ai-it-s-better-foundations-blog-239",
@@ -6213,7 +7165,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "Add customer-facing URL",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; No URL"
     },
     {
       "id": "why-hitachi-vantara-ebook-240",
@@ -6239,7 +7195,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Stephanie Thompson, Sulochna Khokhrai",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "why-infrastructure-platform-consumption-services-matter-now-blog-241",
@@ -6265,7 +7225,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "Add customer-facing URL",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; No URL"
     },
     {
       "id": "why-is-software-defined-storage-critical-for-unlocking-the-power-of-data-webinar-242",
@@ -6291,7 +7255,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Stephanie Thompson, Sulochna Khokhrai",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "Review content freshness (12+ months)",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; 12+ Months Old"
     },
     {
       "id": "why-sap-hana-resilience-matters-as-much-as-scale-blog-243",
@@ -6317,7 +7285,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "Add customer-facing URL",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; No URL"
     },
     {
       "id": "why-your-ai-strategy-needs-both-shared-and-shared-nothing-storage-blog-244",
@@ -6343,7 +7315,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "Add customer-facing URL",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; No URL"
     },
     {
       "id": "why-zero-trust-storage-eight-9s-availability-are-non-negotiable-blog-245",
@@ -6369,7 +7345,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "H1"
+      "notes": "H1",
+      "actionRequired": "Add customer-facing URL",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; No URL"
     },
     {
       "id": "yapi-kredi-delivering-banking-services-to-millions-of-customers-with-sustainable-cost-effi-246",
@@ -6395,7 +7375,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Jennifer Schmitz",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u00a0"
+      "notes": "\u00a0",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "your-postgresql-environment-with-hitachi-vsp-one-and-integrated-systems-infographic-247",
@@ -6421,7 +7405,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "melissa.zelyez@hitachivantara.com",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "zhejiang-daily-press-group-optimizes-the-user-experience-with-hitachi-content-platform-cus-248",
@@ -6447,7 +7435,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Jennifer Schmitz",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": "H1"
+      "notes": "H1",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "mastering-the-art-of-ai-success-webinar-249",
@@ -6473,7 +7465,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Jeff Lundberg",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "Review content freshness (12+ months)",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; 12+ Months Old"
     },
     {
       "id": "starcio-with-isaac-ai-infrastructure-debt-capacity-resiliency-and-modernization-strategies-250",
@@ -6499,7 +7495,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Sakina Peshawarwala",
       "publishedByVendor": "",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "Create promotion plan",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; No Promo"
     },
     {
       "id": "the-gap-between-ai-capable-and-ai-ready-blog-251",
@@ -6525,7 +7525,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "Add customer-facing URL",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; No URL"
     },
     {
       "id": "cio-with-joe-morris-the-cio-balancing-act-business-continuity-and-ai-ambition-webinar-252",
@@ -6551,7 +7555,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Sakina Peshawarwala",
       "publishedByVendor": "",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "Create promotion plan",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; No Promo"
     },
     {
       "id": "share-your-mainframe-isn-t-designed-to-go-down-neither-is-our-storage-253",
@@ -6572,12 +7580,16 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "",
       "marketingEmail": null,
-      "salesEmail": null,
+      "salesEmail": "https://hitachivantara.sharepoint.com/:w:/s/GlobalCampaignsAssets505/IQAXZwSXWCSfQJUErceorQPvASIWYVmZF0XoRUG0-EZvsLU?e=nXmdxw",
       "usedInCampaign": "No",
       "promotionPeriod": "2H",
       "ownerIndividual": "Sakina Peshawarwala",
       "publishedByVendor": "",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "Create promotion plan",
+      "abstract": "",
+      "partnerCampaignLink": "https://stwb.co/eheazzs",
+      "issueType": "; No Promo"
     },
     {
       "id": "influencer-fireside-chat-webinar-254",
@@ -6603,7 +7615,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Sakina Peshawarwala",
       "publishedByVendor": "",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "Create promotion plan",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": "; No Promo"
     },
     {
       "id": "educause-webinar-resilience-in-the-ai-era-webinar-255",
@@ -6629,7 +7645,11 @@
       "promotionPeriod": "2H",
       "ownerIndividual": "Karina Andrade",
       "publishedByVendor": "EDUCAUSE",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "https-www-hitachivantara-com-en-us-pdfviewer-ebook-from-legacy-velocity-ebook-256",
@@ -6655,7 +7675,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Angela Romberg",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     },
     {
       "id": "modernize-it-with-hitachi-vsp-one-midrange-block-storage-257",
@@ -6681,7 +7705,11 @@
       "promotionPeriod": "1H",
       "ownerIndividual": "Angela Romberg, Jennifer Schmitz",
       "publishedByVendor": "Hitachi Vantara",
-      "notes": ""
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "issueType": ""
     }
   ]
 }
