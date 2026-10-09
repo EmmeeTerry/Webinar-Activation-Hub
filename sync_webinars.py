@@ -64,6 +64,7 @@ WEBINAR_COLUMN_MAP = {
     "paidSocial":       "Paid Social",
     "social":           "Sprout Social",
     "attendance":       "Attendance Report",
+    "abstract":         "Abstract",
 }
 
 # Fields whose Smartsheet column is a hyperlink cell, but where we want the visible
@@ -273,6 +274,7 @@ def transform(webinar_rows, content_rows):
             "activationStatus": w.get("activationStatus") or "",
             "readiness": readiness_from(w.get("activationStatus")),
             "whyUse": why_use(w.get("audience"), w.get("useCase")),
+            "abstract": w.get("abstract") or "",
             "links": {
                 "watch": w.get("watch") or None,
                 "marketingEmail": w.get("marketingEmail") or None,
