@@ -124,6 +124,9 @@ h1{font-family:"Hitachi Sans",Arial,Helvetica,sans-serif;font-weight:400;font-si
   <div class="toolbar">
     <input id="search" class="search" placeholder="Search by webinar, campaign, use case, owner, audience, region…">
     <div id="chips" class="chips"></div>
+    <div style="margin-top:14px">
+      <button class="btn" id="copyLinkBtn" onclick="copyShareLink()">Copy link to this view</button>
+    </div>
   </div>
   <div id="summary" class="summary"></div>
   <div id="content"></div>
@@ -193,11 +196,64 @@ function filters(){
 function makeChips(){
   document.getElementById('chips').innerHTML=filters().map(f=>`<button class="chip ${activeFilter===f?'active':''}" onclick="setFilter('${esc(f).replace(/'/g,"\\'")}')">${esc(f)}</button>`).join('');
 }
-function setFilter(f){activeFilter=f; makeChips(); render();}
+function setFilter(f){activeFilter=f; makeChips(); updateURL(); render();}
+
+// ---- Shareable-link support: read/write filter state to the URL's query string ----
+function applyFiltersFromURL(){
+  const params = new URLSearchParams(location.search);
+  if(params.has('filter')) activeFilter = params.get('filter');
+  if(params.has('q')){
+    const s = document.getElementById('search');
+    if(s) s.value = params.get('q');
+  }
+}
+function updateURL(){
+  const params = new URLSearchParams();
+  if(activeFilter && activeFilter !== 'All') params.set('filter', activeFilter);
+  const q = document.getElementById('search').value.trim();
+  if(q) params.set('q', q);
+  const qs = params.toString();
+  history.replaceState(null, '', location.pathname + (qs ? '?' + qs : ''));
+}
+function flashButton(btn, text){
+  const original = btn.textContent;
+  btn.textContent = text;
+  setTimeout(() => { btn.textContent = original; }, 2200);
+}
+function fallbackCopy(text, btn){
+  try {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.left = '-9999px';
+    document.body.appendChild(ta);
+    ta.focus();
+    ta.select();
+    const ok = document.execCommand('copy');
+    document.body.removeChild(ta);
+    if(ok){ flashButton(btn, 'Link copied!'); return; }
+  } catch(e) {}
+  window.prompt('Copy this link:', text);
+}
+function copyShareLink(){
+  updateURL();
+  const btn = document.getElementById('copyLinkBtn');
+  const url = location.href;
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(url).then(() => {
+      flashButton(btn, 'Link copied!');
+    }).catch(() => {
+      fallbackCopy(url, btn);
+    });
+  } else {
+    fallbackCopy(url, btn);
+  }
+}
+
 function filtered(){
  const q=document.getElementById('search').value.trim().toLowerCase();
  return DATA.filter(w=>{
-   const hay=[w.title,w.campaign,w.useCase,w.audience,w.region,w.owner,w.status].join(' ').toLowerCase();
+   const hay=[w.title,w.campaign,w.useCase,w.audience,w.region,w.owner,w.status,w.abstract].join(' ').toLowerCase();
    const qok=!q||hay.includes(q);
    let fok=true;
    if(activeFilter==='Upcoming'||activeFilter==='Planned'||activeFilter==='On Demand') fok=w.status===activeFilter;
@@ -302,6 +358,7 @@ function openModal(id){
  document.getElementById('mBody').innerHTML=`
   <div>
     <div class="box"><h3>When to use it</h3><div class="why">${esc(w.whyUse)}</div></div>
+    ${w.abstract ? `<div class="box"><h3>Abstract</h3><div class="why">${esc(w.abstract)}</div></div>` : ''}
     <div class="box"><h3>Activation resources</h3><div class="resource-grid">${resources.map(([n,u])=>u?`<a class="resource-btn" href="${esc(u)}" target="_blank">${esc(n)} ↗</a>`:`<div class="resource-btn unavailable">${esc(n)} · not available</div>`).join('')}</div></div>
     <div class="box"><h3>Related campaign resources</h3><div class="resource-list">${(w.relatedResources||[]).map(r=>`<a class="resource" href="${esc(r.url)}" target="_blank"><strong>${esc(r.title)}</strong><span>${esc(r.type)}</span></a>`).join('')||'<div class="note">No related resources matched automatically.</div>'}</div></div>
   </div>
@@ -315,8 +372,8 @@ function openModal(id){
 }
 function closeModal(){document.getElementById('modal').classList.remove('open')}
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
-document.getElementById('search').addEventListener('input',render);
-function init(){makeChips();render();renderSpotlight()}
+document.getElementById('search').addEventListener('input',()=>{updateURL();render();});
+function init(){applyFiltersFromURL();makeChips();render();renderSpotlight()}
 loadData();
 </script>
 </body>
