@@ -83,10 +83,28 @@ h1{font-family:"Hitachi Sans",Arial,Helvetica,sans-serif;font-weight:400;font-si
 .meta{font-size:11px;color:var(--gray4);line-height:1.5}
 .meta strong{color:var(--gray6)}
 .tag{font-size:9px;border:1px solid var(--gray2);border-radius:999px;padding:3px 7px;color:var(--gray5);background:var(--white);display:inline-block;margin-top:4px}
+.abstract-snippet{font-size:11px;color:var(--gray4);line-height:1.4;margin-top:4px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .tag.green{background:var(--red-half);color:var(--red2);border-color:#F6BFC3}
 .empty{padding:28px;text-align:center;color:var(--gray4);background:var(--white);border:1px dashed var(--gray3);border-radius:3px;margin-top:18px}
 .footer{margin-top:36px;padding-top:18px;border-top:1px solid var(--gray2);font-size:10px;color:var(--gray4);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 .footer strong{color:var(--gray6)}
+.modal{position:fixed;inset:0;background:rgba(12,12,12,.56);display:none;align-items:flex-start;justify-content:center;padding:40px 18px;z-index:40;overflow:auto}
+.modal.open{display:flex}
+.modal-card{background:var(--white);width:min(980px,100%);border-radius:4px;box-shadow:0 20px 50px rgba(12,12,12,.3);overflow:hidden;border-top:5px solid var(--red1)}
+.modal-head{padding:24px 26px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:20px}
+.modal-head h2{font-family:"Hitachi Sans",Arial,Helvetica,sans-serif;font-size:26px;font-weight:400;line-height:1.2;margin:0 0 9px;color:var(--black)}
+.modal-tags{display:flex;flex-wrap:wrap;gap:6px}
+.modal-body{padding:24px 26px;display:grid;grid-template-columns:1.15fr .85fr;gap:24px}
+.modal-box{border:1px solid var(--line);border-radius:3px;padding:15px;margin-bottom:12px;background:var(--white)}
+.modal-box h3{font-size:13px;margin:0 0 10px;color:var(--gray6)}
+.modal-close{border:1px solid var(--gray2);background:var(--white);border-radius:50%;width:34px;height:34px;font-size:20px;cursor:pointer;color:var(--black);flex-shrink:0}
+.resource-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.resource-btn{padding:11px;border:1px solid var(--black);border-radius:2px;text-decoration:none;font-size:11px;font-weight:700;background:var(--white);color:var(--black);display:block;text-align:center}
+.resource-btn:hover{background:var(--black);color:var(--white)}
+.resource-btn.unavailable{color:var(--gray3);border-color:var(--gray2);background:var(--gray1);pointer-events:none}
+.modal-meta{font-size:13px;color:var(--gray5);line-height:1.8}
+.modal-meta strong{color:var(--gray6)}
+@media(max-width:900px){.modal-body{grid-template-columns:1fr}}
 .btn.small{padding:6px 9px;font-size:9px;display:block;text-align:center;margin-bottom:5px;width:100%}
 .btn.small:last-child{margin-bottom:0}
 @media(max-width:900px){.row{grid-template-columns:1fr;gap:6px}.topbar{flex-direction:column}.snapshot{text-align:left}}
@@ -128,6 +146,16 @@ h1{font-family:"Hitachi Sans",Arial,Helvetica,sans-serif;font-weight:400;font-si
 
   <div class="footer">
     <div><strong>Content Library</strong> &middot; sourced from the Content Mapping Master List in Smartsheet, refreshed automatically.</div>
+  </div>
+</div>
+
+<div id="modal" class="modal" onclick="if(event.target===this) closeModal()">
+  <div class="modal-card">
+    <div class="modal-head">
+      <div><h2 id="mTitle"></h2><div id="mTags" class="modal-tags"></div></div>
+      <button class="modal-close" onclick="closeModal()">&times;</button>
+    </div>
+    <div id="mBody" class="modal-body"></div>
   </div>
 </div>
 
@@ -230,7 +258,8 @@ function csvEscape(v){
 }
 function toCSV(items){
   const cols = ['title','type','campaign','useCase','funnelStage','ownerTeam','audience','status','region',
-                'publishDateDisplay','usedInCampaign','promotionPeriod','primaryActivation','paidMediaDateDisplay','url'];
+                'publishDateDisplay','usedInCampaign','promotionPeriod','primaryActivation','paidMediaDateDisplay','url',
+                'abstract','partnerCampaignLink'];
   const header = cols.join(',');
   const rows = items.map(it => cols.map(c => csvEscape(it[c])).join(','));
   return [header, ...rows].join('\n');
@@ -345,7 +374,7 @@ function toggleMultiFilter(key, value){
 function filtered(){
   const q = document.getElementById('search').value.trim().toLowerCase();
   return DATA.filter(item => {
-    const hay = [item.title,item.campaign,item.useCase,item.ownerTeam,item.audience,item.region,item.type,item.status,item.usedInCampaign,item.promotionPeriod,item.funnelStage,item.primaryActivation,item.ownerIndividual,item.publishedByVendor,item.notes].join(' ').toLowerCase();
+    const hay = [item.title,item.campaign,item.useCase,item.ownerTeam,item.audience,item.region,item.type,item.status,item.usedInCampaign,item.promotionPeriod,item.funnelStage,item.primaryActivation,item.ownerIndividual,item.publishedByVendor,item.notes,item.abstract].join(' ').toLowerCase();
     const qok = !q || hay.includes(q);
     const fok = FILTER_FIELDS.every(f => {
       const v = activeFilters[f.key];
@@ -372,8 +401,9 @@ function row(item){
   if(item.url) links.push(`<a class="btn small" href="${esc(item.url)}" target="_blank">Open &#8599;</a>`);
   if(item.marketingEmail) links.push(`<a class="btn small" href="${esc(item.marketingEmail)}" target="_blank">Marketing Email &#8599;</a>`);
   if(item.salesEmail) links.push(`<a class="btn small" href="${esc(item.salesEmail)}" target="_blank">Sales Email &#8599;</a>`);
+  if(item.partnerCampaignLink) links.push(`<a class="btn small" href="${esc(item.partnerCampaignLink)}" target="_blank">Partner Campaign &#8599;</a>`);
   return `<div class="row">
-    <div><div class="row-title">${item.url?`<a href="${esc(item.url)}" target="_blank" style="color:inherit;text-decoration:none">${esc(item.title)}</a>`:esc(item.title)}</div>${item.type?`<span class="tag">${esc(item.type)}</span>`:''}${item.partnerUse?`<span class="tag green">Partner-use</span>`:''}</div>
+    <div><div class="row-title" style="cursor:pointer" onclick="openModal('${esc(item.id)}')">${esc(item.title)}</div>${item.abstract?`<div class="abstract-snippet">${esc(item.abstract)}</div>`:''}${item.type?`<span class="tag">${esc(item.type)}</span>`:''}${item.partnerUse?`<span class="tag green">Partner-use</span>`:''}</div>
     <div class="meta"><strong>${esc(item.campaign||'\u2014')}</strong><br>${esc(item.useCase||'')}</div>
     <div class="meta">${item.primaryActivation?`<strong>${esc(item.primaryActivation)}</strong><br>`:''}${item.paidMediaDateDisplay?'Paid media: '+esc(item.paidMediaDateDisplay):(item.primaryActivation?'':'\u2014')}</div>
     <div class="meta">${esc(item.audience||'\u2014')}<br>${esc(item.region||'')}</div>
@@ -381,6 +411,51 @@ function row(item){
     <div>${links.join('')}</div>
   </div>`;
 }
+function openModal(id){
+  const item = DATA.find(x => x.id === id); if(!item) return;
+  document.getElementById('mTitle').textContent = item.title;
+  document.getElementById('mTags').innerHTML = [
+    item.type, item.partnerUse ? 'Partner-use' : null
+  ].filter(Boolean).map(t => `<span class="tag">${esc(t)}</span>`).join('');
+
+  const resources = [
+    ['Open asset', item.url],
+    ['Marketing email', item.marketingEmail],
+    ['Sales outreach email', item.salesEmail],
+    ['Partner campaign link', item.partnerCampaignLink],
+  ];
+
+  document.getElementById('mBody').innerHTML = `
+    <div>
+      ${item.abstract ? `<div class="modal-box"><h3>Abstract</h3><div class="modal-meta">${esc(item.abstract)}</div></div>` : ''}
+      ${item.notes ? `<div class="modal-box"><h3>Notes</h3><div class="modal-meta">${esc(item.notes)}</div></div>` : ''}
+      <div class="modal-box"><h3>Promotional resources</h3><div class="resource-grid">${resources.map(([n,u]) =>
+        u ? `<a class="resource-btn" href="${esc(u)}" target="_blank">${esc(n)} &#8599;</a>`
+          : `<div class="resource-btn unavailable">${esc(n)} &middot; not available</div>`
+      ).join('')}</div></div>
+    </div>
+    <div>
+      <div class="modal-box"><h3>Details</h3>
+        <div class="modal-meta">
+          <strong>Campaign:</strong> ${esc(item.campaign || '\u2014')}<br>
+          <strong>Use case:</strong> ${esc(item.useCase || '\u2014')}<br>
+          <strong>Funnel stage:</strong> ${esc(item.funnelStage || '\u2014')}<br>
+          <strong>Owner team:</strong> ${esc(item.ownerTeam || '\u2014')}<br>
+          <strong>Owner individual:</strong> ${esc(item.ownerIndividual || '\u2014')}<br>
+          <strong>Audience:</strong> ${esc(item.audience || '\u2014')}<br>
+          <strong>Region:</strong> ${esc(item.region || '\u2014')}<br>
+          <strong>Status:</strong> ${esc(item.status || '\u2014')}<br>
+          <strong>Publish date:</strong> ${esc(item.publishDateDisplay || '\u2014')}<br>
+          <strong>Promotion period:</strong> ${esc(item.promotionPeriod || '\u2014')}<br>
+          <strong>Primary activation:</strong> ${esc(item.primaryActivation || '\u2014')}
+        </div>
+      </div>
+    </div>`;
+  document.getElementById('modal').classList.add('open');
+}
+function closeModal(){ document.getElementById('modal').classList.remove('open'); }
+document.addEventListener('keydown', e => { if(e.key === 'Escape') closeModal(); });
+
 const SORT_COLUMNS = [
   {label:'Title', key:'title'},
   {label:'Campaign / Use Case', key:'campaign'},
