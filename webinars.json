@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-10-09T16:08:49.944908+00:00",
+  "lastRefreshed": "2026-10-09T18:08:20.572892+00:00",
   "webinars": [
     {
       "id": "the-economics-of-modern-storage-infrastructure-lower-risk-faster-ai-value-better-roi",
@@ -17,6 +17,7 @@
       "activationStatus": "Activation Ready",
       "readiness": "Activation ready",
       "whyUse": "Use this for enterprise, midmarket conversations around data platform architectures & economics.",
+      "abstract": "To succeed with AI and wider digital transformation efforts, businesses need an advanced data infrastructure to cope with the high demands of modern technology. That means silos, legacy IT, and slow processing speeds have to be replaced by systems that drive faster decision making and deliver game changing insight among other things. And all this needs to be delivered with security at the front and centre.\n\nSo, what steps must IT leaders take? In this CIO webcast, with Hitachi Vantara and Brocade, we will explore how to build an integrated, resilient, autonomous and future ready data infrastructure.\n\nKey learning points:\n\n- Predictable performance and Tier-0 resilience to reduce risk and protect ROI\n- Cut cost and complexity by eliminating silos and avoiding the \u201cmigration tax\u201d\n- Plan for quantum-safe security and energy-efficient scaling across environments",
       "links": {
         "watch": "https://www.brighttalk.com/webcast/12821/659254",
         "marketingEmail": "https://brand.hitachivantara.com/guidelines/guide/00542d60-e1a7-4da7-9e5f-133c03191dbc",
@@ -77,6 +78,7 @@
       "activationStatus": "Activation Ready",
       "readiness": "Activation ready",
       "whyUse": "Use this for enterprise conversations around data readiness and activation for ai.",
+      "abstract": "AI has moved to production\u2014but data readiness lags behind. AI isn\u2019t compute-bound\u2014it\u2019s data-bound. Transforming fragmented and siloed data into governed, reusable, AI-ready assets is essential.\n\nJoin Hitachi Vantara and GigaOm as we explore how modern object storage is becoming the AI foundation. Learn what\u2019s changed, why it matters now, and how leading organizations are rethinking object storage as the backbone of AI. In this session, you will:\n\u2022 Understand why AI is reshaping storage requirements\u2014and why object storage is now the primary data plane for AI, analytics, and unstructured data.\n\u2022 Learn what makes object storage truly \u201cAI\u2011ready,\u201d including scale\u2011out architectures for linear growth, built-in security, efficient small object handling and metadata management.\n\u2022 Hear an independent analyst's perspective on where the object storage market is heading and what to expect over the next 12\u201318 months.",
       "links": {
         "watch": "https://www.brighttalk.com/webcast/12821/665302",
         "marketingEmail": "https://brand.hitachivantara.com/guidelines/guide/207608cc-f422-4ffc-93b5-773dcdece4fb/page/7a2ed2c6-3b66-4ad4-ac47-e300d6d10135",
@@ -137,6 +139,7 @@
       "activationStatus": "Activation Ready",
       "readiness": "Activation ready",
       "whyUse": "Use this for enterprise, midmarket conversations around cyber risk mitigation & recovery.",
+      "abstract": "When an attack hits, your ability to recover quickly and confidently depends on the resilience of your data, the intelligence of your detection, and the speed of your recovery infrastructure.\n\nIn this 45-minute session, Hitachi Vantara, VM2020, and Index Engines will show how their solutions \u2014 Virtual Storage Platform One, CyberVR, and CyberSense \u2014 work individually and together to give organizations a clear path from attack to a faster, validated recovery.\n\nWhat You\u2019ll Walk Away With:\n\u2022 Guidance on building ransomware resilience, starting from wherever you are today\n\u2022 A practical approach for ongoing resilience management \u2014 including how to use continuous validation, audit-ready reporting, and policy enforcement to stay compliant and recovery-ready, not just when an attack hits, but every day\n\u2022 A clear understanding of the gap between \u201cwe have backups\u201d and \u201cwe can actually recover\u201d \u2014 and how to close it\n\u2022 Live demo: a simulated ransomware recovery scenario walked end-to-end across the joint solution\n\u2022 A forensics-first mindset: how to know what was hit, what\u2019s clean, and what\u2019s safe to restore\n\u2022 A look at how automated recovery orchestration delivers repeatable workflows that shrink recovery time from days to hours",
       "links": {
         "watch": "https://www.brighttalk.com/webcast/12821/669090",
         "marketingEmail": "https://brand.hitachivantara.com/guidelines/guide/00542d60-e1a7-4da7-9e5f-133c03191dbc/page/e5dcf9d5-8b2a-4907-86cf-6a7658fc8e08",
@@ -197,6 +200,7 @@
       "activationStatus": "Partial",
       "readiness": "Partially ready",
       "whyUse": "Use this for enterprise conversations around data readiness and activation for ai.",
+      "abstract": "To succeed with AI and wider digital transformation efforts, businesses need an advanced data infrastructure to cope with the high demands of modern technology. That means silos, legacy IT, and slow processing speeds have to be replaced by systems that drive faster decision making and deliver game changing insight among other things. And all this needs to be delivered with security at the front and centre.\n\nSo, what steps must IT leaders take? In this CIO webcast, with Hitachi Vantara and Brocade, we will explore how to build an integrated, resilient, autonomous and future ready data infrastructure.\n\nKey learning points:\n\n- Predictable performance and Tier-0 resilience to reduce risk and protect ROI\n- Cut cost and complexity by eliminating silos and avoiding the \u201cmigration tax\u201d\n- Plan for quantum-safe security and energy-efficient scaling across environments",
       "links": {
         "watch": "https://www.brighttalk.com/webcast/12821/672306?",
         "marketingEmail": "N/A",
@@ -257,6 +261,7 @@
       "activationStatus": "Activation Ready",
       "readiness": "Activation ready",
       "whyUse": "Use this for enterprise, midmarket conversations around data platform architectures & economics.",
+      "abstract": "As AI moves from pilot to production, infrastructure gaps become harder to ignore. Performance bottlenecks slow data delivery. Fragmented environments complicate governance. Poor workload placement increases cost, risk, and operational complexity.\n\nThe question is no longer whether to modernize. It is where to start without creating another disruptive transformation project.\n\nJoin Simon Robinson, Chief Analyst - Omdia, and Andy Gremett, Senior Product Marketing Manager - Hitachi Vantara, for a practical discussion based on recent data-modernization research. You will learn how to identify your most urgent infrastructure constraint, make more intentional workload-placement decisions, and build a modernization plan that delivers measurable value in manageable steps.\n\nIn this webinar, you'll learn how to:\n\u2022 Prepare data infrastructure for production AI\n\u2022 Place workloads where they perform best\n\u2022 Balance cost, control, and resilience\n\u2022 Identify the right place to start modernization\n\u2022 Apply a practical five-step modernization framework",
       "links": {
         "watch": "https://www.brighttalk.com/webcast/12821/675775",
         "marketingEmail": "https://brand.hitachivantara.com/guidelines/guide/00542d60-e1a7-4da7-9e5f-133c03191dbc/page/e1ce0b1f-5759-4c1a-9b0b-3982483807cf",
@@ -317,10 +322,11 @@
       "activationStatus": "Partial",
       "readiness": "Partially ready",
       "whyUse": "Use this for enterprise conversations around data platform architectures & economics.",
+      "abstract": "Mainframe migration is no longer just a refresh-cycle decision. Organizations need a strategy that minimizes disruption, maintains availability, and supports long-term modernization goals. In this webinar, experts discuss how to plan ahead, reduce migration risk, preserve business continuity, and create a roadmap that extends beyond the next infrastructure refresh. Learn key considerations, best practices, and practical steps to prepare for a successful transition while keeping critical workloads running smoothly.",
       "links": {
         "watch": "https://www.brighttalk.com/webcast/12821/677181",
         "marketingEmail": "N/A",
-        "salesEmail": "N/A",
+        "salesEmail": "https://hitachivantara.sharepoint.com/:w:/s/GlobalCampaignsAssets505/IQAXZwSXWCSfQJUErceorQPvASIWYVmZF0XoRUG0-EZvsLU?e=nXmdxw",
         "paidSocial": "N/A",
         "social": "N/A",
         "attendance": "https://hdscorp.lightning.force.com/lightning/r/sObject/00OaZ00000DjKXlUAN/view?queryScope=userFolders"
@@ -377,6 +383,7 @@
       "activationStatus": "Not Started",
       "readiness": "Planning",
       "whyUse": "",
+      "abstract": "",
       "links": {
         "watch": null,
         "marketingEmail": "N/A",
@@ -404,6 +411,7 @@
       "activationStatus": "",
       "readiness": "Planning",
       "whyUse": "Use this for enterprise, midmarket conversations around cyber risk mitigation & recovery.",
+      "abstract": "",
       "links": {
         "watch": null,
         "marketingEmail": "Coming Soon",
@@ -464,6 +472,7 @@
       "activationStatus": "Not Started",
       "readiness": "Planning",
       "whyUse": "",
+      "abstract": "",
       "links": {
         "watch": null,
         "marketingEmail": "N/A",
@@ -491,6 +500,7 @@
       "activationStatus": "Not Required",
       "readiness": "Planning",
       "whyUse": "Use this for enterprise conversations around data readiness and activation for ai.",
+      "abstract": "Every campus has a breach story. The only question is whether yours has been written yet. In this candid talk on cyber resilience, we discuss the true fallout from a cyberattack \u2014 and why one is inevitable. AI has turned vulnerability discovery into an arms race between developers and hackers, greatly increasing the cost of digital debt from unpatched systems.   At the same time, data exfiltration and traditional backup approaches leave institutions at risk, even when their data is fully recoverable. Join us to learn about the methods of protection available and the gaps that still remain in your planning.   Learning Outcomes:   Explain why breaches are inevitable and how AI accelerates both exploit discovery and patch cycles   Identify the modern complexities of cyber resilience, including exfiltration, the gaps in traditional disaster recovery, cyber insurance pitfalls, and regulatory concerns   Build a data-driven case for the funding needed to improve your overall resilience",
       "links": {
         "watch": null,
         "marketingEmail": "N/A",
@@ -551,6 +561,7 @@
       "activationStatus": "Not Started",
       "readiness": "Planning",
       "whyUse": "",
+      "abstract": "",
       "links": {
         "watch": null,
         "marketingEmail": "N/A",
@@ -578,6 +589,7 @@
       "activationStatus": "Not Started",
       "readiness": "Planning",
       "whyUse": "Use this for enterprise conversations around high performance ai-ready infrastructure.",
+      "abstract": "",
       "links": {
         "watch": null,
         "marketingEmail": "Coming Soon",
@@ -638,6 +650,7 @@
       "activationStatus": "",
       "readiness": "Planning",
       "whyUse": "Use this for enterprise, midmarket conversations around cyber risk mitigation & recovery.",
+      "abstract": "",
       "links": {
         "watch": null,
         "marketingEmail": "Coming Soon",
@@ -698,6 +711,7 @@
       "activationStatus": "Not Started",
       "readiness": "Planning",
       "whyUse": "Use this for enterprise, midmarket conversations around data platform architectures & economics.",
+      "abstract": "",
       "links": {
         "watch": null,
         "marketingEmail": "N/A",
@@ -758,6 +772,7 @@
       "activationStatus": "Not Required",
       "readiness": "Planning",
       "whyUse": "Use this for enterprise conversations around data readiness and activation for ai.",
+      "abstract": "",
       "links": {
         "watch": null,
         "marketingEmail": "N/A",
@@ -818,6 +833,7 @@
       "activationStatus": "Not Started",
       "readiness": "Planning",
       "whyUse": "Use this for enterprise, midmarket conversations around data platform architectures & economics.",
+      "abstract": "",
       "links": {
         "watch": null,
         "marketingEmail": "N/A",
@@ -878,6 +894,7 @@
       "activationStatus": "Not Started",
       "readiness": "Planning",
       "whyUse": "Use this for enterprise, midmarket conversations around data platform architectures & economics.",
+      "abstract": "",
       "links": {
         "watch": null,
         "marketingEmail": "Coming Soon",
