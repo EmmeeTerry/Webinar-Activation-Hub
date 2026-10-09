@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-10-09T08:41:51.831368+00:00",
+  "lastRefreshed": "2026-10-09T10:41:09.655452+00:00",
   "items": [
     {
       "id": "10-reasons-to-buy-build-or-borrow-ai-implementation-ebook-1",
@@ -1697,7 +1697,7 @@
       "url": "https://www.hitachivantara.com/en-us/gated-forms/dcig-top-5-midrange-hybrid-cloud-vsp-one-block",
       "type": "Analyst Report",
       "campaign": "Data Modernization & Resilience",
-      "useCase": "Hybrid Cloud Platform & Operations",
+      "useCase": "Data Platform Architectures & Economics, Hybrid Cloud Platform & Operations",
       "funnelStage": "MOFU",
       "ownerTeam": "PMM",
       "audience": "Midmarket",
@@ -1708,7 +1708,7 @@
       "partnerUse": false,
       "paidMediaDate": null,
       "paidMediaDateDisplay": "",
-      "primaryActivation": "Outbound Email",
+      "primaryActivation": "Outbound Email, Nurture Email",
       "marketingEmail": null,
       "salesEmail": null,
       "usedInCampaign": "Yes",
@@ -6648,7 +6648,7 @@
       "partnerUse": false,
       "paidMediaDate": null,
       "paidMediaDateDisplay": "",
-      "primaryActivation": "Outbound Email",
+      "primaryActivation": "Outbound Email, Nurture Email",
       "marketingEmail": null,
       "salesEmail": null,
       "usedInCampaign": "Yes",
@@ -6674,7 +6674,7 @@
       "partnerUse": true,
       "paidMediaDate": null,
       "paidMediaDateDisplay": "",
-      "primaryActivation": "Sales Email",
+      "primaryActivation": "Nurture Email, Sales Email",
       "marketingEmail": null,
       "salesEmail": "https://hitachivantara.sharepoint.com/:w:/s/GlobalCampaignsAssets505/IQAD0OwMENoNQoQuGVEUGIlyAazP4KDxYTXBjL2y0P_VB9g?e=YvUVJY",
       "usedInCampaign": "Yes",
