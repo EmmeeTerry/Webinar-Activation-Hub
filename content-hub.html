@@ -411,6 +411,46 @@ function row(item){
     <div>${links.join('')}</div>
   </div>`;
 }
+function todayStr(){
+  const now = new Date();
+  return now.getFullYear()+'-'+String(now.getMonth()+1).padStart(2,'0')+'-'+String(now.getDate()).padStart(2,'0');
+}
+function emailLink(item){
+  const subject = encodeURIComponent((item.type || 'Content') + ': ' + item.title);
+  const bodyLines = [
+    item.abstract || '',
+    '',
+    'Publish date: ' + (item.publishDateDisplay || 'TBD'),
+    item.url ? ('Link: ' + item.url) : ''
+  ].filter(Boolean);
+  return 'mailto:?subject=' + subject + '&body=' + encodeURIComponent(bodyLines.join('\n'));
+}
+function icsEscape(s){ return (s||'').replace(/[\\;,]/g, m => '\\'+m).replace(/\n/g,'\\n'); }
+function downloadICS(id){
+  const item = DATA.find(x => x.id === id); if(!item || !item.publishDate) return;
+  const dt = item.publishDate.replace(/-/g,'');
+  const next = new Date(item.publishDate+'T00:00:00'); next.setDate(next.getDate()+1);
+  const dtEnd = next.getFullYear()+String(next.getMonth()+1).padStart(2,'0')+String(next.getDate()).padStart(2,'0');
+  const stamp = new Date().toISOString().replace(/[-:]/g,'').split('.')[0]+'Z';
+  const lines = [
+    'BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Hitachi Vantara//Content Library//EN','BEGIN:VEVENT',
+    'UID:'+item.id+'@content-library',
+    'DTSTAMP:'+stamp,
+    'DTSTART;VALUE=DATE:'+dt,
+    'DTEND;VALUE=DATE:'+dtEnd,
+    'SUMMARY:'+icsEscape(item.title),
+    'DESCRIPTION:'+icsEscape(item.abstract || ''),
+  ];
+  if(item.url) lines.push('URL:'+item.url);
+  lines.push('END:VEVENT','END:VCALENDAR');
+  const blob = new Blob([lines.join('\r\n')], {type:'text/calendar;charset=utf-8;'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = (item.title||'content').replace(/[^a-z0-9]+/gi,'-').toLowerCase()+'.ics';
+  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
 function openModal(id){
   const item = DATA.find(x => x.id === id); if(!item) return;
   document.getElementById('mTitle').textContent = item.title;
@@ -433,6 +473,14 @@ function openModal(id){
         u ? `<a class="resource-btn" href="${esc(u)}" target="_blank">${esc(n)} &#8599;</a>`
           : `<div class="resource-btn unavailable">${esc(n)} &middot; not available</div>`
       ).join('')}</div></div>
+      <div class="modal-box"><h3>Share</h3><div class="resource-grid">
+        <a class="resource-btn" href="${emailLink(item)}">Email this</a>
+        ${item.type === 'Webinar' && item.publishDate ? (
+          item.publishDate >= todayStr()
+            ? `<a class="resource-btn" href="#" onclick="event.preventDefault();downloadICS('${esc(item.id)}')">Add to calendar</a>`
+            : `<div class="resource-btn unavailable">Add to calendar &middot; already passed</div>`
+        ) : ''}
+      </div></div>
     </div>
     <div>
       <div class="modal-box"><h3>Details</h3>
