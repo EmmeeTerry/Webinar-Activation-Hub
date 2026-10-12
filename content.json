@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-10-12T16:41:22.523083+00:00",
+  "lastRefreshed": "2026-10-12T18:46:35.436831+00:00",
   "items": [
     {
       "id": "10-reasons-to-buy-build-or-borrow-ai-implementation-ebook-1",
@@ -3821,7 +3821,7 @@
       "funnelStage": "BOFU",
       "ownerTeam": "PMM",
       "audience": "Enterprise, Midmarket",
-      "status": "Planned",
+      "status": "Expired",
       "region": "Global",
       "publishDate": "2026-04-01",
       "publishDateDisplay": "Apr 01, 2026",
@@ -3836,10 +3836,10 @@
       "ownerIndividual": "Macey Jones, Steven Garbrecht",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "",
-      "actionRequired": "Update status or revise publish date",
+      "actionRequired": "Retire, replace, or update content",
       "abstract": "",
       "partnerCampaignLink": null,
-      "issueType": "Overdue"
+      "issueType": "; Expired/Update"
     },
     {
       "id": "data-resilience-assessment-emea-pilot-only-assessment-129",
