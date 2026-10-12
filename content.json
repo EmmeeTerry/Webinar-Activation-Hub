@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-10-12T08:45:44.577528+00:00",
+  "lastRefreshed": "2026-10-12T10:43:24.157357+00:00",
   "items": [
     {
       "id": "10-reasons-to-buy-build-or-borrow-ai-implementation-ebook-1",
@@ -454,7 +454,7 @@
     {
       "id": "451-research-rising-data-challenges-drive-storage-modernization-analyst-report-16",
       "title": "451 Research: Rising Data Challenges Drive Storage Modernization | Analyst Report",
-      "url": "https://www.hitachivantara.com/en-us/gated-forms/451-research-rising-data-challenges-storage-modernization",
+      "url": "https://www.hitachivantara.com/en-us/gated-forms/451-analyst-research-validation-information-brief",
       "type": "Analyst Report",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
@@ -842,9 +842,9 @@
       "issueType": ""
     },
     {
-      "id": "app-data-consolidation-update-needed-video-29",
-      "title": "App Data Consolidation (update needed) | Video",
-      "url": null,
+      "id": "vsp-one-application-data-consolidation-overview-update-needed-video-29",
+      "title": "VSP One Application Data Consolidation Overview (update needed) | Video",
+      "url": "https://www.hitachivantara.com/en-us/video/vsp-one-application-data-consolidation-overview",
       "type": "Video",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Hybrid Cloud Platform & Operations",
@@ -3896,10 +3896,10 @@
       "ownerIndividual": "Andy Gremett",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "\u00a0",
-      "actionRequired": "",
+      "actionRequired": "Review content freshness (12+ months)",
       "abstract": "",
       "partnerCampaignLink": null,
-      "issueType": ""
+      "issueType": "; 12+ Months Old"
     },
     {
       "id": "hybrid-cloud-storage-for-native-amazon-s3-workloads-solution-profile-131",
@@ -4616,10 +4616,10 @@
       "ownerIndividual": "Mark Geel",
       "publishedByVendor": "GigaOm / Hitachi Vantara",
       "notes": "\u00a0",
-      "actionRequired": "",
+      "actionRequired": "Review content freshness (12+ months)",
       "abstract": "",
       "partnerCampaignLink": null,
-      "issueType": ""
+      "issueType": "; 12+ Months Old"
     },
     {
       "id": "modernize-your-environment-with-vsp-one-object-solution-profile-155",
@@ -7136,10 +7136,10 @@
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "",
-      "actionRequired": "",
+      "actionRequired": "Update status or revise publish date",
       "abstract": "",
       "partnerCampaignLink": null,
-      "issueType": ""
+      "issueType": "Overdue"
     },
     {
       "id": "what-s-next-is-not-more-ai-it-s-better-foundations-blog-239",
@@ -7562,8 +7562,8 @@
       "issueType": "; No Promo"
     },
     {
-      "id": "share-your-mainframe-isn-t-designed-to-go-down-neither-is-our-storage-253",
-      "title": "Share - Your Mainframe isn't Designed to Go Down. Neither is Our Storage",
+      "id": "your-next-mainframe-migration-starts-before-the-deadline-webinar-253",
+      "title": "Your Next Mainframe Migration Starts Before the Deadline | Webinar",
       "url": "https://www.brighttalk.com/webcast/12821/677181",
       "type": "Webinar",
       "campaign": "Data Modernization & Resilience",
@@ -7652,9 +7652,9 @@
       "issueType": ""
     },
     {
-      "id": "https-www-hitachivantara-com-en-us-pdfviewer-ebook-from-legacy-velocity-ebook-256",
-      "title": "https://www.hitachivantara.com/en-us/pdfviewer/ebook/from-legacy-velocity | eBook",
-      "url": "https://www.hitachivantara.com/en-us/pdfviewer/ebook/from-legacy-velocity",
+      "id": "from-legacy-to-velocity-how-vsp-one-customers-turned-legacy-limits-into-competitive-edge-e-256",
+      "title": "From Legacy to Velocity: How VSP One Customers Turned Legacy Limits into Competitive Edge | eBook",
+      "url": "https://www.hitachivantara.com/en-us/gated-forms/from-legacy-to-velocity",
       "type": "eBook",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
