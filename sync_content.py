@@ -56,7 +56,7 @@ COLUMN_MAP = {
     "notes":              "Notes",
     "actionRequired":     "Action Required",
     "issueType":          "Issue Type",
-    "abstract":           "Abstract",
+    "abstract":           "Description",
     "partnerCampaignLink": "Partner Campaign Link",
 }
 
