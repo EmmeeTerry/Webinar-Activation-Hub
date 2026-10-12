@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-10-12T18:52:49.022602+00:00",
+  "lastRefreshed": "2026-10-12T18:57:07.939543+00:00",
   "items": [
     {
       "id": "10-reasons-to-buy-build-or-borrow-ai-implementation-ebook-1",
@@ -7183,8 +7183,8 @@
       "audience": "Enterprise, Midmarket",
       "status": "In Production",
       "region": "Global",
-      "publishDate": "2026-10-09",
-      "publishDateDisplay": "Oct 09, 2026",
+      "publishDate": "2026-10-14",
+      "publishDateDisplay": "Oct 14, 2026",
       "partnerUse": true,
       "paidMediaDate": null,
       "paidMediaDateDisplay": "",
@@ -7196,10 +7196,10 @@
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "",
-      "actionRequired": "Update status or revise publish date",
+      "actionRequired": "",
       "abstract": "",
       "partnerCampaignLink": null,
-      "issueType": "Overdue"
+      "issueType": ""
     },
     {
       "id": "why-infrastructure-platform-consumption-services-matter-now-blog-241",
