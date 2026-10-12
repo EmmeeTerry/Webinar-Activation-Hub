@@ -73,11 +73,12 @@ WEBINAR_COLUMN_MAP = {
 WEBINAR_TEXT_ONLY_FIELDS = {"title"}
 
 CONTENT_COLUMN_MAP = {
-    "title":    "Asset Title",            # plain text column, not the linked one
-    "type":     "Type",
-    "campaign": "Campaign",
-    "useCase":  "Use Case",
-    "url":      "Asset Title (with Link)",  # hyperlink cell -- we want the URL here
+    "title":       "Asset Title",            # plain text column, not the linked one
+    "type":        "Type",
+    "campaign":    "Campaign",
+    "useCase":     "Use Case",
+    "url":         "Asset Title (with Link)",  # hyperlink cell -- we want the URL here
+    "description": "Description",            # the real description text lives here, not on the Webinar Calendar report
 }
 
 CONTENT_TEXT_ONLY_FIELDS = set()  # every mapped content field here should resolve to its natural value
@@ -255,6 +256,16 @@ def build_related_resources(webinar, content_rows, limit=4):
 
 
 def transform(webinar_rows, content_rows):
+    # The real description text lives in the Content Mapping Master List's
+    # "Description" column, not the Webinar Calendar report's own "Abstract"
+    # column (which is unused/blank for every row). Match by title.
+    description_by_title = {}
+    for c in content_rows:
+        t = (c.get("title") or "").strip().lower()
+        d = c.get("description")
+        if t and d:
+            description_by_title[t] = d
+
     webinars = []
     for w in webinar_rows:
         iso_date = normalize_date(w.get("date"))
@@ -274,7 +285,7 @@ def transform(webinar_rows, content_rows):
             "activationStatus": w.get("activationStatus") or "",
             "readiness": readiness_from(w.get("activationStatus")),
             "whyUse": why_use(w.get("audience"), w.get("useCase")),
-            "abstract": w.get("abstract") or "",
+            "abstract": description_by_title.get((w.get("title") or "").strip().lower()) or w.get("abstract") or "",
             "links": {
                 "watch": w.get("watch") or None,
                 "marketingEmail": w.get("marketingEmail") or None,
