@@ -122,6 +122,7 @@ h1{font-family:"Hitachi Sans",Arial,Helvetica,sans-serif;font-weight:400;font-si
     </div>
     <div style="text-align:right">
       <div class="snapshot" id="snapshotLabel">Last refreshed &middot; loading&hellip;</div>
+      <a class="btn" style="margin-top:10px" href="https://hitachivantara.sharepoint.com/:u:/r/sites/To-PartnerCommunicationsFY23/SitePages/Global-Campaigns-Resource-Hub.aspx?d=wddf74af10c8d402d8bede752277d732d&csf=1&web=1&e=x4wfKh" target="_blank">Global Campaigns Resource Hub &#8599;</a>
       <a class="btn" style="margin-top:10px" href="https://hitachivantara.sharepoint.com/:u:/r/sites/To-PartnerCommunicationsFY23/SitePages/Content-Library.aspx?d=wa1ad7c7656ce495da240fdebbb45e4a3&csf=1&web=2&share=IQB2fK2hzlZdSaJA_eu7ReSjASm3oLaRXIZfOD92UrUfz-M&e=HZU5ul" target="_blank">Search All Content &#8599;</a>
       <a class="btn primary" style="margin-top:10px" href="./add-content.html">+ Submit New Content</a>
     </div>
@@ -137,6 +138,11 @@ h1{font-family:"Hitachi Sans",Arial,Helvetica,sans-serif;font-weight:400;font-si
     <div class="toolbar-actions">
       <button class="btn" id="copyLinkBtn" onclick="copyShareLink()">Copy link to this view</button>
       <button class="btn" onclick="downloadCSV()">Download CSV of filtered list</button>
+      <select onchange="if(this.value) setSort(this.value)" style="border:1px solid var(--gray2);border-radius:2px;padding:9px 12px;font-family:inherit;font-size:11px;font-weight:700;background:var(--white);color:var(--black)">
+        <option value="">Sort by&hellip;</option>
+        <option value="fiscalYear">Fiscal Year</option>
+        <option value="fiscalQuarter">Quarter</option>
+      </select>
     </div>
   </div>
 
