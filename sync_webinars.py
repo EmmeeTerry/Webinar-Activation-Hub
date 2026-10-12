@@ -73,15 +73,16 @@ WEBINAR_COLUMN_MAP = {
 WEBINAR_TEXT_ONLY_FIELDS = {"title"}
 
 CONTENT_COLUMN_MAP = {
-    "title":       "Asset Title",            # plain text column, not the linked one
-    "type":        "Type",
-    "campaign":    "Campaign",
-    "useCase":     "Use Case",
-    "url":         "Asset Title (with Link)",  # hyperlink cell -- we want the URL here
-    "description": "Description",            # the real description text lives here, not on the Webinar Calendar report
+    "title":        "Asset Title",            # plain text column, not the linked one
+    "titleLinked":  "Asset Title (with Link)",  # same column's visible TEXT (see CONTENT_TEXT_ONLY_FIELDS below) -- a second possible title match
+    "type":         "Type",
+    "campaign":     "Campaign",
+    "useCase":      "Use Case",
+    "url":          "Asset Title (with Link)",  # same column's hyperlink URL
+    "description":  "Description",            # the real description text lives here, not on the Webinar Calendar report
 }
 
-CONTENT_TEXT_ONLY_FIELDS = set()  # every mapped content field here should resolve to its natural value
+CONTENT_TEXT_ONLY_FIELDS = {"titleLinked"}  # we want this column's visible text, not its hyperlink (that's what "url" is for)
 
 READINESS_FROM_ACTIVATION = {
     "activation ready": "Activation ready",
@@ -261,10 +262,13 @@ def transform(webinar_rows, content_rows):
     # column (which is unused/blank for every row). Match by title.
     description_by_title = {}
     for c in content_rows:
-        t = (c.get("title") or "").strip().lower()
         d = c.get("description")
-        if t and d:
-            description_by_title[t] = d
+        if not d:
+            continue
+        for key_field in ("title", "titleLinked"):
+            t = (c.get(key_field) or "").strip().lower()
+            if t:
+                description_by_title[t] = d
 
     webinars = []
     for w in webinar_rows:
