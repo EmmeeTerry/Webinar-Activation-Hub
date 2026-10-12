@@ -58,6 +58,8 @@ COLUMN_MAP = {
     "issueType":          "Issue Type",
     "abstract":           "Description",
     "partnerCampaignLink": "Partner Campaign Link",
+    "fiscalYear":         "Fiscal Year",
+    "fiscalQuarter":      "Fiscal Quarter",
 }
 
 # Fields whose column is a hyperlink cell but where we want the visible text,
@@ -210,6 +212,8 @@ def fetch_content_rows(client, sheet_id):
             "actionRequired": raw.get("actionRequired") or "",
             "abstract": raw.get("abstract") or "",
             "partnerCampaignLink": clean_url(raw.get("partnerCampaignLink")),
+            "fiscalYear": raw.get("fiscalYear") or "",
+            "fiscalQuarter": raw.get("fiscalQuarter") or "",
             "issueType": raw.get("issueType") or "",
         })
     return items
