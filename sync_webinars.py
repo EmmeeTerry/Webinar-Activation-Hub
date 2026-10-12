@@ -64,7 +64,7 @@ WEBINAR_COLUMN_MAP = {
     "paidSocial":       "Paid Social",
     "social":           "Sprout Social",
     "attendance":       "Attendance Report",
-    "abstract":         "Description",
+    "abstract":         "Abstract",
 }
 
 # Fields whose Smartsheet column is a hyperlink cell, but where we want the visible
