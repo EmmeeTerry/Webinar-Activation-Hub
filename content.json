@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-10-13T20:57:02.617167+00:00",
+  "lastRefreshed": "2026-10-13T22:51:35.852235+00:00",
   "items": [
     {
       "id": "10-reasons-to-buy-build-or-borrow-ai-implementation-ebook-1",
@@ -8256,6 +8256,38 @@
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q4",
       "issueType": "; No Promo"
+    },
+    {
+      "id": "cyber-resilience-vs-cybersecurity-what-leaders-need-to-know-blog-259",
+      "title": "Cyber Resilience vs Cybersecurity: What Leaders Need to Know | Blog",
+      "url": null,
+      "type": "Blog",
+      "campaign": "Data Modernization & Resilience",
+      "useCase": "",
+      "funnelStage": "TOFU",
+      "ownerTeam": "Brand",
+      "audience": "Enterprise, Midmarket",
+      "status": "In Production",
+      "region": "Global",
+      "publishDate": "2026-10-23",
+      "publishDateDisplay": "Oct 23, 2026",
+      "partnerUse": false,
+      "paidMediaDate": null,
+      "paidMediaDateDisplay": "",
+      "primaryActivation": "Organic Social",
+      "marketingEmail": null,
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "",
+      "ownerIndividual": "Emily Smith",
+      "publishedByVendor": "Hitachi Vantara",
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "fiscalYear": "FY27",
+      "fiscalQuarter": "Q3",
+      "issueType": ""
     }
   ]
 }
