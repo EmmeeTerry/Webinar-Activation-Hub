@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-10-13T16:43:51.075921+00:00",
+  "lastRefreshed": "2026-10-13T18:51:37.993946+00:00",
   "items": [
     {
       "id": "10-reasons-to-buy-build-or-borrow-ai-implementation-ebook-1",
@@ -1995,7 +1995,7 @@
       "funnelStage": "TOFU",
       "ownerTeam": "Brand",
       "audience": "Enterprise, Midmarket",
-      "status": "In Production",
+      "status": "Planned",
       "region": "Global",
       "publishDate": "2026-11-10",
       "publishDateDisplay": "Nov 10, 2026",
@@ -3075,7 +3075,7 @@
     },
     {
       "id": "americas-midrange-road-show-blog-blog-97",
-      "title": "Americas Midrange Road Show\u200b blog | Blog",
+      "title": "Americas Midrange Road Show Blog | Blog",
       "url": null,
       "type": "Blog",
       "campaign": "Data Modernization & Resilience",
@@ -4738,8 +4738,8 @@
       "issueType": ""
     },
     {
-      "id": "gartner-peer-insights-asset-ebook-ebook-149",
-      "title": "Gartner Peer Insights Asset eBook | eBook",
+      "id": "gartner-peer-insights-ebook-ebook-149",
+      "title": "Gartner Peer Insights eBook | eBook",
       "url": null,
       "type": "eBook",
       "campaign": "Data Modernization & Resilience",
@@ -4747,10 +4747,10 @@
       "funnelStage": "MOFU",
       "ownerTeam": "PMM",
       "audience": "Enterprise, Midmarket",
-      "status": "Planned",
+      "status": "In Production",
       "region": "Global",
-      "publishDate": "2026-12-15",
-      "publishDateDisplay": "Dec 15, 2026",
+      "publishDate": "2026-12-01",
+      "publishDateDisplay": "Dec 01, 2026",
       "partnerUse": true,
       "paidMediaDate": null,
       "paidMediaDateDisplay": "",
@@ -4930,16 +4930,16 @@
       "issueType": "; 12+ Months Old"
     },
     {
-      "id": "hitachi-leader-in-gigaom-primary-storage-platforms-radar-blog-155",
-      "title": "Hitachi Leader in GigaOm Primary Storage Platforms Radar | Blog",
+      "id": "hitachi-leader-in-gigaom-primary-storage-platforms-radar-blog-blog-155",
+      "title": "Hitachi Leader in GigaOm Primary Storage Platforms Radar Blog | Blog",
       "url": null,
       "type": "Blog",
-      "campaign": "Data Modernization & Resilience",
+      "campaign": "AI Data Foundation",
       "useCase": "",
       "funnelStage": "TOFU",
       "ownerTeam": "Brand",
       "audience": "Enterprise, Midmarket",
-      "status": "Planned",
+      "status": "Hitachi Leader in GigaOm Primary Storage Platforms Radar Blog",
       "region": "Global",
       "publishDate": "2026-12-04",
       "publishDateDisplay": "Dec 04, 2026",
@@ -5474,14 +5474,14 @@
       "issueType": "; 12+ Months Old"
     },
     {
-      "id": "influencer-blog-your-mainframe-decision-is-not-the-one-you-think-blog-172",
-      "title": "Influencer Blog:Your Mainframe Decision Is Not the One \nYou Think | Blog",
+      "id": "your-mainframe-storage-decision-is-not-the-one-you-think-it-is-blog-172",
+      "title": "Your Mainframe Storage Decision Is Not the One You Think It Is | Blog",
       "url": null,
       "type": "Blog",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
       "funnelStage": "TOFU",
-      "ownerTeam": "Regional Marketing",
+      "ownerTeam": "Brand",
       "audience": "Enterprise, Midmarket",
       "status": "In Production",
       "region": "Global",
@@ -5495,8 +5495,8 @@
       "salesEmail": null,
       "usedInCampaign": "No",
       "promotionPeriod": "2H",
-      "ownerIndividual": "Sakina Peshawarwala",
-      "publishedByVendor": "",
+      "ownerIndividual": "Emily Smith",
+      "publishedByVendor": "Hitachi Vantara",
       "notes": "",
       "actionRequired": "",
       "abstract": "",
@@ -7659,7 +7659,7 @@
       "funnelStage": "TOFU",
       "ownerTeam": "Brand",
       "audience": "Enterprise, Midmarket",
-      "status": "In Production",
+      "status": "What IT Teams Need to Know Before a Mainframe Refresh",
       "region": "Global",
       "publishDate": "2026-10-14",
       "publishDateDisplay": "Oct 14, 2026",
@@ -8002,39 +8002,7 @@
       "issueType": "; No URL"
     },
     {
-      "id": "your-mainframe-storage-decision-is-not-the-one-you-think-it-is-blog-251",
-      "title": "Your Mainframe Storage Decision Is Not the One You Think It Is | Blog",
-      "url": null,
-      "type": "Blog",
-      "campaign": "Data Modernization & Resilience",
-      "useCase": "",
-      "funnelStage": "TOFU",
-      "ownerTeam": "Brand",
-      "audience": "Enterprise",
-      "status": "In Production",
-      "region": "",
-      "publishDate": "2026-11-02",
-      "publishDateDisplay": "Nov 02, 2026",
-      "partnerUse": true,
-      "paidMediaDate": null,
-      "paidMediaDateDisplay": "",
-      "primaryActivation": "Organic Social",
-      "marketingEmail": null,
-      "salesEmail": null,
-      "usedInCampaign": "No",
-      "promotionPeriod": "2H",
-      "ownerIndividual": "Emily Smith",
-      "publishedByVendor": "Hitachi Vantara",
-      "notes": "",
-      "actionRequired": "",
-      "abstract": "",
-      "partnerCampaignLink": null,
-      "fiscalYear": "FY27",
-      "fiscalQuarter": "Q3",
-      "issueType": ""
-    },
-    {
-      "id": "sds-tco-tool-calculator-252",
+      "id": "sds-tco-tool-calculator-251",
       "title": "SDS TCO tool | Calculator",
       "url": "https://tco.hitachivantara.com/",
       "type": "Calculator",
@@ -8066,7 +8034,7 @@
       "issueType": "; No URL"
     },
     {
-      "id": "why-hitachi-vantara-ebook-253",
+      "id": "why-hitachi-vantara-ebook-252",
       "title": "Why Hitachi Vantara | eBook",
       "url": null,
       "type": "eBook",
@@ -8098,7 +8066,7 @@
       "issueType": ""
     },
     {
-      "id": "starcio-with-isaac-ai-infrastructure-debt-capacity-resiliency-and-modernization-strategies-254",
+      "id": "starcio-with-isaac-ai-infrastructure-debt-capacity-resiliency-and-modernization-strategies-253",
       "title": "StarCIO with Isaac-AI Infrastructure Debt: Capacity, Resiliency, and Modernization Strategies | Webinar",
       "url": null,
       "type": "Webinar",
@@ -8130,7 +8098,7 @@
       "issueType": "; No Promo"
     },
     {
-      "id": "the-gap-between-ai-capable-and-ai-ready-blog-255",
+      "id": "the-gap-between-ai-capable-and-ai-ready-blog-254",
       "title": "The Gap Between AI-Capable and AI-Ready | Blog",
       "url": "https://www.hitachivantara.com/en-us/blog/gap-between-ai-capable-ai-ready",
       "type": "Blog",
@@ -8162,7 +8130,7 @@
       "issueType": ""
     },
     {
-      "id": "cio-with-joe-morris-the-cio-balancing-act-business-continuity-and-ai-ambition-webinar-256",
+      "id": "cio-with-joe-morris-the-cio-balancing-act-business-continuity-and-ai-ambition-webinar-255",
       "title": "CIO with Joe Morris- The CIO Balancing Act: Business Continuity and AI Ambition | Webinar",
       "url": null,
       "type": "Webinar",
@@ -8194,7 +8162,7 @@
       "issueType": "; No Promo"
     },
     {
-      "id": "influencer-fireside-chat-webinar-257",
+      "id": "influencer-fireside-chat-webinar-256",
       "title": "Influencer Fireside chat | Webinar",
       "url": null,
       "type": "Webinar",
@@ -8226,7 +8194,7 @@
       "issueType": "; No Promo"
     },
     {
-      "id": "the-economics-of-storage-cio-com-blog-258",
+      "id": "the-economics-of-storage-cio-com-blog-257",
       "title": "The Economics of Storage (CIO.com) | Blog",
       "url": null,
       "type": "Blog",
@@ -8256,6 +8224,38 @@
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q4",
       "issueType": ""
+    },
+    {
+      "id": "state-of-data-report-ebook-258",
+      "title": "State of Data Report | eBook",
+      "url": null,
+      "type": "eBook",
+      "campaign": "AI Data Foundation",
+      "useCase": "",
+      "funnelStage": "Hero",
+      "ownerTeam": "Brand",
+      "audience": "Enterprise, Midmarket",
+      "status": "In Production",
+      "region": "Global",
+      "publishDate": "2027-01-08",
+      "publishDateDisplay": "Jan 08, 2027",
+      "partnerUse": false,
+      "paidMediaDate": null,
+      "paidMediaDateDisplay": "",
+      "primaryActivation": "",
+      "marketingEmail": null,
+      "salesEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "",
+      "ownerIndividual": "Emily Smith",
+      "publishedByVendor": "Hitachi Vantara",
+      "notes": "",
+      "actionRequired": "Create promotion plan",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "fiscalYear": "FY27",
+      "fiscalQuarter": "Q4",
+      "issueType": "; No Promo"
     }
   ]
 }
