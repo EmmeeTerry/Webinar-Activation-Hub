@@ -422,12 +422,23 @@ function todayStr(){
   return now.getFullYear()+'-'+String(now.getMonth()+1).padStart(2,'0')+'-'+String(now.getDate()).padStart(2,'0');
 }
 function emailLink(item){
-  const subject = encodeURIComponent((item.type || 'Content') + ': ' + item.title);
+  const subject = encodeURIComponent('Hitachi Vantara Content Library: ' + item.title);
+  let abstractText = item.abstract || '';
+  if(abstractText.length > 400) abstractText = abstractText.slice(0, 400) + '...';
   const bodyLines = [
-    item.abstract || '',
+    "I'm sharing this from the Hitachi Vantara Content Library \u2014 thought it could help with your campaign or customer conversation.",
     '',
+    'Title: ' + item.title,
+    item.type ? ('Type: ' + item.type) : '',
+    item.campaign ? ('Campaign: ' + item.campaign) : '',
+    item.useCase ? ('Use case: ' + item.useCase) : '',
+    item.audience ? ('Audience: ' + item.audience) : '',
+    item.region ? ('Region: ' + item.region) : '',
+    item.status ? ('Status: ' + item.status) : '',
     'Publish date: ' + (item.publishDateDisplay || 'TBD'),
-    item.url ? ('Link: ' + item.url) : ''
+    abstractText ? ('\nAbstract: ' + abstractText) : '',
+    '',
+    'Link: ' + item.url
   ].filter(Boolean);
   return 'mailto:?subject=' + subject + '&body=' + encodeURIComponent(bodyLines.join('\n'));
 }
@@ -480,7 +491,7 @@ function openModal(id){
           : `<div class="resource-btn unavailable">${esc(n)} &middot; not available</div>`
       ).join('')}</div></div>
       <div class="modal-box"><h3>Share</h3><div class="resource-grid">
-        <a class="resource-btn" href="${emailLink(item)}">Email this</a>
+        ${item.url ? `<a class="resource-btn" href="${emailLink(item)}">Email this</a>` : `<div class="resource-btn unavailable">Email this &middot; nothing to share yet</div>`}
         ${item.type === 'Webinar' && item.publishDate ? (
           item.publishDate >= todayStr()
             ? `<a class="resource-btn" href="#" onclick="event.preventDefault();downloadICS('${esc(item.id)}')">Add to calendar</a>`
@@ -569,9 +580,7 @@ function renderSpotlight(){
     const inner = `<div class="spotlight-label">${esc(label)}</div>
       <div class="spotlight-title">${esc(item.title)}</div>
       <div class="spotlight-meta">${esc(item.publishDateDisplay||'')} &middot; ${esc(item.campaign||'')}</div>`;
-    return item.url
-      ? `<a class="spotlight-card" href="${esc(item.url)}" target="_blank">${inner}</a>`
-      : `<div class="spotlight-card" style="cursor:default">${inner}</div>`;
+    return `<div class="spotlight-card" onclick="openModal('${esc(item.id)}')">${inner}</div>`;
   }
 
   document.getElementById('spotlight').innerHTML =
