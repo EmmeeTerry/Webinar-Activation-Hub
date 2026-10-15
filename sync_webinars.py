@@ -136,6 +136,14 @@ def cell_lookup_by_position(row, index_by_title, title, text_only=False):
     return extract_value(row.cells[idx], text_only)
 
 
+def valid_resource_url(value):
+    """Only actual HTTP(S) links are usable activation resources."""
+    if not isinstance(value, str):
+        return None
+    value = value.strip()
+    return value if re.match(r"^https?://[^\\s]+$", value, re.I) else None
+
+
 def truthy(value):
     if value is None:
         return False
@@ -299,13 +307,13 @@ def transform(webinar_rows, content_rows):
             "whyUse": why_use(w.get("audience"), w.get("useCase")),
             "abstract": description_by_title.get((w.get("title") or "").strip().lower()) or w.get("abstract") or "",
             "links": {
-                "watch": w.get("watch") or None,
-                "marketingEmail": w.get("marketingEmail") or None,
-                "salesEmail": w.get("salesEmail") or None,
-                "paidSocial": w.get("paidSocial") or None,
-                "social": w.get("social") or None,
-                "attendance": w.get("attendance") or None,
-                "partnerCampaign": partner_link_by_title.get((w.get("title") or "").strip().lower()),
+                "watch": valid_resource_url(w.get("watch")),
+                "marketingEmail": valid_resource_url(w.get("marketingEmail")),
+                "salesEmail": valid_resource_url(w.get("salesEmail")),
+                "paidSocial": valid_resource_url(w.get("paidSocial")),
+                "social": valid_resource_url(w.get("social")),
+                "attendance": valid_resource_url(w.get("attendance")),
+                "partnerCampaign": valid_resource_url(partner_link_by_title.get((w.get("title") or "").strip().lower())),
             },
             "sourceRow": w.get("_sourceRow"),
         }
