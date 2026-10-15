@@ -270,6 +270,8 @@ def transform(webinar_rows, content_rows):
             continue
         for key_field in ("title", "titleLinked"):
             t = (c.get(key_field) or "").strip().lower()
+            if key_field in ("title", "titleLinked"):
+                t = re.sub(r"\s*\|\s*webinar\s*$", "", t).strip()
             if t:
                 if d:
                     description_by_title[t] = d
