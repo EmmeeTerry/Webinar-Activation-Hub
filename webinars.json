@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-10-15T08:21:40.948162+00:00",
+  "lastRefreshed": "2026-10-15T12:21:47.559152+00:00",
   "webinars": [
     {
       "id": "the-economics-of-modern-storage-infrastructure-lower-risk-faster-ai-value-better-roi",
@@ -20,7 +20,7 @@
       "abstract": "To succeed with AI and wider digital transformation efforts, businesses need an advanced data infrastructure to cope with the high demands of modern technology. That means silos, legacy IT, and slow processing speeds have to be replaced by systems that drive faster decision making and deliver game changing insight among other things. And all this needs to be delivered with security at the front and centre.\n\nSo, what steps must IT leaders take? In this CIO webcast, with Hitachi Vantara and Brocade, we will explore how to build an integrated, resilient, autonomous and future ready data infrastructure.\n\nKey learning points:\n\n- Predictable performance and Tier-0 resilience to reduce risk and protect ROI\n- Cut cost and complexity by eliminating silos and avoiding the \u201cmigration tax\u201d\n- Plan for quantum-safe security and energy-efficient scaling across environments",
       "links": {
         "watch": "https://www.brighttalk.com/webcast/12821/659254",
-        "marketingEmail": "https://brand.hitachivantara.com/guidelines/guide/00542d60-e1a7-4da7-9e5f-133c03191dbc",
+        "marketingEmail": "https://brand.hitachivantara.com/guidelines/guide/00542d60-e1a7-4da7-9e5f-133c03191dbc/page/e1ce0b1f-5759-4c1a-9b0b-3982483807cf",
         "salesEmail": "https://hitachivantara.sharepoint.com/:w:/s/GlobalCampaignsAssets505/IQAur_oA2tvSTI5WzUov9PsFAYnvUFXdD-1I-Gez-pspUL8?e=4ViuVh",
         "paidSocial": "https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Global-Paid-Media-Ad-Library.aspx",
         "social": "N/A",
@@ -373,16 +373,16 @@
       "date": "2026-10-23",
       "dateDisplay": "Oct 23, 2026",
       "status": "Planned",
-      "campaign": "",
-      "useCase": "",
-      "audience": "",
+      "campaign": "Data Modernization & Resilience",
+      "useCase": "Data Platform Architectures & Economics",
+      "audience": "Enterprise",
       "region": "AMER",
       "owner": "Sakina Peshawarwala",
       "quarter": "Q3",
       "partnerReady": false,
       "activationStatus": "Not Started",
       "readiness": "Planning",
-      "whyUse": "",
+      "whyUse": "Use this for enterprise conversations around data platform architectures & economics.",
       "abstract": "",
       "links": {
         "watch": null,
@@ -393,7 +393,40 @@
         "attendance": null
       },
       "sourceRow": 7,
-      "relatedResources": []
+      "relatedResources": [
+        {
+          "title": "Esteyco Customer Story | Video",
+          "type": "Video",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "Esteyco Customer Story",
+          "score": 6
+        },
+        {
+          "title": "451 Research - VSP 360 AIOps SLA as Code | Analyst Report",
+          "type": "Analyst Report",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "451 Research - VSP 360 AIOps SLA as Code",
+          "score": 6
+        },
+        {
+          "title": "451 Research - VSP 360 AIOps SLA as Code | Webinar",
+          "type": "Webinar",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "451 Research - VSP 360 AIOps SLA as Code",
+          "score": 6
+        },
+        {
+          "title": "451 Research - VSP 360 AIOps | Analyst Report",
+          "type": "Analyst Report",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "451 Research - VSP 360 AIOps",
+          "score": 6
+        }
+      ]
     },
     {
       "id": "data-resilience-attack-ready-ai-ready",
@@ -462,16 +495,16 @@
       "date": "2026-11-11",
       "dateDisplay": "Nov 11, 2026",
       "status": "Planned",
-      "campaign": "",
-      "useCase": "",
-      "audience": "",
+      "campaign": "Data Modernization & Resilience",
+      "useCase": "Cyber Risk Mitigation & Recovery",
+      "audience": "Enterprise",
       "region": "AMER",
       "owner": "Sakina Peshawarwala",
       "quarter": "Q3",
       "partnerReady": false,
       "activationStatus": "Not Started",
       "readiness": "Planning",
-      "whyUse": "",
+      "whyUse": "Use this for enterprise conversations around cyber risk mitigation & recovery.",
       "abstract": "",
       "links": {
         "watch": null,
@@ -482,7 +515,40 @@
         "attendance": null
       },
       "sourceRow": 9,
-      "relatedResources": []
+      "relatedResources": [
+        {
+          "title": "451 Research: Boost Resiliency and Performance for Modern Data Infrastructures | Analyst Report",
+          "type": "Analyst Report",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Cyber Risk Mitigation & Recovery",
+          "url": "https://www.hitachivantara.com/en-us/gated-forms/451-research-market-insight-report-vsp-one-block-high-end",
+          "score": 6
+        },
+        {
+          "title": "7-Layer Defense. One Trusted Partner | Solution Profile",
+          "type": "Solution Profile",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Cyber Risk Mitigation & Recovery",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/solution-profile/7-layer-defense-one-trusted-partner.pdf",
+          "score": 6
+        },
+        {
+          "title": "Americas Midrange Road Show Blog | Blog",
+          "type": "Blog",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Cyber Risk Mitigation & Recovery",
+          "url": "Americas Midrange Road Show Blog",
+          "score": 6
+        },
+        {
+          "title": "Banco De Brasilia: Simplify Compliance and Improve Productivity | Customer Story",
+          "type": "Customer Story",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Cyber Risk Mitigation & Recovery",
+          "url": "https://www.hitachivantara.com/en-us/company/customer-stories/banco-de-brasilia-case-study",
+          "score": 6
+        }
+      ]
     },
     {
       "id": "educause-webinar-resilience-in-the-ai-era",
@@ -554,7 +620,7 @@
       "campaign": "",
       "useCase": "",
       "audience": "",
-      "region": "",
+      "region": "AMER",
       "owner": "Sakina Peshawarwala",
       "quarter": "Q3",
       "partnerReady": false,
@@ -574,28 +640,28 @@
       "relatedResources": []
     },
     {
-      "id": "2026-gigaom-rader-for-high-performance-storage-optimized-for-ai-workloads",
-      "title": "2026 GigaOm Rader for High-Performance Storage Optimized for AI Workloads",
-      "date": "2026-12-03",
-      "dateDisplay": "Dec 03, 2026",
+      "id": "powering-the-ai-factory-from-distributed-data-to-trusted-outcomes",
+      "title": "Powering the AI Factory: From Distributed Data to Trusted Outcomes",
+      "date": "2026-11-19",
+      "dateDisplay": "Nov 19, 2026",
       "status": "Planned",
       "campaign": "AI Data Foundation",
       "useCase": "High Performance AI-Ready Infrastructure",
       "audience": "Enterprise",
       "region": "Global",
-      "owner": "Jeff Lundberg, Stephanie Thompson",
+      "owner": "Stephanie Thompson, Steven Garbrecht",
       "quarter": "Q3",
       "partnerReady": true,
       "activationStatus": "Not Started",
       "readiness": "Planning",
       "whyUse": "Use this for enterprise conversations around high performance ai-ready infrastructure.",
-      "abstract": "",
+      "abstract": "Moving AI from pilot to production takes more than a successful model. It requires trusted data, AI-ready infrastructure, intelligent workload placement, resilient operations, and a repeatable way to manage them at scale.\nIn this webinar, Hitachi Vantara experts explore how an AI Factory operating model can turn distributed data into dependable outcomes without forcing everything to move first. Using a real-world power utility scenario, they will show how to place workloads based on sovereignty, performance, control, and cost; operate across mixed environments; and build cyber resilience and business continuity into production AI from the outset.\nJoin us to learn the practical decisions that can help your organization close the gap between AI experimentation and a scalable, governed production service\u2014and keep it operating, optimized, protected, and ready to deliver measurable business value.",
       "links": {
         "watch": null,
         "marketingEmail": "Coming Soon",
-        "salesEmail": "N/A",
+        "salesEmail": "Coming Soon",
         "paidSocial": "Coming Soon",
-        "social": "N/A",
+        "social": "Coming Soon",
         "attendance": null
       },
       "sourceRow": 12,
@@ -635,10 +701,71 @@
       ]
     },
     {
-      "id": "idc-cyber-resilience-webinar",
-      "title": "IDC Cyber Resilience Webinar",
+      "id": "2026-gigaom-rader-for-high-performance-storage-optimized-for-ai-workloads",
+      "title": "2026 GigaOm Rader for High-Performance Storage Optimized for AI Workloads",
       "date": "2027-01-28",
       "dateDisplay": "Jan 28, 2027",
+      "status": "Planned",
+      "campaign": "AI Data Foundation",
+      "useCase": "High Performance AI-Ready Infrastructure",
+      "audience": "Enterprise",
+      "region": "Global",
+      "owner": "Jeff Lundberg, Stephanie Thompson",
+      "quarter": "Q4",
+      "partnerReady": true,
+      "activationStatus": "Not Started",
+      "readiness": "Planning",
+      "whyUse": "Use this for enterprise conversations around high performance ai-ready infrastructure.",
+      "abstract": "",
+      "links": {
+        "watch": null,
+        "marketingEmail": "Coming Soon",
+        "salesEmail": "N/A",
+        "paidSocial": "Coming Soon",
+        "social": "N/A",
+        "attendance": null
+      },
+      "sourceRow": 13,
+      "relatedResources": [
+        {
+          "title": "10 Reasons to Buy, Build, or Borrow AI Implementation | eBook",
+          "type": "eBook",
+          "campaign": "AI Data Foundation",
+          "useCase": "High Performance AI-Ready Infrastructure",
+          "url": "https://www.hitachivantara.com/en-us/gated-forms/ten-reasons-buy-build-borrow-ai-implementation",
+          "score": 6
+        },
+        {
+          "title": "2026 GigaOm Rader for High-Performance Storage Optimized for AI Workloads | Analyst Report | Analyst Report",
+          "type": "Analyst Report",
+          "campaign": "AI Data Foundation",
+          "useCase": "High Performance AI-Ready Infrastructure",
+          "url": "2026 GigaOm Rader for High-Performance Storage Optimized for AI Workloads | Analyst Report",
+          "score": 6
+        },
+        {
+          "title": "2026 GigaOm Rader for High-Performance Storage Optimized for AI Workloads | Webinar",
+          "type": "Webinar",
+          "campaign": "AI Data Foundation",
+          "useCase": "High Performance AI-Ready Infrastructure",
+          "url": "2026 GigaOm Rader for High-Performance Storage Optimized for AI Workloads",
+          "score": 6
+        },
+        {
+          "title": "451 Research: Market Hitachi Vantara's iQ Increases AI Storage Momentum, Adds AI Recovery Capabilities | Analyst Report",
+          "type": "Analyst Report",
+          "campaign": "AI Data Foundation",
+          "useCase": "High Performance AI-Ready Infrastructure",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/analyst-content/iq-increases-ai-storage-momentum-adds-ai-recovery-capabilities.pdf",
+          "score": 6
+        }
+      ]
+    },
+    {
+      "id": "idc-cyber-resilience-webinar",
+      "title": "IDC Cyber Resilience Webinar",
+      "date": "2027-02-25",
+      "dateDisplay": "Feb 25, 2027",
       "status": "Planned",
       "campaign": "AI Data Foundation",
       "useCase": "Cyber Risk Mitigation & Recovery",
@@ -653,13 +780,13 @@
       "abstract": "",
       "links": {
         "watch": null,
-        "marketingEmail": "Coming Soon",
+        "marketingEmail": "N/A",
         "salesEmail": "N/A",
         "paidSocial": "N/A",
         "social": "N/A",
         "attendance": null
       },
-      "sourceRow": 13,
+      "sourceRow": 14,
       "relatedResources": [
         {
           "title": "Data Resilience: Attack-Ready. AI-Ready. | Webinar",
@@ -698,8 +825,8 @@
     {
       "id": "tier-1-launch-midrange-refresh",
       "title": "Tier 1 Launch: Midrange Refresh",
-      "date": "2027-02-25",
-      "dateDisplay": "Feb 25, 2027",
+      "date": "2027-03-25",
+      "dateDisplay": "Mar 25, 2027",
       "status": "Planned",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
@@ -720,7 +847,7 @@
         "social": "N/A",
         "attendance": null
       },
-      "sourceRow": 14,
+      "sourceRow": 15,
       "relatedResources": [
         {
           "title": "Esteyco Customer Story | Video",
@@ -752,67 +879,6 @@
           "campaign": "Data Modernization & Resilience",
           "useCase": "Data Platform Architectures & Economics",
           "url": "451 Research - VSP 360 AIOps",
-          "score": 6
-        }
-      ]
-    },
-    {
-      "id": "webinar-title-tbd-gigaom-2027-radar",
-      "title": "Webinar \u2013 Title TBD (GigaOm 2027 Radar)",
-      "date": "2027-04-01",
-      "dateDisplay": "Apr 01, 2027",
-      "status": "Planned",
-      "campaign": "AI Data Foundation",
-      "useCase": "Data Readiness and Activation for AI",
-      "audience": "Enterprise",
-      "region": "Global",
-      "owner": "Mark Geel",
-      "quarter": "Q1",
-      "partnerReady": true,
-      "activationStatus": "Not Required",
-      "readiness": "Planning",
-      "whyUse": "Use this for enterprise conversations around data readiness and activation for ai.",
-      "abstract": "",
-      "links": {
-        "watch": null,
-        "marketingEmail": "N/A",
-        "salesEmail": "N/A",
-        "paidSocial": "N/A",
-        "social": "N/A",
-        "attendance": null
-      },
-      "sourceRow": 15,
-      "relatedResources": [
-        {
-          "title": "2025 GigaOm Rader for High-Perfomance Storage Optimized for AI Workloads | Analyst Report",
-          "type": "Analyst Report",
-          "campaign": "AI Data Foundation",
-          "useCase": "Data Readiness and Activation for AI",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-ai-storage-radar",
-          "score": 6
-        },
-        {
-          "title": "2026 GigaOm Radar for Unstructured Data Management (UDM) | Analyst Report",
-          "type": "Analyst Report",
-          "campaign": "AI Data Foundation",
-          "useCase": "Data Readiness and Activation for AI",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-unstructured-data-management-2026",
-          "score": 6
-        },
-        {
-          "title": "2026 GigaOm Rader for Object Storage Analyst Report | Analyst Report",
-          "type": "Analyst Report",
-          "campaign": "AI Data Foundation",
-          "useCase": "Data Readiness and Activation for AI",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-radar-for-object-storage",
-          "score": 6
-        },
-        {
-          "title": "2027 GigaOm for Unstructured Data Management (UDM) | Analyst Report",
-          "type": "Analyst Report",
-          "campaign": "AI Data Foundation",
-          "useCase": "Data Readiness and Activation for AI",
-          "url": "2027 GigaOm for Unstructured Data Management (UDM)",
           "score": 6
         }
       ]
@@ -935,6 +1001,67 @@
           "campaign": "Data Modernization & Resilience",
           "useCase": "Data Platform Architectures & Economics",
           "url": "451 Research - VSP 360 AIOps",
+          "score": 6
+        }
+      ]
+    },
+    {
+      "id": "webinar-title-tbd-gigaom-2027-radar",
+      "title": "Webinar \u2013 Title TBD (GigaOm 2027 Radar)",
+      "date": "2027-05-27",
+      "dateDisplay": "May 27, 2027",
+      "status": "Planned",
+      "campaign": "AI Data Foundation",
+      "useCase": "Data Readiness and Activation for AI",
+      "audience": "Enterprise",
+      "region": "Global",
+      "owner": "Mark Geel",
+      "quarter": "Q1",
+      "partnerReady": true,
+      "activationStatus": "Not Required",
+      "readiness": "Planning",
+      "whyUse": "Use this for enterprise conversations around data readiness and activation for ai.",
+      "abstract": "",
+      "links": {
+        "watch": null,
+        "marketingEmail": "N/A",
+        "salesEmail": "N/A",
+        "paidSocial": "N/A",
+        "social": "N/A",
+        "attendance": null
+      },
+      "sourceRow": 18,
+      "relatedResources": [
+        {
+          "title": "2025 GigaOm Rader for High-Perfomance Storage Optimized for AI Workloads | Analyst Report",
+          "type": "Analyst Report",
+          "campaign": "AI Data Foundation",
+          "useCase": "Data Readiness and Activation for AI",
+          "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-ai-storage-radar",
+          "score": 6
+        },
+        {
+          "title": "2026 GigaOm Radar for Unstructured Data Management (UDM) | Analyst Report",
+          "type": "Analyst Report",
+          "campaign": "AI Data Foundation",
+          "useCase": "Data Readiness and Activation for AI",
+          "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-unstructured-data-management-2026",
+          "score": 6
+        },
+        {
+          "title": "2026 GigaOm Rader for Object Storage Analyst Report | Analyst Report",
+          "type": "Analyst Report",
+          "campaign": "AI Data Foundation",
+          "useCase": "Data Readiness and Activation for AI",
+          "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-radar-for-object-storage",
+          "score": 6
+        },
+        {
+          "title": "2027 GigaOm for Unstructured Data Management (UDM) | Analyst Report",
+          "type": "Analyst Report",
+          "campaign": "AI Data Foundation",
+          "useCase": "Data Readiness and Activation for AI",
+          "url": "2027 GigaOm for Unstructured Data Management (UDM)",
           "score": 6
         }
       ]
