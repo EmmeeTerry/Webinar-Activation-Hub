@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-10-15T10:57:15.684390+00:00",
+  "lastRefreshed": "2026-10-15T13:11:01.057014+00:00",
   "items": [
     {
       "id": "10-reasons-to-buy-build-or-borrow-ai-implementation-ebook-1",
@@ -2445,8 +2445,8 @@
       "audience": "Enterprise",
       "status": "Updates Required",
       "region": "Global",
-      "publishDate": "2027-02-17",
-      "publishDateDisplay": "Feb 17, 2027",
+      "publishDate": "2027-04-30",
+      "publishDateDisplay": "Apr 30, 2027",
       "partnerUse": false,
       "paidMediaDate": null,
       "paidMediaDateDisplay": "",
@@ -2461,8 +2461,8 @@
       "actionRequired": "Retire, replace, or update content",
       "abstract": "",
       "partnerCampaignLink": null,
-      "fiscalYear": "FY27",
-      "fiscalQuarter": "Q4",
+      "fiscalYear": "FY28",
+      "fiscalQuarter": "Q1",
       "issueType": "; Expired/Update"
     },
     {
@@ -4077,8 +4077,8 @@
       "audience": "Enterprise, Midmarket",
       "status": "Expired",
       "region": "Global",
-      "publishDate": "2026-04-01",
-      "publishDateDisplay": "Apr 01, 2026",
+      "publishDate": "2026-12-01",
+      "publishDateDisplay": "Dec 01, 2026",
       "partnerUse": false,
       "paidMediaDate": null,
       "paidMediaDateDisplay": "",
@@ -4094,7 +4094,7 @@
       "abstract": "",
       "partnerCampaignLink": null,
       "fiscalYear": "FY27",
-      "fiscalQuarter": "Q1",
+      "fiscalQuarter": "Q3",
       "issueType": "; Expired/Update"
     },
     {
