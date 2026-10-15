@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Email content | Hitachi Vantara</title>
+<style>body{font:15px Arial,sans-serif;background:#f4f4f4;color:#222;margin:0;border-top:6px solid #fa000f}main{max-width:730px;margin:50px auto;padding:30px;background:white;border:1px solid #ddd}h1{font-weight:400}button,a.button{display:inline-block;background:#fa000f;color:white;border:0;padding:13px 18px;text-decoration:none;font-weight:bold;cursor:pointer;margin:8px 8px 8px 0}pre{white-space:pre-wrap;background:#f6f6f6;border:1px solid #ddd;padding:16px;font-family:inherit;line-height:1.5}p{line-height:1.5}</style>
+</head><body><main><div>HITACHI VANTARA</div><h1>Email this content</h1><p id="status">Loading content…</p><div id="actions" hidden><button id="open">Open email in Outlook</button><button id="copy" style="background:#222">Copy email details</button><pre id="preview"></pre><p>This page opens outside SharePoint so the browser can hand the email to your configured Outlook application. No email is sent until you review and send it.</p></div></main>
+<script>
+const params=new URLSearchParams(location.search);
+const id=params.get('id');
+let mailto='',body='',subject='';
+(async()=>{try{
+ if(!id)throw Error('No content entry was selected.');
+ const resp=await fetch('./content.json?ts='+Date.now(),{cache:'no-store'});
+ if(!resp.ok)throw Error('Could not load the Content Library.');
+ const json=await resp.json(),it=(json.items||[]).find(x=>x.id===id);
+ if(!it)throw Error('This content entry could not be found.');
+ subject='Hitachi Vantara Content Library: '+(it.title||'Content');
+ let abstract=it.abstract||'';if(abstract.length>400)abstract=abstract.slice(0,400)+'…';
+ body=["I'm sharing this from the Hitachi Vantara Content Library — thought it could help with your campaign or customer conversation.",'',
+ 'Title: '+(it.title||''),it.type?'Type: '+it.type:'',it.campaign?'Campaign: '+it.campaign:'',it.useCase?'Use case: '+it.useCase:'',it.audience?'Audience: '+it.audience:'',it.region?'Region: '+it.region:'',it.status?'Status: '+it.status:'',it.publishDateDisplay?'Publish date: '+it.publishDateDisplay:'',abstract?'\nAbstract: '+abstract:'','','Link: '+(it.url||'')].filter(Boolean).join('\n');
+ mailto='mailto:?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+ document.getElementById('status').textContent=it.title;
+ document.getElementById('preview').textContent='Subject: '+subject+'\n\n'+body;
+ document.getElementById('actions').hidden=false;
+}catch(e){document.getElementById('status').textContent=e.message;}})();
+document.getElementById('open').addEventListener('click',()=>{location.href=mailto});
+document.getElementById('copy').addEventListener('click',async()=>{try{await navigator.clipboard.writeText('Subject: '+subject+'\n\n'+body);document.getElementById('copy').textContent='Copied!'}catch(e){window.prompt('Copy email details:','Subject: '+subject+'\n\n'+body)}});
+</script></body></html>
