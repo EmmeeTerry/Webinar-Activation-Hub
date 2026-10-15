@@ -80,6 +80,7 @@ CONTENT_COLUMN_MAP = {
     "useCase":      "Use Case",
     "url":          "Asset Title (with Link)",  # same column's hyperlink URL
     "description":  "Description",            # the real description text lives here, not on the Webinar Calendar report
+    "partnerCampaignLink": "Partner Campaign Link",  # hyperlink from Content Mapping Master List
 }
 
 CONTENT_TEXT_ONLY_FIELDS = {"titleLinked"}  # we want this column's visible text, not its hyperlink (that's what "url" is for)
@@ -261,14 +262,19 @@ def transform(webinar_rows, content_rows):
     # "Description" column, not the Webinar Calendar report's own "Abstract"
     # column (which is unused/blank for every row). Match by title.
     description_by_title = {}
+    partner_link_by_title = {}
     for c in content_rows:
         d = c.get("description")
-        if not d:
+        partner_link = c.get("partnerCampaignLink")
+        if not d and not partner_link:
             continue
         for key_field in ("title", "titleLinked"):
             t = (c.get(key_field) or "").strip().lower()
             if t:
-                description_by_title[t] = d
+                if d:
+                    description_by_title[t] = d
+                if partner_link:
+                    partner_link_by_title[t] = partner_link
 
     webinars = []
     for w in webinar_rows:
@@ -297,6 +303,7 @@ def transform(webinar_rows, content_rows):
                 "paidSocial": w.get("paidSocial") or None,
                 "social": w.get("social") or None,
                 "attendance": w.get("attendance") or None,
+                "partnerCampaign": partner_link_by_title.get((w.get("title") or "").strip().lower()),
             },
             "sourceRow": w.get("_sourceRow"),
         }
