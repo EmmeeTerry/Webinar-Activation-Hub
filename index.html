@@ -183,7 +183,8 @@ const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&
 const statusClass=s=>String(s).toLowerCase().replace(/\s+/g,'');
 const readinessClass=s=>s==='Activation ready'?'good':(s==='Partially ready'?'partial':'plan');
 const prettyDate=d=>{if(!d)return'TBD'; const x=new Date(d+'T12:00:00'); return x.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'})};
-const linkBtn=(label,url,primary=false)=> url ? `<a class="btn ${primary?'primary':''}" target="_blank" href="${esc(url)}">${esc(label)} ↗</a>` : '';
+const isResourceUrl=url=>typeof url==='string' && /^https?:\/\/[^\s]+$/i.test(url.trim());
+const linkBtn=(label,url,primary=false)=> isResourceUrl(url) ? `<a class="btn ${primary?'primary':''}" target="_blank" href="${esc(url)}">${esc(label)} ↗</a>` : '';
 
 function filters(){
   const campaigns=[...new Set(DATA.map(x=>x.campaign).filter(Boolean))];
@@ -436,9 +437,9 @@ function openModal(id){
   <div>
     <div class="box"><h3>When to use it</h3><div class="why">${esc(w.whyUse)}</div></div>
     ${w.abstract ? `<div class="box"><h3>Abstract</h3><div class="why">${esc(w.abstract)}</div></div>` : ''}
-    <div class="box"><h3>Activation resources</h3><div class="resource-grid">${resources.map(([n,u])=>u?`<a class="resource-btn" href="${esc(u)}" target="_blank">${esc(n)} ↗</a>`:`<div class="resource-btn unavailable">${esc(n)} · not available</div>`).join('')}</div></div>
+    <div class="box"><h3>Activation resources</h3><div class="resource-grid">${resources.map(([n,u])=>isResourceUrl(u)?`<a class="resource-btn" href="${esc(u)}" target="_blank">${esc(n)} ↗</a>`:`<div class="resource-btn unavailable">${esc(n)} · not available</div>`).join('')}</div></div>
     <div class="box"><h3>Share</h3><div class="resource-grid">
-      ${w.links && w.links.watch ? `<a class="resource-btn" href="${emailLink(w)}">Email to customer / partner</a>` : `<div class="resource-btn unavailable">Email this webinar &middot; nothing to share yet</div>`}
+      ${w.links && isResourceUrl(w.links.watch) ? `<a class="resource-btn" href="${emailLink(w)}">Email to customer / partner</a>` : `<div class="resource-btn unavailable">Email this webinar &middot; nothing to share yet</div>`}
       <a class="resource-btn" href="./build-slide.html?source=webinar&id=${encodeURIComponent(w.id)}" target="_blank" rel="noopener">Build One Slide ↗</a>
       ${w.date && w.date>=todayStr() ? `<a class="resource-btn" href="#" onclick="event.preventDefault();downloadICS('${esc(w.id)}')">Add to calendar</a>` : `<div class="resource-btn unavailable">Add to calendar &middot; already passed</div>`}
     </div></div>
