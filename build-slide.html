@@ -8,13 +8,15 @@
 <p class="muted">The slide includes editable text and a clickable asset link. This first version follows Hitachi brand colors; the exact corporate template masters are not yet imported.</p></main>
 <script src="https://cdn.jsdelivr.net/npm/pptxgenjs@3.12.0/dist/pptxgen.bundle.js"></script>
 <script>
-const id=new URLSearchParams(location.search).get('id');
+const params=new URLSearchParams(location.search);
+const id=params.get('id');
+const isWebinar=params.get('source')==='webinar';
 let item=null;
 function shorten(s,max){s=String(s||'').trim();return s.length>max?s.slice(0,max-1).trim()+'…':s}
 (async()=>{try{
  if(!id)throw Error('No content entry was selected.');
- const r=await fetch('./content.json?ts='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('Could not load the library data.');
- const j=await r.json();item=(j.items||[]).find(x=>x.id===id);if(!item)throw Error('This content entry was not found.');
+ const r=await fetch((isWebinar?'./webinars.json':'./content.json')+'?ts='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('Could not load the library data.');
+ const j=await r.json();item=(j.items||j.webinars||[]).find(x=>x.id===id);if(item && isWebinar){item={...item,url:item.links?.watch||'',abstract:item.abstract||item.whyUse||'',type:'Webinar',notes:item.whyUse||'',};}if(!item)throw Error('This content entry was not found.');
  document.getElementById('title').textContent=shorten(item.title,110);
  document.getElementById('summary').textContent=shorten(item.abstract||item.notes||'Access the resource for more information.',280);
  document.getElementById('meta').textContent=[item.type,item.campaign,item.useCase].filter(Boolean).join('  |  ');
