@@ -319,8 +319,8 @@ function render(){
  let out='';
  if(promote.length) out+=`<section class="section"><div class="section-title">Promote now · ${promote.length}</div><div class="feature-grid">${promote.map(card).join('')}</div></section>`;
  if(upcoming.length) out+=`<section class="section"><div class="section-title">Upcoming · ${upcoming.length}</div><div class="list">${upcoming.map(listRow).join('')}</div></section>`;
- if(planned.length) out+=`<section class="section"><div class="section-title">Planned · ${planned.length}</div><div class="list">${planned.map(listRow).join('')}</div></section>`;
  if(ondemand.length) out+=`<section class="section"><div class="section-title">On demand · ready to reuse · ${ondemand.length}</div><div class="list">${ondemand.map(listRow).join('')}</div></section>`;
+ if(planned.length) out+=`<section class="section"><div class="section-title">Planned · ${planned.length}</div><div class="list">${planned.map(listRow).join('')}</div></section>`;
  document.getElementById('content').innerHTML=out;
 }
 function renderSpotlight(){
