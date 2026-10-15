@@ -386,6 +386,20 @@ function downloadICS(id){
   const next = new Date(w.date+'T00:00:00'); next.setDate(next.getDate()+1);
   const dtEnd = next.getFullYear()+String(next.getMonth()+1).padStart(2,'0')+String(next.getDate()).padStart(2,'0');
   const stamp = new Date().toISOString().replace(/[-:]/g,'').split('.')[0]+'Z';
+  const details = [
+    w.abstract ? 'About this webinar:\n'+w.abstract : '',
+    w.status ? 'Status: '+w.status : '',
+    w.dateDisplay ? 'Date: '+w.dateDisplay : '',
+    w.campaign ? 'Campaign: '+w.campaign : '',
+    w.useCase ? 'Use case: '+w.useCase : '',
+    w.audience ? 'Audience: '+w.audience : '',
+    w.region ? 'Region: '+w.region : '',
+    w.owner ? 'Owner: '+w.owner : '',
+    w.quarter ? 'Quarter: '+w.quarter : '',
+    w.whyUse ? 'Internal activation guidance: '+w.whyUse : '',
+    w.links?.watch ? 'Watch / register: '+w.links.watch : '',
+    w.links?.partnerCampaign ? 'Partner campaign: '+w.links.partnerCampaign : ''
+  ].filter(Boolean).join('\n\n');
   const lines = [
     'BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Hitachi Vantara//Webinar Activation Hub//EN','BEGIN:VEVENT',
     'UID:'+w.id+'@webinar-activation-hub',
@@ -393,9 +407,9 @@ function downloadICS(id){
     'DTSTART;VALUE=DATE:'+dt,
     'DTEND;VALUE=DATE:'+dtEnd,
     'SUMMARY:'+icsEscape(w.title),
-    'DESCRIPTION:'+icsEscape(w.whyUse || w.abstract || ''),
+    'DESCRIPTION:'+icsEscape(details),
   ];
-  if(w.links && w.links.watch) lines.push('URL:'+w.links.watch);
+  if(w.links && w.links.watch) lines.push('URL:'+icsEscape(w.links.watch));
   lines.push('END:VEVENT','END:VCALENDAR');
   const blob = new Blob([lines.join('\r\n')], {type:'text/calendar;charset=utf-8;'});
   const url = URL.createObjectURL(blob);
