@@ -2,10 +2,10 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Build One Slide | Hitachi Vantara</title>
 <style>body{font:15px Arial,sans-serif;background:#f4f4f4;color:#222;margin:0;border-top:6px solid #fa000f}main{max-width:840px;margin:40px auto;padding:30px;background:#fff;border:1px solid #ddd}h1{font-weight:400}button{background:#fa000f;color:white;border:0;padding:13px 18px;font-size:14px;font-weight:bold;cursor:pointer}button:disabled{opacity:.5}.preview{border:1px solid #bbb;aspect-ratio:16/9;margin:25px 0;background:white;padding:5%;box-shadow:0 5px 20px #0002;display:flex;flex-direction:column;justify-content:space-between}.brand{color:#cc0000;font-weight:bold;font-size:13px;letter-spacing:.1em}.title{font-size:clamp(21px,4vw,34px);font-weight:bold;line-height:1.2}.summary{font-size:clamp(13px,1.5vw,19px);line-height:1.4}.meta{font-size:13px;color:#666;border-top:3px solid #fa000f;padding-top:13px}.muted{color:#666;font-size:12px}p{line-height:1.5}</style></head>
-<body><main><div class="brand">HITACHI VANTARA</div><h1>Build One Slide</h1><p>Generate an editable PowerPoint slide for this Content Library asset.</p><p id="status">Loading…</p>
+<body><main><div class="brand">HITACHI VANTARA</div><h1>Build One Slide</h1><p>Generate a compact, editable one-slide brief with relevant asset information.</p><p id="status">Loading…</p>
 <div class="preview"><div class="brand">HITACHI VANTARA</div><div><div id="title" class="title"></div><p id="summary" class="summary"></p></div><div id="meta" class="meta"></div></div>
 <button id="download" disabled>Download PowerPoint (.pptx)</button>
-<p class="muted">The slide includes editable text and a clickable asset link. This first version follows Hitachi brand colors; the exact corporate template masters are not yet imported.</p></main>
+<p class="muted">One-slide information brief. Long descriptions are condensed to fit; view the linked asset for the full text. Uses Hitachi colors, not yet the exact corporate slide master.</p></main>
 <script src="https://cdn.jsdelivr.net/npm/pptxgenjs@3.12.0/dist/pptxgen.bundle.js"></script>
 <script>
 const params=new URLSearchParams(location.search);
@@ -16,7 +16,7 @@ function shorten(s,max){s=String(s||'').trim();return s.length>max?s.slice(0,max
 (async()=>{try{
  if(!id)throw Error('No content entry was selected.');
  const r=await fetch((isWebinar?'./webinars.json':'./content.json')+'?ts='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('Could not load the library data.');
- const j=await r.json();item=(j.items||j.webinars||[]).find(x=>x.id===id);if(item && isWebinar){item={...item,url:item.links?.watch||'',abstract:item.abstract||item.whyUse||'',type:'Webinar',notes:item.whyUse||'',};}if(!item)throw Error('This content entry was not found.');
+ const j=await r.json();item=(j.items||j.webinars||[]).find(x=>x.id===id);if(item && isWebinar){item={...item,url:item.links?.watch||'',type:'Webinar',notes:item.whyUse||'',};}if(!item)throw Error('This content entry was not found.');
  document.getElementById('title').textContent=shorten(item.title,110);
  document.getElementById('summary').textContent=shorten(item.abstract||item.notes||'Access the resource for more information.',280);
  document.getElementById('meta').textContent=[item.type,item.campaign,item.useCase].filter(Boolean).join('  |  ');
@@ -29,14 +29,33 @@ document.getElementById('download').addEventListener('click',async()=>{
  btn.disabled=true;btn.textContent='Building PowerPoint…';
  try{
  const pptx=new pptxgen();pptx.layout='LAYOUT_WIDE';pptx.author='Hitachi Vantara';pptx.subject='Content Library asset';pptx.title=item.title||'Content Library Slide';pptx.lang='en-US';
+
  const s=pptx.addSlide();s.background={color:'FFFFFF'};
- s.addShape(pptx.ShapeType.rect,{x:0,y:0,w:13.333,h:.09,line:{color:'FA000F'},fill:{color:'FA000F'}});
- s.addText('HITACHI VANTARA',{x:.7,y:.36,w:5,h:.36,fontFace:'Arial',fontSize:14,bold:true,color:'CC0000',margin:0,charSpacing:1.3});
- s.addText(shorten(item.title,110),{x:.72,y:1.25,w:11.8,h:1.6,fontFace:'Arial',fontSize:29,bold:true,color:'0C0C0C',breakLine:false,valign:'mid',margin:0,fit:'shrink'});
- s.addText(shorten(item.abstract||item.notes||'Access the content resource for more information.',420),{x:.75,y:3.22,w:11.45,h:1.9,fontFace:'Arial',fontSize:18,color:'333333',breakLine:false,valign:'top',margin:0,fit:'shrink'});
- s.addShape(pptx.ShapeType.line,{x:.7,y:6.18,w:11.92,h:0,line:{color:'FA000F',width:2}});
- s.addText([item.type,item.campaign,item.useCase].filter(Boolean).join('  |  '),{x:.74,y:6.35,w:11.6,h:.35,fontFace:'Arial',fontSize:11,color:'666666',margin:0,fit:'shrink'});
- if(item.url)s.addText('Open resource →',{x:.75,y:6.85,w:3.2,h:.3,fontFace:'Arial',fontSize:13,bold:true,color:'CC0000',hyperlink:{url:item.url},margin:0});
+ const addText=(t,x,y,w,h,opt={})=>s.addText(String(t||''),{x,y,w,h,fontFace:'Arial',fontSize:opt.fontSize||12,color:opt.color||'222222',bold:!!opt.bold,margin:0,breakLine:false,valign:'top',fit:'shrink',...opt});
+ const rule=(x,y,w)=>s.addShape(pptx.ShapeType.line,{x,y,w,h:0,line:{color:'D9D9D9',width:1}});
+ const brief=(str,max)=>shorten(String(str||'').replace(/\\s+/g,' ').trim(),max);
+ const field=(label,value,y,x=8.5,w=4.0)=>{if(!value)return y;addText(label.toUpperCase(),x,y,w,.19,{fontSize:9,bold:true,color:'CC0000'});addText(brief(value,120),x,y+.22,w,.44,{fontSize:12});return y+.76;};
+ s.addShape(pptx.ShapeType.rect,{x:0,y:0,w:13.333,h:.08,line:{color:'FA000F'},fill:{color:'FA000F'}});
+ addText('HITACHI VANTARA  /  '+(isWebinar?'WEBINAR BRIEF':'CONTENT BRIEF'),.55,.27,11,.28,{fontSize:11,color:'CC0000',bold:true});
+ addText(brief(item.title,180),.55,.74,12.15,.95,{fontSize:25,bold:true,color:'0C0C0C'});
+ rule(.55,1.81,12.2);
+ addText(isWebinar?'WEBINAR OVERVIEW':'CONTENT OVERVIEW',.6,2.06,7.35,.25,{fontSize:11,bold:true,color:'CC0000'});
+ const overview=brief(item.abstract||item.notes||'No description available in the source record.',950);
+ addText(overview,.6,2.45,7.15,2.9,{fontSize:15,breakLine:false});
+ if(isWebinar && item.whyUse){addText('WHY USE THIS',.6,5.54,7.1,.24,{fontSize:11,bold:true,color:'CC0000'});addText(brief(item.whyUse,230),.6,5.9,7.1,.65,{fontSize:12});}
+ else {addText('CONTENT APPLICATION',.6,5.54,7.1,.24,{fontSize:11,bold:true,color:'CC0000'});addText(brief([item.useCase,item.funnelStage,item.primaryActivation].filter(Boolean).join('  •  ')||'See linked resource for usage guidance.',220),.6,5.9,7.1,.65,{fontSize:12});}
+ s.addShape(pptx.ShapeType.rect,{x:8.18,y:2.02,w:4.55,h:4.67,line:{color:'E2E2E2'},fill:{color:'F7F7F7'}});
+ let y=2.25;
+ y=field('Format',item.type,y);
+ y=field('Campaign',item.campaign,y);
+ y=field('Use case',item.useCase,y);
+ y=field(isWebinar?'Webinar date':'Audience',isWebinar?(item.dateDisplay||item.date):(item.audience),y);
+ y=field(isWebinar?'Audience':'Region',isWebinar?item.audience:item.region,y);
+ if(isWebinar && y<6.15)y=field('Region',item.region,y);
+ rule(.55,6.84,12.2);
+ if(item.url){addText(isWebinar?'Watch / register →':'Open content asset →',.6,7.02,6.7,.28,{fontSize:12,color:'CC0000',bold:true,hyperlink:{url:item.url}});}
+ addText('Source: '+(isWebinar?'Webinar Activation Hub':'Content Library'),8.5,7.03,4.1,.23,{fontSize:9,color:'666666'});
+
  const safe=String(item.title||'content-slide').replace(/[^a-z0-9 -]/gi,'').trim().replace(/\s+/g,'-').slice(0,65)||'content-slide';
  await pptx.writeFile({fileName:safe+'.pptx'});
  }catch(e){alert('Unable to create the PowerPoint: '+e.message)}finally{btn.disabled=false;btn.textContent='Download PowerPoint (.pptx)'}
