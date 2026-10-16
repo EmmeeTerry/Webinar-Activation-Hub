@@ -23,7 +23,13 @@
           "url": "https://www.hitachivantara.com/en-us/partners/partner-ecosystem"
         }
       ],
-      "status": "Ready to personalize"
+      "status": "Ready to personalize",
+      "objective": "Event follow-up",
+      "language": "English",
+      "reviewStatus": "Needs review",
+      "reviewOwner": "Partner Programs Marketing",
+      "lastReviewed": "",
+      "reviewDue": ""
     },
     {
       "id": "pam-dpae-1",
@@ -47,7 +53,13 @@
       ],
       "status": "Ready to review",
       "source": "PAM-to-Partner email workbook · DPAE!B7",
-      "featuredAsset": "451 Research Vanguard Report (May 2025): Rising data challenges drive storage modernization (Campaign mapping Message #2)"
+      "featuredAsset": "451 Research Vanguard Report (May 2025): Rising data challenges drive storage modernization (Campaign mapping Message #2)",
+      "objective": "Campaign promotion",
+      "language": "English",
+      "reviewStatus": "Needs review",
+      "reviewOwner": "Partner Programs Marketing",
+      "lastReviewed": "",
+      "reviewDue": ""
     },
     {
       "id": "pam-dpae-2",
@@ -71,7 +83,13 @@
       ],
       "status": "Ready to review",
       "source": "PAM-to-Partner email workbook · DPAE!C7",
-      "featuredAsset": "CIO.com Webinar (Campaign Message #3"
+      "featuredAsset": "CIO.com Webinar (Campaign Message #3",
+      "objective": "Campaign promotion",
+      "language": "English",
+      "reviewStatus": "Needs review",
+      "reviewOwner": "Partner Programs Marketing",
+      "lastReviewed": "",
+      "reviewDue": ""
     },
     {
       "id": "pam-dpae-3",
@@ -95,7 +113,13 @@
       ],
       "status": "Ready to review",
       "source": "PAM-to-Partner email workbook · DPAE!D7",
-      "featuredAsset": "Enterprise Strategy Group white paper (December 2024): Navigating Complexity and Cost With Hitachi EverFlex\n(Campaign mapping Message #6)"
+      "featuredAsset": "Enterprise Strategy Group white paper (December 2024): Navigating Complexity and Cost With Hitachi EverFlex\n(Campaign mapping Message #6)",
+      "objective": "Campaign promotion",
+      "language": "English",
+      "reviewStatus": "Needs review",
+      "reviewOwner": "Partner Programs Marketing",
+      "lastReviewed": "",
+      "reviewDue": ""
     },
     {
       "id": "pam-dpae-4",
@@ -119,7 +143,13 @@
       ],
       "status": "Ready to review",
       "source": "PAM-to-Partner email workbook · DPAE!E7",
-      "featuredAsset": "University of Mary Hardin-Baylor (UMHB) customer story\n(Campaign mapping Message #4)"
+      "featuredAsset": "University of Mary Hardin-Baylor (UMHB) customer story\n(Campaign mapping Message #4)",
+      "objective": "Campaign promotion",
+      "language": "English",
+      "reviewStatus": "Needs review",
+      "reviewOwner": "Partner Programs Marketing",
+      "lastReviewed": "",
+      "reviewDue": ""
     },
     {
       "id": "pam-dpae-5",
@@ -143,7 +173,13 @@
       ],
       "status": "Ready to review",
       "source": "PAM-to-Partner email workbook · DPAE!F7",
-      "featuredAsset": "Eight Nines of Uptime: How VSP One Block Redefines Reliability for Mission-Critical Enterprises (white paper)\n(Campaign mapping Message #5)"
+      "featuredAsset": "Eight Nines of Uptime: How VSP One Block Redefines Reliability for Mission-Critical Enterprises (white paper)\n(Campaign mapping Message #5)",
+      "objective": "Campaign promotion",
+      "language": "English",
+      "reviewStatus": "Needs review",
+      "reviewOwner": "Partner Programs Marketing",
+      "lastReviewed": "",
+      "reviewDue": ""
     },
     {
       "id": "pam-hcpo-1",
@@ -167,7 +203,13 @@
       ],
       "status": "Ready to review",
       "source": "PAM-to-Partner email workbook · HCPO!B7",
-      "featuredAsset": "MIT Technology Review Insights: why data platforms are critical to hybrid cloud success\n(Campaign mapping Message #1)"
+      "featuredAsset": "MIT Technology Review Insights: why data platforms are critical to hybrid cloud success\n(Campaign mapping Message #1)",
+      "objective": "Campaign promotion",
+      "language": "English",
+      "reviewStatus": "Needs review",
+      "reviewOwner": "Partner Programs Marketing",
+      "lastReviewed": "",
+      "reviewDue": ""
     },
     {
       "id": "pam-hcpo-2",
@@ -191,7 +233,13 @@
       ],
       "status": "Ready to review",
       "source": "PAM-to-Partner email workbook · HCPO!C7",
-      "featuredAsset": "Omdia Webinar\n(Campaign mapping Message #2)"
+      "featuredAsset": "Omdia Webinar\n(Campaign mapping Message #2)",
+      "objective": "Campaign promotion",
+      "language": "English",
+      "reviewStatus": "Needs review",
+      "reviewOwner": "Partner Programs Marketing",
+      "lastReviewed": "",
+      "reviewDue": ""
     },
     {
       "id": "pam-hcpo-3",
@@ -215,7 +263,13 @@
       ],
       "status": "Ready to review",
       "source": "PAM-to-Partner email workbook · HCPO!D7",
-      "featuredAsset": "Solve the Six eBook: the six biggest data storage challenges\n(Campaign mapping Message #3)"
+      "featuredAsset": "Solve the Six eBook: the six biggest data storage challenges\n(Campaign mapping Message #3)",
+      "objective": "Campaign promotion",
+      "language": "English",
+      "reviewStatus": "Needs review",
+      "reviewOwner": "Partner Programs Marketing",
+      "lastReviewed": "",
+      "reviewDue": ""
     },
     {
       "id": "pam-hcpo-4",
@@ -239,7 +293,13 @@
       ],
       "status": "Ready to review",
       "source": "PAM-to-Partner email workbook · HCPO!E7",
-      "featuredAsset": "Hitachi EverFlex customer stories eBook (six organizations)\n(Campaign mapping Message #4)"
+      "featuredAsset": "Hitachi EverFlex customer stories eBook (six organizations)\n(Campaign mapping Message #4)",
+      "objective": "Campaign promotion",
+      "language": "English",
+      "reviewStatus": "Needs review",
+      "reviewOwner": "Partner Programs Marketing",
+      "lastReviewed": "",
+      "reviewDue": ""
     },
     {
       "id": "pam-hcpo-5",
@@ -263,7 +323,13 @@
       ],
       "status": "Ready to review",
       "source": "PAM-to-Partner email workbook · HCPO!F7",
-      "featuredAsset": "Hybrid Cloud Buyer’s Guide\n(Campaign mapping Message #5, confirm which guide)"
+      "featuredAsset": "Hybrid Cloud Buyer’s Guide\n(Campaign mapping Message #5, confirm which guide)",
+      "objective": "Campaign promotion",
+      "language": "English",
+      "reviewStatus": "Needs review",
+      "reviewOwner": "Partner Programs Marketing",
+      "lastReviewed": "",
+      "reviewDue": ""
     },
     {
       "id": "pam-crmr-1",
@@ -287,7 +353,13 @@
       ],
       "status": "Ready to review",
       "source": "PAM-to-Partner email workbook · CRMR!B7",
-      "featuredAsset": "MIT Technology Review Insights: Adapting to new threats with proactive risk management\n(Campaign mapping Message #1)"
+      "featuredAsset": "MIT Technology Review Insights: Adapting to new threats with proactive risk management\n(Campaign mapping Message #1)",
+      "objective": "Campaign promotion",
+      "language": "English",
+      "reviewStatus": "Needs review",
+      "reviewOwner": "Partner Programs Marketing",
+      "lastReviewed": "",
+      "reviewDue": ""
     },
     {
       "id": "pam-crmr-2",
@@ -311,7 +383,13 @@
       ],
       "status": "Ready to review",
       "source": "PAM-to-Partner email workbook · CRMR!C7",
-      "featuredAsset": "Cyber Resilience For Dummies\n(Campaign mapping Message #2)"
+      "featuredAsset": "Cyber Resilience For Dummies\n(Campaign mapping Message #2)",
+      "objective": "Campaign promotion",
+      "language": "English",
+      "reviewStatus": "Needs review",
+      "reviewOwner": "Partner Programs Marketing",
+      "lastReviewed": "",
+      "reviewDue": ""
     },
     {
       "id": "pam-crmr-3",
@@ -335,7 +413,13 @@
       ],
       "status": "Ready to review",
       "source": "PAM-to-Partner email workbook · CRMR!D7",
-      "featuredAsset": "Protect Smarter, Recover Faster: Your Guide to Data Protection as a Service (eBook)\n(Campaign mapping Message #3)"
+      "featuredAsset": "Protect Smarter, Recover Faster: Your Guide to Data Protection as a Service (eBook)\n(Campaign mapping Message #3)",
+      "objective": "Campaign promotion",
+      "language": "English",
+      "reviewStatus": "Needs review",
+      "reviewOwner": "Partner Programs Marketing",
+      "lastReviewed": "",
+      "reviewDue": ""
     },
     {
       "id": "pam-crmr-4",
@@ -359,7 +443,13 @@
       ],
       "status": "Ready to review",
       "source": "PAM-to-Partner email workbook · CRMR!E7",
-      "featuredAsset": "Resilient by Design Webinar\n(Campaign mapping Message #4)"
+      "featuredAsset": "Resilient by Design Webinar\n(Campaign mapping Message #4)",
+      "objective": "Campaign promotion",
+      "language": "English",
+      "reviewStatus": "Needs review",
+      "reviewOwner": "Partner Programs Marketing",
+      "lastReviewed": "",
+      "reviewDue": ""
     },
     {
       "id": "pam-crmr-5",
@@ -383,7 +473,13 @@
       ],
       "status": "Ready to review",
       "source": "PAM-to-Partner email workbook · undefined",
-      "featuredAsset": "Buyer’s Guide for Cyber-Resilient Data Infrastructure (Campaign mapping Message #5)"
+      "featuredAsset": "Buyer’s Guide for Cyber-Resilient Data Infrastructure (Campaign mapping Message #5)",
+      "objective": "Campaign promotion",
+      "language": "English",
+      "reviewStatus": "Needs review",
+      "reviewOwner": "Partner Programs Marketing",
+      "lastReviewed": "",
+      "reviewDue": ""
     },
     {
       "id": "fast-start-w1-us",
@@ -441,7 +537,13 @@
         }
       ],
       "status": "Ready to personalize",
-      "source": "FY26 Fast Start Promotional Resources · Email Schedule (3) · Row 7 · PAM Email Message (with links)"
+      "source": "FY26 Fast Start Promotional Resources · Email Schedule (3) · Row 7 · PAM Email Message (with links)",
+      "objective": "Campaign promotion",
+      "language": "English",
+      "reviewStatus": "Needs review",
+      "reviewOwner": "Partner Programs Marketing",
+      "lastReviewed": "",
+      "reviewDue": ""
     },
     {
       "id": "fast-start-w1-latam",
@@ -495,7 +597,13 @@
         }
       ],
       "status": "Ready to personalize",
-      "source": "FY26 Fast Start Promotional Resources · Email Schedule (3) · Row 8 · PAM Email Message (with links)"
+      "source": "FY26 Fast Start Promotional Resources · Email Schedule (3) · Row 8 · PAM Email Message (with links)",
+      "objective": "Campaign promotion",
+      "language": "English",
+      "reviewStatus": "Needs review",
+      "reviewOwner": "Partner Programs Marketing",
+      "lastReviewed": "",
+      "reviewDue": ""
     },
     {
       "id": "fast-start-w2-us",
@@ -553,7 +661,13 @@
         }
       ],
       "status": "Ready to personalize",
-      "source": "FY26 Fast Start Promotional Resources · Email Schedule (3) · Row 9 · PAM Email Message (with links)"
+      "source": "FY26 Fast Start Promotional Resources · Email Schedule (3) · Row 9 · PAM Email Message (with links)",
+      "objective": "Campaign promotion",
+      "language": "English",
+      "reviewStatus": "Needs review",
+      "reviewOwner": "Partner Programs Marketing",
+      "lastReviewed": "",
+      "reviewDue": ""
     },
     {
       "id": "fast-start-w2-latam",
@@ -607,7 +721,13 @@
         }
       ],
       "status": "Ready to personalize",
-      "source": "FY26 Fast Start Promotional Resources · Email Schedule (3) · Row 10 · PAM Email Message (with links)"
+      "source": "FY26 Fast Start Promotional Resources · Email Schedule (3) · Row 10 · PAM Email Message (with links)",
+      "objective": "Campaign promotion",
+      "language": "English",
+      "reviewStatus": "Needs review",
+      "reviewOwner": "Partner Programs Marketing",
+      "lastReviewed": "",
+      "reviewDue": ""
     },
     {
       "id": "fast-start-w3-us",
@@ -665,7 +785,13 @@
         }
       ],
       "status": "Ready to personalize",
-      "source": "FY26 Fast Start Promotional Resources · Email Schedule (3) · Row 11 · PAM Email Message (with links)"
+      "source": "FY26 Fast Start Promotional Resources · Email Schedule (3) · Row 11 · PAM Email Message (with links)",
+      "objective": "Campaign promotion",
+      "language": "English",
+      "reviewStatus": "Needs review",
+      "reviewOwner": "Partner Programs Marketing",
+      "lastReviewed": "",
+      "reviewDue": ""
     },
     {
       "id": "fast-start-w3-latam",
@@ -719,7 +845,13 @@
         }
       ],
       "status": "Ready to personalize",
-      "source": "FY26 Fast Start Promotional Resources · Email Schedule (3) · Row 12 · PAM Email Message (with links)"
+      "source": "FY26 Fast Start Promotional Resources · Email Schedule (3) · Row 12 · PAM Email Message (with links)",
+      "objective": "Campaign promotion",
+      "language": "English",
+      "reviewStatus": "Needs review",
+      "reviewOwner": "Partner Programs Marketing",
+      "lastReviewed": "",
+      "reviewDue": ""
     },
     {
       "id": "fast-start-w4-us",
@@ -769,7 +901,13 @@
         }
       ],
       "status": "Ready to personalize",
-      "source": "FY26 Fast Start Promotional Resources · Email Schedule (3) · Row 13 · PAM Email Message (with links)"
+      "source": "FY26 Fast Start Promotional Resources · Email Schedule (3) · Row 13 · PAM Email Message (with links)",
+      "objective": "Campaign promotion",
+      "language": "English",
+      "reviewStatus": "Needs review",
+      "reviewOwner": "Partner Programs Marketing",
+      "lastReviewed": "",
+      "reviewDue": ""
     },
     {
       "id": "fast-start-w4-latam",
@@ -815,7 +953,13 @@
         }
       ],
       "status": "Ready to personalize",
-      "source": "FY26 Fast Start Promotional Resources · Email Schedule (3) · Row 14 · PAM Email Message (with links)"
+      "source": "FY26 Fast Start Promotional Resources · Email Schedule (3) · Row 14 · PAM Email Message (with links)",
+      "objective": "Campaign promotion",
+      "language": "English",
+      "reviewStatus": "Needs review",
+      "reviewOwner": "Partner Programs Marketing",
+      "lastReviewed": "",
+      "reviewDue": ""
     },
     {
       "id": "fast-start-w5-us",
@@ -873,7 +1017,13 @@
         }
       ],
       "status": "Ready to personalize",
-      "source": "FY26 Fast Start Promotional Resources · Email Schedule (3) · Row 15 · PAM Email Message (with links)"
+      "source": "FY26 Fast Start Promotional Resources · Email Schedule (3) · Row 15 · PAM Email Message (with links)",
+      "objective": "Campaign promotion",
+      "language": "English",
+      "reviewStatus": "Needs review",
+      "reviewOwner": "Partner Programs Marketing",
+      "lastReviewed": "",
+      "reviewDue": ""
     },
     {
       "id": "fast-start-w5-latam",
@@ -927,7 +1077,13 @@
         }
       ],
       "status": "Ready to personalize",
-      "source": "FY26 Fast Start Promotional Resources · Email Schedule (3) · Row 16 · PAM Email Message (with links)"
+      "source": "FY26 Fast Start Promotional Resources · Email Schedule (3) · Row 16 · PAM Email Message (with links)",
+      "objective": "Campaign promotion",
+      "language": "English",
+      "reviewStatus": "Needs review",
+      "reviewOwner": "Partner Programs Marketing",
+      "lastReviewed": "",
+      "reviewDue": ""
     }
   ]
 }
