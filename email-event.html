@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Email an event | Hitachi Vantara</title>
+<style>body{font:15px Arial,sans-serif;background:#f4f4f4;color:#222;margin:0;border-top:6px solid #fa000f}main{max-width:730px;margin:50px auto;padding:30px;background:white;border:1px solid #ddd}h1{font-weight:400}button{background:#fa000f;color:white;border:0;padding:13px 18px;font-size:14px;font-weight:bold;cursor:pointer;margin:8px 8px 8px 0}button.secondary{background:#222}pre{white-space:pre-wrap;background:#f6f6f6;border:1px solid #ddd;padding:16px;font:inherit;line-height:1.5}p{line-height:1.5}.note{color:#555;font-size:12px}</style></head>
+<body><main><div>HITACHI VANTARA</div><h1>Email to customer / partner</h1><p id="status">Reading selected event…</p>
+<div id="actions" hidden><button id="open">Open email in Outlook</button><button id="copy" class="secondary">Copy email details</button><pre id="preview"></pre><p class="note">Review the message before sending. No email is sent automatically.</p></div>
+</main><script>
+const params=new URLSearchParams(location.hash.slice(1));
+const get=k=>params.get(k)||'';
+let subject='',body='',mailto='';
+try{
+  const title=get('title').trim();if(!title)throw Error('No event selected. Open this from the Global Events Calendar.');
+  const raw=get('description').replace(/\s+/g,' ').trim();
+  let summary=raw;if(summary.length>450){const chunk=summary.slice(0,450);const boundary=Math.max(chunk.lastIndexOf('. '),chunk.lastIndexOf('? '),chunk.lastIndexOf('! '));summary=chunk.slice(0,boundary>170?boundary+1:(chunk.lastIndexOf(' ')||450)).trim()+'…'}
+  const link=get('eventUrl')||get('url');
+  const dates=get('date');
+  subject='Thought this might be useful: '+title;
+  body=['Hi,','','I thought this event might be relevant to your team.','',title,summary,dates?'Event dates: '+dates:'',/^https?:\/\/\S+$/i.test(link)?'Event details: '+link:'','Happy to discuss how this may apply to your organization.','','Best,'].filter(Boolean).join('\n\n');
+  mailto='mailto:?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+  document.getElementById('status').textContent=title;
+  document.getElementById('preview').textContent='Subject: '+subject+'\n\n'+body;
+  document.getElementById('actions').hidden=false;
+}catch(err){document.getElementById('status').textContent=err.message;}
+document.getElementById('open').addEventListener('click',()=>{if(mailto)location.href=mailto});
+document.getElementById('copy').addEventListener('click',async()=>{const value='Subject: '+subject+'\n\n'+body;try{await navigator.clipboard.writeText(value);document.getElementById('copy').textContent='Copied!'}catch(e){window.prompt('Copy email details:',value)}});
+</script></body></html>
