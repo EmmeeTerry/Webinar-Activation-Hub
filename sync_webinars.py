@@ -61,7 +61,7 @@ WEBINAR_COLUMN_MAP = {
     "watch":            "Gated URL",
     "marketingEmail":   "Outbound Email",
     "salesEmail":       "Sales Email",
-    "sdrEmail":         "SDR Email",
+    "sdrEmail":         "SDR Follow Up Email",
     "paidSocial":       "Paid Social",
     "social":           "Sprout Social",
     "attendance":       "Attendance Report",
