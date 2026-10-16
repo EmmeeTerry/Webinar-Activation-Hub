@@ -11,16 +11,16 @@
       "body": "Hi [First Name],\n\nIt was great meeting you at [Event Name]. I enjoyed learning more about [Partner Company] and where you’re focused on growing your business.\n\nI wanted to follow up with a few ways that partnering with Hitachi Vantara can help you create new opportunities and deliver more value to customers:\n\n• Grow profitably. Our partner program offers opportunities for deal registration discounts, incentives, rebates, and market development funds, subject to program eligibility.\n\n• Differentiate with solutions customers need. Bring customers proven data infrastructure, hybrid cloud, AI-ready storage, and cyber resilience capabilities, supported by Hitachi Vantara expertise.\n\n• Get support to win. Take advantage of partner training, enablement, demo resources, and opportunities for joint planning and go-to-market collaboration.\n\n• Activate marketing faster. The Partner Marketing Hub gives you ready-to-use campaigns and assets to help generate demand and engage customers: https://partnermarketing.hitachivantara.com/\n\nI'd love to continue our conversation and identify one or two opportunities we could pursue together. Would you be available for a brief follow-up next week?\n\nBest,\n[Your Name]\nPartner Account Manager | Hitachi Vantara",
       "links": [
         {
+          "label": "Partner Portal",
+          "url": "https://partnerportal.hitachivantara.com/s/"
+        },
+        {
           "label": "Partner Marketing Hub",
           "url": "https://partnermarketing.hitachivantara.com/"
         },
         {
           "label": "Hitachi Vantara Partner Program",
           "url": "https://www.hitachivantara.com/en-us/partners/partner-ecosystem"
-        },
-        {
-          "label": "Partner Acceleration",
-          "url": "https://www.hitachivantara.com/en-us/partners/partner-acceleration"
         }
       ],
       "status": "Ready to personalize"
