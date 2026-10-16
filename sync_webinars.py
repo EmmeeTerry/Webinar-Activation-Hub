@@ -141,7 +141,7 @@ def valid_resource_url(value):
     if not isinstance(value, str):
         return None
     value = value.strip()
-    return value if re.match(r"^https?://[^\\s]+$", value, re.I) else None
+    return value if re.match(r"^https?://[^\s]+$", value, re.I) else None
 
 
 def truthy(value):
