@@ -1,63 +1,11 @@
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Build One Slide | Hitachi Vantara</title>
-<style>body{font:15px Arial,sans-serif;background:#f4f4f4;color:#222;margin:0;border-top:6px solid #fa000f}main{max-width:840px;margin:40px auto;padding:30px;background:#fff;border:1px solid #ddd}h1{font-weight:400}button{background:#fa000f;color:white;border:0;padding:13px 18px;font-size:14px;font-weight:bold;cursor:pointer}button:disabled{opacity:.5}.preview{border:1px solid #bbb;aspect-ratio:16/9;margin:25px 0;background:white;padding:5%;box-shadow:0 5px 20px #0002;display:flex;flex-direction:column;justify-content:space-between}.brand{color:#cc0000;font-weight:bold;font-size:13px;letter-spacing:.1em}.title{font-size:clamp(21px,4vw,34px);font-weight:bold;line-height:1.2}.summary{font-size:clamp(13px,1.5vw,19px);line-height:1.4}.meta{font-size:13px;color:#666;border-top:3px solid #fa000f;padding-top:13px}.muted{color:#666;font-size:12px}p{line-height:1.5}</style></head>
-<body><main><div class="brand">HITACHI VANTARA</div><h1>Build One Slide</h1><p>Generate a compact, editable one-slide brief with relevant asset information.</p><p id="status">Loading…</p>
-<div class="preview"><div class="brand">HITACHI VANTARA</div><div><div id="title" class="title"></div><p id="summary" class="summary"></p></div><div id="meta" class="meta"></div></div>
-<button id="download" disabled>Download PowerPoint (.pptx)</button>
-<p class="muted">One-slide information brief. Long descriptions are condensed to fit; view the linked asset for the full text. Uses Hitachi colors, not yet the exact corporate slide master.</p></main>
-<script src="https://cdn.jsdelivr.net/gh/gitbrent/pptxgenjs@3.12.0/dist/pptxgen.bundle.js"></script>
-<script>
-const params=new URLSearchParams(location.search);
-const id=params.get('id');
-const isWebinar=params.get('source')==='webinar';
-let item=null;
-function shorten(s,max){s=String(s||'').trim();return s.length>max?s.slice(0,max-1).trim()+'…':s}
-(async()=>{try{
- if(!id)throw Error('No content entry was selected.');
- const r=await fetch((isWebinar?'./webinars.json':'./content.json')+'?ts='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('Could not load the library data.');
- const j=await r.json();item=(j.items||j.webinars||[]).find(x=>x.id===id);if(item && isWebinar){item={...item,url:item.links?.watch||'',type:'Webinar',notes:item.whyUse||'',};}if(!item)throw Error('This content entry was not found.');
- document.getElementById('title').textContent=shorten(item.title,110);
- document.getElementById('summary').textContent=shorten(item.abstract||item.notes||'Access the resource for more information.',280);
- document.getElementById('meta').textContent=[item.type,item.campaign,item.useCase].filter(Boolean).join('  |  ');
- document.getElementById('status').textContent='Ready: '+item.title;
- document.getElementById('download').disabled=false;
-}catch(e){document.getElementById('status').textContent=e.message;}})();
-document.getElementById('download').addEventListener('click',async()=>{
- const btn=document.getElementById('download');if(!item)return;
- const PptxCtor=window.PptxGenJS||window.pptxgen;if(typeof PptxCtor!=='function'){alert('PowerPoint generator is not initialized. Please refresh and try again.');return}
- btn.disabled=true;btn.textContent='Building PowerPoint…';
- try{
- const pptx=new PptxCtor();pptx.layout='LAYOUT_WIDE';pptx.author='Hitachi Vantara';pptx.subject='Content Library asset';pptx.title=item.title||'Content Library Slide';pptx.lang='en-US';
-
- const s=pptx.addSlide();s.background={color:'FFFFFF'};
- const addText=(t,x,y,w,h,opt={})=>s.addText(String(t||''),{x,y,w,h,fontFace:'Arial',fontSize:opt.fontSize||12,color:opt.color||'222222',bold:!!opt.bold,margin:0,breakLine:false,valign:'top',fit:'shrink',...opt});
- const rule=(x,y,w)=>s.addShape(pptx.ShapeType.line,{x,y,w,h:0,line:{color:'D9D9D9',width:1}});
- const brief=(str,max)=>shorten(String(str||'').replace(/\\s+/g,' ').trim(),max);
- const field=(label,value,y,x=8.5,w=4.0)=>{if(!value)return y;addText(label.toUpperCase(),x,y,w,.19,{fontSize:9,bold:true,color:'CC0000'});addText(brief(value,120),x,y+.22,w,.44,{fontSize:12});return y+.76;};
- s.addShape(pptx.ShapeType.rect,{x:0,y:0,w:13.333,h:.08,line:{color:'FA000F'},fill:{color:'FA000F'}});
- addText('HITACHI VANTARA  /  '+(isWebinar?'WEBINAR BRIEF':'CONTENT BRIEF'),.55,.27,11,.28,{fontSize:11,color:'CC0000',bold:true});
- addText(brief(item.title,180),.55,.74,12.15,.95,{fontSize:25,bold:true,color:'0C0C0C'});
- rule(.55,1.81,12.2);
- addText(isWebinar?'WEBINAR OVERVIEW':'CONTENT OVERVIEW',.6,2.06,7.35,.25,{fontSize:11,bold:true,color:'CC0000'});
- const overview=brief(item.abstract||item.notes||'No description available in the source record.',950);
- addText(overview,.6,2.45,7.15,2.9,{fontSize:15,breakLine:false});
- if(isWebinar && item.whyUse){addText('WHY USE THIS',.6,5.54,7.1,.24,{fontSize:11,bold:true,color:'CC0000'});addText(brief(item.whyUse,230),.6,5.9,7.1,.65,{fontSize:12});}
- else {addText('CONTENT APPLICATION',.6,5.54,7.1,.24,{fontSize:11,bold:true,color:'CC0000'});addText(brief([item.useCase,item.funnelStage,item.primaryActivation].filter(Boolean).join('  •  ')||'See linked resource for usage guidance.',220),.6,5.9,7.1,.65,{fontSize:12});}
- s.addShape(pptx.ShapeType.rect,{x:8.18,y:2.02,w:4.55,h:4.67,line:{color:'E2E2E2'},fill:{color:'F7F7F7'}});
- let y=2.25;
- y=field('Format',item.type,y);
- y=field('Campaign',item.campaign,y);
- y=field('Use case',item.useCase,y);
- y=field(isWebinar?'Webinar date':'Audience',isWebinar?(item.dateDisplay||item.date):(item.audience),y);
- y=field(isWebinar?'Audience':'Region',isWebinar?item.audience:item.region,y);
- if(isWebinar && y<6.15)y=field('Region',item.region,y);
- rule(.55,6.84,12.2);
- if(item.url){addText(isWebinar?'Watch / register →':'Open content asset →',.6,7.02,6.7,.28,{fontSize:12,color:'CC0000',bold:true,hyperlink:{url:item.url}});}
- addText('Source: '+(isWebinar?'Webinar Activation Hub':'Content Library'),8.5,7.03,4.1,.23,{fontSize:9,color:'666666'});
-
- const safe=String(item.title||'content-slide').replace(/[^a-z0-9 -]/gi,'').trim().replace(/\s+/g,'-').slice(0,65)||'content-slide';
- await pptx.writeFile({fileName:safe+'.pptx'});
- }catch(e){alert('Unable to create the PowerPoint: '+e.message)}finally{btn.disabled=false;btn.textContent='Download PowerPoint (.pptx)'}
-});
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Build One Slide | Hitachi Vantara</title><style>body{margin:0;border-top:6px solid #cc0000;background:#f4f4f4;font:15px Arial,sans-serif;color:#222}main{max-width:700px;margin:48px auto;background:white;padding:30px;border:1px solid #ddd}a{color:#c00}</style></head><body><main><strong style="color:#c00">HITACHI VANTARA</strong><h1>Build One Slide</h1><p id="status">Preparing your slide using the shared Calendar design…</p></main><script>
+(async()=>{const status=document.getElementById('status');try{
+ const p=new URLSearchParams(location.search);const id=p.get('id');const webinar=p.get('source')==='webinar';if(!id)throw Error('No webinar or content entry was selected.');
+ const response=await fetch(webinar?'./webinars.json':'./content.json',{cache:'no-store'});if(!response.ok)throw Error('Could not read the source library data.');
+ const data=await response.json();const entry=(webinar?data.webinars:data.items||[]).find(x=>String(x.id)===id);if(!entry)throw Error('The selected entry was not found.');
+ const url=webinar?entry.links?.watch:entry.url;
+ const fields={title:entry.title||'',date:webinar?(entry.dateDisplay||entry.date||''):(entry.publishDateDisplay||entry.publishDate||''),description:entry.abstract||entry.notes||'',category:webinar?'Webinar':(entry.type||'Content'),geo:entry.region||'',campaign:entry.campaign||'',salesPlay:entry.useCase||'',owner:entry.owner||entry.ownerIndividual||'',audience:entry.audience||'',url:/^https?:\/\/\S+$/i.test(url||'')?url:''};
+ const hash=new URLSearchParams(fields).toString();
+ location.replace('./event-slide.html#'+hash);
+}catch(err){status.textContent='Unable to prepare slide: '+err.message;}})();
 </script></body></html>
