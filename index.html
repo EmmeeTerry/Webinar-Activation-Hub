@@ -160,7 +160,7 @@ async function loadData(){
       const r=await fetch('./webinars.json?ts='+Date.now(), {cache:'no-store'});
       if(r.ok) {
         const j=await r.json();
-        if(Array.isArray(j.webinars)) DATA=j.webinars;
+        if(Array.isArray(j.webinars)) DATA=j.webinars.map(w=>{const backup=EMBEDDED_DATA.find(x=>x.id===w.id);if(backup){w.links=w.links||{};for(const k of Object.keys(backup.links||{})){if(!isValidLink(w.links[k])&&isValidLink(backup.links[k]))w.links[k]=backup.links[k];}}return w;});
         if(j.lastRefreshed) LAST_REFRESHED=j.lastRefreshed;
       }
     }
@@ -183,7 +183,8 @@ const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&
 const statusClass=s=>String(s).toLowerCase().replace(/\s+/g,'');
 const readinessClass=s=>s==='Activation ready'?'good':(s==='Partially ready'?'partial':'plan');
 const prettyDate=d=>{if(!d)return'TBD'; const x=new Date(d+'T12:00:00'); return x.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'})};
-const isResourceUrl=url=>typeof url==='string' && /^https?:\/\/[^\s]+$/i.test(url.trim());
+const isValidLink=url=>typeof url==='string' && /^https?:\/\/[^\s]+$/i.test(url.trim());
+const isResourceUrl=isValidLink;
 const linkBtn=(label,url,primary=false)=> isResourceUrl(url) ? `<a class="btn ${primary?'primary':''}" target="_blank" href="${esc(url)}">${esc(label)} ↗</a>` : '';
 
 function filters(){
@@ -443,7 +444,7 @@ function openModal(id){
       <a class="resource-btn" href="./build-slide.html?source=webinar&id=${encodeURIComponent(w.id)}" target="_blank" rel="noopener">Build One Slide ↗</a>
       ${w.date && w.date>=todayStr() ? `<a class="resource-btn" href="#" onclick="event.preventDefault();downloadICS('${esc(w.id)}')">Add to calendar</a>` : `<div class="resource-btn unavailable">Add to calendar &middot; already passed</div>`}
     </div></div>
-    <div class="box"><h3>Related campaign resources</h3><div class="resource-list">${(w.relatedResources||[]).map(r=>`<a class="resource" href="${esc(r.url)}" target="_blank"><strong>${esc(r.title)}</strong><span>${esc(r.type)}</span></a>`).join('')||'<div class="note">No related resources matched automatically.</div>'}</div></div>
+    <div class="box"><h3>Related campaign resources</h3><div class="resource-list">${(w.relatedResources||[]).map(r=>isResourceUrl(r.url)?`<a class="resource" href="${esc(r.url)}" target="_blank" rel="noopener"><strong>${esc(r.title)}</strong><span>${esc(r.type)}</span></a>`:`<div class="resource"><strong>${esc(r.title)}</strong><span>${esc(r.type)} · Link unavailable</span></div>`).join('')||'<div class="note">No related resources matched automatically.</div>'}</div></div>
   </div>
   <div>
     <div class="box"><h3>Webinar details</h3>
