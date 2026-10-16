@@ -4,7 +4,7 @@
  const response=await fetch(webinar?'./webinars.json':'./content.json',{cache:'no-store'});if(!response.ok)throw Error('Could not read the source library data.');
  const data=await response.json();const entry=(webinar?data.webinars:data.items||[]).find(x=>String(x.id)===id);if(!entry)throw Error('The selected entry was not found.');
  const url=webinar?entry.links?.watch:entry.url;
- const fields={title:entry.title||'',date:webinar?(entry.dateDisplay||entry.date||''):(entry.publishDateDisplay||entry.publishDate||''),description:entry.abstract||entry.notes||'',category:webinar?'Webinar':(entry.type||'Content'),geo:entry.region||'',campaign:entry.campaign||'',salesPlay:entry.useCase||'',owner:entry.owner||entry.ownerIndividual||'',audience:entry.audience||'',url:/^https?:\/\/\S+$/i.test(url||'')?url:''};
+ const fields={source:'content',title:entry.title||'',date:webinar?(entry.dateDisplay||entry.date||''):(entry.publishDateDisplay||entry.publishDate||''),description:entry.abstract||entry.notes||'',category:webinar?'Webinar':(entry.type||'Content'),geo:entry.region||'',campaign:entry.campaign||'',salesPlay:entry.useCase||'',owner:entry.owner||entry.ownerIndividual||'',audience:entry.audience||'',url:/^https?:\/\/\S+$/i.test(url||'')?url:''};
  const hash=new URLSearchParams(fields).toString();
  location.replace('./event-slide.html#'+hash);
 }catch(err){status.textContent='Unable to prepare slide: '+err.message;}})();
