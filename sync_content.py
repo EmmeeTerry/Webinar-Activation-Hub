@@ -49,7 +49,7 @@ COLUMN_MAP = {
     "primaryActivation":  "Primary Activation Planned",
     "marketingEmail":     "Marketing Email",
     "salesEmail":         "Sales Outreach Email",
-    "sdrEmail":           "SDR Email",
+    "sdrEmail":           "SDR Follow Up Email",
     "usedInCampaign":     "Used in Campaign",
     "promotionPeriod":    "Promotion Period",
     "ownerIndividual":    "Owner Individual",
