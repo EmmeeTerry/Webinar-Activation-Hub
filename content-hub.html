@@ -403,19 +403,14 @@ function summary(){
     ${campaignCounts}`;
 }
 function row(item){
-  const links = [];
-  if(item.url) links.push(`<a class="btn small" href="${esc(item.url)}" target="_blank">Open &#8599;</a>`);
-  if(item.marketingEmail) links.push(`<a class="btn small" href="${esc(item.marketingEmail)}" target="_blank">Marketing Email &#8599;</a>`);
-  if(item.salesEmail) links.push(`<a class="btn small" href="${esc(item.salesEmail)}" target="_blank">Sales Email &#8599;</a>`);
-  if(item.sdrEmail && /^https?:\/\/\S+$/i.test(item.sdrEmail)) links.push(`<a class="btn small" href="${esc(item.sdrEmail)}" target="_blank" rel="noopener">SDR Email &#8599;</a>`);
-  if(item.partnerCampaignLink) links.push(`<a class="btn small" href="${esc(item.partnerCampaignLink)}" target="_blank">Partner Campaign &#8599;</a>`);
+  const links = `<button type="button" class="btn small" onclick="openModal('${esc(item.id)}')">Resources &#8599;</button>`;
   return `<div class="row">
     <div><div class="row-title" style="cursor:pointer" onclick="openModal('${esc(item.id)}')">${esc(item.title)}</div>${item.abstract?`<div class="abstract-snippet">${esc(item.abstract)}</div>`:''}${item.type?`<span class="tag">${esc(item.type)}</span>`:''}${item.partnerUse?`<span class="tag green">Partner-use</span>`:''}</div>
     <div class="meta"><strong>${esc(item.campaign||'\u2014')}</strong><br>${esc(item.useCase||'')}</div>
     <div class="meta">${item.primaryActivation?`<strong>${esc(item.primaryActivation)}</strong><br>`:''}${item.paidMediaDateDisplay?'Paid media: '+esc(item.paidMediaDateDisplay):(item.primaryActivation?'':'\u2014')}</div>
     <div class="meta">${esc(item.audience||'\u2014')}<br>${esc(item.region||'')}</div>
     <div class="meta"><strong>${esc(item.status||'\u2014')}</strong><br>${esc(item.publishDateDisplay||'')}</div>
-    <div>${links.join('')}</div>
+    <div>${links}</div>
   </div>`;
 }
 function todayStr(){
