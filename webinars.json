@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-10-19T14:28:36.485204+00:00",
+  "lastRefreshed": "2026-10-19T16:22:09.543778+00:00",
   "webinars": [
     {
       "id": "the-economics-of-modern-storage-infrastructure-lower-risk-faster-ai-value-better-roi",
@@ -157,6 +157,14 @@
       "sourceRow": 3,
       "relatedResources": [
         {
+          "title": "EDUCAUSE Webinar: Resilience in the AI Era | Webinar",
+          "type": "Webinar",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Cyber Risk Mitigation & Recovery",
+          "url": "EDUCAUSE Webinar: Resilience in the AI Era",
+          "score": 6
+        },
+        {
           "title": "451 Research: Boost Resiliency and Performance for Modern Data Infrastructures | Analyst Report",
           "type": "Analyst Report",
           "campaign": "Data Modernization & Resilience",
@@ -178,14 +186,6 @@
           "campaign": "Data Modernization & Resilience",
           "useCase": "Cyber Risk Mitigation & Recovery",
           "url": "Americas Midrange Road Show Blog",
-          "score": 6
-        },
-        {
-          "title": "Banco De Brasilia: Simplify Compliance and Improve Productivity | Customer Story",
-          "type": "Customer Story",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/en-us/company/customer-stories/banco-de-brasilia-case-study",
           "score": 6
         }
       ]
@@ -535,6 +535,14 @@
       "sourceRow": 9,
       "relatedResources": [
         {
+          "title": "EDUCAUSE Webinar: Resilience in the AI Era | Webinar",
+          "type": "Webinar",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Cyber Risk Mitigation & Recovery",
+          "url": "EDUCAUSE Webinar: Resilience in the AI Era",
+          "score": 6
+        },
+        {
           "title": "451 Research: Boost Resiliency and Performance for Modern Data Infrastructures | Analyst Report",
           "type": "Analyst Report",
           "campaign": "Data Modernization & Resilience",
@@ -557,14 +565,6 @@
           "useCase": "Cyber Risk Mitigation & Recovery",
           "url": "Americas Midrange Road Show Blog",
           "score": 6
-        },
-        {
-          "title": "Banco De Brasilia: Simplify Compliance and Improve Productivity | Customer Story",
-          "type": "Customer Story",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "https://www.hitachivantara.com/en-us/company/customer-stories/banco-de-brasilia-case-study",
-          "score": 6
         }
       ]
     },
@@ -574,8 +574,8 @@
       "date": "2026-11-12",
       "dateDisplay": "Nov 12, 2026",
       "status": "Planned",
-      "campaign": "AI Data Foundation",
-      "useCase": "Data Readiness and Activation for AI",
+      "campaign": "Data Modernization & Resilience",
+      "useCase": "Cyber Risk Mitigation & Recovery",
       "audience": "Enterprise",
       "region": "AMER",
       "owner": "Karina Andrade",
@@ -583,7 +583,7 @@
       "partnerReady": false,
       "activationStatus": "Not Required",
       "readiness": "Planning",
-      "whyUse": "Use this for enterprise conversations around data readiness and activation for ai.",
+      "whyUse": "Use this for enterprise conversations around cyber risk mitigation & recovery.",
       "abstract": "Every campus has a breach story. The only question is whether yours has been written yet. In this candid talk on cyber resilience, we discuss the true fallout from a cyberattack \u2014 and why one is inevitable. AI has turned vulnerability discovery into an arms race between developers and hackers, greatly increasing the cost of digital debt from unpatched systems.   At the same time, data exfiltration and traditional backup approaches leave institutions at risk, even when their data is fully recoverable. Join us to learn about the methods of protection available and the gaps that still remain in your planning.   Learning Outcomes:   Explain why breaches are inevitable and how AI accelerates both exploit discovery and patch cycles   Identify the modern complexities of cyber resilience, including exfiltration, the gaps in traditional disaster recovery, cyber insurance pitfalls, and regulatory concerns   Build a data-driven case for the funding needed to improve your overall resilience",
       "links": {
         "watch": null,
@@ -598,35 +598,35 @@
       "sourceRow": 10,
       "relatedResources": [
         {
-          "title": "2025 GigaOm Rader for High-Perfomance Storage Optimized for AI Workloads | Analyst Report",
-          "type": "Analyst Report",
-          "campaign": "AI Data Foundation",
-          "useCase": "Data Readiness and Activation for AI",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-ai-storage-radar",
+          "title": "EDUCAUSE Webinar: Resilience in the AI Era | Webinar",
+          "type": "Webinar",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Cyber Risk Mitigation & Recovery",
+          "url": "EDUCAUSE Webinar: Resilience in the AI Era",
           "score": 6
         },
         {
-          "title": "2026 GigaOm Radar for Unstructured Data Management (UDM) | Analyst Report",
+          "title": "451 Research: Boost Resiliency and Performance for Modern Data Infrastructures | Analyst Report",
           "type": "Analyst Report",
-          "campaign": "AI Data Foundation",
-          "useCase": "Data Readiness and Activation for AI",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-unstructured-data-management-2026",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Cyber Risk Mitigation & Recovery",
+          "url": "https://www.hitachivantara.com/en-us/gated-forms/451-research-market-insight-report-vsp-one-block-high-end",
           "score": 6
         },
         {
-          "title": "2026 GigaOm Rader for Object Storage Analyst Report | Analyst Report",
-          "type": "Analyst Report",
-          "campaign": "AI Data Foundation",
-          "useCase": "Data Readiness and Activation for AI",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-radar-for-object-storage",
+          "title": "7-Layer Defense. One Trusted Partner | Solution Profile",
+          "type": "Solution Profile",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Cyber Risk Mitigation & Recovery",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/solution-profile/7-layer-defense-one-trusted-partner.pdf",
           "score": 6
         },
         {
-          "title": "2027 GigaOm for Unstructured Data Management (UDM) | Analyst Report",
-          "type": "Analyst Report",
-          "campaign": "AI Data Foundation",
-          "useCase": "Data Readiness and Activation for AI",
-          "url": "2027 GigaOm for Unstructured Data Management (UDM)",
+          "title": "Americas Midrange Road Show Blog | Blog",
+          "type": "Blog",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Cyber Risk Mitigation & Recovery",
+          "url": "Americas Midrange Road Show Blog",
           "score": 6
         }
       ]
