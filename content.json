@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-10-19T09:04:34.599436+00:00",
+  "lastRefreshed": "2026-10-19T10:57:06.508826+00:00",
   "items": [
     {
       "id": "10-reasons-to-buy-build-or-borrow-ai-implementation-ebook-1",
@@ -4317,12 +4317,12 @@
       "ownerIndividual": "Sakina Peshawarwala",
       "publishedByVendor": "",
       "notes": "",
-      "actionRequired": "",
+      "actionRequired": "Update status or revise publish date",
       "abstract": "",
       "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q3",
-      "issueType": ""
+      "issueType": "Overdue"
     },
     {
       "id": "elevate-your-cyber-resiliency-posture-protect-detect-recover-webinar-132",
@@ -6495,12 +6495,12 @@
       "ownerIndividual": "Angela Romberg",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "",
-      "actionRequired": "",
+      "actionRequired": "Review content freshness (12+ months)",
       "abstract": "",
       "partnerCampaignLink": null,
       "fiscalYear": "FY26",
       "fiscalQuarter": "Q3",
-      "issueType": ""
+      "issueType": "; 12+ Months Old"
     },
     {
       "id": "resilience-by-design-reducing-data-risk-downtime-and-regulatory-exposure-webinar-198",
