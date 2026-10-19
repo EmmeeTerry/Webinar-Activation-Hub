@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-10-19T15:02:38.814097+00:00",
+  "lastRefreshed": "2026-10-19T16:59:42.701277+00:00",
   "items": [
     {
       "id": "10-reasons-to-buy-build-or-borrow-ai-implementation-1",
@@ -167,8 +167,8 @@
       "issueType": ""
     },
     {
-      "id": "2026-gigaom-rader-for-object-storage-analyst-report-analyst-report-6",
-      "title": "2026 GigaOm Rader for Object Storage Analyst Report | Analyst Report",
+      "id": "2026-gigaom-radar-for-object-storage-analyst-report-analyst-report-6",
+      "title": "2026 GigaOm Radar for Object Storage Analyst Report | Analyst Report",
       "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-radar-for-object-storage",
       "type": "Analyst Report",
       "campaign": "AI Data Foundation",
@@ -2712,8 +2712,8 @@
       "title": "EDUCAUSE Webinar: Resilience in the AI Era | Webinar",
       "url": null,
       "type": "Webinar",
-      "campaign": "AI Data Foundation",
-      "useCase": "Data Readiness and Activation for AI",
+      "campaign": "Data Modernization & Resilience",
+      "useCase": "Cyber Risk Mitigation & Recovery",
       "funnelStage": "BOFU",
       "ownerTeam": "Regional Marketing",
       "audience": "Enterprise",
@@ -6415,8 +6415,8 @@
       "audience": "Enterprise, Midmarket",
       "status": "Live",
       "region": "Global",
-      "publishDate": "2026-09-26",
-      "publishDateDisplay": "Sep 26, 2026",
+      "publishDate": "2026-10-20",
+      "publishDateDisplay": "Oct 20, 2026",
       "partnerUse": true,
       "paidMediaDate": null,
       "paidMediaDateDisplay": "",
@@ -6433,7 +6433,7 @@
       "abstract": "",
       "partnerCampaignLink": null,
       "fiscalYear": "FY27",
-      "fiscalQuarter": "Q2",
+      "fiscalQuarter": "Q3",
       "issueType": ""
     },
     {
