@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-10-20T07:11:32.668075+00:00",
+  "lastRefreshed": "2026-10-20T08:59:55.855917+00:00",
   "items": [
     {
       "id": "10-reasons-to-buy-build-or-borrow-ai-implementation-1",
@@ -8263,8 +8263,8 @@
       "audience": "Enterprise, Midmarket",
       "status": "In Production",
       "region": "Global",
-      "publishDate": "2026-10-14",
-      "publishDateDisplay": "Oct 14, 2026",
+      "publishDate": "2026-11-06",
+      "publishDateDisplay": "Nov 06, 2026",
       "partnerUse": true,
       "paidMediaDate": null,
       "paidMediaDateDisplay": "",
@@ -8277,12 +8277,12 @@
       "ownerIndividual": "Stephanie Thompson, Sulochna Khokhrai",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "",
-      "actionRequired": "Update status or revise publish date",
+      "actionRequired": "",
       "abstract": "",
       "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q3",
-      "issueType": "Overdue"
+      "issueType": ""
     },
     {
       "id": "starcio-with-isaac-ai-infrastructure-debt-capacity-resiliency-and-modernization-strategies-252",
