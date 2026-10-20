@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-10-20T10:55:55.881179+00:00",
+  "lastRefreshed": "2026-10-20T13:11:35.308199+00:00",
   "items": [
     {
       "id": "10-reasons-to-buy-build-or-borrow-ai-implementation-1",
@@ -687,12 +687,12 @@
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "H1",
-      "actionRequired": "Add customer-facing URL",
+      "actionRequired": "",
       "abstract": "",
       "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q2",
-      "issueType": "; No URL"
+      "issueType": ""
     },
     {
       "id": "five-steps-to-intelligent-automation-success-blog-22",
@@ -794,8 +794,8 @@
       "issueType": ""
     },
     {
-      "id": "fstech-how-financial-institutions-unlock-more-value-from-datawith-object-storage-analyst-r-25",
-      "title": "FStech: How Financial Institutions Unlock More Value from Datawith Object Storage | Analyst Report",
+      "id": "fstech-how-financial-institutions-unlock-more-value-from-data-with-object-storage-analyst--25",
+      "title": "FStech: How Financial Institutions Unlock More Value from Data with Object Storage | Analyst Report",
       "url": "https://www.hitachivantara.com/en-us/pdfviewer/analyst-content/how-financial-institutions-unlock-more-value-from-data-object-storage",
       "type": "Analyst Report",
       "campaign": "AI Data Foundation",
@@ -810,21 +810,21 @@
       "partnerUse": false,
       "paidMediaDate": null,
       "paidMediaDateDisplay": "",
-      "primaryActivation": "No Planned Promotion",
+      "primaryActivation": "Sales Enablement",
       "marketingEmail": null,
       "salesEmail": null,
       "sdrEmail": null,
-      "usedInCampaign": "No",
+      "usedInCampaign": "Yes",
       "promotionPeriod": "1H",
       "ownerIndividual": "Karina Andrade, Mark Geel",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "",
-      "actionRequired": "Create promotion plan",
+      "actionRequired": "",
       "abstract": "",
       "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q1",
-      "issueType": "; No Promo"
+      "issueType": ""
     },
     {
       "id": "gartner-emerging-market-quadrant-emq-ai-data-storage-analyst-report-26",
@@ -843,7 +843,7 @@
       "partnerUse": false,
       "paidMediaDate": null,
       "paidMediaDateDisplay": "",
-      "primaryActivation": "No Planned Promotion",
+      "primaryActivation": "TBC",
       "marketingEmail": null,
       "salesEmail": null,
       "sdrEmail": null,
@@ -942,21 +942,21 @@
       "partnerUse": true,
       "paidMediaDate": null,
       "paidMediaDateDisplay": "",
-      "primaryActivation": "No Planned Promotion",
+      "primaryActivation": "Sales Enablement",
       "marketingEmail": null,
       "salesEmail": null,
       "sdrEmail": null,
-      "usedInCampaign": "No",
+      "usedInCampaign": "Yes",
       "promotionPeriod": "1H",
       "ownerIndividual": "Michael Pacheco",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "",
-      "actionRequired": "Review content freshness (12+ months)",
+      "actionRequired": "Review for possible duplicate",
       "abstract": "",
       "partnerCampaignLink": null,
       "fiscalYear": "FY26",
       "fiscalQuarter": "Q3",
-      "issueType": "; No Promo; 12+ Months Old"
+      "issueType": "; Duplicate; 12+ Months Old"
     },
     {
       "id": "hitachi-data-lakehouse-powering-trusted-ai-and-analytics-at-scale-solution-profile-30",
@@ -1314,12 +1314,12 @@
       "ownerIndividual": "Jeff Lundberg",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "",
-      "actionRequired": "Add customer-facing URL",
+      "actionRequired": "",
       "abstract": "",
       "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q1",
-      "issueType": "; No URL"
+      "issueType": ""
     },
     {
       "id": "how-pakistan-s-financial-backbone-is-using-ai-to-strengthen-banking-resilience-at-national-41",
@@ -1347,12 +1347,12 @@
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "H1",
-      "actionRequired": "Add customer-facing URL",
+      "actionRequired": "",
       "abstract": "",
       "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q1",
-      "issueType": "; No URL"
+      "issueType": ""
     },
     {
       "id": "how-to-inject-agility-into-your-infrastructure-ebook-ebook-42",
@@ -1470,7 +1470,7 @@
       "partnerUse": false,
       "paidMediaDate": null,
       "paidMediaDateDisplay": "",
-      "primaryActivation": "No Planned Promotion",
+      "primaryActivation": "TBC",
       "marketingEmail": null,
       "salesEmail": null,
       "sdrEmail": null,
@@ -1908,12 +1908,12 @@
       "ownerIndividual": "Macey Jones",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "",
-      "actionRequired": "Add customer-facing URL",
+      "actionRequired": "",
       "abstract": "",
       "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q1",
-      "issueType": "; No URL"
+      "issueType": ""
     },
     {
       "id": "southwest-power-pool-spp-partners-with-hitachi-to-develop-advanced-ai-solution-for-critica-59",
@@ -2139,12 +2139,12 @@
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "",
       "notes": "",
-      "actionRequired": "Add customer-facing URL",
+      "actionRequired": "",
       "abstract": "",
       "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q2",
-      "issueType": "; No URL"
+      "issueType": ""
     },
     {
       "id": "the-threats-we-see-the-risks-we-don-t-blog-66",
@@ -2460,21 +2460,21 @@
       "partnerUse": true,
       "paidMediaDate": null,
       "paidMediaDateDisplay": "",
-      "primaryActivation": "No Planned Promotion",
+      "primaryActivation": "Sales Enablement",
       "marketingEmail": null,
       "salesEmail": null,
       "sdrEmail": null,
-      "usedInCampaign": "No",
+      "usedInCampaign": "Yes",
       "promotionPeriod": "1H",
       "ownerIndividual": "Mark Geel",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "",
-      "actionRequired": "Create promotion plan",
+      "actionRequired": "",
       "abstract": "",
       "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q1",
-      "issueType": "; No Promo"
+      "issueType": ""
     },
     {
       "id": "vsp-one-object-cohasset-compliance-assessment-paper-analyst-report-76",
@@ -2526,11 +2526,11 @@
       "partnerUse": true,
       "paidMediaDate": null,
       "paidMediaDateDisplay": "",
-      "primaryActivation": "No Planned Promotion",
+      "primaryActivation": "TBC",
       "marketingEmail": null,
       "salesEmail": null,
       "sdrEmail": null,
-      "usedInCampaign": "No",
+      "usedInCampaign": "Yes",
       "promotionPeriod": "1H",
       "ownerIndividual": "Mark Geel",
       "publishedByVendor": "GigaOm / Hitachi Vantara",
@@ -2601,12 +2601,12 @@
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "",
       "notes": "",
-      "actionRequired": "Add customer-facing URL",
+      "actionRequired": "",
       "abstract": "",
       "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q2",
-      "issueType": "; No URL"
+      "issueType": ""
     },
     {
       "id": "why-zero-trust-storage-eight-9s-availability-are-non-negotiable-blog-80",
@@ -2634,12 +2634,12 @@
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "H1",
-      "actionRequired": "Add customer-facing URL",
+      "actionRequired": "",
       "abstract": "",
       "partnerCampaignLink": null,
       "fiscalYear": "FY26",
       "fiscalQuarter": "Q4",
-      "issueType": "; No URL"
+      "issueType": ""
     },
     {
       "id": "zhejiang-daily-press-group-optimizes-the-user-experience-with-hitachi-content-platform-cus-81",
@@ -2889,21 +2889,21 @@
       "partnerUse": false,
       "paidMediaDate": null,
       "paidMediaDateDisplay": "",
-      "primaryActivation": "No Planned Promotion",
+      "primaryActivation": "Promoted FY25",
       "marketingEmail": null,
       "salesEmail": null,
       "sdrEmail": null,
-      "usedInCampaign": "No",
+      "usedInCampaign": "Yes",
       "promotionPeriod": "1H",
       "ownerIndividual": "Liam Yu",
       "publishedByVendor": "451 Research",
       "notes": "\u00a0",
-      "actionRequired": "Create promotion plan",
+      "actionRequired": "",
       "abstract": "",
       "partnerCampaignLink": null,
       "fiscalYear": "FY26",
       "fiscalQuarter": "Q3",
-      "issueType": "; No Promo"
+      "issueType": ""
     },
     {
       "id": "451-research-modernizing-mission-critical-storage-analyst-report-analyst-report-89",
@@ -3412,8 +3412,8 @@
       "audience": "Enterprise, Midmarket",
       "status": "Planned",
       "region": "Global",
-      "publishDate": "2026-09-30",
-      "publishDateDisplay": "Sep 30, 2026",
+      "publishDate": "2026-11-30",
+      "publishDateDisplay": "Nov 30, 2026",
       "partnerUse": true,
       "paidMediaDate": null,
       "paidMediaDateDisplay": "",
@@ -3426,12 +3426,12 @@
       "ownerIndividual": "Macey Jones",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "planned",
-      "actionRequired": "Update status or revise publish date",
+      "actionRequired": "",
       "abstract": "",
       "partnerCampaignLink": null,
       "fiscalYear": "FY27",
-      "fiscalQuarter": "Q2",
-      "issueType": "Overdue"
+      "fiscalQuarter": "Q3",
+      "issueType": ""
     },
     {
       "id": "businesses-modernize-data-protection-with-hitachi-and-commvault-whitepaper-105",
@@ -3940,8 +3940,8 @@
       "audience": "Enterprise, Midmarket",
       "status": "Planned",
       "region": "Global",
-      "publishDate": "2026-09-30",
-      "publishDateDisplay": "Sep 30, 2026",
+      "publishDate": "2026-11-30",
+      "publishDateDisplay": "Nov 30, 2026",
       "partnerUse": true,
       "paidMediaDate": null,
       "paidMediaDateDisplay": "",
@@ -3954,12 +3954,12 @@
       "ownerIndividual": "Macey Jones",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "",
-      "actionRequired": "Update status or revise publish date",
+      "actionRequired": "",
       "abstract": "",
       "partnerCampaignLink": null,
       "fiscalYear": "FY27",
-      "fiscalQuarter": "Q2",
-      "issueType": "Overdue"
+      "fiscalQuarter": "Q3",
+      "issueType": ""
     },
     {
       "id": "achieve-cyber-resilience-with-a-risk-optimized-data-foundation-solution-profile-121",
@@ -4072,8 +4072,8 @@
       "audience": "Enterprise, Midmarket",
       "status": "In Production",
       "region": "Global",
-      "publishDate": "2026-10-15",
-      "publishDateDisplay": "Oct 15, 2026",
+      "publishDate": "2026-11-30",
+      "publishDateDisplay": "Nov 30, 2026",
       "partnerUse": true,
       "paidMediaDate": "2026-10-01",
       "paidMediaDateDisplay": "Oct 01, 2026",
@@ -4086,12 +4086,12 @@
       "ownerIndividual": "Nick Howell, Richard Jew",
       "publishedByVendor": "Wiley",
       "notes": "planned",
-      "actionRequired": "Update status or revise publish date",
+      "actionRequired": "",
       "abstract": "",
       "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q3",
-      "issueType": "Overdue"
+      "issueType": ""
     },
     {
       "id": "data-modernization-for-the-ai-era-simple-secure-and-sustainable-webinar-125",
@@ -4116,7 +4116,7 @@
       "sdrEmail": null,
       "usedInCampaign": "No",
       "promotionPeriod": "1H",
-      "ownerIndividual": "Andy Gremett",
+      "ownerIndividual": "Nick Howell, Stephanie Thompson",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "\u00a0",
       "actionRequired": "",
@@ -4209,21 +4209,21 @@
       "partnerUse": true,
       "paidMediaDate": null,
       "paidMediaDateDisplay": "",
-      "primaryActivation": "No Planned Promotion",
+      "primaryActivation": "TBC",
       "marketingEmail": null,
       "salesEmail": null,
       "sdrEmail": null,
-      "usedInCampaign": "No",
+      "usedInCampaign": "Yes",
       "promotionPeriod": "1H",
       "ownerIndividual": "Macey Jones, Scott Jones",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "planned, EMEA pilot only",
-      "actionRequired": "Create promotion plan",
+      "actionRequired": "",
       "abstract": "",
       "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q1",
-      "issueType": "; No Promo"
+      "issueType": ""
     },
     {
       "id": "dcig-top-5-hitachi-vantara-vsp-one-block-analyst-report-129",
@@ -4303,8 +4303,8 @@
       "audience": "Enterprise, Midmarket",
       "status": "In Production",
       "region": "Global",
-      "publishDate": "2026-10-16",
-      "publishDateDisplay": "Oct 16, 2026",
+      "publishDate": "2026-11-30",
+      "publishDateDisplay": "Nov 30, 2026",
       "partnerUse": true,
       "paidMediaDate": null,
       "paidMediaDateDisplay": "",
@@ -4317,12 +4317,12 @@
       "ownerIndividual": "Sakina Peshawarwala",
       "publishedByVendor": "",
       "notes": "",
-      "actionRequired": "Update status or revise publish date",
+      "actionRequired": "",
       "abstract": "",
       "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q3",
-      "issueType": "Overdue"
+      "issueType": ""
     },
     {
       "id": "elevate-your-cyber-resiliency-posture-protect-detect-recover-webinar-132",
@@ -4374,11 +4374,11 @@
       "partnerUse": false,
       "paidMediaDate": null,
       "paidMediaDateDisplay": "",
-      "primaryActivation": "No Planned Promotion",
+      "primaryActivation": "TBC",
       "marketingEmail": null,
       "salesEmail": null,
       "sdrEmail": null,
-      "usedInCampaign": "No",
+      "usedInCampaign": "Yes",
       "promotionPeriod": "2H",
       "ownerIndividual": "Liam Yu",
       "publishedByVendor": "Hitachi Vantara",
@@ -4581,12 +4581,12 @@
       "ownerIndividual": "Steven Garbrecht",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "",
-      "actionRequired": "Add customer-facing URL",
+      "actionRequired": "",
       "abstract": "",
       "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q1",
-      "issueType": "; No URL"
+      "issueType": ""
     },
     {
       "id": "hitachi-everflex-multivendor-infrastructure-management-solution-profile-140",
@@ -4614,12 +4614,12 @@
       "ownerIndividual": "Steven Garbrecht",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "",
-      "actionRequired": "Add customer-facing URL",
+      "actionRequired": "",
       "abstract": "",
       "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q1",
-      "issueType": "; No URL"
+      "issueType": ""
     },
     {
       "id": "everflex-tco-calculator-calculator-141",
@@ -5060,7 +5060,7 @@
       "funnelStage": "TOFU",
       "ownerTeam": "Brand",
       "audience": "Enterprise, Midmarket",
-      "status": "Hitachi Leader in GigaOm Primary Storage Platforms Radar Blog",
+      "status": "Planned",
       "region": "Global",
       "publishDate": "2026-12-04",
       "publishDateDisplay": "Dec 04, 2026",
@@ -5232,11 +5232,11 @@
       "partnerUse": false,
       "paidMediaDate": null,
       "paidMediaDateDisplay": "",
-      "primaryActivation": "No Planned Promotion",
+      "primaryActivation": "Sales Enablement",
       "marketingEmail": null,
       "salesEmail": null,
       "sdrEmail": null,
-      "usedInCampaign": "No",
+      "usedInCampaign": "Yes",
       "promotionPeriod": "1H",
       "ownerIndividual": "Scott Jones",
       "publishedByVendor": "ESG",
@@ -5246,7 +5246,7 @@
       "partnerCampaignLink": null,
       "fiscalYear": "FY26",
       "fiscalQuarter": "Q1",
-      "issueType": "; No Promo; 12+ Months Old"
+      "issueType": "; 12+ Months Old"
     },
     {
       "id": "hitachi-vantara-flexible-consumption-and-financing-solutions-solution-profile-160",
@@ -5274,12 +5274,12 @@
       "ownerIndividual": "Steven Garbrecht",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "",
-      "actionRequired": "Add customer-facing URL",
+      "actionRequired": "",
       "abstract": "",
       "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q1",
-      "issueType": "; No URL"
+      "issueType": ""
     },
     {
       "id": "hitachi-vantara-named-primary-storage-leader-gigaom-radar-2025-analyst-report-analyst-repo-161",
@@ -5403,7 +5403,7 @@
       "sdrEmail": null,
       "usedInCampaign": "Yes",
       "promotionPeriod": "1H",
-      "ownerIndividual": "Andy Gremett",
+      "ownerIndividual": "Nick Howell",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "",
       "actionRequired": "",
@@ -5535,7 +5535,7 @@
       "sdrEmail": null,
       "usedInCampaign": "Yes",
       "promotionPeriod": "1H",
-      "ownerIndividual": "Andy Gremett",
+      "ownerIndividual": "Nick Howell",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "\u00a0",
       "actionRequired": "Review content freshness (12+ months)",
@@ -5766,7 +5766,7 @@
       "sdrEmail": null,
       "usedInCampaign": "No",
       "promotionPeriod": "2H",
-      "ownerIndividual": "Andy Gremett, Emily Smith",
+      "ownerIndividual": "Nick Howell",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "",
       "actionRequired": "",
@@ -5920,8 +5920,8 @@
       "audience": "Enterprise, Midmarket",
       "status": "In Production",
       "region": "Global",
-      "publishDate": "2026-09-30",
-      "publishDateDisplay": "Sep 30, 2026",
+      "publishDate": "2026-11-30",
+      "publishDateDisplay": "Nov 30, 2026",
       "partnerUse": true,
       "paidMediaDate": null,
       "paidMediaDateDisplay": "",
@@ -5934,12 +5934,12 @@
       "ownerIndividual": "Macey Jones",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "\u26a0\ufe0f POTENTIAL DUPLICATE \u2014 Review with \"Mission-Critical Cyber Recovery\" (Type: Demo / Assessment / Tool / Offer). @stephanie.thompson@hitachivantara.com @sulochna.khokhrai@hitachivantara.com \u2014 Flagged by Smart Assist 10/1/2026.",
-      "actionRequired": "Update status or revise publish date",
+      "actionRequired": "",
       "abstract": "",
       "partnerCampaignLink": null,
       "fiscalYear": "FY27",
-      "fiscalQuarter": "Q2",
-      "issueType": "Overdue"
+      "fiscalQuarter": "Q3",
+      "issueType": ""
     },
     {
       "id": "mit-tech-review-adapting-to-new-threats-with-proactive-cyber-risk-management-analyst-repor-181",
@@ -6057,11 +6057,11 @@
       "partnerUse": true,
       "paidMediaDate": null,
       "paidMediaDateDisplay": "",
-      "primaryActivation": "No Planned Promotion",
+      "primaryActivation": "Sales Enablement",
       "marketingEmail": null,
       "salesEmail": null,
       "sdrEmail": null,
-      "usedInCampaign": "No",
+      "usedInCampaign": "Yes",
       "promotionPeriod": "1H",
       "ownerIndividual": "Steven Garbrecht",
       "publishedByVendor": "Hitachi Vantara",
@@ -6071,7 +6071,7 @@
       "partnerCampaignLink": "https://www.partnermarketing.hitachivantara.com/data-modernization-resilience",
       "fiscalYear": "FY25",
       "fiscalQuarter": "Q3",
-      "issueType": "; No Promo; 12+ Months Old"
+      "issueType": "; 12+ Months Old"
     },
     {
       "id": "omdia-the-storage-modernization-imperative-analyst-report-185",
@@ -6096,7 +6096,7 @@
       "sdrEmail": null,
       "usedInCampaign": "No",
       "promotionPeriod": "2H",
-      "ownerIndividual": "Andy Gremett",
+      "ownerIndividual": "Nick Howell",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "",
       "actionRequired": "",
@@ -6107,40 +6107,7 @@
       "issueType": ""
     },
     {
-      "id": "omdia-the-five-new-essentials-for-data-storage-platforms-infographic-186",
-      "title": "Omdia: The Five New Essentials for Data Storage Platforms | Infographic",
-      "url": null,
-      "type": "Infographic",
-      "campaign": "Data Modernization & Resilience",
-      "useCase": "Data Platform Architectures & Economics",
-      "funnelStage": "TOFU",
-      "ownerTeam": "Regional Marketing",
-      "audience": "Enterprise",
-      "status": "In Production",
-      "region": "Global",
-      "publishDate": "2026-04-01",
-      "publishDateDisplay": "Apr 01, 2026",
-      "partnerUse": true,
-      "paidMediaDate": null,
-      "paidMediaDateDisplay": "",
-      "primaryActivation": "No Planned Promotion",
-      "marketingEmail": null,
-      "salesEmail": null,
-      "sdrEmail": null,
-      "usedInCampaign": "No",
-      "promotionPeriod": "2H",
-      "ownerIndividual": "Victoria Norvall",
-      "publishedByVendor": "Omdia",
-      "notes": "",
-      "actionRequired": "Update status or revise publish date",
-      "abstract": "",
-      "partnerCampaignLink": null,
-      "fiscalYear": "FY27",
-      "fiscalQuarter": "Q1",
-      "issueType": "Overdue; No Promo"
-    },
-    {
-      "id": "omdia-the-five-new-essentials-for-data-storage-platforms-analyst-report-187",
+      "id": "omdia-the-five-new-essentials-for-data-storage-platforms-analyst-report-186",
       "title": "Omdia: The Five New Essentials for Data Storage Platforms | Analyst Report",
       "url": "https://www.hitachivantara.com/en-us/gated-forms/omdia-ebook-five-new-essentials-for-data-storage-platforms",
       "type": "Analyst Report",
@@ -6173,7 +6140,7 @@
       "issueType": ""
     },
     {
-      "id": "omdia-what-modern-data-infrastructure-looks-like-in-the-ai-era-webinar-188",
+      "id": "omdia-what-modern-data-infrastructure-looks-like-in-the-ai-era-webinar-187",
       "title": "Omdia: What Modern Data Infrastructure Looks Like in the AI Era | Webinar",
       "url": "https://www.brighttalk.com/webcast/12821/675775",
       "type": "Webinar",
@@ -6195,7 +6162,7 @@
       "sdrEmail": null,
       "usedInCampaign": "No",
       "promotionPeriod": "2H",
-      "ownerIndividual": "Andy Gremett, Stephanie Thompson",
+      "ownerIndividual": "Nick Howell, Stephanie Thompson",
       "publishedByVendor": "Omdia",
       "notes": "",
       "actionRequired": "",
@@ -6206,7 +6173,7 @@
       "issueType": ""
     },
     {
-      "id": "overcoming-gaps-with-hybrid-cloud-ebook-189",
+      "id": "overcoming-gaps-with-hybrid-cloud-ebook-188",
       "title": "Overcoming Gaps with Hybrid Cloud | eBook",
       "url": null,
       "type": "eBook",
@@ -6228,7 +6195,7 @@
       "sdrEmail": null,
       "usedInCampaign": "No",
       "promotionPeriod": "2H",
-      "ownerIndividual": "Andy Gremett",
+      "ownerIndividual": "Nick Howell",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "",
       "actionRequired": "",
@@ -6239,7 +6206,7 @@
       "issueType": ""
     },
     {
-      "id": "pearkmarks-results-on-bhe-for-oracle-tbd-2h-analyst-report-190",
+      "id": "pearkmarks-results-on-bhe-for-oracle-tbd-2h-analyst-report-189",
       "title": "Pearkmarks Results on BHE for Oracle (TBD-2H) | Analyst Report",
       "url": null,
       "type": "Analyst Report",
@@ -6255,11 +6222,11 @@
       "partnerUse": true,
       "paidMediaDate": null,
       "paidMediaDateDisplay": "",
-      "primaryActivation": "No Planned Promotion",
+      "primaryActivation": "TBC",
       "marketingEmail": null,
       "salesEmail": null,
       "sdrEmail": null,
-      "usedInCampaign": "No",
+      "usedInCampaign": "Yes",
       "promotionPeriod": "2H",
       "ownerIndividual": "Liam Yu, Melissa Zelyez",
       "publishedByVendor": "Hitachi Vantara",
@@ -6272,7 +6239,7 @@
       "issueType": ""
     },
     {
-      "id": "power-your-ai-future-on-a-foundation-of-trusted-modernized-data-solution-profile-191",
+      "id": "power-your-ai-future-on-a-foundation-of-trusted-modernized-data-solution-profile-190",
       "title": "Power Your AI Future on a Foundation of Trusted, Modernized Data | Solution Profile",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/solution-profile/modernize-data-for-ai-era.pdf",
       "type": "Solution Profile",
@@ -6294,7 +6261,7 @@
       "sdrEmail": null,
       "usedInCampaign": "Yes",
       "promotionPeriod": "1H",
-      "ownerIndividual": "Andy Gremett",
+      "ownerIndividual": "Nick Howell",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "",
       "actionRequired": "",
@@ -6305,7 +6272,7 @@
       "issueType": ""
     },
     {
-      "id": "protect-smarter-recover-faster-your-guide-to-data-protection-as-a-service-ebook-192",
+      "id": "protect-smarter-recover-faster-your-guide-to-data-protection-as-a-service-ebook-191",
       "title": "Protect Smarter, Recover Faster: Your Guide to Data Protection as a Service | eBook",
       "url": "https://www.hitachivantara.com/en-us/gated-forms/protect-smarter-recover-faster-your-guide-to-data-protection-as-a-service",
       "type": "eBook",
@@ -6338,7 +6305,7 @@
       "issueType": "; 12+ Months Old"
     },
     {
-      "id": "public-sector-agency-protecting-vital-hr-data-for-government-employees-customer-story-193",
+      "id": "public-sector-agency-protecting-vital-hr-data-for-government-employees-customer-story-192",
       "title": "Public-sector Agency: Protecting vital HR data for government employees | Customer Story",
       "url": "https://www.hitachivantara.com/en-us/company/customer-stories/public-sector-customer-story",
       "type": "Customer Story",
@@ -6363,15 +6330,15 @@
       "ownerIndividual": "Jennifer Schmitz",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "",
-      "actionRequired": "Add customer-facing URL",
+      "actionRequired": "Review content freshness (12+ months)",
       "abstract": "",
       "partnerCampaignLink": null,
       "fiscalYear": "FY26",
       "fiscalQuarter": "Q1",
-      "issueType": "; No URL; 12+ Months Old"
+      "issueType": "; 12+ Months Old"
     },
     {
-      "id": "rabobank-compliance-discovery-search-time-reduced-from-weeks-to-hours-customer-story-194",
+      "id": "rabobank-compliance-discovery-search-time-reduced-from-weeks-to-hours-customer-story-193",
       "title": "Rabobank: Compliance Discovery Search Time Reduced From Weeks to Hours | Customer Story",
       "url": "https://www.hitachivantara.com/en-us/company/customer-stories/rabobank-case-study",
       "type": "Customer Story",
@@ -6404,7 +6371,7 @@
       "issueType": ""
     },
     {
-      "id": "raiffeisen-informatik-enabling-rapid-cyber-recovery-for-critical-mainframe-environments-cu-195",
+      "id": "raiffeisen-informatik-enabling-rapid-cyber-recovery-for-critical-mainframe-environments-cu-194",
       "title": "Raiffeisen Informatik: Enabling Rapid Cyber Recovery for Critical Mainframe Environments | Customer Story",
       "url": "https://www.hitachivantara.com/en-us/company/customer-stories/raiffesien-informatik-customer-story",
       "type": "Customer Story",
@@ -6437,7 +6404,7 @@
       "issueType": ""
     },
     {
-      "id": "reclaim-data-sovereignty-for-the-ai-era-blog-196",
+      "id": "reclaim-data-sovereignty-for-the-ai-era-blog-195",
       "title": "Reclaim Data Sovereignty for the AI Era | Blog",
       "url": "https://www.hitachivantara.com/en-us/blog/reclaim-data-sovereignty-for-the-ai-era",
       "type": "Blog",
@@ -6459,7 +6426,7 @@
       "sdrEmail": null,
       "usedInCampaign": "No",
       "promotionPeriod": "2H",
-      "ownerIndividual": "Andy Gremett",
+      "ownerIndividual": "Nick Howell",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "\u26a0\ufe0f POTENTIAL DUPLICATE \u2014 Review with \"Reclaim Data Sovereignty for the AI Era\" (Campaign: AI Data Foundation). @stephanie.thompson@hitachivantara.com @sulochna.khokhrai@hitachivantara.com \u2014 Flagged by Smart Assist 10/1/2026.",
       "actionRequired": "",
@@ -6470,7 +6437,7 @@
       "issueType": ""
     },
     {
-      "id": "remove-the-chaos-of-data-complexity-with-virtual-storage-platform-one-block-storage-for-mi-197",
+      "id": "remove-the-chaos-of-data-complexity-with-virtual-storage-platform-one-block-storage-for-mi-196",
       "title": "Remove the Chaos of Data Complexity With Virtual Storage Platform One Block Storage for Mid-sized Enterprises | Datasheet",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/datasheet/hitachi-virtual-storage-platform-one-block-datasheet.pdf",
       "type": "Datasheet",
@@ -6503,7 +6470,7 @@
       "issueType": "; 12+ Months Old"
     },
     {
-      "id": "resilience-by-design-reducing-data-risk-downtime-and-regulatory-exposure-webinar-198",
+      "id": "resilience-by-design-reducing-data-risk-downtime-and-regulatory-exposure-webinar-197",
       "title": "Resilience by Design: Reducing Data Risk, Downtime, and Regulatory Exposure | Webinar",
       "url": "https://www.brighttalk.com/webcast/12821/650879?utm_source=brighttalk-portal&utm_medium=web&utm_content=hitachi+vantara+cyber&utm_term=search-result-33&utm_campaign=webcasts-search-results-feed&q=hitachi+vantara+cyber",
       "type": "Webinar",
@@ -6519,7 +6486,7 @@
       "partnerUse": false,
       "paidMediaDate": null,
       "paidMediaDateDisplay": "",
-      "primaryActivation": "No Planned Promotion",
+      "primaryActivation": "Promoted FY25",
       "marketingEmail": null,
       "salesEmail": null,
       "sdrEmail": null,
@@ -6533,10 +6500,10 @@
       "partnerCampaignLink": null,
       "fiscalYear": "FY26",
       "fiscalQuarter": "Q2",
-      "issueType": "; No Promo; 12+ Months Old"
+      "issueType": "; 12+ Months Old"
     },
     {
-      "id": "resilient-by-design-how-hitachi-vantara-vm2020-and-index-engines-deliver-faster-validated--199",
+      "id": "resilient-by-design-how-hitachi-vantara-vm2020-and-index-engines-deliver-faster-validated--198",
       "title": "Resilient by Design: How Hitachi Vantara, VM2020, and Index Engines Deliver Faster, Validated Ransomware Recovery | Webinar",
       "url": "https://www.brighttalk.com/webcast/12821/669090",
       "type": "Webinar",
@@ -6569,7 +6536,7 @@
       "issueType": ""
     },
     {
-      "id": "rice-university-customer-story-200",
+      "id": "rice-university-customer-story-199",
       "title": "Rice University | Customer Story",
       "url": null,
       "type": "Customer Story",
@@ -6602,7 +6569,7 @@
       "issueType": ""
     },
     {
-      "id": "rwth-aachen-university-consolidate-digital-backup-to-object-services-at-scale-and-boost-cy-201",
+      "id": "rwth-aachen-university-consolidate-digital-backup-to-object-services-at-scale-and-boost-cy-200",
       "title": "RWTH Aachen University: Consolidate Digital Backup to Object Services at Scale and Boost Cybersecurity | Customer Story",
       "url": "https://www.hitachivantara.com/en-us/company/customer-stories/rwth-aachen-university",
       "type": "Customer Story",
@@ -6627,15 +6594,15 @@
       "ownerIndividual": "Jennifer Schmitz",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "\u00a0",
-      "actionRequired": "Add customer-facing URL",
+      "actionRequired": "",
       "abstract": "",
       "partnerCampaignLink": "https://www.partnermarketing.hitachivantara.com/data-modernization-resilience",
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q1",
-      "issueType": "; No URL"
+      "issueType": ""
     },
     {
-      "id": "sds-90-day-free-trial-offer-202",
+      "id": "sds-90-day-free-trial-offer-201",
       "title": "SDS 90-Day Free Trial | Offer",
       "url": "https://www.hitachivantara.com/en-us/gated-forms/free-trial-of-vsp-one-software-defined-storage",
       "type": "Offer",
@@ -6651,62 +6618,29 @@
       "partnerUse": true,
       "paidMediaDate": null,
       "paidMediaDateDisplay": "",
-      "primaryActivation": "No Planned Promotion",
+      "primaryActivation": "Promoted FY25",
       "marketingEmail": null,
       "salesEmail": null,
       "sdrEmail": null,
-      "usedInCampaign": "No",
+      "usedInCampaign": "Yes",
       "promotionPeriod": "1H",
-      "ownerIndividual": "Andy Gremett",
+      "ownerIndividual": "Nick Howell",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "\u00a0",
-      "actionRequired": "Create promotion plan",
+      "actionRequired": "",
       "abstract": "",
       "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q1",
-      "issueType": "; No Promo"
+      "issueType": ""
     },
     {
-      "id": "sfs-group-advances-digitization-disaster-recovery-and-lowers-tco-with-unified-solution-cus-203",
-      "title": "SFS Group: Advances Digitization/Disaster Recovery and Lowers TCO with Unified Solution | Customer Story",
-      "url": "https://www.hitachivantara.com/en-us/company/customer-stories/sfs-group-case-study",
-      "type": "Customer Story",
-      "campaign": "Data Modernization & Resilience",
-      "useCase": "Cyber Risk Mitigation & Recovery",
-      "funnelStage": "BOFU",
-      "ownerTeam": "Customer Marketing",
-      "audience": "Enterprise, Midmarket",
-      "status": "Live",
-      "region": "Global",
-      "publishDate": "2026-04-01",
-      "publishDateDisplay": "Apr 01, 2026",
-      "partnerUse": true,
-      "paidMediaDate": null,
-      "paidMediaDateDisplay": "",
-      "primaryActivation": "Sales Enablement",
-      "marketingEmail": null,
-      "salesEmail": null,
-      "sdrEmail": null,
-      "usedInCampaign": "No",
-      "promotionPeriod": "1H",
-      "ownerIndividual": "Jennifer Schmitz",
-      "publishedByVendor": "Hitachi Vantara",
-      "notes": "\u00a0",
-      "actionRequired": "Review for possible duplicate",
-      "abstract": "",
-      "partnerCampaignLink": null,
-      "fiscalYear": "FY27",
-      "fiscalQuarter": "Q1",
-      "issueType": "; Duplicate"
-    },
-    {
-      "id": "sfs-group-high-performance-private-cloud-customer-story-204",
+      "id": "sfs-group-high-performance-private-cloud-customer-story-202",
       "title": "SFS Group: High-Performance Private Cloud | Customer Story",
       "url": "https://www.hitachivantara.com/en-us/company/customer-stories/sfs-group-case-study",
       "type": "Customer Story",
       "campaign": "Data Modernization & Resilience",
-      "useCase": "Hybrid Cloud Platform & Operations",
+      "useCase": "Cyber Risk Mitigation & Recovery, Hybrid Cloud Platform & Operations",
       "funnelStage": "BOFU",
       "ownerTeam": "Customer Marketing",
       "audience": "Enterprise, Midmarket",
@@ -6726,15 +6660,15 @@
       "ownerIndividual": "Jennifer Schmitz, Steven Garbrecht",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "\u00a0",
-      "actionRequired": "Review for possible duplicate",
+      "actionRequired": "",
       "abstract": "",
       "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q1",
-      "issueType": "; Duplicate"
+      "issueType": ""
     },
     {
-      "id": "shared-nothing-architecture-for-ai-whitepaper-205",
+      "id": "shared-nothing-architecture-for-ai-whitepaper-203",
       "title": "Shared-Nothing Architecture for AI | Whitepaper",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/white-paper/shared-nothing-architecture-for-ai.pdf",
       "type": "Whitepaper",
@@ -6756,7 +6690,7 @@
       "sdrEmail": "https://hitachivantara.sharepoint.com/:w:/s/GlobalCampaignsAssets505/IQCzeB3nukm3RYNXCRqfDigxAW3mAfs8Vmt8AQYVzTg_Cqg?e=ypIkhp",
       "usedInCampaign": "Yes",
       "promotionPeriod": "1H",
-      "ownerIndividual": "Andy Gremett",
+      "ownerIndividual": "Nick Howell",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "",
       "actionRequired": "",
@@ -6767,7 +6701,7 @@
       "issueType": ""
     },
     {
-      "id": "solve-the-six-data-storage-challenges-ebook-ebook-206",
+      "id": "solve-the-six-data-storage-challenges-ebook-ebook-204",
       "title": "Solve the Six Data Storage Challenges eBook | eBook",
       "url": "https://www.hitachivantara.com/en-us/gated-forms/solve-six-biggest-data-storage-challenges-ebook",
       "type": "eBook",
@@ -6800,7 +6734,7 @@
       "issueType": "; 12+ Months Old"
     },
     {
-      "id": "storage-as-a-service-standard-enterprise-grade-storage-with-flexible-consumption-datasheet-207",
+      "id": "storage-as-a-service-standard-enterprise-grade-storage-with-flexible-consumption-datasheet-205",
       "title": "Storage as a Service Standard: Enterprise\u2011Grade  Storage With Flexible Consumption | Datasheet",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/datasheet/storage-as-a-service.pdf",
       "type": "Datasheet",
@@ -6825,15 +6759,15 @@
       "ownerIndividual": "Victor Lin",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "",
-      "actionRequired": "Add customer-facing URL",
+      "actionRequired": "",
       "abstract": "",
       "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q2",
-      "issueType": "; No URL"
+      "issueType": ""
     },
     {
-      "id": "staas-explainer-video-video-208",
+      "id": "staas-explainer-video-video-206",
       "title": "STaaS Explainer Video | Video",
       "url": "https://www.hitachivantara.com/en-us/resources.html#vid=6398568823112",
       "type": "Video",
@@ -6858,15 +6792,15 @@
       "ownerIndividual": "Victor Lin",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "",
-      "actionRequired": "Add customer-facing URL",
+      "actionRequired": "",
       "abstract": "",
       "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q2",
-      "issueType": "; No URL"
+      "issueType": ""
     },
     {
-      "id": "storage-as-a-service-modernization-made-simple-infographic-209",
+      "id": "storage-as-a-service-modernization-made-simple-infographic-207",
       "title": "Storage as a Service Modernization Made Simple | Infographic",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/infographic/staas-infographic.pdf",
       "type": "Infographic",
@@ -6899,7 +6833,7 @@
       "issueType": ""
     },
     {
-      "id": "modernize-storage-with-storage-as-a-service-solution-profile-210",
+      "id": "modernize-storage-with-storage-as-a-service-solution-profile-208",
       "title": "Modernize Storage With  Storage as a Service | Solution Profile",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/solution-profile/storage-as-a-service-solution-profile.pdf",
       "type": "Solution Profile",
@@ -6932,7 +6866,7 @@
       "issueType": ""
     },
     {
-      "id": "storage-as-a-service-enterprise-storage-delivered-with-a-simple-subscription-top-10-211",
+      "id": "storage-as-a-service-enterprise-storage-delivered-with-a-simple-subscription-top-10-209",
       "title": "Storage as a Service Enterprise Storage Delivered With a Simple Subscription | Top 10",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/datasheet/staas-top-ten-reasons-why.pdf",
       "type": "Top 10",
@@ -6965,7 +6899,7 @@
       "issueType": ""
     },
     {
-      "id": "state-of-data-infrastructure-global-report-2025-ebook-ebook-212",
+      "id": "state-of-data-infrastructure-global-report-2025-ebook-ebook-210",
       "title": "State of Data Infrastructure Global Report 2025 eBook | eBook",
       "url": "https://www.hitachivantara.com/en-us/gated-forms/state-of-data-2025",
       "type": "eBook",
@@ -6998,7 +6932,7 @@
       "issueType": ""
     },
     {
-      "id": "techniklotsen-boosting-business-agility-and-reducing-costs-with-future-proof-dynamic-infra-213",
+      "id": "techniklotsen-boosting-business-agility-and-reducing-costs-with-future-proof-dynamic-infra-211",
       "title": "Techniklotsen: Boosting Business Agility and Reducing Costs with Future-Proof, Dynamic Infrastructure as a Service | Customer Story",
       "url": "https://www.hitachivantara.com/en-us/company/customer-stories/techniklotsen-case-study",
       "type": "Customer Story",
@@ -7023,15 +6957,15 @@
       "ownerIndividual": "Jennifer Schmitz",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "",
-      "actionRequired": "Add customer-facing URL",
+      "actionRequired": "",
       "abstract": "",
       "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q1",
-      "issueType": "; No URL"
+      "issueType": ""
     },
     {
-      "id": "the-cost-of-good-vs-excellent-blog-214",
+      "id": "the-cost-of-good-vs-excellent-blog-212",
       "title": "The Cost of Good vs. Excellent | Blog",
       "url": "https://www.hitachivantara.com/en-us/blog/the-cost-of-good-versus-excellent",
       "type": "Blog",
@@ -7056,15 +6990,15 @@
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "\u00a0",
-      "actionRequired": "Add customer-facing URL",
+      "actionRequired": "",
       "abstract": "",
       "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q1",
-      "issueType": "; No URL"
+      "issueType": ""
     },
     {
-      "id": "the-economics-of-modern-storage-infrastructure-lower-risk-faster-ai-value-better-roi-webin-215",
+      "id": "the-economics-of-modern-storage-infrastructure-lower-risk-faster-ai-value-better-roi-webin-213",
       "title": "The Economics of Modern Storage Infrastructure: Lower Risk, Faster AI Value, Better ROI | Webinar",
       "url": "https://www.brighttalk.com/webcast/12821/659254?bt_tok={{lead_id}}&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=659254",
       "type": "Webinar",
@@ -7097,7 +7031,7 @@
       "issueType": ""
     },
     {
-      "id": "the-future-of-hybrid-cloud-consumption-is-flexible-blog-216",
+      "id": "the-future-of-hybrid-cloud-consumption-is-flexible-blog-214",
       "title": "The Future of Hybrid Cloud Consumption is Flexible | Blog",
       "url": "https://www.hitachivantara.com/en-us/blog/drive-flexible-infrastructure-consumption-automation-orchestration-all-platform-savings-hybrid-cloud",
       "type": "Blog",
@@ -7130,7 +7064,7 @@
       "issueType": ""
     },
     {
-      "id": "the-key-to-automating-cloud-storage-a-single-unified-platform-217",
+      "id": "the-key-to-automating-cloud-storage-a-single-unified-platform-215",
       "title": "The Key to Automating Cloud Storage? A Single, Unified Platform",
       "url": "https://www.hitachivantara.com/en-us/blog/key-to-automating-cloud-storage-single-unified-platform",
       "type": "Blog",
@@ -7163,7 +7097,7 @@
       "issueType": ""
     },
     {
-      "id": "the-new-requirements-for-mission-critical-storage-in-an-ai-driven-enterprise-blog-218",
+      "id": "the-new-requirements-for-mission-critical-storage-in-an-ai-driven-enterprise-blog-216",
       "title": "The New Requirements for Mission-Critical Storage in an AI-Driven Enterprise | Blog",
       "url": "https://www.hitachivantara.com/en-us/blog/the-new-requirements-for-mission-critical-storage-in-an-ai-driven-enterprise",
       "type": "Blog",
@@ -7196,7 +7130,7 @@
       "issueType": ""
     },
     {
-      "id": "the-power-of-distributed-infrastructure-and-storage-at-the-edge-blog-219",
+      "id": "the-power-of-distributed-infrastructure-and-storage-at-the-edge-blog-217",
       "title": "The Power of Distributed Infrastructure and Storage at the Edge | Blog",
       "url": "https://www.hitachivantara.com/en-us/blog/power-of-distributed-infrastructure-and-storage-at-the-edge",
       "type": "Blog",
@@ -7229,7 +7163,7 @@
       "issueType": ""
     },
     {
-      "id": "the-total-economic-impact-of-virtual-storage-platform-one-analyst-report-220",
+      "id": "the-total-economic-impact-of-virtual-storage-platform-one-analyst-report-218",
       "title": "The Total Economic Impact of Virtual Storage Platform One | Analyst Report",
       "url": "https://www.hitachivantara.com/en-us/gated-forms/cost-savings-and-business-benefits-enabled-by-vsp-one",
       "type": "Analyst Report",
@@ -7262,7 +7196,7 @@
       "issueType": "; 12+ Months Old"
     },
     {
-      "id": "tier-1-launch-midrange-refresh-webinar-221",
+      "id": "tier-1-launch-midrange-refresh-webinar-219",
       "title": "Tier 1 Launch: Midrange Refresh | Webinar",
       "url": null,
       "type": "Webinar",
@@ -7278,7 +7212,7 @@
       "partnerUse": false,
       "paidMediaDate": null,
       "paidMediaDateDisplay": "",
-      "primaryActivation": "No Planned Promotion",
+      "primaryActivation": "TBC",
       "marketingEmail": null,
       "salesEmail": null,
       "sdrEmail": null,
@@ -7287,15 +7221,15 @@
       "ownerIndividual": "Stephanie Thompson, Sulochna Khokhrai",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "",
-      "actionRequired": "Create promotion plan",
+      "actionRequired": "",
       "abstract": "",
       "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q4",
-      "issueType": "; No Promo"
+      "issueType": ""
     },
     {
-      "id": "top-10-reasons-why-solutions-for-oracle-turbocharge-your-database-performance-top-10-222",
+      "id": "top-10-reasons-why-solutions-for-oracle-turbocharge-your-database-performance-top-10-220",
       "title": "Top 10 Reasons Why Solutions for Oracle   Turbocharge Your Database Performance | Top 10",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/checklist/top-ten-reasons-why-solutions-oracle.pdf",
       "type": "Top 10",
@@ -7328,7 +7262,7 @@
       "issueType": ""
     },
     {
-      "id": "top-10-reasons-why-vsp-one-sds-block-storage-hybrid-cloud-ready-software-defined-storage-f-223",
+      "id": "top-10-reasons-why-vsp-one-sds-block-storage-hybrid-cloud-ready-software-defined-storage-f-221",
       "title": "Top 10 Reasons Why VSP One SDS: Block Storage   Hybrid-Cloud-Ready Software-Defined Storage for  Distributed Block Applications | Top 10",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/brochure/top-ten-reasons-why-vsp-one-sds-block-storage-hybrid-cloud-ready-sds-distributed-block-applications-drives-business-agility-cost-savings.pdf",
       "type": "Top 10",
@@ -7350,7 +7284,7 @@
       "sdrEmail": null,
       "usedInCampaign": "No",
       "promotionPeriod": "2H",
-      "ownerIndividual": "Andy Gremett",
+      "ownerIndividual": "Nick Howell",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "",
       "actionRequired": "",
@@ -7361,7 +7295,7 @@
       "issueType": ""
     },
     {
-      "id": "top-10-reasons-why-hitachi-everflex-top-10-224",
+      "id": "top-10-reasons-why-hitachi-everflex-top-10-222",
       "title": "Top 10 Reasons Why Hitachi EverFlex | Top 10",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/checklist/top-10-reasons-hitachi-everflex.pdf",
       "type": "Top 10",
@@ -7394,7 +7328,7 @@
       "issueType": "; 12+ Months Old"
     },
     {
-      "id": "top-10-reasons-to-choose-hitachi-vantara-for-microsoft-sql-server-infrastructure-top-10-225",
+      "id": "top-10-reasons-to-choose-hitachi-vantara-for-microsoft-sql-server-infrastructure-top-10-223",
       "title": "Top 10 Reasons  To Choose  Hitachi Vantara  for Microsoft  SQL Server  Infrastructure | Top 10",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/microsoft-sql-server-infrastructure.pdf",
       "type": "Top 10",
@@ -7427,7 +7361,7 @@
       "issueType": "; 12+ Months Old"
     },
     {
-      "id": "top-ten-reasons-why-hitachi-integrated-solutions-for-sap-future-ready-sap-proven-at-scale--226",
+      "id": "top-ten-reasons-why-hitachi-integrated-solutions-for-sap-future-ready-sap-proven-at-scale--224",
       "title": "Top Ten Reasons Why Hitachi Integrated Solutions for SAP  Future-Ready SAP. Proven at Scale | Top 10",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/checklist/solutions-for-sap-hana.pdf",
       "type": "Top 10",
@@ -7460,7 +7394,7 @@
       "issueType": ""
     },
     {
-      "id": "top-10-reasons-flexible-hybrid-cloud-with-hitachi-and-red-hat-openshift-virtualization-top-227",
+      "id": "top-10-reasons-flexible-hybrid-cloud-with-hitachi-and-red-hat-openshift-virtualization-top-225",
       "title": "Top 10 Reasons: Flexible Hybrid Cloud with Hitachi and Red Hat OpenShift Virtualization | Top 10",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/top-ten-reasons-why-flexible-hybrid-cloud-with-red-hat-openshift-virtualization.pdf",
       "type": "Top 10",
@@ -7493,7 +7427,7 @@
       "issueType": "; 12+ Months Old"
     },
     {
-      "id": "top-5-reasons-to-build-resilient-cloud-infrastructure-with-hitachi-storage-and-vmware-clou-228",
+      "id": "top-5-reasons-to-build-resilient-cloud-infrastructure-with-hitachi-storage-and-vmware-clou-226",
       "title": "Top 5 Reasons to Build  Resilient Cloud Infrastructure With Hitachi Storage and  VMware Cloud Foundation | eBook",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/top-5-reasons-build-resilient-cloud-infrastructure-with-storage-vmware-cloud-foundation.pdf",
       "type": "eBook",
@@ -7526,7 +7460,7 @@
       "issueType": ""
     },
     {
-      "id": "top-5-reasons-to-choose-hitachi-storage-for-vmware-virtualization-success-ebook-229",
+      "id": "top-5-reasons-to-choose-hitachi-storage-for-vmware-virtualization-success-ebook-227",
       "title": "Top 5 Reasons To Choose Hitachi Storage for VMware Virtualization Success | eBook",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/top-five-reasons-choose-hitachi-storage-vmware-virtualization-success.pdf",
       "type": "eBook",
@@ -7559,7 +7493,7 @@
       "issueType": "; 12+ Months Old"
     },
     {
-      "id": "turning-virtualization-modernization-into-business-outcomes-blog-230",
+      "id": "turning-virtualization-modernization-into-business-outcomes-blog-228",
       "title": "Turning Virtualization Modernization Into Business Outcomes | Blog",
       "url": "https://www.hitachivantara.com/en-us/blog/business-outcomes-to-expect-after-modernizing-virtualization-infrastructure",
       "type": "Blog",
@@ -7592,7 +7526,7 @@
       "issueType": ""
     },
     {
-      "id": "unified-data-management-buyer-s-guide-ebook-231",
+      "id": "unified-data-management-buyer-s-guide-ebook-229",
       "title": "Unified Data Management Buyer's Guide | eBook",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/unified-data-management-buyers-guide.pdf",
       "type": "eBook",
@@ -7625,7 +7559,7 @@
       "issueType": "; 12+ Months Old"
     },
     {
-      "id": "university-mary-hardin-baylor-shaping-outstanding-digital-learning-experiences-with-a-reli-232",
+      "id": "university-mary-hardin-baylor-shaping-outstanding-digital-learning-experiences-with-a-reli-230",
       "title": "University Mary Hardin Baylor: Shaping Outstanding Digital Learning Experiences with a Reliable, Easy-to-Manage Storage Platform | Customer Story",
       "url": "https://www.hitachivantara.com/en-us/company/customer-stories/university-of-mary-hardin-baylor-customer-story",
       "type": "Customer Story",
@@ -7658,7 +7592,7 @@
       "issueType": ""
     },
     {
-      "id": "university-of-kent-delivering-secure-always-on-digital-services-for-students-faculty-and-r-233",
+      "id": "university-of-kent-delivering-secure-always-on-digital-services-for-students-faculty-and-r-231",
       "title": "University of Kent: Delivering Secure, Always-On Digital Services for Students, Faculty and Researchers | Customer Story",
       "url": "https://www.hitachivantara.com/en-us/company/customer-stories/university-of-kent-customer-story",
       "type": "Customer Story",
@@ -7691,7 +7625,7 @@
       "issueType": ""
     },
     {
-      "id": "unlocking-roi-the-forrester-study-that-could-save-your-next-storage-investment-webinar-234",
+      "id": "unlocking-roi-the-forrester-study-that-could-save-your-next-storage-investment-webinar-232",
       "title": "Unlocking ROI: the Forrester Study That Could Save Your Next Storage Investment | Webinar",
       "url": "https://www.brighttalk.com/webcast/12821/651449?bt_tok={{lead_id}}&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=651449",
       "type": "Webinar",
@@ -7724,7 +7658,7 @@
       "issueType": "; 12+ Months Old"
     },
     {
-      "id": "virtual-storage-platform-one-block-high-end-storage-datasheet-235",
+      "id": "virtual-storage-platform-one-block-high-end-storage-datasheet-233",
       "title": "Virtual Storage Platform One Block High End Storage | Datasheet",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/datasheet/virtual-storage-platform-one-block-high-end-storage.pdf",
       "type": "Datasheet",
@@ -7757,7 +7691,7 @@
       "issueType": "; 12+ Months Old"
     },
     {
-      "id": "virtual-storage-platform-one-one-data-platform-no-limits-ebook-236",
+      "id": "virtual-storage-platform-one-one-data-platform-no-limits-ebook-234",
       "title": "Virtual Storage Platform One: One Data Platform. No Limits | eBook",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/one-data-platform-no-limits-ebook.pdf",
       "type": "eBook",
@@ -7790,7 +7724,7 @@
       "issueType": ""
     },
     {
-      "id": "a-buyer-s-guide-to-hitachi-vantara-virtual-storage-platform-one-bloc-ebook-237",
+      "id": "a-buyer-s-guide-to-hitachi-vantara-virtual-storage-platform-one-bloc-ebook-235",
       "title": "A Buyer\u2019s Guide to Hitachi  Vantara Virtual Storage  Platform One Bloc | eBook",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/buyers-guide-to-virtual-storage-platform-one-block.pdf",
       "type": "eBook",
@@ -7823,7 +7757,7 @@
       "issueType": "; Expired/Update"
     },
     {
-      "id": "unbreakable-core-vsp-one-guarantees-proven-results-guaranteed-outcomes-ebook-238",
+      "id": "unbreakable-core-vsp-one-guarantees-proven-results-guaranteed-outcomes-ebook-236",
       "title": "Unbreakable   Core VSP One Guarantees: Proven Results.  Guaranteed Outcomes. | eBook",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/vsp-one-extends-guarantees-across-entire-data-plane.pdf",
       "type": "eBook",
@@ -7856,16 +7790,16 @@
       "issueType": ""
     },
     {
-      "id": "what-it-teams-need-to-know-before-a-mainframe-refresh-blog-239",
+      "id": "what-it-teams-need-to-know-before-a-mainframe-refresh-blog-237",
       "title": "What IT Teams Need to Know Before a Mainframe Refresh | Blog",
-      "url": null,
+      "url": "https://www.hitachivantara.com/en-us/blog/what-it-buyers-need-to-know-before-a-mainframe-refresh",
       "type": "Blog",
       "campaign": "Data Modernization & Resilience",
       "useCase": "",
       "funnelStage": "TOFU",
       "ownerTeam": "Brand",
       "audience": "Enterprise, Midmarket",
-      "status": "What IT Teams Need to Know Before a Mainframe Refresh",
+      "status": "Live",
       "region": "Global",
       "publishDate": "2026-10-20",
       "publishDateDisplay": "Oct 20, 2026",
@@ -7881,15 +7815,15 @@
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "",
-      "actionRequired": "",
+      "actionRequired": "Add customer-facing URL",
       "abstract": "",
       "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q3",
-      "issueType": ""
+      "issueType": "; No URL"
     },
     {
-      "id": "why-infrastructure-platform-consumption-services-matter-now-blog-240",
+      "id": "why-infrastructure-platform-consumption-services-matter-now-blog-238",
       "title": "Why Infrastructure Platform Consumption Services Matter Now | Blog",
       "url": "https://www.hitachivantara.com/en-us/blog/why-infrastructure-platform-consumption-services-matter-now",
       "type": "Blog",
@@ -7914,15 +7848,15 @@
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "",
-      "actionRequired": "Add customer-facing URL",
+      "actionRequired": "",
       "abstract": "",
       "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q3",
-      "issueType": "; No URL"
+      "issueType": ""
     },
     {
-      "id": "why-is-software-defined-storage-critical-for-unlocking-the-power-of-data-webinar-241",
+      "id": "why-is-software-defined-storage-critical-for-unlocking-the-power-of-data-webinar-239",
       "title": "Why is software defined storage critical for unlocking the power of data? | Webinar",
       "url": "https://www.brighttalk.com/webcast/12821/636063?bt_tok={{lead_id}}&utm_source=HitachiVantara&utm_medium=brighttalk&utm_campaign=636063",
       "type": "Webinar",
@@ -7955,7 +7889,7 @@
       "issueType": "; 12+ Months Old"
     },
     {
-      "id": "why-sap-hana-resilience-matters-as-much-as-scale-blog-242",
+      "id": "why-sap-hana-resilience-matters-as-much-as-scale-blog-240",
       "title": "Why SAP HANA Resilience Matters as Much as Scale | Blog",
       "url": "https://www.hitachivantara.com/en-us/blog/why-sap-hana-resilience-matters-as-much-as-scale",
       "type": "Blog",
@@ -7978,17 +7912,17 @@
       "usedInCampaign": "No",
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
-      "publishedByVendor": "",
+      "publishedByVendor": "Hitachi Vantara",
       "notes": "",
-      "actionRequired": "Add customer-facing URL",
+      "actionRequired": "",
       "abstract": "",
       "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q2",
-      "issueType": "; No URL"
+      "issueType": ""
     },
     {
-      "id": "why-your-ai-strategy-needs-both-shared-and-shared-nothing-storage-blog-243",
+      "id": "why-your-ai-strategy-needs-both-shared-and-shared-nothing-storage-blog-241",
       "title": "Why Your AI Strategy Needs Both Shared and Shared-Nothing Storage | Blog",
       "url": "https://www.hitachivantara.com/en-us/blog/why-your-ai-strategy-needs-both-shared-and-shared-nothing-storage",
       "type": "Blog",
@@ -8011,17 +7945,17 @@
       "usedInCampaign": "No",
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
-      "publishedByVendor": "",
+      "publishedByVendor": "Hitachi Vantara",
       "notes": "",
-      "actionRequired": "Add customer-facing URL",
+      "actionRequired": "",
       "abstract": "",
       "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q2",
-      "issueType": "; No URL"
+      "issueType": ""
     },
     {
-      "id": "yapi-kredi-delivering-banking-services-to-millions-of-customers-with-sustainable-cost-effi-244",
+      "id": "yapi-kredi-delivering-banking-services-to-millions-of-customers-with-sustainable-cost-effi-242",
       "title": "Yapi Kredi: Delivering Banking Services to Millions of Customers with Sustainable, Cost-Efficient Infrastructure | Customer Story",
       "url": "https://www.hitachivantara.com/en-us/company/customer-stories/yap-kredi-customer-story",
       "type": "Customer Story",
@@ -8054,7 +7988,7 @@
       "issueType": ""
     },
     {
-      "id": "your-postgresql-environment-with-hitachi-vsp-one-and-integrated-systems-infographic-245",
+      "id": "your-postgresql-environment-with-hitachi-vsp-one-and-integrated-systems-infographic-243",
       "title": "Your PostgreSQL Environment With Hitachi VSP One and Integrated Systems | Infographic",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/infographic/solutions-postgresql-infographic.pdf",
       "type": "Infographic",
@@ -8087,14 +8021,14 @@
       "issueType": ""
     },
     {
-      "id": "your-next-mainframe-migration-starts-before-the-deadline-webinar-246",
+      "id": "your-next-mainframe-migration-starts-before-the-deadline-webinar-244",
       "title": "Your Next Mainframe Migration Starts Before the Deadline | Webinar",
       "url": "https://www.brighttalk.com/webcast/12821/677181",
       "type": "Webinar",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
       "funnelStage": "",
-      "ownerTeam": "",
+      "ownerTeam": "Regional Marketing",
       "audience": "Enterprise",
       "status": "Live",
       "region": "AMER",
@@ -8110,7 +8044,7 @@
       "usedInCampaign": "No",
       "promotionPeriod": "2H",
       "ownerIndividual": "Sakina Peshawarwala",
-      "publishedByVendor": "",
+      "publishedByVendor": "SHARE",
       "notes": "",
       "actionRequired": "Create promotion plan",
       "abstract": "Mainframe migration is no longer just a refresh-cycle decision. Organizations need a strategy that minimizes disruption, maintains availability, and supports long-term modernization goals. In this webinar, experts discuss how to plan ahead, reduce migration risk, preserve business continuity, and create a roadmap that extends beyond the next infrastructure refresh. Learn key considerations, best practices, and practical steps to prepare for a successful transition while keeping critical workloads running smoothly.",
@@ -8120,7 +8054,7 @@
       "issueType": "; No Promo"
     },
     {
-      "id": "from-legacy-to-velocity-how-vsp-one-customers-turned-legacy-limits-into-competitive-edge-e-247",
+      "id": "from-legacy-to-velocity-how-vsp-one-customers-turned-legacy-limits-into-competitive-edge-e-245",
       "title": "From Legacy to Velocity: How VSP One Customers Turned Legacy Limits into Competitive Edge | eBook",
       "url": "https://www.hitachivantara.com/en-us/gated-forms/from-legacy-to-velocity",
       "type": "eBook",
@@ -8153,7 +8087,7 @@
       "issueType": ""
     },
     {
-      "id": "modernize-it-with-hitachi-vsp-one-midrange-block-storage-248",
+      "id": "modernize-it-with-hitachi-vsp-one-midrange-block-storage-246",
       "title": "Modernize IT with Hitachi VSP One Midrange Block Storage",
       "url": "https://www.brighttalk.com/webcast/12821/667466",
       "type": "Webinar",
@@ -8186,12 +8120,12 @@
       "issueType": ""
     },
     {
-      "id": "corporate-sustainability-needs-integration-not-another-goal-post-blog-249",
+      "id": "corporate-sustainability-needs-integration-not-another-goal-post-blog-247",
       "title": "Corporate Sustainability Needs Integration, Not Another Goal Post | Blog",
       "url": "https://www.hitachivantara.com/en-us/blog/corporate-sustainability-need-better-integration-not-another-ambition",
       "type": "Blog",
-      "campaign": "",
-      "useCase": "",
+      "campaign": "Data Modernization & Resilience",
+      "useCase": "Data Platform Architectures & Economics",
       "funnelStage": "TOFU",
       "ownerTeam": "Brand",
       "audience": "Enterprise, Midmarket",
@@ -8211,19 +8145,19 @@
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "",
-      "actionRequired": "Add customer-facing URL",
+      "actionRequired": "",
       "abstract": "",
       "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q2",
-      "issueType": "; No URL"
+      "issueType": ""
     },
     {
-      "id": "sds-tco-tool-calculator-250",
+      "id": "sds-tco-tool-calculator-248",
       "title": "SDS TCO tool | Calculator",
       "url": "https://tco.hitachivantara.com/",
       "type": "Calculator",
-      "campaign": "",
+      "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
       "funnelStage": "MOFU",
       "ownerTeam": "PMM",
@@ -8241,18 +8175,18 @@
       "sdrEmail": null,
       "usedInCampaign": "No",
       "promotionPeriod": "2H",
-      "ownerIndividual": "Andy Gremett",
+      "ownerIndividual": "Nick Howell",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "",
-      "actionRequired": "Add customer-facing URL",
+      "actionRequired": "",
       "abstract": "",
       "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q2",
-      "issueType": "; No URL"
+      "issueType": ""
     },
     {
-      "id": "why-hitachi-vantara-ebook-251",
+      "id": "why-hitachi-vantara-ebook-249",
       "title": "Why Hitachi Vantara | eBook",
       "url": null,
       "type": "eBook",
@@ -8285,14 +8219,14 @@
       "issueType": ""
     },
     {
-      "id": "starcio-with-isaac-ai-infrastructure-debt-capacity-resiliency-and-modernization-strategies-252",
+      "id": "starcio-with-isaac-ai-infrastructure-debt-capacity-resiliency-and-modernization-strategies-250",
       "title": "StarCIO with Isaac-AI Infrastructure Debt: Capacity, Resiliency, and Modernization Strategies | Webinar",
       "url": null,
       "type": "Webinar",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
       "funnelStage": "",
-      "ownerTeam": "",
+      "ownerTeam": "Regional Marketing",
       "audience": "Enterprise",
       "status": "In Production",
       "region": "AMER",
@@ -8308,7 +8242,7 @@
       "usedInCampaign": "No",
       "promotionPeriod": "2H",
       "ownerIndividual": "Sakina Peshawarwala",
-      "publishedByVendor": "",
+      "publishedByVendor": "StarCIO",
       "notes": "",
       "actionRequired": "Create promotion plan",
       "abstract": "",
@@ -8318,15 +8252,15 @@
       "issueType": "; No Promo"
     },
     {
-      "id": "the-gap-between-ai-capable-and-ai-ready-blog-253",
+      "id": "the-gap-between-ai-capable-and-ai-ready-blog-251",
       "title": "The Gap Between AI-Capable and AI-Ready | Blog",
       "url": "https://www.hitachivantara.com/en-us/blog/gap-between-ai-capable-ai-ready",
       "type": "Blog",
-      "campaign": "",
-      "useCase": "",
-      "funnelStage": "",
-      "ownerTeam": "",
-      "audience": "",
+      "campaign": "AI Data Foundation",
+      "useCase": "High Performance AI-Ready Infrastructure",
+      "funnelStage": "TOFU",
+      "ownerTeam": "Brand",
+      "audience": "Enterprise",
       "status": "Live",
       "region": "Global",
       "publishDate": "2026-07-14",
@@ -8341,7 +8275,7 @@
       "usedInCampaign": "No",
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
-      "publishedByVendor": "",
+      "publishedByVendor": "Hitachi Vantara",
       "notes": "",
       "actionRequired": "",
       "abstract": "",
@@ -8351,14 +8285,14 @@
       "issueType": ""
     },
     {
-      "id": "cio-with-joe-morris-the-cio-balancing-act-business-continuity-and-ai-ambition-webinar-254",
+      "id": "cio-with-joe-morris-the-cio-balancing-act-business-continuity-and-ai-ambition-webinar-252",
       "title": "CIO with Joe Morris- The CIO Balancing Act: Business Continuity and AI Ambition | Webinar",
       "url": null,
       "type": "Webinar",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Cyber Risk Mitigation & Recovery",
       "funnelStage": "",
-      "ownerTeam": "",
+      "ownerTeam": "Regional Marketing",
       "audience": "Enterprise",
       "status": "In Production",
       "region": "AMER",
@@ -8374,7 +8308,7 @@
       "usedInCampaign": "No",
       "promotionPeriod": "2H",
       "ownerIndividual": "Sakina Peshawarwala",
-      "publishedByVendor": "",
+      "publishedByVendor": "CIO.com",
       "notes": "",
       "actionRequired": "Create promotion plan",
       "abstract": "",
@@ -8384,14 +8318,14 @@
       "issueType": "; No Promo"
     },
     {
-      "id": "influencer-fireside-chat-webinar-255",
+      "id": "influencer-fireside-chat-webinar-253",
       "title": "Influencer Fireside chat | Webinar",
       "url": null,
       "type": "Webinar",
       "campaign": "",
       "useCase": "",
       "funnelStage": "",
-      "ownerTeam": "",
+      "ownerTeam": "Regional Marketing",
       "audience": "",
       "status": "Planned",
       "region": "AMER",
@@ -8417,12 +8351,12 @@
       "issueType": "; No Promo"
     },
     {
-      "id": "the-economics-of-storage-cio-com-blog-256",
+      "id": "the-economics-of-storage-cio-com-blog-254",
       "title": "The Economics of Storage (CIO.com) | Blog",
       "url": null,
       "type": "Blog",
       "campaign": "Data Modernization & Resilience",
-      "useCase": "",
+      "useCase": "Data Platform Architectures & Economics",
       "funnelStage": "TOFU",
       "ownerTeam": "Brand",
       "audience": "Enterprise, Midmarket",
@@ -8450,12 +8384,12 @@
       "issueType": ""
     },
     {
-      "id": "state-of-data-report-ebook-257",
+      "id": "state-of-data-report-ebook-255",
       "title": "State of Data Report | eBook",
       "url": null,
       "type": "eBook",
       "campaign": "AI Data Foundation",
-      "useCase": "",
+      "useCase": "High Performance AI-Ready Infrastructure",
       "funnelStage": "Hero",
       "ownerTeam": "Brand",
       "audience": "Enterprise, Midmarket",
@@ -8466,7 +8400,7 @@
       "partnerUse": false,
       "paidMediaDate": null,
       "paidMediaDateDisplay": "",
-      "primaryActivation": "",
+      "primaryActivation": "Content Syndication, Outbound Email, Paid Social, Paid Search, Partner Activation, Organic Social, Sales Email",
       "marketingEmail": null,
       "salesEmail": null,
       "sdrEmail": null,
@@ -8475,20 +8409,20 @@
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "",
-      "actionRequired": "Create promotion plan",
+      "actionRequired": "",
       "abstract": "",
       "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q4",
-      "issueType": "; No Promo"
+      "issueType": ""
     },
     {
-      "id": "cyber-resilience-vs-cybersecurity-what-leaders-need-to-know-blog-258",
+      "id": "cyber-resilience-vs-cybersecurity-what-leaders-need-to-know-blog-256",
       "title": "Cyber Resilience vs Cybersecurity: What Leaders Need to Know | Blog",
       "url": null,
       "type": "Blog",
       "campaign": "Data Modernization & Resilience",
-      "useCase": "",
+      "useCase": "Cyber Risk Mitigation & Recovery",
       "funnelStage": "TOFU",
       "ownerTeam": "Brand",
       "audience": "Enterprise, Midmarket",
@@ -8516,7 +8450,7 @@
       "issueType": ""
     },
     {
-      "id": "powering-the-ai-factory-from-distributed-data-to-trusted-outcomes-webinar-259",
+      "id": "powering-the-ai-factory-from-distributed-data-to-trusted-outcomes-webinar-257",
       "title": "Powering the AI Factory: From Distributed Data to Trusted Outcomes | Webinar",
       "url": null,
       "type": "Webinar",
@@ -8549,7 +8483,7 @@
       "issueType": ""
     },
     {
-      "id": "hitachi-data-lakehouse-solution-page-260",
+      "id": "hitachi-data-lakehouse-solution-page-258",
       "title": "Hitachi Data Lakehouse - Solution Page",
       "url": "https://www.hitachivantara.com/en-us/solutions/ai-analytics/hitachi-data-lakehouse",
       "type": "Landing Page",
@@ -8582,7 +8516,7 @@
       "issueType": "; No Date; Duplicate"
     },
     {
-      "id": "hitachi-data-lakehouse-solution-profile-261",
+      "id": "hitachi-data-lakehouse-solution-profile-259",
       "title": "Hitachi Data Lakehouse - Solution Profile",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/solution-profile/data-lakehouse-powering-trusted-ai-analytics-at-scale.pdf",
       "type": "Solution Profile",
@@ -8615,7 +8549,7 @@
       "issueType": "; No Date; Duplicate"
     },
     {
-      "id": "hitachi-data-lakehouse-top-10-reasons-262",
+      "id": "hitachi-data-lakehouse-top-10-reasons-260",
       "title": "Hitachi Data Lakehouse - Top 10 Reasons",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/datasheet/data-lakehouse-top-10-reasons-why.pdf",
       "type": "Top 10",
@@ -8648,7 +8582,7 @@
       "issueType": "; No Date; Duplicate"
     },
     {
-      "id": "hitachi-data-lakehouse-reference-architecture-263",
+      "id": "hitachi-data-lakehouse-reference-architecture-261",
       "title": "Hitachi Data Lakehouse - Reference Architecture",
       "url": "https://docs.hitachivantara.com/v/u/en-us/mk-sl-401/latest",
       "type": "Reference Architecture",
@@ -8681,7 +8615,7 @@
       "issueType": "; No Date; Duplicate"
     },
     {
-      "id": "ai-starts-with-the-data-rethinking-high-performance-analytics-at-the-source-264",
+      "id": "ai-starts-with-the-data-rethinking-high-performance-analytics-at-the-source-262",
       "title": "AI Starts with the Data: Rethinking High-Performance Analytics at the Source",
       "url": null,
       "type": "Webinar",
@@ -8704,7 +8638,7 @@
       "usedInCampaign": "No",
       "promotionPeriod": "",
       "ownerIndividual": "Mark Geel",
-      "publishedByVendor": "",
+      "publishedByVendor": "Hitachi Vantara",
       "notes": "The underlying technology, namely HADB is planned to GA on 12/08/26 (there is risk in the schedule).I listed it as a webinar, but am really not sure if it\u2019s a webinar or not. It\u2019s a 8-10 minute recording of a SC26 theater presentation, i.e. a SME delivering the discussion with supporting slides. I listed it as global, and yes, it's global but just not Japan.",
       "actionRequired": "",
       "abstract": "This is to support the HADB GTM. Not sure if this is a webinar or not. This is a 8 to 10 minute recoding of the SC26 Theater presentation. The  HV SME will deliver the talk track with supporting slides for visuals.",
@@ -8714,7 +8648,7 @@
       "issueType": ""
     },
     {
-      "id": "bringing-storage-native-analytics-to-the-data-265",
+      "id": "bringing-storage-native-analytics-to-the-data-263",
       "title": "Bringing Storage Native Analytics To The Data",
       "url": null,
       "type": "Video",
@@ -8737,7 +8671,7 @@
       "usedInCampaign": "No",
       "promotionPeriod": "",
       "ownerIndividual": "Mark Geel",
-      "publishedByVendor": "",
+      "publishedByVendor": "Hitachi Vantara",
       "notes": "The underlying technology we are showcasing is HADB (with VSP One Object) that is planned to GA on 12/08/26 (there is risk in the schedule).This is a Data Lakehouse use case. We will be showcasing HADB at SC26 on 11/14 and plan to publish a supporting press release during the week of 11/09/26. We plan to reference HADB in the press release and use this video as supporting content.",
       "actionRequired": "",
       "abstract": "This is a promo/overview video showing the business value of bringing storage native analytics to the data on VSP One Object",
@@ -8747,7 +8681,7 @@
       "issueType": ""
     },
     {
-      "id": "modernize-data-lakehouse-environments-with-vsp-one-object-storage-266",
+      "id": "modernize-data-lakehouse-environments-with-vsp-one-object-storage-264",
       "title": "Modernize Data Lakehouse Environments With VSP One Object Storage",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/solution-profile/vsp-one-object-data-lakehouse.pdf",
       "type": "Solution Profile",
@@ -8780,7 +8714,7 @@
       "issueType": ""
     },
     {
-      "id": "brining-analytics-to-the-data-a-reference-architecture-for-enterprise-log-management-267",
+      "id": "brining-analytics-to-the-data-a-reference-architecture-for-enterprise-log-management-265",
       "title": "Brining Analytics to the data: A reference architecture for enterprise log management",
       "url": null,
       "type": "Whitepaper",
@@ -8803,7 +8737,7 @@
       "usedInCampaign": "No",
       "promotionPeriod": "",
       "ownerIndividual": "Mark Geel",
-      "publishedByVendor": "",
+      "publishedByVendor": "Hitachi Vantara",
       "notes": "This is dependent of the HADB GA date",
       "actionRequired": "",
       "abstract": "This is a enterprise log management reference architecture white paper where streaming data will be converted to open format Iceberg tables where the analytics will take place.",
