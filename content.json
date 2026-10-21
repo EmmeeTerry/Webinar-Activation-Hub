@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-10-21T07:14:39.754020+00:00",
+  "lastRefreshed": "2026-10-21T09:02:06.519289+00:00",
   "items": [
     {
       "id": "10-reasons-to-buy-build-or-borrow-ai-implementation-1",
@@ -6198,12 +6198,12 @@
       "ownerIndividual": "Nick Howell",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "",
-      "actionRequired": "",
+      "actionRequired": "Update status or revise publish date",
       "abstract": "",
       "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q3",
-      "issueType": ""
+      "issueType": "Overdue"
     },
     {
       "id": "pearkmarks-results-on-bhe-for-oracle-tbd-2h-analyst-report-189",
