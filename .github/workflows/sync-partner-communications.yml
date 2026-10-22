@@ -1,5 +1,9 @@
 name: Sync partner communication templates
 on:
+  push:
+    paths:
+      - '.github/workflows/sync-partner-communications.yml'
+      - 'sync_partner_communications.py'
   workflow_dispatch:
   schedule:
     - cron: '23 */2 * * *'
