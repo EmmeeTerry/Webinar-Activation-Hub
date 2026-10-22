@@ -33,7 +33,8 @@ def create_email(row):
     title = clean(row.get("Title"), 180)
     kind = clean(row.get("Communication Type"), 70)
     url = clean(row.get("Resource URL"), 1500)
-    owner_raw = row.get("Owner Email")\n    owner = clean(owner_raw.get("email") if isinstance(owner_raw, dict) else owner_raw, 120)
+    owner_raw = row.get("Owner Email")
+    owner = clean(owner_raw.get("email") if isinstance(owner_raw, dict) else owner_raw, 120)
     status = clean(row.get("Processing Status"), 50).lower()
     if status != "ready to publish" or not confirmed(row.get("Owner Confirmation")):
         return None
