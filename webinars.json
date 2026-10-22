@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-10-22T18:19:47.961382+00:00",
+  "lastRefreshed": "2026-10-22T20:19:31.925206+00:00",
   "webinars": [
     {
       "id": "the-economics-of-modern-storage-infrastructure-lower-risk-faster-ai-value-better-roi",
@@ -380,6 +380,132 @@
       ]
     },
     {
+      "id": "https-www-hitachivantara-com-en-us-company-events-and-webinars-commid-678141-bt-tok-lead-i",
+      "title": "https://www.hitachivantara.com/en-us/company/events-and-webinars?commid=678141&bt_tok={{lead_id}}",
+      "date": "2026-10-08",
+      "dateDisplay": "Oct 08, 2026",
+      "status": "Planned",
+      "campaign": "AI Data Foundation, Data Modernization & Resilience",
+      "useCase": "Cyber Risk Mitigation & Recovery, Data Readiness and Activation for AI, High Performance AI-Ready Infrastructure",
+      "audience": "Enterprise, Midmarket",
+      "region": "AMER",
+      "owner": "Sandra Westmoreland",
+      "quarter": "Q3",
+      "partnerReady": false,
+      "activationStatus": "",
+      "readiness": "Planning",
+      "whyUse": "Use this for enterprise, midmarket conversations around cyber risk mitigation & recovery, data readiness and activation for ai, high performance ai-ready infrastructure.",
+      "abstract": "This forum examined the infrastructure behind successful AI initiatives, including storage, SAN, networking, data access, and data movement. The discussion highlighted common infrastructure challenges that can slow AI workloads and the architectural considerations organizations should address to build a scalable, AI-ready environment.",
+      "links": {
+        "watch": null,
+        "marketingEmail": null,
+        "salesEmail": null,
+        "sdrEmail": null,
+        "paidSocial": null,
+        "social": null,
+        "attendance": null,
+        "partnerCampaign": null
+      },
+      "sourceRow": 7,
+      "relatedResources": [
+        {
+          "title": "AI Starts with Infrastructure: What Enterprise Architects Must Modernize First",
+          "type": "Webinar",
+          "campaign": "AI Data Foundation, Data Modernization & Resilience",
+          "useCase": "Cyber Risk Mitigation & Recovery, Data Readiness and Activation for AI, High Performance AI-Ready Infrastructure",
+          "url": "https://www.hitachivantara.com/en-us/company/events-and-webinars?commid=678141&bt_tok={{lead_id}}",
+          "score": 6
+        },
+        {
+          "title": "Why Hitachi Vantara | eBook",
+          "type": "eBook",
+          "campaign": "AI Data Foundation, Data Modernization & Resilience",
+          "useCase": "Cyber Risk Mitigation & Recovery, Data Platform Architectures & Economics, Data Readiness and Activation for AI, High Performance AI-Ready Infrastructure, Hybrid Cloud Platform & Operations",
+          "url": "Why Hitachi Vantara",
+          "score": 3
+        },
+        {
+          "title": "Bringing Storage Native Analytics To The Data | Video",
+          "type": "Video",
+          "campaign": "AI Data Foundation, Data Modernization & Resilience",
+          "useCase": "Data Platform Architectures & Economics, Data Readiness and Activation for AI, High Performance AI-Ready Infrastructure",
+          "url": "Bringing Storage Native Analytics To The Data",
+          "score": 3
+        },
+        {
+          "title": "Hitachi Vantara Corporate Narrative | Resource",
+          "type": "Resource",
+          "campaign": "AI Data Foundation, Data Modernization & Resilience",
+          "useCase": "Cyber Risk Mitigation & Recovery, Data Platform Architectures & Economics, Data Readiness and Activation for AI, High Performance AI-Ready Infrastructure, Hybrid Cloud Platform & Operations",
+          "url": "Hitachi Vantara Corporate Narrative",
+          "score": 3
+        }
+      ]
+    },
+    {
+      "id": "https-www-hitachivantara-com-en-us-company-events-and-webinars-commid-678156-bt-tok-lead-i",
+      "title": "https://www.hitachivantara.com/en-us/company/events-and-webinars?commid=678156&bt_tok={{lead_id}}",
+      "date": "2026-10-15",
+      "dateDisplay": "Oct 15, 2026",
+      "status": "Planned",
+      "campaign": "Data Modernization & Resilience",
+      "useCase": "Cyber Risk Mitigation & Recovery",
+      "audience": "Enterprise, Midmarket",
+      "region": "AMER",
+      "owner": "Sandra Westmoreland",
+      "quarter": "Q3",
+      "partnerReady": true,
+      "activationStatus": "",
+      "readiness": "Planning",
+      "whyUse": "Use this for enterprise, midmarket conversations around cyber risk mitigation & recovery.",
+      "abstract": "Brocade and Hitachi Vantara experts explored how modern storage and networking infrastructure can support a stronger cyber resilience strategy. The discussion addressed gaps in traditional backup and disaster recovery approaches and highlighted considerations for protecting critical workloads, improving recovery readiness, and reducing downtime and business risk.",
+      "links": {
+        "watch": null,
+        "marketingEmail": null,
+        "salesEmail": null,
+        "sdrEmail": null,
+        "paidSocial": null,
+        "social": null,
+        "attendance": null,
+        "partnerCampaign": null
+      },
+      "sourceRow": 8,
+      "relatedResources": [
+        {
+          "title": "EDUCAUSE Webinar: Resilience in the AI Era | Webinar",
+          "type": "Webinar",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Cyber Risk Mitigation & Recovery",
+          "url": "EDUCAUSE Webinar: Resilience in the AI Era",
+          "score": 6
+        },
+        {
+          "title": "451 Research: Boost Resiliency and Performance for Modern Data Infrastructures | Analyst Report",
+          "type": "Analyst Report",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Cyber Risk Mitigation & Recovery",
+          "url": "https://www.hitachivantara.com/en-us/gated-forms/451-research-market-insight-report-vsp-one-block-high-end",
+          "score": 6
+        },
+        {
+          "title": "7-Layer Defense. One Trusted Partner | Solution Profile",
+          "type": "Solution Profile",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Cyber Risk Mitigation & Recovery",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/solution-profile/7-layer-defense-one-trusted-partner.pdf",
+          "score": 6
+        },
+        {
+          "title": "Americas Midrange Road Show Blog | Blog",
+          "type": "Blog",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Cyber Risk Mitigation & Recovery",
+          "url": "Americas Midrange Road Show Blog",
+          "score": 6
+        }
+      ]
+    },
+    {
       "id": "starcio-with-isaac-ai-infrastructure-debt-capacity-resiliency-and-modernization-strategies",
       "title": "StarCIO with Isaac-AI Infrastructure Debt: Capacity, Resiliency, and Modernization Strategies",
       "date": "2026-10-23",
@@ -406,7 +532,7 @@
         "attendance": null,
         "partnerCampaign": null
       },
-      "sourceRow": 7,
+      "sourceRow": 9,
       "relatedResources": [
         {
           "title": "Esteyco Customer Story | Video",
@@ -469,7 +595,7 @@
         "attendance": null,
         "partnerCampaign": null
       },
-      "sourceRow": 8,
+      "sourceRow": 10,
       "relatedResources": [
         {
           "title": "EDUCAUSE Webinar: Resilience in the AI Era | Webinar",
@@ -532,7 +658,7 @@
         "attendance": null,
         "partnerCampaign": null
       },
-      "sourceRow": 9,
+      "sourceRow": 11,
       "relatedResources": [
         {
           "title": "EDUCAUSE Webinar: Resilience in the AI Era | Webinar",
@@ -595,7 +721,7 @@
         "attendance": null,
         "partnerCampaign": null
       },
-      "sourceRow": 10,
+      "sourceRow": 12,
       "relatedResources": []
     },
     {
@@ -625,7 +751,7 @@
         "attendance": null,
         "partnerCampaign": null
       },
-      "sourceRow": 11,
+      "sourceRow": 13,
       "relatedResources": [
         {
           "title": "2026 GigaOm Rader for High-Performance Storage Optimized for AI Workloads | Analyst Report | Analyst Report",
@@ -688,7 +814,7 @@
         "attendance": null,
         "partnerCampaign": null
       },
-      "sourceRow": 12,
+      "sourceRow": 14,
       "relatedResources": [
         {
           "title": "Ai Data Foundation Roadmap Guide | eBook",
@@ -751,7 +877,7 @@
         "attendance": null,
         "partnerCampaign": null
       },
-      "sourceRow": 13,
+      "sourceRow": 15,
       "relatedResources": [
         {
           "title": "Data Resilience: Attack-Ready. AI-Ready. | Webinar",
@@ -814,7 +940,7 @@
         "attendance": null,
         "partnerCampaign": null
       },
-      "sourceRow": 14,
+      "sourceRow": 16,
       "relatedResources": [
         {
           "title": "2026 GigaOm Rader for High-Performance Storage Optimized for AI Workloads | Analyst Report | Analyst Report",
@@ -877,7 +1003,7 @@
         "attendance": null,
         "partnerCampaign": null
       },
-      "sourceRow": 15,
+      "sourceRow": 17,
       "relatedResources": [
         {
           "title": "Data Resilience: Attack-Ready. AI-Ready. | Webinar",
@@ -940,7 +1066,7 @@
         "attendance": null,
         "partnerCampaign": null
       },
-      "sourceRow": 16,
+      "sourceRow": 18,
       "relatedResources": [
         {
           "title": "Esteyco Customer Story | Video",
@@ -1003,7 +1129,7 @@
         "attendance": null,
         "partnerCampaign": null
       },
-      "sourceRow": 17,
+      "sourceRow": 19,
       "relatedResources": [
         {
           "title": "Esteyco Customer Story | Video",
@@ -1066,7 +1192,7 @@
         "attendance": null,
         "partnerCampaign": null
       },
-      "sourceRow": 18,
+      "sourceRow": 20,
       "relatedResources": [
         {
           "title": "Esteyco Customer Story | Video",
@@ -1129,7 +1255,7 @@
         "attendance": null,
         "partnerCampaign": null
       },
-      "sourceRow": 19,
+      "sourceRow": 21,
       "relatedResources": [
         {
           "title": "2025 GigaOm Rader for High-Perfomance Storage Optimized for AI Workloads | Analyst Report",
