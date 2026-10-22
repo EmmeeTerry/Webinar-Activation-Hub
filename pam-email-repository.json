@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "updated": "2026-10-16",
-  "note": "Add approved PAM-to-partner email templates here. URLs are preserved as separate links as well as in the email body.",
+  "updated": "2026-10-22",
+  "note": "15 DPAE/HCPO/CRMR PAM emails updated with asset and campaign URLs from Oct 2 workbook (revised upload); other templates preserved.",
   "emails": [
     {
       "id": "post-event-partner-follow-up",
@@ -36,8 +36,16 @@
       "category": "Data Platform Architecture & Economics",
       "title": "DPAE · Email #1 — 451 Research Vanguard Report (May 2025): Rising data challenges drive storage modernizat",
       "subject": "A resource to help spark storage modernization conversations",
-      "body": "Hi [First Name],\n\nI wanted to share a resource that could be useful in your customer conversations. The 451 Research report, *Rising Data Challenges Drive Storage Modernization*, looks at why growing data demands are prompting organizations to rethink their storage strategies.\n\nIt’s a timely way to start a discussion with customers about where their current infrastructure may be holding them back.\n\nWe also have a Data Platform, Architecture & Economics campaign in the Partner Marketing Hub, with emails, social posts and customer-facing assets you can co-brand and use right away.\n\n**Activate the Campaign:** [Campaign Link]\n\nIf you have an account or opportunity in mind, let me know. I’d be happy to help you find the best way to use it.\n\nBest,\n[Your Name]\nPartner Account Manager | Hitachi Vantara\n\nHelpful partner links:\nPartner Portal ↗ https://partnerportal.hitachivantara.com/s/\nPartner Marketing Hub ↗ https://partnermarketing.hitachivantara.com/\nHitachi Vantara Partner Program ↗ https://www.hitachivantara.com/en-us/partners/partner-ecosystem",
+      "body": "Hi [First Name],\n\nI wanted to share a resource that could be useful in your customer conversations. The 451 Research report, *Rising Data Challenges Drive Storage Modernization*, looks at why growing data demands are prompting organizations to rethink their storage strategies.\n\nIt’s a timely way to start a discussion with customers about where their current infrastructure may be holding them back.\n\nWe also have a Data Platform, Architecture & Economics campaign in the Partner Marketing Hub, with emails, social posts and customer-facing assets you can co-brand and use right away.\n\n**Explore the featured resource:** https://stwb.co/ehealuu\n\n**Activate the Campaign:** https://www.partnermarketing.hitachivantara.com/data-modernization-resilience?utm_campaign=FY26-Q2-DMR_DPAE-ToPartner-PS_B-BS-Part-All_AT-Global-PTNR_Multiple-EMB&utm_medium=email&utm_source=PAM&utm_content=DPAE-EM01&its=global#iw2gbxq\n\nIf you have an account or opportunity in mind, let me know. I’d be happy to help you find the best way to use it.\n\nBest,\n[Your Name]\nPartner Account Manager | Hitachi Vantara\n\nHelpful partner links:\nPartner Portal ↗ https://partnerportal.hitachivantara.com/s/\nPartner Marketing Hub ↗ https://partnermarketing.hitachivantara.com/\nHitachi Vantara Partner Program ↗ https://www.hitachivantara.com/en-us/partners/partner-ecosystem",
       "links": [
+        {
+          "label": "Featured resource",
+          "url": "https://stwb.co/ehealuu"
+        },
+        {
+          "label": "Activate the campaign",
+          "url": "https://www.partnermarketing.hitachivantara.com/data-modernization-resilience?utm_campaign=FY26-Q2-DMR_DPAE-ToPartner-PS_B-BS-Part-All_AT-Global-PTNR_Multiple-EMB&utm_medium=email&utm_source=PAM&utm_content=DPAE-EM01&its=global#iw2gbxq"
+        },
         {
           "label": "Partner Portal",
           "url": "https://partnerportal.hitachivantara.com/s/"
@@ -51,7 +59,7 @@
           "url": "https://www.hitachivantara.com/en-us/partners/partner-ecosystem"
         }
       ],
-      "status": "Ready to review",
+      "status": "Updated with workbook links",
       "source": "PAM-to-Partner email workbook · DPAE!B7",
       "featuredAsset": "451 Research Vanguard Report (May 2025): Rising data challenges drive storage modernization (Campaign mapping Message #2)",
       "objective": "Campaign promotion",
@@ -66,8 +74,16 @@
       "category": "Data Platform Architecture & Economics",
       "title": "DPAE · Email #2 — CIO.com Webinar (Campaign Message #3",
       "subject": "A webinar for your infrastructure economics conversations",
-      "body": "Hi [First Name],\n\nI thought this CIO.com webinar might be useful for some of the modernization conversations you’re having: *The Economics of Modern Storage Infrastructure: Lower Risk, Faster AI Value, Better ROI*.\n\nIt covers practical ways organizations can reduce complexity, automate routine work and make infrastructure investments more responsive to business needs. It could be a good opener with customers looking for more value from their existing budgets.\n\nWe’ve also packaged this message into our Data Platform, Architecture & Economics campaign, with ready-to-customize emails, social posts and supporting assets in the Partner Marketing Hub.\n\n**Activate the Campaign:** [Campaign Link]\n\nLet me know if you’d like to talk through where this could fit into your customer outreach.\n\nBest,\n[Your Name]\nPartner Account Manager | Hitachi Vantara\n\nHelpful partner links:\nPartner Portal ↗ https://partnerportal.hitachivantara.com/s/\nPartner Marketing Hub ↗ https://partnermarketing.hitachivantara.com/\nHitachi Vantara Partner Program ↗ https://www.hitachivantara.com/en-us/partners/partner-ecosystem",
+      "body": "Hi [First Name],\n\nI thought this CIO.com webinar might be useful for some of the modernization conversations you’re having: *The Economics of Modern Storage Infrastructure: Lower Risk, Faster AI Value, Better ROI*.\n\nIt covers practical ways organizations can reduce complexity, automate routine work and make infrastructure investments more responsive to business needs. It could be a good opener with customers looking for more value from their existing budgets.\n\nWe’ve also packaged this message into our Data Platform, Architecture & Economics campaign, with ready-to-customize emails, social posts and supporting assets in the Partner Marketing Hub.\n\n**Explore the featured resource:** https://stwb.co/eheaahs\n\n**Activate the Campaign:** https://www.partnermarketing.hitachivantara.com/data-modernization-resilience?utm_campaign=FY26-Q2-DMR_DPAE-ToPartner-PS_B-BS-Part-All_AT-Global-PTNR_Multiple-EMB&utm_medium=email&utm_source=PAM&utm_content=DPAE-EM02&its=global#iw2gbxq\n\nLet me know if you’d like to talk through where this could fit into your customer outreach.\n\nBest,\n[Your Name]\nPartner Account Manager | Hitachi Vantara\n\nHelpful partner links:\nPartner Portal ↗ https://partnerportal.hitachivantara.com/s/\nPartner Marketing Hub ↗ https://partnermarketing.hitachivantara.com/\nHitachi Vantara Partner Program ↗ https://www.hitachivantara.com/en-us/partners/partner-ecosystem",
       "links": [
+        {
+          "label": "Featured resource",
+          "url": "https://stwb.co/eheaahs"
+        },
+        {
+          "label": "Activate the campaign",
+          "url": "https://www.partnermarketing.hitachivantara.com/data-modernization-resilience?utm_campaign=FY26-Q2-DMR_DPAE-ToPartner-PS_B-BS-Part-All_AT-Global-PTNR_Multiple-EMB&utm_medium=email&utm_source=PAM&utm_content=DPAE-EM02&its=global#iw2gbxq"
+        },
         {
           "label": "Partner Portal",
           "url": "https://partnerportal.hitachivantara.com/s/"
@@ -81,7 +97,7 @@
           "url": "https://www.hitachivantara.com/en-us/partners/partner-ecosystem"
         }
       ],
-      "status": "Ready to review",
+      "status": "Updated with workbook links",
       "source": "PAM-to-Partner email workbook · DPAE!C7",
       "featuredAsset": "CIO.com Webinar (Campaign Message #3",
       "objective": "Campaign promotion",
@@ -96,8 +112,16 @@
       "category": "Data Platform Architecture & Economics",
       "title": "DPAE · Email #3 — Enterprise Strategy Group white paper (December 2024): Navigating Complexity and Cost Wi",
       "subject": "A way to start the flexibility and cost conversation",
-      "body": "Hi [First Name],\n\nWanted to put a useful asset on your radar: *Navigating Complexity and Cost With Hitachi EverFlex*, an Enterprise Strategy Group white paper.\n\nIt gives you a way to discuss modernization with customers who want greater flexibility and control over infrastructure costs without creating more operational complexity.\n\nTo help you take that conversation further, our Data Platform, Architecture & Economics campaign is ready in the Partner Marketing Hub. You can co-brand the emails and social content and adapt the customer-facing materials for your audience.\n\n**Activate the Campaign:** [Campaign Link]\n\nIf you’re working with customers evaluating consumption models or modernization options, I’m happy to help you put this to use.\n\nBest,\n[Your Name]\nPartner Account Manager | Hitachi Vantara\n\nHelpful partner links:\nPartner Portal ↗ https://partnerportal.hitachivantara.com/s/\nPartner Marketing Hub ↗ https://partnermarketing.hitachivantara.com/\nHitachi Vantara Partner Program ↗ https://www.hitachivantara.com/en-us/partners/partner-ecosystem",
+      "body": "Hi [First Name],\n\nWanted to put a useful asset on your radar: *Navigating Complexity and Cost With Hitachi EverFlex*, an Enterprise Strategy Group white paper.\n\nIt gives you a way to discuss modernization with customers who want greater flexibility and control over infrastructure costs without creating more operational complexity.\n\nTo help you take that conversation further, our Data Platform, Architecture & Economics campaign is ready in the Partner Marketing Hub. You can co-brand the emails and social content and adapt the customer-facing materials for your audience.\n\n**Explore the featured resource:** https://stwb.co/ehealur\n\n**Activate the Campaign:** https://www.partnermarketing.hitachivantara.com/data-modernization-resilience?utm_campaign=FY26-Q2-DMR_DPAE-ToPartner-PS_B-BS-Part-All_AT-Global-PTNR_Multiple-EMB&utm_medium=email&utm_source=PAM&utm_content=DPAE-EM03&its=global#iw2gbxq\n\nIf you’re working with customers evaluating consumption models or modernization options, I’m happy to help you put this to use.\n\nBest,\n[Your Name]\nPartner Account Manager | Hitachi Vantara\n\nHelpful partner links:\nPartner Portal ↗ https://partnerportal.hitachivantara.com/s/\nPartner Marketing Hub ↗ https://partnermarketing.hitachivantara.com/\nHitachi Vantara Partner Program ↗ https://www.hitachivantara.com/en-us/partners/partner-ecosystem",
       "links": [
+        {
+          "label": "Featured resource",
+          "url": "https://stwb.co/ehealur"
+        },
+        {
+          "label": "Activate the campaign",
+          "url": "https://www.partnermarketing.hitachivantara.com/data-modernization-resilience?utm_campaign=FY26-Q2-DMR_DPAE-ToPartner-PS_B-BS-Part-All_AT-Global-PTNR_Multiple-EMB&utm_medium=email&utm_source=PAM&utm_content=DPAE-EM03&its=global#iw2gbxq"
+        },
         {
           "label": "Partner Portal",
           "url": "https://partnerportal.hitachivantara.com/s/"
@@ -111,7 +135,7 @@
           "url": "https://www.hitachivantara.com/en-us/partners/partner-ecosystem"
         }
       ],
-      "status": "Ready to review",
+      "status": "Updated with workbook links",
       "source": "PAM-to-Partner email workbook · DPAE!D7",
       "featuredAsset": "Enterprise Strategy Group white paper (December 2024): Navigating Complexity and Cost With Hitachi EverFlex\n(Campaign mapping Message #6)",
       "objective": "Campaign promotion",
@@ -126,8 +150,16 @@
       "category": "Data Platform Architecture & Economics",
       "title": "DPAE · Email #4 — University of Mary Hardin-Baylor (UMHB) customer story (Campaign mapping Message #4)",
       "subject": "Customer proof for your next modernization conversation",
-      "body": "Hi [First Name],\n\nI wanted to share the University of Mary Hardin-Baylor customer story as a resource for your upcoming infrastructure conversations.\n\nIt’s a real-world example you can use to make the benefits of modern infrastructure, reliable data access and simpler operations more concrete for customers.\n\nThere’s also a ready-to-use Data Platform, Architecture & Economics campaign in the Partner Marketing Hub if you want to build outreach around this story. The emails, social posts and customer assets are available to customize with your branding.\n\n**Activate the Campaign:** [Campaign Link]\n\nIf a particular account comes to mind, let’s connect on how best to position it.\n\nBest,\n[Your Name]\nPartner Account Manager | Hitachi Vantara\n\nHelpful partner links:\nPartner Portal ↗ https://partnerportal.hitachivantara.com/s/\nPartner Marketing Hub ↗ https://partnermarketing.hitachivantara.com/\nHitachi Vantara Partner Program ↗ https://www.hitachivantara.com/en-us/partners/partner-ecosystem",
+      "body": "Hi [First Name],\n\nI wanted to share the University of Mary Hardin-Baylor customer story as a resource for your upcoming infrastructure conversations.\n\nIt’s a real-world example you can use to make the benefits of modern infrastructure, reliable data access and simpler operations more concrete for customers.\n\nThere’s also a ready-to-use Data Platform, Architecture & Economics campaign in the Partner Marketing Hub if you want to build outreach around this story. The emails, social posts and customer assets are available to customize with your branding.\n\n**Explore the featured resource:** https://www.partnermarketing.hitachivantara.com/data-modernization-resilience?utm_campaign=FY26-Q2-DMR_DPAE-ToPartner-PS_B-BS-Part-All_AT-Global-PTNR_Multiple-EMB&utm_medium=email&utm_source=PAM&utm_content=DPAE-EM04&its=global#iw2gbxq\n\n**Activate the Campaign:** https://www.partnermarketing.hitachivantara.com/data-modernization-resilience?utm_campaign=FY26-Q2-DMR_DPAE-ToPartner-PS_B-BS-Part-All_AT-Global-PTNR_Multiple-EMB&utm_medium=email&utm_source=PAM&utm_content=DPAE-EM04&its=global#iw2gbxq\n\nIf a particular account comes to mind, let’s connect on how best to position it.\n\nBest,\n[Your Name]\nPartner Account Manager | Hitachi Vantara\n\nHelpful partner links:\nPartner Portal ↗ https://partnerportal.hitachivantara.com/s/\nPartner Marketing Hub ↗ https://partnermarketing.hitachivantara.com/\nHitachi Vantara Partner Program ↗ https://www.hitachivantara.com/en-us/partners/partner-ecosystem",
       "links": [
+        {
+          "label": "Featured resource",
+          "url": "https://www.partnermarketing.hitachivantara.com/data-modernization-resilience?utm_campaign=FY26-Q2-DMR_DPAE-ToPartner-PS_B-BS-Part-All_AT-Global-PTNR_Multiple-EMB&utm_medium=email&utm_source=PAM&utm_content=DPAE-EM04&its=global#iw2gbxq"
+        },
+        {
+          "label": "Activate the campaign",
+          "url": "https://www.partnermarketing.hitachivantara.com/data-modernization-resilience?utm_campaign=FY26-Q2-DMR_DPAE-ToPartner-PS_B-BS-Part-All_AT-Global-PTNR_Multiple-EMB&utm_medium=email&utm_source=PAM&utm_content=DPAE-EM04&its=global#iw2gbxq"
+        },
         {
           "label": "Partner Portal",
           "url": "https://partnerportal.hitachivantara.com/s/"
@@ -141,7 +173,7 @@
           "url": "https://www.hitachivantara.com/en-us/partners/partner-ecosystem"
         }
       ],
-      "status": "Ready to review",
+      "status": "Updated with workbook links",
       "source": "PAM-to-Partner email workbook · DPAE!E7",
       "featuredAsset": "University of Mary Hardin-Baylor (UMHB) customer story\n(Campaign mapping Message #4)",
       "objective": "Campaign promotion",
@@ -156,8 +188,16 @@
       "category": "Data Platform Architecture & Economics",
       "title": "DPAE · Email #5 — Eight Nines of Uptime: How VSP One Block Redefines Reliability for Mission-Critical Ente",
       "subject": "A strong availability message for critical workloads",
-      "body": "Hi [First Name],\n\nFor customers asking how to modernize without compromising uptime, I wanted to flag the white paper *Eight Nines of Uptime: How VSP One Block Redefines Reliability for Mission-Critical Enterprises*.\n\nIt provides a useful proof point for discussions about availability, resilience and keeping critical workloads running through infrastructure change.\n\nWe’ve made it easy to extend that message with the Data Platform, Architecture & Economics campaign in the Partner Marketing Hub. You’ll find co-brandable emails, social posts and customer-facing materials ready for your outreach.\n\n**Activate the Campaign:** [Campaign Link]\n\nLet me know if you’d like help matching this message to any opportunities you’re working on.\n\nBest,\n[Your Name]\nPartner Account Manager | Hitachi Vantara\n\nHelpful partner links:\nPartner Portal ↗ https://partnerportal.hitachivantara.com/s/\nPartner Marketing Hub ↗ https://partnermarketing.hitachivantara.com/\nHitachi Vantara Partner Program ↗ https://www.hitachivantara.com/en-us/partners/partner-ecosystem",
+      "body": "Hi [First Name],\n\nFor customers asking how to modernize without compromising uptime, I wanted to flag the white paper *Eight Nines of Uptime: How VSP One Block Redefines Reliability for Mission-Critical Enterprises*.\n\nIt provides a useful proof point for discussions about availability, resilience and keeping critical workloads running through infrastructure change.\n\nWe’ve made it easy to extend that message with the Data Platform, Architecture & Economics campaign in the Partner Marketing Hub. You’ll find co-brandable emails, social posts and customer-facing materials ready for your outreach.\n\n**Explore the featured resource:** https://stwb.co/ehealsz\n\n**Activate the Campaign:** https://www.partnermarketing.hitachivantara.com/data-modernization-resilience?utm_campaign=FY26-Q2-DMR_DPAE-ToPartner-PS_B-BS-Part-All_AT-Global-PTNR_Multiple-EMB&utm_medium=email&utm_source=PAM&utm_content=DPAE-EM05&its=global#iw2gbxq\n\nLet me know if you’d like help matching this message to any opportunities you’re working on.\n\nBest,\n[Your Name]\nPartner Account Manager | Hitachi Vantara\n\nHelpful partner links:\nPartner Portal ↗ https://partnerportal.hitachivantara.com/s/\nPartner Marketing Hub ↗ https://partnermarketing.hitachivantara.com/\nHitachi Vantara Partner Program ↗ https://www.hitachivantara.com/en-us/partners/partner-ecosystem",
       "links": [
+        {
+          "label": "Featured resource",
+          "url": "https://stwb.co/ehealsz"
+        },
+        {
+          "label": "Activate the campaign",
+          "url": "https://www.partnermarketing.hitachivantara.com/data-modernization-resilience?utm_campaign=FY26-Q2-DMR_DPAE-ToPartner-PS_B-BS-Part-All_AT-Global-PTNR_Multiple-EMB&utm_medium=email&utm_source=PAM&utm_content=DPAE-EM05&its=global#iw2gbxq"
+        },
         {
           "label": "Partner Portal",
           "url": "https://partnerportal.hitachivantara.com/s/"
@@ -171,7 +211,7 @@
           "url": "https://www.hitachivantara.com/en-us/partners/partner-ecosystem"
         }
       ],
-      "status": "Ready to review",
+      "status": "Updated with workbook links",
       "source": "PAM-to-Partner email workbook · DPAE!F7",
       "featuredAsset": "Eight Nines of Uptime: How VSP One Block Redefines Reliability for Mission-Critical Enterprises (white paper)\n(Campaign mapping Message #5)",
       "objective": "Campaign promotion",
@@ -186,8 +226,16 @@
       "category": "Hybrid Cloud Platform Optimization",
       "title": "HCPO · Email #1 — MIT Technology Review Insights: why data platforms are critical to hybrid cloud success ",
       "subject": "A useful report for hybrid cloud customer discussions",
-      "body": "Hi [First Name],\n\nI wanted to share a new conversation starter for customers dealing with data and applications spread across on-premises, cloud and edge environments.\n\nThe MIT Technology Review Insights report on why data platforms are critical to hybrid cloud success explores how a more unified approach can help reduce complexity and improve efficiency while supporting AI initiatives.\n\nWe also have a Hybrid Cloud Platform & Operations campaign available in the Partner Marketing Hub, with emails, social posts and customer-facing content you can co-brand for your accounts.\n\n**Activate the Campaign:** [Campaign Link]\n\nIf hybrid cloud simplification is a priority for any of your customers, I’d be glad to discuss how we can use these resources together.\n\nBest,\n[Your Name]\nPartner Account Manager | Hitachi Vantara\n\nHelpful partner links:\nPartner Portal ↗ https://partnerportal.hitachivantara.com/s/\nPartner Marketing Hub ↗ https://partnermarketing.hitachivantara.com/\nHitachi Vantara Partner Program ↗ https://www.hitachivantara.com/en-us/partners/partner-ecosystem",
+      "body": "Hi [First Name],\n\nI wanted to share a new conversation starter for customers dealing with data and applications spread across on-premises, cloud and edge environments.\n\nThe MIT Technology Review Insights report on why data platforms are critical to hybrid cloud success explores how a more unified approach can help reduce complexity and improve efficiency while supporting AI initiatives.\n\nWe also have a Hybrid Cloud Platform & Operations campaign available in the Partner Marketing Hub, with emails, social posts and customer-facing content you can co-brand for your accounts.\n\n**Explore the featured resource:** https://stwb.co/ehlrarh\n\n**Activate the Campaign:** https://www.partnermarketing.hitachivantara.com/data-modernization-resilience?utm_campaign=FY26-Q2-DMR_DPAE-ToPartner-PS_B-BS-Part-All_AT-Global-PTNR_Multiple-EMB&utm_medium=email&utm_source=PAM&utm_content=HCPO-EM01&its=global#itz8xf\n\nIf hybrid cloud simplification is a priority for any of your customers, I’d be glad to discuss how we can use these resources together.\n\nBest,\n[Your Name]\nPartner Account Manager | Hitachi Vantara\n\nHelpful partner links:\nPartner Portal ↗ https://partnerportal.hitachivantara.com/s/\nPartner Marketing Hub ↗ https://partnermarketing.hitachivantara.com/\nHitachi Vantara Partner Program ↗ https://www.hitachivantara.com/en-us/partners/partner-ecosystem",
       "links": [
+        {
+          "label": "Featured resource",
+          "url": "https://stwb.co/ehlrarh"
+        },
+        {
+          "label": "Activate the campaign",
+          "url": "https://www.partnermarketing.hitachivantara.com/data-modernization-resilience?utm_campaign=FY26-Q2-DMR_DPAE-ToPartner-PS_B-BS-Part-All_AT-Global-PTNR_Multiple-EMB&utm_medium=email&utm_source=PAM&utm_content=HCPO-EM01&its=global#itz8xf"
+        },
         {
           "label": "Partner Portal",
           "url": "https://partnerportal.hitachivantara.com/s/"
@@ -201,7 +249,7 @@
           "url": "https://www.hitachivantara.com/en-us/partners/partner-ecosystem"
         }
       ],
-      "status": "Ready to review",
+      "status": "Updated with workbook links",
       "source": "PAM-to-Partner email workbook · HCPO!B7",
       "featuredAsset": "MIT Technology Review Insights: why data platforms are critical to hybrid cloud success\n(Campaign mapping Message #1)",
       "objective": "Campaign promotion",
@@ -216,8 +264,16 @@
       "category": "Hybrid Cloud Platform Optimization",
       "title": "HCPO · Email #2 — Omdia Webinar (Campaign mapping Message #2)",
       "subject": "A timely webinar on data infrastructure for AI",
-      "body": "Hi [First Name],\n\nThought you might find this Omdia webinar useful for your customer discussions: *What Modern Data Infrastructure Looks Like in the AI Era*.\n\nIt addresses challenges customers are facing as they prepare for AI workloads, including fragmented data environments, operational complexity and the need for more automation.\n\nTo help you build on those conversations, the Hybrid Cloud Platform & Operations campaign is available in the Partner Marketing Hub, with co-brandable outreach and supporting assets ready to use.\n\n**Activate the Campaign:** [Campaign Link]\n\nIf you have customers looking at their AI readiness, I’d be happy to help you identify a good next step.\n\nBest,\n[Your Name]\nPartner Account Manager | Hitachi Vantara\n\nHelpful partner links:\nPartner Portal ↗ https://partnerportal.hitachivantara.com/s/\nPartner Marketing Hub ↗ https://partnermarketing.hitachivantara.com/\nHitachi Vantara Partner Program ↗ https://www.hitachivantara.com/en-us/partners/partner-ecosystem",
+      "body": "Hi [First Name],\n\nThought you might find this Omdia webinar useful for your customer discussions: *What Modern Data Infrastructure Looks Like in the AI Era*.\n\nIt addresses challenges customers are facing as they prepare for AI workloads, including fragmented data environments, operational complexity and the need for more automation.\n\nTo help you build on those conversations, the Hybrid Cloud Platform & Operations campaign is available in the Partner Marketing Hub, with co-brandable outreach and supporting assets ready to use.\n\n**Explore the featured resource:** https://stwb.co/eheaahr\n\n**Activate the Campaign:** https://www.partnermarketing.hitachivantara.com/data-modernization-resilience?utm_campaign=FY26-Q2-DMR_DPAE-ToPartner-PS_B-BS-Part-All_AT-Global-PTNR_Multiple-EMB&utm_medium=email&utm_source=PAM&utm_content=HCPO-EM02&its=global#itz8xf\n\nIf you have customers looking at their AI readiness, I’d be happy to help you identify a good next step.\n\nBest,\n[Your Name]\nPartner Account Manager | Hitachi Vantara\n\nHelpful partner links:\nPartner Portal ↗ https://partnerportal.hitachivantara.com/s/\nPartner Marketing Hub ↗ https://partnermarketing.hitachivantara.com/\nHitachi Vantara Partner Program ↗ https://www.hitachivantara.com/en-us/partners/partner-ecosystem",
       "links": [
+        {
+          "label": "Featured resource",
+          "url": "https://stwb.co/eheaahr"
+        },
+        {
+          "label": "Activate the campaign",
+          "url": "https://www.partnermarketing.hitachivantara.com/data-modernization-resilience?utm_campaign=FY26-Q2-DMR_DPAE-ToPartner-PS_B-BS-Part-All_AT-Global-PTNR_Multiple-EMB&utm_medium=email&utm_source=PAM&utm_content=HCPO-EM02&its=global#itz8xf"
+        },
         {
           "label": "Partner Portal",
           "url": "https://partnerportal.hitachivantara.com/s/"
@@ -231,7 +287,7 @@
           "url": "https://www.hitachivantara.com/en-us/partners/partner-ecosystem"
         }
       ],
-      "status": "Ready to review",
+      "status": "Updated with workbook links",
       "source": "PAM-to-Partner email workbook · HCPO!C7",
       "featuredAsset": "Omdia Webinar\n(Campaign mapping Message #2)",
       "objective": "Campaign promotion",
@@ -246,8 +302,16 @@
       "category": "Hybrid Cloud Platform Optimization",
       "title": "HCPO · Email #3 — Solve the Six eBook: the six biggest data storage challenges (Campaign mapping Message #",
       "subject": "Six storage challenges worth discussing with customers",
-      "body": "Hi [First Name],\n\nI wanted to flag an asset that could help you open conversations with customers who are feeling the pressure of data growth and new workload demands.\n\n*Solve the Six Biggest Data Storage Challenges* breaks down common storage issues—from management complexity to availability and resource efficiency—in a format that’s easy to share.\n\nThe Hybrid Cloud Platform & Operations campaign is also ready in the Partner Marketing Hub, so you can turn these topics into partner-branded email and social outreach without starting from scratch.\n\n**Activate the Campaign:** [Campaign Link]\n\nLet me know if you want to compare notes on which customer segments or accounts would be the best fit.\n\nBest,\n[Your Name]\nPartner Account Manager | Hitachi Vantara\n\nHelpful partner links:\nPartner Portal ↗ https://partnerportal.hitachivantara.com/s/\nPartner Marketing Hub ↗ https://partnermarketing.hitachivantara.com/\nHitachi Vantara Partner Program ↗ https://www.hitachivantara.com/en-us/partners/partner-ecosystem",
+      "body": "Hi [First Name],\n\nI wanted to flag an asset that could help you open conversations with customers who are feeling the pressure of data growth and new workload demands.\n\n*Solve the Six Biggest Data Storage Challenges* breaks down common storage issues—from management complexity to availability and resource efficiency—in a format that’s easy to share.\n\nThe Hybrid Cloud Platform & Operations campaign is also ready in the Partner Marketing Hub, so you can turn these topics into partner-branded email and social outreach without starting from scratch.\n\n**Explore the featured resource:** https://stwb.co/ehealss\n\n**Activate the Campaign:** https://www.partnermarketing.hitachivantara.com/data-modernization-resilience?utm_campaign=FY26-Q2-DMR_DPAE-ToPartner-PS_B-BS-Part-All_AT-Global-PTNR_Multiple-EMB&utm_medium=email&utm_source=PAM&utm_content=HCPO-EM03&its=global#itz8xf\n\nLet me know if you want to compare notes on which customer segments or accounts would be the best fit.\n\nBest,\n[Your Name]\nPartner Account Manager | Hitachi Vantara\n\nHelpful partner links:\nPartner Portal ↗ https://partnerportal.hitachivantara.com/s/\nPartner Marketing Hub ↗ https://partnermarketing.hitachivantara.com/\nHitachi Vantara Partner Program ↗ https://www.hitachivantara.com/en-us/partners/partner-ecosystem",
       "links": [
+        {
+          "label": "Featured resource",
+          "url": "https://stwb.co/ehealss"
+        },
+        {
+          "label": "Activate the campaign",
+          "url": "https://www.partnermarketing.hitachivantara.com/data-modernization-resilience?utm_campaign=FY26-Q2-DMR_DPAE-ToPartner-PS_B-BS-Part-All_AT-Global-PTNR_Multiple-EMB&utm_medium=email&utm_source=PAM&utm_content=HCPO-EM03&its=global#itz8xf"
+        },
         {
           "label": "Partner Portal",
           "url": "https://partnerportal.hitachivantara.com/s/"
@@ -261,7 +325,7 @@
           "url": "https://www.hitachivantara.com/en-us/partners/partner-ecosystem"
         }
       ],
-      "status": "Ready to review",
+      "status": "Updated with workbook links",
       "source": "PAM-to-Partner email workbook · HCPO!D7",
       "featuredAsset": "Solve the Six eBook: the six biggest data storage challenges\n(Campaign mapping Message #3)",
       "objective": "Campaign promotion",
@@ -276,8 +340,16 @@
       "category": "Hybrid Cloud Platform Optimization",
       "title": "HCPO · Email #4 — Hitachi EverFlex customer stories eBook (six organizations) (Campaign mapping Message #4",
       "subject": "Real customer stories for your hybrid cloud outreach",
-      "body": "Hi [First Name],\n\nI thought the Hitachi EverFlex customer stories eBook would be helpful for conversations where customers want examples of how other organizations are modernizing.\n\nThe stories illustrate how organizations are approaching flexible consumption, operational simplification and changing infrastructure needs. They’re useful proof points to complement your own customer relationships.\n\nWe’ve also got a Hybrid Cloud Platform & Operations campaign in the Partner Marketing Hub with ready-to-co-brand emails, social content and customer materials you can use to follow up.\n\n**Activate the Campaign:** [Campaign Link]\n\nIf you see a fit with any active opportunities, let me know and we can plan outreach together.\n\nBest,\n[Your Name]\nPartner Account Manager | Hitachi Vantara\n\nHelpful partner links:\nPartner Portal ↗ https://partnerportal.hitachivantara.com/s/\nPartner Marketing Hub ↗ https://partnermarketing.hitachivantara.com/\nHitachi Vantara Partner Program ↗ https://www.hitachivantara.com/en-us/partners/partner-ecosystem",
+      "body": "Hi [First Name],\n\nI thought the Hitachi EverFlex customer stories eBook would be helpful for conversations where customers want examples of how other organizations are modernizing.\n\nThe stories illustrate how organizations are approaching flexible consumption, operational simplification and changing infrastructure needs. They’re useful proof points to complement your own customer relationships.\n\nWe’ve also got a Hybrid Cloud Platform & Operations campaign in the Partner Marketing Hub with ready-to-co-brand emails, social content and customer materials you can use to follow up.\n\n**Explore the featured resource:** https://www.partnermarketing.hitachivantara.com/data-modernization-resilience?utm_campaign=FY26-Q2-DMR_DPAE-ToPartner-PS_B-BS-Part-All_AT-Global-PTNR_Multiple-EMB&utm_medium=email&utm_source=PAM&utm_content=HCPO-EM04&its=global#itz8xf\n\n**Activate the Campaign:** https://www.partnermarketing.hitachivantara.com/data-modernization-resilience?utm_campaign=FY26-Q2-DMR_DPAE-ToPartner-PS_B-BS-Part-All_AT-Global-PTNR_Multiple-EMB&utm_medium=email&utm_source=PAM&utm_content=HCPO-EM04&its=global#itz8xf\n\nIf you see a fit with any active opportunities, let me know and we can plan outreach together.\n\nBest,\n[Your Name]\nPartner Account Manager | Hitachi Vantara\n\nHelpful partner links:\nPartner Portal ↗ https://partnerportal.hitachivantara.com/s/\nPartner Marketing Hub ↗ https://partnermarketing.hitachivantara.com/\nHitachi Vantara Partner Program ↗ https://www.hitachivantara.com/en-us/partners/partner-ecosystem",
       "links": [
+        {
+          "label": "Featured resource",
+          "url": "https://www.partnermarketing.hitachivantara.com/data-modernization-resilience?utm_campaign=FY26-Q2-DMR_DPAE-ToPartner-PS_B-BS-Part-All_AT-Global-PTNR_Multiple-EMB&utm_medium=email&utm_source=PAM&utm_content=HCPO-EM04&its=global#itz8xf"
+        },
+        {
+          "label": "Activate the campaign",
+          "url": "https://www.partnermarketing.hitachivantara.com/data-modernization-resilience?utm_campaign=FY26-Q2-DMR_DPAE-ToPartner-PS_B-BS-Part-All_AT-Global-PTNR_Multiple-EMB&utm_medium=email&utm_source=PAM&utm_content=HCPO-EM04&its=global#itz8xf"
+        },
         {
           "label": "Partner Portal",
           "url": "https://partnerportal.hitachivantara.com/s/"
@@ -291,7 +363,7 @@
           "url": "https://www.hitachivantara.com/en-us/partners/partner-ecosystem"
         }
       ],
-      "status": "Ready to review",
+      "status": "Updated with workbook links",
       "source": "PAM-to-Partner email workbook · HCPO!E7",
       "featuredAsset": "Hitachi EverFlex customer stories eBook (six organizations)\n(Campaign mapping Message #4)",
       "objective": "Campaign promotion",
@@ -306,8 +378,16 @@
       "category": "Hybrid Cloud Platform Optimization",
       "title": "HCPO · Email #5 — Hybrid Cloud Buyer’s Guide (Campaign mapping Message #5, confirm which guide)",
       "subject": "A guide for customers evaluating hybrid cloud",
-      "body": "Hi [First Name],\n\nAs your customers weigh hybrid cloud decisions, I wanted to share our Hybrid Cloud Buyer’s Guide as a potential resource.\n\nIt can help frame conversations about the tradeoffs that matter—cost, performance, availability, security and sustainability—so customers can evaluate their options more confidently.\n\nThere’s also a ready-to-customize Hybrid Cloud Platform & Operations campaign in the Partner Marketing Hub if you’d like to turn this topic into a broader outreach effort.\n\n**Activate the Campaign:** [Campaign Link]\n\nIf you’re working through a hybrid cloud evaluation with a customer, I’d be glad to help tailor the message.\n\nBest,\n[Your Name]\nPartner Account Manager | Hitachi Vantara\n\nHelpful partner links:\nPartner Portal ↗ https://partnerportal.hitachivantara.com/s/\nPartner Marketing Hub ↗ https://partnermarketing.hitachivantara.com/\nHitachi Vantara Partner Program ↗ https://www.hitachivantara.com/en-us/partners/partner-ecosystem",
+      "body": "Hi [First Name],\n\nAs your customers weigh hybrid cloud decisions, I wanted to share our Hybrid Cloud Buyer’s Guide as a potential resource.\n\nIt can help frame conversations about the tradeoffs that matter—cost, performance, availability, security and sustainability—so customers can evaluate their options more confidently.\n\nThere’s also a ready-to-customize Hybrid Cloud Platform & Operations campaign in the Partner Marketing Hub if you’d like to turn this topic into a broader outreach effort.\n\n**Explore the featured resource:** https://stwb.co/ehealsr\n\n**Activate the Campaign:** https://www.partnermarketing.hitachivantara.com/data-modernization-resilience?utm_campaign=FY26-Q2-DMR_DPAE-ToPartner-PS_B-BS-Part-All_AT-Global-PTNR_Multiple-EMB&utm_medium=email&utm_source=PAM&utm_content=HCPO-EM05&its=global#itz8xf\n\nIf you’re working through a hybrid cloud evaluation with a customer, I’d be glad to help tailor the message.\n\nBest,\n[Your Name]\nPartner Account Manager | Hitachi Vantara\n\nHelpful partner links:\nPartner Portal ↗ https://partnerportal.hitachivantara.com/s/\nPartner Marketing Hub ↗ https://partnermarketing.hitachivantara.com/\nHitachi Vantara Partner Program ↗ https://www.hitachivantara.com/en-us/partners/partner-ecosystem",
       "links": [
+        {
+          "label": "Featured resource",
+          "url": "https://stwb.co/ehealsr"
+        },
+        {
+          "label": "Activate the campaign",
+          "url": "https://www.partnermarketing.hitachivantara.com/data-modernization-resilience?utm_campaign=FY26-Q2-DMR_DPAE-ToPartner-PS_B-BS-Part-All_AT-Global-PTNR_Multiple-EMB&utm_medium=email&utm_source=PAM&utm_content=HCPO-EM05&its=global#itz8xf"
+        },
         {
           "label": "Partner Portal",
           "url": "https://partnerportal.hitachivantara.com/s/"
@@ -321,7 +401,7 @@
           "url": "https://www.hitachivantara.com/en-us/partners/partner-ecosystem"
         }
       ],
-      "status": "Ready to review",
+      "status": "Updated with workbook links",
       "source": "PAM-to-Partner email workbook · HCPO!F7",
       "featuredAsset": "Hybrid Cloud Buyer’s Guide\n(Campaign mapping Message #5, confirm which guide)",
       "objective": "Campaign promotion",
@@ -336,8 +416,16 @@
       "category": "Cyber Resilience & Modern Recovery",
       "title": "CRMR · Email #1 — MIT Technology Review Insights: Adapting to new threats with proactive risk management (",
       "subject": "A conversation starter on proactive cyber resilience",
-      "body": "Hi [First Name],\n\nI wanted to share an MIT Technology Review Insights resource, *Adapting to New Threats With Proactive Risk Management*.\n\nIt’s a useful starting point for customers looking to move beyond reactive security and recovery planning toward a more proactive approach to cyber resilience.\n\nWe’ve also put together a Cyber Resilience & Modernization campaign in the Partner Marketing Hub with emails, social posts and customer-facing content that you can co-brand and use in outreach.\n\n**Activate the Campaign:** [Campaign Link]\n\nIf resilience is coming up in your customer conversations, let me know. We can talk through where this content might help.\n\nBest,\n[Your Name]\nPartner Account Manager | Hitachi Vantara\n\nHelpful partner links:\nPartner Portal ↗ https://partnerportal.hitachivantara.com/s/\nPartner Marketing Hub ↗ https://partnermarketing.hitachivantara.com/\nHitachi Vantara Partner Program ↗ https://www.hitachivantara.com/en-us/partners/partner-ecosystem",
+      "body": "Hi [First Name],\n\nI wanted to share an MIT Technology Review Insights resource, *Adapting to New Threats With Proactive Risk Management*.\n\nIt’s a useful starting point for customers looking to move beyond reactive security and recovery planning toward a more proactive approach to cyber resilience.\n\nWe’ve also put together a Cyber Resilience & Modernization campaign in the Partner Marketing Hub with emails, social posts and customer-facing content that you can co-brand and use in outreach.\n\n**Explore the featured resource:** https://stwb.co/ehealsp\n\n**Activate the Campaign:** https://www.partnermarketing.hitachivantara.com/data-modernization-resilience?utm_campaign=FY26-Q2-DMR_DPAE-ToPartner-PS_B-BS-Part-All_AT-Global-PTNR_Multiple-EMB&utm_medium=email&utm_source=PAM&utm_content=CRMR-EM01&its=global#iws2ym\n\nIf resilience is coming up in your customer conversations, let me know. We can talk through where this content might help.\n\nBest,\n[Your Name]\nPartner Account Manager | Hitachi Vantara\n\nHelpful partner links:\nPartner Portal ↗ https://partnerportal.hitachivantara.com/s/\nPartner Marketing Hub ↗ https://partnermarketing.hitachivantara.com/\nHitachi Vantara Partner Program ↗ https://www.hitachivantara.com/en-us/partners/partner-ecosystem",
       "links": [
+        {
+          "label": "Featured resource",
+          "url": "https://stwb.co/ehealsp"
+        },
+        {
+          "label": "Activate the campaign",
+          "url": "https://www.partnermarketing.hitachivantara.com/data-modernization-resilience?utm_campaign=FY26-Q2-DMR_DPAE-ToPartner-PS_B-BS-Part-All_AT-Global-PTNR_Multiple-EMB&utm_medium=email&utm_source=PAM&utm_content=CRMR-EM01&its=global#iws2ym"
+        },
         {
           "label": "Partner Portal",
           "url": "https://partnerportal.hitachivantara.com/s/"
@@ -351,7 +439,7 @@
           "url": "https://www.hitachivantara.com/en-us/partners/partner-ecosystem"
         }
       ],
-      "status": "Ready to review",
+      "status": "Updated with workbook links",
       "source": "PAM-to-Partner email workbook · CRMR!B7",
       "featuredAsset": "MIT Technology Review Insights: Adapting to new threats with proactive risk management\n(Campaign mapping Message #1)",
       "objective": "Campaign promotion",
@@ -366,8 +454,16 @@
       "category": "Cyber Resilience & Modern Recovery",
       "title": "CRMR · Email #2 — Cyber Resilience For Dummies (Campaign mapping Message #2)",
       "subject": "A practical way to start cyber resilience conversations",
-      "body": "Hi [First Name],\n\nI thought *Cyber Resilience For Dummies* could be a helpful asset for your customer outreach.\n\nIt gives customers a straightforward way to think about protecting critical data, responding to threats and preparing for recovery—not just backing up information.\n\nIf you want to build a conversation around it, our Cyber Resilience & Modernization campaign is available in the Partner Marketing Hub, complete with co-brandable email and social assets.\n\n**Activate the Campaign:** [Campaign Link]\n\nHappy to help you identify the best accounts or customer groups for this message.\n\nBest,\n[Your Name]\nPartner Account Manager | Hitachi Vantara\n\nHelpful partner links:\nPartner Portal ↗ https://partnerportal.hitachivantara.com/s/\nPartner Marketing Hub ↗ https://partnermarketing.hitachivantara.com/\nHitachi Vantara Partner Program ↗ https://www.hitachivantara.com/en-us/partners/partner-ecosystem",
+      "body": "Hi [First Name],\n\nI thought *Cyber Resilience For Dummies* could be a helpful asset for your customer outreach.\n\nIt gives customers a straightforward way to think about protecting critical data, responding to threats and preparing for recovery—not just backing up information.\n\nIf you want to build a conversation around it, our Cyber Resilience & Modernization campaign is available in the Partner Marketing Hub, complete with co-brandable email and social assets.\n\n**Explore the featured resource:** https://www.partnermarketing.hitachivantara.com/data-modernization-resilience?utm_campaign=FY26-Q2-DMR_DPAE-ToPartner-PS_B-BS-Part-All_AT-Global-PTNR_Multiple-EMB&utm_medium=email&utm_source=PAM&utm_content=CRMR-EM02&its=global#iws2ym\n\n**Activate the Campaign:** https://www.partnermarketing.hitachivantara.com/data-modernization-resilience?utm_campaign=FY26-Q2-DMR_DPAE-ToPartner-PS_B-BS-Part-All_AT-Global-PTNR_Multiple-EMB&utm_medium=email&utm_source=PAM&utm_content=CRMR-EM02&its=global#iws2ym\n\nHappy to help you identify the best accounts or customer groups for this message.\n\nBest,\n[Your Name]\nPartner Account Manager | Hitachi Vantara\n\nHelpful partner links:\nPartner Portal ↗ https://partnerportal.hitachivantara.com/s/\nPartner Marketing Hub ↗ https://partnermarketing.hitachivantara.com/\nHitachi Vantara Partner Program ↗ https://www.hitachivantara.com/en-us/partners/partner-ecosystem",
       "links": [
+        {
+          "label": "Featured resource",
+          "url": "https://www.partnermarketing.hitachivantara.com/data-modernization-resilience?utm_campaign=FY26-Q2-DMR_DPAE-ToPartner-PS_B-BS-Part-All_AT-Global-PTNR_Multiple-EMB&utm_medium=email&utm_source=PAM&utm_content=CRMR-EM02&its=global#iws2ym"
+        },
+        {
+          "label": "Activate the campaign",
+          "url": "https://www.partnermarketing.hitachivantara.com/data-modernization-resilience?utm_campaign=FY26-Q2-DMR_DPAE-ToPartner-PS_B-BS-Part-All_AT-Global-PTNR_Multiple-EMB&utm_medium=email&utm_source=PAM&utm_content=CRMR-EM02&its=global#iws2ym"
+        },
         {
           "label": "Partner Portal",
           "url": "https://partnerportal.hitachivantara.com/s/"
@@ -381,7 +477,7 @@
           "url": "https://www.hitachivantara.com/en-us/partners/partner-ecosystem"
         }
       ],
-      "status": "Ready to review",
+      "status": "Updated with workbook links",
       "source": "PAM-to-Partner email workbook · CRMR!C7",
       "featuredAsset": "Cyber Resilience For Dummies\n(Campaign mapping Message #2)",
       "objective": "Campaign promotion",
@@ -396,8 +492,16 @@
       "category": "Cyber Resilience & Modern Recovery",
       "title": "CRMR · Email #3 — Protect Smarter, Recover Faster: Your Guide to Data Protection as a Service (eBook) (Cam",
       "subject": "A resource on simpler data protection and faster recovery",
-      "body": "Hi [First Name],\n\nFor customers managing data protection across increasingly complex environments, I wanted to flag the eBook *Protect Smarter, Recover Faster: Your Guide to Data Protection as a Service*.\n\nIt’s a useful way to begin discussions about simplifying protection while building confidence in recovery readiness.\n\nWe’ve paired this topic with ready-to-use outreach in the Cyber Resilience & Modernization campaign in the Partner Marketing Hub. You can customize the email, social and customer-facing materials to support your own pipeline priorities.\n\n**Activate the Campaign:** [Campaign Link]\n\nLet me know if you’d like to build an account-specific plan around this topic.\n\nBest,\n[Your Name]\nPartner Account Manager | Hitachi Vantara\n\nHelpful partner links:\nPartner Portal ↗ https://partnerportal.hitachivantara.com/s/\nPartner Marketing Hub ↗ https://partnermarketing.hitachivantara.com/\nHitachi Vantara Partner Program ↗ https://www.hitachivantara.com/en-us/partners/partner-ecosystem",
+      "body": "Hi [First Name],\n\nFor customers managing data protection across increasingly complex environments, I wanted to flag the eBook *Protect Smarter, Recover Faster: Your Guide to Data Protection as a Service*.\n\nIt’s a useful way to begin discussions about simplifying protection while building confidence in recovery readiness.\n\nWe’ve paired this topic with ready-to-use outreach in the Cyber Resilience & Modernization campaign in the Partner Marketing Hub. You can customize the email, social and customer-facing materials to support your own pipeline priorities.\n\n**Explore the featured resource:** https://stwb.co/ehealse\n\n**Activate the Campaign:** https://www.partnermarketing.hitachivantara.com/data-modernization-resilience?utm_campaign=FY26-Q2-DMR_DPAE-ToPartner-PS_B-BS-Part-All_AT-Global-PTNR_Multiple-EMB&utm_medium=email&utm_source=PAM&utm_content=CRMR-EM03&its=global#iws2ym\n\nLet me know if you’d like to build an account-specific plan around this topic.\n\nBest,\n[Your Name]\nPartner Account Manager | Hitachi Vantara\n\nHelpful partner links:\nPartner Portal ↗ https://partnerportal.hitachivantara.com/s/\nPartner Marketing Hub ↗ https://partnermarketing.hitachivantara.com/\nHitachi Vantara Partner Program ↗ https://www.hitachivantara.com/en-us/partners/partner-ecosystem",
       "links": [
+        {
+          "label": "Featured resource",
+          "url": "https://stwb.co/ehealse"
+        },
+        {
+          "label": "Activate the campaign",
+          "url": "https://www.partnermarketing.hitachivantara.com/data-modernization-resilience?utm_campaign=FY26-Q2-DMR_DPAE-ToPartner-PS_B-BS-Part-All_AT-Global-PTNR_Multiple-EMB&utm_medium=email&utm_source=PAM&utm_content=CRMR-EM03&its=global#iws2ym"
+        },
         {
           "label": "Partner Portal",
           "url": "https://partnerportal.hitachivantara.com/s/"
@@ -411,7 +515,7 @@
           "url": "https://www.hitachivantara.com/en-us/partners/partner-ecosystem"
         }
       ],
-      "status": "Ready to review",
+      "status": "Updated with workbook links",
       "source": "PAM-to-Partner email workbook · CRMR!D7",
       "featuredAsset": "Protect Smarter, Recover Faster: Your Guide to Data Protection as a Service (eBook)\n(Campaign mapping Message #3)",
       "objective": "Campaign promotion",
@@ -426,8 +530,16 @@
       "category": "Cyber Resilience & Modern Recovery",
       "title": "CRMR · Email #4 — Resilient by Design Webinar (Campaign mapping Message #4)",
       "subject": "Helping customers think beyond backup to clean recovery",
-      "body": "Hi [First Name],\n\nWanted to share the *Resilient by Design* webinar as a timely resource for customers assessing their cyber recovery strategy.\n\nIt can help open a more complete conversation about resilience—including confidence in recovery and the ability to restore operations after an attack, not simply whether backups exist.\n\nThe Cyber Resilience & Modernization campaign in the Partner Marketing Hub gives you co-brandable emails, social posts and supporting assets if you’d like to use this topic for customer outreach.\n\n**Activate the Campaign:** [Campaign Link]\n\nIf you have an account where recovery readiness is top of mind, let’s discuss how to follow up.\n\nBest,\n[Your Name]\nPartner Account Manager | Hitachi Vantara\n\nHelpful partner links:\nPartner Portal ↗ https://partnerportal.hitachivantara.com/s/\nPartner Marketing Hub ↗ https://partnermarketing.hitachivantara.com/\nHitachi Vantara Partner Program ↗ https://www.hitachivantara.com/en-us/partners/partner-ecosystem",
+      "body": "Hi [First Name],\n\nWanted to share the *Resilient by Design* webinar as a timely resource for customers assessing their cyber recovery strategy.\n\nIt can help open a more complete conversation about resilience—including confidence in recovery and the ability to restore operations after an attack, not simply whether backups exist.\n\nThe Cyber Resilience & Modernization campaign in the Partner Marketing Hub gives you co-brandable emails, social posts and supporting assets if you’d like to use this topic for customer outreach.\n\n**Explore the featured resource:** https://stwb.co/eheaahc\n\n**Activate the Campaign:** https://www.partnermarketing.hitachivantara.com/data-modernization-resilience?utm_campaign=FY26-Q2-DMR_DPAE-ToPartner-PS_B-BS-Part-All_AT-Global-PTNR_Multiple-EMB&utm_medium=email&utm_source=PAM&utm_content=CRMR-EM04&its=global#iws2ym\n\nIf you have an account where recovery readiness is top of mind, let’s discuss how to follow up.\n\nBest,\n[Your Name]\nPartner Account Manager | Hitachi Vantara\n\nHelpful partner links:\nPartner Portal ↗ https://partnerportal.hitachivantara.com/s/\nPartner Marketing Hub ↗ https://partnermarketing.hitachivantara.com/\nHitachi Vantara Partner Program ↗ https://www.hitachivantara.com/en-us/partners/partner-ecosystem",
       "links": [
+        {
+          "label": "Featured resource",
+          "url": "https://stwb.co/eheaahc"
+        },
+        {
+          "label": "Activate the campaign",
+          "url": "https://www.partnermarketing.hitachivantara.com/data-modernization-resilience?utm_campaign=FY26-Q2-DMR_DPAE-ToPartner-PS_B-BS-Part-All_AT-Global-PTNR_Multiple-EMB&utm_medium=email&utm_source=PAM&utm_content=CRMR-EM04&its=global#iws2ym"
+        },
         {
           "label": "Partner Portal",
           "url": "https://partnerportal.hitachivantara.com/s/"
@@ -441,7 +553,7 @@
           "url": "https://www.hitachivantara.com/en-us/partners/partner-ecosystem"
         }
       ],
-      "status": "Ready to review",
+      "status": "Updated with workbook links",
       "source": "PAM-to-Partner email workbook · CRMR!E7",
       "featuredAsset": "Resilient by Design Webinar\n(Campaign mapping Message #4)",
       "objective": "Campaign promotion",
@@ -456,8 +568,16 @@
       "category": "Cyber Resilience & Modern Recovery",
       "title": "CRMR · Email #5 — Buyer’s Guide for Cyber-Resilient Data Infrastructure (Campaign mapping Message #5)",
       "subject": "A buyer’s guide for cyber-resilient infrastructure decisions",
-      "body": "Hi [First Name],\n\nI wanted to share the *Buyer’s Guide for Cyber-Resilient Data Infrastructure* for customers thinking through their next data protection or infrastructure decisions.\n\nIt can help structure conversations around the capabilities customers need to protect critical data and recover confidently as threats evolve.\n\nThere’s also a Cyber Resilience & Modernization campaign available in the Partner Marketing Hub, with partner-ready emails, social content and customer assets that can be co-branded for outreach.\n\n**Activate the Campaign:** [Campaign Link]\n\nIf you’re supporting an active evaluation, I’m happy to work with you on how to position the guide and next steps.\n\nBest,\n[Your Name]\n\nHelpful partner links:\nPartner Portal ↗ https://partnerportal.hitachivantara.com/s/\nPartner Marketing Hub ↗ https://partnermarketing.hitachivantara.com/\nHitachi Vantara Partner Program ↗ https://www.hitachivantara.com/en-us/partners/partner-ecosystem",
+      "body": "Hi [First Name],\n\nI wanted to share the *Buyer’s Guide for Cyber-Resilient Data Infrastructure* for customers thinking through their next data protection or infrastructure decisions.\n\nIt can help structure conversations around the capabilities customers need to protect critical data and recover confidently as threats evolve.\n\nThere’s also a Cyber Resilience & Modernization campaign available in the Partner Marketing Hub, with partner-ready emails, social content and customer assets that can be co-branded for outreach.\n\n**Explore the featured resource:** https://stwb.co/ehealsh\n\n**Activate the Campaign:** https://www.partnermarketing.hitachivantara.com/data-modernization-resilience?utm_campaign=FY26-Q2-DMR_DPAE-ToPartner-PS_B-BS-Part-All_AT-Global-PTNR_Multiple-EMB&utm_medium=email&utm_source=PAM&utm_content=CRMR-EM05&its=global#iws2ym\n\nIf you’re supporting an active evaluation, I’m happy to work with you on how to position the guide and next steps.\n\nBest,\n[Your Name]\n\nHelpful partner links:\nPartner Portal ↗ https://partnerportal.hitachivantara.com/s/\nPartner Marketing Hub ↗ https://partnermarketing.hitachivantara.com/\nHitachi Vantara Partner Program ↗ https://www.hitachivantara.com/en-us/partners/partner-ecosystem",
       "links": [
+        {
+          "label": "Featured resource",
+          "url": "https://stwb.co/ehealsh"
+        },
+        {
+          "label": "Activate the campaign",
+          "url": "https://www.partnermarketing.hitachivantara.com/data-modernization-resilience?utm_campaign=FY26-Q2-DMR_DPAE-ToPartner-PS_B-BS-Part-All_AT-Global-PTNR_Multiple-EMB&utm_medium=email&utm_source=PAM&utm_content=CRMR-EM05&its=global#iws2ym"
+        },
         {
           "label": "Partner Portal",
           "url": "https://partnerportal.hitachivantara.com/s/"
@@ -471,7 +591,7 @@
           "url": "https://www.hitachivantara.com/en-us/partners/partner-ecosystem"
         }
       ],
-      "status": "Ready to review",
+      "status": "Updated with workbook links",
       "source": "PAM-to-Partner email workbook · undefined",
       "featuredAsset": "Buyer’s Guide for Cyber-Resilient Data Infrastructure (Campaign mapping Message #5)",
       "objective": "Campaign promotion",
