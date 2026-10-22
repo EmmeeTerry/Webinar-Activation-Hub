@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Generate PAM partner-communication email templates from owner-confirmed Smartsheet rows.
 
-Required GitHub Actions secrets: SMARTSHEET_API_TOKEN, PARTNER_COMMUNICATIONS_SHEET_ID.
+Required GitHub Actions secret: SMARTSHEET_API_TOKEN.\nRequired GitHub Actions variable: PARTNER_COMMUNICATIONS_SHEET_ID (numeric API sheet ID).
 This script does not send messages, modify Smartsheet, or publish unconfirmed submissions.
 The generated JSON is separate from the manually maintained PAM repository.
 """
@@ -27,15 +27,15 @@ def valid_url(value):
     return bool(re.match(r"^https://[^\s/]+(?:/[^\s]*)?$", clean(value)))
 
 def fields(sheet_row, cols):
-    return {cols.get(str(c.get("columnId")), ""): c.get("displayValue", c.get("value", "")) for c in sheet_row.get("cells", [])}
+    return {cols.get(str(c.get("columnId")), ""): (c.get("displayValue") or c.get("value") or "") for c in sheet_row.get("cells", [])}
 
 def create_email(row):
     title = clean(row.get("Title"), 180)
     kind = clean(row.get("Communication Type"), 70)
     url = clean(row.get("Resource URL"), 1500)
-    owner = clean(row.get("Owner Email"), 120)
+    owner_raw = row.get("Owner Email")\n    owner = clean(owner_raw.get("email") if isinstance(owner_raw, dict) else owner_raw, 120)
     status = clean(row.get("Processing Status"), 50).lower()
-    if status not in {"ready to publish", "validated"} or not confirmed(row.get("Owner Confirmation")):
+    if status != "ready to publish" or not confirmed(row.get("Owner Confirmation")):
         return None
     if not title or kind not in VALID_TYPES or not valid_url(url) or not owner or "@" not in owner:
         return None
