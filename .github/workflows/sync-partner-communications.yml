@@ -8,13 +8,12 @@ permissions:
 jobs:
   sync:
     runs-on: ubuntu-latest
-    if: ${{ vars.PARTNER_COMMUNICATIONS_SHEET_ID != '' }}
     steps:
       - uses: actions/checkout@v4
       - name: Generate partner email feed
         env:
           SMARTSHEET_API_TOKEN: ${{ secrets.SMARTSHEET_API_TOKEN }}
-          PARTNER_COMMUNICATIONS_SHEET_ID: ${{ vars.PARTNER_COMMUNICATIONS_SHEET_ID }}
+          PARTNER_COMMUNICATIONS_SHEET_ID: '4129244960739204'
         run: python3 sync_partner_communications.py
       - name: Commit updated feed
         run: |
