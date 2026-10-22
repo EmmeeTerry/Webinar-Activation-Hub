@@ -66,7 +66,7 @@ def create_email(row):
                 title=title, subject=title + " | Hitachi Vantara Partner Update", body=body,
                 objective="Campaign promotion", region=clean(row.get("Region"), 60) or "Global",
                 status="Owner-confirmed", audience="Partner-only" if access else "Partners",
-                sourceUrl=url, owner=owner)
+                sourceUrl=url)
 
 def main():
     if not TOKEN or not SHEET_ID:
