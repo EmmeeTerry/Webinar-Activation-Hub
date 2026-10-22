@@ -32,7 +32,7 @@ h1{font-family:"Hitachi Sans",Arial,Helvetica,sans-serif;font-weight:400;font-si
 .toolbar{background:var(--white);border:1px solid var(--line);border-radius:4px;padding:16px;box-shadow:0 2px 8px rgba(12,12,12,.03)}
 .search{width:100%;border:1px solid var(--gray3);border-radius:2px;padding:12px 14px;font-size:14px;font-family:inherit;outline:none;background:var(--white)}
 .search:focus{border-color:var(--red1);box-shadow:0 0 0 3px rgba(250,0,15,.08)}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.filter-dropdowns{display:grid;grid-template-columns:repeat(4,minmax(150px,1fr));gap:10px;margin-top:12px}.filter-dropdowns label{display:block;font-size:11px;font-weight:700;margin-bottom:5px;color:var(--gray5)}.filter-dropdowns select{width:100%;border:1px solid var(--gray2);background:var(--white);padding:10px;font:inherit;font-size:12px;border-radius:2px}@media(max-width:750px){.filter-dropdowns{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .chip{border:1px solid var(--gray2);background:var(--white);border-radius:999px;padding:6px 10px;font-family:inherit;font-size:10px;cursor:pointer;color:var(--gray5)}
 .chip:hover{border-color:var(--gray4)}
 .chip.active{background:var(--black);color:var(--white);border-color:var(--black)}
@@ -123,7 +123,7 @@ h1{font-family:"Hitachi Sans",Arial,Helvetica,sans-serif;font-weight:400;font-si
   <div id="spotlight" class="spotlight"></div>
   <div class="toolbar">
     <input id="search" class="search" placeholder="Search by webinar, campaign, use case, owner, audience, region…">
-    <div id="chips" class="chips"></div>
+    <div id="chips" class="filter-dropdowns"></div>
     <div style="margin-top:14px">
       <button class="btn" id="copyLinkBtn" onclick="copyShareLink()">Copy link to this view</button>
     </div>
@@ -187,33 +187,32 @@ const isValidLink=url=>typeof url==='string' && /^https?:\/\/[^\s]+$/i.test(url.
 const isResourceUrl=isValidLink;
 const linkBtn=(label,url,primary=false)=> isResourceUrl(url) ? `<a class="btn ${primary?'primary':''}" target="_blank" href="${esc(url)}">${esc(label)} ↗</a>` : '';
 
-function filters(){
-  const campaigns=[...new Set(DATA.map(x=>x.campaign).filter(Boolean))];
-  const usecases=[...new Set(DATA.map(x=>x.useCase).filter(Boolean))];
-  const regions=[...new Set(DATA.map(x=>x.region).filter(Boolean))];
-  return ['All','Upcoming','Planned','On Demand','Partner-ready',...regions,...campaigns,...usecases];
-}
+const filterKeys=['status','campaign','useCase','region'];
+let dropdownFilters={status:'',campaign:'',useCase:'',region:''};
 function makeChips(){
-  document.getElementById('chips').innerHTML=filters().map(f=>`<button class="chip ${activeFilter===f?'active':''}" onclick="setFilter('${esc(f).replace(/'/g,"\\'")}')">${esc(f)}</button>`).join('');
+ const labels={status:'Webinar status',campaign:'Campaign',useCase:'Use case',region:'Region'};
+ document.getElementById('chips').innerHTML=filterKeys.map(key=>{
+   const opts=key==='status'?['Upcoming','Planned','On Demand','Partner-ready']:[...new Set(DATA.map(w=>w[key]).filter(Boolean))].sort();
+   return '<div><label for="filter-'+key+'">'+labels[key]+'</label><select id="filter-'+key+'" onchange="setDropdownFilter(\''+key+'\',this.value)"><option value="">All '+labels[key].toLowerCase()+'</option>'+opts.map(v=>'<option value="'+esc(v)+'"'+(dropdownFilters[key]===v?' selected':'')+'>'+esc(v)+'</option>').join('')+'</select></div>';
+ }).join('');
 }
-function setFilter(f){activeFilter=f; makeChips(); updateURL(); render();}
-
+function setDropdownFilter(key,value){dropdownFilters[key]=value;updateURL();render();}
 // ---- Shareable-link support: read/write filter state to the URL's query string ----
 function applyFiltersFromURL(){
-  const params = new URLSearchParams(location.search);
-  if(params.has('filter')) activeFilter = params.get('filter');
-  if(params.has('q')){
-    const s = document.getElementById('search');
-    if(s) s.value = params.get('q');
-  }
+ const params=new URLSearchParams(location.search);
+ filterKeys.forEach(k=>dropdownFilters[k]=params.get(k)||'');
+ const previous=params.get('filter')||'';
+ if(previous&&!filterKeys.some(k=>dropdownFilters[k])){
+  if(['Upcoming','Planned','On Demand','Partner-ready'].includes(previous))dropdownFilters.status=previous;
+  else for(const key of ['campaign','useCase','region'])if(DATA.some(w=>w[key]===previous)){dropdownFilters[key]=previous;break}
+ }
+ if(params.has('q'))document.getElementById('search').value=params.get('q');
 }
 function updateURL(){
-  const params = new URLSearchParams();
-  if(activeFilter && activeFilter !== 'All') params.set('filter', activeFilter);
-  const q = document.getElementById('search').value.trim();
-  if(q) params.set('q', q);
-  const qs = params.toString();
-  history.replaceState(null, '', location.pathname + (qs ? '?' + qs : ''));
+ const params=new URLSearchParams();
+ filterKeys.forEach(k=>{if(dropdownFilters[k])params.set(k,dropdownFilters[k])});
+ const q=document.getElementById('search').value.trim();if(q)params.set('q',q);
+ history.replaceState(null,'',location.pathname+(params.size?'?'+params.toString():''));
 }
 function flashButton(btn, text){
   const original = btn.textContent;
@@ -255,11 +254,8 @@ function filtered(){
  return DATA.filter(w=>{
    const hay=[w.title,w.campaign,w.useCase,w.audience,w.region,w.owner,w.status,w.abstract].join(' ').toLowerCase();
    const qok=!q||hay.includes(q);
-   let fok=true;
-   if(activeFilter==='Upcoming'||activeFilter==='Planned'||activeFilter==='On Demand') fok=w.status===activeFilter;
-   else if(activeFilter==='Partner-ready') fok=w.partnerReady;
-   else if(activeFilter!=='All') fok=(w.campaign===activeFilter||w.useCase===activeFilter||w.region===activeFilter);
-   return qok&&fok;
+   const match=filterKeys.every(k=>!dropdownFilters[k]||(k==='status'&&dropdownFilters[k]==='Partner-ready'?w.partnerReady:w[k]===dropdownFilters[k]));
+   return qok&&match;
  });
 }
 function todayStr(){
