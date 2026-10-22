@@ -18,13 +18,13 @@ OUTPUT = Path("pam-partner-submissions.json")
 VALID_TYPES = {"Partner Webinar", "Training", "Program Update", "Incentive", "Event", "Announcement", "Other"}
 
 def clean(value, limit=2000):
-    return re.sub(r"\\s+", " ", str(value or "")).strip()[:limit]
+    return re.sub(r"\s+", " ", str(value or "")).strip()[:limit]
 
 def confirmed(value):
     return value is True or clean(value).lower() in {"yes", "true", "checked", "1"}
 
 def valid_url(value):
-    return bool(re.match(r"^https://[^\\s/]+(?:/[^\\s]*)?$", clean(value)))
+    return bool(re.match(r"^https://[^\s/]+(?:/[^\s]*)?$", clean(value)))
 
 def fields(sheet_row, cols):
     return {cols.get(str(c.get("columnId")), ""): c.get("displayValue", c.get("value", "")) for c in sheet_row.get("cells", [])}
@@ -50,16 +50,16 @@ def create_email(row):
     if copy:
         body = copy
         if url not in body:
-            body += "\\n\\n" + cta + ": " + url
+            body += "\n\n" + cta + ": " + url
     else:
-        body = ("Hi [First Name],\\n\\n"
-                "I wanted to share this " + kind.lower() + " from Hitachi Vantara: " + title + ".\\n\\n"
-                + summary + "\\n\\n" + benefits + "\\n\\n"
-                + (("Key takeaways: " + takeaways + "\\n\\n") if takeaways else "")
-                + cta + ": " + url + "\\n\\n"
-                + ("This resource requires partner access.\\n\\n" if access else "")
-                + "Let me know if you'd like to discuss how this could support your customers and opportunities.\\n\\n"
-                "Best,\\n[Your Name]\\nPartner Account Manager | Hitachi Vantara")
+        body = ("Hi [First Name],\n\n"
+                "I wanted to share this " + kind.lower() + " from Hitachi Vantara: " + title + ".\n\n"
+                + summary + "\n\n" + benefits + "\n\n"
+                + (("Key takeaways: " + takeaways + "\n\n") if takeaways else "")
+                + cta + ": " + url + "\n\n"
+                + ("This resource requires partner access.\n\n" if access else "")
+                + "Let me know if you'd like to discuss how this could support your customers and opportunities.\n\n"
+                "Best,\n[Your Name]\nPartner Account Manager | Hitachi Vantara")
     ref = clean(row.get("Submission ID"), 90) or clean(row.get("_row_id"), 90)
     slug = re.sub(r"[^a-z0-9]+", "-", ref.lower()).strip("-")
     return dict(id="partner-submission-"+slug, category="Partner Webinars" if kind == "Partner Webinar" else "Partner Communications",
@@ -85,7 +85,7 @@ def main():
         if email:
             by_id[email["id"]]=email
     OUTPUT.write_text(json.dumps({"version":"1.0","updated":datetime.now(timezone.utc).isoformat(),
-        "emails":list(by_id.values())}, ensure_ascii=False, indent=2)+"\\n", encoding="utf-8")
+        "emails":list(by_id.values())}, ensure_ascii=False, indent=2)+"\n", encoding="utf-8")
     print("Prepared",len(by_id),"owner-confirmed partner templates.")
 
 if __name__ == "__main__":
