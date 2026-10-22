@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-10-22T14:58:58.509343+00:00",
+  "lastRefreshed": "2026-10-22T16:58:34.618186+00:00",
   "items": [
     {
       "id": "10-reasons-to-buy-build-or-borrow-ai-implementation-1",
@@ -315,7 +315,7 @@
       "partnerUse": true,
       "paidMediaDate": "2026-06-01",
       "paidMediaDateDisplay": "Jun 01, 2026",
-      "primaryActivation": "Content Syndication, Outbound Email, Paid Social, Paid Search",
+      "primaryActivation": "Outbound Email, Paid Social, Paid Search",
       "marketingEmail": null,
       "salesEmail": null,
       "sdrEmail": null,
@@ -8351,8 +8351,8 @@
       "issueType": "; No Promo"
     },
     {
-      "id": "the-economics-of-storage-cio-com-blog-254",
-      "title": "The Economics of Storage (CIO.com) | Blog",
+      "id": "451-research-vsp-360-aiops-sla-as-code-blog-254",
+      "title": "451 Research - VSP 360 AIOps SLA as Code | Blog",
       "url": null,
       "type": "Blog",
       "campaign": "Data Modernization & Resilience",
@@ -8362,8 +8362,8 @@
       "audience": "Enterprise, Midmarket",
       "status": "Planned",
       "region": "Global",
-      "publishDate": "2027-03-31",
-      "publishDateDisplay": "Mar 31, 2027",
+      "publishDate": "2027-04-30",
+      "publishDateDisplay": "Apr 30, 2027",
       "partnerUse": false,
       "paidMediaDate": null,
       "paidMediaDateDisplay": "",
@@ -8379,8 +8379,8 @@
       "actionRequired": "",
       "abstract": "",
       "partnerCampaignLink": null,
-      "fiscalYear": "FY27",
-      "fiscalQuarter": "Q4",
+      "fiscalYear": "FY28",
+      "fiscalQuarter": "Q1",
       "issueType": ""
     },
     {
