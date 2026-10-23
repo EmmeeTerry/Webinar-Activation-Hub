@@ -29,4 +29,4 @@ jobs:
             git push
           fi
 
-# Sync accepts confirmed submissions marked Ready to Publish or Published.
+# Sync accepts owner-confirmed Ready to Publish or Published submissions; diagnostic validation.
