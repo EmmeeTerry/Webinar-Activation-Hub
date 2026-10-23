@@ -28,3 +28,5 @@ jobs:
             git commit -m "Sync owner-confirmed partner communication templates"
             git push
           fi
+
+# Sync accepts confirmed submissions marked Ready to Publish or Published.
