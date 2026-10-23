@@ -50,7 +50,31 @@ function linkedEmailHtml(){
 }
 function filename(){return (selected?.id||'pam-email').replace(/[^a-z0-9-]/gi,'-')}
 $('leadPersonalizationLink').onclick=e=>{e.preventDefault();$('jumpToLeads').click()};$('jumpToLeads').onclick=()=>{const target=$('leadPersonalization');target.scrollIntoView({behavior:'smooth',block:'start'});target.focus({preventScroll:true})};
-$('translateNow').onclick=async()=>{const btn=$('translateNow'),status=$('translateStatus'),lang=$('targetLanguage').value;if(lang==='en'){if(englishDraft){$('subject').value=englishDraft.subject;$('body').value=englishDraft.body;status.textContent='Original English draft restored.'}return}btn.disabled=true;status.textContent='Checking browser translation support…';try{const API=window.Translator;if(!API||typeof API.create!=='function')throw Error('Translation is not supported in this browser.');const translator=await API.create({sourceLanguage:'en',targetLanguage:lang});if(!englishDraft)englishDraft={subject:$('subject').value,body:$('body').value};const subject=await translator.translate(englishDraft.subject);const body=await translator.translate(englishDraft.body);$('subject').value=subject;$('body').value=body;status.textContent='Translation applied. Review the full message, particularly URLs, incentive amounts, names, and terms, before sending.';}catch(err){status.textContent='Built-in translation unavailable. Copy the draft, translate it in the new tab, then paste the approved translation back into the editor.';const content='Subject: '+$('subject').value+'\n\n'+$('body').value;try{await navigator.clipboard.writeText(content)}catch(e){}window.open('https://translate.google.com/?sl=en&tl='+encodeURIComponent(lang)+'&op=translate','_blank','noopener');}finally{btn.disabled=false}};
+$('translateNow').onclick=async()=>{
+ const btn=$('translateNow'),status=$('translateStatus'),lang=$('targetLanguage').value;
+ if(lang==='en'){
+   if(englishDraft){$('subject').value=englishDraft.subject;$('body').value=englishDraft.body;}
+   status.textContent='Original English draft restored.';return;
+ }
+ btn.disabled=true;status.textContent='Checking secure in-browser translation availability…';
+ try{
+   const API=window.Translator;
+   if(!API||typeof API.create!=='function')throw new Error('This browser does not provide built-in translation.');
+   if(typeof API.availability==='function'){
+     const availability=await API.availability({sourceLanguage:'en',targetLanguage:lang});
+     if(availability==='unavailable')throw new Error('This language pair is not available in this browser.');
+   }
+   const translator=await API.create({sourceLanguage:'en',targetLanguage:lang});
+   const src=englishDraft||{subject:$('subject').value,body:$('body').value};
+   const subject=await translator.translate(src.subject);
+   const body=await translator.translate(src.body);
+   if(!englishDraft)englishDraft={...src};
+   $('subject').value=subject;$('body').value=body;
+   status.textContent='Translated in your browser. Review hyperlinks, names, incentives and terms before sending.';
+ }catch(err){
+   status.textContent='Automatic translation is unavailable for '+$('targetLanguage').selectedOptions[0].text+' in this browser. Your draft is unchanged. No email content was sent to an external translation website. Try Chrome with built-in translation support or use an approved company translation service.';
+ }finally{btn.disabled=false;}
+};
 function downloadFormattedOutlook(){
   const subject=$('subject').value.replace(/[\r\n]/g,' ');
   const html=linkedEmailHtml();
