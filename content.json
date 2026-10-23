@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-10-23T13:08:15.864913+00:00",
+  "lastRefreshed": "2026-10-23T15:01:19.976599+00:00",
   "items": [
     {
       "id": "10-reasons-to-buy-build-or-borrow-ai-implementation-1",
@@ -8714,8 +8714,8 @@
       "issueType": "; No Promo"
     },
     {
-      "id": "tier-1-launch-executive-blog-273",
-      "title": "Tier 1 Launch Executive Blog",
+      "id": "tier-1-launch-executive-blog-blog-265",
+      "title": "Tier 1 Launch Executive Blog | Blog",
       "url": null,
       "type": "Blog",
       "campaign": "AI Data Foundation",
@@ -8747,9 +8747,9 @@
       "issueType": ""
     },
     {
-      "id": "ai-starts-with-infrastructure-what-enterprise-architects-must-modernize-first-274",
-      "title": "AI Starts with Infrastructure: What Enterprise Architects Must Modernize First",
-      "url": "https://www.hitachivantara.com/en-us/company/events-and-webinars?commid=678141&bt_tok={{lead_id}}",
+      "id": "cio-virtual-forum-ai-starts-with-infrastructure-what-enterprise-architects-must-modernize--266",
+      "title": "CIO Virtual Forum: AI Starts with Infrastructure - What Enterprise Architects Must Modernize First | Webinar",
+      "url": "https://www.hitachivantara.com/en-us/company/events-and-webinars?commid=678141",
       "type": "Webinar",
       "campaign": "AI Data Foundation, Data Modernization & Resilience",
       "useCase": "Cyber Risk Mitigation & Recovery, Data Readiness and Activation for AI, High Performance AI-Ready Infrastructure",
@@ -8770,7 +8770,7 @@
       "usedInCampaign": "No",
       "promotionPeriod": "",
       "ownerIndividual": "Sandra Westmoreland",
-      "publishedByVendor": "",
+      "publishedByVendor": "Hitachi Vantara",
       "notes": "",
       "actionRequired": "Create promotion plan",
       "abstract": "This forum examined the infrastructure behind successful AI initiatives, including storage, SAN, networking, data access, and data movement. The discussion highlighted common infrastructure challenges that can slow AI workloads and the architectural considerations organizations should address to build a scalable, AI-ready environment.",
@@ -8780,9 +8780,9 @@
       "issueType": "; No Promo"
     },
     {
-      "id": "could-your-business-recover-from-a-ransomware-attack-tomorrow-275",
-      "title": "Could Your Business Recover from a Ransomware Attack Tomorrow?",
-      "url": "https://www.hitachivantara.com/en-us/company/events-and-webinars?commid=678156&bt_tok={{lead_id}}",
+      "id": "cio-virtual-forum-could-your-business-recover-from-a-ransomware-attack-tomorrow-webinar-267",
+      "title": "CIO Virtual Forum: Could Your Business Recover from a Ransomware Attack Tomorrow? | Webinar",
+      "url": "https://www.hitachivantara.com/en-us/company/events-and-webinars?commid=678156",
       "type": "Webinar",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Cyber Risk Mitigation & Recovery",
@@ -8803,7 +8803,7 @@
       "usedInCampaign": "No",
       "promotionPeriod": "",
       "ownerIndividual": "Sandra Westmoreland",
-      "publishedByVendor": "",
+      "publishedByVendor": "Hitachi Vantara",
       "notes": "",
       "actionRequired": "Create promotion plan",
       "abstract": "Brocade and Hitachi Vantara experts explored how modern storage and networking infrastructure can support a stronger cyber resilience strategy. The discussion addressed gaps in traditional backup and disaster recovery approaches and highlighted considerations for protecting critical workloads, improving recovery readiness, and reducing downtime and business risk.",
