@@ -82,6 +82,19 @@ def main():
     for row in sheet.get("rows", []):
         values=fields(row, cols)
         values["_row_id"]=str(row["id"])
+        if clean(values.get("Processing Status")).lower() in {"published", "ready to publish"}:
+            checks={
+                "confirmed": confirmed(values.get("Owner Confirmation")),
+                "title": bool(clean(values.get("Title"))),
+                "type": clean(values.get("Communication Type")) in VALID_TYPES,
+                "url": valid_url(values.get("Resource URL")),
+                "email": "@" in clean(values.get("Owner Email")),
+                "summary": bool(clean(values.get("Description / Summary"))),
+                "benefit": bool(clean(values.get("Why This Matters to Partners"))),
+                "publishDateEligible": not clean(values.get("Publish Date")) or clean(values.get("Publish Date"))[:10] <= datetime.now(timezone.utc).date().isoformat(),
+                "notExpired": not clean(values.get("Expiration Date")) or clean(values.get("Expiration Date"))[:10] >= datetime.now(timezone.utc).date().isoformat(),
+            }
+            print("Eligibility checks for publish-status row (no row content):", json.dumps(checks))
         email=create_email(values)
         if email:
             by_id[email["id"]]=email
