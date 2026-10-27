@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-10-27T08:05:59.165709+00:00",
+  "lastRefreshed": "2026-10-27T14:44:30.714004+00:00",
   "items": [
     {
       "id": "proof-beats-promises-1",
@@ -159,12 +159,12 @@
       "ownerIndividual": "Jeff Lundberg",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "",
-      "actionRequired": "",
+      "actionRequired": "Update status or revise publish date",
       "abstract": "",
       "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q3",
-      "issueType": ""
+      "issueType": "Overdue"
     },
     {
       "id": "2026-gigaom-rader-for-high-performance-storage-optimized-for-ai-workloads-webinar-6",
@@ -5241,12 +5241,12 @@
       "ownerIndividual": "Dinesh Singh, Shari Gardner",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "",
-      "actionRequired": "",
+      "actionRequired": "Review content freshness (12+ months)",
       "abstract": "",
       "partnerCampaignLink": null,
       "fiscalYear": "FY26",
       "fiscalQuarter": "Q3",
-      "issueType": ""
+      "issueType": "; 12+ Months Old"
     },
     {
       "id": "hitachi-vantara-and-veeam-for-cyber-resilience-whitepaper-160",
@@ -5505,12 +5505,12 @@
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "",
-      "actionRequired": "",
+      "actionRequired": "Update status or revise publish date",
       "abstract": "",
       "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q3",
-      "issueType": ""
+      "issueType": "Overdue"
     },
     {
       "id": "hybrid-cloud-2-0-evolution-modernization-whitepaper-168",
@@ -5645,8 +5645,8 @@
       "issueType": "; 12+ Months Old"
     },
     {
-      "id": "your-mainframe-storage-decision-is-not-the-one-you-think-it-is-blog-172",
-      "title": "Your Mainframe Storage Decision Is Not the One You Think It Is | Blog",
+      "id": "your-mainframe-storage-bill-is-coming-choose-it-or-inherit-it-blog-172",
+      "title": "Your Mainframe Storage Bill Is Coming. Choose It or Inherit It. | Blog",
       "url": null,
       "type": "Blog",
       "campaign": "Data Modernization & Resilience",
