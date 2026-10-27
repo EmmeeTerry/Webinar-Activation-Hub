@@ -26,11 +26,12 @@ function download(content,name,type){const blob=new Blob([content],{type});const
 function htmlEsc(v){return String(v).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
 function sanitizeEmailHtml(html){
  const doc=new DOMParser().parseFromString(html,'text/html');
- doc.querySelectorAll('script,style,iframe,form,svg,object,embed,img,link,meta,base').forEach(n=>n.remove());
+ doc.querySelectorAll('script,iframe,form,svg,object,embed,img,link,meta,base').forEach(n=>n.remove());
+ doc.querySelectorAll('style').forEach(n=>{if(/@import|url\s*\(|expression\s*\(|<|>|\\|@font-face/i.test(n.textContent||''))n.remove()});
  for(const node of [...doc.body.querySelectorAll('*')]){
   for(const attr of [...node.attributes]){
    const key=attr.name.toLowerCase();
-   if(!['href','title','style'].includes(key))node.removeAttribute(attr.name);
+   if(!['href','title','style','class'].includes(key))node.removeAttribute(attr.name);
   }
   if(node.hasAttribute('href')&&!/^https:\/\//i.test(node.getAttribute('href')||''))node.removeAttribute('href');
   const css=node.getAttribute('style')||'';
