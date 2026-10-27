@@ -12,6 +12,28 @@ function cleanUrl(url){
   return u.href;
  }catch(e){return ''}
 }
+function cleanRichHtml(){
+ const doc=new DOMParser().parseFromString(el('body').innerHTML,'text/html');
+ doc.querySelectorAll('script,style,iframe,form,svg,object,embed,meta,link,base,img').forEach(n=>n.remove());
+ for(const node of [...doc.body.querySelectorAll('*')]){
+  if(node.tagName==='A'){
+   const url=cleanUrl(node.getAttribute('href')||'');
+   if(url)node.setAttribute('href',url);else node.removeAttribute('href');
+   node.setAttribute('target','_blank');node.setAttribute('rel','noopener noreferrer');
+  }
+  for(const attr of [...node.attributes]){
+   const k=attr.name.toLowerCase();
+   if(k.startsWith('on')||!['href','target','rel','style','title'].includes(k))node.removeAttribute(attr.name);
+  }
+  if(node.hasAttribute('style')){
+   const css=node.getAttribute('style')||'';
+   // Safe subset of inline formatting used in email. No external resources.
+   const allowed=css.split(';').map(x=>x.trim()).filter(x=>/^(color|background-color|font-size|font-weight|font-style|text-align|text-decoration|line-height)\s*:/i.test(x)&&!/url\s*\(|expression\s*\(|[<>]/i.test(x));
+   if(allowed.length)node.setAttribute('style',allowed.join(';'));else node.removeAttribute('style');
+  }
+ }
+ return doc.body.innerHTML;
+}
 function prepared(){
  const subject=el('subject').value.trim();
  const temp=el('body').cloneNode(true);
@@ -57,7 +79,7 @@ el('download').onclick=()=>{
  if(!subj||!body){el('status').textContent='Add an email subject and body first.';return}
  if(!confirm('I confirm this content and every link are approved for publication on a PUBLIC GitHub Pages website.'))return;
  const id='uploaded-'+Date.now();
- const data={id,category:el('category').value,title:subj,subject:subj,body,region:el('region').value,objective:'Campaign promotion',status:'Owner-confirmed for public publication'};
+ const htmlBody=cleanRichHtml();const data={htmlBody,id,category:el('category').value,title:subj,subject:subj,body,region:el('region').value,objective:'Campaign promotion',status:'Owner-confirmed for public publication'};
  const blob=new Blob([JSON.stringify(data,null,2)+'\n'],{type:'application/json'});
  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=id+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);
  el('status').textContent='Submission file downloaded. Upload it to the GitHub folder using the link below.';
