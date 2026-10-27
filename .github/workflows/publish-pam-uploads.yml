@@ -1,0 +1,25 @@
+name: Publish submitted PAM email templates
+on:
+  push:
+    paths:
+      - 'pam-email-submissions/**.json'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate and build uploaded email repository
+        run: python3 publish_pam_uploads.py
+      - name: Commit email feed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add pam-uploaded-emails.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Publish submitted approved PAM email templates"
+            git pull --rebase origin main
+            git push
+          fi
