@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 FOLDER=Path("pam-email-submissions")
 OUT=Path("pam-uploaded-emails.json")
-ALLOWED={"id","category","title","subject","body","region","objective","status"}
+ALLOWED={"id","category","title","subject","body","region","objective","status","htmlBody"}
 emails={}
 for f in sorted(FOLDER.glob("*.json")):
     obj=json.loads(f.read_text(encoding="utf-8"))
@@ -15,7 +15,7 @@ for f in sorted(FOLDER.glob("*.json")):
             raise ValueError(f"{f}: invalid or empty {key}")
     if not obj["id"].startswith("uploaded-") or len(obj["id"])>100:
         raise ValueError(f"{f}: invalid template id")
-    if len(obj["body"])>25000 or len(obj["subject"])>400:
+    if len(obj["body"])>25000 or len(obj["subject"])>400 or len(obj.get("htmlBody",""))>100000:
         raise ValueError(f"{f}: template too long")
     if obj["id"] in emails:
         raise ValueError(f"{f}: duplicate ID")
