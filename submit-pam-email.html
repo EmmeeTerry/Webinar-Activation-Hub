@@ -23,7 +23,7 @@ function cleanRichHtml(){
   }
   for(const attr of [...node.attributes]){
    const k=attr.name.toLowerCase();
-   if(k.startsWith('on')||!['href','target','rel','style','title'].includes(k))node.removeAttribute(attr.name);
+   if(k.startsWith('on')||!['href','target','rel','style','title','class'].includes(k))node.removeAttribute(attr.name);
   }
   if(node.hasAttribute('style')){
    const css=node.getAttribute('style')||'';
@@ -32,7 +32,9 @@ function cleanRichHtml(){
    if(allowed.length)node.setAttribute('style',allowed.join(';'));else node.removeAttribute('style');
   }
  }
- return doc.body.innerHTML;
+ const styles=(window.importedEmailStyles||'');
+ const safeStyles=/@import|url\s*\(|expression\s*\(|<|>|\\|@font-face/i.test(styles)?'':styles;
+ return (safeStyles?'<style>'+safeStyles+'</style>':'')+doc.body.innerHTML;
 }
 function prepared(){
  const subject=el('subject').value.trim();
@@ -77,7 +79,7 @@ function output(){
  const iframe=document.createElement('iframe');
  iframe.title='Formatted email preview';iframe.sandbox='allow-popups allow-popups-to-escape-sandbox';
  iframe.style.cssText='display:block;width:100%;height:750px;border:0;background:white';
- iframe.srcdoc='<!doctype html><html><head><meta charset="utf-8"><style>'+sourceStyle+'</style></head><body>'+html+'</body></html>';
+ iframe.srcdoc='<!doctype html><html><head><meta charset="utf-8"></head><body>'+html+'</body></html>';
  el('out').replaceChildren(iframe);
  const links=el('body').querySelectorAll('a[href]').length;
  el('linkAudit').textContent=links?links+' clickable link(s) detected. Check each link in the preview.':'WARNING: No clickable hyperlinks were found in this email source. The HTML file does not contain the original resource links. Import an Outlook email with links or manually insert them before publishing.';
