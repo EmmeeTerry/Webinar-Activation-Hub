@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-10-27T09:30:37.505147+00:00",
+  "lastRefreshed": "2026-10-27T15:39:34.550798+00:00",
   "webinars": [
     {
       "id": "the-economics-of-modern-storage-infrastructure-lower-risk-faster-ai-value-better-roi",
@@ -31,11 +31,19 @@
       "sourceRow": 1,
       "relatedResources": [
         {
-          "title": "Esteyco Customer Story | Video",
-          "type": "Video",
+          "title": "2026 Magic Quadrant for Infrastructure Platform Consumption Services | Analyst Report",
+          "type": "Analyst Report",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Data Platform Architectures & Economics",
-          "url": "Esteyco Customer Story",
+          "url": "https://www.hitachivantara.com/en-us/ext/gartner-magic-quadrant-for-infrastructure-platform-consumption-services",
+          "score": 6
+        },
+        {
+          "title": "451 Research - VSP 360 AIOps | Analyst Report",
+          "type": "Analyst Report",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "451 Research - VSP 360 AIOps",
           "score": 6
         },
         {
@@ -52,14 +60,6 @@
           "campaign": "Data Modernization & Resilience",
           "useCase": "Data Platform Architectures & Economics",
           "url": "451 Research - VSP 360 AIOps SLA as Code",
-          "score": 6
-        },
-        {
-          "title": "451 Research - VSP 360 AIOps | Analyst Report",
-          "type": "Analyst Report",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "451 Research - VSP 360 AIOps",
           "score": 6
         }
       ]
@@ -102,19 +102,19 @@
           "score": 6
         },
         {
-          "title": "2026 GigaOm Radar for Unstructured Data Management (UDM) | Analyst Report",
-          "type": "Analyst Report",
-          "campaign": "AI Data Foundation",
-          "useCase": "Data Readiness and Activation for AI",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-unstructured-data-management-2026",
-          "score": 6
-        },
-        {
           "title": "2026 GigaOm Radar for Object Storage Analyst Report | Analyst Report",
           "type": "Analyst Report",
           "campaign": "AI Data Foundation",
           "useCase": "Data Readiness and Activation for AI",
           "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-radar-for-object-storage",
+          "score": 6
+        },
+        {
+          "title": "2026 GigaOm Radar for Unstructured Data Management (UDM) | Analyst Report",
+          "type": "Analyst Report",
+          "campaign": "AI Data Foundation",
+          "useCase": "Data Readiness and Activation for AI",
+          "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-unstructured-data-management-2026",
           "score": 6
         },
         {
@@ -157,14 +157,6 @@
       "sourceRow": 3,
       "relatedResources": [
         {
-          "title": "EDUCAUSE Webinar: Resilience in the AI Era | Webinar",
-          "type": "Webinar",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "EDUCAUSE Webinar: Resilience in the AI Era",
-          "score": 6
-        },
-        {
           "title": "451 Research: Boost Resiliency and Performance for Modern Data Infrastructures | Analyst Report",
           "type": "Analyst Report",
           "campaign": "Data Modernization & Resilience",
@@ -178,6 +170,14 @@
           "campaign": "Data Modernization & Resilience",
           "useCase": "Cyber Risk Mitigation & Recovery",
           "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/solution-profile/7-layer-defense-one-trusted-partner.pdf",
+          "score": 6
+        },
+        {
+          "title": "Achieve Cyber  Resilience With  a Risk-Optimized  Data Foundation | Solution Profile",
+          "type": "Solution Profile",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Cyber Risk Mitigation & Recovery",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/solution-profile/cyber-resilience-solution-profile.pdf",
           "score": 6
         },
         {
@@ -228,19 +228,19 @@
           "score": 6
         },
         {
-          "title": "2026 GigaOm Radar for Unstructured Data Management (UDM) | Analyst Report",
-          "type": "Analyst Report",
-          "campaign": "AI Data Foundation",
-          "useCase": "Data Readiness and Activation for AI",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-unstructured-data-management-2026",
-          "score": 6
-        },
-        {
           "title": "2026 GigaOm Radar for Object Storage Analyst Report | Analyst Report",
           "type": "Analyst Report",
           "campaign": "AI Data Foundation",
           "useCase": "Data Readiness and Activation for AI",
           "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-radar-for-object-storage",
+          "score": 6
+        },
+        {
+          "title": "2026 GigaOm Radar for Unstructured Data Management (UDM) | Analyst Report",
+          "type": "Analyst Report",
+          "campaign": "AI Data Foundation",
+          "useCase": "Data Readiness and Activation for AI",
+          "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-unstructured-data-management-2026",
           "score": 6
         },
         {
@@ -283,11 +283,19 @@
       "sourceRow": 5,
       "relatedResources": [
         {
-          "title": "Esteyco Customer Story | Video",
-          "type": "Video",
+          "title": "2026 Magic Quadrant for Infrastructure Platform Consumption Services | Analyst Report",
+          "type": "Analyst Report",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Data Platform Architectures & Economics",
-          "url": "Esteyco Customer Story",
+          "url": "https://www.hitachivantara.com/en-us/ext/gartner-magic-quadrant-for-infrastructure-platform-consumption-services",
+          "score": 6
+        },
+        {
+          "title": "451 Research - VSP 360 AIOps | Analyst Report",
+          "type": "Analyst Report",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "451 Research - VSP 360 AIOps",
           "score": 6
         },
         {
@@ -304,14 +312,6 @@
           "campaign": "Data Modernization & Resilience",
           "useCase": "Data Platform Architectures & Economics",
           "url": "451 Research - VSP 360 AIOps SLA as Code",
-          "score": 6
-        },
-        {
-          "title": "451 Research - VSP 360 AIOps | Analyst Report",
-          "type": "Analyst Report",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "451 Research - VSP 360 AIOps",
           "score": 6
         }
       ]
@@ -346,11 +346,19 @@
       "sourceRow": 6,
       "relatedResources": [
         {
-          "title": "Esteyco Customer Story | Video",
-          "type": "Video",
+          "title": "2026 Magic Quadrant for Infrastructure Platform Consumption Services | Analyst Report",
+          "type": "Analyst Report",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Data Platform Architectures & Economics",
-          "url": "Esteyco Customer Story",
+          "url": "https://www.hitachivantara.com/en-us/ext/gartner-magic-quadrant-for-infrastructure-platform-consumption-services",
+          "score": 6
+        },
+        {
+          "title": "451 Research - VSP 360 AIOps | Analyst Report",
+          "type": "Analyst Report",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "451 Research - VSP 360 AIOps",
           "score": 6
         },
         {
@@ -367,14 +375,6 @@
           "campaign": "Data Modernization & Resilience",
           "useCase": "Data Platform Architectures & Economics",
           "url": "451 Research - VSP 360 AIOps SLA as Code",
-          "score": 6
-        },
-        {
-          "title": "451 Research - VSP 360 AIOps | Analyst Report",
-          "type": "Analyst Report",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "451 Research - VSP 360 AIOps",
           "score": 6
         }
       ]
@@ -417,14 +417,6 @@
           "score": 6
         },
         {
-          "title": "Why Hitachi Vantara | eBook",
-          "type": "eBook",
-          "campaign": "AI Data Foundation, Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery, Data Platform Architectures & Economics, Data Readiness and Activation for AI, High Performance AI-Ready Infrastructure, Hybrid Cloud Platform & Operations",
-          "url": "Why Hitachi Vantara",
-          "score": 3
-        },
-        {
           "title": "Bringing Storage Native Analytics To The Data | Video",
           "type": "Video",
           "campaign": "AI Data Foundation, Data Modernization & Resilience",
@@ -438,6 +430,14 @@
           "campaign": "AI Data Foundation, Data Modernization & Resilience",
           "useCase": "Cyber Risk Mitigation & Recovery, Data Platform Architectures & Economics, Data Readiness and Activation for AI, High Performance AI-Ready Infrastructure, Hybrid Cloud Platform & Operations",
           "url": "Hitachi Vantara Corporate Narrative",
+          "score": 3
+        },
+        {
+          "title": "Hitachi Vantara Product Overview | Resource",
+          "type": "Resource",
+          "campaign": "AI Data Foundation, Data Modernization & Resilience",
+          "useCase": "Cyber Risk Mitigation & Recovery, Data Platform Architectures & Economics, Data Readiness and Activation for AI, High Performance AI-Ready Infrastructure, Hybrid Cloud Platform & Operations",
+          "url": "Hitachi Vantara Product Overview",
           "score": 3
         }
       ]
@@ -472,14 +472,6 @@
       "sourceRow": 8,
       "relatedResources": [
         {
-          "title": "EDUCAUSE Webinar: Resilience in the AI Era | Webinar",
-          "type": "Webinar",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "EDUCAUSE Webinar: Resilience in the AI Era",
-          "score": 6
-        },
-        {
           "title": "451 Research: Boost Resiliency and Performance for Modern Data Infrastructures | Analyst Report",
           "type": "Analyst Report",
           "campaign": "Data Modernization & Resilience",
@@ -493,6 +485,14 @@
           "campaign": "Data Modernization & Resilience",
           "useCase": "Cyber Risk Mitigation & Recovery",
           "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/solution-profile/7-layer-defense-one-trusted-partner.pdf",
+          "score": 6
+        },
+        {
+          "title": "Achieve Cyber  Resilience With  a Risk-Optimized  Data Foundation | Solution Profile",
+          "type": "Solution Profile",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Cyber Risk Mitigation & Recovery",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/solution-profile/cyber-resilience-solution-profile.pdf",
           "score": 6
         },
         {
@@ -535,11 +535,19 @@
       "sourceRow": 9,
       "relatedResources": [
         {
-          "title": "Esteyco Customer Story | Video",
-          "type": "Video",
+          "title": "2026 Magic Quadrant for Infrastructure Platform Consumption Services | Analyst Report",
+          "type": "Analyst Report",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Data Platform Architectures & Economics",
-          "url": "Esteyco Customer Story",
+          "url": "https://www.hitachivantara.com/en-us/ext/gartner-magic-quadrant-for-infrastructure-platform-consumption-services",
+          "score": 6
+        },
+        {
+          "title": "451 Research - VSP 360 AIOps | Analyst Report",
+          "type": "Analyst Report",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "451 Research - VSP 360 AIOps",
           "score": 6
         },
         {
@@ -556,14 +564,6 @@
           "campaign": "Data Modernization & Resilience",
           "useCase": "Data Platform Architectures & Economics",
           "url": "451 Research - VSP 360 AIOps SLA as Code",
-          "score": 6
-        },
-        {
-          "title": "451 Research - VSP 360 AIOps | Analyst Report",
-          "type": "Analyst Report",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "451 Research - VSP 360 AIOps",
           "score": 6
         }
       ]
@@ -598,14 +598,6 @@
       "sourceRow": 10,
       "relatedResources": [
         {
-          "title": "EDUCAUSE Webinar: Resilience in the AI Era | Webinar",
-          "type": "Webinar",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "EDUCAUSE Webinar: Resilience in the AI Era",
-          "score": 6
-        },
-        {
           "title": "451 Research: Boost Resiliency and Performance for Modern Data Infrastructures | Analyst Report",
           "type": "Analyst Report",
           "campaign": "Data Modernization & Resilience",
@@ -619,6 +611,14 @@
           "campaign": "Data Modernization & Resilience",
           "useCase": "Cyber Risk Mitigation & Recovery",
           "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/solution-profile/7-layer-defense-one-trusted-partner.pdf",
+          "score": 6
+        },
+        {
+          "title": "Achieve Cyber  Resilience With  a Risk-Optimized  Data Foundation | Solution Profile",
+          "type": "Solution Profile",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Cyber Risk Mitigation & Recovery",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/solution-profile/cyber-resilience-solution-profile.pdf",
           "score": 6
         },
         {
@@ -661,14 +661,6 @@
       "sourceRow": 11,
       "relatedResources": [
         {
-          "title": "EDUCAUSE Webinar: Resilience in the AI Era | Webinar",
-          "type": "Webinar",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Cyber Risk Mitigation & Recovery",
-          "url": "EDUCAUSE Webinar: Resilience in the AI Era",
-          "score": 6
-        },
-        {
           "title": "451 Research: Boost Resiliency and Performance for Modern Data Infrastructures | Analyst Report",
           "type": "Analyst Report",
           "campaign": "Data Modernization & Resilience",
@@ -682,6 +674,14 @@
           "campaign": "Data Modernization & Resilience",
           "useCase": "Cyber Risk Mitigation & Recovery",
           "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/solution-profile/7-layer-defense-one-trusted-partner.pdf",
+          "score": 6
+        },
+        {
+          "title": "Achieve Cyber  Resilience With  a Risk-Optimized  Data Foundation | Solution Profile",
+          "type": "Solution Profile",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Cyber Risk Mitigation & Recovery",
+          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/solution-profile/cyber-resilience-solution-profile.pdf",
           "score": 6
         },
         {
@@ -754,11 +754,11 @@
       "sourceRow": 13,
       "relatedResources": [
         {
-          "title": "2026 GigaOm Rader for High-Performance Storage Optimized for AI Workloads | Analyst Report | Analyst Report",
-          "type": "Analyst Report",
+          "title": "10 Reasons to Buy, Build, or Borrow AI Implementation | eBook",
+          "type": "eBook",
           "campaign": "AI Data Foundation",
           "useCase": "High Performance AI-Ready Infrastructure",
-          "url": "2026 GigaOm Rader for High-Performance Storage Optimized for AI Workloads | Analyst Report",
+          "url": "https://www.hitachivantara.com/en-us/gated-forms/ten-reasons-buy-build-borrow-ai-implementation",
           "score": 6
         },
         {
@@ -770,19 +770,19 @@
           "score": 6
         },
         {
+          "title": "2026 GigaOm Rader for High-Performance Storage Optimized for AI Workloadst | Analyst Report",
+          "type": "Analyst Report",
+          "campaign": "AI Data Foundation",
+          "useCase": "High Performance AI-Ready Infrastructure",
+          "url": "2026 GigaOm Rader for High-Performance Storage Optimized for AI Workloadst",
+          "score": 6
+        },
+        {
           "title": "451 Research: Market Hitachi Vantara's iQ Increases AI Storage Momentum, Adds AI Recovery Capabilities | Analyst Report",
           "type": "Analyst Report",
           "campaign": "AI Data Foundation",
           "useCase": "High Performance AI-Ready Infrastructure",
           "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/analyst-content/iq-increases-ai-storage-momentum-adds-ai-recovery-capabilities.pdf",
-          "score": 6
-        },
-        {
-          "title": "Accelerate Your AI Success: Use Case & ROI Guide eBook | eBook",
-          "type": "eBook",
-          "campaign": "AI Data Foundation",
-          "useCase": "High Performance AI-Ready Infrastructure",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/accelerate-your-ai-success",
           "score": 6
         }
       ]
@@ -825,6 +825,14 @@
           "score": 6
         },
         {
+          "title": "AI Starts with the Data: Rethinking High-Performance Analytics at the Source | Webinar",
+          "type": "Webinar",
+          "campaign": "AI Data Foundation",
+          "useCase": "Data Readiness and Activation for AI, High Performance AI-Ready Infrastructure",
+          "url": "AI Starts with the Data: Rethinking High-Performance Analytics at the Source",
+          "score": 6
+        },
+        {
           "title": "Campaign Landing Page - AI | Landing Page",
           "type": "Landing Page",
           "campaign": "AI Data Foundation",
@@ -838,14 +846,6 @@
           "campaign": "AI Data Foundation",
           "useCase": "Data Readiness and Activation for AI, High Performance AI-Ready Infrastructure",
           "url": "https://www.hitachivantara.com/en-us/featured/experience-ai-iq-studio",
-          "score": 6
-        },
-        {
-          "title": "Hitachi iQ M Series | Solution Profile",
-          "type": "Solution Profile",
-          "campaign": "AI Data Foundation",
-          "useCase": "Data Readiness and Activation for AI, High Performance AI-Ready Infrastructure",
-          "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/solution-profile/iq-m-series-product-brief.pdf",
           "score": 6
         }
       ]
@@ -943,11 +943,11 @@
       "sourceRow": 16,
       "relatedResources": [
         {
-          "title": "2026 GigaOm Rader for High-Performance Storage Optimized for AI Workloads | Analyst Report | Analyst Report",
-          "type": "Analyst Report",
+          "title": "10 Reasons to Buy, Build, or Borrow AI Implementation | eBook",
+          "type": "eBook",
           "campaign": "AI Data Foundation",
           "useCase": "High Performance AI-Ready Infrastructure",
-          "url": "2026 GigaOm Rader for High-Performance Storage Optimized for AI Workloads | Analyst Report",
+          "url": "https://www.hitachivantara.com/en-us/gated-forms/ten-reasons-buy-build-borrow-ai-implementation",
           "score": 6
         },
         {
@@ -959,19 +959,19 @@
           "score": 6
         },
         {
+          "title": "2026 GigaOm Rader for High-Performance Storage Optimized for AI Workloadst | Analyst Report",
+          "type": "Analyst Report",
+          "campaign": "AI Data Foundation",
+          "useCase": "High Performance AI-Ready Infrastructure",
+          "url": "2026 GigaOm Rader for High-Performance Storage Optimized for AI Workloadst",
+          "score": 6
+        },
+        {
           "title": "451 Research: Market Hitachi Vantara's iQ Increases AI Storage Momentum, Adds AI Recovery Capabilities | Analyst Report",
           "type": "Analyst Report",
           "campaign": "AI Data Foundation",
           "useCase": "High Performance AI-Ready Infrastructure",
           "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/analyst-content/iq-increases-ai-storage-momentum-adds-ai-recovery-capabilities.pdf",
-          "score": 6
-        },
-        {
-          "title": "Accelerate Your AI Success: Use Case & ROI Guide eBook | eBook",
-          "type": "eBook",
-          "campaign": "AI Data Foundation",
-          "useCase": "High Performance AI-Ready Infrastructure",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/accelerate-your-ai-success",
           "score": 6
         }
       ]
@@ -1069,11 +1069,19 @@
       "sourceRow": 18,
       "relatedResources": [
         {
-          "title": "Esteyco Customer Story | Video",
-          "type": "Video",
+          "title": "2026 Magic Quadrant for Infrastructure Platform Consumption Services | Analyst Report",
+          "type": "Analyst Report",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Data Platform Architectures & Economics",
-          "url": "Esteyco Customer Story",
+          "url": "https://www.hitachivantara.com/en-us/ext/gartner-magic-quadrant-for-infrastructure-platform-consumption-services",
+          "score": 6
+        },
+        {
+          "title": "451 Research - VSP 360 AIOps | Analyst Report",
+          "type": "Analyst Report",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "451 Research - VSP 360 AIOps",
           "score": 6
         },
         {
@@ -1090,14 +1098,6 @@
           "campaign": "Data Modernization & Resilience",
           "useCase": "Data Platform Architectures & Economics",
           "url": "451 Research - VSP 360 AIOps SLA as Code",
-          "score": 6
-        },
-        {
-          "title": "451 Research - VSP 360 AIOps | Analyst Report",
-          "type": "Analyst Report",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "451 Research - VSP 360 AIOps",
           "score": 6
         }
       ]
@@ -1132,11 +1132,19 @@
       "sourceRow": 19,
       "relatedResources": [
         {
-          "title": "Esteyco Customer Story | Video",
-          "type": "Video",
+          "title": "2026 Magic Quadrant for Infrastructure Platform Consumption Services | Analyst Report",
+          "type": "Analyst Report",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Data Platform Architectures & Economics",
-          "url": "Esteyco Customer Story",
+          "url": "https://www.hitachivantara.com/en-us/ext/gartner-magic-quadrant-for-infrastructure-platform-consumption-services",
+          "score": 6
+        },
+        {
+          "title": "451 Research - VSP 360 AIOps | Analyst Report",
+          "type": "Analyst Report",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "451 Research - VSP 360 AIOps",
           "score": 6
         },
         {
@@ -1153,14 +1161,6 @@
           "campaign": "Data Modernization & Resilience",
           "useCase": "Data Platform Architectures & Economics",
           "url": "451 Research - VSP 360 AIOps SLA as Code",
-          "score": 6
-        },
-        {
-          "title": "451 Research - VSP 360 AIOps | Analyst Report",
-          "type": "Analyst Report",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "451 Research - VSP 360 AIOps",
           "score": 6
         }
       ]
@@ -1195,11 +1195,19 @@
       "sourceRow": 20,
       "relatedResources": [
         {
-          "title": "Esteyco Customer Story | Video",
-          "type": "Video",
+          "title": "2026 Magic Quadrant for Infrastructure Platform Consumption Services | Analyst Report",
+          "type": "Analyst Report",
           "campaign": "Data Modernization & Resilience",
           "useCase": "Data Platform Architectures & Economics",
-          "url": "Esteyco Customer Story",
+          "url": "https://www.hitachivantara.com/en-us/ext/gartner-magic-quadrant-for-infrastructure-platform-consumption-services",
+          "score": 6
+        },
+        {
+          "title": "451 Research - VSP 360 AIOps | Analyst Report",
+          "type": "Analyst Report",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "451 Research - VSP 360 AIOps",
           "score": 6
         },
         {
@@ -1216,14 +1224,6 @@
           "campaign": "Data Modernization & Resilience",
           "useCase": "Data Platform Architectures & Economics",
           "url": "451 Research - VSP 360 AIOps SLA as Code",
-          "score": 6
-        },
-        {
-          "title": "451 Research - VSP 360 AIOps | Analyst Report",
-          "type": "Analyst Report",
-          "campaign": "Data Modernization & Resilience",
-          "useCase": "Data Platform Architectures & Economics",
-          "url": "451 Research - VSP 360 AIOps",
           "score": 6
         }
       ]
@@ -1266,19 +1266,19 @@
           "score": 6
         },
         {
-          "title": "2026 GigaOm Radar for Unstructured Data Management (UDM) | Analyst Report",
-          "type": "Analyst Report",
-          "campaign": "AI Data Foundation",
-          "useCase": "Data Readiness and Activation for AI",
-          "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-unstructured-data-management-2026",
-          "score": 6
-        },
-        {
           "title": "2026 GigaOm Radar for Object Storage Analyst Report | Analyst Report",
           "type": "Analyst Report",
           "campaign": "AI Data Foundation",
           "useCase": "Data Readiness and Activation for AI",
           "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-radar-for-object-storage",
+          "score": 6
+        },
+        {
+          "title": "2026 GigaOm Radar for Unstructured Data Management (UDM) | Analyst Report",
+          "type": "Analyst Report",
+          "campaign": "AI Data Foundation",
+          "useCase": "Data Readiness and Activation for AI",
+          "url": "https://www.hitachivantara.com/en-us/gated-forms/gigaom-unstructured-data-management-2026",
           "score": 6
         },
         {
