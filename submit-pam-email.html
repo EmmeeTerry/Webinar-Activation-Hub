@@ -1,21 +1,56 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Prepare a PAM email template | Hitachi Vantara</title><style>body{font:14px/1.5 'Segoe UI',Arial,sans-serif;margin:0;background:#f4f4f5;color:#222}header{background:#ce0000;color:white;padding:20px max(20px,calc((100% - 970px)/2))}h1{font-size:25px;margin:0}main{max-width:970px;margin:24px auto;padding:0 18px}.panel{background:white;border:1px solid #ddd;padding:20px;margin-bottom:16px}input,select{display:block;width:100%;padding:10px;margin:6px 0 14px;border:1px solid #aaa;box-sizing:border-box}label{font-weight:600}.composer{border:1px solid #aaa;min-height:220px;padding:15px;outline-offset:3px;white-space:pre-wrap}.composer a{color:#095aa6}button,.btn{display:inline-block;border:1px solid #aa0000;background:#ce0000;color:#fff;padding:12px 16px;font-weight:600;cursor:pointer;text-decoration:none;margin:5px 8px 5px 0}button.secondary,.btn.secondary{background:white;color:#a00}.muted{color:#555}.warn{border-left:4px solid #bc6a00;padding:12px;background:#fff8ed}#status{font-weight:600}pre{white-space:pre-wrap}a{color:#a00}</style></head><body><header><small>HITACHI VANTARA / PARTNER PROGRAMS</small><h1>Prepare a reusable PAM email template</h1><p>Paste a formatted email from Outlook or import an HTML email. Keep clickable links attached to the right words.</p></header><main><div class="panel"><p class="warn"><b>Important:</b> The PAM Hub is on public GitHub Pages. Only prepare material approved for public hosting here. Do not upload private partner communications or confidential information.</p><label for="subject">Email subject</label><input id="subject" placeholder="Email subject"><label for="category">Email category</label><select id="category"><option>Partner Communications</option><option>Partner Webinars</option><option>Data Platform Architecture &amp; Economics</option><option>Hybrid Cloud Platform Optimization</option><option>Cyber Resilience &amp; Modern Recovery</option><option>Relationship Building</option></select><label for="region">Region</label><select id="region"><option>Global</option><option>North America</option><option>EMEA</option><option>APAC</option><option>LATAM</option></select><label for="file">Optional: import an HTML email (.html, .htm) or saved plain-text email (.eml)</label><input type="file" id="file" accept=".html,.htm,.eml,text/html,message/rfc822"><p class="muted">Outlook .msg and .oft are not supported by this importer. Open the message in Outlook, copy the formatted message body, and paste below to preserve clickable links.</p><label for="body">Email body (paste from Outlook)</label><div id="body" class="composer" contenteditable="true" role="textbox" aria-label="Paste formatted email body here"></div><p><button type="button" id="preview">Preview converted template</button><button type="button" class="secondary" id="download">Download submission file</button></p><div id="status" aria-live="polite"></div></div><div class="panel"><h2>Converted template preview</h2><p class="muted">This converts each hyperlink to a labeled link that the PAM Hub can render as clickable text in formatted Outlook drafts.</p><pre id="out"></pre></div><div class="panel"><h2>Publish to the shared repository</h2><p>Once the submission file is downloaded, a GitHub repository collaborator can upload it to the <code>pam-email-submissions</code> folder. The repository workflow validates and publishes it into the existing PAM email library automatically. This is a temporary handoff until an approved internal upload connector is available.</p><a class="btn secondary" href="https://github.com/EmmeeTerry/Webinar-Activation-Hub/upload/main/pam-email-submissions" target="_blank" rel="noopener">Upload prepared template to GitHub ↗</a><a class="btn secondary" href="./pam-email-hub.html">Return to PAM Email Hub ↗</a><p class="muted">The upload is an explicit publishing step. This page does not transmit pasted emails to any service or publish them automatically.</p></div></main><script>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Prepare a PAM email template | Hitachi Vantara</title><style>body{font:14px/1.5 'Segoe UI',Arial,sans-serif;margin:0;background:#f4f4f5;color:#222}header{background:#ce0000;color:white;padding:20px max(20px,calc((100% - 970px)/2))}h1{font-size:25px;margin:0}main{max-width:970px;margin:24px auto;padding:0 18px}.panel{background:white;border:1px solid #ddd;padding:20px;margin-bottom:16px}input,select{display:block;width:100%;padding:10px;margin:6px 0 14px;border:1px solid #aaa;box-sizing:border-box}label{font-weight:600}.composer{border:1px solid #aaa;min-height:220px;padding:15px;outline-offset:3px;white-space:pre-wrap}.composer a{color:#095aa6}button,.btn{display:inline-block;border:1px solid #aa0000;background:#ce0000;color:#fff;padding:12px 16px;font-weight:600;cursor:pointer;text-decoration:none;margin:5px 8px 5px 0}button.secondary,.btn.secondary{background:white;color:#a00}.muted{color:#555}.warn{border-left:4px solid #bc6a00;padding:12px;background:#fff8ed}#status{font-weight:600}pre{white-space:pre-wrap}a{color:#a00}</style></head><body><header><small>HITACHI VANTARA / PARTNER PROGRAMS</small><h1>Prepare a reusable PAM email template</h1><p>Paste a formatted email from Outlook or import an HTML email. Keep clickable links attached to the right words.</p></header><main><div class="panel"><p class="warn"><b>Important:</b> The PAM Hub is on public GitHub Pages. Only prepare material approved for public hosting here. Do not upload private partner communications or confidential information.</p><label for="subject">Email subject</label><input id="subject" placeholder="Email subject"><label for="category">Email category</label><select id="category"><option>Partner Communications</option><option>Partner Webinars</option><option>Data Platform Architecture &amp; Economics</option><option>Hybrid Cloud Platform Optimization</option><option>Cyber Resilience &amp; Modern Recovery</option><option>Relationship Building</option></select><label for="region">Region</label><select id="region"><option>Global</option><option>North America</option><option>EMEA</option><option>APAC</option><option>LATAM</option></select><label for="file">Optional: import an HTML email (.html, .htm) or saved plain-text email (.eml)</label><input type="file" id="file" accept=".html,.htm,.eml,text/html,message/rfc822"><p class="muted">Outlook .msg and .oft are not supported by this importer. Open the message in Outlook, copy the formatted message body, and paste below to preserve clickable links.</p><label for="body">Email body (paste from Outlook)</label><div id="body" class="composer" contenteditable="true" role="textbox" aria-label="Paste formatted email body here"></div><p><button type="button" id="preview">Preview converted template</button><button type="button" class="secondary" id="download">Download submission file</button></p><div id="status" aria-live="polite"></div></div><div class="panel"><h2>Converted template preview</h2><p class="muted">This converts each hyperlink to a labeled link that the PAM Hub can render as clickable text in formatted Outlook drafts.</p><div id="out" style="white-space:pre-wrap;border:1px solid #ddd;border-radius:4px;padding:18px;font:15px/1.65 'Segoe UI',Arial,sans-serif;overflow-wrap:anywhere"></div></div><div class="panel"><h2>Publish to the shared repository</h2><p>Once the submission file is downloaded, a GitHub repository collaborator can upload it to the <code>pam-email-submissions</code> folder. The repository workflow validates and publishes it into the existing PAM email library automatically. This is a temporary handoff until an approved internal upload connector is available.</p><a class="btn secondary" href="https://github.com/EmmeeTerry/Webinar-Activation-Hub/upload/main/pam-email-submissions" target="_blank" rel="noopener">Upload prepared template to GitHub ↗</a><a class="btn secondary" href="./pam-email-hub.html">Return to PAM Email Hub ↗</a><p class="muted">The upload is an explicit publishing step. This page does not transmit pasted emails to any service or publish them automatically.</p></div></main><script>
 const el=id=>document.getElementById(id);
 const esc=v=>String(v||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-function convert(){
- const temp=el('body').cloneNode(true);
- temp.querySelectorAll('script,style,iframe,form,svg,img,object,embed').forEach(x=>x.remove());
- temp.querySelectorAll('a[href]').forEach(a=>{
-   const u=a.getAttribute('href')||'';
-   const text=(a.textContent||'Link').replace(/\s+/g,' ').trim()||'Link';
-   if(/^https:\/\//i.test(u)){a.replaceWith(document.createTextNode(text+' ↗ '+u));}
-   else a.replaceWith(document.createTextNode(text));
- });
- const out=[];
- const walk=n=>{if(n.nodeType===3){out.push(n.nodeValue)}else if(n.nodeType===1){const tag=n.nodeName.toLowerCase();if(['br'].includes(tag))out.push('\n');if(['p','div','li','h1','h2','h3'].includes(tag))out.push('\n');Array.from(n.childNodes).forEach(walk);if(['p','div','li','h1','h2','h3'].includes(tag))out.push('\n')}};
- Array.from(temp.childNodes).forEach(walk);
- return out.join('').replace(/\u00a0/g,' ').replace(/\n{3,}/g,'\n\n').trim();
+function cleanUrl(url){
+ try {
+  const u=new URL(url);
+  if(!/^https:$/.test(u.protocol))return '';
+  if(/(^|\.)safelinks\.protection\.outlook\.com$/i.test(u.hostname)){
+    const destination=u.searchParams.get('url');
+    if(destination&&/^https:\/\//i.test(destination))return destination;
+  }
+  return u.href;
+ }catch(e){return ''}
 }
-function output(){const subj=el('subject').value.trim(),body=convert();el('out').textContent='Subject: '+subj+'\n\n'+body;return{subj,body}}
+function prepared(){
+ const subject=el('subject').value.trim();
+ const temp=el('body').cloneNode(true);
+ temp.querySelectorAll('script,style,iframe,form,svg,img,object,embed').forEach(n=>n.remove());
+ const out=[],parts=[];
+ const push=(txt)=>{if(txt){out.push(txt);parts.push({text:txt})}};
+ const traverse=node=>{
+  if(node.nodeType===3){push(node.nodeValue);return}
+  if(node.nodeType!==1)return;
+  const tag=node.tagName.toLowerCase();
+  if(tag==='br'){push('\n');return}
+  if(tag==='a'){
+   const label=(node.textContent||'Open resource').replace(/\s+/g,' ').trim()||'Open resource';
+   const href=cleanUrl(node.getAttribute('href')||'');
+   if(href){out.push(label+' ↗ '+href);parts.push({label,url:href});}
+   else push(label);
+   return;
+  }
+  if(['p','div','li','h1','h2','h3','tr'].includes(tag))push('\n');
+  for(const child of node.childNodes)traverse(child);
+  if(['p','div','li','h1','h2','h3','tr'].includes(tag))push('\n');
+ };
+ for(const child of temp.childNodes)traverse(child);
+ const body=out.join('').replace(/\u00a0/g,' ').replace(/\n{3,}/g,'\n\n').trim();
+ // Build a safe readable preview from the same parsed nodes; do not reveal URL query strings.
+ const preview=document.createElement('div');
+ const heading=document.createElement('h3');heading.textContent=subject;preview.append(heading);
+ const para=document.createElement('div');
+ for(const part of parts){
+   if(part.url){const link=document.createElement('a');link.textContent=part.label;link.href=part.url;link.target='_blank';link.rel='noopener noreferrer';para.append(link)}
+   else para.append(document.createTextNode(part.text));
+ }
+ preview.append(para);
+ return{subject,body,preview};
+}
+function output(){
+ const result=prepared();el('out').replaceChildren(result.preview);
+ return{subj:result.subject,body:result.body};
+}
 el('preview').onclick=output;
 el('download').onclick=()=>{
  const {subj,body}=output();
