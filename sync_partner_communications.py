@@ -63,7 +63,7 @@ def create_email(row):
                 "Best,\n[Your Name]\nPartner Account Manager | Hitachi Vantara")
     ref = clean(row.get("Submission ID"), 90) or clean(row.get("_row_id"), 90)
     slug = re.sub(r"[^a-z0-9]+", "-", ref.lower()).strip("-")
-    return dict(id="partner-submission-"+slug, category="Partner Webinars" if kind == "Partner Webinar" else "Partner Communications",
+    return dict(id="partner-submission-"+slug, category=("Partner Webinars" if kind == "Partner Webinar" else "Program Update" if kind == "Program Update" else "Training" if kind == "Training" else "Incentive" if kind == "Incentive" else "Event" if kind == "Event" else "Announcement" if kind == "Announcement" else "Partner Communications"),
                 title=title, subject=title + " | Hitachi Vantara Partner Update", body=body,
                 objective="Campaign promotion", region=clean(row.get("Region"), 60) or "Global",
                 status="Owner-confirmed", audience="Partner-only" if access else "Partners",
