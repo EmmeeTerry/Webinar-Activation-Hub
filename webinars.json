@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-11-02T08:43:26.834941+00:00",
+  "lastRefreshed": "2026-11-02T19:55:22.525042+00:00",
   "webinars": [
     {
       "id": "the-economics-of-modern-storage-infrastructure-lower-risk-faster-ai-value-better-roi",
@@ -729,7 +729,7 @@
       "title": "Powering the AI Factory: From Distributed Data to Trusted Outcomes",
       "date": "2026-11-19",
       "dateDisplay": "Nov 19, 2026",
-      "status": "Planned",
+      "status": "Upcoming",
       "campaign": "AI Data Foundation",
       "useCase": "High Performance AI-Ready Infrastructure",
       "audience": "Enterprise",
@@ -737,14 +737,14 @@
       "owner": "Stephanie Thompson, Steven Garbrecht",
       "quarter": "Q3",
       "partnerReady": true,
-      "activationStatus": "Not Started",
-      "readiness": "Planning",
+      "activationStatus": "Partial",
+      "readiness": "Partially ready",
       "whyUse": "Use this for enterprise conversations around high performance ai-ready infrastructure.",
       "abstract": "Moving AI from pilot to production takes more than a successful model. It requires trusted data, AI-ready infrastructure, intelligent workload placement, resilient operations, and a repeatable way to manage them at scale.\nIn this webinar, Hitachi Vantara experts explore how an AI Factory operating model can turn distributed data into dependable outcomes without forcing everything to move first. Using a real-world power utility scenario, they will show how to place workloads based on sovereignty, performance, control, and cost; operate across mixed environments; and build cyber resilience and business continuity into production AI from the outset.\nJoin us to learn the practical decisions that can help your organization close the gap between AI experimentation and a scalable, governed production service\u2014and keep it operating, optimized, protected, and ready to deliver measurable business value.",
       "links": {
-        "watch": null,
-        "marketingEmail": null,
-        "salesEmail": null,
+        "watch": "https://www.brighttalk.com/webcast/12821/678465",
+        "marketingEmail": "https://hitachivantara.sharepoint.com/:w:/s/GlobalCampaignsAssets505/IQBFJAxcyf2ERJtivwicTpksAUGE1rjFZ1uF2PltCGez5OQ?e=FoPZg8",
+        "salesEmail": "https://hitachivantara.sharepoint.com/:w:/s/GlobalCampaignsAssets505/IQCmIkNUeK2TT71432dyoHjlASQelwA2WIGcL-N19KNY1PI?e=hVwfqm",
         "sdrEmail": null,
         "paidSocial": null,
         "social": null,
