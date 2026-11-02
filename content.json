@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-11-02T09:42:54.039021+00:00",
+  "lastRefreshed": "2026-11-02T20:26:01.130560+00:00",
   "items": [
     {
       "id": "10-reasons-to-buy-build-or-borrow-ai-implementation-ebook-1",
@@ -324,12 +324,12 @@
       "ownerIndividual": "Richard Jew",
       "publishedByVendor": "451 Research",
       "notes": "",
-      "actionRequired": "",
+      "actionRequired": "Update status or revise publish date",
       "abstract": "",
       "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q3",
-      "issueType": ""
+      "issueType": "Overdue"
     },
     {
       "id": "451-research-vsp-360-aiops-sla-as-code-analyst-report-11",
@@ -456,12 +456,12 @@
       "ownerIndividual": "Jeff Lundberg",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "H1",
-      "actionRequired": "",
+      "actionRequired": "Review content freshness (12+ months)",
       "abstract": "",
       "partnerCampaignLink": "https://www.partnermarketing.hitachivantara.com/ai-data-foundation",
       "fiscalYear": "FY26",
       "fiscalQuarter": "Q3",
-      "issueType": ""
+      "issueType": "; 12+ Months Old"
     },
     {
       "id": "451-research-modernizing-mission-critical-storage-analyst-report-analyst-report-15",
@@ -563,8 +563,8 @@
       "issueType": "; 12+ Months Old"
     },
     {
-      "id": "a-buyer-s-guide-to-hitachi-vantara-virtual-storage-platform-one-bloc-ebook-18",
-      "title": "A Buyer\u2019s Guide to Hitachi  Vantara Virtual Storage  Platform One Bloc | eBook",
+      "id": "a-buyer-s-guide-to-hitachi-vantara-virtual-storage-platform-one-block-ebook-18",
+      "title": "A Buyer\u2019s Guide to Hitachi  Vantara Virtual Storage  Platform One Block | eBook",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/buyers-guide-to-virtual-storage-platform-one-block.pdf",
       "type": "eBook",
       "campaign": "Data Modernization & Resilience",
@@ -1993,8 +1993,8 @@
       "audience": "Enterprise, Midmarket",
       "status": "In Production",
       "region": "Global",
-      "publishDate": "2026-10-29",
-      "publishDateDisplay": "Oct 29, 2026",
+      "publishDate": "2026-11-05",
+      "publishDateDisplay": "Nov 05, 2026",
       "partnerUse": false,
       "paidMediaDate": null,
       "paidMediaDateDisplay": "",
@@ -2598,15 +2598,15 @@
       "sdrEmail": null,
       "usedInCampaign": "No",
       "promotionPeriod": "2H",
-      "ownerIndividual": "Angela Romberg, Michelle Salta",
+      "ownerIndividual": "Angela Romberg, Jennifer Schmitz",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "planned",
-      "actionRequired": "",
+      "actionRequired": "Update status or revise publish date",
       "abstract": "",
       "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q3",
-      "issueType": ""
+      "issueType": "Overdue"
     },
     {
       "id": "european-financial-services-company-resilience-compliance-and-cost-savings-with-dpaas-cust-80",
@@ -2667,12 +2667,12 @@
       "ownerIndividual": "Steven Garbrecht",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "",
-      "actionRequired": "",
+      "actionRequired": "Update status or revise publish date",
       "abstract": "",
       "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q3",
-      "issueType": ""
+      "issueType": "Overdue"
     },
     {
       "id": "everflex-data-protection-as-a-service-video-82",
@@ -3995,8 +3995,8 @@
       "issueType": ""
     },
     {
-      "id": "the-guide-to-cyber-operational-resilience-blog-122",
-      "title": "The Guide to Cyber & Operational Resilience | Blog",
+      "id": "the-guide-to-cyber-operational-resilience-tier-2-launch-blog-integrated-resilience-blog-122",
+      "title": "The Guide to Cyber & Operational Resilience (Tier 2 Launch Blog: Integrated Resilience) | Blog",
       "url": null,
       "type": "Blog",
       "campaign": "Data Modernization & Resilience",
@@ -4020,12 +4020,12 @@
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "",
-      "actionRequired": "Review for possible duplicate",
+      "actionRequired": "",
       "abstract": "",
       "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q4",
-      "issueType": "; Duplicate"
+      "issueType": ""
     },
     {
       "id": "hitachi-vantara-and-veeam-for-cyber-resilience-whitepaper-123",
@@ -5746,7 +5746,7 @@
     {
       "id": "powering-the-ai-factory-from-distributed-data-to-trusted-outcomes-webinar-175",
       "title": "Powering the AI Factory: From Distributed Data to Trusted Outcomes | Webinar",
-      "url": null,
+      "url": "https://www.brighttalk.com/webcast/12821/678465",
       "type": "Webinar",
       "campaign": "AI Data Foundation",
       "useCase": "High Performance AI-Ready Infrastructure",
@@ -5762,7 +5762,7 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Webinar Syndication, Outbound Email, Paid Social, Organic Social, Sales Email",
       "marketingEmail": null,
-      "salesEmail": null,
+      "salesEmail": "https://hitachivantara.sharepoint.com/:w:/s/GlobalCampaignsAssets505/IQCmIkNUeK2TT71432dyoHjlASQelwA2WIGcL-N19KNY1PI?e=hVwfqm",
       "sdrEmail": null,
       "usedInCampaign": "No",
       "promotionPeriod": "2H",
@@ -6844,8 +6844,8 @@
       "audience": "Enterprise, Midmarket",
       "status": "In Production",
       "region": "Global",
-      "publishDate": "2026-10-29",
-      "publishDateDisplay": "Oct 29, 2026",
+      "publishDate": "2026-11-03",
+      "publishDateDisplay": "Nov 03, 2026",
       "partnerUse": true,
       "paidMediaDate": null,
       "paidMediaDateDisplay": "",
@@ -8692,8 +8692,8 @@
       "audience": "Enterprise, Midmarket",
       "status": "In Production",
       "region": "Global",
-      "publishDate": "2026-11-02",
-      "publishDateDisplay": "Nov 02, 2026",
+      "publishDate": "2026-11-09",
+      "publishDateDisplay": "Nov 09, 2026",
       "partnerUse": false,
       "paidMediaDate": null,
       "paidMediaDateDisplay": "",
@@ -8843,7 +8843,7 @@
       "partnerCampaignLink": null,
       "fiscalYear": "",
       "fiscalQuarter": "",
-      "issueType": "; No Date; Duplicate"
+      "issueType": "; No Date"
     }
   ]
 }
