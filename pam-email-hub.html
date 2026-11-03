@@ -33,41 +33,56 @@ const encode=(v)=>encodeURIComponent(v);
 function email(){return 'mailto:?subject='+encode($('subject').value)+'&body='+encode($('body').value)}
 function download(content,name,type){const blob=new Blob([content],{type});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=name;document.body.append(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},1000)}
 function htmlEsc(v){return String(v).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
-function sanitizeEmailHtml(html){
+function sanitizePreservedEmail(html){
  const doc=new DOMParser().parseFromString(html,'text/html');
- doc.querySelectorAll('script,iframe,form,svg,object,embed,link,meta,base,video,audio').forEach(n=>n.remove());
- // The original Outlook HTML relies on nested tables, dimension attributes and inline styles.
- // HTML parsers move leading email <style> blocks into <head>. Keep safe ones when serializing the body.
- const safeEmailStyles=[...doc.querySelectorAll('style')].map(node=>node.textContent||'').filter(css=>!/@import|@font-face|url\s*\(|expression\s*\(|<\//i.test(css));
- doc.querySelectorAll('style').forEach(node=>node.remove());
- const allowedAttrs=new Set(['href','target','rel','title','style','class','id','name','src','alt','width','height','border','cellspacing','cellpadding','align','valign','colspan','rowspan','bgcolor','role','dir']);
- for(const node of [...doc.body.querySelectorAll('*')]){
-  if(node.tagName==='STYLE'){
-   const css=node.textContent||'';
-   if(/@import|@font-face|url\s*\(|expression\s*\(|<\/|[{}]\s*@/i.test(css))node.remove();
-   continue;
+ doc.querySelectorAll('script,iframe,form,svg,object,embed,link,meta,base,video,audio,button,input,textarea,select').forEach(n=>n.remove());
+ const safeUrl=(value,allowImage=false)=>{
+  const v=(value||'').trim();
+  if(/^https:\/\//i.test(v))return v;
+  if(allowImage&&/^data:image\/(?:png|jpeg|gif|webp);base64,[a-z0-9+/=\s]+$/i.test(v)&&v.length<250000)return v;
+  return '';
+ };
+ const safeCss=css=>{
+  if(/@import|@font-face|expression\s*\(|behavior\s*:|javascript:|vbscript:|<\s*\/?\s*script/i.test(css))return '';
+  return css.replace(/url\s*\(\s*(['"]?)(.*?)\1\s*\)/gi,(m,q,url)=>{
+   const good=safeUrl(url,true);
+   return good?'url("'+good+'")':'none';
+  });
+ };
+ const styles=[...doc.querySelectorAll('style')].map(n=>safeCss(n.textContent||'')).filter(Boolean);
+ doc.querySelectorAll('style').forEach(n=>n.remove());
+ const allowed=new Set(['href','target','rel','title','style','class','id','name','src','alt','width','height','border','cellspacing','cellpadding','align','valign','colspan','rowspan','bgcolor','role','dir','background','hspace','vspace']);
+ for(const n of [...doc.body.querySelectorAll('*')]){
+  if(n.tagName==='IMG'){
+   const src=safeUrl(n.getAttribute('src'),true);
+   if(!src){n.setAttribute('alt',n.getAttribute('alt')||'Image unavailable: use an HTTPS image URL');n.removeAttribute('src')}
+   else n.setAttribute('src',src);
   }
-  for(const attr of [...node.attributes]){
-   const key=attr.name.toLowerCase();
-   if(key.startsWith('on')||!allowedAttrs.has(key))node.removeAttribute(attr.name);
-  }
-  if(node.hasAttribute('href')){
-   const url=node.getAttribute('href')||'';
-   if(!/^https:\/\//i.test(url))node.removeAttribute('href');
-   else {node.setAttribute('target','_blank');node.setAttribute('rel','noopener noreferrer')}
-  }
-  if(node.hasAttribute('src')){
-   const url=node.getAttribute('src')||'';
-   if(!/^https:\/\//i.test(url))node.removeAttribute('src');
-  }
-  if(node.hasAttribute('style')){
-   const css=node.getAttribute('style')||'';
-   const allowed=css.split(';').map(x=>x.trim()).filter(x=>/^(color|background|background-color|font|font-family|font-size|font-weight|font-style|line-height|text-decoration|text-align|vertical-align|letter-spacing|white-space|width|min-width|max-width|height|min-height|max-height|margin|margin-top|margin-bottom|margin-left|margin-right|padding|padding-top|padding-bottom|padding-left|padding-right|border|border-top|border-bottom|border-left|border-right|border-collapse|display|float|clear)\s*:/i.test(x)&&!/url\s*\(|expression\s*\(|[<>]/i.test(x));
-   if(allowed.length)node.setAttribute('style',allowed.join(';'));else node.removeAttribute('style');
+  for(const attr of [...n.attributes]){
+   const k=attr.name.toLowerCase();
+   if(k.startsWith('on')||!allowed.has(k)){n.removeAttribute(attr.name);continue}
+   if(k==='href'){
+    const url=safeUrl(attr.value);
+    if(url){n.setAttribute('href',url);n.setAttribute('target','_blank');n.setAttribute('rel','noopener noreferrer')}else n.removeAttribute('href');
+   }else if(k==='background'){
+    const url=safeUrl(attr.value);
+    if(url)n.setAttribute('background',url);else n.removeAttribute('background');
+   }else if(k==='style'){
+    const css=safeCss(attr.value);
+    if(css)n.setAttribute('style',css);else n.removeAttribute('style');
+   }
   }
  }
- return safeEmailStyles.map(css=>'<style>'+css+'</style>').join('')+doc.body.innerHTML;
+ const head=styles.map(css=>'<style>'+css.replace(/<\/style/gi,'<\\/style')+'</style>').join('');
+ const bodyAttrs=[...doc.body.attributes].filter(a=>['style','bgcolor','class','dir'].includes(a.name.toLowerCase())).map(a=>' '+a.name+'="'+a.value.replace(/&/g,'&amp;').replace(/"/g,'&quot;')+'"').join('');
+ return {head,body:'<body'+bodyAttrs+'>'+doc.body.innerHTML+'</body>'};
 }
+function fullPreservedEmail(html){
+ const clean=sanitizePreservedEmail(html);
+ return '<!doctype html><html><head><meta charset="utf-8">'+clean.head+'</head>'+clean.body+'</html>';
+}
+
+function sanitizeEmailHtml(html){return fullPreservedEmail(html)}
 function loadRichEmail(html){
  const frame=$('richEmail');
  frame.onload=()=>{
@@ -79,7 +94,7 @@ function loadRichEmail(html){
      resizeRichEmail();
    }catch(e){$('richEmailNote').textContent='The formatted email is visible. If editing is unavailable, download the Outlook draft and edit it in Outlook.'}
  };
- frame.srcdoc='<!doctype html><html><head><meta charset="utf-8"><style>html,body{margin:0;padding:0;background:#fff}body{overflow-wrap:break-word}</style></head><body>'+sanitizeEmailHtml(html)+'</body></html>';
+ frame.srcdoc=sanitizeEmailHtml(html);
 }
 function resizeRichEmail(){
  const frame=$('richEmail');
@@ -88,8 +103,10 @@ function resizeRichEmail(){
 function currentRichHtml(){
  if(!selected?.htmlBody)return null;
  const frame=$('richEmail'),doc=frame.contentDocument;
- if(!doc?.body)return '<html><head><meta charset="utf-8"></head><body>'+sanitizeEmailHtml(selected.htmlBody)+'</body></html>';
- return '<!doctype html><html><head><meta charset="utf-8"></head><body>'+sanitizeEmailHtml(doc.body.innerHTML)+'</body></html>';
+ if(!doc?.body)return sanitizeEmailHtml(selected.htmlBody);
+ const original=sanitizePreservedEmail(selected.htmlBody);
+ const edited=sanitizePreservedEmail(doc.body.outerHTML);
+ return '<!doctype html><html><head><meta charset="utf-8">'+original.head+'</head>'+edited.body+'</html>';
 }
 function linkedEmailHtml(){
   if(currentRichHtml())return currentRichHtml();
