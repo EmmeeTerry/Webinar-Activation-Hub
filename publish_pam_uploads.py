@@ -15,7 +15,7 @@ for f in sorted(FOLDER.glob("*.json")):
             raise ValueError(f"{f}: invalid or empty {key}")
     if not obj["id"].startswith("uploaded-") or len(obj["id"])>100:
         raise ValueError(f"{f}: invalid template id")
-    if len(obj["body"])>25000 or len(obj["subject"])>400 or len(obj.get("htmlBody",""))>100000:
+    if len(obj["body"])>25000 or len(obj["subject"])>400 or len(obj.get("htmlBody",""))>350000:
         raise ValueError(f"{f}: template too long")
     if obj["id"] in emails:
         raise ValueError(f"{f}: duplicate ID")
