@@ -12,30 +12,59 @@ function cleanUrl(url){
   return u.href;
  }catch(e){return ''}
 }
-function cleanRichHtml(){
- const doc=new DOMParser().parseFromString(el('body').innerHTML,'text/html');
- doc.querySelectorAll('script,style,iframe,form,svg,object,embed,meta,link,base,img').forEach(n=>n.remove());
- for(const node of [...doc.body.querySelectorAll('*')]){
-  if(node.tagName==='A'){
-   const url=cleanUrl(node.getAttribute('href')||'');
-   if(url)node.setAttribute('href',url);else node.removeAttribute('href');
-   node.setAttribute('target','_blank');node.setAttribute('rel','noopener noreferrer');
+function sanitizePreservedEmail(html){
+ const doc=new DOMParser().parseFromString(html,'text/html');
+ doc.querySelectorAll('script,iframe,form,svg,object,embed,link,meta,base,video,audio,button,input,textarea,select').forEach(n=>n.remove());
+ const safeUrl=(value,allowImage=false)=>{
+  const v=(value||'').trim();
+  if(/^https:\/\//i.test(v))return v;
+  if(allowImage&&/^data:image\/(?:png|jpeg|gif|webp);base64,[a-z0-9+/=\s]+$/i.test(v)&&v.length<250000)return v;
+  return '';
+ };
+ const safeCss=css=>{
+  if(/@import|@font-face|expression\s*\(|behavior\s*:|javascript:|vbscript:|<\s*\/?\s*script/i.test(css))return '';
+  return css.replace(/url\s*\(\s*(['"]?)(.*?)\1\s*\)/gi,(m,q,url)=>{
+   const good=safeUrl(url,true);
+   return good?'url("'+good+'")':'none';
+  });
+ };
+ const styles=[...doc.querySelectorAll('style')].map(n=>safeCss(n.textContent||'')).filter(Boolean);
+ doc.querySelectorAll('style').forEach(n=>n.remove());
+ const allowed=new Set(['href','target','rel','title','style','class','id','name','src','alt','width','height','border','cellspacing','cellpadding','align','valign','colspan','rowspan','bgcolor','role','dir','background','hspace','vspace']);
+ for(const n of [...doc.body.querySelectorAll('*')]){
+  if(n.tagName==='IMG'){
+   const src=safeUrl(n.getAttribute('src'),true);
+   if(!src){n.setAttribute('alt',n.getAttribute('alt')||'Image unavailable: use an HTTPS image URL');n.removeAttribute('src')}
+   else n.setAttribute('src',src);
   }
-  for(const attr of [...node.attributes]){
+  for(const attr of [...n.attributes]){
    const k=attr.name.toLowerCase();
-   if(k.startsWith('on')||!['href','target','rel','style','title','class'].includes(k))node.removeAttribute(attr.name);
-  }
-  if(node.hasAttribute('style')){
-   const css=node.getAttribute('style')||'';
-   // Safe subset of inline formatting used in email. No external resources.
-   const allowed=css.split(';').map(x=>x.trim()).filter(x=>/^(color|background-color|font-size|font-weight|font-style|text-align|text-decoration|line-height)\s*:/i.test(x)&&!/url\s*\(|expression\s*\(|[<>]/i.test(x));
-   if(allowed.length)node.setAttribute('style',allowed.join(';'));else node.removeAttribute('style');
+   if(k.startsWith('on')||!allowed.has(k)){n.removeAttribute(attr.name);continue}
+   if(k==='href'){
+    const url=safeUrl(attr.value);
+    if(url){n.setAttribute('href',url);n.setAttribute('target','_blank');n.setAttribute('rel','noopener noreferrer')}else n.removeAttribute('href');
+   }else if(k==='background'){
+    const url=safeUrl(attr.value);
+    if(url)n.setAttribute('background',url);else n.removeAttribute('background');
+   }else if(k==='style'){
+    const css=safeCss(attr.value);
+    if(css)n.setAttribute('style',css);else n.removeAttribute('style');
+   }
   }
  }
- const styles=(window.importedEmailStyles||'');
- const safeStyles=/@import|url\s*\(|expression\s*\(|<|>|\\|@font-face/i.test(styles)?'':styles;
- return (safeStyles?'<style>'+safeStyles+'</style>':'')+doc.body.innerHTML;
+ const head=styles.map(css=>'<style>'+css.replace(/<\/style/gi,'<\\/style')+'</style>').join('');
+ const bodyAttrs=[...doc.body.attributes].filter(a=>['style','bgcolor','class','dir'].includes(a.name.toLowerCase())).map(a=>' '+a.name+'="'+a.value.replace(/&/g,'&amp;').replace(/"/g,'&quot;')+'"').join('');
+ return {head,body:'<body'+bodyAttrs+'>'+doc.body.innerHTML+'</body>'};
 }
+function fullPreservedEmail(html){
+ const clean=sanitizePreservedEmail(html);
+ return '<!doctype html><html><head><meta charset="utf-8">'+clean.head+'</head>'+clean.body+'</html>';
+}
+
+function cleanRichHtml(){
+ return fullPreservedEmail(window.importedEmailHtml&&!window.importedEmailEdited?window.importedEmailHtml:el('body').innerHTML);
+}
+el('body').addEventListener('input',()=>{window.importedEmailEdited=true});
 function prepared(){
  const subject=el('subject').value.trim();
  const temp=el('body').cloneNode(true);
@@ -74,12 +103,11 @@ function prepared(){
 function output(){
  const result=prepared();
  const html=cleanRichHtml();
- const raw=el('body').innerHTML;
  const sourceStyle=window.importedEmailStyles||'';
  const iframe=document.createElement('iframe');
  iframe.title='Formatted email preview';iframe.sandbox='allow-popups allow-popups-to-escape-sandbox';
  iframe.style.cssText='display:block;width:100%;height:750px;border:0;background:white';
- iframe.srcdoc='<!doctype html><html><head><meta charset="utf-8"></head><body>'+html+'</body></html>';
+ iframe.srcdoc=html;
  el('out').replaceChildren(iframe);
  const links=el('body').querySelectorAll('a[href]').length;
  el('linkAudit').textContent=links?links+' clickable link(s) detected. Check each link in the preview.':'WARNING: No clickable hyperlinks were found in this email source. The HTML file does not contain the original resource links. Import an Outlook email with links or manually insert them before publishing.';
@@ -99,16 +127,61 @@ el('download').onclick=()=>{
  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=id+'.json';document.body.append(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},2000);
  report('Your template file should now be in Downloads (uploaded-….json). Give this file to the PAM Email Hub administrator for publishing. The email is NOT published yet. If no download appears, check your browser Downloads (Ctrl+J).');
 };
-el('file').addEventListener('change',async e=>{const file=e.target.files?.[0];if(!file)return;if(file.size>1500000){el('status').textContent='File is too large.';return}let raw;if(/\.(oft|msg)$/i.test(file.name)){
-try{
- const mod=await import('https://esm.sh/@kenjiuno/msgreader-web-ng@0.2.0-alpha1');
- const Reader=mod.MsgReader||mod.default;
- const reader=new Reader(await file.arrayBuffer()),data=reader.getFileData();
- if(data.subject)el('subject').value=data.subject;
- if(!data.bodyHtml){el('status').textContent='This Outlook file does not include an accessible HTML body. Open it in Outlook and save as HTML, then import that file.';return}
- raw=typeof data.bodyHtml==='string'?data.bodyHtml:new TextDecoder('utf-8').decode(data.bodyHtml);
-}catch(error){el('status').textContent='Outlook file import failed in this browser. Save the email from Outlook as HTML and import that instead. '+String(error.message||error);return}
-}else raw=await file.text();if(/\.eml$/i.test(file.name)){const split=raw.search(/\r?\n\r?\n/);const head=raw.slice(0,split>=0?split:0);const match=head.match(/^Subject:\s*(.+)$/mi);if(match)el('subject').value=match[1];const body=raw.slice(split+2);if(/content-type:\s*text\/html/i.test(head)&&!/content-transfer-encoding:\s*(base64|quoted-printable)/i.test(head)){raw=body}else{el('body').textContent=body;el('status').textContent='Imported plain-text email. For formatted links, paste the original Outlook message instead.';return}}if(/<html|<body|<div|<p/i.test(raw)){const doc=new DOMParser().parseFromString(raw,'text/html');if(!el('subject').value.trim())el('subject').value=(doc.querySelector('title')?.textContent||file.name.replace(/\.(html?|eml|oft|msg)$/i,'').replace(/_/g,' ')).trim();window.importedEmailStyles=[...doc.querySelectorAll('style')].map(x=>x.textContent).join('\n').replace(/<\\/g,'');el('body').innerHTML=doc.body.innerHTML;el('status').textContent='Imported HTML. Review hyperlinks in the preview.'}else{el('body').textContent=raw;if(!el('subject').value.trim())el('subject').value=file.name.replace(/\.[^.]+$/,'').replace(/_/g,' ');el('status').textContent='Imported text. Review before submitting.'}});
+el('file').addEventListener('change',async e=>{
+ const file=e.target.files?.[0];if(!file)return;
+ if(file.size>8000000){el('status').textContent='File exceeds 8 MB. Save the email as HTML with hosted images instead.';return}
+ let raw='',sourceName=file.name;
+ try{
+ if(/\.(oft|msg)$/i.test(sourceName)){
+  const mod=await import('https://esm.sh/@kenjiuno/msgreader-web-ng@0.2.0-alpha1');
+  const Reader=mod.MsgReader||mod.default;
+  const data=new Reader(await file.arrayBuffer()).getFileData();
+  if(data.subject)el('subject').value=data.subject;
+  if(!data.bodyHtml)throw Error('This Outlook file has no accessible HTML body. Save it as HTML from Outlook.');
+  raw=typeof data.bodyHtml==='string'?data.bodyHtml:new TextDecoder().decode(data.bodyHtml);
+ }else if(/\.eml$/i.test(sourceName)){
+  const bytes=await file.arrayBuffer();
+  const eml=new TextDecoder('latin1').decode(bytes);
+  const splitHeaders=text=>{const m=/\r?\n\r?\n/.exec(text);return m?{headers:text.slice(0,m.index),body:text.slice(m.index+m[0].length)}:{headers:'',body:text}};
+  const root=splitHeaders(eml);
+  const subj=/^Subject:\s*(.*(?:\r?\n[ \t]+.*)*)/mi.exec(root.headers);
+  if(subj)el('subject').value=subj[1].replace(/\r?\n[ \t]+/g,' ').trim();
+  const ct=/^Content-Type:\s*([^\r\n]*(?:\r?\n[ \t]+[^\r\n]*)*)/mi.exec(root.headers)?.[1]||'';
+  const bound=/boundary\s*=\s*(?:"([^"]+)"|([^;\s]+))/i.exec(ct);
+  let part=root;
+  if(bound){
+   const marker='--'+(bound[1]||bound[2]);
+   const parts=root.body.split(marker);
+   const candidates=parts.map(p=>splitHeaders(p.replace(/^\r?\n/,'').replace(/\r?\n--\s*$/,''))).filter(p=>/^Content-Type:\s*text\/html\b/mi.test(p.headers));
+   if(!candidates.length)throw Error('No HTML body found in this email. Save the original email as HTML from Outlook.');
+   part=candidates[0];
+  }else if(!/text\/html/i.test(ct))throw Error('This .eml contains no HTML email body.');
+  let payload=part.body.replace(/\r?\n$/,'');
+  const transfer=/^Content-Transfer-Encoding:\s*([^\s;]+)/mi.exec(part.headers)?.[1]?.toLowerCase()||'';
+  let binary;
+  if(transfer==='base64'){
+   const decoded=atob(payload.replace(/\s+/g,''));
+   binary=Uint8Array.from(decoded,c=>c.charCodeAt(0));
+  }else if(transfer==='quoted-printable'){
+   const qp=payload.replace(/=\r?\n/g,'');
+   const bytes=[];
+   for(let i=0;i<qp.length;i++){
+    if(qp[i]==='='&&/^[0-9a-f]{2}$/i.test(qp.slice(i+1,i+3))){bytes.push(parseInt(qp.slice(i+1,i+3),16));i+=2}
+    else bytes.push(qp.charCodeAt(i)&255);
+   }
+   binary=new Uint8Array(bytes);
+  }else binary=Uint8Array.from(payload,c=>c.charCodeAt(0)&255);
+  const charset=/charset\s*=\s*["']?([^;"'\s]+)/i.exec(part.headers)?.[1]||'utf-8';
+  try{raw=new TextDecoder(charset).decode(binary)}catch(e){raw=new TextDecoder('utf-8').decode(binary)}
+ }else raw=await file.text();
+ if(!/<(?:html|body|table|div|p|img)\b/i.test(raw))throw Error('No recognizable HTML found. Export the message as HTML first.');
+ const doc=new DOMParser().parseFromString(raw,'text/html');
+ if(!el('subject').value.trim())el('subject').value=(doc.querySelector('title')?.textContent||sourceName.replace(/\.[^.]+$/,'')).trim();
+ window.importedEmailHtml=raw;window.importedEmailEdited=false;
+ el('body').innerHTML=doc.body.innerHTML;
+ el('status').textContent='HTML loaded. Use Preview email to check the original layout, images and links. Editing the text may change Outlook-specific formatting.';
+ }catch(error){el('status').textContent='Import failed: '+String(error.message||error)}
+});
 
 fetch('./pam-email-repository.json',{cache:'no-store'}).then(r=>r.json()).then(j=>{
  const categories=[...new Set((j.emails||[]).map(x=>x.category).filter(Boolean))].sort();
