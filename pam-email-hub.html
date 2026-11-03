@@ -37,6 +37,9 @@ function sanitizeEmailHtml(html){
  const doc=new DOMParser().parseFromString(html,'text/html');
  doc.querySelectorAll('script,iframe,form,svg,object,embed,link,meta,base,video,audio').forEach(n=>n.remove());
  // The original Outlook HTML relies on nested tables, dimension attributes and inline styles.
+ // HTML parsers move leading email <style> blocks into <head>. Keep safe ones when serializing the body.
+ const safeEmailStyles=[...doc.querySelectorAll('style')].map(node=>node.textContent||'').filter(css=>!/@import|@font-face|url\s*\(|expression\s*\(|<\//i.test(css));
+ doc.querySelectorAll('style').forEach(node=>node.remove());
  const allowedAttrs=new Set(['href','target','rel','title','style','class','id','name','src','alt','width','height','border','cellspacing','cellpadding','align','valign','colspan','rowspan','bgcolor','role','dir']);
  for(const node of [...doc.body.querySelectorAll('*')]){
   if(node.tagName==='STYLE'){
@@ -63,7 +66,7 @@ function sanitizeEmailHtml(html){
    if(allowed.length)node.setAttribute('style',allowed.join(';'));else node.removeAttribute('style');
   }
  }
- return doc.body.innerHTML;
+ return safeEmailStyles.map(css=>'<style>'+css+'</style>').join('')+doc.body.innerHTML;
 }
 function loadRichEmail(html){
  const frame=$('richEmail');
