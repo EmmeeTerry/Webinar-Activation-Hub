@@ -7,7 +7,7 @@
 <div class="contribute-jump"><a href="#contribute-email">Need to add a new email to the library? Jump to contribution options ↓</a></div>
 <div class="layout"><aside class="panel side"><h2>Email templates</h2><input id="search" class="search" type="search" placeholder="Search emails or categories…" aria-label="Search email templates"><label for="categoryFilter">Email category</label><select id="categoryFilter" class="search"><option value="">All categories</option></select><label for="regionFilter">Region</label><select id="regionFilter" class="search"><option value="">All regions</option></select><button type="button" id="clearFilters" class="btn" style="margin:0 0 12px">Clear filters</button><div id="emails">Loading email library…</div><p class="metric" id="count"></p></aside>
 <section class="panel editor"><div class="kicker">PAM-TO-PARTNER COMMUNICATION</div><h2 id="title">Choose an email template</h2>
-<div id="edit" hidden><p id="templateMetadata" class="muted" style="font-size:12px"></p><p class="muted">Personalize the copy below before opening it in Outlook.</p><div id="resourceContext" class="panel" style="padding:12px;margin:10px 0;display:none"><strong>Selected resource</strong><p id="resourceInfo" style="margin:7px 0;white-space:pre-wrap"></p><a id="resourceUrl" target="_blank" rel="noopener noreferrer">Open source asset ↗</a><p class="muted" style="font-size:12px">Resource details are inserted into the draft only when you click the button below. Review and edit before sending.</p><button type="button" class="btn" id="insertResource">Insert resource into email</button></div><div class="actions"><button id="outlook" class="btn" disabled title="Native .OFT export is not supported by this web page">Download Outlook .OFT</button><button id="eml" class="btn primary">Download Outlook .eml</button><button id="macHtml" class="btn">Mac: Open HTML email</button><button id="copy" class="btn" hidden>Copy formatted email</button><button id="word" class="btn">Download Word version</button><button id="jumpToLeads" type="button" class="btn">Personalize from a lead list ↓</button><button id="reset" class="btn">Reset draft</button></div>
+<div id="edit" hidden><p id="templateMetadata" class="muted" style="font-size:12px"></p><p class="muted">Personalize the copy below before opening it in Outlook.</p><div id="resourceContext" class="panel" style="padding:12px;margin:10px 0;display:none"><strong>Selected resource</strong><p id="resourceInfo" style="margin:7px 0;white-space:pre-wrap"></p><a id="resourceUrl" target="_blank" rel="noopener noreferrer">Open source asset ↗</a><p class="muted" style="font-size:12px">Resource details are inserted into the draft only when you click the button below. Review and edit before sending.</p><button type="button" class="btn" id="insertResource">Insert resource into email</button></div><div class="actions"><button id="outlook" class="btn" disabled title="Native .OFT export is not supported by this web page">Download Outlook .OFT</button><button id="eml" class="btn primary">Download Outlook .eml</button><button id="macTemplate" class="btn" hidden>Download Outlook .emltpl (Mac)</button><button id="macHtml" class="btn">Mac: Open HTML email</button><button id="copy" class="btn" hidden>Copy formatted email</button><button id="word" class="btn">Download Word version</button><button id="jumpToLeads" type="button" class="btn">Personalize from a lead list ↓</button><button id="reset" class="btn">Reset draft</button></div>
 <p id="outlookStatus" class="note" role="status" aria-live="polite"></p>
 <p class="note"><strong>Outlook downloads:</strong> The .eml download works with compatible Outlook installations, but some Mac configurations cannot open .eml drafts. For Mac, choose <strong>Mac: Open HTML email</strong>, select the email content in the new browser tab (Cmd+A, Cmd+C), then paste it into a new Outlook message above your signature (Cmd+V). The email design and links are intended to carry over, but review them before sending. Native .OFT export is unavailable from this web page.</p>
 <p class="note">Review your email and recipient details before sending. Nothing is sent automatically. <a href="#leadPersonalization" id="leadPersonalizationLink">Personalize from a lead/contact list ↗</a>.</p>
@@ -219,6 +219,17 @@ $('word').onclick=()=>{
   const h=linkedEmailHtml().replace('<body ','<body ');
   download('\ufeff'+h,filename()+'.doc','application/msword;charset=utf-8');
 };
+const macTemplateUrl='./pam-templates/mainframe-refresh.emltpl';
+fetch(macTemplateUrl,{method:'HEAD',cache:'no-store'}).then(response=>{
+ if(!response.ok)return;
+ const button=$('macTemplate');button.hidden=false;
+ button.onclick=()=>{
+  const link=document.createElement('a');
+  link.href=macTemplateUrl;
+  link.download='Mainframe-Refresh.emltpl';
+  document.body.append(link);link.click();link.remove();
+ };
+}).catch(()=>{});
 $('macHtml').onclick=()=>{
  const html=linkedEmailHtml();
  const blob=new Blob([html],{type:'text/html;charset=utf-8'});
