@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-11-02T20:26:01.130560+00:00",
+  "lastRefreshed": "2026-11-03T02:29:18.502369+00:00",
   "items": [
     {
       "id": "10-reasons-to-buy-build-or-borrow-ai-implementation-ebook-1",
@@ -308,10 +308,10 @@
       "funnelStage": "TOFU",
       "ownerTeam": "PMM",
       "audience": "Enterprise, Midmarket",
-      "status": "Planned",
+      "status": "In Production",
       "region": "Global",
-      "publishDate": "2026-10-30",
-      "publishDateDisplay": "Oct 30, 2026",
+      "publishDate": "2026-11-06",
+      "publishDateDisplay": "Nov 06, 2026",
       "partnerUse": false,
       "paidMediaDate": null,
       "paidMediaDateDisplay": "",
@@ -324,12 +324,12 @@
       "ownerIndividual": "Richard Jew",
       "publishedByVendor": "451 Research",
       "notes": "",
-      "actionRequired": "Update status or revise publish date",
-      "abstract": "",
+      "actionRequired": "",
+      "abstract": "451 Research Business Impact Brief - Storage pain points drive the need for AIOps-powered management",
       "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q3",
-      "issueType": "Overdue"
+      "issueType": ""
     },
     {
       "id": "451-research-vsp-360-aiops-sla-as-code-analyst-report-11",
