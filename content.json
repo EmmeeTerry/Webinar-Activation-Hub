@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-11-03T09:52:26.925320+00:00",
+  "lastRefreshed": "2026-11-03T17:56:20.365515+00:00",
   "items": [
     {
       "id": "10-reasons-to-buy-build-or-borrow-ai-implementation-ebook-1",
@@ -6835,14 +6835,14 @@
     {
       "id": "the-cio-balancing-act-business-continuity-and-ai-ambition-blog-208",
       "title": "The CIO Balancing Act: Business Continuity and AI Ambition | Blog",
-      "url": null,
+      "url": "https://www.hitachivantara.com/en-us/blog/how-cios-can-manage-business-continuity-with-ai-ambitions",
       "type": "Blog",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics, High Performance AI-Ready Infrastructure",
       "funnelStage": "TOFU",
       "ownerTeam": "Brand",
       "audience": "Enterprise, Midmarket",
-      "status": "In Production",
+      "status": "Live",
       "region": "Global",
       "publishDate": "2026-11-03",
       "publishDateDisplay": "Nov 03, 2026",
@@ -6858,12 +6858,12 @@
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "",
-      "actionRequired": "",
+      "actionRequired": "Add customer-facing URL",
       "abstract": "",
       "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q3",
-      "issueType": ""
+      "issueType": "; No URL"
     },
     {
       "id": "the-cost-of-good-vs-excellent-blog-209",
@@ -8758,8 +8758,8 @@
       "audience": "Enterprise, Midmarket",
       "status": "In Production",
       "region": "Global",
-      "publishDate": "2026-12-09",
-      "publishDateDisplay": "Dec 09, 2026",
+      "publishDate": null,
+      "publishDateDisplay": "",
       "partnerUse": false,
       "paidMediaDate": null,
       "paidMediaDateDisplay": "",
@@ -8772,12 +8772,12 @@
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "",
-      "actionRequired": "",
+      "actionRequired": "Set a publish date",
       "abstract": "",
       "partnerCampaignLink": null,
-      "fiscalYear": "FY27",
-      "fiscalQuarter": "Q3",
-      "issueType": ""
+      "fiscalYear": "",
+      "fiscalQuarter": "",
+      "issueType": "; No Date"
     },
     {
       "id": "what-is-cyber-recovery-vault-blog-267",
@@ -8791,8 +8791,8 @@
       "audience": "Enterprise, Midmarket",
       "status": "In Production",
       "region": "Global",
-      "publishDate": "2026-12-16",
-      "publishDateDisplay": "Dec 16, 2026",
+      "publishDate": null,
+      "publishDateDisplay": "",
       "partnerUse": false,
       "paidMediaDate": null,
       "paidMediaDateDisplay": "",
@@ -8805,12 +8805,12 @@
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "",
-      "actionRequired": "",
+      "actionRequired": "Set a publish date",
       "abstract": "",
       "partnerCampaignLink": null,
-      "fiscalYear": "FY27",
-      "fiscalQuarter": "Q3",
-      "issueType": ""
+      "fiscalYear": "",
+      "fiscalQuarter": "",
+      "issueType": "; No Date"
     },
     {
       "id": "the-guide-to-cyber-operational-resilience-blog-268",
