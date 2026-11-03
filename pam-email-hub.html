@@ -90,11 +90,12 @@ function loadRichEmail(html){
      const doc=frame.contentDocument;
      doc.body.contentEditable='true';
      doc.body.setAttribute('aria-label','Edit formatted email');
-     doc.body.addEventListener('input',resizeRichEmail);
+     frame.dataset.edited='';
+     doc.body.addEventListener('input',()=>{frame.dataset.edited='yes';resizeRichEmail()});
      resizeRichEmail();
    }catch(e){$('richEmailNote').textContent='The formatted email is visible. If editing is unavailable, download the Outlook draft and edit it in Outlook.'}
  };
- frame.srcdoc=sanitizeEmailHtml(html);
+ frame.srcdoc=html;
 }
 function resizeRichEmail(){
  const frame=$('richEmail');
@@ -103,7 +104,8 @@ function resizeRichEmail(){
 function currentRichHtml(){
  if(!selected?.htmlBody)return null;
  const frame=$('richEmail'),doc=frame.contentDocument;
- if(!doc?.body)return sanitizeEmailHtml(selected.htmlBody);
+ if(!doc?.body)return selected.htmlBody;
+ if(!frame.dataset.edited)return selected.htmlBody;
  const original=sanitizePreservedEmail(selected.htmlBody);
  const edited=sanitizePreservedEmail(doc.body.outerHTML);
  return '<!doctype html><html><head><meta charset="utf-8">'+original.head+'</head>'+edited.body+'</html>';
