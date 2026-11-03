@@ -7,9 +7,9 @@
 <div class="contribute-jump"><a href="#contribute-email">Need to add a new email to the library? Jump to contribution options ↓</a></div>
 <div class="layout"><aside class="panel side"><h2>Email templates</h2><input id="search" class="search" type="search" placeholder="Search emails or categories…" aria-label="Search email templates"><label for="categoryFilter">Email category</label><select id="categoryFilter" class="search"><option value="">All categories</option></select><label for="regionFilter">Region</label><select id="regionFilter" class="search"><option value="">All regions</option></select><button type="button" id="clearFilters" class="btn" style="margin:0 0 12px">Clear filters</button><div id="emails">Loading email library…</div><p class="metric" id="count"></p></aside>
 <section class="panel editor"><div class="kicker">PAM-TO-PARTNER COMMUNICATION</div><h2 id="title">Choose an email template</h2>
-<div id="edit" hidden><p id="templateMetadata" class="muted" style="font-size:12px"></p><p class="muted">Personalize the copy below before opening it in Outlook.</p><div id="resourceContext" class="panel" style="padding:12px;margin:10px 0;display:none"><strong>Selected resource</strong><p id="resourceInfo" style="margin:7px 0;white-space:pre-wrap"></p><a id="resourceUrl" target="_blank" rel="noopener noreferrer">Open source asset ↗</a><p class="muted" style="font-size:12px">Resource details are inserted into the draft only when you click the button below. Review and edit before sending.</p><button type="button" class="btn" id="insertResource">Insert resource into email</button></div><div class="actions"><button id="outlook" class="btn" disabled title="Native .OFT export is not supported by this web page">Download Outlook .OFT</button><button id="eml" class="btn primary">Download Outlook .eml</button><button id="macTemplate" class="btn">Download Outlook .emltpl (Mac)</button><button id="macHtml" class="btn" hidden>Mac: Open HTML email</button><button id="copy" class="btn" hidden>Copy formatted email</button><button id="word" class="btn">Download Word version</button><button id="jumpToLeads" type="button" class="btn">Personalize from a lead list ↓</button><button id="reset" class="btn">Reset draft</button></div>
+<div id="edit" hidden><p id="templateMetadata" class="muted" style="font-size:12px"></p><p class="muted">Personalize the copy below before opening it in Outlook.</p><div id="resourceContext" class="panel" style="padding:12px;margin:10px 0;display:none"><strong>Selected resource</strong><p id="resourceInfo" style="margin:7px 0;white-space:pre-wrap"></p><a id="resourceUrl" target="_blank" rel="noopener noreferrer">Open source asset ↗</a><p class="muted" style="font-size:12px">Resource details are inserted into the draft only when you click the button below. Review and edit before sending.</p><button type="button" class="btn" id="insertResource">Insert resource into email</button></div><div class="actions"><button id="eml" class="btn primary" type="button">Download editable Outlook .eml</button><button id="macTemplate" class="btn" type="button" hidden>Download Mac Outlook template (.emltpl)</button><button id="macHtml" class="btn" hidden>Mac: Open HTML email</button><button id="copy" class="btn" hidden>Copy formatted email</button><button id="word" class="btn">Download Word version</button><button id="jumpToLeads" type="button" class="btn">Personalize from a lead list ↓</button><button id="reset" class="btn">Reset draft</button></div>
 <p id="outlookStatus" class="note" role="status" aria-live="polite"></p>
-<p class="note"><strong>Outlook downloads:</strong> Use <strong>Download Outlook .emltpl (Mac)</strong> for the Mainframe Refresh native Outlook for Mac template, or <strong>Download Outlook .eml</strong> where supported. The Mac template is a fixed file, so it does not reflect personalization edits made on this page. Native .OFT export is not available from this web page.</p>
+<p class="note"><strong>Outlook downloads:</strong> The <strong>.eml</strong> download contains the currently selected, edited HTML email and is the supported dynamic download. Windows may display an Outlook icon based on file association, but it is an .eml file, not an .oft template. <strong>Mac .emltpl</strong> is available only for Mainframe Refresh as a separate native, prebuilt template, and does not include edits made on this page. Native <strong>.oft</strong> and new <strong>.emltpl</strong> files cannot be generated in a web browser.</p>
 <p class="note">Review your email and recipient details before sending. Nothing is sent automatically. <a href="#leadPersonalization" id="leadPersonalizationLink">Personalize from a lead/contact list ↗</a>.</p>
 <details id="translatePanel" style="margin:6px 0 10px;padding:8px 12px;border:1px solid #dedee2;background:#fafafa"><summary style="cursor:pointer;font-weight:600;color:#444">Translate email / Language options</summary><div style="display:flex;gap:8px;flex-wrap:wrap;align-items:end;margin-top:9px"><div><label for="targetLanguage">Language</label><select id="targetLanguage" style="padding:8px;min-width:190px"><option value="en">English (original)</option><option value="es">Spanish</option><option value="pt">Portuguese</option><option value="fr">French</option><option value="de">German</option><option value="ja">Japanese</option></select></div><button class="btn" type="button" id="translateNow">Apply language</button></div><p id="translateStatus" class="muted" style="font-size:12px;margin:6px 0 0" aria-live="polite"></p><p class="muted" style="font-size:11px;margin:5px 0 0">Review names, links, incentives and program terms before sending.</p></details><label for="subject">Email subject</label><input id="subject"><iframe id="richEmail" hidden title="Formatted email editor" sandbox="allow-same-origin allow-popups allow-popups-to-escape-sandbox" style="width:100%;min-height:500px;height:700px;border:1px solid #caccd0;background:#fff;margin:12px 0"></iframe><p id="richEmailNote" class="muted" style="font-size:12px">For imported HTML templates, click inside the formatted message to make edits. Download the Outlook draft for final review.</p><div id="plainEmailFields"><label for="body">Email body — edit freely</label><textarea id="body"></textarea></div>
 <div id="leadPersonalization" class="panel" tabindex="-1" style="padding:14px;margin:12px 0;background:#fafafa;scroll-margin-top:22px"><strong>Personalize from a lead list</strong><p class="muted">Upload a CSV file with columns such as <strong>First Name, Partner Company, Event Name*, Your Name, and Email</strong>. Use the sample file below.<br><em>*Event Name is optional (for event emails only).</em></p><div style="margin:10px 0"><button class="btn" id="csvTemplate" type="button">Download sample CSV</button></div><input type="file" id="leadFile" accept=".csv,text/csv"><label for="leadSelect">Choose recipient</label><select id="leadSelect" style="width:100%;padding:10px;border:1px solid #ccc"><option value="">No list loaded</option></select><div id="leadStatus" class="muted" role="status"></div></div>
@@ -35,7 +35,7 @@ function regionValues(value){
 function matches(){const q=$('search').value.toLowerCase().trim(),cat=$('categoryFilter').value,region=$('regionFilter').value;return items.filter(x=>(!cat||x.category===cat||x.objective===cat)&&(!region||regionValues(x.region).includes(region))&&(x.title+' '+x.category+' '+x.subject+' '+(x.region||'Global')+' '+(x.body||'')).toLowerCase().includes(q))}
 function render(){const shown=matches();$('emails').replaceChildren();if(selected?.id==='resource-draft'){const b=document.createElement('button');b.className='email-item active';b.append(textEl('strong',selected.title),textEl('span','Custom draft from selected resource','pill'));b.onclick=()=>choose(selected);$('emails').append(b)}for(const item of shown){const b=document.createElement('button');b.className='email-item'+(selected?.id===item.id?' active':'');b.append(textEl('strong',item.title),textEl('span',item.category+(item.region?' · '+item.region:'')+' · '+(item.status||'Draft'),'pill'));b.onclick=()=>choose(item);$('emails').append(b)}$('count').textContent='Showing '+shown.length+' of '+items.length+' email templates';if(!shown.length)$('emails').append(textEl('p','No matching templates. Try clearing filters.','empty'));}
 function applyFilters(){if(selected?.id==='resource-draft'){render();return}const found=matches();if(found.length&&(!selected||!found.some(x=>x.id===selected.id))){choose(found[0]);return}if(!found.length){$('edit').hidden=true;$('title').textContent='No matching email templates'}else if(selected){$('edit').hidden=false;$('title').textContent=selected.title}render()}
-function choose(item){selected=item;const link=new URL(location.href);if(item.id==='resource-draft'){link.searchParams.delete('email')}else{link.searchParams.set('email',item.id);link.searchParams.delete('source');link.searchParams.delete('title');link.searchParams.delete('description');link.searchParams.delete('url')}history.replaceState(null,'',link.pathname+link.search+link.hash);$('title').textContent=item.title;$('subject').value=item.subject;$('body').value=item.body;const rich=$('richEmail');rich.hidden=!item.htmlBody;$('richEmailNote').hidden=!item.htmlBody;if(item.htmlBody)loadRichEmail(item.htmlBody);else rich.removeAttribute('srcdoc');$('plainEmailFields').hidden=!!item.htmlBody;englishDraft={subject:item.subject,body:item.body};$('targetLanguage').value='en';$('translateStatus').textContent='';$('templateMetadata').textContent='Objective: '+(item.objective||'—')+'  ·  Region: '+(item.region||'Global');$('edit').hidden=false;render()}
+function choose(item){selected=item;$('macTemplate').hidden=item.id!=='uploaded-mainframe-refresh-20261103';$('outlookStatus').textContent='';const link=new URL(location.href);if(item.id==='resource-draft'){link.searchParams.delete('email')}else{link.searchParams.set('email',item.id);link.searchParams.delete('source');link.searchParams.delete('title');link.searchParams.delete('description');link.searchParams.delete('url')}history.replaceState(null,'',link.pathname+link.search+link.hash);$('title').textContent=item.title;$('subject').value=item.subject;$('body').value=item.body;const rich=$('richEmail');rich.hidden=!item.htmlBody;$('richEmailNote').hidden=!item.htmlBody;if(item.htmlBody)loadRichEmail(item.htmlBody);else rich.removeAttribute('srcdoc');$('plainEmailFields').hidden=!!item.htmlBody;englishDraft={subject:item.subject,body:item.body};$('targetLanguage').value='en';$('translateStatus').textContent='';$('templateMetadata').textContent='Objective: '+(item.objective||'—')+'  ·  Region: '+(item.region||'Global');$('edit').hidden=false;render()}
 const encode=(v)=>encodeURIComponent(v);
 function email(){return 'mailto:?subject='+encode($('subject').value)+'&body='+encode($('body').value)}
 function download(content,name,type){const blob=new Blob([content],{type});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=name;document.body.append(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},1000)}
@@ -197,10 +197,21 @@ $('translateNow').onclick=async()=>{
  }finally{btn.disabled=false}
 };
 function downloadFormattedOutlook(){
-  const subject=$('subject').value.replace(/[\r\n]/g,' ');
-  const html=linkedEmailHtml();
-  const msg='MIME-Version: 1.0\r\nContent-Type: text/html; charset=UTF-8\r\nContent-Transfer-Encoding: 8bit\r\nX-Unsent: 1\r\nSubject: '+subject+'\r\n\r\n'+html;
-  download(msg,filename()+'.eml','message/rfc822');
+ if(!selected){$('outlookStatus').textContent='Choose an email first.';return;}
+ const subject=$('subject').value.replace(/[\r\n]/g,' ').trim();
+ const html=linkedEmailHtml();
+ const htmlBytes=new TextEncoder().encode(html);
+ let encoded='';
+ for(let start=0;start<htmlBytes.length;start+=8190){
+  const end=Math.min(start+8190,htmlBytes.length);
+  let raw='';for(let i=start;i<end;i++)raw+=String.fromCharCode(htmlBytes[i]);
+  encoded+=btoa(raw);
+ }
+ const lines=(encoded.match(/.{1,76}/g)||[]).join('\r\n');
+ const subject64=btoa(Array.from(new TextEncoder().encode(subject),c=>String.fromCharCode(c)).join(''));
+ const msg='MIME-Version: 1.0\r\nSubject: =?UTF-8?B?'+subject64+'?=\r\nX-Unsent: 1\r\nContent-Type: text/html; charset=UTF-8\r\nContent-Transfer-Encoding: base64\r\n\r\n'+lines+'\r\n';
+ download(msg,filename()+'.eml','message/rfc822');
+ $('outlookStatus').textContent='Downloaded '+filename()+'.eml. This is an editable MIME email draft, not an Outlook .oft template. Open it in a supported Outlook version, then check formatting and recipients.';
 }
 async function copyFormattedForOutlook(){
  const doc=$('richEmail').contentDocument;
@@ -212,7 +223,7 @@ async function copyFormattedForOutlook(){
   'text/plain':new Blob([plain],{type:'text/plain'})
  })]);
 }
-$('outlook').onclick=downloadFormattedOutlook;
+
 $('copy').onclick=async()=>{
  const note=$('outlookStatus');
  try{
@@ -225,14 +236,22 @@ $('word').onclick=()=>{
   download('\ufeff'+h,filename()+'.doc','application/msword;charset=utf-8');
 };
 const macTemplateUrl='./pam-templates/mainframe-refresh.emltpl';
-$('macTemplate').onclick=()=>{
- if(!selected || selected.id!=='uploaded-mainframe-refresh-20261103'){
-  $('outlookStatus').textContent='A native Mac Outlook template is currently available for Mainframe Refresh only. Choose Mainframe Refresh first.';
-  return;
- }
- const link=document.createElement('a');link.href=macTemplateUrl;link.download='Mainframe-Refresh.emltpl';
- document.body.append(link);link.click();link.remove();
- $('outlookStatus').textContent='Mac template downloaded. In Outlook for Mac, use File > New > Mail from Template. Review the template and links before sending.';
+$('macTemplate').onclick=async()=>{
+ if(selected?.id!=='uploaded-mainframe-refresh-20261103')return;
+ const note=$('outlookStatus'),btn=$('macTemplate');
+ btn.disabled=true;
+ try{
+  const response=await fetch(macTemplateUrl,{cache:'no-store'});
+  if(!response.ok)throw Error('Mac template unavailable (HTTP '+response.status+')');
+  const file=await response.blob();
+  if(file.size<20000)throw Error('Mac template is incomplete');
+  const url=URL.createObjectURL(file);
+  const link=document.createElement('a');link.href=url;link.download='Mainframe-Refresh.emltpl';
+  document.body.append(link);link.click();link.remove();
+  setTimeout(()=>URL.revokeObjectURL(url),60000);
+  note.textContent='Downloaded native Mainframe Refresh .emltpl ('+Math.round(file.size/1024)+' KB). Open it using Outlook for Mac > File > New > Mail From Template. This native template contains its original fixed content.';
+ }catch(err){note.textContent='Could not download Mac template: '+String(err.message||err)}
+ finally{btn.disabled=false}
 };
 $('macHtml').onclick=()=>{
  const html=linkedEmailHtml();
