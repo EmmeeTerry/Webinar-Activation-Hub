@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-11-04T06:45:40.177438+00:00",
+  "lastRefreshed": "2026-11-04T16:26:38.186927+00:00",
   "items": [
     {
       "id": "10-reasons-to-buy-build-or-borrow-ai-implementation-ebook-1",
@@ -1993,8 +1993,8 @@
       "audience": "Enterprise, Midmarket",
       "status": "In Production",
       "region": "Global",
-      "publishDate": "2026-11-05",
-      "publishDateDisplay": "Nov 05, 2026",
+      "publishDate": "2026-11-12",
+      "publishDateDisplay": "Nov 12, 2026",
       "partnerUse": false,
       "paidMediaDate": null,
       "paidMediaDateDisplay": "",
@@ -8862,7 +8862,7 @@
       "partnerUse": true,
       "paidMediaDate": null,
       "paidMediaDateDisplay": "",
-      "primaryActivation": "",
+      "primaryActivation": "Content Syndication, Outbound Email, Paid Social, Organic Social, Sales Email",
       "marketingEmail": null,
       "salesEmail": null,
       "sdrEmail": null,
@@ -8871,12 +8871,12 @@
       "ownerIndividual": "Macey Jones",
       "publishedByVendor": "",
       "notes": "",
-      "actionRequired": "Create promotion plan",
+      "actionRequired": "",
       "abstract": "Sovereignty is more than data residency. This white paper explains how organizations can build a trusted, resilient data foundation for sovereign AI, maintaining control over data, models and AI outcomes while preserving the flexibility to innovate and the resilience to withstand disruption.",
       "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q3",
-      "issueType": "; No Promo"
+      "issueType": ""
     }
   ]
 }
