@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-11-05T12:35:25.875650+00:00",
+  "lastRefreshed": "2026-11-05T21:08:35.271652+00:00",
   "items": [
     {
       "id": "10-reasons-to-buy-build-or-borrow-ai-implementation-ebook-1",
@@ -3005,8 +3005,8 @@
       "issueType": ""
     },
     {
-      "id": "how-to-prevent-ai-production-from-stalling-blog-92",
-      "title": "How to Prevent AI Production From Stalling | Blog",
+      "id": "from-infrastructure-to-outcomes-the-path-to-production-ai-blog-92",
+      "title": "From Infrastructure to Outcomes: The Path to Production AI | Blog",
       "url": null,
       "type": "Blog",
       "campaign": "AI Data Foundation",
@@ -3995,8 +3995,8 @@
       "issueType": ""
     },
     {
-      "id": "the-guide-to-cyber-operational-resilience-tier-2-launch-blog-integrated-resilience-blog-122",
-      "title": "The Guide to Cyber & Operational Resilience (Tier 2 Launch Blog: Integrated Resilience) | Blog",
+      "id": "the-guide-to-cyber-operational-resilience-blog-122",
+      "title": "The Guide to Cyber & Operational Resilience | Blog",
       "url": null,
       "type": "Blog",
       "campaign": "Data Modernization & Resilience",
@@ -4006,8 +4006,8 @@
       "audience": "Enterprise, Midmarket",
       "status": "In Production",
       "region": "Global",
-      "publishDate": "2027-01-11",
-      "publishDateDisplay": "Jan 11, 2027",
+      "publishDate": "2026-12-04",
+      "publishDateDisplay": "Dec 04, 2026",
       "partnerUse": false,
       "paidMediaDate": null,
       "paidMediaDateDisplay": "",
@@ -4020,12 +4020,12 @@
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "",
-      "actionRequired": "",
+      "actionRequired": "Review for possible duplicate",
       "abstract": "",
       "partnerCampaignLink": null,
       "fiscalYear": "FY27",
-      "fiscalQuarter": "Q4",
-      "issueType": ""
+      "fiscalQuarter": "Q3",
+      "issueType": "; Duplicate"
     },
     {
       "id": "hitachi-vantara-and-veeam-for-cyber-resilience-whitepaper-123",
@@ -8758,8 +8758,8 @@
       "audience": "Enterprise, Midmarket",
       "status": "In Production",
       "region": "Global",
-      "publishDate": null,
-      "publishDateDisplay": "",
+      "publishDate": "2026-12-08",
+      "publishDateDisplay": "Dec 08, 2026",
       "partnerUse": false,
       "paidMediaDate": null,
       "paidMediaDateDisplay": "",
@@ -8772,12 +8772,12 @@
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "",
-      "actionRequired": "Set a publish date",
+      "actionRequired": "",
       "abstract": "",
       "partnerCampaignLink": null,
-      "fiscalYear": "",
-      "fiscalQuarter": "",
-      "issueType": "; No Date"
+      "fiscalYear": "FY27",
+      "fiscalQuarter": "Q3",
+      "issueType": ""
     },
     {
       "id": "what-is-cyber-recovery-vault-blog-267",
@@ -8791,8 +8791,8 @@
       "audience": "Enterprise, Midmarket",
       "status": "In Production",
       "region": "Global",
-      "publishDate": null,
-      "publishDateDisplay": "",
+      "publishDate": "2026-12-14",
+      "publishDateDisplay": "Dec 14, 2026",
       "partnerUse": false,
       "paidMediaDate": null,
       "paidMediaDateDisplay": "",
@@ -8805,12 +8805,12 @@
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "",
-      "actionRequired": "Set a publish date",
+      "actionRequired": "",
       "abstract": "",
       "partnerCampaignLink": null,
-      "fiscalYear": "",
-      "fiscalQuarter": "",
-      "issueType": "; No Date"
+      "fiscalYear": "FY27",
+      "fiscalQuarter": "Q3",
+      "issueType": ""
     },
     {
       "id": "the-guide-to-cyber-operational-resilience-blog-268",
@@ -8843,7 +8843,7 @@
       "partnerCampaignLink": null,
       "fiscalYear": "",
       "fiscalQuarter": "",
-      "issueType": "; No Date"
+      "issueType": "; No Date; Duplicate"
     },
     {
       "id": "sovereign-ai-data-center-white-paper-269",
@@ -8876,6 +8876,39 @@
       "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q3",
+      "issueType": ""
+    },
+    {
+      "id": "esteyco-sovereign-ai-exec-blog-tier-2-launch-blog-integrated-resilience-270",
+      "title": "Esteyco / Sovereign AI Exec Blog (Tier 2 Launch Blog: Integrated Resilience)",
+      "url": null,
+      "type": "Blog",
+      "campaign": "",
+      "useCase": "",
+      "funnelStage": "",
+      "ownerTeam": "",
+      "audience": "",
+      "status": "",
+      "region": "",
+      "publishDate": null,
+      "publishDateDisplay": "",
+      "partnerUse": false,
+      "paidMediaDate": null,
+      "paidMediaDateDisplay": "",
+      "primaryActivation": "Organic Social",
+      "marketingEmail": null,
+      "salesEmail": null,
+      "sdrEmail": null,
+      "usedInCampaign": "No",
+      "promotionPeriod": "",
+      "ownerIndividual": "",
+      "publishedByVendor": "",
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "partnerCampaignLink": null,
+      "fiscalYear": "",
+      "fiscalQuarter": "",
       "issueType": ""
     }
   ]
