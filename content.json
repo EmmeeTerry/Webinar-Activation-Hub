@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-11-09T06:56:44.954647+00:00",
+  "lastRefreshed": "2026-11-09T18:57:49.919606+00:00",
   "items": [
     {
       "id": "10-reasons-to-buy-build-or-borrow-ai-implementation-ebook-1",
@@ -324,12 +324,12 @@
       "ownerIndividual": "Richard Jew",
       "publishedByVendor": "451 Research",
       "notes": "",
-      "actionRequired": "",
+      "actionRequired": "Update status or revise publish date",
       "abstract": "451 Research Business Impact Brief - Storage pain points drive the need for AIOps-powered management",
       "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q3",
-      "issueType": ""
+      "issueType": "Overdue"
     },
     {
       "id": "451-research-vsp-360-aiops-sla-as-code-analyst-report-11",
@@ -3005,8 +3005,8 @@
       "issueType": ""
     },
     {
-      "id": "from-infrastructure-to-outcomes-the-path-to-production-ai-blog-92",
-      "title": "From Infrastructure to Outcomes: The Path to Production AI | Blog",
+      "id": "enterprises-have-plenty-of-ai-pilots-production-is-where-they-stall-blog-92",
+      "title": "Enterprises Have Plenty of AI Pilots. Production Is Where They Stall. | Blog",
       "url": null,
       "type": "Blog",
       "campaign": "AI Data Foundation",
@@ -3016,8 +3016,8 @@
       "audience": "Enterprise, Midmarket",
       "status": "In Production",
       "region": "Global",
-      "publishDate": "2026-11-10",
-      "publishDateDisplay": "Nov 10, 2026",
+      "publishDate": "2026-11-11",
+      "publishDateDisplay": "Nov 11, 2026",
       "partnerUse": true,
       "paidMediaDate": null,
       "paidMediaDateDisplay": "",
@@ -8343,12 +8343,12 @@
       "ownerIndividual": "Stephanie Thompson, Sulochna Khokhrai",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "",
-      "actionRequired": "",
+      "actionRequired": "Update status or revise publish date",
       "abstract": "",
       "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q3",
-      "issueType": ""
+      "issueType": "Overdue"
     },
     {
       "id": "why-infrastructure-platform-consumption-services-matter-now-blog-254",
@@ -8692,8 +8692,8 @@
       "audience": "Enterprise, Midmarket",
       "status": "In Production",
       "region": "Global",
-      "publishDate": "2026-11-09",
-      "publishDateDisplay": "Nov 09, 2026",
+      "publishDate": "2026-11-16",
+      "publishDateDisplay": "Nov 16, 2026",
       "partnerUse": false,
       "paidMediaDate": null,
       "paidMediaDateDisplay": "",
