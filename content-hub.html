@@ -176,14 +176,14 @@ h1{font-family:"Hitachi Sans",Arial,Helvetica,sans-serif;font-weight:400;font-si
   <div id="spotlight" class="spotlight"></div>
   <div id="needsAttention"></div>
   <section class="coming-soon" aria-label="Coming soon content">
-    <div class="coming-soon-head"><h2>Coming Soon</h2><button class="pipeline-link" type="button" onclick="setContentView('upcoming')">Explore next 90 days &#8594;</button></div>
+    <div class="coming-soon-head"><h2>Coming Soon</h2><button class="pipeline-link" type="button" onclick="setContentView('upcoming')">Explore all upcoming &#8594;</button></div>
     <div class="coming-soon-caption">Upcoming content from the Smartsheet master list, based on target publish dates. Dates may change.</div>
     <div id="comingSoonCards" class="soon-grid"></div>
   </section>
   <div class="content-view-nav" role="group" aria-label="Content view">
     <button type="button" id="view-library" class="active" onclick="setContentView('library')">Content Library</button>
     <button type="button" id="view-calendar" onclick="setContentView('calendar')">Content Calendar</button>
-    <button type="button" id="view-upcoming" onclick="setContentView('upcoming')">Upcoming 90 Days</button>
+    <button type="button" id="view-upcoming" onclick="setContentView('upcoming')">Upcoming Content</button>
   </div>
   <div class="toolbar">
     <input class="search" id="search" placeholder="Search by title, campaign, use case, owner team, audience, region&hellip;">
@@ -628,11 +628,9 @@ let contentView = 'library';
 let calendarMonth = new Date(new Date().getFullYear(), new Date().getMonth(), 1);
 function localDay(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
 function validPublishDate(item){return typeof item.publishDate==='string' && /^\d{4}-\d{2}-\d{2}$/.test(item.publishDate) && !isNaN(new Date(item.publishDate+'T12:00:00').getTime());}
-function upcomingItems(items,days){
-  const start=new Date();start.setHours(0,0,0,0);
-  const end=new Date(start);end.setDate(end.getDate()+days);
-  const from=localDay(start),to=localDay(end);
-  return items.filter(x=>validPublishDate(x)&&x.publishDate>=from&&x.publishDate<to).sort((a,b)=>a.publishDate.localeCompare(b.publishDate)||String(a.title).localeCompare(String(b.title)));
+function upcomingItems(items){
+  const today=localDay(new Date());
+  return items.filter(x=>validPublishDate(x)&&x.publishDate>=today).sort((a,b)=>a.publishDate.localeCompare(b.publishDate)||String(a.title).localeCompare(String(b.title)));
 }
 function eventCategory(item){
   const type=String(item.type||'').toLowerCase();
@@ -654,8 +652,8 @@ function bindContentButtons(scope){
 function renderComingSoon(){
   const el=document.getElementById('comingSoonCards');
   if(!el)return;
-  const next=upcomingItems(DATA,90).slice(0,3);
-  if(!next.length){el.innerHTML='<div class="soon-empty">No content is currently scheduled in the next 90 days.</div>';return;}
+  const next=upcomingItems(DATA).slice(0,3);
+  if(!next.length){el.innerHTML='<div class="soon-empty">No future-dated content is currently scheduled.</div>';return;}
   el.innerHTML=next.map(item=>itemButton(item,'soon-card '+eventCategory(item),
     '<div class="soon-date">'+esc(displayPublishDate(item.publishDate))+'</div>'+
     '<div class="soon-title">'+esc(item.title||'Untitled content')+'</div>'+
@@ -705,10 +703,10 @@ function renderCalendar(items){
     '<div class="calendar-grid">'+cells+'</div><div id="calendarDayDetails"></div></section>';
 }
 function renderUpcoming(items){
-  const next=upcomingItems(items,90);
-  if(!next.length)return '<div class="upcoming-shell"><h2>Upcoming 90 Days</h2><p class="calendar-hint">No items match the current filters and publish-date window. Try clearing Status or other filters.</p></div>';
-  return '<section class="upcoming-shell"><div class="calendar-head"><h2>Upcoming 90 Days</h2><span class="pipeline-status">'+next.length+' planned publications</span></div>'+
-    '<p class="calendar-hint">From today through the next 90 days. Dates reflect the current content master list and may change.</p>'+
+  const next=upcomingItems(items);
+  if(!next.length)return '<div class="upcoming-shell"><h2>Upcoming Content</h2><p class="calendar-hint">No upcoming items match the current filters. Try clearing Status or other filters.</p></div>';
+  return '<section class="upcoming-shell"><div class="calendar-head"><h2>Upcoming Content</h2><span class="pipeline-status">'+next.length+' planned publications</span></div>'+
+    '<p class="calendar-hint">All future-dated content in the current master list, with no 90-day limit. Dates may change.</p>'+
     next.map(item=>{
       const d=new Date(item.publishDate+'T12:00:00');
       return itemButton(item,'upcoming-row',
