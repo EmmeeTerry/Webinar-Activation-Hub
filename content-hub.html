@@ -172,19 +172,20 @@ let DATA = EMBEDDED_DATA;
 let LAST_REFRESHED = null;
 
 const FILTER_FIELDS = [
+  {key:'status', label:'Status', multi:true},
   {key:'type', label:'Type'},
   {key:'campaign', label:'Campaign'},
   {key:'useCase', label:'Use Case'},
   {key:'funnelStage', label:'Funnel Stage'},
   {key:'ownerTeam', label:'Owner Team'},
+  {key:'ownerIndividual', label:'Owner Individual'},
   {key:'audience', label:'Audience'},
-  {key:'status', label:'Status', multi:true},
   {key:'region', label:'Region'},
   {key:'usedInCampaign', label:'Used in Campaign'},
-  {key:'promotionPeriod', label:'Promotion Period'},
+  {key:'primaryActivationTags', label:'Primary Activation', multi:true, arrayField:true},
   {key:'salesEmailStatus', label:'Sales Outreach Email'},
   {key:'paidMediaStatus', label:'Paid Media'},
-  {key:'primaryActivationTags', label:'Primary Activation', multi:true, arrayField:true},
+  {key:'promotionPeriod', label:'Promotion Period'},
 ];
 let activeFilters = {};
 FILTER_FIELDS.forEach(f => activeFilters[f.key] = f.multi ? [] : 'All');
