@@ -246,10 +246,18 @@ function setDropdownFilter(key,value){dropdownFilters[key]=value;updateURL();ren
 // ---- Shareable-link support: read/write filter state to the URL's query string ----
 function applyFiltersFromURL(){
  const params=new URLSearchParams(location.search);
+ const requestedView=params.get('view');
+ if(['library','calendar','upcoming'].includes(requestedView))webinarView=requestedView;
+ const month=params.get('month');
+ if(month&&/^\d{4}-(0[1-9]|1[0-2])$/.test(month)){
+  const [year,m]=month.split('-').map(Number);
+  webinarMonth=new Date(year,m-1,1);
+ }
  filterKeys.forEach(k=>dropdownFilters[k]=params.get(k)||'');
  const previous=params.get('filter')||'';
  if(previous&&!filterKeys.some(k=>dropdownFilters[k])){
-  if(['Upcoming','Planned','On Demand','Partner-ready'].includes(previous))dropdownFilters.status=previous;
+  if(['Upcoming','Planned','On Demand'].includes(previous))dropdownFilters.status=previous;
+  else if(previous==='Partner-ready')dropdownFilters.partnerReady='Yes';
   else for(const key of ['campaign','useCase','region'])if(DATA.some(w=>w[key]===previous)){dropdownFilters[key]=previous;break}
  }
  if(params.has('q'))document.getElementById('search').value=params.get('q');
@@ -258,7 +266,9 @@ function updateURL(){
  const params=new URLSearchParams();
  filterKeys.forEach(k=>{if(dropdownFilters[k])params.set(k,dropdownFilters[k])});
  const q=document.getElementById('search').value.trim();if(q)params.set('q',q);
- history.replaceState(null,'',location.pathname+(params.size?'?'+params.toString():''));
+ if(webinarView!=='library')params.set('view',webinarView);
+ if(webinarView==='calendar')params.set('month',webinarMonth.getFullYear()+'-'+String(webinarMonth.getMonth()+1).padStart(2,'0'));
+ history.replaceState(null,'',location.pathname+(params.size?'?'+params.toString():'')+location.hash);
 }
 function flashButton(btn, text){
   const original = btn.textContent;
@@ -280,19 +290,35 @@ function fallbackCopy(text, btn){
   } catch(e) {}
   window.prompt('Copy this link:', text);
 }
+function copyDirectHubLink(url,btn){
+ if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(url).then(()=>flashButton(btn,'Link copied!')).catch(()=>fallbackCopy(url,btn));
+ else fallbackCopy(url,btn);
+}
 function copyShareLink(){
-  updateURL();
-  const btn = document.getElementById('copyLinkBtn');
-  const url = location.href;
-  if(navigator.clipboard && navigator.clipboard.writeText){
-    navigator.clipboard.writeText(url).then(() => {
-      flashButton(btn, 'Link copied!');
-    }).catch(() => {
-      fallbackCopy(url, btn);
-    });
-  } else {
-    fallbackCopy(url, btn);
-  }
+ updateURL();
+ const btn=document.getElementById('copyLinkBtn'), url=location.href;
+ // Request SharePoint-hosted sharing only from the approved SPFx parent.
+ if(window.parent!==window){
+  const requestId=String(Date.now())+'-'+Math.random().toString(36).slice(2);
+  let resolved=false,manualShare=false;
+  const finish=success=>{
+   if(resolved)return;resolved=true;window.removeEventListener('message',listener);clearTimeout(timeout);
+   if(success)flashButton(btn,manualShare?'SharePoint link ready':'SharePoint link copied!');
+   else copyDirectHubLink(url,btn);
+  };
+  const listener=event=>{
+   if(event.source!==window.parent||event.origin!=='https://hitachivantara.sharepoint.com')return;
+   const data=event.data;
+   if(data&&data.type==='hv-content-share-result'&&data.requestId===requestId){
+    manualShare=data.manual===true;finish(data.success===true);
+   }
+  };
+  window.addEventListener('message',listener);
+  const timeout=setTimeout(()=>finish(false),800);
+  window.parent.postMessage({type:'hv-content-share-request',requestId,query:location.search},'https://hitachivantara.sharepoint.com');
+  return;
+ }
+ copyDirectHubLink(url,btn);
 }
 
 function filtered(){
@@ -349,8 +375,98 @@ function listRow(w){
   <div>${w.links.watch?linkBtn(w.status==='On Demand'?'Watch':'Open',w.links.watch,true):'<span class="meta">Link pending</span>'}</div>
  </div>`;
 }
+
+let webinarView='library';
+let webinarMonth=new Date(new Date().getFullYear(),new Date().getMonth(),1);
+function webinarLocalDay(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
+function hasWebinarDate(w){return typeof w.date==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(w.date)&&!isNaN(new Date(w.date+'T12:00:00').getTime());}
+function upcomingWebinars(items){
+ const today=webinarLocalDay(new Date());
+ return items.filter(w=>hasWebinarDate(w)&&w.date>=today).sort((a,b)=>a.date.localeCompare(b.date)||String(a.title).localeCompare(String(b.title)));
+}
+function webinarDate(ymd){return new Date(ymd+'T12:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});}
+function webinarEntry(w,cls,inner){return '<button type="button" class="'+cls+'" data-webinar-id="'+esc(w.id)+'">'+inner+'</button>';}
+function bindWebinarButtons(scope){scope.querySelectorAll('[data-webinar-id]').forEach(b=>b.addEventListener('click',()=>openModal(b.dataset.webinarId)));}
+function renderWebinarComingSoon(){
+ const el=document.getElementById('webinarComingSoon');
+ const next=upcomingWebinars(DATA).slice(0,3);
+ if(!next.length){el.innerHTML='<div class="planning-muted">No future-dated webinars currently scheduled.</div>';return;}
+ el.innerHTML=next.map(w=>webinarEntry(w,'planning-preview-card',
+  '<div class="planning-date">'+esc(webinarDate(w.date))+'</div>'+
+  '<div class="planning-title">'+esc(w.title||'Untitled webinar')+'</div>'+
+  '<div class="planning-meta">'+esc(w.status||'Status pending')+' · '+esc(w.campaign||'Campaign TBD')+' · '+esc(w.owner||'Owner TBD')+'</div>'
+ )).join('');
+ bindWebinarButtons(el);
+}
+function setWebinarView(view){
+ if(!['library','calendar','upcoming'].includes(view))return;
+ webinarView=view;
+ document.querySelectorAll('.planning-nav button').forEach(b=>b.classList.toggle('active',b.id==='web-view-'+view));
+ updateURL();render();
+}
+function shiftWebinarMonth(delta){
+ webinarMonth=new Date(webinarMonth.getFullYear(),webinarMonth.getMonth()+delta,1);
+ updateURL();render();
+}
+function resetWebinarMonth(){webinarMonth=new Date(new Date().getFullYear(),new Date().getMonth(),1);updateURL();render();}
+function renderWebinarCalendar(items){
+ const year=webinarMonth.getFullYear(),month=webinarMonth.getMonth(),first=new Date(year,month,1);
+ const offset=first.getDay(),days=new Date(year,month+1,0).getDate();
+ const byDay={};
+ items.filter(hasWebinarDate).forEach(w=>(byDay[w.date]||(byDay[w.date]=[])).push(w));
+ let cells=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].map(x=>'<div class="planning-weekday">'+x+'</div>').join('');
+ const slots=Math.ceil((days+offset)/7)*7;
+ for(let i=0;i<slots;i++){
+  const date=new Date(year,month,i-offset+1),day=webinarLocalDay(date),events=byDay[day]||[];
+  cells+='<div class="planning-cell'+(date.getMonth()!==month?' outside':'')+(day===webinarLocalDay(new Date())?' today':'')+'">'+
+   '<div class="planning-number">'+date.getDate()+'</div>'+
+   events.slice(0,3).map(w=>webinarEntry(w,'planning-event',esc(w.title||'Untitled'))).join('')+
+   (events.length>3?'<button type="button" class="planning-more" data-webinar-day="'+day+'">+'+(events.length-3)+' more</button>':'')+'</div>';
+ }
+ const count=items.filter(w=>hasWebinarDate(w)&&w.date.startsWith(year+'-'+String(month+1).padStart(2,'0'))).length;
+ return '<section class="planning-panel"><div class="planning-head"><h2>'+esc(first.toLocaleDateString('en-US',{month:'long',year:'numeric'}))+'</h2>'+
+  '<div class="planning-calendar-controls"><button class="planning-action" onclick="shiftWebinarMonth(-1)" aria-label="Previous month">&#8592;</button>'+
+  '<button class="planning-action" onclick="resetWebinarMonth()">Today</button>'+
+  '<button class="planning-action" onclick="shiftWebinarMonth(1)" aria-label="Next month">&#8594;</button></div></div>'+
+  '<p class="planning-muted">'+count+' webinar(s) scheduled this month. Dates are subject to change. Use the filters above to narrow your view.</p>'+
+  '<div class="planning-calendar">'+cells+'</div><div id="webinarDayDetails"></div></section>';
+}
+function renderUpcomingWebinars(items){
+ const list=upcomingWebinars(items);
+ if(!list.length)return '<section class="planning-panel"><h2>Upcoming Webinars</h2><p class="planning-muted">No future-dated webinars match these filters.</p></section>';
+ return '<section class="planning-panel"><div class="planning-head"><h2>Upcoming Webinars</h2><span class="planning-pill">'+list.length+' upcoming</span></div>'+
+  '<p class="planning-muted">All future-dated webinars, without a 90-day limit. Dates may change.</p>'+
+  list.map(w=>{
+   const d=new Date(w.date+'T12:00:00');
+   return webinarEntry(w,'planning-list-item',
+    '<div class="planning-date-tile">'+d.toLocaleDateString('en-US',{month:'short'}).toUpperCase()+'<strong>'+d.getDate()+'</strong></div>'+
+    '<div><div class="planning-title">'+esc(w.title||'Untitled webinar')+'</div>'+
+    '<div class="planning-meta">'+esc(w.campaign||'Campaign TBD')+' · '+esc(w.owner||'Owner TBD')+' · '+esc(w.region||'Region TBD')+'</div></div>'+
+    '<span class="planning-pill">'+esc(w.status||'Status pending')+'</span>');
+  }).join('')+'</section>';
+}
+function bindWebinarCalendar(){
+ const host=document.getElementById('content');bindWebinarButtons(host);
+ host.querySelectorAll('[data-webinar-day]').forEach(b=>b.addEventListener('click',()=>{
+  const date=b.dataset.webinarDay,records=filtered().filter(w=>w.date===date);
+  const el=document.getElementById('webinarDayDetails');
+  el.innerHTML='<h3>'+esc(webinarDate(date))+' · '+records.length+' webinars</h3>'+
+   records.map(w=>webinarEntry(w,'planning-list-item','<span class="planning-title">'+esc(w.title||'Untitled')+'</span><span class="planning-pill">'+esc(w.status||'')+'</span>')).join('');
+  bindWebinarButtons(el);
+  el.scrollIntoView({behavior:'smooth',block:'nearest'});
+ }));
+}
+
 function render(){
- const d=filtered(); summary();
+ const d=filtered();summary();
+ if(webinarView==='calendar'){
+  document.getElementById('content').innerHTML=renderWebinarCalendar(d);
+  bindWebinarCalendar();return;
+ }
+ if(webinarView==='upcoming'){
+  document.getElementById('content').innerHTML=renderUpcomingWebinars(d);
+  bindWebinarButtons(document.getElementById('content'));return;
+ }
  if(!d.length){document.getElementById('content').innerHTML='<div class="empty">No webinars match those filters.</div>';return;}
  const now=new Date();
  const promote=d.filter(w=>{
@@ -499,7 +615,11 @@ function openModal(id){
 function closeModal(){document.getElementById('modal').classList.remove('open')}
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
 document.getElementById('search').addEventListener('input',()=>{updateURL();render();});
-function init(){applyFiltersFromURL();makeChips();render();renderSpotlight()}
+function init(){
+ applyFiltersFromURL();makeChips();
+ document.querySelectorAll('.planning-nav button').forEach(b=>b.classList.toggle('active',b.id==='web-view-'+webinarView));
+ render();renderSpotlight();renderWebinarComingSoon();
+}
 loadData();
 </script>
 </body>
