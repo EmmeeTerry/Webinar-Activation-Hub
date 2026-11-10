@@ -109,6 +109,49 @@ h1{font-family:"Hitachi Sans",Arial,Helvetica,sans-serif;font-weight:400;font-si
 .btn.small:last-child{margin-bottom:0}
 @media(max-width:900px){.row{grid-template-columns:1fr;gap:6px}.topbar{flex-direction:column}.snapshot{text-align:left}}
 
+
+/* Content calendar and forward-looking pipeline */
+.content-view-nav{display:flex;gap:7px;flex-wrap:wrap;margin:18px 0 13px}
+.content-view-nav button{border:1px solid var(--gray2);background:var(--white);color:var(--gray6);padding:10px 15px;font:700 12px inherit;font-family:inherit;cursor:pointer;border-radius:3px}
+.content-view-nav button.active{background:var(--black);border-color:var(--black);color:var(--white)}
+.coming-soon{background:var(--white);border:1px solid var(--line);padding:17px 20px;margin:0 0 18px;border-radius:4px}
+.coming-soon-head,.calendar-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.coming-soon h2,.calendar-head h2{font-size:18px;font-weight:600;margin:0}
+.coming-soon-caption{font-size:12px;color:var(--gray4);margin:5px 0 13px}
+.soon-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.soon-card{border:1px solid var(--gray2);border-left:4px solid var(--red1);background:var(--white);border-radius:3px;padding:12px;cursor:pointer;text-align:left;font-family:inherit;min-width:0}
+.soon-card:hover,.calendar-event:hover,.upcoming-row:hover{background:var(--gray1)}
+.soon-date{font-size:11px;font-weight:700;color:var(--red2);margin-bottom:6px}
+.soon-title{font-size:13px;font-weight:700;line-height:1.35;overflow-wrap:anywhere}
+.soon-meta{font-size:11px;color:var(--gray4);margin-top:7px}
+.soon-empty{font-size:12px;color:var(--gray4);padding:12px 0}
+.calendar-shell,.upcoming-shell{background:var(--white);border:1px solid var(--line);border-radius:4px;padding:18px}
+.calendar-controls{display:flex;gap:8px;align-items:center}
+.calendar-controls button,.pipeline-link{border:1px solid var(--gray2);border-radius:3px;background:var(--white);padding:7px 11px;font-size:12px;font-weight:700;cursor:pointer;color:var(--black)}
+.pipeline-link{border-color:var(--black)}
+.calendar-hint{font-size:12px;color:var(--gray4);margin:8px 0 15px}
+.calendar-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.calendar-weekday{font-size:11px;color:var(--gray4);text-align:center;padding:10px 0;font-weight:700;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.calendar-day{border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:7px;min-height:114px;min-width:0}
+.calendar-day.other{background:var(--gray1)}
+.calendar-day.today{background:#fff8f8}
+.calendar-day-number{font-size:12px;font-weight:700;margin-bottom:6px}
+.calendar-event{display:block;width:100%;border:0;border-left:3px solid var(--red1);background:#faeeee;text-align:left;padding:5px 6px;margin-bottom:5px;border-radius:2px;cursor:pointer;color:var(--ink);font-family:inherit;font-size:10px;line-height:1.3;overflow-wrap:anywhere}
+.calendar-event.webinar,.soon-card.webinar{border-left-color:#087f8c}
+.calendar-event.analyst,.soon-card.analyst{border-left-color:#7457a6}
+.calendar-event.story,.soon-card.story{border-left-color:#b16b21}
+.calendar-event.webinar{background:#e9f7f8}
+.calendar-event.analyst{background:#f1eef9}
+.calendar-event.story{background:#fff3e3}
+.calendar-more{font-size:10px;color:var(--gray5);cursor:pointer;border:0;background:none;text-align:left}
+.upcoming-row{display:grid;grid-template-columns:70px minmax(0,1fr) auto;gap:16px;align-items:center;width:100%;background:var(--white);border:0;border-bottom:1px solid var(--line);text-align:left;padding:15px 6px;cursor:pointer;font-family:inherit}
+.upcoming-date{border:1px solid var(--line);border-radius:3px;padding:7px;text-align:center;font-size:11px;color:var(--gray5)}
+.upcoming-date strong{display:block;font-size:20px;color:var(--black)}
+.upcoming-title{font-size:13px;font-weight:700}
+.upcoming-sub{font-size:11px;color:var(--gray4);margin-top:5px}
+.pipeline-status{font-size:10px;background:var(--gray1);border-radius:20px;padding:5px 8px;color:var(--gray5);white-space:nowrap}
+@media(max-width:800px){.soon-grid{grid-template-columns:1fr}.calendar-day{min-height:76px;padding:3px}.calendar-event{font-size:9px;padding:3px}.upcoming-row{grid-template-columns:53px minmax(0,1fr);gap:8px}.pipeline-status{grid-column:2;justify-self:start}.calendar-shell{padding:8px}}
+
 </style>
 </head>
 <body>
@@ -132,6 +175,16 @@ h1{font-family:"Hitachi Sans",Arial,Helvetica,sans-serif;font-weight:400;font-si
 <div class="main">
   <div id="spotlight" class="spotlight"></div>
   <div id="needsAttention"></div>
+  <section class="coming-soon" aria-label="Coming soon content">
+    <div class="coming-soon-head"><h2>Coming Soon</h2><button class="pipeline-link" type="button" onclick="setContentView('upcoming')">Explore next 90 days &#8594;</button></div>
+    <div class="coming-soon-caption">Upcoming content from the Smartsheet master list, based on target publish dates. Dates may change.</div>
+    <div id="comingSoonCards" class="soon-grid"></div>
+  </section>
+  <div class="content-view-nav" role="group" aria-label="Content view">
+    <button type="button" id="view-library" class="active" onclick="setContentView('library')">Content Library</button>
+    <button type="button" id="view-calendar" onclick="setContentView('calendar')">Content Calendar</button>
+    <button type="button" id="view-upcoming" onclick="setContentView('upcoming')">Upcoming 90 Days</button>
+  </div>
   <div class="toolbar">
     <input class="search" id="search" placeholder="Search by title, campaign, use case, owner team, audience, region&hellip;">
     <div class="filter-grid" id="filterGroups"></div>
@@ -569,9 +622,130 @@ function buildHeader(){
     return `<div onclick="setSort(${c.key?`'${c.key}'`:'null'})">${esc(c.label)}${arrow}</div>`;
   }).join('')}</div>`;
 }
+
+// Calendar and upcoming views use the same live Smartsheet-backed content records.
+let contentView = 'library';
+let calendarMonth = new Date(new Date().getFullYear(), new Date().getMonth(), 1);
+function localDay(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
+function validPublishDate(item){return typeof item.publishDate==='string' && /^\d{4}-\d{2}-\d{2}$/.test(item.publishDate) && !isNaN(new Date(item.publishDate+'T12:00:00').getTime());}
+function upcomingItems(items,days){
+  const start=new Date();start.setHours(0,0,0,0);
+  const end=new Date(start);end.setDate(end.getDate()+days);
+  const from=localDay(start),to=localDay(end);
+  return items.filter(x=>validPublishDate(x)&&x.publishDate>=from&&x.publishDate<to).sort((a,b)=>a.publishDate.localeCompare(b.publishDate)||String(a.title).localeCompare(String(b.title)));
+}
+function eventCategory(item){
+  const type=String(item.type||'').toLowerCase();
+  if(type.includes('webinar'))return 'webinar';
+  if(type.includes('analyst')||type.includes('research'))return 'analyst';
+  if(type.includes('case study')||type.includes('customer story'))return 'story';
+  return 'general';
+}
+function displayPublishDate(ymd){
+  return new Date(ymd+'T12:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
+}
+function itemButton(item,cssClass,inside){
+  // Use a data attribute instead of interpolating IDs into an inline JS handler.
+  return '<button type="button" class="'+cssClass+'" data-content-id="'+esc(item.id)+'">'+inside+'</button>';
+}
+function bindContentButtons(scope){
+  scope.querySelectorAll('[data-content-id]').forEach(b=>b.addEventListener('click',()=>openModal(b.dataset.contentId)));
+}
+function renderComingSoon(){
+  const el=document.getElementById('comingSoonCards');
+  if(!el)return;
+  const next=upcomingItems(DATA,90).slice(0,3);
+  if(!next.length){el.innerHTML='<div class="soon-empty">No content is currently scheduled in the next 90 days.</div>';return;}
+  el.innerHTML=next.map(item=>itemButton(item,'soon-card '+eventCategory(item),
+    '<div class="soon-date">'+esc(displayPublishDate(item.publishDate))+'</div>'+
+    '<div class="soon-title">'+esc(item.title||'Untitled content')+'</div>'+
+    '<div class="soon-meta">'+esc(item.type||'Content')+' · '+esc(item.status||'Status not set')+' · '+esc(item.campaign||'Unassigned campaign')+'</div>'
+  )).join('');
+  bindContentButtons(el);
+}
+function setContentView(view){
+  if(!['library','calendar','upcoming'].includes(view))return;
+  // The library defaults to Live-only; future content must be discoverable in the planning views.
+  if(view!=='library' && activeFilters.status.length===1 && activeFilters.status[0]==='Live'){
+    activeFilters.status=[];
+    makeFilterGroups();
+    updateURL();
+  }
+  contentView=view;
+  document.querySelectorAll('.content-view-nav button').forEach(b=>b.classList.toggle('active',b.id==='view-'+view));
+  render();
+}
+function shiftCalendarMonth(n){
+  calendarMonth=new Date(calendarMonth.getFullYear(),calendarMonth.getMonth()+n,1);
+  render();
+}
+function resetCalendarMonth(){calendarMonth=new Date(new Date().getFullYear(),new Date().getMonth(),1);render();}
+function renderCalendar(items){
+  const year=calendarMonth.getFullYear(),month=calendarMonth.getMonth();
+  const first=new Date(year,month,1),offset=first.getDay(),count=new Date(year,month+1,0).getDate();
+  const byDay={};
+  items.filter(validPublishDate).forEach(item=>{(byDay[item.publishDate]||(byDay[item.publishDate]=[])).push(item);});
+  const monthTitle=first.toLocaleDateString('en-US',{month:'long',year:'numeric'});
+  let cells=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].map(day=>'<div class="calendar-weekday">'+day+'</div>').join('');
+  const slots=Math.ceil((offset+count)/7)*7;
+  for(let pos=0;pos<slots;pos++){
+    const date=new Date(year,month,pos-offset+1),day=localDay(date),same=date.getMonth()===month;
+    const events=(byDay[day]||[]);
+    const shown=events.slice(0,3).map(item=>itemButton(item,'calendar-event '+eventCategory(item),esc(item.title||'Untitled'))).join('');
+    cells+='<div class="calendar-day'+(!same?' other':'')+(day===localDay(new Date())?' today':'')+'">'+
+      '<div class="calendar-day-number">'+date.getDate()+'</div>'+shown+
+      (events.length>3?'<button type="button" class="calendar-more" data-day="'+day+'">+'+(events.length-3)+' more</button>':'')+'</div>';
+  }
+  return '<section class="calendar-shell"><div class="calendar-head"><h2>'+esc(monthTitle)+'</h2>'+
+    '<div class="calendar-controls"><button type="button" onclick="shiftCalendarMonth(-1)" aria-label="Previous month">&#8592;</button>'+
+    '<button type="button" onclick="resetCalendarMonth()">Today</button>'+
+    '<button type="button" onclick="shiftCalendarMonth(1)" aria-label="Next month">&#8594;</button></div></div>'+
+    '<p class="calendar-hint">'+items.filter(x=>validPublishDate(x)&&x.publishDate.startsWith(year+'-'+String(month+1).padStart(2,'0'))).length+
+    ' content items this month. Target publish dates are indicative, not confirmed launch commitments. Use the filters above to narrow the calendar.</p>'+
+    '<div class="calendar-grid">'+cells+'</div><div id="calendarDayDetails"></div></section>';
+}
+function renderUpcoming(items){
+  const next=upcomingItems(items,90);
+  if(!next.length)return '<div class="upcoming-shell"><h2>Upcoming 90 Days</h2><p class="calendar-hint">No items match the current filters and publish-date window. Try clearing Status or other filters.</p></div>';
+  return '<section class="upcoming-shell"><div class="calendar-head"><h2>Upcoming 90 Days</h2><span class="pipeline-status">'+next.length+' planned publications</span></div>'+
+    '<p class="calendar-hint">From today through the next 90 days. Dates reflect the current content master list and may change.</p>'+
+    next.map(item=>{
+      const d=new Date(item.publishDate+'T12:00:00');
+      return itemButton(item,'upcoming-row',
+        '<div class="upcoming-date">'+d.toLocaleDateString('en-US',{month:'short'}).toUpperCase()+'<strong>'+d.getDate()+'</strong></div>'+
+        '<div><div class="upcoming-title">'+esc(item.title||'Untitled content')+'</div>'+
+        '<div class="upcoming-sub">'+esc(item.type||'Content')+' · '+esc(item.campaign||'No campaign')+' · '+esc(item.ownerIndividual||item.ownerTeam||'Owner not set')+'</div></div>'+
+        '<span class="pipeline-status">'+esc(item.status||'Status not set')+'</span>');
+    }).join('')+'</section>';
+}
+function bindCalendarDays(){
+  const host=document.getElementById('content');
+  bindContentButtons(host);
+  host.querySelectorAll('[data-day]').forEach(b=>b.addEventListener('click',()=>{
+    const date=b.dataset.day;
+    const records=filtered().filter(x=>x.publishDate===date);
+    const panel=document.getElementById('calendarDayDetails');
+    panel.innerHTML='<h3>'+esc(displayPublishDate(date))+' · '+records.length+' items</h3>'+
+      records.map(item=>itemButton(item,'upcoming-row','<div class="upcoming-title">'+esc(item.title||'Untitled')+'</div><span class="pipeline-status">'+esc(item.status||'Status not set')+'</span>')).join('');
+    bindContentButtons(panel);
+    panel.scrollIntoView({behavior:'smooth',block:'nearest'});
+  }));
+}
+
 function render(){
-  const d = applySort(filtered());
+  const filteredItems=filtered();
+  const d = applySort(filteredItems);
   summary();
+  if(contentView==='calendar'){
+    document.getElementById('content').innerHTML=renderCalendar(filteredItems);
+    bindCalendarDays();
+    return;
+  }
+  if(contentView==='upcoming'){
+    document.getElementById('content').innerHTML=renderUpcoming(filteredItems);
+    bindContentButtons(document.getElementById('content'));
+    return;
+  }
   if(!d.length){
     document.getElementById('content').innerHTML = '<div class="empty">No content matches those filters.</div>';
     return;
@@ -668,7 +842,7 @@ function renderNeedsAttention(){
     ${list}
   </div>`;
 }
-function init(){ applyFiltersFromURL(); makeFilterGroups(); render(); renderSpotlight(); }
+function init(){ applyFiltersFromURL(); makeFilterGroups(); render(); renderSpotlight(); renderComingSoon(); }
 // renderNeedsAttention() is intentionally not called here -- the banner was removed from
 // the public-facing page since external stakeholders see this page. The detection logic
 // is left in place in case an internal-only version of this page gets built later.
