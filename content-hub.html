@@ -307,19 +307,45 @@ function fallbackCopy(text, btn){
   // Last resort: show it so the person can copy manually.
   window.prompt('Copy this link:', text);
 }
+function copyDirectHubLink(url,btn){
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(url).then(() => {
+      flashButton(btn, 'Link copied!');
+    }).catch(() => fallbackCopy(url, btn));
+  } else {
+    fallbackCopy(url, btn);
+  }
+}
 function copyShareLink(){
   updateURL();
   const btn = document.getElementById('copyLinkBtn');
   const url = location.href;
-  if(navigator.clipboard && navigator.clipboard.writeText){
-    navigator.clipboard.writeText(url).then(() => {
-      flashButton(btn, 'Link copied!');
-    }).catch(() => {
-      fallbackCopy(url, btn);
-    });
-  } else {
-    fallbackCopy(url, btn);
+  // An approved SharePoint SPFx host can copy a SharePoint link preserving view and filters.
+  // Existing static iframes have no host listener and retain the original GitHub-link behavior.
+  if(window.parent !== window){
+    const requestId = String(Date.now())+'-'+Math.random().toString(36).slice(2);
+    let resolved = false;
+    const finish = (sharedInSharePoint) => {
+      if(resolved)return;
+      resolved=true;
+      window.removeEventListener('message', onShareResult);
+      clearTimeout(timeout);
+      if(sharedInSharePoint)flashButton(btn,'SharePoint link copied!');
+      else copyDirectHubLink(url,btn);
+    };
+    const onShareResult = event => {
+      if(event.source !== window.parent || event.origin !== 'https://hitachivantara.sharepoint.com')return;
+      const data=event.data;
+      if(data && data.type==='hv-content-share-result' && data.requestId===requestId){
+        finish(data.success===true);
+      }
+    };
+    window.addEventListener('message',onShareResult);
+    const timeout=setTimeout(()=>finish(false),800);
+    window.parent.postMessage({type:'hv-content-share-request',requestId,query:location.search},'https://hitachivantara.sharepoint.com');
+    return;
   }
+  copyDirectHubLink(url,btn);
 }
 
 // ---- CSV export of the currently filtered list ----
