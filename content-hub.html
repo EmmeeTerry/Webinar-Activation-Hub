@@ -22,6 +22,10 @@ a{color:inherit}
 .company{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gray5);margin-bottom:9px}
 h1{font-family:"Hitachi Sans",Arial,Helvetica,sans-serif;font-weight:400;font-size:34px;line-height:1.08;margin:0 0 8px;letter-spacing:-.02em;color:var(--black)}
 .sub{color:var(--gray4);font-size:14px;max-width:800px;line-height:1.5}
+.hub-shortcuts{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:12px;font-size:12px}
+.hub-shortcuts span{color:var(--gray4);font-weight:700}
+.hub-shortcuts a{color:var(--red2);font-weight:700;text-decoration:underline;text-underline-offset:3px}
+.hub-shortcuts a:hover{color:var(--black)}
 .snapshot{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gray4);white-space:nowrap;text-align:right}
 .snapshot::before{content:"";display:inline-block;width:7px;height:7px;background:var(--red1);border-radius:50%;margin-right:7px;vertical-align:1px}
 .btn{border:1px solid var(--black);background:var(--white);color:var(--black);padding:9px 12px;border-radius:2px;text-decoration:none;font-size:11px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:6px;transition:.15s ease}
@@ -161,7 +165,11 @@ h1{font-family:"Hitachi Sans",Arial,Helvetica,sans-serif;font-weight:400;font-si
     <div>
       <div class="company">Hitachi Vantara</div>
       <h1>Content Library</h1>
-      <div class="sub">Find and activate campaign content in one place. Search and filter assets by type, campaign, use case, funnel stage, audience, region, owner and promotion status; review abstracts, details and links to the original content. Access available marketing, sales and SDR emails and partner campaign resources, create tailored customer or partner outreach, and build editable one-slide briefs. Share filtered library views to help colleagues find the right assets faster.</div>
+      <div class="sub">Find what you need for your next customer conversation. Explore customer stories, analyst research, eBooks, campaign assets and available sales or marketing emails. Search by topic, campaign, status or owner, open an item to review its details and resources, then share content, personalize outreach or build a one-slide brief. See what is coming, plan ahead and share filtered views with colleagues.</div>
+      <div class="hub-shortcuts"><span>Explore:</span>
+        <a href="https://emmeeterry.github.io/Webinar-Activation-Hub/content-hub.html?view=calendar">Content Calendar &#8599;</a>
+        <a href="https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Upcoming-Content.aspx" target="_blank" rel="noopener noreferrer">Upcoming Content &#8599;</a>
+      </div>
     </div>
     <div style="text-align:right">
       <div class="snapshot" id="snapshotLabel">Last refreshed &middot; loading&hellip;</div>
