@@ -325,18 +325,20 @@ function copyShareLink(){
   if(window.parent !== window){
     const requestId = String(Date.now())+'-'+Math.random().toString(36).slice(2);
     let resolved = false;
+    let manualShare = false;
     const finish = (sharedInSharePoint) => {
       if(resolved)return;
       resolved=true;
       window.removeEventListener('message', onShareResult);
       clearTimeout(timeout);
-      if(sharedInSharePoint)flashButton(btn,'SharePoint link copied!');
+      if(sharedInSharePoint)flashButton(btn,manualShare ? 'SharePoint link ready' : 'SharePoint link copied!');
       else copyDirectHubLink(url,btn);
     };
     const onShareResult = event => {
       if(event.source !== window.parent || event.origin !== 'https://hitachivantara.sharepoint.com')return;
       const data=event.data;
       if(data && data.type==='hv-content-share-result' && data.requestId===requestId){
+        manualShare = data.manual===true;
         finish(data.success===true);
       }
     };
