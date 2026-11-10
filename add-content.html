@@ -14,6 +14,9 @@ body{margin:0;font-family:"Hitachi Sans",Arial,Helvetica,sans-serif;color:var(--
 .header{background:var(--white);border-bottom:1px solid var(--gray2)}
 .brandbar{height:6px;background:var(--red1)}
 .topbar{max-width:900px;margin:auto;padding:24px 28px 20px}
+.top-nav{display:flex;justify-content:flex-end;margin-bottom:14px}
+.top-nav-btn{display:inline-flex;align-items:center;gap:8px;background:var(--red1);color:#fff;text-decoration:none;font-weight:700;font-size:13px;padding:10px 16px;border-radius:4px}
+.top-nav-btn:hover,.top-nav-btn:focus{background:#bf0010;text-decoration:none}
 .company{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gray5);margin-bottom:8px}
 h1{font-weight:400;font-size:30px;margin:0 0 10px;color:var(--black)}
 .sub{color:var(--gray4);font-size:14px;line-height:1.5;max-width:780px}
@@ -30,6 +33,9 @@ iframe{width:100%;height:2900px;border:none;display:block}
 <header class="header">
   <div class="brandbar"></div>
   <div class="topbar">
+    <nav class="top-nav" aria-label="Content navigation">
+      <a class="top-nav-btn" href="./content-hub.html" target="_top" aria-label="Back to Content Hub">&#8592; Back to Content Hub</a>
+    </nav>
     <div class="company">Hitachi Vantara</div>
     <h1>Submit New Content</h1>
     <div class="sub">Use this form to add a new piece of content to the Content Mapping Master List. Once submitted, it shows up automatically in the Content Library within a couple hours &mdash; no separate step needed.</div>
