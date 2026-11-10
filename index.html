@@ -22,6 +22,10 @@ a{color:inherit}
 .company{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gray5);margin-bottom:9px}
 h1{font-family:"Hitachi Sans",Arial,Helvetica,sans-serif;font-weight:400;font-size:34px;line-height:1.08;margin:0 0 8px;letter-spacing:-.02em;color:var(--black)}
 .sub{color:var(--gray4);font-size:14px;max-width:800px;line-height:1.5}
+.hub-shortcuts{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:12px;font-size:12px}
+.hub-shortcuts span{color:var(--gray4);font-weight:700}
+.hub-shortcuts a{color:var(--red2);font-weight:700;text-decoration:underline;text-underline-offset:3px}
+.hub-shortcuts a:hover{color:var(--black)}
 .snapshot{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gray4);white-space:nowrap;text-align:right}
 .snapshot::before{content:"";display:inline-block;width:7px;height:7px;background:var(--red1);border-radius:50%;margin-right:7px;vertical-align:1px}
 .actions-top{display:flex;gap:8px;margin-top:10px;justify-content:flex-end}
@@ -139,7 +143,11 @@ h1{font-family:"Hitachi Sans",Arial,Helvetica,sans-serif;font-weight:400;font-si
     <div>
       <div class="company">Hitachi Vantara</div>
       <h1>Webinar Activation Hub</h1>
-      <div class="sub">Discover upcoming, planned and on-demand webinars by campaign, use case, audience or region. Review webinar details, intended use and related content; access registration links, marketing and sales emails, SDR follow-ups, social assets, partner links and attendee reports where available. Create personalized customer or partner outreach, build an editable one-slide brief, add upcoming sessions to your calendar and share filtered webinar views.</div>
+      <div class="sub">Find webinars that support your next customer conversation. Discover upcoming sessions to invite customers to and on-demand recordings to share or reuse. Filter by campaign, use case, status, individual owner, audience or region; open a webinar to see its details, registration or recording link, and available sales emails, promotional assets and related content. Personalize outreach, add a session to your calendar, or share a filtered view with colleagues.</div>
+      <div class="hub-shortcuts"><span>Explore:</span>
+        <a href="https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Webinar-Calendar.aspx" target="_blank" rel="noopener noreferrer">Webinar Calendar &#8599;</a>
+        <a href="https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Upcoming-Webinars.aspx" target="_blank" rel="noopener noreferrer">Upcoming Webinars &#8599;</a>
+      </div>
     </div>
     <div>
       <div class="snapshot" id="snapshotLabel">Last refreshed · loading…</div>
