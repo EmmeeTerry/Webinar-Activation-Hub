@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-11-10T12:00:18.590436+00:00",
+  "lastRefreshed": "2026-11-10T20:40:35.859507+00:00",
   "webinars": [
     {
       "id": "the-economics-of-modern-storage-infrastructure-lower-risk-faster-ai-value-better-roi",
@@ -569,6 +569,69 @@
       ]
     },
     {
+      "id": "https-vimeo-com-1240378770-share-copy-fl-sv-fe-ci",
+      "title": "https://vimeo.com/1240378770?share=copy&fl=sv&fe=ci",
+      "date": "2026-10-28",
+      "dateDisplay": "Oct 28, 2026",
+      "status": "Planned",
+      "campaign": "Data Modernization & Resilience",
+      "useCase": "Data Readiness and Activation for AI, High Performance AI-Ready Infrastructure",
+      "audience": "Enterprise, Midmarket",
+      "region": "AMER",
+      "owner": "Sandra Westmoreland",
+      "quarter": "Q3",
+      "partnerReady": true,
+      "activationStatus": "",
+      "readiness": "Planning",
+      "whyUse": "Use this for enterprise, midmarket conversations around data readiness and activation for ai, high performance ai-ready infrastructure.",
+      "abstract": "Infrastructure leaders are under increasing pressure to modernize while balancing performance, cost, resilience, and operational complexity. As organizations reevaluate virtualization platforms, storage strategies, and networking architectures, the decisions made today will have a lasting impact on business agility, scalability, and future growth.  Join Brocade and Hitachi Vantara for this interactive virtual forum as we examine the infrastructure decisions organizations can no longer afford to delay. Industry experts will discuss the evolving role of private cloud and virtualization, the benefits of SAN modernization, and practical strategies for simplifying operations through automation and infrastructure modernization. Learn how leading organizations are building future-ready data centers that support performance, resilience, and cost optimization while avoiding common modernization pitfalls.  Attendees will gain actionable insights into evaluating infrastructure investments, reducing technical debt, and developing a roadmap for storage and networking architectures that can support business needs over the next three to five years.",
+      "links": {
+        "watch": "https://vimeo.com/1240378770?share=copy&fl=sv&fe=ci",
+        "marketingEmail": null,
+        "salesEmail": null,
+        "sdrEmail": null,
+        "paidSocial": null,
+        "social": null,
+        "attendance": null,
+        "partnerCampaign": null
+      },
+      "sourceRow": 10,
+      "relatedResources": [
+        {
+          "title": "The Infrastructure Decisions You'll Regret Delaying",
+          "type": "Webinar",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Data Readiness and Activation for AI, High Performance AI-Ready Infrastructure",
+          "url": "https://vimeo.com/1240378770?share=copy&fl=sv&fe=ci",
+          "score": 6
+        },
+        {
+          "title": "2026 Magic Quadrant for Infrastructure Platform Consumption Services | Analyst Report",
+          "type": "Analyst Report",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "https://www.hitachivantara.com/en-us/ext/gartner-magic-quadrant-for-infrastructure-platform-consumption-services",
+          "score": 3
+        },
+        {
+          "title": "451 Research - VSP 360 AIOps | Analyst Report",
+          "type": "Analyst Report",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "451 Research - VSP 360 AIOps",
+          "score": 3
+        },
+        {
+          "title": "451 Research - VSP 360 AIOps SLA as Code | Analyst Report",
+          "type": "Analyst Report",
+          "campaign": "Data Modernization & Resilience",
+          "useCase": "Data Platform Architectures & Economics",
+          "url": "451 Research - VSP 360 AIOps SLA as Code",
+          "score": 3
+        }
+      ]
+    },
+    {
       "id": "cio-with-joe-morris-the-cio-balancing-act-business-continuity-and-ai-ambition",
       "title": "CIO with Joe Morris- The CIO Balancing Act: Business Continuity and AI Ambition",
       "date": "2026-11-11",
@@ -595,7 +658,7 @@
         "attendance": null,
         "partnerCampaign": null
       },
-      "sourceRow": 10,
+      "sourceRow": 11,
       "relatedResources": [
         {
           "title": "451 Research: Boost Resiliency and Performance for Modern Data Infrastructures | Analyst Report",
@@ -658,7 +721,7 @@
         "attendance": null,
         "partnerCampaign": null
       },
-      "sourceRow": 11,
+      "sourceRow": 12,
       "relatedResources": [
         {
           "title": "451 Research: Boost Resiliency and Performance for Modern Data Infrastructures | Analyst Report",
@@ -721,7 +784,7 @@
         "attendance": null,
         "partnerCampaign": null
       },
-      "sourceRow": 12,
+      "sourceRow": 13,
       "relatedResources": []
     },
     {
@@ -751,7 +814,7 @@
         "attendance": null,
         "partnerCampaign": null
       },
-      "sourceRow": 13,
+      "sourceRow": 14,
       "relatedResources": [
         {
           "title": "10 Reasons to Buy, Build, or Borrow AI Implementation | eBook",
@@ -814,7 +877,7 @@
         "attendance": null,
         "partnerCampaign": null
       },
-      "sourceRow": 14,
+      "sourceRow": 15,
       "relatedResources": [
         {
           "title": "Ai Data Foundation Roadmap Guide | eBook",
@@ -877,7 +940,7 @@
         "attendance": null,
         "partnerCampaign": null
       },
-      "sourceRow": 15,
+      "sourceRow": 16,
       "relatedResources": [
         {
           "title": "Data Resilience: Attack-Ready. AI-Ready. | Webinar",
@@ -940,7 +1003,7 @@
         "attendance": null,
         "partnerCampaign": null
       },
-      "sourceRow": 16,
+      "sourceRow": 17,
       "relatedResources": [
         {
           "title": "10 Reasons to Buy, Build, or Borrow AI Implementation | eBook",
@@ -1003,7 +1066,7 @@
         "attendance": null,
         "partnerCampaign": null
       },
-      "sourceRow": 17,
+      "sourceRow": 18,
       "relatedResources": [
         {
           "title": "Data Resilience: Attack-Ready. AI-Ready. | Webinar",
@@ -1066,7 +1129,7 @@
         "attendance": null,
         "partnerCampaign": null
       },
-      "sourceRow": 18,
+      "sourceRow": 19,
       "relatedResources": [
         {
           "title": "2026 Magic Quadrant for Infrastructure Platform Consumption Services | Analyst Report",
@@ -1129,7 +1192,7 @@
         "attendance": null,
         "partnerCampaign": null
       },
-      "sourceRow": 19,
+      "sourceRow": 20,
       "relatedResources": [
         {
           "title": "2026 Magic Quadrant for Infrastructure Platform Consumption Services | Analyst Report",
@@ -1192,7 +1255,7 @@
         "attendance": null,
         "partnerCampaign": null
       },
-      "sourceRow": 20,
+      "sourceRow": 21,
       "relatedResources": [
         {
           "title": "2026 Magic Quadrant for Infrastructure Platform Consumption Services | Analyst Report",
@@ -1255,7 +1318,7 @@
         "attendance": null,
         "partnerCampaign": null
       },
-      "sourceRow": 21,
+      "sourceRow": 22,
       "relatedResources": [
         {
           "title": "2025 GigaOm Rader for High-Perfomance Storage Optimized for AI Workloads | Analyst Report",
