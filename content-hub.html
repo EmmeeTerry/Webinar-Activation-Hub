@@ -249,14 +249,23 @@ function esc(s){ return (s==null?'':String(s)).replace(/[&<>"']/g, c => ({'&':'&
 // ---- Shareable-link support: read/write filter state to the URL's query string ----
 function applyFiltersFromURL(){
   const params = new URLSearchParams(location.search);
+  const requestedView = params.get('view');
+  if(['library','calendar','upcoming'].includes(requestedView)) contentView = requestedView;
+  const month = params.get('month');
+  if(month && /^\d{4}-(0[1-9]|1[0-2])$/.test(month)){
+    const [year,number] = month.split('-').map(Number);
+    calendarMonth = new Date(year,number-1,1);
+  }
+  // A deep link to the planning views must not inherit the library's Live-only default.
+  if(contentView!=='library' && !params.has('status')) activeFilters.status = [];
   FILTER_FIELDS.forEach(f => {
     if(!params.has(f.key)) return;
     const raw = params.get(f.key);
     activeFilters[f.key] = f.multi ? (raw ? raw.split(',') : []) : raw;
   });
   if(params.has('q')) {
-    const s = document.getElementById('search');
-    if(s) s.value = params.get('q');
+    const search = document.getElementById('search');
+    if(search) search.value = params.get('q');
   }
 }
 function updateURL(){
@@ -268,8 +277,10 @@ function updateURL(){
   });
   const q = document.getElementById('search').value.trim();
   if(q) params.set('q', q);
+  if(contentView !== 'library') params.set('view', contentView);
+  if(contentView === 'calendar') params.set('month', calendarMonth.getFullYear()+'-'+String(calendarMonth.getMonth()+1).padStart(2,'0'));
   const qs = params.toString();
-  const newUrl = location.pathname + (qs ? '?' + qs : '');
+  const newUrl = location.pathname + (qs ? '?' + qs : '') + location.hash;
   history.replaceState(null, '', newUrl);
 }
 function flashButton(btn, text){
@@ -667,17 +678,18 @@ function setContentView(view){
   if(view!=='library' && activeFilters.status.length===1 && activeFilters.status[0]==='Live'){
     activeFilters.status=[];
     makeFilterGroups();
-    updateURL();
   }
   contentView=view;
   document.querySelectorAll('.content-view-nav button').forEach(b=>b.classList.toggle('active',b.id==='view-'+view));
+  updateURL();
   render();
 }
 function shiftCalendarMonth(n){
   calendarMonth=new Date(calendarMonth.getFullYear(),calendarMonth.getMonth()+n,1);
+  updateURL();
   render();
 }
-function resetCalendarMonth(){calendarMonth=new Date(new Date().getFullYear(),new Date().getMonth(),1);render();}
+function resetCalendarMonth(){calendarMonth=new Date(new Date().getFullYear(),new Date().getMonth(),1);updateURL();render();}
 function renderCalendar(items){
   const year=calendarMonth.getFullYear(),month=calendarMonth.getMonth();
   const first=new Date(year,month,1),offset=first.getDay(),count=new Date(year,month+1,0).getDate();
@@ -840,7 +852,14 @@ function renderNeedsAttention(){
     ${list}
   </div>`;
 }
-function init(){ applyFiltersFromURL(); makeFilterGroups(); render(); renderSpotlight(); renderComingSoon(); }
+function init(){
+  applyFiltersFromURL();
+  makeFilterGroups();
+  document.querySelectorAll('.content-view-nav button').forEach(b=>b.classList.toggle('active',b.id==='view-'+contentView));
+  render();
+  renderSpotlight();
+  renderComingSoon();
+}
 // renderNeedsAttention() is intentionally not called here -- the banner was removed from
 // the public-facing page since external stakeholders see this page. The detection logic
 // is left in place in case an internal-only version of this page gets built later.
