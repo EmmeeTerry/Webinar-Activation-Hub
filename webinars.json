@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-11-11T17:37:12.215482+00:00",
+  "lastRefreshed": "2026-11-11T23:55:24.780149+00:00",
   "webinars": [
     {
       "id": "the-economics-of-modern-storage-infrastructure-lower-risk-faster-ai-value-better-roi",
@@ -392,12 +392,12 @@
       "owner": "Sandra Westmoreland",
       "quarter": "Q3",
       "partnerReady": false,
-      "activationStatus": "Not Started",
-      "readiness": "Planning",
+      "activationStatus": "Activation Ready",
+      "readiness": "Activation ready",
       "whyUse": "Use this for enterprise, midmarket conversations around cyber risk mitigation & recovery, data readiness and activation for ai, high performance ai-ready infrastructure.",
       "abstract": "This forum examined the infrastructure behind successful AI initiatives, including storage, SAN, networking, data access, and data movement. The discussion highlighted common infrastructure challenges that can slow AI workloads and the architectural considerations organizations should address to build a scalable, AI-ready environment.",
       "links": {
-        "watch": null,
+        "watch": "https://www.hitachivantara.com/en-us/company/events-and-webinars?commid=678141&bt_tok={{lead_id}}",
         "marketingEmail": null,
         "salesEmail": null,
         "sdrEmail": null,
@@ -413,7 +413,7 @@
           "type": "Webinar",
           "campaign": "AI Data Foundation, Data Modernization & Resilience",
           "useCase": "Cyber Risk Mitigation & Recovery, Data Readiness and Activation for AI, High Performance AI-Ready Infrastructure",
-          "url": "https://www.hitachivantara.com/en-us/company/events-and-webinars?commid=678141",
+          "url": "https://www.hitachivantara.com/en-us/company/events-and-webinars?commid=678141&bt_tok={{lead_id}}",
           "score": 6
         },
         {
@@ -455,12 +455,12 @@
       "owner": "Sandra Westmoreland",
       "quarter": "Q3",
       "partnerReady": true,
-      "activationStatus": "Not Started",
-      "readiness": "Planning",
+      "activationStatus": "Activation Ready",
+      "readiness": "Activation ready",
       "whyUse": "Use this for enterprise, midmarket conversations around cyber risk mitigation & recovery.",
       "abstract": "Brocade and Hitachi Vantara experts explored how modern storage and networking infrastructure can support a stronger cyber resilience strategy. The discussion addressed gaps in traditional backup and disaster recovery approaches and highlighted considerations for protecting critical workloads, improving recovery readiness, and reducing downtime and business risk.",
       "links": {
-        "watch": null,
+        "watch": "https://www.hitachivantara.com/en-us/company/events-and-webinars?commid=678156&bt_tok={{lead_id}}",
         "marketingEmail": null,
         "salesEmail": null,
         "sdrEmail": null,
@@ -581,12 +581,12 @@
       "owner": "Sandra Westmoreland",
       "quarter": "Q3",
       "partnerReady": true,
-      "activationStatus": "",
-      "readiness": "Planning",
+      "activationStatus": "Activation Ready",
+      "readiness": "Activation ready",
       "whyUse": "Use this for enterprise, midmarket conversations around data readiness and activation for ai, high performance ai-ready infrastructure.",
       "abstract": "Infrastructure leaders are under increasing pressure to modernize while balancing performance, cost, resilience, and operational complexity. As organizations reevaluate virtualization platforms, storage strategies, and networking architectures, the decisions made today will have a lasting impact on business agility, scalability, and future growth.  Join Brocade and Hitachi Vantara for this interactive virtual forum as we examine the infrastructure decisions organizations can no longer afford to delay. Industry experts will discuss the evolving role of private cloud and virtualization, the benefits of SAN modernization, and practical strategies for simplifying operations through automation and infrastructure modernization. Learn how leading organizations are building future-ready data centers that support performance, resilience, and cost optimization while avoiding common modernization pitfalls.  Attendees will gain actionable insights into evaluating infrastructure investments, reducing technical debt, and developing a roadmap for storage and networking architectures that can support business needs over the next three to five years.",
       "links": {
-        "watch": "https://vimeo.com/1240378770?share=copy&fl=sv&fe=ci",
+        "watch": "https://www.hitachivantara.com/en-us/company/events-and-webinars?commid=679673&bt_tok={{lead_id}}",
         "marketingEmail": null,
         "salesEmail": null,
         "sdrEmail": null,
