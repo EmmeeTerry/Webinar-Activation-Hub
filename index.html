@@ -134,6 +134,16 @@ h1{font-family:"Hitachi Sans",Arial,Helvetica,sans-serif;font-weight:400;font-si
 .planning-pill{font-size:10px;color:var(--gray5);background:var(--gray1);padding:5px 9px;border-radius:20px}
 @media(max-width:800px){.planning-preview-grid{grid-template-columns:1fr}.planning-cell{min-height:70px;padding:3px}.planning-event{font-size:9px;padding:3px}.planning-list-item{grid-template-columns:55px minmax(0,1fr)}.planning-pill{grid-column:2;justify-self:start}}
 
+
+/* On-demand internal data-quality audit, hidden from normal hub browsing */
+.audit-shell{margin:18px 0;padding:18px;background:#fff;border:1px solid var(--gray2);border-left:4px solid #bb6a00;border-radius:4px}
+.audit-shell h2{font-size:18px;margin:0 0 5px}
+.audit-sub{font-size:12px;color:var(--gray5);margin:0 0 12px}
+.audit-row{border-top:1px solid var(--gray2);padding:12px 0}
+.audit-row strong{font-size:13px}
+.audit-meta{color:var(--gray4);font-size:11px;margin-top:4px}
+.audit-issue{font-size:12px;color:#8c4900;margin-top:5px}
+.audit-row button{background:transparent;color:var(--red2);border:0;text-decoration:underline;padding:6px 0;cursor:pointer;font-family:inherit;font-size:12px}
 </style>
 </head>
 <body>
@@ -161,6 +171,7 @@ h1{font-family:"Hitachi Sans",Arial,Helvetica,sans-serif;font-weight:400;font-si
 </header>
 <main class="main">
   <div id="spotlight" class="spotlight"></div>
+  <div id="dataQualityAudit"></div>
   <section class="planning-preview">
     <div class="planning-head"><h2>Coming Soon</h2><button type="button" class="planning-action" onclick="setWebinarView('upcoming')">Explore all upcoming &#8594;</button></div>
     <p class="planning-muted">Next scheduled webinars from the Smartsheet Webinar Calendar. Dates are subject to change.</p>
@@ -277,6 +288,7 @@ function updateURL(){
  const q=document.getElementById('search').value.trim();if(q)params.set('q',q);
  if(webinarView!=='library')params.set('view',webinarView);
  if(webinarView==='calendar')params.set('month',webinarMonth.getFullYear()+'-'+String(webinarMonth.getMonth()+1).padStart(2,'0'));
+ if(new URLSearchParams(location.search).get('audit')==='1')params.set('audit','1');
  history.replaceState(null,'',location.pathname+(params.size?'?'+params.toString():'')+location.hash);
 }
 function flashButton(btn, text){
@@ -466,8 +478,32 @@ function bindWebinarCalendar(){
  }));
 }
 
+
+function webinarAuditIssues(w){
+ const issues=[];
+ const status=String(w.status||'').toLowerCase();
+ const past=hasWebinarDate(w)&&w.date<webinarLocalDay(new Date());
+ if(past&&(status==='planned'||status==='upcoming'))issues.push('Past webinar date but status remains '+(w.status||'unset')+'. Confirm whether the session took place and update Webinar Status.');
+ if(status==='on demand'&&!isValidLink(w.links&&w.links.watch))issues.push('On Demand but no recording/watch link. Confirm recording availability and update the link.');
+ const activation=String(w.activationStatus||'').trim().toLowerCase();
+ if(past&&(!activation||activation==='not started'))issues.push('Past webinar with activation status '+(w.activationStatus||'blank')+'. Confirm activation readiness and resource availability.');
+ return issues;
+}
+function renderWebinarAudit(){
+ const host=document.getElementById('dataQualityAudit');
+ // Audit is opt-in and never shown to regular Sales or stakeholder viewers.
+ if(new URLSearchParams(location.search).get('audit')!=='1'){host.innerHTML='';return;}
+ const rows=filtered().map(w=>({w,issues:webinarAuditIssues(w)})).filter(x=>x.issues.length);
+ host.innerHTML='<section class="audit-shell"><h2>Webinar data quality review</h2>'+
+  '<p class="audit-sub">Internal review view only. These are Smartsheet data checks, not automatic status changes. '+rows.length+' records need review within your current filters.</p>'+
+  (rows.length?rows.map(({w,issues})=>'<div class="audit-row"><strong>'+esc(w.title||'Untitled webinar')+'</strong>'+
+    '<div class="audit-meta">'+esc(w.date||'Date missing')+' · '+esc(w.owner||'Owner missing')+' · '+esc(w.status||'Status missing')+'</div>'+
+    issues.map(issue=>'<div class="audit-issue">• '+esc(issue)+'</div>').join('')+
+    '<button type="button" data-audit-id="'+esc(w.id)+'">View webinar details</button></div>').join(''):'<p>No flagged records match the current filters.</p>')+'</section>';
+ host.querySelectorAll('[data-audit-id]').forEach(b=>b.addEventListener('click',()=>openModal(b.dataset.auditId)));
+}
 function render(){
- const d=filtered();summary();
+ const d=filtered();summary();renderWebinarAudit();
  if(webinarView==='calendar'){
   document.getElementById('content').innerHTML=renderWebinarCalendar(d);
   bindWebinarCalendar();return;
