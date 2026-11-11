@@ -4,15 +4,30 @@ on:
     paths:
       - 'pam-email-submissions/**.json'
   workflow_dispatch:
+
+# Only one publishing run may update the shared feed at a time.
+concurrency:
+  group: pam-email-feed-publisher
+  cancel-in-progress: false
+
 permissions:
   contents: write
+
 jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Update to newest submissions
+        run: git pull --ff-only origin main
+
       - name: Validate and build uploaded email repository
         run: python3 publish_pam_uploads.py
+
       - name: Commit email feed
         run: |
           git config user.name "github-actions[bot]"
@@ -20,6 +35,15 @@ jobs:
           git add pam-uploaded-emails.json
           if ! git diff --cached --quiet; then
             git commit -m "Publish submitted approved PAM email templates"
-            git pull --rebase origin main
-            git push
+            # Retry pushes when other authorized edits reach main between fetch and push.
+            for attempt in 1 2 3 4 5; do
+              git pull --rebase origin main
+              if git push origin HEAD:main; then
+                exit 0
+              fi
+              echo "Push conflicted (attempt $attempt); retrying after refresh"
+              sleep 2
+            done
+            echo "Unable to publish feed after retries" >&2
+            exit 1
           fi
