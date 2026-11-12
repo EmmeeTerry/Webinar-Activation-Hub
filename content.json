@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-11-12T20:01:08.449631+00:00",
+  "lastRefreshed": "2026-11-12T23:45:04.558709+00:00",
   "items": [
     {
       "id": "10-reasons-to-buy-build-or-borrow-ai-implementation-ebook-1",
@@ -27,6 +27,12 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [
+        {
+          "channel": "Paid media",
+          "date": "Jun 01, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
@@ -66,6 +72,12 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [
+        {
+          "channel": "Email nurture",
+          "date": "Jun 02, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Jeff Lundberg",
       "publishedByVendor": "GigaOm",
@@ -105,6 +117,16 @@
       "salesEmail": "https://hitachivantara.sharepoint.com/:w:/s/GlobalCampaignsAssets505/IQD2qA2iC1EXQpUXiu1c3tL-AZv54Poh0VkhbtNSGTFQyWs?e=ePRlXb",
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "Paid media",
+          "date": "Jun 01, 2026"
+        },
+        {
+          "channel": "Content syndication",
+          "date": "Jul 01, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Mark Geel",
       "publishedByVendor": "Gigaom",
@@ -144,6 +166,12 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "Email nurture",
+          "date": "Jun 02, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Mark Geel",
       "publishedByVendor": "GigaOm",
@@ -183,6 +211,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Jeff Lundberg, Stephanie Thompson",
       "publishedByVendor": "Hitachi Vantara",
@@ -222,6 +251,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Jeff Lundberg",
       "publishedByVendor": "Hitachi Vantara",
@@ -261,6 +291,7 @@
       "salesEmail": "https://hitachivantara.sharepoint.com/:w:/s/GlobalCampaignsAssets505/IQBv8PcOY2CFR73dz2cSfUlvARO0YwuNEdAiCyMC75NebdI?e=YoPqCU",
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Steven Garbrecht",
       "publishedByVendor": "Gartner",
@@ -300,6 +331,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Mark Geel",
       "publishedByVendor": "GigaOm",
@@ -339,6 +371,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Mark Geel",
       "publishedByVendor": "GigaOm",
@@ -378,6 +411,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Richard Jew",
       "publishedByVendor": "451 Research",
@@ -417,6 +451,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Richard Jew",
       "publishedByVendor": "",
@@ -456,6 +491,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Richard Jew",
       "publishedByVendor": "451 Research",
@@ -495,6 +531,12 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "Email nurture",
+          "date": "Jun 02, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Liam Yu",
       "publishedByVendor": "451 Research",
@@ -534,6 +576,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Jeff Lundberg",
       "publishedByVendor": "Hitachi Vantara",
@@ -573,6 +616,12 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "Content syndication",
+          "date": "Jul 01, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Richard Jew",
       "publishedByVendor": "451 Research",
@@ -612,6 +661,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Richard Jew",
       "publishedByVendor": "451 Research",
@@ -651,6 +701,12 @@
       "salesEmail": null,
       "sdrEmail": "https://hitachivantara.sharepoint.com/:w:/s/GlobalCampaignsAssets505/IQAAQVDch8-FTrgyXJF469kFAYVGywPlXYBUCbTMWSObCuU?e=Ayps2R",
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "SDR activation",
+          "date": "May 05, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Macey Jones",
       "publishedByVendor": "Hitachi Vantara",
@@ -690,6 +746,12 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "Email nurture",
+          "date": "Jun 02, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Angela Romberg, Liam Yu",
       "publishedByVendor": "Hitachi Vantara",
@@ -729,6 +791,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
@@ -768,6 +831,7 @@
       "salesEmail": null,
       "sdrEmail": "https://hitachivantara.sharepoint.com/:w:/s/GlobalCampaignsAssets505/IQChTAg5N6a2QaHnk20ryl_MAXAqt5P5ixWaQYPASl_1kIQ?e=7qWNhi",
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "melissa.zelyez@hitachivantara.com",
       "publishedByVendor": "Hitachi Vantara / Red Hat",
@@ -807,6 +871,16 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "Paid media",
+          "date": "Jun 01, 2026"
+        },
+        {
+          "channel": "Content syndication",
+          "date": "Jul 01, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Jeff Lundberg",
       "publishedByVendor": "Hitachi Vantara",
@@ -846,6 +920,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Macey Jones",
       "publishedByVendor": "Hitachi Vantara",
@@ -885,6 +960,12 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "Email nurture",
+          "date": "Jun 02, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
@@ -924,6 +1005,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Sulochna Khokhrai",
       "publishedByVendor": "",
@@ -963,6 +1045,12 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "Email nurture",
+          "date": "Jun 02, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Jeff Lundberg",
       "publishedByVendor": "Hitachi Vantara",
@@ -1002,6 +1090,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "",
       "ownerIndividual": "Mark Geel",
       "publishedByVendor": "Hitachi Vantara",
@@ -1041,6 +1130,12 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "Content syndication",
+          "date": "Jul 01, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Stephanie Thompson",
       "publishedByVendor": "Hitachi Vantara",
@@ -1080,6 +1175,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Jennifer Schmitz",
       "publishedByVendor": "Hitachi Vantara",
@@ -1119,6 +1215,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Jennifer Schmitz",
       "publishedByVendor": "Hitachi Vantara",
@@ -1158,6 +1255,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
@@ -1197,6 +1295,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Jennifer Schmitz",
       "publishedByVendor": "Hitachi Vantara",
@@ -1236,6 +1335,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
@@ -1275,6 +1375,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Jennifer Schmitz",
       "publishedByVendor": "Hitachi Vantara",
@@ -1314,6 +1415,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Jennifer Schmitz, Steven Garbrecht",
       "publishedByVendor": "Hitachi Vantara",
@@ -1353,6 +1455,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Jennifer Schmitz",
       "publishedByVendor": "Hitachi Vantara",
@@ -1392,6 +1495,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Jennifer Schmitz, Steven Garbrecht",
       "publishedByVendor": "Hitachi Vantara",
@@ -1431,6 +1535,12 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "Email nurture",
+          "date": "Jun 02, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
@@ -1470,6 +1580,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "",
       "ownerIndividual": "Mark Geel",
       "publishedByVendor": "Hitachi Vantara",
@@ -1509,6 +1620,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "",
       "ownerIndividual": "Mark Geel",
       "publishedByVendor": "Hitachi Vantara",
@@ -1548,6 +1660,12 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "Email nurture",
+          "date": "Jun 02, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Liam Yu, Stephanie Thompson",
       "publishedByVendor": "Hitachi Vantara",
@@ -1587,6 +1705,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Macey Jones",
       "publishedByVendor": "Hitachi Vantara",
@@ -1626,6 +1745,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Barbara Goetz",
       "publishedByVendor": "ESG",
@@ -1665,6 +1785,16 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "Paid media",
+          "date": "Jun 01, 2026"
+        },
+        {
+          "channel": "Content syndication",
+          "date": "Jul 01, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Macey Jones",
       "publishedByVendor": "Hitachi Vantara",
@@ -1704,6 +1834,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Stephanie Thompson, Sulochna Khokhrai",
       "publishedByVendor": "Hitachi Vantara",
@@ -1743,6 +1874,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Stephanie Thompson, Sulochna Khokhrai",
       "publishedByVendor": "Hitachi Vantara",
@@ -1782,6 +1914,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Victor Lin",
       "publishedByVendor": "Hitachi Vantara",
@@ -1821,6 +1954,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Victor Lin",
       "publishedByVendor": "Hitachi Vantara",
@@ -1860,6 +1994,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Jennifer Schmitz, Steven Garbrecht",
       "publishedByVendor": "Hitachi Vantara",
@@ -1899,6 +2034,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "",
       "ownerIndividual": "Sandra Westmoreland",
       "publishedByVendor": "Hitachi Vantara",
@@ -1938,6 +2074,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "",
       "ownerIndividual": "Sandra Westmoreland",
       "publishedByVendor": "Hitachi Vantara",
@@ -1977,6 +2114,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Sakina Peshawarwala",
       "publishedByVendor": "CIO.com",
@@ -2016,6 +2154,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
@@ -2055,6 +2194,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
@@ -2094,6 +2234,12 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "Email nurture",
+          "date": "Jun 02, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
@@ -2133,6 +2279,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Macey Jones",
       "publishedByVendor": "Hitachi Vantara",
@@ -2172,6 +2319,12 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [
+        {
+          "channel": "Paid media",
+          "date": "Oct 01, 2026"
+        }
+      ],
       "promotionPeriod": "2H",
       "ownerIndividual": "Macey Jones",
       "publishedByVendor": "Hitachi Vantara",
@@ -2211,6 +2364,16 @@
       "salesEmail": "https://hitachivantara.sharepoint.com/:w:/s/GlobalCampaignsAssets505/IQD1kHFUjFHlTrzxe1B4nfOPAakMC9ysqCn7MOVNu7HDwgc?e=mGSCa4",
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "Paid media",
+          "date": "Jun 01, 2026"
+        },
+        {
+          "channel": "Content syndication",
+          "date": "Jul 01, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Macey Jones",
       "publishedByVendor": "Wiley",
@@ -2250,6 +2413,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Macey Jones",
       "publishedByVendor": "Hitachi Vantara",
@@ -2289,6 +2453,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
@@ -2328,6 +2493,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Macey Jones",
       "publishedByVendor": "Hitachi Vantara",
@@ -2367,6 +2533,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
@@ -2406,6 +2573,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Macey Jones",
       "publishedByVendor": "Hitachi Vantara",
@@ -2445,6 +2613,12 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "Email nurture",
+          "date": "Jun 02, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Stephanie Thompson, Sulochna Khokhrai",
       "publishedByVendor": "Hitachi Vantara",
@@ -2484,6 +2658,12 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [
+        {
+          "channel": "Paid media",
+          "date": "Oct 01, 2026"
+        }
+      ],
       "promotionPeriod": "2H",
       "ownerIndividual": "Nick Howell, Richard Jew",
       "publishedByVendor": "Wiley",
@@ -2523,6 +2703,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Nick Howell, Stephanie Thompson",
       "publishedByVendor": "Hitachi Vantara",
@@ -2562,6 +2743,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Macey Jones, Steven Garbrecht",
       "publishedByVendor": "Hitachi Vantara",
@@ -2601,6 +2783,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Macey Jones, Steven Garbrecht",
       "publishedByVendor": "Hitachi Vantara",
@@ -2640,6 +2823,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Macey Jones, Scott Jones",
       "publishedByVendor": "Hitachi Vantara",
@@ -2679,6 +2863,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Macey Jones, Stephanie Thompson",
       "publishedByVendor": "Hitachi Vantara",
@@ -2718,6 +2903,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Karina Andrade, Mark Geel",
       "publishedByVendor": "Hitachi Vantara",
@@ -2757,6 +2943,12 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "Email nurture",
+          "date": "Jun 02, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Angela Romberg, Shari Gardner",
       "publishedByVendor": "DCIG",
@@ -2796,6 +2988,12 @@
       "salesEmail": null,
       "sdrEmail": "https://hitachivantara.sharepoint.com/:w:/s/GlobalCampaignsAssets505/IQAE-pcxLgAcSpuVp3CvclGxAVmiEkktv8b6JX01mBxu-eQ?e=T7uliC",
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "SDR activation",
+          "date": "May 05, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "melissa.zelyez@hitachivantara.com",
       "publishedByVendor": "Hitachi Vantara / Red Hat",
@@ -2835,6 +3033,7 @@
       "salesEmail": "https://hitachivantara.sharepoint.com/:w:/s/GlobalCampaignsAssets505/IQC1E6LLlu5qTqrP0eOIKlyIAWc_cGaGm8_SjTfpHAkvRp4?e=Kmqb42",
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
@@ -2874,6 +3073,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Karina Andrade",
       "publishedByVendor": "EDUCAUSE",
@@ -2913,6 +3113,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Stephanie Thompson, Sulochna Khokhrai",
       "publishedByVendor": "Hitachi Vantara",
@@ -2952,6 +3153,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Liam Yu",
       "publishedByVendor": "Hitachi Vantara",
@@ -2991,6 +3193,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Emily Smith, Steven Garbrecht",
       "publishedByVendor": "Hitachi Vantara",
@@ -3030,6 +3233,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Dinesh Singh",
       "publishedByVendor": "Hitachi Vantara",
@@ -3069,6 +3273,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Angela Romberg, Jennifer Schmitz",
       "publishedByVendor": "Hitachi Vantara",
@@ -3108,6 +3313,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Jennifer Schmitz",
       "publishedByVendor": "Hitachi Vantara",
@@ -3147,6 +3353,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Steven Garbrecht",
       "publishedByVendor": "Hitachi Vantara",
@@ -3186,6 +3393,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Macey Jones, Steven Garbrecht",
       "publishedByVendor": "Hitachi Vantara",
@@ -3225,6 +3433,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Steven Garbrecht",
       "publishedByVendor": "Hitachi Vantara",
@@ -3264,6 +3473,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Steven Garbrecht",
       "publishedByVendor": "Hitachi Vantara",
@@ -3303,6 +3513,12 @@
       "salesEmail": null,
       "sdrEmail": "https://hitachivantara.sharepoint.com/:w:/s/GlobalCampaignsAssets505/IQB5LHq-WCePQaKgJG-llNE3Ad2n_n-SoCOP_Wy9lrqy6Yg?e=5v4uHs",
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "SDR activation",
+          "date": "May 05, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Jeff Lundberg",
       "publishedByVendor": "Hitachi Vantara",
@@ -3342,6 +3558,12 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "Email nurture",
+          "date": "Jun 02, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Jennifer Schmitz",
       "publishedByVendor": "Hitachi Vantara",
@@ -3381,6 +3603,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
@@ -3420,6 +3643,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Sulochna Khokhrai",
       "publishedByVendor": "Hitachi Vantara",
@@ -3459,6 +3683,12 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "Content syndication",
+          "date": "Jul 01, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "melissa.zelyez@hitachivantara.com",
       "publishedByVendor": "Hitachi Vantara",
@@ -3498,6 +3728,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Jeff Lundberg",
       "publishedByVendor": "Hitachi Vantara",
@@ -3537,6 +3768,12 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "Content syndication",
+          "date": "Jul 01, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Sulochna Khokhrai",
       "publishedByVendor": "Hitachi Vantara",
@@ -3576,6 +3813,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
@@ -3615,6 +3853,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Angela Romberg",
       "publishedByVendor": "Hitachi Vantara",
@@ -3654,6 +3893,16 @@
       "salesEmail": "https://hitachivantara.sharepoint.com/:w:/s/GlobalCampaignsAssets505/IQD_OEt3ubsCRKCIJUUZk33fAZqMqN2MeivEVrw0Jkd8uXE?e=TPZ3MK",
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "Paid media",
+          "date": "Jun 01, 2026"
+        },
+        {
+          "channel": "Content syndication",
+          "date": "Jul 01, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Stephanie Thompson, Sulochna Khokhrai",
       "publishedByVendor": "Hitachi Vantara",
@@ -3693,6 +3942,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
@@ -3732,6 +3982,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Karina Andrade, Mark Geel",
       "publishedByVendor": "Hitachi Vantara",
@@ -3771,6 +4022,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Jeff Lundberg",
       "publishedByVendor": "Hitachi Vantara",
@@ -3810,6 +4062,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Jennifer Schmitz",
       "publishedByVendor": "Hitachi Vantara",
@@ -3849,6 +4102,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Tanya Loughlin",
       "publishedByVendor": "",
@@ -3888,6 +4142,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Angela Romberg, Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
@@ -3927,6 +4182,12 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "Email nurture",
+          "date": "Jun 02, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Jennifer Schmitz",
       "publishedByVendor": "Hitachi Vantara",
@@ -3966,6 +4227,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Jeff Lundberg",
       "publishedByVendor": "Hitachi Vantara",
@@ -4005,6 +4267,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Michael Pacheco",
       "publishedByVendor": "Hitachi Vantara",
@@ -4044,6 +4307,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Michael Pacheco",
       "publishedByVendor": "Hitachi Vantara",
@@ -4083,6 +4347,12 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "Email nurture",
+          "date": "Jun 02, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Michael Pacheco",
       "publishedByVendor": "Hitachi Vantara",
@@ -4122,6 +4392,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Jeff Lundberg",
       "publishedByVendor": "Hitachi Vantara",
@@ -4161,6 +4432,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Steven Garbrecht",
       "publishedByVendor": "Hitachi Vantara",
@@ -4200,6 +4472,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Steven Garbrecht",
       "publishedByVendor": "Hitachi Vantara / Gartner",
@@ -4239,6 +4512,12 @@
       "salesEmail": null,
       "sdrEmail": "https://hitachivantara.sharepoint.com/:w:/s/GlobalCampaignsAssets505/IQAWhZ6dbBy4Tovblg95KoJ0AfUVyT2f8TON_JGfho0ugCM?e=qrTSqL",
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "SDR activation",
+          "date": "May 05, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Steven Garbrecht",
       "publishedByVendor": "Hitachi Vantara",
@@ -4278,6 +4557,7 @@
       "salesEmail": "https://hitachivantara.sharepoint.com/:w:/s/GlobalCampaignsAssets505/IQDZoF0Gs6oiRIyv0NuMLx5eAU7RnXhvABDfWrfCbTJ5LtI?e=jJ83nv",
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Victor Lin",
       "publishedByVendor": "Hitachi Vantara",
@@ -4317,6 +4597,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Jeff Lundberg",
       "publishedByVendor": "Hitachi Vantara",
@@ -4356,6 +4637,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Jeff Lundberg",
       "publishedByVendor": "Hitachi Vantara",
@@ -4395,6 +4677,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Jeff Lundberg",
       "publishedByVendor": "Hitachi Vantara",
@@ -4434,6 +4717,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Dinesh Singh, Shari Gardner",
       "publishedByVendor": "Hitachi Vantara",
@@ -4473,6 +4757,12 @@
       "salesEmail": null,
       "sdrEmail": "https://hitachivantara.sharepoint.com/:w:/s/GlobalCampaignsAssets505/IQCmovvxtGPCQq-KpkgGurh8AXobe1TZu-2QO-8FVGwrGHo?e=wF2pLJ",
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "SDR activation",
+          "date": "May 05, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Jeff Lundberg",
       "publishedByVendor": "Hitachi Vantara",
@@ -4512,6 +4802,12 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "Email nurture",
+          "date": "Jun 02, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Jeff Lundberg",
       "publishedByVendor": "Hitachi Vantara",
@@ -4551,6 +4847,12 @@
       "salesEmail": null,
       "sdrEmail": "https://hitachivantara.sharepoint.com/:w:/s/GlobalCampaignsAssets505/IQCYGmTjjUULR495uAzFNAeTAdyD9P3ZsaoedqJLTVIew3o?e=zLDwjB",
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "SDR activation",
+          "date": "May 05, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Jeff Lundberg",
       "publishedByVendor": "Hitachi Vantara",
@@ -4590,6 +4892,12 @@
       "salesEmail": null,
       "sdrEmail": "https://hitachivantara.sharepoint.com/:w:/s/GlobalCampaignsAssets505/IQDYU5Vskuf1QZ75MDJzyRzpASipGCTG435hIOHnsdks5Og?e=l75fKm",
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "SDR activation",
+          "date": "May 05, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Liam Yu",
       "publishedByVendor": "Hitachi Vantara",
@@ -4629,6 +4937,12 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "Email nurture",
+          "date": "Jun 02, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Steven Garbrecht",
       "publishedByVendor": "Gartner",
@@ -4668,6 +4982,12 @@
       "salesEmail": null,
       "sdrEmail": "https://hitachivantara.sharepoint.com/:w:/s/GlobalCampaignsAssets505/IQD4hv002HjnRpe-WUrP1gjKAdCMVIWSOcufSGJiNO1ZNmI?e=P42qnr",
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "SDR activation",
+          "date": "May 05, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Dinesh Singh, Shari Gardner",
       "publishedByVendor": "Hitachi Vantara",
@@ -4707,6 +5027,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Michelle Salta",
       "publishedByVendor": "Hitachi Vantara",
@@ -4746,6 +5067,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
@@ -4785,6 +5107,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Scott Jones",
       "publishedByVendor": "ESG",
@@ -4824,6 +5147,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "",
       "ownerIndividual": "Lena Valenty",
       "publishedByVendor": "Hitachi Vantara",
@@ -4863,6 +5187,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Steven Garbrecht",
       "publishedByVendor": "Hitachi Vantara",
@@ -4902,6 +5227,16 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "Paid media",
+          "date": "Jun 01, 2026"
+        },
+        {
+          "channel": "Content syndication",
+          "date": "Jul 01, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Nick Howell",
       "publishedByVendor": "GigaOm",
@@ -4941,6 +5276,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "",
       "ownerIndividual": "Nick Howell",
       "publishedByVendor": "Hitachi Vantara",
@@ -4980,6 +5316,12 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "Email nurture",
+          "date": "Jun 02, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Mark Geel",
       "publishedByVendor": "Hitachi Vantara",
@@ -5019,6 +5361,12 @@
       "salesEmail": null,
       "sdrEmail": "https://hitachivantara.sharepoint.com/:w:/s/GlobalCampaignsAssets505/IQD-yxG4sjRHTbQXVal5VJZvAYW-1G_3g2MXCqMVGPkaU-o?e=hM72oK",
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "SDR activation",
+          "date": "May 05, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Macey Jones",
       "publishedByVendor": "Hitachi Vantara",
@@ -5058,6 +5406,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "melissa.zelyez@hitachivantara.com",
       "publishedByVendor": "Hitachi Vantara",
@@ -5097,6 +5446,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Jeff Lundberg",
       "publishedByVendor": "Hitachi Vantara",
@@ -5136,6 +5486,16 @@
       "salesEmail": "https://hitachivantara.sharepoint.com/:w:/s/GlobalCampaignsAssets505/IQAuCKu0yd9NQaDPobHtamr-AZa65VHottEQL-qwmy-xZ1o?e=FudIrE",
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "Paid media",
+          "date": "Jun 01, 2026"
+        },
+        {
+          "channel": "Content syndication",
+          "date": "Jul 01, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Nick Howell",
       "publishedByVendor": "Hitachi Vantara",
@@ -5175,6 +5535,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
@@ -5214,6 +5575,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "",
@@ -5253,6 +5615,12 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "Email nurture",
+          "date": "Jun 02, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Stephanie Thompson, Sulochna Khokhrai",
       "publishedByVendor": "Hitachi Vantara",
@@ -5292,6 +5660,12 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "Email nurture",
+          "date": "Jun 02, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Nick Howell",
       "publishedByVendor": "Hitachi Vantara",
@@ -5331,6 +5705,16 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "Content syndication",
+          "date": "Jul 01, 2026"
+        },
+        {
+          "channel": "Email nurture",
+          "date": "Jun 02, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Nick Howell",
       "publishedByVendor": "Hitachi Vantara",
@@ -5370,6 +5754,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Mark Geel",
       "publishedByVendor": "Hitachi Vantara",
@@ -5409,6 +5794,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Macey Jones, Stephanie Thompson",
       "publishedByVendor": "",
@@ -5448,6 +5834,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Jeff Lundberg",
       "publishedByVendor": "",
@@ -5487,6 +5874,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Macey Jones",
       "publishedByVendor": "IDC",
@@ -5526,6 +5914,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Macey Jones",
       "publishedByVendor": "IDC",
@@ -5565,6 +5954,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Sakina Peshawarwala",
       "publishedByVendor": "",
@@ -5604,6 +5994,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Liam Yu",
       "publishedByVendor": "Hitachi Vantara",
@@ -5643,6 +6034,16 @@
       "salesEmail": "https://hitachivantara.sharepoint.com/:w:/s/GlobalCampaignsAssets505/IQBJelsvZa6BR4ZX6YmTSHMiASA6PMR83Sss1YcPKcyqoaM?e=Nvwuu4",
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "Paid media",
+          "date": "Jun 04, 2026"
+        },
+        {
+          "channel": "Content syndication",
+          "date": "Jul 01, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Mark Geel, Sulochna Khokhrai",
       "publishedByVendor": "Hitachi Vantara",
@@ -5682,6 +6083,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Jennifer Schmitz",
       "publishedByVendor": "Hitachi Vantara",
@@ -5721,6 +6123,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
@@ -5760,6 +6163,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Jennifer Schmitz",
       "publishedByVendor": "Hitachi Vantara",
@@ -5799,6 +6203,7 @@
       "salesEmail": null,
       "sdrEmail": "https://hitachivantara.sharepoint.com/:w:/s/GlobalCampaignsAssets505/IQChTAg5N6a2QaHnk20ryl_MAXAqt5P5ixWaQYPASl_1kIQ?e=id14ex",
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Nick Howell",
       "publishedByVendor": "Hitachi Vantara",
@@ -5838,6 +6243,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Jennifer Schmitz",
       "publishedByVendor": "Hitachi Vantara",
@@ -5877,6 +6283,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Mark Geel",
       "publishedByVendor": "Hitachi Vantara",
@@ -5916,6 +6323,12 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "Email nurture",
+          "date": "Jun 02, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Jennifer Schmitz",
       "publishedByVendor": "Hitachi Vantara",
@@ -5955,6 +6368,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Sakina Peshawarwala",
       "publishedByVendor": "",
@@ -5994,6 +6408,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Jennifer Schmitz",
       "publishedByVendor": "Hitachi Vantara",
@@ -6033,6 +6448,7 @@
       "salesEmail": null,
       "sdrEmail": "https://hitachivantara.sharepoint.com/:w:/s/GlobalCampaignsAssets505/IQAkf0GNPxKATaNe_wFm-PcrARm0HaT_Pi8swkg1YXow0X8?e=fpMgEV",
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Angela Romberg, Steven Garbrecht",
       "publishedByVendor": "Hitachi Vantara",
@@ -6072,6 +6488,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Macey Jones",
       "publishedByVendor": "Hitachi Vantara",
@@ -6111,6 +6528,12 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "Email nurture",
+          "date": "Jun 02, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Macey Jones",
       "publishedByVendor": "MIT Technology Review",
@@ -6150,6 +6573,12 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "Email nurture",
+          "date": "Jun 02, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Nick Howell",
       "publishedByVendor": "MIT Technology Review",
@@ -6189,6 +6618,7 @@
       "salesEmail": "https://hitachivantara.sharepoint.com/:w:/s/GlobalCampaignsAssets505/IQBKrnqZGehWQa7d8acovOsNAY8w3gZMq7QWjjLjeM1YV8I?e=EpDZSO",
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Macey Jones, Nick Howell",
       "publishedByVendor": "MIT Technology Review",
@@ -6228,6 +6658,12 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "Email nurture",
+          "date": "Jun 02, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Mark Geel",
       "publishedByVendor": "Hitachi Vantara",
@@ -6267,6 +6703,7 @@
       "salesEmail": "https://hitachivantara.sharepoint.com/:w:/s/GlobalCampaignsAssets505/IQAD0OwMENoNQoQuGVEUGIlyAazP4KDxYTXBjL2y0P_VB9g?e=YvUVJY",
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Angela Romberg, Jennifer Schmitz",
       "publishedByVendor": "Hitachi Vantara",
@@ -6306,6 +6743,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Victor Lin",
       "publishedByVendor": "Hitachi Vantara",
@@ -6345,6 +6783,20 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "Paid media",
+          "date": "Jun 01, 2026"
+        },
+        {
+          "channel": "Content syndication",
+          "date": "Jul 01, 2026"
+        },
+        {
+          "channel": "Email nurture",
+          "date": "Jun 02, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Mark Geel",
       "publishedByVendor": "GigaOm / Hitachi Vantara",
@@ -6384,6 +6836,12 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [
+        {
+          "channel": "SDR activation",
+          "date": "Sep 15, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Mark Geel",
       "publishedByVendor": "Hitachi Vantara",
@@ -6423,6 +6881,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Barbara Goetz",
       "publishedByVendor": "ESG",
@@ -6462,6 +6921,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Steven Garbrecht",
       "publishedByVendor": "Hitachi Vantara",
@@ -6501,6 +6961,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Jeff Lundberg",
       "publishedByVendor": "Hitachi Vantara / NVIDIA",
@@ -6540,6 +7001,12 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "Content syndication",
+          "date": "Jul 01, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Liam Yu",
       "publishedByVendor": "Omdia",
@@ -6579,6 +7046,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Nick Howell",
       "publishedByVendor": "Hitachi Vantara",
@@ -6618,6 +7086,12 @@
       "salesEmail": "https://hitachivantara.sharepoint.com/:w:/s/PartnerandFieldMarketing/IQArBW5yyCqhToXU190allGgAcy2Y4POKjVN1O2xp-ScrU4?e=dLeVDo",
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [
+        {
+          "channel": "Paid media",
+          "date": "Sep 14, 2026"
+        }
+      ],
       "promotionPeriod": "2H",
       "ownerIndividual": "Nick Howell, Stephanie Thompson",
       "publishedByVendor": "Omdia",
@@ -6657,6 +7131,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Mark Geel",
       "publishedByVendor": "Hitachi Vantara",
@@ -6696,6 +7171,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Nick Howell",
       "publishedByVendor": "Hitachi Vantara",
@@ -6735,6 +7211,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Liam Yu, Melissa Zelyez",
       "publishedByVendor": "Hitachi Vantara",
@@ -6774,6 +7251,12 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "Email nurture",
+          "date": "Jun 02, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Nick Howell",
       "publishedByVendor": "Hitachi Vantara",
@@ -6813,6 +7296,7 @@
       "salesEmail": "https://hitachivantara.sharepoint.com/:w:/s/GlobalCampaignsAssets505/IQCmIkNUeK2TT71432dyoHjlASQelwA2WIGcL-N19KNY1PI?e=hVwfqm",
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Stephanie Thompson, Steven Garbrecht",
       "publishedByVendor": "Hitachi Vantara",
@@ -6852,6 +7336,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Sakina Peshawarwala",
       "publishedByVendor": "Hitachi Vantara",
@@ -6891,6 +7376,12 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "Email nurture",
+          "date": "Jun 02, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Steven Garbrecht",
       "publishedByVendor": "Hitachi Vantara",
@@ -6930,6 +7421,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Jennifer Schmitz",
       "publishedByVendor": "Hitachi Vantara",
@@ -6969,6 +7461,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Jennifer Schmitz",
       "publishedByVendor": "Hitachi Vantara",
@@ -7008,6 +7501,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Jennifer Schmitz",
       "publishedByVendor": "Hitachi Vantara",
@@ -7047,6 +7541,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "",
@@ -7086,6 +7581,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Michael Pacheco",
       "publishedByVendor": "Hitachi Vantara",
@@ -7125,6 +7621,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Nick Howell",
       "publishedByVendor": "Hitachi Vantara",
@@ -7164,6 +7661,12 @@
       "salesEmail": null,
       "sdrEmail": "https://hitachivantara.sharepoint.com/:w:/s/GlobalCampaignsAssets505/IQDeDvazR0UURYKIcRGTI3DWASptEkaU0Xd1BKVYThS2zng?e=gQdo4r",
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "SDR activation",
+          "date": "May 05, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Angela Romberg",
       "publishedByVendor": "Hitachi Vantara",
@@ -7203,6 +7706,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Macey Jones",
       "publishedByVendor": "Hitachi Vantara",
@@ -7242,6 +7746,16 @@
       "salesEmail": "https://hitachivantara.sharepoint.com/:w:/s/GlobalCampaignsAssets505/IQApDMrMycrJRKlYEziomY_mAYPXLb2ge3oyAduWSGZ0xa0?e=Ofgjf7",
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "Paid media",
+          "date": "Jun 01, 2026"
+        },
+        {
+          "channel": "Content syndication",
+          "date": "Jul 01, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Macey Jones, Stephanie Thompson, Sulochna Khokhrai",
       "publishedByVendor": "Hitachi Vantara + Index Engines + VM2020",
@@ -7281,6 +7795,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Jennifer Schmitz",
       "publishedByVendor": "Hitachi Vantara",
@@ -7320,6 +7835,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Jennifer Schmitz",
       "publishedByVendor": "Hitachi Vantara",
@@ -7359,6 +7875,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Nick Howell",
       "publishedByVendor": "Hitachi Vantara",
@@ -7398,6 +7915,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Nick Howell",
       "publishedByVendor": "Hitachi Vantara",
@@ -7437,6 +7955,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Macey Jones",
       "publishedByVendor": "Hitachi Vantara",
@@ -7476,6 +7995,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Jennifer Schmitz, Steven Garbrecht",
       "publishedByVendor": "Hitachi Vantara",
@@ -7515,6 +8035,12 @@
       "salesEmail": null,
       "sdrEmail": "https://hitachivantara.sharepoint.com/:w:/s/GlobalCampaignsAssets505/IQCzeB3nukm3RYNXCRqfDigxAW3mAfs8Vmt8AQYVzTg_Cqg?e=ypIkhp",
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "SDR activation",
+          "date": "May 05, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Nick Howell",
       "publishedByVendor": "Hitachi Vantara",
@@ -7554,6 +8080,16 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "Paid media",
+          "date": "Jun 01, 2026"
+        },
+        {
+          "channel": "Content syndication",
+          "date": "Jul 01, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Angela Romberg",
       "publishedByVendor": "Hitachi Vantara",
@@ -7593,6 +8129,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Jennifer Schmitz",
       "publishedByVendor": "Hitachi Vantara",
@@ -7632,6 +8169,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Victor Lin",
       "publishedByVendor": "Hitachi Vantara",
@@ -7671,6 +8209,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Sakina Peshawarwala",
       "publishedByVendor": "StarCIO",
@@ -7710,6 +8249,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
@@ -7749,6 +8289,12 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "Paid media",
+          "date": "Jun 01, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
@@ -7788,6 +8334,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
@@ -7827,6 +8374,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Victor Lin",
       "publishedByVendor": "Hitachi Vantara",
@@ -7866,6 +8414,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Victor Lin",
       "publishedByVendor": "Hitachi Vantara",
@@ -7905,6 +8454,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Victor Lin",
       "publishedByVendor": "Hitachi Vantara",
@@ -7944,6 +8494,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Michael Pacheco",
       "publishedByVendor": "Hitachi Vantara",
@@ -7983,6 +8534,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Jennifer Schmitz, Steven Garbrecht",
       "publishedByVendor": "Hitachi Vantara",
@@ -8022,6 +8574,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
@@ -8061,6 +8614,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Jennifer Schmitz",
       "publishedByVendor": "Hitachi Vantara",
@@ -8100,6 +8654,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
@@ -8139,6 +8694,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
@@ -8178,6 +8734,16 @@
       "salesEmail": "https://hitachivantara.sharepoint.com/:w:/s/GlobalCampaignsAssets505/IQAur_oA2tvSTI5WzUov9PsFAYnvUFXdD-1I-Gez-pspUL8?e=4ViuVh",
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "Paid media",
+          "date": "Jun 01, 2026"
+        },
+        {
+          "channel": "Content syndication",
+          "date": "Jul 01, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Karina Andrade",
       "publishedByVendor": "CIO.com",
@@ -8217,6 +8783,12 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "Email nurture",
+          "date": "Jun 02, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
@@ -8256,6 +8828,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Michelle Salta",
       "publishedByVendor": "Hitachi Vantara",
@@ -8295,6 +8868,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
@@ -8334,6 +8908,12 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "Email nurture",
+          "date": "Jun 02, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
@@ -8373,6 +8953,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "",
@@ -8412,6 +8993,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "",
@@ -8451,6 +9033,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "",
@@ -8490,6 +9073,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
@@ -8529,6 +9113,12 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "Paid media",
+          "date": "Jun 01, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Angela Romberg, Shari Gardner",
       "publishedByVendor": "Forrester",
@@ -8568,6 +9158,16 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "Paid media",
+          "date": "Jun 01, 2026"
+        },
+        {
+          "channel": "Content syndication",
+          "date": "Jul 01, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Jeff Lundberg",
       "publishedByVendor": "Hitachi Vantara",
@@ -8607,6 +9207,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
@@ -8646,6 +9247,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Stephanie Thompson, Sulochna Khokhrai",
       "publishedByVendor": "Hitachi Vantara",
@@ -8685,6 +9287,12 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "Email nurture",
+          "date": "Jun 02, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Dinesh Singh, Shari Gardner",
       "publishedByVendor": "Hitachi Vantara",
@@ -8724,6 +9332,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Michael Pacheco",
       "publishedByVendor": "Hitachi Vantara",
@@ -8763,6 +9372,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Steven Garbrecht",
       "publishedByVendor": "Hitachi Vantara",
@@ -8802,6 +9412,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "melissa.zelyez@hitachivantara.com",
       "publishedByVendor": "Hitachi Vantara",
@@ -8841,6 +9452,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Nick Howell",
       "publishedByVendor": "Hitachi Vantara",
@@ -8880,6 +9492,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Dinesh Singh, Shari Gardner",
       "publishedByVendor": "Hitachi Vantara",
@@ -8919,6 +9532,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Jeff Lundberg",
       "publishedByVendor": "Hitachi Vantara",
@@ -8958,6 +9572,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Jeff Lundberg",
       "publishedByVendor": "Hitachi Vantara",
@@ -8997,6 +9612,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Mark Geel",
       "publishedByVendor": "Hitachi Vantara",
@@ -9036,6 +9652,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Dinesh Singh",
       "publishedByVendor": "Hitachi Vantara",
@@ -9075,6 +9692,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Dinesh Singh, Shari Gardner",
       "publishedByVendor": "Hitachi Vantara",
@@ -9114,6 +9732,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Melissa Zelyez",
       "publishedByVendor": "Hitachi Vantara",
@@ -9153,6 +9772,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Dinesh Singh",
       "publishedByVendor": "Hitachi Vantara",
@@ -9192,6 +9812,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Nick Howell",
       "publishedByVendor": "Hitachi Vantara",
@@ -9231,6 +9852,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Richard Jew",
       "publishedByVendor": "Hitachi Vantara",
@@ -9270,6 +9892,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Angela Romberg, Jennifer Schmitz",
       "publishedByVendor": "Hitachi Vantara",
@@ -9309,6 +9932,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Mark Geel",
       "publishedByVendor": "Hitachi Vantara",
@@ -9348,6 +9972,12 @@
       "salesEmail": "https://hitachivantara.sharepoint.com/:w:/s/GlobalCampaignsAssets505/IQC9NeVmo9RIS5yEEq7L9WS0Aeyvp_GHysRs5NAG1kAvZNc?e=g1lcCq",
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "Content syndication",
+          "date": "Jul 01, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Stephanie Thompson, Sulochna Khokhrai",
       "publishedByVendor": "Forrester",
@@ -9387,6 +10017,12 @@
       "salesEmail": null,
       "sdrEmail": "https://hitachivantara.sharepoint.com/:w:/s/GlobalCampaignsAssets505/IQDmjRQDNUzNTZ1sfnvqq5I4AfcU_twmGolHdQWHAAKVMro?e=pUJoFJ",
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "SDR activation",
+          "date": "May 05, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Liam Yu",
       "publishedByVendor": "Hitachi Vantara",
@@ -9426,6 +10062,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Shari Gardner",
       "publishedByVendor": "Hitachi Vantara",
@@ -9465,6 +10102,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
@@ -9504,6 +10142,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Michael Pacheco",
       "publishedByVendor": "Hitachi Vantara",
@@ -9543,6 +10182,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Mark Geel",
       "publishedByVendor": "Hitachi Vantara",
@@ -9582,6 +10222,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Mark Geel, Michelle Salta",
       "publishedByVendor": "Hitachi Vantara",
@@ -9621,6 +10262,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Mark Geel",
       "publishedByVendor": "Hitachi Vantara",
@@ -9660,6 +10302,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Mark Geel",
       "publishedByVendor": "Cohasset",
@@ -9699,6 +10342,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Mark Geel",
       "publishedByVendor": "GigaOm / Hitachi Vantara",
@@ -9738,6 +10382,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
@@ -9777,6 +10422,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
@@ -9816,6 +10462,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "",
@@ -9855,6 +10502,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Stephanie Thompson, Sulochna Khokhrai",
       "publishedByVendor": "Hitachi Vantara",
@@ -9894,6 +10542,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
@@ -9933,6 +10582,12 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "Email nurture",
+          "date": "Jun 02, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Stephanie Thompson, Sulochna Khokhrai",
       "publishedByVendor": "Hitachi Vantara",
@@ -9972,6 +10627,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
@@ -10011,6 +10667,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
@@ -10050,6 +10707,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
@@ -10089,6 +10747,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Jennifer Schmitz",
       "publishedByVendor": "Hitachi Vantara",
@@ -10128,6 +10787,7 @@
       "salesEmail": "https://hitachivantara.sharepoint.com/:w:/s/GlobalCampaignsAssets505/IQAXZwSXWCSfQJUErceorQPvASIWYVmZF0XoRUG0-EZvsLU?e=nXmdxw",
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "Sakina Peshawarwala",
       "publishedByVendor": "SHARE",
@@ -10167,6 +10827,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "2H",
       "ownerIndividual": "melissa.zelyez@hitachivantara.com",
       "publishedByVendor": "Hitachi Vantara",
@@ -10206,6 +10867,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "1H",
       "ownerIndividual": "Jennifer Schmitz",
       "publishedByVendor": "Hitachi Vantara",
@@ -10245,6 +10907,12 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "Email nurture",
+          "date": "Jun 02, 2026"
+        }
+      ],
       "promotionPeriod": "1H",
       "ownerIndividual": "Jeff Lundberg",
       "publishedByVendor": "Hitachi Vantara",
@@ -10284,6 +10952,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
@@ -10323,6 +10992,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
@@ -10362,6 +11032,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
@@ -10401,6 +11072,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
@@ -10440,6 +11112,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "",
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
@@ -10479,6 +11152,16 @@
       "salesEmail": "https://hitachivantara.sharepoint.com/:w:/s/GlobalCampaignsAssets505/IQAkTj9uKOJJTIqQkTPqMbOzAbHaFM6R5AT4Gmb-auhnsr4?e=FPeHEU",
       "sdrEmail": null,
       "usedInCampaign": "Yes",
+      "promotionDates": [
+        {
+          "channel": "Paid media",
+          "date": "Dec 01, 2026"
+        },
+        {
+          "channel": "Email nurture",
+          "date": "Oct 30, 2026"
+        }
+      ],
       "promotionPeriod": "",
       "ownerIndividual": "Macey Jones",
       "publishedByVendor": "Hitachi Vantara",
@@ -10487,13 +11170,13 @@
       "abstract": "Sovereignty is more than data residency. This white paper explains how organizations can build a trusted, resilient data foundation for sovereign AI, maintaining control over data, models and AI outcomes while preserving the flexibility to innovate and the resilience to withstand disruption.",
       "webinarImage": null,
       "marketoOutboundImage": null,
-      "partnerCampaignLink": null,
+      "partnerCampaignLink": "https://www.partnermarketing.hitachivantara.com/ai-data-foundation",
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q3",
       "issueType": ""
     },
     {
-      "id": "esteyco-sovereign-ai-exec-blog-tier-2-launch-blog-integrated-resilience-270",
+      "id": "esteyco-sovereign-ai-exec-blog-tier-2-launch-blog-integrated-resilience-271",
       "title": "Esteyco / Sovereign AI Exec Blog (Tier 2 Launch Blog: Integrated Resilience)",
       "url": null,
       "type": "Blog",
@@ -10518,6 +11201,7 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [],
       "promotionPeriod": "",
       "ownerIndividual": "",
       "publishedByVendor": "",
@@ -10532,7 +11216,7 @@
       "issueType": ""
     },
     {
-      "id": "the-infrastructure-decisions-you-ll-regret-delaying-272",
+      "id": "the-infrastructure-decisions-you-ll-regret-delaying-273",
       "title": "The Infrastructure Decisions You'll Regret Delaying",
       "url": "https://www.hitachivantara.com/en-us/company/events-and-webinars?commid=679673&bt_tok={{lead_id}}",
       "type": "Webinar",
@@ -10557,6 +11241,12 @@
       "salesEmail": null,
       "sdrEmail": null,
       "usedInCampaign": "No",
+      "promotionDates": [
+        {
+          "channel": "Field activation",
+          "date": "Oct 28, 2026"
+        }
+      ],
       "promotionPeriod": "",
       "ownerIndividual": "Sandra Westmoreland",
       "publishedByVendor": "",
