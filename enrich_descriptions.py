@@ -2,6 +2,7 @@
 """Propose or apply grounded descriptions from publicly accessible source pages."""
 import argparse, json, os, re, time
 from html.parser import HTMLParser
+from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 from urllib.parse import urlparse
 import smartsheet
@@ -89,13 +90,21 @@ def main():
         meta={n:cell(row,cols[n]) for n in ('Type','Campaign','Use Case','Audience') if n in cols}
         try:
             description=summarize(title,url,source,meta,key)
-        except Exception as ex:
-            print('AI request failed:',type(ex).__name__)
-            continue
+        except HTTPError as error:
+            try:
+                code = json.loads(error.read(8192))['error'].get('code')
+            except (ValueError, KeyError, AttributeError, TypeError, OSError):
+                code = None
+            detail = f' (code: {code})' if isinstance(code, str) and re.fullmatch(r'[a-z0-9_]{1,64}', code) else ''
+            raise SystemExit(f'OpenAI Chat Completions failed with HTTP {error.code}{detail}.') from None
+        except (URLError, TimeoutError) as error:
+            raise SystemExit(f'Could not reach OpenAI Chat Completions ({type(error).__name__}).') from None
         if not description:continue
         proposed.append({'row_id':row.id,'title':title,'url':url,'description':description,
                          'source_scope':'Public landing page; not gated report content'})
         time.sleep(0.15)
+    if not proposed:
+        raise SystemExit('No descriptions generated. Check for blank Description cells with accessible public landing pages containing sufficient source text.')
     with open('description-proposals.json','w',encoding='utf-8') as f:
         json.dump({'applied':a.apply,'proposals':proposed},f,indent=2,ensure_ascii=False)
     if a.apply and proposed:
