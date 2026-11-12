@@ -2,11 +2,16 @@ name: Sync Content Library from Smartsheet
 
 on:
   schedule:
-    - cron: "30 */2 * * *"  # offset by 30 min from the webinar sync so they don't collide
+    - cron: "30 */2 * * *"  # offset by 30 min from the webinar sync
   workflow_dispatch: {}
 
 permissions:
   contents: write
+
+# Keep two Content Library syncs from trying to write content.json at once.
+concurrency:
+  group: content-library-sync-main
+  cancel-in-progress: false
 
 jobs:
   sync:
@@ -23,18 +28,40 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Run Content Library sync
+      - name: Refresh Smartsheet and publish content.json safely
         env:
           SMARTSHEET_API_TOKEN: ${{ secrets.SMARTSHEET_API_TOKEN }}
           CONTENT_SHEET_ID: ${{ secrets.CONTENT_SHEET_ID }}
-          DEBUG_COLUMNS: "1"
-        run: python sync_content.py
-
-      - name: Commit updated content.json
+        shell: bash
         run: |
+          set -euo pipefail
           git config user.name "content-hub-bot"
           git config user.email "actions@github.com"
-          git add content.json
-          git diff --quiet --cached || git commit -m "Auto-refresh content library from Smartsheet"
-          git pull --rebase origin main
-          git push
+
+          # Always regenerate from the latest main. Never rebase a generated
+          # content.json against another generated content.json.
+          for attempt in 1 2 3; do
+            echo "Sync/publish attempt ${attempt} of 3"
+            git fetch origin main
+            git reset --hard origin/main
+
+            DEBUG_COLUMNS=1 python sync_content.py
+
+            git add content.json
+            if git diff --cached --quiet; then
+              echo "Content already up to date."
+              exit 0
+            fi
+
+            git commit -m "Auto-refresh content library from Smartsheet"
+            if git push origin HEAD:main; then
+              echo "Content Library published successfully."
+              exit 0
+            fi
+
+            echo "Branch changed during publishing. Regenerating from latest main."
+            sleep 2
+          done
+
+          echo "Failed to publish after three attempts."
+          exit 1
