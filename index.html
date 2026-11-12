@@ -78,6 +78,8 @@ h1{font-family:"Hitachi Sans",Arial,Helvetica,sans-serif;font-weight:400;font-si
 .modal-card{background:var(--white);width:min(980px,100%);border-radius:4px;box-shadow:var(--shadow);overflow:hidden;border-top:5px solid var(--red1)}
 .modal-head{padding:24px 26px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:20px}
 .modal-head h2{font-family:"Hitachi Sans",Arial,Helvetica,sans-serif;font-size:28px;font-weight:400;line-height:1.15;margin:0 0 9px;color:var(--black)}
+.modal-library-link{display:inline-block;margin-top:12px;padding:7px 11px;border:1px solid #b00020;border-radius:4px;background:#fff5f6;color:#a0001c;font-size:13px;font-weight:700;text-decoration:none}
+.modal-library-link:hover,.modal-library-link:focus-visible{background:#a0001c;color:#fff}
 .close{border:1px solid var(--gray2);background:var(--white);border-radius:50%;width:34px;height:34px;font-size:20px;cursor:pointer;color:var(--black)}
 .modal-body{padding:24px 26px;display:grid;grid-template-columns:1.15fr .85fr;gap:24px}
 .box{border:1px solid var(--line);border-radius:3px;padding:15px;margin-bottom:12px;background:var(--white)}
@@ -199,7 +201,9 @@ h1{font-family:"Hitachi Sans",Arial,Helvetica,sans-serif;font-weight:400;font-si
 <div id="modal" class="modal" onclick="if(event.target===this) closeModal()">
  <div class="modal-card">
   <div class="modal-head">
-    <div><h2 id="mTitle"></h2><div id="mTags" class="tags"></div></div>
+    <div><h2 id="mTitle"></h2><div id="mTags" class="tags"></div>
+      <a class="modal-library-link" href="https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Content-Library.aspx" target="_blank" rel="noopener noreferrer">&#8592; Back to Content Library</a>
+    </div>
     <button class="close" onclick="closeModal()">×</button>
   </div>
   <div id="mBody" class="modal-body"></div>
