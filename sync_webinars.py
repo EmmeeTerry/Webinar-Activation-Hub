@@ -66,6 +66,8 @@ WEBINAR_COLUMN_MAP = {
     "social":           "Sprout Social",
     "attendance":       "Attendance Report",
     "abstract":         "Abstract",
+    "webinarImage": "Webinar Image",
+    "marketoOutboundImage": "Marketo Outbound Email Link - Enterprise Audience",
 }
 
 # Fields whose Smartsheet column is a hyperlink cell, but where we want the visible
@@ -81,7 +83,9 @@ CONTENT_COLUMN_MAP = {
     "useCase":      "Use Case",
     "url":          "Asset Title (with Link)",  # same column's hyperlink URL
     "description":  "Description",            # the real description text lives here, not on the Webinar Calendar report
-    "partnerCampaignLink": "Partner Campaign Link",  # hyperlink from Content Mapping Master List
+    "partnerCampaignLink": "Partner Campaign Link",
+    "webinarImage": "Webinar Image",
+    "marketoOutboundImage": "Marketo Outbound Email Link - Enterprise Audience",  # hyperlink from Content Mapping Master List
 }
 
 CONTENT_TEXT_ONLY_FIELDS = {"titleLinked"}  # we want this column's visible text, not its hyperlink (that's what "url" is for)
@@ -272,10 +276,14 @@ def transform(webinar_rows, content_rows):
     # column (which is unused/blank for every row). Match by title.
     description_by_title = {}
     partner_link_by_title = {}
+    image_by_title = {}
+    marketo_by_title = {}
     for c in content_rows:
         d = c.get("description")
         partner_link = c.get("partnerCampaignLink")
-        if not d and not partner_link:
+        img = c.get("webinarImage")
+        marketo = c.get("marketoOutboundImage")
+        if not d and not partner_link and not img and not marketo:
             continue
         for key_field in ("title", "titleLinked"):
             t = (c.get(key_field) or "").strip().lower()
@@ -286,6 +294,10 @@ def transform(webinar_rows, content_rows):
                     description_by_title[t] = d
                 if partner_link:
                     partner_link_by_title[t] = partner_link
+                if img:
+                    image_by_title[t] = img
+                if marketo:
+                    marketo_by_title[t] = marketo
 
     webinars = []
     for w in webinar_rows:
@@ -307,6 +319,8 @@ def transform(webinar_rows, content_rows):
             "readiness": readiness_from(w.get("activationStatus")),
             "whyUse": why_use(w.get("audience"), w.get("useCase")),
             "abstract": description_by_title.get((w.get("title") or "").strip().lower()) or w.get("abstract") or "",
+            "webinarImage": valid_resource_url(w.get("webinarImage")) or valid_resource_url(image_by_title.get((w.get("title") or "").strip().lower())),
+            "marketoOutboundImage": valid_resource_url(w.get("marketoOutboundImage")) or valid_resource_url(marketo_by_title.get((w.get("title") or "").strip().lower())),
             "links": {
                 "watch": valid_resource_url(w.get("watch")),
                 "marketingEmail": valid_resource_url(w.get("marketingEmail")),
