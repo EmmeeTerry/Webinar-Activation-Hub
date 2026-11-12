@@ -99,6 +99,11 @@ h1{font-family:"Hitachi Sans",Arial,Helvetica,sans-serif;font-weight:400;font-si
 .modal-head h2{font-family:"Hitachi Sans",Arial,Helvetica,sans-serif;font-size:26px;font-weight:400;line-height:1.2;margin:0 0 9px;color:var(--black)}
 .modal-library-link{display:inline-block;margin-top:12px;padding:7px 11px;border:1px solid #b00020;border-radius:4px;background:#fff5f6;color:#a0001c;font-size:13px;font-weight:700;text-decoration:none}
 .modal-library-link:hover,.modal-library-link:focus-visible{background:#a0001c;color:#fff}
+.modal-header-actions{display:flex;align-items:flex-start;justify-content:flex-end;gap:8px}
+.modal-header-actions > button:last-child{flex-shrink:0}
+.modal-copy-link{min-height:34px;padding:6px 10px;border:1px solid #262626;border-radius:4px;background:#262626;color:#fff;font:inherit;font-size:12px;font-weight:700;cursor:pointer}
+.modal-copy-link:hover,.modal-copy-link:focus-visible{background:#fff;color:#262626}
+@media(max-width:520px){.modal-header-actions{flex-wrap:wrap-reverse;max-width:112px}}
 .modal-tags{display:flex;flex-wrap:wrap;gap:6px}
 .modal-body{padding:24px 26px;display:grid;grid-template-columns:1.15fr .85fr;gap:24px}
 .modal-box{border:1px solid var(--line);border-radius:3px;padding:15px;margin-bottom:12px;background:var(--white)}
@@ -224,7 +229,10 @@ h1{font-family:"Hitachi Sans",Arial,Helvetica,sans-serif;font-weight:400;font-si
       <div><h2 id="mTitle"></h2><div id="mTags" class="modal-tags"></div>
       <a class="modal-library-link" href="https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Content-Library.aspx" target="_blank" rel="noopener noreferrer">&#8592; Back to Content Library</a>
     </div>
-      <button class="modal-close" onclick="closeModal()">&times;</button>
+      <div class="modal-header-actions">
+        <button type="button" class="modal-copy-link" id="copyResourceCardBtn">Copy resource card link</button>
+        <button class="modal-close" onclick="closeModal()">&times;</button>
+      </div>
     </div>
     <div id="mBody" class="modal-body"></div>
   </div>
@@ -619,7 +627,6 @@ function openModal(id){
           : `<div class="resource-btn unavailable">${esc(n)} &middot; not available</div>`
       ).join('')}</div></div>
       <div class="modal-box"><h3>Share</h3><div class="resource-grid">
-        <button type="button" class="resource-btn" id="copyResourceCardBtn">Copy resource card link</button>
         ${item.url ? `<a class="resource-btn" href="./customer-email-hub.html?source=content&title=${encodeURIComponent(item.title)}&description=${encodeURIComponent(item.abstract||'')}&url=${encodeURIComponent(item.url||'')}&useCase=${encodeURIComponent(item.useCase||'')}&campaign=${encodeURIComponent(item.campaign||'')}" target="_blank" rel="noopener">Create Customer Email &#8599;</a>` : `<div class="resource-btn unavailable">Email this &middot; nothing to share yet</div>`}
         <a class="resource-btn" href="./build-slide.html?id=${encodeURIComponent(item.id)}" target="_blank" rel="noopener">Overview Slide &#8599;</a>\n        <a class="resource-btn" href="./pam-email-hub.html?source=content&title=${encodeURIComponent(item.title)}&description=${encodeURIComponent(item.abstract||'')}&url=${encodeURIComponent(item.url||'')}" target="_blank" rel="noopener">Create PAM-to-Partner Email ↗</a>
         ${item.type === 'Webinar' && item.publishDate ? (
@@ -646,7 +653,7 @@ function openModal(id){
         </div>
       </div>
     </div>`;
-  document.getElementById('copyResourceCardBtn').addEventListener('click', event => copyResourceCardLink(item.id, event.currentTarget));
+  document.getElementById('copyResourceCardBtn').onclick = event => copyResourceCardLink(item.id, event.currentTarget);
   document.getElementById('modal').classList.add('open');
 }
 function closeModal(){ document.getElementById('modal').classList.remove('open'); }
