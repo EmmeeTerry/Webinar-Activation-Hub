@@ -594,6 +594,12 @@ function openModal(id){
     ['Sales outreach email', item.salesEmail],
     ['SDR email', item.sdrEmail],
     ['Partner campaign link', item.partnerCampaignLink],
+    ...[
+      ['Enterprise outbound email', item.outboundEmailEnterprise],
+      ['Enterprise outbound email banner', item.outboundBannerEnterprise],
+      ['Enterprise Marketo email preview', item.marketoPreviewEnterprise],
+      ['Paid social ads', item.paidSocialAds],
+    ].filter(([, url]) => url),
   ];
 
   document.getElementById('mBody').innerHTML = `
