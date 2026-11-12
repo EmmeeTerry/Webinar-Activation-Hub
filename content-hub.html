@@ -324,6 +324,11 @@ function copyDirectHubLink(url,btn){
     fallbackCopy(url, btn);
   }
 }
+function copyResourceCardLink(id, btn){
+  const url = new URL(location.pathname, location.origin);
+  url.searchParams.set('item', id);
+  copyDirectHubLink(url.href, btn);
+}
 function copyShareLink(){
   updateURL();
   const btn = document.getElementById('copyLinkBtn');
@@ -590,7 +595,6 @@ function openModal(id){
 
   const resources = [
     ['Open asset', item.url],
-    ['Marketing email', item.marketingEmail],
     ['Sales outreach email', item.salesEmail],
     ['SDR email', item.sdrEmail],
     ['Partner campaign link', item.partnerCampaignLink],
@@ -611,6 +615,7 @@ function openModal(id){
           : `<div class="resource-btn unavailable">${esc(n)} &middot; not available</div>`
       ).join('')}</div></div>
       <div class="modal-box"><h3>Share</h3><div class="resource-grid">
+        <button type="button" class="resource-btn" id="copyResourceCardBtn">Copy resource card link</button>
         ${item.url ? `<a class="resource-btn" href="./customer-email-hub.html?source=content&title=${encodeURIComponent(item.title)}&description=${encodeURIComponent(item.abstract||'')}&url=${encodeURIComponent(item.url||'')}&useCase=${encodeURIComponent(item.useCase||'')}&campaign=${encodeURIComponent(item.campaign||'')}" target="_blank" rel="noopener">Create Customer Email &#8599;</a>` : `<div class="resource-btn unavailable">Email this &middot; nothing to share yet</div>`}
         <a class="resource-btn" href="./build-slide.html?id=${encodeURIComponent(item.id)}" target="_blank" rel="noopener">Overview Slide &#8599;</a>\n        <a class="resource-btn" href="./pam-email-hub.html?source=content&title=${encodeURIComponent(item.title)}&description=${encodeURIComponent(item.abstract||'')}&url=${encodeURIComponent(item.url||'')}" target="_blank" rel="noopener">Create PAM-to-Partner Email ↗</a>
         ${item.type === 'Webinar' && item.publishDate ? (
@@ -637,6 +642,7 @@ function openModal(id){
         </div>
       </div>
     </div>`;
+  document.getElementById('copyResourceCardBtn').addEventListener('click', event => copyResourceCardLink(item.id, event.currentTarget));
   document.getElementById('modal').classList.add('open');
 }
 function closeModal(){ document.getElementById('modal').classList.remove('open'); }
@@ -895,12 +901,14 @@ function renderNeedsAttention(){
   </div>`;
 }
 function init(){
+  const sharedItem = new URLSearchParams(location.search).get('item');
   applyFiltersFromURL();
   makeFilterGroups();
   document.querySelectorAll('.content-view-nav button').forEach(b=>b.classList.toggle('active',b.id==='view-'+contentView));
   render();
   renderSpotlight();
   renderComingSoon();
+  if (sharedItem) openModal(sharedItem);
 }
 // renderNeedsAttention() is intentionally not called here -- the banner was removed from
 // the public-facing page since external stakeholders see this page. The detection logic
