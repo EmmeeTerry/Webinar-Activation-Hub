@@ -29,7 +29,11 @@
    }
  }else{
    (entry.primaryActivation||'').split(/[,;\n]+/).map(x=>x.trim()).filter(x=>x && !/^(no planned promotion|none|n\/?a)$/i.test(x)).forEach(x=>add(x,true));
-   add('Paid media',Boolean(entry.paidMediaDate));
+   const dates = entry.promotionDates || (entry.paidMediaDateDisplay ? [{channel:'Paid media', date:entry.paidMediaDateDisplay}] : []);
+   for (const {channel,date} of dates) {
+     resources.push({label:channel + ': ' + date, date:true, url:''});
+   }
+   if (!dates.some(({channel}) => channel === 'Paid media')) add('Paid media',Boolean(entry.paidMediaDate));
    add('Enterprise outbound email',entry.outboundEmailEnterprise);
    add('Enterprise outbound email banner',entry.outboundBannerEnterprise);
    add('Enterprise Marketo email preview',entry.marketoPreviewEnterprise);
