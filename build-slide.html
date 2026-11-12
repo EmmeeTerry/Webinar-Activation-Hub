@@ -28,21 +28,46 @@
      if (safeUrl(resource.url)) add(resource.title || 'Related campaign resource', resource.url);
    }
  }else{
-   (entry.primaryActivation||'').split(/[,;\n]+/).map(x=>x.trim()).filter(x=>x && !/^(no planned promotion|none|n\/?a)$/i.test(x)).forEach(x=>add(x,true));
-   const dates = entry.promotionDates || (entry.paidMediaDateDisplay ? [{channel:'Paid media', date:entry.paidMediaDateDisplay}] : []);
-   for (const {channel,date} of dates) {
-     resources.push({label:channel + ': ' + date, date:true, url:''});
+   const dates = new Map((entry.promotionDates || []).map(({channel,date}) => [channel.toLowerCase(),date]));
+   const plans = (entry.primaryActivation || '').split(/[,;\n]+/).map(value => value.trim()).filter(Boolean);
+   const paidSocial = ['Paid social ads', entry.paidSocialAds];
+   const sales = ['Sales outreach email', entry.salesEmail];
+   const outbound = ['Enterprise Marketo email preview', entry.marketoPreviewEnterprise];
+   const partner = ['Partner campaign', entry.partnerCampaignLink];
+   const aliases = new Map([
+     ['paid social', paidSocial], ['paid social ads', paidSocial],
+     ['sales email', sales], ['sales outreach email', sales],
+     ['outbound email', outbound], ['enterprise outbound email', outbound],
+     ['enterprise outbound email banner', outbound], ['enterprise marketo email preview', outbound],
+     ['partner activation', partner], ['partner campaign', partner],
+     ['sdr email cadence', ['SDR follow-up email', entry.sdrEmail, 'sdr activation']],
+     ['sdr follow-up email', ['SDR follow-up email', entry.sdrEmail, 'sdr activation']],
+     ['nurture email', ['Nurture email', '', 'email nurture']],
+     ['paid search', ['Paid Search', '', 'paid search (sem)']],
+     ['bytesize', ['Bytesize', '', 'bytesize promotion']],
+     ['campaign landing page', ['Campaign Landing Page', '', 'web / landing page']],
+   ]);
+   const seen = new Set();
+   for (const plan of plans) {
+     const key = plan.toLowerCase();
+     if (/^(no planned promotion|none|n\/?a|tbc|tbd|paid media)$/.test(key)) continue;
+     const [label, link, dateKey = key] = aliases.get(key) || [plan];
+     const canonical = label.toLowerCase();
+     const url = safeUrl(link);
+     if (seen.has(canonical) || (label === outbound[0] && !url)) continue;
+     seen.add(canonical);
+     const date = dates.get(dateKey);
+     add(date ? label + ': ' + date : label, url || true);
    }
-   if (!dates.some(({channel}) => channel === 'Paid media')) add('Paid media',Boolean(entry.paidMediaDate));
-   add('Enterprise outbound email',entry.outboundEmailEnterprise);
-   add('Enterprise outbound email banner',entry.outboundBannerEnterprise);
-   add('Enterprise Marketo email preview',entry.marketoPreviewEnterprise);
-   add('Paid social ads',entry.paidSocialAds);
-   add('Sales outreach email',entry.salesEmail);
-   add('SDR follow-up email',entry.sdrEmail);
-   add('Partner campaign',entry.partnerCampaignLink);
+   if (!seen.has('partner campaign')) add('Partner campaign',entry.partnerCampaignLink);
+   const paidDate = dates.get('paid media') || entry.paidMediaDateDisplay;
+   if (paidDate) {
+     resources.push({label:'Paid media: ' + paidDate,date:true,url:''});
+   } else if (plans.some(plan => plan.toLowerCase() === 'paid media')) {
+     add('Paid media',true);
+   }
  }
- const paidArtwork = safeUrl(webinar ? entry.links?.paidSocial : entry.paidSocialAds);
+ const paidArtwork = safeUrl(webinar ? entry.links?.paidSocial : resources.find(resource => resource.label.startsWith('Paid social ads'))?.url);
  const directAdImage = /\.(?:gif|png|jpe?g|webp|bmp|avif)(?:[?#]|$)/i.test(paidArtwork) ? paidArtwork : '';
  fields.paidArtwork = paidArtwork;
  fields.visualCandidates = JSON.stringify([...new Set([directAdImage, entry.webinarImage, entry.marketoOutboundImage].filter(safeUrl))]);
@@ -51,6 +76,6 @@
  fields.promotionPeriod=webinar?'':(entry.promotionPeriod||'');
  fields.promotionLabel=webinar?'PROMOTION RESOURCES AVAILABLE':'PLANNED PROMOTION / ACTIVATION';
  const hash=new URLSearchParams(fields).toString();
- location.replace('./event-slide.html?v=20261112-2#'+hash);
+ location.replace('./event-slide.html?v=20261112-3#'+hash);
 }catch(err){status.textContent='Unable to prepare slide: '+err.message;}})();
 </script></body></html>
