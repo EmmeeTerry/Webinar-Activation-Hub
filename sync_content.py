@@ -61,6 +61,10 @@ COLUMN_MAP = {
     "partnerCampaignLink": "Partner Campaign Link",
     "fiscalYear":         "Fiscal Year",
     "fiscalQuarter":      "Fiscal Quarter",
+    "outboundEmailEnterprise": "Outbound Email - Enterprise Audience",
+    "outboundBannerEnterprise": "Outbound Email Banner Link - Enterprise Audience",
+    "marketoPreviewEnterprise": "Marketo Outbound Image - Enterprise Audience",
+    "paidSocialAds": "Paid Social Ads",
     "webinarImage": "Webinar Image",
     "marketoOutboundImage": "Marketo Outbound Email Link - Enterprise Audience",
 }
@@ -120,6 +124,14 @@ def looks_like_url(value):
 
 def clean_url(value):
     return value if looks_like_url(value) else None
+
+
+def marketo_email_preview(*values):
+    for value in values:
+        url = clean_url(value)
+        if url and re.match(r"^https://[a-z0-9-]+\.marketodesigner\.com/", url, re.IGNORECASE):
+            return url
+    return None
 
 
 def extract_value(cell, text_only=False):
@@ -206,6 +218,12 @@ def fetch_content_rows(client, sheet_id):
             "paidMediaDateDisplay": pretty_date(paid_media_iso) if paid_media_iso else "",
             "primaryActivation": raw.get("primaryActivation") or "",
             "marketingEmail": clean_url(raw.get("marketingEmail")),
+            "outboundEmailEnterprise": clean_url(raw.get("outboundEmailEnterprise")),
+            "outboundBannerEnterprise": clean_url(raw.get("outboundBannerEnterprise")),
+            "marketoPreviewEnterprise": marketo_email_preview(
+                raw.get("marketoOutboundImage"), raw.get("marketoPreviewEnterprise")
+            ),
+            "paidSocialAds": clean_url(raw.get("paidSocialAds")),
             "salesEmail": clean_url(raw.get("salesEmail")),
             "sdrEmail": clean_url(raw.get("sdrEmail")),
             "usedInCampaign": "Yes" if truthy(raw.get("usedInCampaign")) else "No",
