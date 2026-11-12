@@ -73,6 +73,17 @@ COLUMN_MAP = {
 # not the link target (the URL is read separately via the "url" field above,
 # from the same underlying column). marketingEmail/salesEmail are left OUT of
 # this set on purpose -- we want their hyperlink URL, same as webinar links.
+PROMOTION_DATE_COLUMNS = {
+    "Content syndication": "Content Syndication Date (If any)",
+    "SDR activation": "SDR Activation Date (If any)",
+    "Email nurture": "Email Nurture Inclusion Date (If any)",
+    "Bytesize promotion": "Bytesize Promotion Date (If any)",
+    "Paid search (SEM)": "SEM Activation Date (If any)",
+    "Field activation": "Field Activation Date (If any)",
+    "Web / landing page": "Web page/Landing Page Date (If any)",
+    "Organic social": "Organic Social Date (If any)",
+}
+
 TEXT_ONLY_FIELDS = {"title", "primaryActivation"}
 
 OUTPUT_PATH = os.environ.get("OUTPUT_PATH", "content.json")
@@ -199,6 +210,13 @@ def fetch_content_rows(client, sheet_id):
 
         iso_date = normalize_date(raw.get("publishDate"))
         paid_media_iso = normalize_date(raw.get("paidMediaDate"))
+        promotion_dates = []
+        if paid_media_iso:
+            promotion_dates.append({"channel": "Paid media", "date": pretty_date(paid_media_iso)})
+        for channel, column in PROMOTION_DATE_COLUMNS.items():
+            date = normalize_date(cell_lookup_by_id(row, col_id_by_title, column))
+            if date:
+                promotion_dates.append({"channel": channel, "date": pretty_date(date)})
         items.append({
             "id": slugify(title) + "-" + str(row.row_number),
             "title": title,
@@ -227,6 +245,7 @@ def fetch_content_rows(client, sheet_id):
             "salesEmail": clean_url(raw.get("salesEmail")),
             "sdrEmail": clean_url(raw.get("sdrEmail")),
             "usedInCampaign": "Yes" if truthy(raw.get("usedInCampaign")) else "No",
+            "promotionDates": promotion_dates,
             "promotionPeriod": raw.get("promotionPeriod") or "",
             "ownerIndividual": raw.get("ownerIndividual") or "",
             "publishedByVendor": raw.get("publishedByVendor") or "",
