@@ -8,10 +8,13 @@
  const channels=[];
  const resources=[];
  const safeUrl=value=>typeof value==='string' && /^https:\/\/[^\s]+$/i.test(value.trim())?value.trim():'';
- const add=(label, value, url='')=>{
-   if(!value || channels.includes(label))return;
+ const add=(label, value)=>{
+   if(!value)return;
+   const link = safeUrl(value);
+   if (value !== true && !link) return;
+   if (resources.some(resource => resource.label === label && resource.url === link)) return;
    channels.push(label);
-   resources.push({label,url:safeUrl(url||value)});
+   resources.push({label,url:link});
  };
  if(webinar){
    add('Marketing email',entry.links?.marketingEmail);
@@ -20,10 +23,17 @@
    add('Paid social',entry.links?.paidSocial);
    add('Organic social',entry.links?.social);
    add('Partner campaign',entry.links?.partnerCampaign);
+   add('Attendee report',entry.links?.attendance);
+   for (const resource of entry.relatedResources || []) {
+     if (safeUrl(resource.url)) add(resource.title || 'Related campaign resource', resource.url);
+   }
  }else{
    (entry.primaryActivation||'').split(/[,;\n]+/).map(x=>x.trim()).filter(x=>x && !/^(no planned promotion|none|n\/?a)$/i.test(x)).forEach(x=>add(x,true));
-   add('Paid media',entry.paidMediaDate);
-   add('Marketing email',entry.marketingEmail);
+   add('Paid media',Boolean(entry.paidMediaDate));
+   add('Enterprise outbound email',entry.outboundEmailEnterprise);
+   add('Enterprise outbound email banner',entry.outboundBannerEnterprise);
+   add('Enterprise Marketo email preview',entry.marketoPreviewEnterprise);
+   add('Paid social ads',entry.paidSocialAds);
    add('Sales outreach email',entry.salesEmail);
    add('SDR follow-up email',entry.sdrEmail);
    add('Partner campaign',entry.partnerCampaignLink);
