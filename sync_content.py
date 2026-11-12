@@ -61,6 +61,8 @@ COLUMN_MAP = {
     "partnerCampaignLink": "Partner Campaign Link",
     "fiscalYear":         "Fiscal Year",
     "fiscalQuarter":      "Fiscal Quarter",
+    "webinarImage": "Webinar Image",
+    "marketoOutboundImage": "Marketo Outbound Email Link - Enterprise Audience",
 }
 
 # Fields whose column is a hyperlink cell but where we want the visible text,
@@ -213,6 +215,8 @@ def fetch_content_rows(client, sheet_id):
             "notes": raw.get("notes") or "",
             "actionRequired": raw.get("actionRequired") or "",
             "abstract": raw.get("abstract") or "",
+            "webinarImage": clean_url(raw.get("webinarImage")),
+            "marketoOutboundImage": clean_url(raw.get("marketoOutboundImage")),
             "partnerCampaignLink": clean_url(raw.get("partnerCampaignLink")),
             "fiscalYear": raw.get("fiscalYear") or "",
             "fiscalQuarter": raw.get("fiscalQuarter") or "",
