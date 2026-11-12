@@ -51,6 +51,6 @@
  fields.promotionPeriod=webinar?'':(entry.promotionPeriod||'');
  fields.promotionLabel=webinar?'PROMOTION RESOURCES AVAILABLE':'PLANNED PROMOTION / ACTIVATION';
  const hash=new URLSearchParams(fields).toString();
- location.replace('./event-slide.html#'+hash);
+ location.replace('./event-slide.html?v=20261112-2#'+hash);
 }catch(err){status.textContent='Unable to prepare slide: '+err.message;}})();
 </script></body></html>
