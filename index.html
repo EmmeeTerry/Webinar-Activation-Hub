@@ -315,6 +315,11 @@ function copyDirectHubLink(url,btn){
  if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(url).then(()=>flashButton(btn,'Link copied!')).catch(()=>fallbackCopy(url,btn));
  else fallbackCopy(url,btn);
 }
+function copyResourceCardLink(id, btn){
+  const url = new URL(location.pathname, location.origin);
+  url.searchParams.set('item', id);
+  copyDirectHubLink(url.href, btn);
+}
 function copyShareLink(){
  updateURL();
  const btn=document.getElementById('copyLinkBtn'), url=location.href;
@@ -644,6 +649,7 @@ function openModal(id){
     ${w.abstract ? `<div class="box"><h3>Abstract</h3><div class="why">${esc(w.abstract)}</div></div>` : ''}
     <div class="box"><h3>Activation resources</h3><div class="resource-grid">${resources.map(([n,u])=>isResourceUrl(u)?`<a class="resource-btn" href="${esc(u)}" target="_blank">${esc(n)} ↗</a>`:`<div class="resource-btn unavailable">${esc(n)} · not available</div>`).join('')}</div></div>
     <div class="box"><h3>Share</h3><div class="resource-grid">
+        <button type="button" class="resource-btn" id="copyResourceCardBtn">Copy resource card link</button>
       ${w.links && isResourceUrl(w.links.watch) ? `<a class="resource-btn" href="./customer-email-hub.html?source=webinar&title=${encodeURIComponent(w.title)}&description=${encodeURIComponent(w.abstract||'')}&url=${encodeURIComponent(w.links.watch||'')}&useCase=${encodeURIComponent(w.useCase||'')}&campaign=${encodeURIComponent(w.campaign||'')}" target="_blank" rel="noopener">Create Customer Email ↗</a>` : `<div class="resource-btn unavailable">Email this webinar &middot; nothing to share yet</div>`}
       <a class="resource-btn" href="./build-slide.html?source=webinar&id=${encodeURIComponent(w.id)}" target="_blank" rel="noopener">Overview Slide ↗</a>\n      <a class="resource-btn" href="./pam-email-hub.html?source=webinar&title=${encodeURIComponent(w.title)}&description=${encodeURIComponent(w.abstract||'')}&url=${encodeURIComponent(w.links.watch||'')}" target="_blank" rel="noopener">Create PAM-to-Partner Email ↗</a>
       ${w.date && w.date>=todayStr() ? `<a class="resource-btn" href="#" onclick="event.preventDefault();downloadICS('${esc(w.id)}')">Add to calendar</a>` : `<div class="resource-btn unavailable">Add to calendar &middot; already passed</div>`}
@@ -655,15 +661,18 @@ function openModal(id){
       <div class="meta"><strong>Date:</strong> ${esc(w.dateDisplay)}<br><strong>Status:</strong> ${esc(w.status)}<br><strong>Campaign:</strong> ${esc(w.campaign||'TBD')}<br><strong>Use case:</strong> ${esc(w.useCase)}<br><strong>Audience:</strong> ${esc(w.audience)}<br><strong>Region:</strong> ${esc(w.region)}<br><strong>Owner:</strong> ${esc(w.owner)}<br><strong>Quarter:</strong> ${esc(w.quarter)}<br><strong>Activation readiness:</strong> ${esc(w.readiness)}</div>
     </div>
   </div>`;
+ document.getElementById('copyResourceCardBtn').addEventListener('click', event => copyResourceCardLink(w.id, event.currentTarget));
  document.getElementById('modal').classList.add('open');
 }
 function closeModal(){document.getElementById('modal').classList.remove('open')}
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
 document.getElementById('search').addEventListener('input',()=>{updateURL();render();});
 function init(){
+ const sharedItem = new URLSearchParams(location.search).get('item');
  applyFiltersFromURL();makeChips();
  document.querySelectorAll('.planning-nav button').forEach(b=>b.classList.toggle('active',b.id==='web-view-'+webinarView));
  render();renderSpotlight();renderWebinarComingSoon();
+ if (sharedItem) openModal(sharedItem);
 }
 loadData();
 </script>
