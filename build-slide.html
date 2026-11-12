@@ -5,6 +5,26 @@
  const data=await response.json();const entry=(webinar?data.webinars:data.items||[]).find(x=>String(x.id)===id);if(!entry)throw Error('The selected entry was not found.');
  const url=webinar?entry.links?.watch:entry.url;
  const fields={source:'content',title:entry.title||'',date:webinar?(entry.dateDisplay||entry.date||''):(entry.publishDateDisplay||entry.publishDate||''),description:entry.abstract||entry.notes||'',category:webinar?'Webinar':(entry.type||'Content'),geo:entry.region||'',campaign:entry.campaign||'',salesPlay:entry.useCase||'',owner:entry.owner||entry.ownerIndividual||'',audience:entry.audience||'',url:/^https?:\/\/\S+$/i.test(url||'')?url:''};
+ const channels=[];
+ const add=(label, value)=>{if(value && !channels.includes(label))channels.push(label);};
+ if(webinar){
+   add('Marketing email',entry.links?.marketingEmail);
+   add('Sales outreach',entry.links?.salesEmail);
+   add('SDR follow-up',entry.links?.sdrEmail);
+   add('Paid social',entry.links?.paidSocial);
+   add('Organic social',entry.links?.social);
+   add('Partner campaign',entry.links?.partnerCampaign);
+ }else{
+   (entry.primaryActivation||'').split(/[,;\\n]+/).map(x=>x.trim()).filter(x=>x && !/^(no planned promotion|none|n\\/?a)$/i.test(x)).forEach(x=>add(x,true));
+   add('Paid media',entry.paidMediaDate);
+   add('Marketing email',entry.marketingEmail);
+   add('Sales outreach email',entry.salesEmail);
+   add('SDR follow-up email',entry.sdrEmail);
+   add('Partner campaign',entry.partnerCampaignLink);
+ }
+ fields.promotion=channels.join(' • ');
+ fields.promotionPeriod=webinar?'':(entry.promotionPeriod||'');
+ fields.promotionLabel=webinar?'PROMOTION RESOURCES AVAILABLE':'PLANNED PROMOTION / ACTIVATION';
  const hash=new URLSearchParams(fields).toString();
  location.replace('./event-slide.html#'+hash);
 }catch(err){status.textContent='Unable to prepare slide: '+err.message;}})();
