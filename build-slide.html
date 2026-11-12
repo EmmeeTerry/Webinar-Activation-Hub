@@ -42,7 +42,10 @@
    add('SDR follow-up email',entry.sdrEmail);
    add('Partner campaign',entry.partnerCampaignLink);
  }
- fields.visualCandidates=JSON.stringify([webinar?entry.webinarImage:entry.webinarImage,webinar?entry.marketoOutboundImage:entry.marketoOutboundImage].filter(safeUrl));
+ const paidArtwork = safeUrl(webinar ? entry.links?.paidSocial : entry.paidSocialAds);
+ const directAdImage = /\.(?:gif|png|jpe?g|webp|bmp|avif)(?:[?#]|$)/i.test(paidArtwork) ? paidArtwork : '';
+ fields.paidArtwork = paidArtwork;
+ fields.visualCandidates = JSON.stringify([...new Set([directAdImage, entry.webinarImage, entry.marketoOutboundImage].filter(safeUrl))]);
  fields.promotion=channels.join(' • ');
  fields.promotionResources=JSON.stringify(resources);
  fields.promotionPeriod=webinar?'':(entry.promotionPeriod||'');
