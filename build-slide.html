@@ -28,6 +28,7 @@
    add('SDR follow-up email',entry.sdrEmail);
    add('Partner campaign',entry.partnerCampaignLink);
  }
+ fields.visualCandidates=JSON.stringify([webinar?entry.webinarImage:entry.webinarImage,webinar?entry.marketoOutboundImage:entry.marketoOutboundImage].filter(safeUrl));
  fields.promotion=channels.join(' • ');
  fields.promotionResources=JSON.stringify(resources);
  fields.promotionPeriod=webinar?'':(entry.promotionPeriod||'');
