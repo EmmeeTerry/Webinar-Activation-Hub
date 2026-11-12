@@ -1,0 +1,46 @@
+name: AI Description Enrichment (Review Before Applying)
+
+on:
+  workflow_dispatch:
+    inputs:
+      max_descriptions:
+        description: "Maximum number of missing descriptions to process (1-30)"
+        required: true
+        default: "5"
+        type: string
+      write_to_smartsheet:
+        description: "Write results to blank Description cells (turn on only after preview review)"
+        required: true
+        default: false
+        type: boolean
+
+permissions:
+  contents: read
+
+jobs:
+  enrich:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install Smartsheet SDK
+        run: pip install smartsheet-python-sdk
+      - name: Generate public-source grounded descriptions
+        env:
+          SMARTSHEET_API_TOKEN: ${{ secrets.SMARTSHEET_API_TOKEN }}
+          CONTENT_SHEET_ID: ${{ secrets.CONTENT_SHEET_ID }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          if [ "${{ inputs.write_to_smartsheet }}" = "true" ]; then
+            python enrich_descriptions.py --limit "${{ inputs.max_descriptions }}" --apply
+          else
+            python enrich_descriptions.py --limit "${{ inputs.max_descriptions }}"
+          fi
+      - name: Save proposals for review
+        uses: actions/upload-artifact@v4
+        with:
+          name: content-description-proposals
+          path: description-proposals.json
+          retention-days: 14
