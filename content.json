@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-11-11T17:57:35.778852+00:00",
+  "lastRefreshed": "2026-11-12T00:53:25.488439+00:00",
   "items": [
     {
       "id": "10-reasons-to-buy-build-or-borrow-ai-implementation-ebook-1",
@@ -1588,7 +1588,7 @@
     {
       "id": "cio-virtual-forum-ai-starts-with-infrastructure-what-enterprise-architects-must-modernize--49",
       "title": "CIO Virtual Forum: AI Starts with Infrastructure - What Enterprise Architects Must Modernize First | Webinar",
-      "url": "https://www.hitachivantara.com/en-us/company/events-and-webinars?commid=678141",
+      "url": "https://www.hitachivantara.com/en-us/company/events-and-webinars?commid=678141&bt_tok={{lead_id}}",
       "type": "Webinar",
       "campaign": "AI Data Foundation, Data Modernization & Resilience",
       "useCase": "Cyber Risk Mitigation & Recovery, Data Readiness and Activation for AI, High Performance AI-Ready Infrastructure",
@@ -1621,7 +1621,7 @@
     {
       "id": "cio-virtual-forum-could-your-business-recover-from-a-ransomware-attack-tomorrow-webinar-50",
       "title": "CIO Virtual Forum: Could Your Business Recover from a Ransomware Attack Tomorrow? | Webinar",
-      "url": "https://www.hitachivantara.com/en-us/company/events-and-webinars?commid=678156",
+      "url": "https://www.hitachivantara.com/en-us/company/events-and-webinars?commid=678156&bt_tok={{lead_id}}",
       "type": "Webinar",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Cyber Risk Mitigation & Recovery",
@@ -8914,7 +8914,7 @@
     {
       "id": "the-infrastructure-decisions-you-ll-regret-delaying-272",
       "title": "The Infrastructure Decisions You'll Regret Delaying",
-      "url": "https://vimeo.com/1240378770?share=copy&fl=sv&fe=ci",
+      "url": "https://www.hitachivantara.com/en-us/company/events-and-webinars?commid=679673&bt_tok={{lead_id}}",
       "type": "Webinar",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Readiness and Activation for AI, High Performance AI-Ready Infrastructure",
