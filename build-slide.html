@@ -21,7 +21,7 @@
    add('Organic social',entry.links?.social);
    add('Partner campaign',entry.links?.partnerCampaign);
  }else{
-   (entry.primaryActivation||'').split(/[,;\\n]+/).map(x=>x.trim()).filter(x=>x && !/^(no planned promotion|none|n\\/?a)$/i.test(x)).forEach(x=>add(x,true));
+   (entry.primaryActivation||'').split(/[,;\n]+/).map(x=>x.trim()).filter(x=>x && !/^(no planned promotion|none|n\/?a)$/i.test(x)).forEach(x=>add(x,true));
    add('Paid media',entry.paidMediaDate);
    add('Marketing email',entry.marketingEmail);
    add('Sales outreach email',entry.salesEmail);
