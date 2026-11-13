@@ -179,11 +179,6 @@ h1{font-family:"Hitachi Sans",Arial,Helvetica,sans-serif;font-weight:400;font-si
 <main class="main">
   <div id="spotlight" class="spotlight"></div>
   <div id="dataQualityAudit"></div>
-  <section class="planning-preview">
-    <div class="planning-head"><h2>Coming Soon</h2><button type="button" class="planning-action" onclick="setWebinarView('upcoming')">Explore all upcoming &#8594;</button></div>
-    <p class="planning-muted">Next scheduled webinars from the Smartsheet Webinar Calendar. Dates are subject to change.</p>
-    <div id="webinarComingSoon" class="planning-preview-grid"></div>
-  </section>
   <nav class="planning-nav" aria-label="Webinar views">
     <button id="web-view-library" class="active" type="button" onclick="setWebinarView('library')">Webinar Library</button>
     <button id="web-view-calendar" type="button" onclick="setWebinarView('calendar')">Webinar Calendar</button>
@@ -392,18 +387,6 @@ function tags(w){
   w.partnerReady?`<span class="tag green">Partner-ready</span>`:''
  ].join('');
 }
-function card(w){
- return `<div class="card ${statusClass(w.status)}">
-   <div class="status ${statusClass(w.status)}">${esc(w.status)} · ${esc(w.dateDisplay)}</div>
-   <div class="card-title" onclick="openModal('${w.id}')">${esc(w.title)}</div>
-   <div class="tags">${tags(w)}</div>
-   <div class="why">${esc(w.whyUse)}</div>
-   <div class="card-actions">
-     ${linkBtn(w.status==='On Demand'?'Watch':'Register',w.links.watch,true)}
-     <button class="btn" onclick="openModal('${w.id}')">Activation resources</button>
-   </div>
- </div>`;
-}
 function listRow(w){
  return `<div class="row">
   <div><div class="status ${statusClass(w.status)}">${esc(w.status)} · ${esc(w.dateDisplay)}</div><div class="row-title" onclick="openModal('${w.id}')">${esc(w.title)}</div></div>
@@ -425,17 +408,6 @@ function upcomingWebinars(items){
 function webinarDate(ymd){return new Date(ymd+'T12:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});}
 function webinarEntry(w,cls,inner){return '<button type="button" class="'+cls+'" data-webinar-id="'+esc(w.id)+'">'+inner+'</button>';}
 function bindWebinarButtons(scope){scope.querySelectorAll('[data-webinar-id]').forEach(b=>b.addEventListener('click',()=>openModal(b.dataset.webinarId)));}
-function renderWebinarComingSoon(){
- const el=document.getElementById('webinarComingSoon');
- const next=upcomingWebinars(DATA).slice(0,3);
- if(!next.length){el.innerHTML='<div class="planning-muted">No future-dated webinars currently scheduled.</div>';return;}
- el.innerHTML=next.map(w=>webinarEntry(w,'planning-preview-card',
-  '<div class="planning-date">'+esc(webinarDate(w.date))+'</div>'+
-  '<div class="planning-title">'+esc(w.title||'Untitled webinar')+'</div>'+
-  '<div class="planning-meta">'+esc(w.status||'Status pending')+' · '+esc(w.campaign||'Campaign TBD')+' · '+esc(w.owner||'Owner TBD')+'</div>'
- )).join('');
- bindWebinarButtons(el);
-}
 function setWebinarView(view){
  if(!['library','calendar','upcoming'].includes(view))return;
  webinarView=view;
@@ -530,16 +502,10 @@ function render(){
   bindWebinarButtons(document.getElementById('content'));return;
  }
  if(!d.length){document.getElementById('content').innerHTML='<div class="empty">No webinars match those filters.</div>';return;}
- const now=new Date();
- const promote=d.filter(w=>{
-   if(w.status==='Upcoming'&&w.date){const dd=(new Date(w.date+'T12:00:00')-now)/86400000; return dd>=0&&dd<=30;}
-   return w.status==='On Demand'&&w.readiness==='Activation ready';
- }).slice(0,4);
  const upcoming=d.filter(w=>w.status==='Upcoming');
  const planned=d.filter(w=>w.status==='Planned').sort((a,b)=>(a.date||'9999').localeCompare(b.date||'9999'));
  const ondemand=d.filter(w=>w.status==='On Demand').sort((a,b)=>(b.date||'').localeCompare(a.date||''));
  let out='';
- if(promote.length) out+=`<section class="section"><div class="section-title">Promote now · ${promote.length}</div><div class="feature-grid">${promote.map(card).join('')}</div></section>`;
  if(upcoming.length) out+=`<section class="section"><div class="section-title">Upcoming · ${upcoming.length}</div><div class="list">${upcoming.map(listRow).join('')}</div></section>`;
  if(ondemand.length) out+=`<section class="section"><div class="section-title">On demand · ready to reuse · ${ondemand.length}</div><div class="list">${ondemand.map(listRow).join('')}</div></section>`;
  if(planned.length) out+=`<section class="section"><div class="section-title">Planned · ${planned.length}</div><div class="list">${planned.map(listRow).join('')}</div></section>`;
@@ -682,7 +648,7 @@ function init(){
  const sharedItem = new URLSearchParams(location.search).get('item');
  applyFiltersFromURL();makeChips();
  document.querySelectorAll('.planning-nav button').forEach(b=>b.classList.toggle('active',b.id==='web-view-'+webinarView));
- render();renderSpotlight();renderWebinarComingSoon();
+ render();renderSpotlight();
  if (sharedItem) openModal(sharedItem);
 }
 loadData();
