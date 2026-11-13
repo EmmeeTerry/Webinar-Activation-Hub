@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-11-12T21:59:30.511523+00:00",
+  "lastRefreshed": "2026-11-13T02:29:13.932226+00:00",
   "webinars": [
     {
       "id": "the-economics-of-modern-storage-infrastructure-lower-risk-faster-ai-value-better-roi",
@@ -602,7 +602,7 @@
       "activationStatus": "Not Started",
       "readiness": "Planning",
       "whyUse": "Use this for enterprise conversations around cyber risk mitigation & recovery.",
-      "abstract": "",
+      "abstract": "Explores how CIOs can advance AI adoption while protecting business continuity.",
       "webinarImage": null,
       "marketoOutboundImage": null,
       "links": {
