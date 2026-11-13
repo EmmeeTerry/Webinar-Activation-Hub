@@ -621,8 +621,8 @@ function openModal(id){
 
   document.getElementById('mBody').innerHTML = `
     <div>
-      ${item.abstract ? `<div class="modal-box"><h3>Abstract</h3><div class="modal-meta">${esc(item.abstract)}</div></div>` : ''}
-      ${item.notes ? `<div class="modal-box"><h3>Notes</h3><div class="modal-meta">${esc(item.notes)}</div></div>` : ''}
+      ${item.abstract?.trim() ? `<div class="modal-box"><h3>Description</h3><div class="modal-meta">${esc(item.abstract)}</div></div>` : ''}
+      ${item.notes?.trim() ? `<div class="modal-box"><h3>Notes</h3><div class="modal-meta">${esc(item.notes)}</div></div>` : ''}
       ${promotionDates.length ? `<div class="modal-box"><h3>Promotion dates</h3><div class="modal-meta">${promotionDates.map(({channel,date}) => `<div><strong>${esc(channel)}:</strong> ${esc(date)}</div>`).join('')}</div></div>` : ''}
       <div class="modal-box"><h3>Promotional resources</h3><div class="resource-grid">${resources.map(([n,u]) =>
         u ? `<a class="resource-btn" href="${esc(u)}" target="_blank">${esc(n)} &#8599;</a>`
