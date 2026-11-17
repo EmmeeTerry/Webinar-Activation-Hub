@@ -66,6 +66,7 @@ COLUMN_MAP = {
     "marketoPreviewEnterprise": "Marketo Outbound Image - Enterprise Audience",
     "paidSocialAds": "Paid Social Ads",
     "webinarImage": "Webinar Image",
+    "approvedNewsImageUrl": "Approved News Image URL",
     "marketoOutboundImage": "Marketo Outbound Email Link - Enterprise Audience",
 }
 
@@ -253,6 +254,7 @@ def fetch_content_rows(client, sheet_id):
             "actionRequired": raw.get("actionRequired") or "",
             "abstract": raw.get("abstract") or "",
             "webinarImage": clean_url(raw.get("webinarImage")),
+            "approvedNewsImageUrl": clean_url(raw.get("approvedNewsImageUrl")),
             "marketoOutboundImage": clean_url(raw.get("marketoOutboundImage")),
             "partnerCampaignLink": clean_url(raw.get("partnerCampaignLink")),
             "fiscalYear": raw.get("fiscalYear") or "",
