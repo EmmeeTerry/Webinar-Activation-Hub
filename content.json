@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-11-17T13:41:13.496282+00:00",
+  "lastRefreshed": "2026-11-17T22:30:28.048517+00:00",
   "items": [
     {
       "id": "10-reasons-to-buy-build-or-borrow-ai-implementation-ebook-1",
@@ -237,8 +237,8 @@
       "audience": "Enterprise",
       "status": "In Production",
       "region": "Global",
-      "publishDate": "2026-11-17",
-      "publishDateDisplay": "Nov 17, 2026",
+      "publishDate": "2026-11-24",
+      "publishDateDisplay": "Nov 24, 2026",
       "partnerUse": true,
       "paidMediaDate": null,
       "paidMediaDateDisplay": "",
@@ -4117,16 +4117,16 @@
       "issueType": ""
     },
     {
-      "id": "gartner-peer-insights-ebook-ebook-100",
-      "title": "Gartner Peer Insights eBook | eBook",
-      "url": null,
+      "id": "gartner-peer-insights-ebook-built-on-trusthow-a-strong-data-foundationturns-opportunity-in-100",
+      "title": "(Gartner Peer Insights eBook) Built on TrustHow a Strong Data FoundationTurns Opportunity into Outcomes | eBook",
+      "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/built-on-trust-how-strong-data-foundation-turns-opportunity-into-outcomes.pdf",
       "type": "eBook",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Data Platform Architectures & Economics",
       "funnelStage": "MOFU",
       "ownerTeam": "PMM",
       "audience": "Enterprise, Midmarket",
-      "status": "In Production",
+      "status": "Live",
       "region": "Global",
       "publishDate": "2026-12-01",
       "publishDateDisplay": "Dec 01, 2026",
@@ -4147,14 +4147,14 @@
       "ownerIndividual": "Angela Romberg, Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "",
-      "actionRequired": "",
+      "actionRequired": "Add customer-facing URL",
       "abstract": "",
       "webinarImage": null,
       "marketoOutboundImage": null,
       "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q3",
-      "issueType": ""
+      "issueType": "; No URL"
     },
     {
       "id": "government-agency-transforms-operations-with-flexible-all-in-one-hybrid-cloud-solution-bre-101",
@@ -5042,8 +5042,8 @@
       "issueType": ""
     },
     {
-      "id": "the-guide-to-cyber-operational-resilience-blog-122",
-      "title": "The Guide to Cyber & Operational Resilience | Blog",
+      "id": "the-guide-to-cyber-operational-resilience-chris-m-blog-122",
+      "title": "The Guide to Cyber & Operational Resilience (Chris M) | Blog",
       "url": null,
       "type": "Blog",
       "campaign": "Data Modernization & Resilience",
@@ -10967,8 +10967,8 @@
       "issueType": ""
     },
     {
-      "id": "how-to-recover-from-ransomware-attacks-blog-265",
-      "title": "How to Recover from Ransomware Attacks | Blog",
+      "id": "how-to-recover-from-ransomware-attacks-bj-blog-265",
+      "title": "How to Recover from Ransomware Attacks (BJ) | Blog",
       "url": null,
       "type": "Blog",
       "campaign": "Data Modernization & Resilience",
@@ -11007,8 +11007,8 @@
       "issueType": ""
     },
     {
-      "id": "what-is-cyber-recovery-vault-blog-266",
-      "title": "What is Cyber Recovery Vault? | Blog",
+      "id": "what-is-cyber-recovery-vault-brian-w-blog-266",
+      "title": "What is Cyber Recovery Vault? (Brian W) | Blog",
       "url": null,
       "type": "Blog",
       "campaign": "Data Modernization & Resilience",
@@ -11018,8 +11018,8 @@
       "audience": "Enterprise, Midmarket",
       "status": "In Production",
       "region": "Global",
-      "publishDate": "2026-12-14",
-      "publishDateDisplay": "Dec 14, 2026",
+      "publishDate": "2026-12-07",
+      "publishDateDisplay": "Dec 07, 2026",
       "partnerUse": false,
       "paidMediaDate": null,
       "paidMediaDateDisplay": "",
