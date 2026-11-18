@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-11-18T00:20:54.205071+00:00",
+  "lastRefreshed": "2026-11-18T09:36:29.002926+00:00",
   "webinars": [
     {
       "id": "the-economics-of-modern-storage-infrastructure-lower-risk-faster-ai-value-better-roi",
@@ -797,7 +797,7 @@
       "activationStatus": "Partial",
       "readiness": "Partially ready",
       "whyUse": "Use this for enterprise conversations around high performance ai-ready infrastructure.",
-      "abstract": "Moving AI from pilot to production takes more than a successful model. It requires trusted data, AI-ready infrastructure, intelligent workload placement, resilient operations, and a repeatable way to manage them at scale.\nIn this webinar, Hitachi Vantara experts explore how an AI Factory operating model can turn distributed data into dependable outcomes without forcing everything to move first. Using a real-world power utility scenario, they will show how to place workloads based on sovereignty, performance, control, and cost; operate across mixed environments; and build cyber resilience and business continuity into production AI from the outset.\nJoin us to learn the practical decisions that can help your organization close the gap between AI experimentation and a scalable, governed production service\u2014and keep it operating, optimized, protected, and ready to deliver measurable business value.",
+      "abstract": "Discover how a trusted, resilient data foundation can help take AI from isolated pilots to industrial-scale operations, with practical insights into governance, workload placement, cyber resilience and production at scale. For more insights, read From AI Factories to the AI Industrial Cloud: The Data Foundation Comes First blog.",
       "webinarImage": null,
       "marketoOutboundImage": null,
       "links": {
