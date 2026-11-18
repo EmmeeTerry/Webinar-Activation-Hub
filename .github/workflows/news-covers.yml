@@ -30,13 +30,15 @@ jobs:
         env:
           MAX_WEBINAR_IMAGES: "30"
         run: python generate_news_webinar_images.py
+      - name: Refresh image availability inventory
+        run: python generate_news_image_manifest.py
       - name: Commit available cover images
         shell: bash
         run: |
           set -euo pipefail
           git config user.name "content-hub-bot"
           git config user.email "actions@github.com"
-          git add news-images/
+          git add news-images/ news-images-manifest.json
           if git diff --cached --quiet; then
             echo "No new PDF covers available."
             exit 0
