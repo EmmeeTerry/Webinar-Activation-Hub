@@ -18,7 +18,7 @@
 ## Confirmed destinations for this team
 
 - **Saved page/template reference:** https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Content-Sharing-Template.aspx
-- **Shared image library folder:** https://hitachivantara.sharepoint.com/:f:/s/To-PartnerCommunicationsFY23/IgBpyl1nqJWsQ4aIowbMrX8iAZC1bDJHBF6aySr2uqX5uK0?e=wXjxyf
+- **Shared image library folder:** https://hitachivantara.sharepoint.com/:f:/r/sites/To-PartnerCommunicationsFY23/Shared%20Documents/Content%20Announcement%20Images?d=w675dca6995a843ac8688a306ccad7f22&csf=1&web=1&e=slBQpO
 - **Emmee's existing Windows OneDrive shortcut (only on her PC):** `C:\\Users\\mterry\\OneDrive - Hitachi Vantara\\Documents - To-Partner Communications FY23\\Content Announcement Images`
 
 The builder now has **Open SharePoint template** and **Open shared image folder** buttons. **Open shared image folder** opens the actual SharePoint web folder, while **Save image to synced folder** saves to your selected local OneDrive-synced folder. A SharePoint URL cannot be chosen as a local save folder. Opening the template link may open the template page for viewing/editing rather than automatically creating a new page. Always create a **new** news post from the saved site template; never overwrite the original template.
