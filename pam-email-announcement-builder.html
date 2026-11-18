@@ -18,13 +18,14 @@ details{border:1px solid var(--line);background:#f9fafb;border-radius:6px;paddin
 #embedCode{min-height:112px;font:12px/1.4 Consolas,monospace;word-break:break-all}.small{font-size:12px}.section{margin-top:19px;border-top:1px solid var(--line);padding-top:17px}
 body.embedded{background:#fff}body.embedded header,body.embedded .links,body.embedded .builder-only,body.embedded .edit-panel{display:none!important}body.embedded main{max-width:none;margin:0;padding:0}body.embedded .layout{display:block}body.embedded .output{padding:0;border:0;box-shadow:none}body.embedded .preview{margin:0;border:0}body.embedded .preview-body{max-width:950px;margin:auto}
 @media(max-width:800px){.layout{grid-template-columns:1fr}.email-list{max-height:300px}.panel{padding:14px}}
+.article-cta{display:inline-block;background:#ce0013;color:white!important;padding:12px 16px;border-radius:4px;text-decoration:none;margin:10px 0}.template-block h4{font-weight:800}.template-block ul li{margin:6px 0}
 </style></head><body>
 <header><div class="eyebrow">HITACHI VANTARA / PARTNER PROGRAMS</div><h1>PAM Email News Builder</h1><p>Select templates. We create a SharePoint-ready announcement with direct links and clear next steps.</p></header>
 <main>
 <div class="links builder-only"><a href="./pam-email-announcement-builder.html" target="_blank" rel="noopener">Open builder in its own tab ↗</a><a href="./pam-email-hub.html" target="_blank" rel="noopener">PAM Email Hub ↗</a><a href="https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Content-Sharing-Template.aspx" target="_blank" rel="noopener">SharePoint news template ↗</a></div>
 <div class="layout">
 <section class="panel edit-panel">
-<h2>1. Which emails are you announcing?</h2><p class="muted">Select the new or relevant templates. The article, CTA buttons and links are built for you.</p>
+<h2>1. What news are you announcing?</h2><p class="muted">Select the relevant partner email. The builder creates an informative announcement, including specific partner benefits, recommended PAM actions and resource links.</p>
 <div class="filters"><div><label for="filter">Show</label><select id="filter"><option value="recent">Recently added</option><option value="all">All templates</option></select></div><div><label for="category">Category</label><select id="category"><option value="">All categories</option></select></div></div>
 <label for="search">Search templates</label><input id="search" type="search" placeholder="Find an email or campaign">
 <div class="actions"><button type="button" class="secondary" id="selectVisible">Select displayed</button><button type="button" class="secondary" id="clear">Clear</button><button type="button" class="secondary" id="reload">Refresh list</button></div>
@@ -33,7 +34,7 @@ body.embedded{background:#fff}body.embedded header,body.embedded .links,body.emb
 <label for="linkedinUrl">LinkedIn post URL (optional)</label><input id="linkedinUrl" type="url" placeholder="https://www.linkedin.com/posts/...">
 </div>
 <details><summary>Optional: Edit the announcement text</summary>
-<p>The article headline, introduction and closing CTA are generated automatically. Only change them if you need to.</p>
+<p>The article is written automatically from the selected email resources. You can optionally fine-tune its headline, opening and closing text.</p>
 <label for="headline">Headline</label><input id="headline" value="New PAM-to-Partner Emails Are Ready to Share">
 <label for="intro">Introduction</label><textarea id="intro">We've added ready-to-share partner emails to the PAM Email Hub. Each template helps you introduce a useful resource or opportunity to partners without writing from scratch. Explore what's available and open the emails below.</textarea>
 <label for="closing">Final next step</label><textarea id="closing">Choose an email that fits your partners' priorities, personalize it in the PAM Email Hub and share it with your partners.</textarea>
@@ -45,7 +46,7 @@ body.embedded{background:#fff}body.embedded header,body.embedded .links,body.emb
 </details>
 </section>
 <section class="panel output">
-<h2 class="builder-only">3. Your announcement is ready to publish</h2><p class="muted builder-only">Everything below is generated from the templates you selected. Select at least one email to enable publishing.</p>
+<h2 class="builder-only">3. Your partner news and PAM action article</h2><p class="muted builder-only">The article leads with the partner news and automatically includes partner benefits, key resources and PAM next steps.</p>
 <div class="actions builder-only"><button id="copyTitle" type="button">Copy title</button><button id="copyRich" type="button">Copy formatted post</button><button id="copyPlain" type="button" class="secondary">Copy plain text</button><button id="downloadDraft" type="button" class="secondary">Download HTML</button><a class="action-link secondary" id="openSP" href="https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Content-Sharing-Template.aspx" target="_blank" rel="noopener">Open SharePoint template ↗</a></div>
 <div id="status" class="status builder-only" aria-live="polite"></div>
 <div id="preview" class="preview"></div>
@@ -79,22 +80,73 @@ const isLegacy=e=>/^(DPAE|HCPO|CMR|CRMR)(?:\b|[\s·-])/i.test(e.title||"");
 function getDate(e){const d=e.addedDate||e.createdDate||e.createdAt;const n=Date.parse(d||"");if(Number.isFinite(n))return n;const m=String(e.id||"").match(/20\d{6}/);return m?Date.parse(m[0].slice(0,4)+"-"+m[0].slice(4,6)+"-"+m[0].slice(6,8))||0:0}
 function linkedIn(){const v=$("linkedinUrl").value.trim();if(!v)return "";try{const u=new URL(v);return u.protocol==="https:"&&/(^|\.)linkedin\.com$/i.test(u.hostname)&&/\/(posts|feed\/update|pulse)\//.test(u.pathname)?u.href:""}catch(e){return ""}}
 function extract(e){if(e.htmlBody){const d=new DOMParser().parseFromString(e.htmlBody,"text/html");d.querySelectorAll("script,style,head").forEach(x=>x.remove());return (d.body?.textContent||"").replace(/\s+/g," ").trim()}return String(e.body||"").replace(/\s+/g," ").trim()}
-function description(e){const raw=extract(e).replace(/^(Hi|Dear|Hello)\s*\[[^\]]+\],?\s*/i,"");const sentences=raw.match(/[^.!?]+[.!?]+|[^.!?]+$/g)||[];const parts=sentences.map(s=>s.trim()).filter(s=>s.length>=35&&s.length<=210&&!/thank you|partner marketing team|reply to this email|activate campaign now/i.test(s));let text=parts.slice(0,2).join(" ")||raw.slice(0,260);return text.length>320?text.slice(0,310).replace(/\s+\S*$/,"")+"…":text||"Open this ready-to-use partner email to review and personalize the message."}
+
+function contentParagraphs(e){
+ if(e.htmlBody){const d=new DOMParser().parseFromString(e.htmlBody,"text/html");d.querySelectorAll("script,style,head").forEach(x=>x.remove());return [...d.body.querySelectorAll("p,li")].map(x=>(x.textContent||"").replace(/\s+/g," ").trim()).filter(x=>x.length>=45&&x.length<=700&&!/^(hi \[|dear \[|thank you|partner marketing team|looking forward|activate campaign now)/i.test(x))}
+ return String(e.body||"").split(/\n\s*\n/).map(x=>x.replace(/\s+/g," ").trim()).filter(x=>x.length>=45&&x.length<=700&&!/^(hi \[|thank you)/i.test(x));
+}
+function isPMH(e){return e.id==="uploaded-pmh-enhanced-experience-20261111"||/Partner Marketing Hub/i.test(e.category||"")}
+function description(e){const p=contentParagraphs(e);return (p.find(x=>x.length>=65&&x.length<=340)||p[0]||"A ready-to-use partner communication is available for this topic.").slice(0,390)}
 const selected=()=>state.emails.filter(e=>state.selected.has(e.id));
 const summary=e=>state.summaryEdits[e.id]??description(e);
-function headline(){return selected().length===1?"New Partner Email Available: "+selected()[0].title:"New PAM-to-Partner Emails Are Ready to Share"}
-function intro(){return selected().length===1?"A new ready-to-use partner email is available in the PAM Email Hub. This template helps you bring a relevant resource or opportunity to your partners. Open it, personalize the message and share it without starting from scratch.":"New ready-to-use partner emails are now available in the PAM Email Hub. Each template helps you engage partners around a relevant resource, campaign or opportunity. Open the emails below, personalize them and share with your partners."}
-function closing(){return "Choose an email that supports your partners' priorities, personalize it in the PAM Email Hub, and send it to your partners."}
+function newsName(e){
+ if(isPMH(e))return "Enhanced Partner Marketing Hub";
+ if(/fast start/i.test(e.title))return "Fast Start Partner Incentives";
+ if(/select block/i.test(e.title))return "Select Block Configuration Update";
+ if(/mainframe/i.test(e.title))return "Mainframe Modernization";
+ return e.title;
+}
+function guidance(e){
+ if(isPMH(e))return{
+  why:"The enhanced Partner Marketing Hub makes it easier for partners to discover ready-to-use campaigns, personalize approved content and put demand generation activities in market without starting from scratch.",
+  share:"Partners can explore co-branded campaigns, tailor email and social content, use built-in AI assistance including Maia, manage marketing contacts, review campaign reporting and extend content through website syndication.",
+  points:["Explore ready-to-use co-branded campaigns and customer-facing marketing materials","Use AI-assisted messaging, translation and social content to reach relevant audiences","Activate email campaigns, review engagement reporting and use web content syndication where appropriate"],
+  action:"Share the PMH launch email with your partners. Ask them to review their company profile, explore the Campaign Library and select one campaign or activity that supports their business priorities. Offer a walkthrough if they need help. For partners transitioning from the previous experience, direct them to the setup and transition instructions to review historical data, email-domain authentication and web syndication.",
+  resources:[{label:"Explore the Partner Marketing Hub",url:"https://www.partnermarketing.hitachivantara.com/"},{label:"Review setup and transition guidance",url:"https://www.partnermarketing.hitachivantara.com/Transition-Guide-PMH"}]
+ };
+ const paragraphs=contentParagraphs(e),first=summary(e);
+ const second=paragraphs.filter(x=>x!==first&&!/campaign is ready|the opportunity is already packaged|we.ve already done|activate campaign now|partner marketing team/i.test(x)).slice(0,2);
+ const kind=/webinar/i.test(e.title)?"webinar":/stor(y|ies)/i.test(e.title)?"customer story":/guide|eBook|white paper|report/i.test(e.title)?"research or guide":"resource";
+ return{
+  why:first,
+  share:second.join(" ")||"The email gives partners a relevant "+kind+" to bring into customer discussions about "+(e.category||"this program")+".",
+  points:[],
+  action:"Open the PAM email template and tailor its introduction to the partner's priorities. Encourage the partner to use the linked "+kind+" in relevant customer conversations and follow up on interest in the associated campaign.",
+  resources:[]
+ };
+}
+function headline(){const a=selected();if(a.length===1)return newsName(a[0])+": Resources Available";if(a.length&&a.every(e=>e.category===a[0].category))return a[0].category+": Resources Available";return "Partner Campaign and Program Updates: Resources Available"}
+function intro(){const a=selected();if(a.length===1&&isPMH(a[0]))return "The enhanced Hitachi Vantara Partner Marketing Hub gives partners new ways to discover campaigns, personalize content and activate demand generation. We have a ready-to-share partner announcement and practical resources to help PAMs introduce what's new and guide partners through their first steps.";if(a.length===1)return "New partner-ready resources are available for "+newsName(a[0])+". Here is what has been released, why it matters to partners and how PAMs can put it to work.";return "New partner-ready resources are available across key campaigns and programs. Here is what's new for partners, which materials they can use and how PAMs can activate each opportunity."}
+function closing(){return "Use the relevant email CTA above to open the approved partner communication, personalize it and share it with the appropriate partners. Follow up with a specific campaign or customer conversation based on their interest."}
 function syncDefaults(){if(savedDraft)return;$("headline").value=headline();$("intro").value=intro();$("closing").value=closing()}
-function article(){const chosen=selected(),li=linkedIn();let blocks=chosen.map(e=>({title:e.title,summary:summary(e),url:link(e.id)}));return {title:$("headline").value.trim()||headline(),intro:$("intro").value.trim()||intro(),closing:$("closing").value.trim()||closing(),blocks,linkedin:li}}
-function richBody(){const a=article();let h='<div style="font:15px/1.6 Arial,sans-serif;color:#253440"><p>'+esc(a.intro).replace(/\n/g,"<br>")+'</p>';for(const x of a.blocks){h+='<div style="padding:16px 0;border-top:1px solid #e0e5e9"><h3 style="font-size:17px;margin:0 0 8px">'+esc(x.title)+'</h3><p>'+esc(x.summary)+'</p><p><a href="'+esc(x.url)+'" style="color:#b00016;font-weight:bold">Open and personalize this email template</a></p></div>'}if(a.linkedin)h+='<p style="background:#f1f5fa;padding:14px"><a href="'+esc(a.linkedin)+'" style="font-weight:bold;color:#0a66c2">Share on your LinkedIn</a></p>';h+='<p>'+esc(a.closing).replace(/\n/g,"<br>")+'</p><p><a href="'+esc(allLink())+'" style="color:#b00016;font-weight:bold">Browse all PAM email templates</a></p></div>';return h}
-function textBody(){const a=article();return a.title+"\n\n"+a.intro+"\n\n"+a.blocks.map(x=>x.title+"\n"+x.summary+"\nOpen template: "+x.url).join("\n\n")+(a.linkedin?"\n\nShare on your LinkedIn: "+a.linkedin:"")+"\n\n"+a.closing+"\n\nBrowse all PAM email templates: "+allLink()}
-function renderPreview(){const a=article();const root=$("preview");root.replaceChildren();const head=document.createElement("div");head.className="preview-head";const kicker=document.createElement("small");kicker.textContent="NEW PAM EMAIL RESOURCES";const heading=document.createElement("h2");heading.textContent=a.title;const sub=document.createElement("p");sub.textContent="Ready-to-use messages to support your partner conversations";head.append(kicker,heading,sub);const body=document.createElement("div");body.className="preview-body";const introEl=document.createElement("p");introEl.textContent=a.intro;body.append(introEl);
-for(const b of a.blocks){const section=document.createElement("section");section.className="template-block";const h=document.createElement("h3");h.textContent=b.title;const p=document.createElement("p");p.textContent=b.summary;const l=document.createElement("a");l.href=b.url;l.target="_blank";l.rel="noopener noreferrer";l.textContent="Open and personalize this email template ↗";section.append(h,p,l);body.append(section)}
-if(!a.blocks.length){const empty=document.createElement("p");empty.className="muted";empty.textContent="Select an email template on the left to build your announcement.";body.append(empty)}
-if(a.linkedin){const social=document.createElement("div");social.className="social";const l=document.createElement("a");l.href=a.linkedin;l.target="_blank";l.rel="noopener noreferrer";l.textContent="Share on your LinkedIn ↗";social.append(l);body.append(social)}
-const outro=document.createElement("div");outro.className="outro";const p=document.createElement("p");p.textContent=a.closing;const all=document.createElement("a");all.href=allLink();all.target="_blank";all.rel="noopener noreferrer";all.textContent="Browse all PAM email templates ↗";outro.append(p,all);body.append(outro);root.append(head,body);
-["copyRich","copyPlain","downloadDraft","makeEmbed","copyEmbed","openEmbed"].forEach(id=>$(id).disabled=!a.blocks.length)}
+function article(){return {title:$("headline").value.trim()||headline(),intro:$("intro").value.trim()||intro(),closing:$("closing").value.trim()||closing(),blocks:selected().map(e=>({title:newsName(e),url:link(e.id),...guidance(e)})),linkedin:linkedIn()}}
+function richBody(){const a=article();let h='<div style="font:15px/1.65 Arial,sans-serif;color:#253440"><p>'+esc(a.intro).replace(/\n/g,"<br>")+'</p>';
+ for(const x of a.blocks){
+  h+='<section style="padding:20px 0;border-top:1px solid #e0e5e9"><h2 style="font-size:21px;color:#263746">'+esc(x.title)+'</h2>';
+  h+='<h3 style="font-size:16px;color:#b50016">Why partners should care</h3><p>'+esc(x.why)+'</p>';
+  h+='<h3 style="font-size:16px;color:#b50016">What partners can share and use</h3><p>'+esc(x.share)+'</p>';
+  if(x.points.length)h+='<ul>'+x.points.map(z=>'<li>'+esc(z)+'</li>').join("")+'</ul>';
+  h+='<h3 style="font-size:16px;color:#b50016">What PAMs should do</h3><p>'+esc(x.action)+'</p>';
+  h+='<p><a href="'+esc(x.url)+'" style="display:inline-block;background:#ce0013;color:#fff;padding:12px 16px;text-decoration:none;font-weight:bold">Open the PAM email template</a></p>';
+  x.resources.forEach(z=>{h+='<p><a href="'+esc(z.url)+'" style="color:#b00016;font-weight:bold">'+esc(z.label)+'</a></p>'});h+='</section>';
+ }
+ if(a.linkedin)h+='<p style="padding:14px;background:#f0f5fa"><a href="'+esc(a.linkedin)+'" style="color:#0a66c2;font-weight:bold">Share on your LinkedIn</a></p>';
+ h+='<p style="font-size:13px;color:#5c6972;margin-top:20px">'+esc(a.closing)+'</p></div>';return h
+}
+function textBody(){const a=article();return a.title+"\n\n"+a.intro+"\n\n"+a.blocks.map(x=>x.title+"\n\nWhy partners should care\n"+x.why+"\n\nWhat partners can share and use\n"+x.share+(x.points.length?"\n"+x.points.map(z=>"- "+z).join("\n"):"")+"\n\nWhat PAMs should do\n"+x.action+"\n\nOpen PAM email template: "+x.url+x.resources.map(z=>"\n"+z.label+": "+z.url).join("")).join("\n\n")+(a.linkedin?"\n\nShare on your LinkedIn: "+a.linkedin:"")+"\n\n"+a.closing}
+function renderPreview(){const a=article(),root=$("preview");root.replaceChildren();const head=document.createElement("div");head.className="preview-head";const kicker=document.createElement("small");kicker.textContent="PARTNER NEWS / PAM ACTIVATION";const heading=document.createElement("h2");heading.textContent=a.title;const sub=document.createElement("p");sub.textContent="What partners need to know and how PAMs can help";head.append(kicker,heading,sub);
+ const body=document.createElement("div");body.className="preview-body";const opening=document.createElement("p");opening.textContent=a.intro;body.append(opening);
+ for(const b of a.blocks){const section=document.createElement("section");section.className="template-block";const h=document.createElement("h3");h.textContent=b.title;section.append(h);
+ const row=(title,copy)=>{const heading=document.createElement("h4");heading.style.cssText="color:#b00015;font-size:14px;margin:14px 0 5px";heading.textContent=title;const p=document.createElement("p");p.textContent=copy;section.append(heading,p)};
+ row("Why partners should care",b.why);row("What partners can share and use",b.share);
+ if(b.points.length){const ul=document.createElement("ul");ul.style.cssText="font-size:13px;color:#526271;padding-left:21px";b.points.forEach(s=>{const li=document.createElement("li");li.textContent=s;ul.append(li)});section.append(ul)}
+ row("What PAMs should do",b.action);const a=document.createElement("a");a.href=b.url;a.target="_blank";a.rel="noopener noreferrer";a.className="article-cta";a.textContent="Open the PAM email template ↗";section.append(a);
+ b.resources.forEach(z=>{const p=document.createElement("p");const l=document.createElement("a");l.href=z.url;l.target="_blank";l.rel="noopener noreferrer";l.textContent=z.label+" ↗";p.append(l);section.append(p)});body.append(section)}
+ if(!a.blocks.length){const empty=document.createElement("p");empty.textContent="Select an email to build the partner news and PAM activation article.";body.append(empty)}
+ if(a.linkedin){const social=document.createElement("div");social.className="social";const l=document.createElement("a");l.href=a.linkedin;l.target="_blank";l.rel="noopener noreferrer";l.textContent="Share on your LinkedIn ↗";social.append(l);body.append(social)}
+ if(a.blocks.length){const foot=document.createElement("p");foot.style.cssText="font-size:12px;color:#65717b;border-top:1px solid #e2e7eb;padding-top:14px;margin-top:20px";foot.textContent=a.closing;body.append(foot)}
+ root.append(head,body);["copyRich","copyPlain","downloadDraft","makeEmbed","copyEmbed","openEmbed"].forEach(id=>$(id).disabled=!a.blocks.length)
+}
 function update(){if(!savedDraft)syncDefaults();renderEdits();renderPreview();$("embedCode").value=""}
 function renderEdits(){const p=$("summaries");p.replaceChildren();selected().forEach(e=>{const row=document.createElement("div");row.className="summary-edit";const label=document.createElement("strong");label.textContent=e.title;const field=document.createElement("textarea");field.value=summary(e);field.setAttribute("aria-label","Edit description for "+e.title);field.addEventListener("input",()=>{state.summaryEdits[e.id]=field.value;renderPreview();$("embedCode").value=""});row.append(label,field);p.append(row)})}
 function visible(){const q=$("search").value.toLowerCase().trim(),cat=$("category").value;let arr=$("filter").value==="recent"?state.emails.slice(0,20):state.emails;return arr.filter(e=>(!cat||e.category===cat)&&(!q||[e.title,e.category,e.subject].join(" ").toLowerCase().includes(q)))}
