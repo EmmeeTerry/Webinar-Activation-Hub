@@ -54,14 +54,26 @@ def public_html(url):
     except requests.RequestException:
         return None
 
-def image_candidates(doc, base):
+def image_candidates(doc, base, asset_title):
     soup = BeautifulSoup(doc, "html.parser")
+    # Require a meaningful match between the requested asset and its public page.
+    page_title = ((soup.find("meta", property="og:title") or {}).get("content", "")
+                  or (soup.title.get_text(" ", strip=True) if soup.title else ""))
+    norm = lambda t: set(re.findall(r"[a-z]{4,}", (t or "").lower())) - {
+        "webinar", "hitachi", "vantara", "with", "from", "that", "into", "your", "about"}
+    words = norm(asset_title)
+    if len(words) >= 3 and len(words.intersection(norm(page_title))) < min(3,len(words)):
+        return []
     result = []
     for key, val in [("property","og:image"), ("name","twitter:image"), ("property","og:image:url")]:
         for tag in soup.select("meta["+key+"]"):
             if (tag.get(key) or "").lower() == val:
                 url = urljoin(base, tag.get("content", ""))
-                if trusted_image(url) and url not in result:
+                if (trusted_image(url) and url not in result
+                        and not any(bad in url.lower() for bad in (
+                            "default-thumbnail", "generic-banner", "site-logo",
+                            "brand-logo", "webinar-hero-image-rectangular",
+                            "placeholder"))):
                     result.append(url)
     return result
 
@@ -124,7 +136,7 @@ def main():
             doc=public_html(page)
             if not doc:
                 continue
-            for u in image_candidates(doc,page):
+            for u in image_candidates(doc,page,item.get('title','')):
                 im=fetch_image(u,page)
                 if im is None:
                     continue
