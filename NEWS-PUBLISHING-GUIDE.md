@@ -15,6 +15,16 @@
 - **Ready for review is not approval to publish.** Confirm the Smartsheet News Announcement approval/status and follow the team's normal editorial/marketing sign-off process. If the expected approval status isn't populated yet, verify the Smartsheet row directly before continuing.
 - If the description is empty, inaccurate, or unapproved, correct the **Description** in Smartsheet first. If artwork is missing or incorrect, obtain/confirm approved artwork before continuing.
 
+## Confirmed destinations for this team
+
+- **Saved page/template reference:** https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Content-Sharing-Template.aspx
+- **Shared image library folder:** https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/Shared%20Documents/Content%20Announcement%20Images
+- **Emmee's existing Windows OneDrive shortcut (only on her PC):** `C:\\Users\\mterry\\OneDrive - Hitachi Vantara\\Documents - To-Partner Communications FY23\\Content Announcement Images`
+
+The builder now has **Open SharePoint template** and **Open shared image folder** buttons. Opening the template link may open the template page for viewing/editing rather than automatically creating a new page. Always create a **new** news post from the saved site template; never overwrite the original template.
+
+To get an image into the library, click **Download image**, choose **Save as** into the **Content Announcement Images** folder synced in your own Windows File Explorer, and allow OneDrive to sync. Alternatively, download normally and move/upload the file to the shared folder. A web page cannot force Chrome to write to an arbitrary Windows path, and each user's local OneDrive folder path will differ. Confirm the file appears in the SharePoint folder before inserting it into the news page.
+
 ## Reusable SharePoint template: Global Campaigns Asset Announcement
 
 Create this once on the SharePoint site so the team does not reassemble each announcement from scratch:
@@ -25,7 +35,7 @@ Create this once on the SharePoint site so the team does not reassemble each ann
 4. Verify it appears in the site's **Saved on this site** news-template gallery and has the email-compatible indicator. Only then share its actual accessible link with the team.
 5. For each announcement, select that saved template, paste the News Builder's title and formatted body, insert its image, check links and email preview, get approval, and publish/send. Maintain the published URL/date on the existing Smartsheet row.
 
-**Linking:** Until a template exists, the builder's **Open SharePoint** button opens the existing SharePoint site. Once you have created the template, obtain the real template gallery or page URL from SharePoint. A saved template is often selected from the site's News template gallery rather than used by a universal direct "create from this template" URL. Do not distribute a guessed template URL.
+**Linking:** The builder opens the actual supplied **Content Sharing Template** page. To make a new announcement, select a saved site template through the SharePoint news-template gallery. The page link itself is not guaranteed to instantiate a new news post.
 
 ## Two publishing options: choose the right one
 
@@ -43,7 +53,7 @@ Create this once on the SharePoint site so the team does not reassemble each ann
 ## 2. Create a native SharePoint news draft
 
 - Expand **Publishing as SharePoint news or email?**, then select **Copy title**.
-- Click **Open SharePoint**. On the Global Campaigns communications site, choose **New → News post** and select a **Made for email** template if available.
+- Click **Open SharePoint template**. On the Global Campaigns communications site, choose **New → News post** and select a **Made for email** template if available.
 - Paste the title into the SharePoint page title. Save it as a draft while working.
 - **Do not use an iframe for news intended to be sent by email.** An iframe can display inside a web page but generally will not appear correctly in an emailed news article.
 
