@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-11-18T07:46:25.084726+00:00",
+  "lastRefreshed": "2026-11-18T17:23:57.564590+00:00",
   "items": [
     {
       "id": "10-reasons-to-buy-build-or-borrow-ai-implementation-ebook-1",
@@ -1102,7 +1102,7 @@
       "ownerIndividual": "Sulochna Khokhrai",
       "publishedByVendor": "",
       "notes": "\u26a0\ufe0f POTENTIAL DUPLICATE \u2014 Review with \"Ai Data Foundation Roadmap Guide\" (Use Case: Data Readiness and Activation for AI). @stephanie.thompson@hitachivantara.com @sulochna.khokhrai@hitachivantara.com \u2014 Flagged by Smart Assist 10/1/2026.",
-      "actionRequired": "",
+      "actionRequired": "Update status or revise publish date",
       "abstract": "",
       "webinarImage": null,
       "approvedNewsImageUrl": null,
@@ -1113,7 +1113,7 @@
       "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q3",
-      "issueType": ""
+      "issueType": "Overdue"
     },
     {
       "id": "ai-discovery-service-booking-form-assessment-25",
@@ -2778,7 +2778,7 @@
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "",
-      "actionRequired": "",
+      "actionRequired": "Update status or revise publish date",
       "abstract": "",
       "webinarImage": null,
       "approvedNewsImageUrl": null,
@@ -2789,7 +2789,7 @@
       "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q3",
-      "issueType": ""
+      "issueType": "Overdue"
     },
     {
       "id": "cyber-resilience-beyond-traditional-security-in-the-age-of-inevitable-breaches-ebook-62",
