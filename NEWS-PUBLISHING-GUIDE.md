@@ -15,9 +15,21 @@
 - **Ready for review is not approval to publish.** Confirm the Smartsheet News Announcement approval/status and follow the team's normal editorial/marketing sign-off process. If the expected approval status isn't populated yet, verify the Smartsheet row directly before continuing.
 - If the description is empty, inaccurate, or unapproved, correct the **Description** in Smartsheet first. If artwork is missing or incorrect, obtain/confirm approved artwork before continuing.
 
+## Reusable SharePoint template: Global Campaigns Asset Announcement
+
+Create this once on the SharePoint site so the team does not reassemble each announcement from scratch:
+
+1. On the Global Campaigns SharePoint site, select **New > News post** and choose a **Made for email** template.
+2. Design the native page as an asset announcement: a concise title, an image web part, a Text web part for the asset description and CTA, and a short closing prompt pointing readers to the Content Library. Keep the layout simple and reusable. Do not paste a specific asset's complete description or use a fixed URL in the template.
+3. In the page editor, open the menu beside **Save as draft** (or the available page options) and choose **Save as template** / **Save as page template**. Name it **Global Campaigns Asset Announcement**.
+4. Verify it appears in the site's **Saved on this site** news-template gallery and has the email-compatible indicator. Only then share its actual accessible link with the team.
+5. For each announcement, select that saved template, paste the News Builder's title and formatted body, insert its image, check links and email preview, get approval, and publish/send. Maintain the published URL/date on the existing Smartsheet row.
+
+**Linking:** Until a template exists, the builder's **Open SharePoint** button opens the existing SharePoint site. Once you have created the template, obtain the real template gallery or page URL from SharePoint. A saved template is often selected from the site's News template gallery rather than used by a universal direct "create from this template" URL. Do not distribute a guessed template URL.
+
 ## Two publishing options: choose the right one
 
-### Option A: Branded embedded SharePoint page (best visual design)
+### Optional: Branded embedded SharePoint page (best visual design)
 
 1. Select your asset in the builder and verify its title, message, image and CTA. Confirm approval.
 2. Click **Preview full page** to see what the audience will see.
@@ -26,7 +38,7 @@
 
 **Important:** Embedded pages are for the **web only**. SharePoint's emailed news format does not reliably render iframes. Do not email an iframe expecting the polished embedded article to appear in the email body. Also ensure the intended audience is permitted to view the externally hosted content.
 
-### Option B: Native SharePoint news (for email distribution)
+### Default: Native SharePoint news (for email distribution)
 
 ## 2. Create a native SharePoint news draft
 
