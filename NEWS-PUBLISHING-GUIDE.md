@@ -23,7 +23,14 @@
 
 The builder now has **Open SharePoint template** and **Open shared image folder** buttons. Opening the template link may open the template page for viewing/editing rather than automatically creating a new page. Always create a **new** news post from the saved site template; never overwrite the original template.
 
-To get an image into the library, click **Download image**, choose **Save as** into the **Content Announcement Images** folder synced in your own Windows File Explorer, and allow OneDrive to sync. Alternatively, download normally and move/upload the file to the shared folder. A web page cannot force Chrome to write to an arbitrary Windows path, and each user's local OneDrive folder path will differ. Confirm the file appears in the SharePoint folder before inserting it into the news page.
+To save images straight into the synced folder (desktop Chrome/Edge):
+1. Open the News Announcement Builder **in its own browser tab**, not inside SharePoint's iframe, because embedded pages may not be granted browser folder-picker permissions.
+2. Click **Change folder** once. In the folder chooser, navigate to your *own* OneDrive-synced **Content Announcement Images** folder and approve access. Do not choose an unrelated Downloads folder.
+3. Select an asset and click **Save image to synced folder**. The builder remembers the folder in this browser. Browser permissions may require reapproval, and a new browser/device requires selecting the folder again.
+4. Confirm the image has appeared in the SharePoint **Content Announcement Images** folder once OneDrive syncs it. Use the image in your native SharePoint news post.
+5. If your organization's browser restrictions block folder access, use **Download image**, then manually save/move it to the synchronized folder.
+
+**Important:** This saves the generated **PNG** to the *local* OneDrive-synced folder; it does not directly upload to SharePoint. OneDrive provides that synchronization. The current action saves using the asset ID as the filename; saving the same asset again replaces the existing local file. An animated GIF becomes a static PNG. Do not assume a generated image is approved until it is reviewed. Each user's Windows OneDrive path will differ.
 
 ## Reusable SharePoint template: Global Campaigns Asset Announcement
 
