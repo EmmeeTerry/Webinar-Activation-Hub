@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-11-18T00:00:42.322473+00:00",
+  "lastRefreshed": "2026-11-18T00:03:55.192614+00:00",
   "items": [
     {
       "id": "10-reasons-to-buy-build-or-borrow-ai-implementation-ebook-1",
@@ -3080,8 +3080,8 @@
       "issueType": ""
     },
     {
-      "id": "ebook-title-trust-continuity-and-competitive-advantage-in-the-ai-era-ebook-73",
-      "title": "eBook Title: Trust, Continuity, and Competitive Advantage in the AI Era\u200b\u200b | eBook",
+      "id": "trust-continuity-and-competitive-advantage-in-the-ai-era-ebook-73",
+      "title": "Trust, Continuity, and Competitive Advantage in the AI Era\u200b\u200b | eBook",
       "url": "https://www.hitachivantara.com/content/dam/hvac/pdfs/ebook/trust-continuity-competitive-advantage-ai-era.pdf",
       "type": "eBook",
       "campaign": "AI Data Foundation",
@@ -3113,7 +3113,7 @@
       "actionRequired": "",
       "abstract": "",
       "webinarImage": null,
-      "approvedNewsImageUrl": null,
+      "approvedNewsImageUrl": "https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/What%E2%80%99s-New--AI-Data-Foundation-content%E2%80%94live-and-ready-to-activate.aspx?from=SendByEmail&NewsLetter=true&origin=footer&xsdata=MDV8MDJ8ZW1tZWUudGVycnlAaGl0YWNoaXZhbnRhcmEuY29tfDQ0MTBiNzdlNTYyNjRlOWIyZDA2MDhkZjQ0ZGQyOGE5fDE4NzkxZTE3NjE1OTRmNTJhOGQ0ZGU4MTRjYTgyODRhfDB8MHw2MzkzMDUzODg4MTk4NDM4NjN8VW5rbm93bnxUV0ZwYkdac2IzZDhleUpGYlhCMGVVMWhjR2tpT25SeWRXVXNJbFlpT2lJd0xqQXVNREF3TUNJc0lsQWlPaUpYYVc0ek1pSXNJa0ZPSWpvaVRXRnBiQ0lzSWxkVUlqb3lmUT09fDB8fHw%3d&sdata=dFJseEwzeFd2bFM3SzlNNHJldWVJTGhYQ1VkUWF2VDZDKzZYNUtQNEhqND0%3d&clickparams=eyAiWC1BcHBOYW1lIiA6ICJNaWNyb3NvZnQgT3V0bG9vayIsICJYLUFwcFZlcnNpb24iIDogIjE2LjAuMjA1MjcuMjAxOTYiLCAiT1MiIDogIldpbmRvd3MiIH0%3D",
       "marketoOutboundImage": null,
       "partnerCampaignLink": null,
       "fiscalYear": "FY27",
@@ -7437,7 +7437,7 @@
       "actionRequired": "",
       "abstract": "Moving AI from pilot to production takes more than a successful model. It requires trusted data, AI-ready infrastructure, intelligent workload placement, resilient operations, and a repeatable way to manage them at scale.\nIn this webinar, Hitachi Vantara experts explore how an AI Factory operating model can turn distributed data into dependable outcomes without forcing everything to move first. Using a real-world power utility scenario, they will show how to place workloads based on sovereignty, performance, control, and cost; operate across mixed environments; and build cyber resilience and business continuity into production AI from the outset.\nJoin us to learn the practical decisions that can help your organization close the gap between AI experimentation and a scalable, governed production service\u2014and keep it operating, optimized, protected, and ready to deliver measurable business value.",
       "webinarImage": null,
-      "approvedNewsImageUrl": null,
+      "approvedNewsImageUrl": "https://hitachivantara.sharepoint.com/:i:/s/GlobalCampaignsAssets505/IQD-EOhmpHl8So-wJ0-qzsprAYs2m1DM9FwwZMHcemXfHVE?e=cCN7p5",
       "marketoOutboundImage": null,
       "partnerCampaignLink": null,
       "fiscalYear": "FY27",
