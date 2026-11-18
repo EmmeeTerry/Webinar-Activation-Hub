@@ -1,0 +1,42 @@
+name: Generate Content Library PDF news covers
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: "45 */2 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: content-library-news-covers
+  cancel-in-progress: false
+
+jobs:
+  covers:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install thumbnail dependencies
+        run: python -m pip install "pymupdf>=1.24,<2" "pillow>=10,<13" "requests>=2.31,<3"
+      - name: Generate covers from approved public PDFs
+        env:
+          MAX_COVERS_PER_RUN: "25"
+        run: python generate_news_covers.py
+      - name: Commit available cover images
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "content-hub-bot"
+          git config user.email "actions@github.com"
+          git add news-images/
+          if git diff --cached --quiet; then
+            echo "No new PDF covers available."
+            exit 0
+          fi
+          git commit -m "Add automatically generated Content Library PDF news cover previews"
+          git pull --rebase origin main
+          git push origin HEAD:main
