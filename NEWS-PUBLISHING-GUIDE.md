@@ -8,6 +8,16 @@
 
 **Important:** The Content Announcement Builder prepares content and artwork. It **does not** automatically create a SharePoint page, publish, approve an article, or email anyone.
 
+## Quick workflow in the builder
+
+The four primary actions now match the order of use:
+1. **Copy title**: copies the selected asset's suggested SharePoint page title.
+2. **Copy article content**: copies the formatted description and a direct Content Library resource-card CTA.
+3. **Save image for SharePoint**: saves the displayed artwork as a static PNG into the OneDrive-synced **Content Announcement Images** folder selected in the browser. The first save prompts for folder access on supported desktop browsers. **If this is blocked inside the SharePoint iframe**, open the standalone builder or expand **Image saving options** and use **Download image instead**, then upload the downloaded file to the shared folder.
+4. **Open news template**: opens the existing **Content Sharing Template** reference. Create a new SharePoint news page from the saved template; do not overwrite the reference page.
+
+The **Image saving options** section is collapsed by default. **Choose a different save folder** only if the saved OneDrive folder is wrong, inaccessible, or changed. **Download image instead** is the manual fallback. **View SharePoint image folder** lets you verify the file synchronized. The old **Copy image** button was removed because it copied a PNG to the clipboard, which was redundant and could fail when pasting into SharePoint Image web parts.
+
 ## 1. Choose and review an asset
 
 - Open the builder. In **Asset readiness**, choose **Ready for review** to narrow to assets with an image, a nonempty description, and status **Live**. Use **Has image** to explore other assets.
@@ -21,12 +31,12 @@
 - **Shared image library folder:** https://hitachivantara.sharepoint.com/:f:/r/sites/To-PartnerCommunicationsFY23/Shared%20Documents/Content%20Announcement%20Images?d=w675dca6995a843ac8688a306ccad7f22&csf=1&web=1&e=slBQpO
 - **Emmee's existing Windows OneDrive shortcut (only on her PC):** `C:\\Users\\mterry\\OneDrive - Hitachi Vantara\\Documents - To-Partner Communications FY23\\Content Announcement Images`
 
-The builder now has **Open SharePoint template** and **Open shared image folder** buttons. **Open shared image folder** opens the actual SharePoint web folder, while **Save image to synced folder** saves to your selected local OneDrive-synced folder. A SharePoint URL cannot be chosen as a local save folder. Opening the template link may open the template page for viewing/editing rather than automatically creating a new page. Always create a **new** news post from the saved site template; never overwrite the original template.
+The builder now has **Open SharePoint template** and **View SharePoint image folder** buttons. **View SharePoint image folder** opens the actual SharePoint web folder, while **Save image for SharePoint** saves to your selected local OneDrive-synced folder. A SharePoint URL cannot be chosen as a local save folder. Opening the template link may open the template page for viewing/editing rather than automatically creating a new page. Always create a **new** news post from the saved site template; never overwrite the original template.
 
 To save images straight into the synced folder (desktop Chrome/Edge):
 1. Open the Content Announcement Builder **in its own browser tab**, not inside SharePoint's iframe, because embedded pages may not be granted browser folder-picker permissions.
-2. Click **Save image to synced folder**. The first save asks you to choose a local folder. Alternatively click **Change folder** to reselect the folder. In the folder chooser, navigate to your *own* OneDrive-synced **Content Announcement Images** folder and approve access. Do not choose an unrelated Downloads folder.
-3. Select an asset and click **Save image to synced folder**. The builder remembers the folder in this browser. Browser permissions may require reapproval, and a new browser/device requires selecting the folder again.
+2. Click **Save image for SharePoint**. The first save asks you to choose a local folder. Alternatively click **Choose a different save folder** to reselect the folder. In the folder chooser, navigate to your *own* OneDrive-synced **Content Announcement Images** folder and approve access. Do not choose an unrelated Downloads folder.
+3. Select an asset and click **Save image for SharePoint**. The builder remembers the folder in this browser. Browser permissions may require reapproval, and a new browser/device requires selecting the folder again.
 4. Confirm the image has appeared in the SharePoint **Content Announcement Images** folder once OneDrive syncs it. Use the image in your native SharePoint news post.
 5. If your organization's browser restrictions block folder access, use **Download image**, then manually save/move it to the synchronized folder.
 
@@ -69,7 +79,7 @@ Create this once on the SharePoint site so the team does not reassemble each ann
 ## 3. Add text, CTA, and artwork
 
 - Expand **Publishing as SharePoint news or email?**, then click **Copy formatted body** in the builder. Paste into a native SharePoint **Text** web part. Confirm the description and the **Explore asset and activation resources** CTA remain formatted and clickable.
-- Click **Copy image** or **Download image**. Add the image to a native SharePoint **Image** web part. Download/upload is the fallback if the browser blocks image clipboard access.
+- Click **Save image for SharePoint** (or **Download image instead** under Image saving options). Add the image to a native SharePoint **Image** web part. Download/upload is the fallback if the browser blocks image clipboard access.
 - Review the crop, alt text, image resolution and SharePoint news/page thumbnail.
 - The image copy/download action exports a **static PNG** of the displayed frame. If the approved original is an animated GIF and the animation is required, insert the original GIF instead.
 
