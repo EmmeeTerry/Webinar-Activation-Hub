@@ -2,7 +2,7 @@
 """Generate news thumbnails from public first-party PDFs when approved artwork is absent.
 
 Only downloads public hitachivantara.com PDFs from the existing Content Library feed.
-Does not overwrite manually approved artwork. Failures do not block synchronization.
+Keeps generated thumbnails separate from manually approved artwork. Failures do not block synchronization.
 """
 import json
 import os
@@ -42,7 +42,7 @@ def main():
         asset_id = item.get("id", "")
         pdf = item.get("url", "")
         dest = OUT / (asset_id + ".webp")
-        if not asset_id or "/" in asset_id or "\\" in asset_id or dest.exists() or item.get("approvedNewsImageUrl") or not allowed_pdf(pdf):
+        if not asset_id or "/" in asset_id or "\\" in asset_id or dest.exists() or not allowed_pdf(pdf):
             skipped += 1
             continue
         try:
