@@ -6,7 +6,7 @@
 
 **Where content comes from:** the Smartsheet **Content Mapping Master List**, automatically synchronized into the Content Library. Do not create a second spreadsheet, duplicate the asset record, edit GitHub, or add content directly to this page.
 
-**Important:** The News Announcement Builder prepares content and artwork. It **does not** automatically create a SharePoint page, publish, approve an article, or email anyone.
+**Important:** The Content Announcement Builder prepares content and artwork. It **does not** automatically create a SharePoint page, publish, approve an article, or email anyone.
 
 ## 1. Choose and review an asset
 
@@ -18,14 +18,14 @@
 ## Confirmed destinations for this team
 
 - **Saved page/template reference:** https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Content-Sharing-Template.aspx
-- **Shared image library folder:** https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/Shared%20Documents/Content%20Announcement%20Images
+- **Shared image library folder:** https://hitachivantara.sharepoint.com/:f:/s/To-PartnerCommunicationsFY23/IgBpyl1nqJWsQ4aIowbMrX8iAZC1bDJHBF6aySr2uqX5uK0?e=wXjxyf
 - **Emmee's existing Windows OneDrive shortcut (only on her PC):** `C:\\Users\\mterry\\OneDrive - Hitachi Vantara\\Documents - To-Partner Communications FY23\\Content Announcement Images`
 
-The builder now has **Open SharePoint template** and **Open shared image folder** buttons. Opening the template link may open the template page for viewing/editing rather than automatically creating a new page. Always create a **new** news post from the saved site template; never overwrite the original template.
+The builder now has **Open SharePoint template** and **Open shared image folder** buttons. **Open shared image folder** opens the actual SharePoint web folder, while **Save image to synced folder** saves to your selected local OneDrive-synced folder. A SharePoint URL cannot be chosen as a local save folder. Opening the template link may open the template page for viewing/editing rather than automatically creating a new page. Always create a **new** news post from the saved site template; never overwrite the original template.
 
 To save images straight into the synced folder (desktop Chrome/Edge):
-1. Open the News Announcement Builder **in its own browser tab**, not inside SharePoint's iframe, because embedded pages may not be granted browser folder-picker permissions.
-2. Click **Change folder** once. In the folder chooser, navigate to your *own* OneDrive-synced **Content Announcement Images** folder and approve access. Do not choose an unrelated Downloads folder.
+1. Open the Content Announcement Builder **in its own browser tab**, not inside SharePoint's iframe, because embedded pages may not be granted browser folder-picker permissions.
+2. Click **Save image to synced folder**. The first save asks you to choose a local folder. Alternatively click **Change folder** to reselect the folder. In the folder chooser, navigate to your *own* OneDrive-synced **Content Announcement Images** folder and approve access. Do not choose an unrelated Downloads folder.
 3. Select an asset and click **Save image to synced folder**. The builder remembers the folder in this browser. Browser permissions may require reapproval, and a new browser/device requires selecting the folder again.
 4. Confirm the image has appeared in the SharePoint **Content Announcement Images** folder once OneDrive syncs it. Use the image in your native SharePoint news post.
 5. If your organization's browser restrictions block folder access, use **Download image**, then manually save/move it to the synchronized folder.
