@@ -15,10 +15,23 @@
 - **Ready for review is not approval to publish.** Confirm the Smartsheet News Announcement approval/status and follow the team's normal editorial/marketing sign-off process. If the expected approval status isn't populated yet, verify the Smartsheet row directly before continuing.
 - If the description is empty, inaccurate, or unapproved, correct the **Description** in Smartsheet first. If artwork is missing or incorrect, obtain/confirm approved artwork before continuing.
 
+## Two publishing options: choose the right one
+
+### Option A: Branded embedded SharePoint page (best visual design)
+
+1. Select your asset in the builder and verify its title, message, image and CTA. Confirm approval.
+2. Click **Preview full page** to see what the audience will see.
+3. Click **Copy SharePoint embed code**. In SharePoint, create or edit the intended web page. Add an **Embed** web part and paste the iframe code. Resize the web part or its height if required.
+4. Preview the SharePoint page and check the links and artwork; obtain approval before publishing. Record the published page URL/date in Smartsheet if this is an approved news announcement.
+
+**Important:** Embedded pages are for the **web only**. SharePoint's emailed news format does not reliably render iframes. Do not email an iframe expecting the polished embedded article to appear in the email body. Also ensure the intended audience is permitted to view the externally hosted content.
+
+### Option B: Native SharePoint news (for email distribution)
+
 ## 2. Create a native SharePoint news draft
 
-- In the builder, select **1. Copy page title**.
-- Click **4. Open SharePoint site**. On the Global Campaigns communications site, choose **New → News post** and select a **Made for email** template if available.
+- Expand **Publishing as SharePoint news or email?**, then select **Copy title**.
+- Click **Open SharePoint**. On the Global Campaigns communications site, choose **New → News post** and select a **Made for email** template if available.
 - Paste the title into the SharePoint page title. Save it as a draft while working.
 - **Do not use an iframe for news intended to be sent by email.** An iframe can display inside a web page but generally will not appear correctly in an emailed news article.
 
@@ -26,8 +39,8 @@
 
 ## 3. Add text, CTA, and artwork
 
-- Click **2. Copy formatted news body** in the builder. Paste into a native SharePoint **Text** web part. Confirm the description and the **Explore asset and activation resources** CTA remain formatted and clickable.
-- Click **3. Copy image** or **3. Download image instead**. Add the image to a native SharePoint **Image** web part. Download/upload is the fallback if the browser blocks image clipboard access.
+- Expand **Publishing as SharePoint news or email?**, then click **Copy formatted body** in the builder. Paste into a native SharePoint **Text** web part. Confirm the description and the **Explore asset and activation resources** CTA remain formatted and clickable.
+- Click **Copy image** or **Download image**. Add the image to a native SharePoint **Image** web part. Download/upload is the fallback if the browser blocks image clipboard access.
 - Review the crop, alt text, image resolution and SharePoint news/page thumbnail.
 - The image copy/download action exports a **static PNG** of the displayed frame. If the approved original is an animated GIF and the animation is required, insert the original GIF instead.
 
