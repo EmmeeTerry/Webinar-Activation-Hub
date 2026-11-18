@@ -1,4 +1,4 @@
-name: Generate Content Library PDF news covers
+name: Generate Content Library news artwork
 
 on:
   workflow_dispatch: {}
@@ -21,11 +21,15 @@ jobs:
         with:
           python-version: "3.11"
       - name: Install thumbnail dependencies
-        run: python -m pip install "pymupdf>=1.24,<2" "pillow>=10,<13" "requests>=2.31,<3"
+        run: python -m pip install "pymupdf>=1.24,<2" "pillow>=10,<13" "requests>=2.31,<3" "beautifulsoup4>=4.12,<5"
       - name: Generate covers from approved public PDFs
         env:
           MAX_COVERS_PER_RUN: "25"
         run: python generate_news_covers.py
+      - name: Collect public webinar/event artwork
+        env:
+          MAX_WEBINAR_IMAGES: "30"
+        run: python generate_news_webinar_images.py
       - name: Commit available cover images
         shell: bash
         run: |
@@ -37,6 +41,6 @@ jobs:
             echo "No new PDF covers available."
             exit 0
           fi
-          git commit -m "Add automatically generated Content Library PDF news cover previews"
+          git commit -m "Add generated PDF covers and public-source webinar artwork previews"
           git pull --rebase origin main
           git push origin HEAD:main
