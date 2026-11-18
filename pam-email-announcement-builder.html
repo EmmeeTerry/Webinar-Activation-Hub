@@ -1,168 +1,128 @@
 <!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>PAM Email Announcement Builder | Hitachi Vantara</title>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>PAM Email News Builder | Hitachi Vantara</title>
 <style>
-:root{--red:#ce0000;--navy:#172431;--ink:#20272f;--muted:#606b75;--line:#dce1e6}
-*{box-sizing:border-box}body{margin:0;background:#f3f5f7;color:var(--ink);font:14px/1.5 "Segoe UI",Arial,sans-serif}header{background:var(--navy);color:white;border-top:6px solid var(--red);padding:22px max(20px,calc((100% - 1160px)/2))}header h1{font-size:25px;margin:4px 0}header p{margin:0;color:#d5dde6}.eyebrow{font-size:11px;letter-spacing:.11em;font-weight:800;color:#d8e3eb}main{max-width:1160px;margin:22px auto;padding:0 18px}.layout{display:grid;grid-template-columns:390px minmax(0,1fr);gap:18px;align-items:start}.panel{background:#fff;border:1px solid var(--line);border-radius:7px;padding:20px;box-shadow:0 2px 8px #182a3810}.panel h2{font-size:19px;margin:0 0 5px}label{display:block;font-size:12px;font-weight:750;margin:13px 0 5px}input,select,textarea{width:100%;font:inherit;color:inherit;border:1px solid #b9c4cf;border-radius:4px;padding:10px;background:white}textarea{resize:vertical;min-height:105px}button,.buttonlink{display:inline-block;background:var(--red);color:white;border:1px solid var(--red);padding:10px 13px;border-radius:4px;font:700 13px "Segoe UI",Arial,sans-serif;cursor:pointer;text-decoration:none}button.secondary,.buttonlink.secondary{background:#fff;color:#8b0010;border-color:#c8a4a9}button:disabled{opacity:.45;cursor:not-allowed}.actions{display:flex;flex-wrap:wrap;gap:9px;margin:14px 0}.hint{font-size:12px;color:var(--muted);margin:4px 0 10px}.filterrow{display:grid;grid-template-columns:1fr 1fr;gap:10px}.listbox{max-height:430px;overflow:auto;border:1px solid var(--line);border-radius:5px;margin-top:10px}.item{display:flex;align-items:start;gap:11px;padding:12px;border-bottom:1px solid #e8edf0;cursor:pointer}.item:last-child{border:0}.item:hover{background:#fafbfc}.item input{width:auto;margin:4px 0 0;flex:none}.item strong{display:block;line-height:1.35}.item small{display:block;color:#6d7882;margin-top:4px}.summaryitem{border:1px solid #e0e6eb;border-radius:5px;padding:11px;margin:10px 0;background:#fcfcfd}.summaryitem strong{font-size:13px;display:block}.summaryitem textarea{min-height:75px;margin:7px 0 0;font-size:13px}.summaryitem a{font-size:12px;color:#aa0012}.preview{border:1px solid #dde2e7;background:#fff;margin-top:15px}.previewhead{background:var(--navy);color:#fff;padding:26px 27px;border-top:5px solid var(--red)}.previewhead h2{color:#fff;font-size:25px;line-height:1.22;margin:8px 0}.previewhead p{font-size:13px;color:#dce3eb;margin:0}.previewbody{padding:24px 27px}.previewbody p{margin:0 0 16px}.previewemail{padding:17px 0;border-bottom:1px solid #e1e6ea}.previewemail:last-child{border-bottom:0}.previewemail h3{font-size:17px;margin:0 0 7px}.previewemail p{color:#515e69;font-size:13px;margin:0 0 10px}.previewemail a,.previewbody a{color:#b60013;font-weight:bold}.foot{margin-top:20px;background:#f5f7f9;padding:16px}.foot p{margin:0 0 8px}.foot p:last-child{margin:0}.status{font-size:12px;color:#556472;min-height:20px;margin-top:9px}.status.error{color:#9f0012}.info{font-size:12px;color:#5e6d77;background:#f3f6f8;padding:12px;border-radius:4px}.toplinks{display:flex;flex-wrap:wrap;gap:12px;margin:12px 0 20px}.toplinks a{color:#a20010;font-weight:700;font-size:13px}#summaries:empty:after{content:"Select an email to edit its announcement summary.";font-size:12px;color:#777}.controlsection{border-top:1px solid #e2e6ea;margin-top:15px;padding-top:14px}.controlsection h3{font-size:14px;margin:0}.count{color:#64727d;font-size:12px}.checkline{display:flex;align-items:start;gap:9px;font-size:12px;margin:12px 0}.checkline input{width:auto;margin-top:3px}.checkline label{display:inline;margin:0;font-weight:normal;font-size:12px}@media(max-width:850px){.layout{grid-template-columns:1fr}.listbox{max-height:280px}}@media print{header,.editorcontrols,.toplinks,.actions,.status{display:none!important}.layout{display:block}.panel{border:0;padding:0;box-shadow:none}.preview{border:0}}
-.embedmode header,.embedmode .toplinks,.embedmode .editorcontrols,.embedmode .publishTools,.embedmode .instructions,.embedmode .builderStatus{display:none!important}
-.embedmode{background:#fff}.embedmode main{padding:0;max-width:none;margin:0}.embedmode .layout{display:block}.embedmode .outputPanel{border:0;padding:0;border-radius:0;box-shadow:none}.embedmode .preview{margin:0;border:0}.embedmode .previewhead{padding:30px max(22px,calc((100% - 920px)/2))}.embedmode .previewbody{max-width:980px;margin:auto}.embedmode #preview{width:100%}
-#embedCode{height:110px;min-height:110px;font:12px/1.5 Consolas,monospace;white-space:pre-wrap;word-break:break-word}.howto{border:1px solid #d8e0e7;border-radius:6px;background:#f7f9fb;margin:10px 0 16px;padding:14px}.howto summary{font-weight:800;cursor:pointer}.howto ol{margin:9px 0 0;padding-left:20px}.howto li{margin:7px 0}.linkedinPreview{margin:18px 0;padding:16px;border-left:4px solid #0a66c2;background:#f3f7fc}.linkedinPreview a{color:#075eae!important}
-</style>
-</head>
-<body>
-<header><div class="eyebrow">HITACHI VANTARA / PARTNER PROGRAMS</div><h1>PAM Email Announcement Builder</h1><p>Turn existing partner email templates into a SharePoint news post. One source of truth, no copied resource cards.</p></header>
+:root{--red:#ce0013;--navy:#162536;--ink:#24313a;--muted:#607080;--line:#dce3e8}
+*{box-sizing:border-box}body{margin:0;color:var(--ink);background:#f4f6f8;font:14px/1.55 "Segoe UI",Arial,sans-serif}header{background:var(--navy);color:white;border-top:5px solid var(--red);padding:20px max(20px,calc((100% - 1120px)/2))}header h1{font-size:25px;margin:3px 0 4px}header p{margin:0;color:#dae4ee}.eyebrow{font-weight:800;letter-spacing:.1em;font-size:11px}
+main{max-width:1120px;margin:20px auto;padding:0 18px}.layout{display:grid;grid-template-columns:360px minmax(0,1fr);gap:20px;align-items:start}
+.panel{background:#fff;border:1px solid var(--line);border-radius:8px;padding:20px;box-shadow:0 2px 9px #1223330d}.panel h2{font-size:18px;margin:0 0 5px}.panel h3{font-size:15px;margin:0 0 6px}
+p{margin:8px 0}.muted{color:var(--muted);font-size:12px}.links{display:flex;gap:16px;margin-bottom:18px;flex-wrap:wrap}.links a{font-size:12px;color:#a70013;font-weight:700}
+label{display:block;font-size:12px;font-weight:700;margin:12px 0 5px}input,select,textarea{width:100%;padding:10px;background:white;border:1px solid #bbc5ce;border-radius:5px;color:var(--ink);font:inherit}
+button,.action-link{cursor:pointer;background:var(--red);border:1px solid var(--red);color:white;padding:10px 12px;border-radius:4px;font:700 12px "Segoe UI",Arial,sans-serif;text-decoration:none;display:inline-block}button.secondary,.action-link.secondary{color:#a00012;background:white;border-color:#c7a8ab}button:disabled{cursor:not-allowed;opacity:.5}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}.filters{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.email-list{max-height:440px;overflow:auto;border:1px solid var(--line);border-radius:6px;margin-top:9px}.email-choice{display:flex;align-items:flex-start;gap:10px;padding:11px;border-bottom:1px solid #e7eaee;cursor:pointer;margin:0;font-size:13px;font-weight:400}.email-choice:hover{background:#fafbfc}.email-choice input{width:auto;margin:4px 0 0}.email-choice strong{display:block}.email-choice small{display:block;color:#72808c;margin-top:3px}
+details{border:1px solid var(--line);background:#f9fafb;border-radius:6px;padding:13px;margin-top:14px}summary{cursor:pointer;font-weight:800;color:#263b4c}details ol{padding-left:20px;margin:10px 0 0}details li{margin:7px 0}details p{font-size:12px;color:#536473}
+.summary-edit{background:white;border:1px solid #e0e6eb;padding:11px;margin:8px 0;border-radius:5px}.summary-edit textarea{min-height:80px;font-size:12px}.summary-edit strong{font-size:12px}
+.preview{margin-top:12px;background:#fff;border:1px solid #e0e5eb}.preview-head{background:var(--navy);border-top:5px solid var(--red);color:#fff;padding:26px}.preview-head small{font-size:10px;letter-spacing:.12em;color:#d5e0e9}.preview-head h2{font-size:25px;line-height:1.2;color:white;margin:9px 0 6px}.preview-head p{font-size:13px;color:#d7e1eb}
+.preview-body{padding:25px}.preview-body p{margin:0 0 16px}.template-block{border-top:1px solid #e4e8ec;padding:17px 0}.template-block h3{font-size:17px;margin:0 0 7px}.template-block p{font-size:13px;color:#526271;margin:0 0 10px}.preview-body a{color:#b00017;font-weight:700}.social{padding:13px 16px;background:#eef4fa;border-left:4px solid #0a66c2;margin:15px 0}.outro{padding:16px;background:#f4f6f8;margin-top:14px}
+.status{min-height:20px;color:#506377;font-size:12px}.error{color:#a10016}.help{padding:10px 13px;background:#f3f6f8;font-size:12px;color:#546574;border-radius:5px}
+#embedCode{min-height:112px;font:12px/1.4 Consolas,monospace;word-break:break-all}.small{font-size:12px}.section{margin-top:19px;border-top:1px solid var(--line);padding-top:17px}
+body.embedded{background:#fff}body.embedded header,body.embedded .links,body.embedded .builder-only,body.embedded .edit-panel{display:none!important}body.embedded main{max-width:none;margin:0;padding:0}body.embedded .layout{display:block}body.embedded .output{padding:0;border:0;box-shadow:none}body.embedded .preview{margin:0;border:0}body.embedded .preview-body{max-width:950px;margin:auto}
+@media(max-width:800px){.layout{grid-template-columns:1fr}.email-list{max-height:300px}.panel{padding:14px}}
+</style></head><body>
+<header><div class="eyebrow">HITACHI VANTARA / PARTNER PROGRAMS</div><h1>PAM Email News Builder</h1><p>Select templates. We create a SharePoint-ready announcement with direct links and clear next steps.</p></header>
 <main>
-<div class="toplinks"><a href="./pam-email-announcement-builder.html" target="_blank" rel="noopener" id="standaloneLink"><strong>Open builder in its own browser tab ↗</strong></a><a href="./pam-email-hub.html" target="_blank" rel="noopener">Open PAM Email Hub ↗</a><a href="https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23" target="_blank" rel="noopener">Open SharePoint communications site ↗</a></div>
-<details class="howto" open><summary>How to use this builder (start here)</summary>
-<ol>
-<li><strong>Select the email templates</strong> you want to announce. Use Recently added or All templates. Avoid selecting an entire large batch if the announcement would become overwhelming.</li>
-<li><strong>Review every description.</strong> The summaries are draft excerpts from email content, not fact-checked AI summaries. Edit them to explain why PAMs should share each template with partners.</li>
-<li><strong>Optional LinkedIn reshare:</strong> Paste the URL of an existing approved LinkedIn post. Readers get a direct link to open and reshare the original post. The builder does not create or publish LinkedIn posts.</li>
-<li><strong>Choose your publishing method:</strong> For <strong>SharePoint News sent by email</strong>, copy the title and formatted body into a native SharePoint news post (Made for email). <strong>Never use an iframe for emailed news.</strong> For a <strong>SharePoint web page</strong>, use the optional iframe embed code below in an Embed web part.</li>
-<li><strong>Verify and publish:</strong> Open the selected email links and LinkedIn post, confirm the summaries and SharePoint preview, obtain approval, then publish from SharePoint. Nothing is auto-published or emailed.</li>
-</ol></details>
+<div class="links builder-only"><a href="./pam-email-announcement-builder.html" target="_blank" rel="noopener">Open builder in its own tab ↗</a><a href="./pam-email-hub.html" target="_blank" rel="noopener">PAM Email Hub ↗</a><a href="https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Content-Sharing-Template.aspx" target="_blank" rel="noopener">SharePoint news template ↗</a></div>
 <div class="layout">
-<section class="panel editorcontrols">
-<h2>1. Choose emails</h2><p class="hint">The builder reads your existing PAM template feeds. Select one or several, then review how each is described.</p>
-<div class="filterrow"><div><label for="filter">Show templates</label><select id="filter"><option value="recent">Recently added</option><option value="all">All templates</option></select></div><div><label for="category">Category</label><select id="category"><option value="">All categories</option></select></div></div>
-<label for="search">Find email</label><input id="search" type="search" placeholder="Search template name or subject">
-<div class="actions"><button id="selectVisible" type="button" class="secondary">Select visible</button><button id="clear" type="button" class="secondary">Clear selection</button><button id="reload" type="button" class="secondary">Refresh templates</button></div>
-<div class="count" id="count">Loading templates…</div>
-<div id="emails" class="listbox" role="group" aria-label="Select email templates"></div>
-<div class="controlsection"><h3>2. Review summaries</h3><p class="hint">Suggested summaries come from the existing email copy, not generated claims. Edit for accuracy, audience, and reasons to use each template.</p><div id="summaries"></div></div>
-<div class="controlsection"><h3>3. Customize the announcement</h3>
-<label for="style">Announcement format</label><select id="style"><option value="activation">New templates: why and when to use them</option><option value="roundup">Short roundup</option></select>
-<label for="headline">SharePoint headline</label><input id="headline" value="New Partner Email Templates to Help You Engage Customers">
-<label for="intro">Opening message</label><textarea id="intro">New ready-to-use PAM-to-partner emails are available in the PAM Email Hub. Pick a message relevant to your partners, personalize it, and send it using your preferred email option. You do not need to create the communication from scratch.</textarea>
-<label for="closing">Closing call to action</label><textarea id="closing">Choose a template below, tailor the message to your partner, and use it to start a relevant conversation. You can always browse the full PAM Email Hub for additional options.</textarea>
-<label for="linkedinUrl">Optional: LinkedIn post to reshare</label>
-<input id="linkedinUrl" type="url" placeholder="https://www.linkedin.com/posts/… or https://www.linkedin.com/feed/update/…">
-<p class="hint">Paste a published LinkedIn post URL. The announcement will include <strong>View and reshare on LinkedIn</strong>, linking to the original post. Please verify that the post is approved and visible to the intended audience.</p>
-<label for="linkedinLabel">LinkedIn post description (optional)</label>
-<input id="linkedinLabel" maxlength="160" placeholder="e.g., Reshare our new Partner Marketing Hub launch post">
-<label class="checkline"><input id="reviewed" type="checkbox"> <span>I have reviewed the summaries, links, and SharePoint copy before publishing.</span></label>
+<section class="panel edit-panel">
+<h2>1. Which emails are you announcing?</h2><p class="muted">Select the new or relevant templates. The article, CTA buttons and links are built for you.</p>
+<div class="filters"><div><label for="filter">Show</label><select id="filter"><option value="recent">Recently added</option><option value="all">All templates</option></select></div><div><label for="category">Category</label><select id="category"><option value="">All categories</option></select></div></div>
+<label for="search">Search templates</label><input id="search" type="search" placeholder="Find an email or campaign">
+<div class="actions"><button type="button" class="secondary" id="selectVisible">Select displayed</button><button type="button" class="secondary" id="clear">Clear</button><button type="button" class="secondary" id="reload">Refresh list</button></div>
+<div id="count" class="muted">Loading emails…</div><div id="emails" class="email-list">Loading email templates…</div>
+<div class="section"><h2>2. Is there a LinkedIn post to share?</h2><p class="muted">Optional. Add a link to an approved LinkedIn post. We'll automatically add “Share on your LinkedIn” to the announcement.</p>
+<label for="linkedinUrl">LinkedIn post URL (optional)</label><input id="linkedinUrl" type="url" placeholder="https://www.linkedin.com/posts/...">
+</div>
+<details><summary>Optional: Edit the announcement text</summary>
+<p>The article headline, introduction and closing CTA are generated automatically. Only change them if you need to.</p>
+<label for="headline">Headline</label><input id="headline" value="New PAM-to-Partner Emails Are Ready to Share">
+<label for="intro">Introduction</label><textarea id="intro">We've added ready-to-share partner emails to the PAM Email Hub. Each template helps you introduce a useful resource or opportunity to partners without writing from scratch. Explore what's available and open the emails below.</textarea>
+<label for="closing">Final next step</label><textarea id="closing">Choose an email that fits your partners' priorities, personalize it in the PAM Email Hub and share it with your partners.</textarea>
+<div id="summaries"></div>
+</details>
+<details><summary>How to use this builder</summary>
+<ol><li><strong>Select one or more email templates.</strong> Each CTA automatically links to its own email inside the PAM Email Hub.</li><li><strong>Optionally add a LinkedIn post URL.</strong> We add the reshare link automatically. Review the announcement preview and open its links to confirm they work for your audience.</li><li><strong>For a SharePoint news post sent by email:</strong> Copy the title and formatted body. Open the SharePoint news template and create a new news post from the template. Paste into a native Text web part. Do not use an iframe for an emailed article.</li><li><strong>For a SharePoint web page:</strong> Use Generate embed code and paste it into an Embed web part. The code captures your selections and text. No separate image or manual linking is required.</li></ol>
+<p>The builder prepares the content. Publishing, approval, and sending happen in SharePoint.</p>
+</details>
+</section>
+<section class="panel output">
+<h2 class="builder-only">3. Your announcement is ready to publish</h2><p class="muted builder-only">Everything below is generated from the templates you selected. Select at least one email to enable publishing.</p>
+<div class="actions builder-only"><button id="copyTitle" type="button">Copy title</button><button id="copyRich" type="button">Copy formatted post</button><button id="copyPlain" type="button" class="secondary">Copy plain text</button><button id="downloadDraft" type="button" class="secondary">Download HTML</button><a class="action-link secondary" id="openSP" href="https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Content-Sharing-Template.aspx" target="_blank" rel="noopener">Open SharePoint template ↗</a></div>
+<div id="status" class="status builder-only" aria-live="polite"></div>
+<div id="preview" class="preview"></div>
+<div class="builder-only">
+<details open><summary>Embed this announcement in a SharePoint web page</summary>
+<p>For web pages only. Embeds do not display reliably when SharePoint news is sent by email. Click Generate, then Copy. The code contains your current selected templates and copy, not a screenshot.</p>
+<div class="actions"><button type="button" id="makeEmbed">Generate embed code</button><button type="button" class="secondary" id="copyEmbed">Copy embed code</button><button type="button" class="secondary" id="openEmbed">Preview embed</button></div>
+<label for="embedCode">Generated iframe code</label><textarea id="embedCode" readonly placeholder="Click Generate embed code to create the iframe"></textarea>
+<p class="muted" id="embedNote">When the article changes, generate new embed code.</p>
+</details>
+<p class="help">For SharePoint news emails, use Copy formatted post and the native SharePoint news template above. For web pages, use the iframe code. If your browser blocks clipboard access inside SharePoint, open the builder in its own browser tab or copy the code directly from the box.</p>
 </div>
 </section>
-<section class="panel outputPanel">
-<h2>SharePoint news preview</h2><p class="hint">This is the native news/email layout. No iframe or screenshots are required.</p>
-<div class="actions publishTools"><button id="copyTitle" type="button">Copy title</button><button id="copyRich" type="button">Copy formatted body</button><button id="copyPlain" type="button" class="secondary">Copy plain text</button><button id="downloadDraft" type="button" class="secondary">Download announcement (.html)</button><button id="openSP" type="button" class="secondary">Open SharePoint</button></div>
-<p class="status builderStatus" id="status" role="status" aria-live="polite"></p><p class="hint publishTools" id="copyHelp">If SharePoint blocks copying or opening a new tab, use <strong>Open builder in its own browser tab</strong> above. The builder can also provide a downloadable announcement file.</p>
-<div id="preview" class="preview" aria-label="News article preview"></div>
-<details class="howto publishTools"><summary>Optional: Embed the branded announcement on a SharePoint web page</summary>
-<p class="hint">Only for SharePoint <strong>web pages</strong>, not emailed news. This creates a live iframe displaying the announcement you reviewed. The link references the current PAM templates, so their content is not duplicated.</p>
-<div class="actions"><button id="makeEmbed" type="button">Generate embed code</button><button id="copyEmbed" type="button" class="secondary">Copy embed code</button><button id="openEmbed" type="button" class="secondary">Preview embedded page</button></div>
-<label for="embedCode">SharePoint Embed web part code</label>
-<textarea id="embedCode" readonly spellcheck="false" placeholder="Select templates, review summaries, then Generate embed code."></textarea>
-<p class="hint" id="embedNote">In SharePoint, edit the intended page, add an Embed web part, paste this code, and preview the page. Do not use an iframe in a news post being sent by email. Regenerate the code if you edit the announcement.</p>
-</details>
-<div class="info instructions" style="margin-top:14px"><strong>Publishing steps:</strong> Open SharePoint and create a new News post using a Made for email template. Copy the headline and formatted body into native SharePoint text. Confirm all links in the news preview, obtain approval, then publish and send through SharePoint. This builder never publishes automatically.</div>
-</section>
-</div></main>
+</div>
+</main>
 <script>
 (function(){
 "use strict";
-var $=function(id){return document.getElementById(id)};
-var baseUrl="./pam-email-hub.html";
-var state={emails:[],selected:new Set(),summaries:{},recentLimit:20,loading:false};
-var embedDraft=null;
-function linkedinLink(){var raw=$("linkedinUrl").value.trim();if(!raw)return "";try{var u=new URL(raw);if(u.protocol!=="https:"||!/(^|\.)linkedin\.com$/i.test(u.hostname))return "";if(!(/\/posts\/|\/feed\/update\/|\/pulse\//i).test(u.pathname))return "";return u.href}catch(e){return ""}}
-function linkedinSection(){var url=linkedinLink();return url?'<div style="margin:18px 0;padding:16px;border-left:4px solid #0a66c2;background:#f3f7fc"><strong>'+escapeHTML($("linkedinLabel").value.trim()||"Amplify this message on LinkedIn")+'</strong><p style="margin:8px 0"><a href="'+escapeHTML(url)+'" style="font-weight:bold;color:#075eae">View and reshare the LinkedIn post</a></p></div>':""}
-function draftState(){return {ids:[...state.selected],headline:$("headline").value,intro:$("intro").value,closing:$("closing").value,style:$("style").value,summaries:Object.fromEntries([...state.selected].map(function(id){return [id,state.summaries[id]||""]})),linkedinUrl:$("linkedinUrl").value.trim(),linkedinLabel:$("linkedinLabel").value.trim()}}
-function encodeDraft(d){var bytes=new TextEncoder().encode(JSON.stringify(d)),binary="";for(var i=0;i<bytes.length;i+=8192){binary+=String.fromCharCode.apply(null,bytes.subarray(i,i+8192))}return btoa(binary).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/,"")}
-function decodeDraft(s){var raw=atob(s.replace(/-/g,"+").replace(/_/g,"/"));var bytes=Uint8Array.from(raw,function(c){return c.charCodeAt(0)});return JSON.parse(new TextDecoder().decode(bytes))}
-function embedUrl(){var u=new URL(location.href);u.search="";u.hash="";u.searchParams.set("view","embed");u.searchParams.set("draft",encodeDraft(draftState()));return u.href}
-function invalidateEmbed(){if(!$("embedCode"))return;$("embedCode").value="";$("embedNote").textContent="The draft changed. Generate fresh embed code before publishing."}
-function applyEmbeddedDraft(){if(!embedDraft)return;["headline","intro","closing","linkedinUrl","linkedinLabel"].forEach(function(id){if(typeof embedDraft[id]==="string")$(id).value=embedDraft[id]});if(typeof embedDraft.style==="string")$("style").value=embedDraft.style;if(embedDraft.summaries&&typeof embedDraft.summaries==="object")state.summaries=embedDraft.summaries;state.selected=new Set((Array.isArray(embedDraft.ids)?embedDraft.ids:[]).filter(function(id){return state.emails.some(function(e){return e.id===id})}));}
-try{var params=new URLSearchParams(location.search);if(params.get("view")==="embed"&&params.get("draft")){embedDraft=decodeDraft(params.get("draft"));document.body.classList.add("embedmode");}}catch(e){embedDraft=null;}
-var reserved=["DPAE","HCPO","CMR","CRMR"];
-function escapeHTML(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
-function normalize(s){return String(s||"").toLowerCase().replace(/\s+/g," ").trim()}
-function safeLink(id){var url=new URL(baseUrl,location.href);url.searchParams.set("email",id);return url.href}
-function isLegacy(e){return /^(DPAE|HCPO|CMR|CRMR)(?:\b|\s|[·-])/i.test(String(e.title||"").trim())}
-function dateScore(e){var value=e.addedDate||e.createdDate||e.createdAt||"";var parsed=Date.parse(value);if(Number.isFinite(parsed))return parsed;var id=String(e.id||"");var m=id.match(/20\d{6}/);if(m){var d=m[0];return Date.parse(d.slice(0,4)+"-"+d.slice(4,6)+"-"+d.slice(6,8))||0}return 0}
-function sourceText(e){var html=e.htmlBody||"";if(html){var doc=new DOMParser().parseFromString(html,"text/html");doc.querySelectorAll("script,style,title,head").forEach(function(x){x.remove()});return (doc.body?doc.body.textContent:"").replace(/\s+/g," ").trim()}return (e.body||"").replace(/\s+/g," ").trim()}
-function summary(e){var txt=sourceText(e).replace(/^(hi|hello|dear)\s*\[[^\]]+\][,!.]?\s*/i,"");
- var sentences=txt.match(/[^.!?]+[.!?]+|[^.!?]+$/g)||[];
- var choices=sentences.map(function(x){return x.trim()}).filter(function(x){return x.length>=45&&x.length<=240&&!/thank you for being|partner marketing team|looking forward|your name|activate campaign now/i.test(x)});
- var candidate=choices.slice(0,2).join(" ");
- if(!candidate)candidate=txt.slice(0,260).replace(/\s+\S*$/,"");
- if(candidate.length>360)candidate=candidate.slice(0,355).replace(/\s+\S*$/,"")+"…";
- return candidate||"Review this email template and tailor it to your partner's current marketing priorities.";
-}
-function feed(url){return fetch(url+"?ts="+Date.now(),{cache:"no-store"}).then(function(r){if(!r.ok)throw Error("Unable to load "+url+" (HTTP "+r.status+")");return r.json()})}
-function refresh(){state.loading=true;$("count").textContent="Loading templates…";$("status").textContent="";Promise.all([feed("./pam-email-repository.json"),feed("./pam-uploaded-emails.json"),fetch("./pam-partner-submissions.json?ts="+Date.now(),{cache:"no-store"}).then(function(r){return r.ok?r.json():{emails:[]}}).catch(function(){return {emails:[]}})]).then(function(all){
- var seen=new Set(),merged=[];
- all.forEach(function(feedData){(feedData.emails||[]).forEach(function(e){if(!e||!e.id||!e.title||!e.subject||isLegacy(e)||seen.has(e.id))return;seen.add(e.id);merged.push(e)})});
- state.emails=merged.sort(function(a,b){return dateScore(b)-dateScore(a)||a.title.localeCompare(b.title)});
- state.selected.forEach(function(id){if(!seen.has(id))state.selected.delete(id)});
- var categories=[...new Set(merged.map(function(e){return e.category||"Other"}))].sort();
- var prev=$("category").value;$("category").replaceChildren(new Option("All categories",""));categories.forEach(function(c){$("category").add(new Option(c,c))});if(categories.includes(prev))$("category").value=prev;
- state.loading=false;applyEmbeddedDraft();render();
- }).catch(function(e){state.loading=false;$("count").textContent="Unable to load templates";$("status").textContent=e.message;$("status").className="status error"})}
-function visible(){var list=state.emails.slice();if($("filter").value==="recent")list=list.slice(0,state.recentLimit);
- var q=normalize($("search").value),category=$("category").value;
- return list.filter(function(e){return(!category||(e.category||"Other")===category)&&(!q||normalize([e.title,e.subject,e.category,e.objective].join(" ")).includes(q))})}
-function renderList(){var list=visible();$("emails").replaceChildren();list.forEach(function(e){
- var label=document.createElement("label");label.className="item";label.style.margin="0";var cb=document.createElement("input");cb.type="checkbox";cb.checked=state.selected.has(e.id);cb.setAttribute("aria-label","Announce "+e.title);cb.addEventListener("change",function(){cb.checked?state.selected.add(e.id):state.selected.delete(e.id);if(cb.checked&&!state.summaries[e.id])state.summaries[e.id]=summary(e);render()});
- var text=document.createElement("span"),strong=document.createElement("strong"),small=document.createElement("small");strong.textContent=e.title;small.textContent=(e.category||"Other")+(dateScore(e)?" · Source dated "+new Date(dateScore(e)).toLocaleDateString("en-US"):"");text.append(strong,small);label.append(cb,text);$("emails").append(label)});
- $("count").textContent=list.length+" displayed · "+state.selected.size+" selected · "+state.emails.length+" templates in library";
- if(!list.length){var blank=document.createElement("p");blank.className="hint";blank.style.padding="12px";blank.textContent="No matching templates. Try All templates or clear the search."; $("emails").append(blank)}
-}
-function selected(){return state.emails.filter(function(e){return state.selected.has(e.id)})}
-function renderSummaries(){var holder=$("summaries");holder.replaceChildren();selected().forEach(function(e){if(!state.summaries[e.id])state.summaries[e.id]=summary(e);
-var box=document.createElement("div");box.className="summaryitem";var t=document.createElement("strong");t.textContent=e.title;var ta=document.createElement("textarea");ta.value=state.summaries[e.id];ta.setAttribute("aria-label","Summary for "+e.title);ta.addEventListener("input",function(){state.summaries[e.id]=ta.value;renderPreview()});
-var a=document.createElement("a");a.href=safeLink(e.id);a.target="_blank";a.rel="noopener";a.textContent="Open actual template ↗";box.append(t,ta,a);holder.append(box)})}
-function node(tag,text){var e=document.createElement(tag);e.textContent=text;return e}
-function buildHTML(){var title=$("headline").value.trim()||"New PAM Email Templates";var intro=$("intro").value.trim();var closing=$("closing").value.trim();var style=$("style").value;
-var html='<section style="font-family:Arial,Helvetica,sans-serif;color:#232c34;font-size:15px;line-height:1.6">';
-html+='<p>'+escapeHTML(intro).replace(/\n/g,"<br>")+'</p>';
-selected().forEach(function(e){var url=safeLink(e.id);html+='<div style="border-top:1px solid #dce2e6;padding:16px 0"><h3 style="font-size:18px;margin:0 0 7px">'+escapeHTML(e.title)+'</h3>';
-html+='<p style="margin:0 0 10px">'+escapeHTML(state.summaries[e.id]||summary(e))+'</p>';
-html+='<p style="margin:0"><a href="'+escapeHTML(url)+'" style="color:#b00015;font-weight:bold">Open and personalize this email template</a></p></div>'});
-html+=linkedinSection();
-html+='<p style="margin:20px 0 12px">'+escapeHTML(closing).replace(/\n/g,"<br>")+'</p>';
-html+='<p><a href="'+escapeHTML(new URL(baseUrl,location.href).href)+'" style="color:#b00015;font-weight:bold">Browse all PAM-to-Partner email templates</a></p></section>';
-return html}
-function plain(){var s=$("headline").value+"\n\n"+$("intro").value+"\n\n";selected().forEach(function(e){s+=e.title+"\n"+(state.summaries[e.id]||summary(e))+"\n"+safeLink(e.id)+"\n\n"});if(linkedinLink())s+=($("linkedinLabel").value.trim()||"Amplify this message on LinkedIn")+"\nView and reshare: "+linkedinLink()+"\n\n";return s+$("closing").value+"\n\nBrowse all: "+new URL(baseUrl,location.href).href}
-function renderPreview(){invalidateEmbed();var target=$("preview");target.replaceChildren();var head=document.createElement("div");head.className="previewhead";head.append(node("span","PAM TO PARTNER COMMUNICATIONS"),node("h2",$("headline").value.trim()||"New PAM Email Templates"),node("p","Ready-to-personalize emails for your partner conversations"));
-var body=document.createElement("div");body.className="previewbody";body.append(node("p",$("intro").value));selected().forEach(function(e){var box=document.createElement("div");box.className="previewemail";box.append(node("h3",e.title),node("p",state.summaries[e.id]||summary(e)));var a=document.createElement("a");a.href=safeLink(e.id);a.target="_blank";a.rel="noopener";a.textContent="Open and personalize this email template ↗";box.append(a);body.append(box)});
-if(!selected().length)body.append(node("p","Select emails on the left to preview their summaries and direct template links."));
-if(linkedinLink()){var social=document.createElement("div");social.className="linkedinPreview";social.append(node("strong",$("linkedinLabel").value.trim()||"Amplify this message on LinkedIn"));var sp=document.createElement("p");sp.style.margin="7px 0 0";var sl=document.createElement("a");sl.href=linkedinLink();sl.target="_blank";sl.rel="noopener noreferrer";sl.textContent="View and reshare the LinkedIn post ↗";sp.append(sl);social.append(sp);body.append(social)}
-var foot=document.createElement("div");foot.className="foot";foot.append(node("p",$("closing").value));var a=document.createElement("a");a.href=new URL(baseUrl,location.href).href;a.target="_blank";a.rel="noopener";a.textContent="Browse all PAM-to-Partner email templates ↗";foot.append(a);body.append(foot);target.append(head,body);
-var ready=state.selected.size>0;$("copyRich").disabled=!ready;$("copyPlain").disabled=!ready;
-}
-function render(){try{renderList();renderSummaries();renderPreview()}catch(e){$("status").className="status error";$("status").textContent="Preview error: "+e.message;console.error("PAM Builder render",e)}}
-async function copyText(value){
-try{if(navigator.clipboard&&navigator.clipboard.writeText){await navigator.clipboard.writeText(value);$("status").className="status";$("status").textContent="Copied successfully.";return true}}catch(e){}
-try{var el=document.createElement("textarea");el.value=value;el.setAttribute("readonly","");el.style.cssText="position:fixed;top:0;left:0;width:1px;height:1px;opacity:.01";document.body.appendChild(el);el.focus();el.select();var ok=document.execCommand("copy");el.remove();if(ok){$("status").className="status";$("status").textContent="Copied successfully.";return true}}catch(e){}
-$("status").className="status error";$("status").textContent="SharePoint or your browser blocked clipboard access. Open the standalone builder, or select and copy from the generated text field.";return false
-}
-function downloadFile(name,body,type){var file=new Blob([body],{type:type}),url=URL.createObjectURL(file),a=document.createElement("a");a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(url)},1500)}
-function standalone(){return new URL("./pam-email-announcement-builder.html",location.href).href}
-$("search").addEventListener("input",renderList);$("filter").addEventListener("change",renderList);$("category").addEventListener("change",renderList);
-$("selectVisible").onclick=function(){visible().forEach(function(e){state.selected.add(e.id)});render()};
-$("clear").onclick=function(){state.selected.clear();render()};
+const $=id=>document.getElementById(id), HUB="./pam-email-hub.html";
+const state={emails:[],selected:new Set(),summaryEdits:{},ready:false};
+const params=new URLSearchParams(location.search);
+const embedMode=params.get("view")==="embed";
+if(embedMode)document.body.classList.add("embedded");
+let savedDraft=null;
+try{if(embedMode&&params.get("data"))savedDraft=JSON.parse(decodeURIComponent(escape(atob(params.get("data").replace(/-/g,"+").replace(/_/g,"/")))))}catch(e){console.warn("Could not read embedded draft",e)}
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const status=(msg,error=false)=>{$("status").textContent=msg;$("status").className="status builder-only"+(error?" error":"")};
+const link=id=>{const u=new URL(HUB,location.href);u.searchParams.set("email",id);return u.href};
+const allLink=()=>new URL(HUB,location.href).href;
+const isLegacy=e=>/^(DPAE|HCPO|CMR|CRMR)(?:\b|[\s·-])/i.test(e.title||"");
+function getDate(e){const d=e.addedDate||e.createdDate||e.createdAt;const n=Date.parse(d||"");if(Number.isFinite(n))return n;const m=String(e.id||"").match(/20\d{6}/);return m?Date.parse(m[0].slice(0,4)+"-"+m[0].slice(4,6)+"-"+m[0].slice(6,8))||0:0}
+function linkedIn(){const v=$("linkedinUrl").value.trim();if(!v)return "";try{const u=new URL(v);return u.protocol==="https:"&&/(^|\.)linkedin\.com$/i.test(u.hostname)&&/\/(posts|feed\/update|pulse)\//.test(u.pathname)?u.href:""}catch(e){return ""}}
+function extract(e){if(e.htmlBody){const d=new DOMParser().parseFromString(e.htmlBody,"text/html");d.querySelectorAll("script,style,head").forEach(x=>x.remove());return (d.body?.textContent||"").replace(/\s+/g," ").trim()}return String(e.body||"").replace(/\s+/g," ").trim()}
+function description(e){const raw=extract(e).replace(/^(Hi|Dear|Hello)\s*\[[^\]]+\],?\s*/i,"");const sentences=raw.match(/[^.!?]+[.!?]+|[^.!?]+$/g)||[];const parts=sentences.map(s=>s.trim()).filter(s=>s.length>=35&&s.length<=210&&!/thank you|partner marketing team|reply to this email|activate campaign now/i.test(s));let text=parts.slice(0,2).join(" ")||raw.slice(0,260);return text.length>320?text.slice(0,310).replace(/\s+\S*$/,"")+"…":text||"Open this ready-to-use partner email to review and personalize the message."}
+const selected=()=>state.emails.filter(e=>state.selected.has(e.id));
+const summary=e=>state.summaryEdits[e.id]??description(e);
+function headline(){return selected().length===1?"New Partner Email Available: "+selected()[0].title:"New PAM-to-Partner Emails Are Ready to Share"}
+function intro(){return selected().length===1?"A new ready-to-use partner email is available in the PAM Email Hub. This template helps you bring a relevant resource or opportunity to your partners. Open it, personalize the message and share it without starting from scratch.":"New ready-to-use partner emails are now available in the PAM Email Hub. Each template helps you engage partners around a relevant resource, campaign or opportunity. Open the emails below, personalize them and share with your partners."}
+function closing(){return "Choose an email that supports your partners' priorities, personalize it in the PAM Email Hub, and send it to your partners."}
+function syncDefaults(){if(savedDraft)return;$("headline").value=headline();$("intro").value=intro();$("closing").value=closing()}
+function article(){const chosen=selected(),li=linkedIn();let blocks=chosen.map(e=>({title:e.title,summary:summary(e),url:link(e.id)}));return {title:$("headline").value.trim()||headline(),intro:$("intro").value.trim()||intro(),closing:$("closing").value.trim()||closing(),blocks,linkedin:li}}
+function richBody(){const a=article();let h='<div style="font:15px/1.6 Arial,sans-serif;color:#253440"><p>'+esc(a.intro).replace(/\n/g,"<br>")+'</p>';for(const x of a.blocks){h+='<div style="padding:16px 0;border-top:1px solid #e0e5e9"><h3 style="font-size:17px;margin:0 0 8px">'+esc(x.title)+'</h3><p>'+esc(x.summary)+'</p><p><a href="'+esc(x.url)+'" style="color:#b00016;font-weight:bold">Open and personalize this email template</a></p></div>'}if(a.linkedin)h+='<p style="background:#f1f5fa;padding:14px"><a href="'+esc(a.linkedin)+'" style="font-weight:bold;color:#0a66c2">Share on your LinkedIn</a></p>';h+='<p>'+esc(a.closing).replace(/\n/g,"<br>")+'</p><p><a href="'+esc(allLink())+'" style="color:#b00016;font-weight:bold">Browse all PAM email templates</a></p></div>';return h}
+function textBody(){const a=article();return a.title+"\n\n"+a.intro+"\n\n"+a.blocks.map(x=>x.title+"\n"+x.summary+"\nOpen template: "+x.url).join("\n\n")+(a.linkedin?"\n\nShare on your LinkedIn: "+a.linkedin:"")+"\n\n"+a.closing+"\n\nBrowse all PAM email templates: "+allLink()}
+function renderPreview(){const a=article();const root=$("preview");root.replaceChildren();const head=document.createElement("div");head.className="preview-head";const kicker=document.createElement("small");kicker.textContent="NEW PAM EMAIL RESOURCES";const heading=document.createElement("h2");heading.textContent=a.title;const sub=document.createElement("p");sub.textContent="Ready-to-use messages to support your partner conversations";head.append(kicker,heading,sub);const body=document.createElement("div");body.className="preview-body";const introEl=document.createElement("p");introEl.textContent=a.intro;body.append(introEl);
+for(const b of a.blocks){const section=document.createElement("section");section.className="template-block";const h=document.createElement("h3");h.textContent=b.title;const p=document.createElement("p");p.textContent=b.summary;const l=document.createElement("a");l.href=b.url;l.target="_blank";l.rel="noopener noreferrer";l.textContent="Open and personalize this email template ↗";section.append(h,p,l);body.append(section)}
+if(!a.blocks.length){const empty=document.createElement("p");empty.className="muted";empty.textContent="Select an email template on the left to build your announcement.";body.append(empty)}
+if(a.linkedin){const social=document.createElement("div");social.className="social";const l=document.createElement("a");l.href=a.linkedin;l.target="_blank";l.rel="noopener noreferrer";l.textContent="Share on your LinkedIn ↗";social.append(l);body.append(social)}
+const outro=document.createElement("div");outro.className="outro";const p=document.createElement("p");p.textContent=a.closing;const all=document.createElement("a");all.href=allLink();all.target="_blank";all.rel="noopener noreferrer";all.textContent="Browse all PAM email templates ↗";outro.append(p,all);body.append(outro);root.append(head,body);
+["copyRich","copyPlain","downloadDraft","makeEmbed","copyEmbed","openEmbed"].forEach(id=>$(id).disabled=!a.blocks.length)}
+function update(){if(!savedDraft)syncDefaults();renderEdits();renderPreview();$("embedCode").value=""}
+function renderEdits(){const p=$("summaries");p.replaceChildren();selected().forEach(e=>{const row=document.createElement("div");row.className="summary-edit";const label=document.createElement("strong");label.textContent=e.title;const field=document.createElement("textarea");field.value=summary(e);field.setAttribute("aria-label","Edit description for "+e.title);field.addEventListener("input",()=>{state.summaryEdits[e.id]=field.value;renderPreview();$("embedCode").value=""});row.append(label,field);p.append(row)})}
+function visible(){const q=$("search").value.toLowerCase().trim(),cat=$("category").value;let arr=$("filter").value==="recent"?state.emails.slice(0,20):state.emails;return arr.filter(e=>(!cat||e.category===cat)&&(!q||[e.title,e.category,e.subject].join(" ").toLowerCase().includes(q)))}
+function renderChoices(){const list=visible(),root=$("emails");root.replaceChildren();for(const e of list){const label=document.createElement("label");label.className="email-choice";const cb=document.createElement("input");cb.type="checkbox";cb.checked=state.selected.has(e.id);cb.addEventListener("change",()=>{cb.checked?state.selected.add(e.id):state.selected.delete(e.id);update()});const span=document.createElement("span");const strong=document.createElement("strong");strong.textContent=e.title;const small=document.createElement("small");small.textContent=e.category||"Partner email";span.append(strong,small);label.append(cb,span);root.append(label)}$("count").textContent=list.length+" shown · "+state.selected.size+" selected · "+state.emails.length+" in Hub";if(!list.length)root.textContent="No matching templates. Try All templates."}
+async function fetchJson(p){const r=await fetch(p+"?v="+Date.now(),{cache:"no-store"});if(!r.ok)throw new Error("Could not load "+p);return r.json()}
+async function refresh(){status("");$("count").textContent="Loading emails…";try{const feeds=await Promise.all([fetchJson("./pam-email-repository.json"),fetchJson("./pam-uploaded-emails.json"),fetchJson("./pam-partner-submissions.json").catch(()=>({emails:[]}))]);const ids=new Set();state.emails=feeds.flatMap(f=>f.emails||[]).filter(e=>{if(!e.id||!e.subject||!e.title||isLegacy(e)||ids.has(e.id))return false;ids.add(e.id);return true}).sort((a,b)=>getDate(b)-getDate(a)||a.title.localeCompare(b.title));const old=$("category").value;const categories=[...new Set(state.emails.map(e=>e.category).filter(Boolean))].sort();$("category").replaceChildren(new Option("All categories",""));for(const x of categories)$("category").add(new Option(x,x));if(categories.includes(old))$("category").value=old;
+if(savedDraft){const ids=new Set(state.emails.map(e=>e.id));state.selected=new Set((savedDraft.ids||[]).filter(x=>ids.has(x)));state.summaryEdits=savedDraft.edits||{};for(const x of ["headline","intro","closing","linkedinUrl"])if(typeof savedDraft[x]==="string")$(x).value=savedDraft[x]}else{state.selected.forEach(x=>{if(!ids.has(x))state.selected.delete(x)})}
+state.ready=true;renderChoices();update();if(savedDraft)renderPreview()}catch(e){status("Unable to load email templates: "+e.message,true);$("count").textContent="Loading failed"}}
+async function copyText(s){try{await navigator.clipboard.writeText(s);status("Copied successfully");return true}catch(e){const t=$("embedCode");t.value=s;t.focus();t.select();status("Clipboard blocked in this browser. The content is selected below. Press Ctrl+C to copy.",true);return false}}
+function download(){const h='<!doctype html><html><head><meta charset="utf-8"><title>'+esc(article().title)+'</title></head><body>'+richBody()+'</body></html>';const blob=new Blob([h],{type:"text/html"}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="pam-email-announcement.html";document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);status("Downloaded the formatted announcement")}
+function encodeDraft(d){return btoa(unescape(encodeURIComponent(JSON.stringify(d)))).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/,"")}
+function embedURL(){const d={ids:[...state.selected],edits:Object.fromEntries(selected().map(e=>[e.id,state.summaryEdits[e.id]??description(e)])),headline:$("headline").value,intro:$("intro").value,closing:$("closing").value,linkedinUrl:$("linkedinUrl").value};const u=new URL(location.href);u.search="";u.hash="";u.searchParams.set("view","embed");u.searchParams.set("data",encodeDraft(d));return u.href}
+function iframe(){if(!selected().length){status("Select at least one email template first.",true);return ""}
+if($("linkedinUrl").value.trim()&&!linkedIn()){status("That does not look like a LinkedIn post URL. Please check the link.",true);return ""}
+const u=embedURL();if(u.length>12000){status("The embed is too long. Select fewer templates or shorten the optional descriptions.",true);return ""}
+const code='<iframe src="'+esc(u)+'" width="100%" height="1400" style="border:none;width:100%" loading="lazy" title="Hitachi Vantara PAM Email Announcement"></iframe>';$("embedCode").value=code;status("Embed generated. Copy the code below into a SharePoint web page Embed web part.");return code}
+function connect(){for(const id of ["headline","intro","closing","linkedinUrl"])$(id).addEventListener("input",()=>{renderPreview();$("embedCode").value=""});for(const id of ["filter","category"])$(id).addEventListener("change",renderChoices);$("search").addEventListener("input",renderChoices);
+$("selectVisible").onclick=()=>{visible().forEach(e=>state.selected.add(e.id));renderChoices();update()};
+$("clear").onclick=()=>{state.selected.clear();renderChoices();update()};
 $("reload").onclick=refresh;
-["headline","intro","closing","linkedinUrl","linkedinLabel"].forEach(function(id){$(id).addEventListener("input",renderPreview)});
-function validPublish(){if(!state.selected.size){$("status").className="status error";$("status").textContent="Select at least one email template first.";return false}if($("linkedinUrl").value.trim()&&!linkedinLink()){$("status").className="status error";$("status").textContent="Check the LinkedIn URL. Use an HTTPS LinkedIn posts or feed/update link.";return false}if(!$("reviewed").checked){$("status").className="status error";$("status").textContent="Review your announcement and check the confirmation box first.";return false}return true}
-function createEmbed(){if(!validPublish())return "";var url=embedUrl();if(url.length>16000){$("status").className="status error";$("status").textContent="This announcement contains too much text for a reliable iframe URL. Select fewer templates or shorten the summaries.";return ""}
-var iframe='<iframe src="'+escapeHTML(url)+'" width="100%" height="1400" style="border:0;width:100%;max-width:100%" loading="lazy" title="Hitachi Vantara PAM Email Announcement"></iframe>';
-$("embedCode").value=iframe;$("embedNote").textContent="Generated from the currently selected templates and edited copy. Use this iframe in a SharePoint web page Embed web part. After edits, generate again.";return iframe}
-$("makeEmbed").onclick=function(){if(createEmbed()){$("status").className="status";$("status").textContent="Embed code generated. Copy it and paste into your SharePoint web page Embed web part."}};
-$("copyEmbed").onclick=async function(){var code=$("embedCode").value||createEmbed();if(!code)return;var ok=await copyText(code);if(!ok){$("embedCode").focus();$("embedCode").select();$("status").textContent="Embed code selected. Press Ctrl+C to copy it, or open the standalone builder."}};
-$("openEmbed").onclick=function(){var code=$("embedCode").value||createEmbed();if(!code)return;var url=code.match(/src="([^"]+)"/);if(!url)return;var a=document.createElement("a");a.href=url[1].replace(/&amp;/g,"&");a.target="_blank";a.rel="noopener noreferrer";document.body.appendChild(a);a.click();a.remove();$("status").className="status";$("status").textContent="If the preview did not open, use the standalone builder. SharePoint may block popups."};
-$("style").onchange=function(){if($("style").value==="roundup"){$("headline").value="New PAM-to-Partner Email Templates Now Available";$("intro").value="Explore the latest ready-to-use email templates in the PAM Email Hub. Select an email, personalize it for your partner, and send using your preferred option.";$("closing").value="Use the direct links above to open the templates, or browse the full email library."}else{$("headline").value="New Partner Email Templates to Help You Engage Customers";$("intro").value="New ready-to-use PAM-to-partner emails are available in the PAM Email Hub. Pick a message relevant to your partners, personalize it, and send it using your preferred email option. You do not need to create the communication from scratch.";$("closing").value="Choose a template above, tailor the message to your partner, and use it to start a relevant conversation."}renderPreview()};
-$("copyTitle").onclick=function(){copyText($("headline").value)};
-$("copyPlain").onclick=function(){if(!state.selected.size){$("status").textContent="Select at least one template before copying the announcement.";return}copyText(plain())};
-$("downloadDraft").onclick=function(){if(!validPublish())return;downloadFile("pam-email-news-announcement.html","<!doctype html><meta charset=utf-8><title>"+escapeHTML($("headline").value)+"</title>"+buildHTML(),"text/html;charset=utf-8");$("status").className="status";$("status").textContent="Announcement HTML downloaded. Use it for reference and paste the native text/links into SharePoint."};
-$("copyRich").onclick=async function(){if(!validPublish())return;if(!navigator.clipboard||!navigator.clipboard.write||typeof ClipboardItem==="undefined"){$("status").className="status error";$("status").textContent="Formatted clipboard is unavailable. Use desktop Chrome or Edge over HTTPS, or Copy plain text.";return}try{await navigator.clipboard.write([new ClipboardItem({"text/html":new Blob([buildHTML()],{type:"text/html"}),"text/plain":new Blob([plain()],{type:"text/plain"})})]);$("status").className="status";$("status").textContent="Formatted announcement copied. Paste into a native SharePoint Text web part, check all links, then publish."}catch(e){$("status").className="status error";$("status").textContent="Could not copy formatted content: "+e.message}};
-$("openSP").onclick=function(){var a=document.createElement("a");a.href="https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23";a.target="_blank";a.rel="noopener noreferrer";document.body.appendChild(a);a.click();a.remove();$("status").className="status";$("status").textContent="If SharePoint did not open, use the SharePoint link above. Some embeds block new tabs."};
-window.addEventListener("error",function(event){var status=$("status");if(status){status.className="status error";status.textContent="Builder error: "+(event.message||"Unknown error")+". Open the builder in its own tab or reload."}});
-window.addEventListener("unhandledrejection",function(event){var status=$("status");if(status){status.className="status error";status.textContent="Builder loading error: "+(event.reason&&event.reason.message||"Unexpected error")+". Try Refresh templates."}});
-$("standaloneLink").href=standalone();
-refresh();
+$("copyTitle").onclick=()=>copyText(article().title);
+$("copyPlain").onclick=()=>{if(selected().length)copyText(textBody())};
+$("copyRich").onclick=async()=>{if(!selected().length)return;try{if(!navigator.clipboard?.write||typeof ClipboardItem==="undefined")throw Error("Rich clipboard not supported");await navigator.clipboard.write([new ClipboardItem({"text/html":new Blob([richBody()],{type:"text/html"}),"text/plain":new Blob([textBody()],{type:"text/plain"})})]);status("Formatted article copied. Paste into the SharePoint news template.")}catch(e){status("Formatted copy was blocked. Open the builder in its own tab, or use Download HTML.",true)}};
+$("downloadDraft").onclick=()=>{if(selected().length)download()};
+$("makeEmbed").onclick=iframe;
+$("copyEmbed").onclick=()=>{const code=$("embedCode").value||iframe();if(code)copyText(code)};
+$("openEmbed").onclick=()=>{if(!selected().length)return;const code=$("embedCode").value||iframe();if(code){const u=embedURL();const a=document.createElement("a");a.href=u;a.target="_blank";a.rel="noopener noreferrer";document.body.append(a);a.click();a.remove();status("Opened the announcement preview in a new tab. If blocked, open the builder outside SharePoint.")}}}
+window.addEventListener("error",e=>status("Builder error: "+e.message,true));
+connect();refresh();
 })();
-</script>
-</body></html>
+</script></body></html>
