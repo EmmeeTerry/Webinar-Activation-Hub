@@ -38,8 +38,8 @@ body.embedded{background:#fff}body.embedded header,body.embedded .links,body.emb
 <div class="section"><h2>3. Is there a LinkedIn post to share?</h2><p class="muted">Optional. Add a link to an approved LinkedIn post. We'll automatically add “Share on your LinkedIn” to the announcement.</p>
 <label for="linkedinUrl">LinkedIn post URL (optional)</label><input id="linkedinUrl" type="url" placeholder="https://www.linkedin.com/posts/...">
 </div>
-<details><summary>Optional: Edit the announcement text</summary>
-<p>The article is written automatically from the selected email resources. You can optionally fine-tune its headline, opening and closing text.</p>
+<details><summary>Edit article wording (optional)</summary>
+<p>The article is generated for you. If needed, edit the headline, introduction, partner benefits, PAM instructions or closing below. Changes appear immediately in the preview and are included in the copied post and embed.</p>
 <label for="headline">Headline</label><input id="headline" value="New PAM-to-Partner Emails Are Ready to Share">
 <label for="intro">Introduction</label><textarea id="intro">We've added ready-to-share partner emails to the PAM Email Hub. Each template helps you introduce a useful resource or opportunity to partners without writing from scratch. Explore what's available and open the emails below.</textarea>
 <label for="closing">Final next step</label><textarea id="closing">Choose an email that fits your partners' priorities, personalize it in the PAM Email Hub and share it with your partners.</textarea>
@@ -71,7 +71,7 @@ body.embedded{background:#fff}body.embedded header,body.embedded .links,body.emb
 (function(){
 "use strict";
 const $=id=>document.getElementById(id), HUB="./pam-email-hub.html";
-const state={emails:[],selected:new Set(),summaryEdits:{},ready:false};
+const state={emails:[],selected:new Set(),summaryEdits:{},sectionEdits:{},ready:false};
 const params=new URLSearchParams(location.search);
 const embedMode=params.get("view")==="embed";
 if(embedMode)document.body.classList.add("embedded");
@@ -137,50 +137,58 @@ function featuredLinks(){
  return pairs.map(([label,raw])=>{try{const u=new URL(raw.trim());if(u.protocol!=="https:")return null;return {label:label.trim()||"Explore resource",url:u.href}}catch(e){return null}}).filter(Boolean);
 }
 function syncDefaults(){if(savedDraft)return;$("headline").value=headline();$("intro").value=intro();$("closing").value=closing();featuredDefaults()}
-function article(){return {title:$("headline").value.trim()||headline(),intro:$("intro").value.trim()||intro(),closing:$("closing").value.trim()||closing(),blocks:selected().map(e=>({title:newsName(e),url:link(e.id),...guidance(e)})),featured:featuredLinks(),linkedin:linkedIn()}}
+function article(){return {title:$("headline").value.trim()||headline(),intro:$("intro").value.trim()||intro(),closing:$("closing").value.trim()||closing(),blocks:selected().map(e=>({title:newsName(e),url:link(e.id),...guidance(e),...state.sectionEdits[e.id]})),featured:featuredLinks(),linkedin:linkedIn()}}
 function richBody(){const a=article();let h='<div style="font:15px/1.65 Arial,sans-serif;color:#253440"><p>'+esc(a.intro).replace(/\n/g,"<br>")+'</p>';
  for(const x of a.blocks){
   h+='<section style="padding:20px 0;border-top:1px solid #e0e5e9"><h2 style="font-size:21px;color:#263746">'+esc(x.title)+'</h2>';
-  h+='<h3 style="font-size:16px;color:#b50016">Why partners should care</h3><p>'+esc(x.why)+'</p>';
+  h+='<p style="font-size:15px;color:#253440;margin:9px 0 16px">'+esc(x.why)+'</p>';
   h+='<h3 style="font-size:16px;color:#b50016">What\'s in it for partners</h3><p>'+esc(x.share)+'</p>';
   if(x.points.length)h+='<ul>'+x.points.map(z=>'<li>'+esc(z)+'</li>').join("")+'</ul>';
   h+='<h3 style="font-size:16px;color:#b50016">What PAMs should do</h3><p>'+esc(x.action)+'</p>';
-  h+='<p style="margin:20px 0"><a href="'+esc(x.url)+'" style="display:inline-block;background:#ce0013;color:#fff;padding:14px 22px;text-decoration:none;font-weight:bold">Open the PAM-to-Partner Email</a></p>';
+  h+='<p style="margin:20px 0 8px"><a href="'+esc(x.url)+'" style="display:inline-block;background:#ce0013;color:#fff;padding:14px 22px;text-decoration:none;font-weight:bold">Open the PAM-to-Partner Email</a></p>';
+  if(a.linkedin&&x===a.blocks[0])h+='<p style="margin:6px 0 18px"><a href="'+esc(a.linkedin)+'" style="color:#0a66c2;font-weight:bold;text-decoration:underline">Share on your LinkedIn</a></p>';
   h+='</section>';
  }
  const more=[...a.featured,...a.blocks.flatMap(x=>x.resources)].filter((x,i,all)=>all.findIndex(y=>y.url===x.url)===i);
  if(more.length){h+='<section style="border-top:1px solid #e0e5e9;padding:18px 0"><h2 style="font-size:16px;color:#263746;margin:0 0 10px">Additional resources</h2>';more.forEach(x=>{h+='<p style="margin:7px 0"><a href="'+esc(x.url)+'" style="color:#a90015;text-decoration:underline;font-weight:600">'+esc(x.label)+'</a></p>'});h+='</section>'}
- if(a.linkedin)h+='<p style="padding:14px;background:#f0f5fa"><a href="'+esc(a.linkedin)+'" style="color:#0a66c2;font-weight:bold">Share on your LinkedIn</a></p>';
+
  h+='<p style="font-size:13px;color:#5c6972;margin-top:20px">'+esc(a.closing)+'</p></div>';return h
 }
-function textBody(){const a=article();const extras=[...a.featured,...a.blocks.flatMap(x=>x.resources)].filter((x,i,all)=>all.findIndex(y=>y.url===x.url)===i);return a.title+"\n\n"+a.intro+"\n\n"+a.blocks.map(x=>x.title+"\n\nWhy partners should care\n"+x.why+"\n\nWhat's in it for partners\n"+x.share+(x.points.length?"\n"+x.points.map(z=>"- "+z).join("\n"):"")+"\n\nWhat PAMs should do\n"+x.action+"\n\nOpen the PAM-to-Partner Email: "+x.url).join("\n\n")+(extras.length?"\n\nAdditional resources\n"+extras.map(x=>x.label+": "+x.url).join("\n"):"")+(a.linkedin?"\n\nShare on your LinkedIn: "+a.linkedin:"")+"\n\n"+a.closing}
+function textBody(){const a=article();const extras=[...a.featured,...a.blocks.flatMap(x=>x.resources)].filter((x,i,all)=>all.findIndex(y=>y.url===x.url)===i);return a.title+"\n\n"+a.intro+"\n\n"+a.blocks.map(x=>x.title+"\n\n"+x.why+"\n\nWhat's in it for partners\n"+x.share+(x.points.length?"\n"+x.points.map(z=>"- "+z).join("\n"):"")+"\n\nWhat PAMs should do\n"+x.action+"\n\nOpen the PAM-to-Partner Email: "+x.url+(a.linkedin&&x===a.blocks[0]?"\nShare on your LinkedIn: "+a.linkedin:"")).join("\n\n")+(extras.length?"\n\nAdditional resources\n"+extras.map(x=>x.label+": "+x.url).join("\n"):"")+"\n\n"+a.closing}
 function renderPreview(){const a=article(),root=$("preview");root.replaceChildren();const head=document.createElement("div");head.className="preview-head";const kicker=document.createElement("small");kicker.textContent="PARTNER NEWS / PAM ACTIVATION";const heading=document.createElement("h2");heading.textContent=a.title;const sub=document.createElement("p");sub.textContent="What partners need to know and how PAMs can help";head.append(kicker,heading,sub);
  const body=document.createElement("div");body.className="preview-body";const opening=document.createElement("p");opening.textContent=a.intro;body.append(opening);
  for(const b of a.blocks){const section=document.createElement("section");section.className="template-block";const h=document.createElement("h3");h.textContent=b.title;section.append(h);
  const row=(title,copy)=>{const heading=document.createElement("h4");heading.style.cssText="color:#b00015;font-size:14px;margin:14px 0 5px";heading.textContent=title;const p=document.createElement("p");p.textContent=copy;section.append(heading,p)};
- row("Why partners should care",b.why);row("What's in it for partners",b.share);
+ const lead=document.createElement("p");lead.style.cssText="font-size:14px;line-height:1.65;margin:10px 0 16px";lead.textContent=b.why;section.append(lead);row("What's in it for partners",b.share);
  if(b.points.length){const ul=document.createElement("ul");ul.style.cssText="font-size:13px;color:#526271;padding-left:21px";b.points.forEach(s=>{const li=document.createElement("li");li.textContent=s;ul.append(li)});section.append(ul)}
  row("What PAMs should do",b.action);const cta=document.createElement("a");cta.href=b.url;cta.target="_blank";cta.rel="noopener noreferrer";cta.className="article-cta";cta.textContent="Open the PAM-to-Partner Email ↗";section.append(cta);
+ if(a.linkedin&&b===a.blocks[0]){const social=document.createElement("p");social.style.cssText="margin:6px 0 12px";const l=document.createElement("a");l.href=a.linkedin;l.target="_blank";l.rel="noopener noreferrer";l.textContent="Share on your LinkedIn ↗";l.style.color="#0a66c2";social.append(l);section.append(social)}
  body.append(section)}
  if(!a.blocks.length){const empty=document.createElement("p");empty.textContent="Select an email to build the partner news and PAM activation article.";body.append(empty)}
  const extras=[...a.featured,...a.blocks.flatMap(x=>x.resources)].filter((x,i,all)=>all.findIndex(y=>y.url===x.url)===i);
  if(extras.length){const sec=document.createElement("section");sec.className="featured-links";const heading=document.createElement("h3");heading.textContent="Additional resources";sec.append(heading);extras.forEach(x=>{const p=document.createElement("p");const link=document.createElement("a");link.href=x.url;link.target="_blank";link.rel="noopener noreferrer";link.textContent=x.label+" ↗";p.append(link);sec.append(p)});body.append(sec)}
- if(a.linkedin){const social=document.createElement("div");social.className="social";const l=document.createElement("a");l.href=a.linkedin;l.target="_blank";l.rel="noopener noreferrer";l.textContent="Share on your LinkedIn ↗";social.append(l);body.append(social)}
+
  if(a.blocks.length){const foot=document.createElement("p");foot.style.cssText="font-size:12px;color:#65717b;border-top:1px solid #e2e7eb;padding-top:14px;margin-top:20px";foot.textContent=a.closing;body.append(foot)}
  root.append(head,body);["copyRich","copyPlain","downloadDraft","makeEmbed","copyEmbed","openEmbed"].forEach(id=>$(id).disabled=!a.blocks.length)
 }
 function update(){if(!savedDraft)syncDefaults();renderEdits();renderPreview();$("embedCode").value=""}
-function renderEdits(){const p=$("summaries");p.replaceChildren();selected().forEach(e=>{const row=document.createElement("div");row.className="summary-edit";const label=document.createElement("strong");label.textContent=e.title;const field=document.createElement("textarea");field.value=summary(e);field.setAttribute("aria-label","Edit description for "+e.title);field.addEventListener("input",()=>{state.summaryEdits[e.id]=field.value;renderPreview();$("embedCode").value=""});row.append(label,field);p.append(row)})}
+function renderEdits(){const root=$("summaries");root.replaceChildren();selected().forEach(e=>{
+ const defaults=guidance(e),edits=state.sectionEdits[e.id]||{},block=document.createElement("div");block.className="summary-edit";
+ const title=document.createElement("strong");title.textContent=newsName(e);block.append(title);
+ const fields=[["why","Lead paragraph (no heading)"],["share","What's in it for partners"],["action","What PAMs should do"]];
+ fields.forEach(([key,label])=>{const fieldLabel=document.createElement("label");fieldLabel.textContent=label;const ta=document.createElement("textarea");ta.value=edits[key]??defaults[key];ta.setAttribute("aria-label",label+" for "+e.title);ta.style.minHeight="115px";ta.addEventListener("input",()=>{state.sectionEdits[e.id]??={};state.sectionEdits[e.id][key]=ta.value;renderPreview();$("embedCode").value=""});block.append(fieldLabel,ta)});
+ root.append(block)
+})}
 function visible(){const q=$("search").value.toLowerCase().trim(),cat=$("category").value;let arr=$("filter").value==="recent"?state.emails.slice(0,20):state.emails;return arr.filter(e=>(!cat||e.category===cat)&&(!q||[e.title,e.category,e.subject].join(" ").toLowerCase().includes(q)))}
 function renderChoices(){const list=visible(),root=$("emails");root.replaceChildren();for(const e of list){const label=document.createElement("label");label.className="email-choice";const cb=document.createElement("input");cb.type="checkbox";cb.checked=state.selected.has(e.id);cb.addEventListener("change",()=>{cb.checked?state.selected.add(e.id):state.selected.delete(e.id);update()});const span=document.createElement("span");const strong=document.createElement("strong");strong.textContent=e.title;const small=document.createElement("small");small.textContent=e.category||"Partner email";span.append(strong,small);label.append(cb,span);root.append(label)}$("count").textContent=list.length+" shown · "+state.selected.size+" selected · "+state.emails.length+" in Hub";if(!list.length)root.textContent="No matching templates. Try All templates."}
 async function fetchJson(p){const r=await fetch(p+"?v="+Date.now(),{cache:"no-store"});if(!r.ok)throw new Error("Could not load "+p);return r.json()}
 async function refresh(){status("");$("count").textContent="Loading emails…";try{const feeds=await Promise.all([fetchJson("./pam-email-repository.json"),fetchJson("./pam-uploaded-emails.json"),fetchJson("./pam-partner-submissions.json").catch(()=>({emails:[]}))]);const ids=new Set();state.emails=feeds.flatMap(f=>f.emails||[]).filter(e=>{if(!e.id||!e.subject||!e.title||isLegacy(e)||ids.has(e.id))return false;ids.add(e.id);return true}).sort((a,b)=>getDate(b)-getDate(a)||a.title.localeCompare(b.title));const old=$("category").value;const categories=[...new Set(state.emails.map(e=>e.category).filter(Boolean))].sort();$("category").replaceChildren(new Option("All categories",""));for(const x of categories)$("category").add(new Option(x,x));if(categories.includes(old))$("category").value=old;
-if(savedDraft){const ids=new Set(state.emails.map(e=>e.id));state.selected=new Set((savedDraft.ids||[]).filter(x=>ids.has(x)));state.summaryEdits=savedDraft.edits||{};for(const x of ["headline","intro","closing","linkedinUrl","featuredLabel1","featuredUrl1","featuredLabel2","featuredUrl2"])if(typeof savedDraft[x]==="string")$(x).value=savedDraft[x]}else{state.selected.forEach(x=>{if(!ids.has(x))state.selected.delete(x)})}
+if(savedDraft){const ids=new Set(state.emails.map(e=>e.id));state.selected=new Set((savedDraft.ids||[]).filter(x=>ids.has(x)));state.summaryEdits=savedDraft.edits||{};state.sectionEdits=savedDraft.sections||{};for(const x of ["headline","intro","closing","linkedinUrl","featuredLabel1","featuredUrl1","featuredLabel2","featuredUrl2"])if(typeof savedDraft[x]==="string")$(x).value=savedDraft[x]}else{state.selected.forEach(x=>{if(!ids.has(x))state.selected.delete(x)})}
 state.ready=true;renderChoices();update();if(savedDraft)renderPreview()}catch(e){status("Unable to load email templates: "+e.message,true);$("count").textContent="Loading failed"}}
 async function copyText(s){try{await navigator.clipboard.writeText(s);status("Copied successfully");return true}catch(e){const t=$("embedCode");t.value=s;t.focus();t.select();status("Clipboard blocked in this browser. The content is selected below. Press Ctrl+C to copy.",true);return false}}
 function download(){const h='<!doctype html><html><head><meta charset="utf-8"><title>'+esc(article().title)+'</title></head><body>'+richBody()+'</body></html>';const blob=new Blob([h],{type:"text/html"}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="pam-email-announcement.html";document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);status("Downloaded the formatted announcement")}
 function encodeDraft(d){return btoa(unescape(encodeURIComponent(JSON.stringify(d)))).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/,"")}
-function embedURL(){const d={ids:[...state.selected],edits:Object.fromEntries(selected().map(e=>[e.id,state.summaryEdits[e.id]??description(e)])),headline:$("headline").value,intro:$("intro").value,closing:$("closing").value,linkedinUrl:$("linkedinUrl").value,featuredLabel1:$("featuredLabel1").value,featuredUrl1:$("featuredUrl1").value,featuredLabel2:$("featuredLabel2").value,featuredUrl2:$("featuredUrl2").value};const u=new URL(location.href);u.search="";u.hash="";u.searchParams.set("view","embed");u.searchParams.set("data",encodeDraft(d));return u.href}
+function embedURL(){const d={ids:[...state.selected],edits:Object.fromEntries(selected().map(e=>[e.id,state.summaryEdits[e.id]??description(e)])),sections:Object.fromEntries(selected().map(e=>[e.id,state.sectionEdits[e.id]||{}])),headline:$("headline").value,intro:$("intro").value,closing:$("closing").value,linkedinUrl:$("linkedinUrl").value,featuredLabel1:$("featuredLabel1").value,featuredUrl1:$("featuredUrl1").value,featuredLabel2:$("featuredLabel2").value,featuredUrl2:$("featuredUrl2").value};const u=new URL(location.href);u.search="";u.hash="";u.searchParams.set("view","embed");u.searchParams.set("data",encodeDraft(d));return u.href}
 function iframe(){if(!selected().length){status("Select at least one email template first.",true);return ""}
 if($("linkedinUrl").value.trim()&&!linkedIn()){status("That does not look like a LinkedIn post URL. Please check the link.",true);return ""}
 const u=embedURL();if(u.length>12000){status("The embed is too long. Select fewer templates or shorten the optional descriptions.",true);return ""}
