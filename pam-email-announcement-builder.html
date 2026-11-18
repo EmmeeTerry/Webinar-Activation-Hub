@@ -14,7 +14,7 @@
 <body>
 <header><div class="eyebrow">HITACHI VANTARA / PARTNER PROGRAMS</div><h1>PAM Email Announcement Builder</h1><p>Turn existing partner email templates into a SharePoint news post. One source of truth, no copied resource cards.</p></header>
 <main>
-<div class="toplinks"><a href="./pam-email-hub.html" target="_blank" rel="noopener">Open PAM Email Hub ↗</a><a href="https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23" target="_blank" rel="noopener">Open SharePoint communications site ↗</a></div>
+<div class="toplinks"><a href="./pam-email-announcement-builder.html" target="_blank" rel="noopener" id="standaloneLink"><strong>Open builder in its own browser tab ↗</strong></a><a href="./pam-email-hub.html" target="_blank" rel="noopener">Open PAM Email Hub ↗</a><a href="https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23" target="_blank" rel="noopener">Open SharePoint communications site ↗</a></div>
 <details class="howto" open><summary>How to use this builder (start here)</summary>
 <ol>
 <li><strong>Select the email templates</strong> you want to announce. Use Recently added or All templates. Avoid selecting an entire large batch if the announcement would become overwhelming.</li>
@@ -47,8 +47,8 @@
 </section>
 <section class="panel outputPanel">
 <h2>SharePoint news preview</h2><p class="hint">This is the native news/email layout. No iframe or screenshots are required.</p>
-<div class="actions publishTools"><button id="copyTitle" type="button">Copy title</button><button id="copyRich" type="button">Copy formatted body</button><button id="copyPlain" type="button" class="secondary">Copy plain text</button><button id="openSP" type="button" class="secondary">Open SharePoint</button></div>
-<p class="status builderStatus" id="status" role="status" aria-live="polite"></p>
+<div class="actions publishTools"><button id="copyTitle" type="button">Copy title</button><button id="copyRich" type="button">Copy formatted body</button><button id="copyPlain" type="button" class="secondary">Copy plain text</button><button id="downloadDraft" type="button" class="secondary">Download announcement (.html)</button><button id="openSP" type="button" class="secondary">Open SharePoint</button></div>
+<p class="status builderStatus" id="status" role="status" aria-live="polite"></p><p class="hint publishTools" id="copyHelp">If SharePoint blocks copying or opening a new tab, use <strong>Open builder in its own browser tab</strong> above. The builder can also provide a downloadable announcement file.</p>
 <div id="preview" class="preview" aria-label="News article preview"></div>
 <details class="howto publishTools"><summary>Optional: Embed the branded announcement on a SharePoint web page</summary>
 <p class="hint">Only for SharePoint <strong>web pages</strong>, not emailed news. This creates a live iframe displaying the announcement you reviewed. The link references the current PAM templates, so their content is not duplicated.</p>
@@ -133,8 +133,14 @@ if(linkedinLink()){var social=document.createElement("div");social.className="li
 var foot=document.createElement("div");foot.className="foot";foot.append(node("p",$("closing").value));var a=document.createElement("a");a.href=new URL(baseUrl,location.href).href;a.target="_blank";a.rel="noopener";a.textContent="Browse all PAM-to-Partner email templates ↗";foot.append(a);body.append(foot);target.append(head,body);
 var ready=state.selected.size>0;$("copyRich").disabled=!ready;$("copyPlain").disabled=!ready;
 }
-function render(){renderList();renderSummaries();renderPreview()}
-async function copyText(value){try{await navigator.clipboard.writeText(value);$("status").className="status";$("status").textContent="Copied. Paste into the SharePoint news editor."}catch(e){$("status").className="status error";$("status").textContent="Clipboard access unavailable. Open this builder in a standalone HTTPS browser tab."}}
+function render(){try{renderList();renderSummaries();renderPreview()}catch(e){$("status").className="status error";$("status").textContent="Preview error: "+e.message;console.error("PAM Builder render",e)}}
+async function copyText(value){
+try{if(navigator.clipboard&&navigator.clipboard.writeText){await navigator.clipboard.writeText(value);$("status").className="status";$("status").textContent="Copied successfully.";return true}}catch(e){}
+try{var el=document.createElement("textarea");el.value=value;el.setAttribute("readonly","");el.style.cssText="position:fixed;top:0;left:0;width:1px;height:1px;opacity:.01";document.body.appendChild(el);el.focus();el.select();var ok=document.execCommand("copy");el.remove();if(ok){$("status").className="status";$("status").textContent="Copied successfully.";return true}}catch(e){}
+$("status").className="status error";$("status").textContent="SharePoint or your browser blocked clipboard access. Open the standalone builder, or select and copy from the generated text field.";return false
+}
+function downloadFile(name,body,type){var file=new Blob([body],{type:type}),url=URL.createObjectURL(file),a=document.createElement("a");a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(url)},1500)}
+function standalone(){return new URL("./pam-email-announcement-builder.html",location.href).href}
 $("search").addEventListener("input",renderList);$("filter").addEventListener("change",renderList);$("category").addEventListener("change",renderList);
 $("selectVisible").onclick=function(){visible().forEach(function(e){state.selected.add(e.id)});render()};
 $("clear").onclick=function(){state.selected.clear();render()};
@@ -145,13 +151,17 @@ function createEmbed(){if(!validPublish())return "";var url=embedUrl();if(url.le
 var iframe='<iframe src="'+escapeHTML(url)+'" width="100%" height="1400" style="border:0;width:100%;max-width:100%" loading="lazy" title="Hitachi Vantara PAM Email Announcement"></iframe>';
 $("embedCode").value=iframe;$("embedNote").textContent="Generated from the currently selected templates and edited copy. Use this iframe in a SharePoint web page Embed web part. After edits, generate again.";return iframe}
 $("makeEmbed").onclick=function(){if(createEmbed()){$("status").className="status";$("status").textContent="Embed code generated. Copy it and paste into your SharePoint web page Embed web part."}};
-$("copyEmbed").onclick=async function(){var code=$("embedCode").value||createEmbed();if(!code)return;try{await navigator.clipboard.writeText(code);$("status").className="status";$("status").textContent="Embed code copied. Add it to a SharePoint web page using an Embed web part. Do not use it for emailed news."}catch(e){$("status").className="status error";$("status").textContent="Could not copy the embed. Select the generated code in the box and copy it manually."}};
-$("openEmbed").onclick=function(){var code=$("embedCode").value||createEmbed();if(!code)return;var url=code.match(/src="([^"]+)"/);if(url)window.open(url[1].replace(/&amp;/g,"&"),"_blank","noopener")};
+$("copyEmbed").onclick=async function(){var code=$("embedCode").value||createEmbed();if(!code)return;var ok=await copyText(code);if(!ok){$("embedCode").focus();$("embedCode").select();$("status").textContent="Embed code selected. Press Ctrl+C to copy it, or open the standalone builder."}};
+$("openEmbed").onclick=function(){var code=$("embedCode").value||createEmbed();if(!code)return;var url=code.match(/src="([^"]+)"/);if(!url)return;var a=document.createElement("a");a.href=url[1].replace(/&amp;/g,"&");a.target="_blank";a.rel="noopener noreferrer";document.body.appendChild(a);a.click();a.remove();$("status").className="status";$("status").textContent="If the preview did not open, use the standalone builder. SharePoint may block popups."};
 $("style").onchange=function(){if($("style").value==="roundup"){$("headline").value="New PAM-to-Partner Email Templates Now Available";$("intro").value="Explore the latest ready-to-use email templates in the PAM Email Hub. Select an email, personalize it for your partner, and send using your preferred option.";$("closing").value="Use the direct links above to open the templates, or browse the full email library."}else{$("headline").value="New Partner Email Templates to Help You Engage Customers";$("intro").value="New ready-to-use PAM-to-partner emails are available in the PAM Email Hub. Pick a message relevant to your partners, personalize it, and send it using your preferred email option. You do not need to create the communication from scratch.";$("closing").value="Choose a template above, tailor the message to your partner, and use it to start a relevant conversation."}renderPreview()};
 $("copyTitle").onclick=function(){copyText($("headline").value)};
-$("copyPlain").onclick=function(){copyText(plain())};
+$("copyPlain").onclick=function(){if(!state.selected.size){$("status").textContent="Select at least one template before copying the announcement.";return}copyText(plain())};
+$("downloadDraft").onclick=function(){if(!validPublish())return;downloadFile("pam-email-news-announcement.html","<!doctype html><meta charset=utf-8><title>"+escapeHTML($("headline").value)+"</title>"+buildHTML(),"text/html;charset=utf-8");$("status").className="status";$("status").textContent="Announcement HTML downloaded. Use it for reference and paste the native text/links into SharePoint."};
 $("copyRich").onclick=async function(){if(!validPublish())return;if(!navigator.clipboard||!navigator.clipboard.write||typeof ClipboardItem==="undefined"){$("status").className="status error";$("status").textContent="Formatted clipboard is unavailable. Use desktop Chrome or Edge over HTTPS, or Copy plain text.";return}try{await navigator.clipboard.write([new ClipboardItem({"text/html":new Blob([buildHTML()],{type:"text/html"}),"text/plain":new Blob([plain()],{type:"text/plain"})})]);$("status").className="status";$("status").textContent="Formatted announcement copied. Paste into a native SharePoint Text web part, check all links, then publish."}catch(e){$("status").className="status error";$("status").textContent="Could not copy formatted content: "+e.message}};
-$("openSP").onclick=function(){window.open("https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23","_blank","noopener")};
+$("openSP").onclick=function(){var a=document.createElement("a");a.href="https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23";a.target="_blank";a.rel="noopener noreferrer";document.body.appendChild(a);a.click();a.remove();$("status").className="status";$("status").textContent="If SharePoint did not open, use the SharePoint link above. Some embeds block new tabs."};
+window.addEventListener("error",function(event){var status=$("status");if(status){status.className="status error";status.textContent="Builder error: "+(event.message||"Unknown error")+". Open the builder in its own tab or reload."}});
+window.addEventListener("unhandledrejection",function(event){var status=$("status");if(status){status.className="status error";status.textContent="Builder loading error: "+(event.reason&&event.reason.message||"Unexpected error")+". Try Refresh templates."}});
+$("standaloneLink").href=standalone();
 refresh();
 })();
 </script>
