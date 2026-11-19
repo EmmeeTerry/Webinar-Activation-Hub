@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-11-19T00:35:20.666176+00:00",
+  "lastRefreshed": "2026-11-19T10:32:50.919900+00:00",
   "items": [
     {
       "id": "10-reasons-to-buy-build-or-borrow-ai-implementation-ebook-1",
@@ -4543,7 +4543,7 @@
       "ownerIndividual": "Angela Romberg, Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "",
-      "actionRequired": "Add customer-facing URL",
+      "actionRequired": "",
       "abstract": "",
       "webinarImage": null,
       "approvedNewsImageUrl": null,
@@ -4554,7 +4554,7 @@
       "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q3",
-      "issueType": "; No URL"
+      "issueType": ""
     },
     {
       "id": "government-agency-transforms-operations-with-flexible-all-in-one-hybrid-cloud-solution-bre-101",
