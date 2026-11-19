@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-11-18T17:23:57.564590+00:00",
+  "lastRefreshed": "2026-11-19T00:35:20.666176+00:00",
   "items": [
     {
       "id": "10-reasons-to-buy-build-or-borrow-ai-implementation-ebook-1",
@@ -147,7 +147,7 @@
       "newsPublishedUrl": null,
       "newsPublishedDate": null,
       "marketoOutboundImage": "https://sj17.marketodesigner.com/m?explictHostname=app-sj17.marketo.com#EME3767&isPreview",
-      "partnerCampaignLink": "https://www.partnermarketing.hitachivantara.com/ai-data-foundation",
+      "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q1",
       "issueType": ""
@@ -641,7 +641,7 @@
       "newsPublishedUrl": null,
       "newsPublishedDate": null,
       "marketoOutboundImage": null,
-      "partnerCampaignLink": "https://www.partnermarketing.hitachivantara.com/ai-data-foundation",
+      "partnerCampaignLink": null,
       "fiscalYear": "FY26",
       "fiscalQuarter": "Q3",
       "issueType": ""
@@ -734,7 +734,7 @@
       "newsPublishedUrl": null,
       "newsPublishedDate": null,
       "marketoOutboundImage": null,
-      "partnerCampaignLink": "https://www.partnermarketing.hitachivantara.com/data-modernization-resilience",
+      "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q1",
       "issueType": ""
@@ -973,7 +973,7 @@
       "newsPublishedUrl": null,
       "newsPublishedDate": null,
       "marketoOutboundImage": "https://sj17.marketodesigner.com/m?explictHostname=app-sj17.marketo.com#EME3763&isPreview",
-      "partnerCampaignLink": "https://www.partnermarketing.hitachivantara.com/ai-data-foundation",
+      "partnerCampaignLink": null,
       "fiscalYear": "FY26",
       "fiscalQuarter": "Q1",
       "issueType": ""
@@ -1252,7 +1252,7 @@
       "newsPublishedUrl": null,
       "newsPublishedDate": null,
       "marketoOutboundImage": "https://sj17.marketodesigner.com/m?explictHostname=app-sj17.marketo.com#EME3754&isPreview",
-      "partnerCampaignLink": "https://www.partnermarketing.hitachivantara.com/ai-data-foundation",
+      "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q1",
       "issueType": ""
@@ -1604,7 +1604,7 @@
       "newsPublishedUrl": null,
       "newsPublishedDate": null,
       "marketoOutboundImage": null,
-      "partnerCampaignLink": "https://www.partnermarketing.hitachivantara.com/ai-data-foundation",
+      "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q1",
       "issueType": ""
@@ -1975,7 +1975,7 @@
       "newsPublishedUrl": null,
       "newsPublishedDate": null,
       "marketoOutboundImage": "https://sj17.marketodesigner.com/m?explictHostname=app-sj17.marketo.com#EME3772&isPreview",
-      "partnerCampaignLink": "https://www.partnermarketing.hitachivantara.com/data-modernization-resilience",
+      "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q1",
       "issueType": ""
@@ -2610,7 +2610,7 @@
       "newsPublishedUrl": null,
       "newsPublishedDate": null,
       "marketoOutboundImage": "https://sj17.marketodesigner.com/m?explictHostname=app-sj17.marketo.com#EME3771&isPreview",
-      "partnerCampaignLink": "https://www.partnermarketing.hitachivantara.com/data-modernization-resilience",
+      "partnerCampaignLink": null,
       "fiscalYear": "FY25",
       "fiscalQuarter": "Q4",
       "issueType": ""
@@ -2748,8 +2748,8 @@
       "issueType": ""
     },
     {
-      "id": "cyber-resilience-vs-cybersecurity-what-leaders-need-to-know-blog-61",
-      "title": "Cyber Resilience vs Cybersecurity: What Leaders Need to Know | Blog",
+      "id": "cyber-resilience-vs-cybersecurity-what-leaders-need-to-know-chris-m-blog-61",
+      "title": "Cyber Resilience vs Cybersecurity: What Leaders Need to Know (Chris M) | Blog",
       "url": null,
       "type": "Blog",
       "campaign": "Data Modernization & Resilience",
@@ -2759,8 +2759,8 @@
       "audience": "Enterprise, Midmarket",
       "status": "In Production",
       "region": "Global",
-      "publishDate": "2026-11-17",
-      "publishDateDisplay": "Nov 17, 2026",
+      "publishDate": "2026-11-23",
+      "publishDateDisplay": "Nov 23, 2026",
       "partnerUse": false,
       "paidMediaDate": null,
       "paidMediaDateDisplay": "",
@@ -2778,7 +2778,7 @@
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "",
-      "actionRequired": "Update status or revise publish date",
+      "actionRequired": "",
       "abstract": "",
       "webinarImage": null,
       "approvedNewsImageUrl": null,
@@ -2789,7 +2789,7 @@
       "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q3",
-      "issueType": "Overdue"
+      "issueType": ""
     },
     {
       "id": "cyber-resilience-beyond-traditional-security-in-the-age-of-inevitable-breaches-ebook-62",
@@ -3192,7 +3192,7 @@
       "newsPublishedUrl": null,
       "newsPublishedDate": null,
       "marketoOutboundImage": null,
-      "partnerCampaignLink": "https://stwb.co/eheazlr",
+      "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q2",
       "issueType": ""
@@ -4097,7 +4097,7 @@
       "newsPublishedUrl": null,
       "newsPublishedDate": null,
       "marketoOutboundImage": "https://sj17.marketodesigner.com/m?explictHostname=app-sj17.marketo.com#EME3764&isPreview",
-      "partnerCampaignLink": "https://www.partnermarketing.hitachivantara.com/ai-data-foundation",
+      "partnerCampaignLink": null,
       "fiscalYear": "FY26",
       "fiscalQuarter": "Q1",
       "issueType": ""
@@ -4234,7 +4234,7 @@
       "newsPublishedUrl": null,
       "newsPublishedDate": null,
       "marketoOutboundImage": null,
-      "partnerCampaignLink": "https://app.smartsheet.com/reports/9hV7q8xGHHHh55pQpvP3vG7crfPqQrGHHqQ7CpV1",
+      "partnerCampaignLink": null,
       "fiscalYear": "FY26",
       "fiscalQuarter": "Q4",
       "issueType": ""
@@ -5006,7 +5006,7 @@
       "newsPublishedUrl": null,
       "newsPublishedDate": null,
       "marketoOutboundImage": "https://sj17.marketodesigner.com/m?explictHostname=app-sj17.marketo.com#EME3796&isPreview",
-      "partnerCampaignLink": "https://www.partnermarketing.hitachivantara.com/data-modernization-resilience",
+      "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q1",
       "issueType": ""
@@ -5526,8 +5526,8 @@
       "issueType": ""
     },
     {
-      "id": "the-guide-to-cyber-operational-resilience-chris-m-blog-122",
-      "title": "The Guide to Cyber & Operational Resilience (Chris M) | Blog",
+      "id": "the-guide-to-cyber-operational-resilience-blog-122",
+      "title": "The Guide to Cyber & Operational Resilience | Blog",
       "url": null,
       "type": "Blog",
       "campaign": "Data Modernization & Resilience",
@@ -6169,7 +6169,7 @@
       "newsPublishedUrl": null,
       "newsPublishedDate": null,
       "marketoOutboundImage": null,
-      "partnerCampaignLink": "https://www.partnermarketing.hitachivantara.com/ai-data-foundation",
+      "partnerCampaignLink": null,
       "fiscalYear": "FY26",
       "fiscalQuarter": "Q1",
       "issueType": ""
@@ -6632,7 +6632,7 @@
       "newsPublishedUrl": null,
       "newsPublishedDate": null,
       "marketoOutboundImage": "https://sj17.marketodesigner.com/m?explictHostname=app-sj17.marketo.com#EME3770&isPreview",
-      "partnerCampaignLink": "https://www.partnermarketing.hitachivantara.com/ai-data-foundation?utm_source=webinarhub#isuioi",
+      "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q1",
       "issueType": ""
@@ -7126,7 +7126,7 @@
       "newsPublishedUrl": null,
       "newsPublishedDate": null,
       "marketoOutboundImage": null,
-      "partnerCampaignLink": "https://www.partnermarketing.hitachivantara.com/data-modernization-resilience",
+      "partnerCampaignLink": null,
       "fiscalYear": "FY25",
       "fiscalQuarter": "Q4",
       "issueType": ""
@@ -7175,7 +7175,7 @@
       "newsPublishedUrl": null,
       "newsPublishedDate": null,
       "marketoOutboundImage": null,
-      "partnerCampaignLink": "https://www.partnermarketing.hitachivantara.com/data-modernization-resilience",
+      "partnerCampaignLink": null,
       "fiscalYear": "FY25",
       "fiscalQuarter": "Q1",
       "issueType": "; Expired/Update"
@@ -7550,7 +7550,7 @@
       "newsPublishedUrl": null,
       "newsPublishedDate": null,
       "marketoOutboundImage": null,
-      "partnerCampaignLink": "https://www.partnermarketing.hitachivantara.com/data-modernization-resilience",
+      "partnerCampaignLink": null,
       "fiscalYear": "FY25",
       "fiscalQuarter": "Q3",
       "issueType": ""
@@ -7736,7 +7736,7 @@
       "newsPublishedUrl": null,
       "newsPublishedDate": null,
       "marketoOutboundImage": "https://sj17.marketodesigner.com/m?explictHostname=app-sj17.marketo.com#EME4641&isPreview",
-      "partnerCampaignLink": "https://www.partnermarketing.hitachivantara.com/data-modernization-resilience?utm_source=webinarhub#itz8xf",
+      "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q2",
       "issueType": ""
@@ -8054,7 +8054,7 @@
       "newsPublishedUrl": null,
       "newsPublishedDate": null,
       "marketoOutboundImage": null,
-      "partnerCampaignLink": "https://www.partnermarketing.hitachivantara.com/data-modernization-resilience",
+      "partnerCampaignLink": null,
       "fiscalYear": "FY26",
       "fiscalQuarter": "Q2",
       "issueType": ""
@@ -8464,7 +8464,7 @@
       "newsPublishedUrl": null,
       "newsPublishedDate": null,
       "marketoOutboundImage": "https://sj17.marketodesigner.com/m?explictHostname=app-sj17.marketo.com#EME3773&isPreview",
-      "partnerCampaignLink": "https://www.partnermarketing.hitachivantara.com/data-modernization-resilience?utm_source=webinarhub#iws2ym",
+      "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q1",
       "issueType": ""
@@ -8552,7 +8552,7 @@
       "newsPublishedUrl": null,
       "newsPublishedDate": null,
       "marketoOutboundImage": null,
-      "partnerCampaignLink": "https://www.partnermarketing.hitachivantara.com/data-modernization-resilience",
+      "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q1",
       "issueType": ""
@@ -8830,7 +8830,7 @@
       "newsPublishedUrl": null,
       "newsPublishedDate": null,
       "marketoOutboundImage": null,
-      "partnerCampaignLink": "https://www.partnermarketing.hitachivantara.com/data-modernization-resilience",
+      "partnerCampaignLink": null,
       "fiscalYear": "FY26",
       "fiscalQuarter": "Q1",
       "issueType": ""
@@ -9429,7 +9429,7 @@
       "partnerUse": true,
       "paidMediaDate": null,
       "paidMediaDateDisplay": "",
-      "primaryActivation": "Outbound Email, Organic Social",
+      "primaryActivation": "Outbound Email, Paid Social, Organic Social",
       "marketingEmail": null,
       "outboundEmailEnterprise": null,
       "outboundBannerEnterprise": null,
@@ -9548,7 +9548,7 @@
       "newsPublishedUrl": null,
       "newsPublishedDate": null,
       "marketoOutboundImage": "https://sj17.marketodesigner.com/m?explictHostname=app-sj17.marketo.com#EME3785&isPreview",
-      "partnerCampaignLink": "https://www.partnermarketing.hitachivantara.com/data-modernization-resilience?utm_source=webinarhub#iw2gbxq",
+      "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q1",
       "issueType": ""
@@ -10193,7 +10193,7 @@
       "newsPublishedUrl": null,
       "newsPublishedDate": null,
       "marketoOutboundImage": null,
-      "partnerCampaignLink": "https://www.partnermarketing.hitachivantara.com/ai-data-foundation",
+      "partnerCampaignLink": null,
       "fiscalYear": "FY26",
       "fiscalQuarter": "Q4",
       "issueType": ""
@@ -10809,7 +10809,7 @@
       "newsPublishedUrl": null,
       "newsPublishedDate": null,
       "marketoOutboundImage": null,
-      "partnerCampaignLink": "https://www.partnermarketing.hitachivantara.com/data-modernization-resilience",
+      "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q1",
       "issueType": ""
@@ -11028,7 +11028,7 @@
       "usedInCampaign": "No",
       "promotionDates": [],
       "promotionPeriod": "2H",
-      "ownerIndividual": "Emily Smith",
+      "ownerIndividual": "",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "update needed",
       "actionRequired": "Retire, replace, or update content",
@@ -11792,7 +11792,7 @@
       "newsPublishedUrl": null,
       "newsPublishedDate": null,
       "marketoOutboundImage": null,
-      "partnerCampaignLink": "https://www.partnermarketing.hitachivantara.com/VSPOnePromo?utm_source=webinarhub#i53o9a",
+      "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q3",
       "issueType": ""
@@ -11929,7 +11929,7 @@
       "newsPublishedUrl": null,
       "newsPublishedDate": null,
       "marketoOutboundImage": null,
-      "partnerCampaignLink": "https://www.partnermarketing.hitachivantara.com/ai-data-foundation",
+      "partnerCampaignLink": null,
       "fiscalYear": "FY26",
       "fiscalQuarter": "Q1",
       "issueType": ""
@@ -11995,7 +11995,7 @@
       "partnerUse": false,
       "paidMediaDate": null,
       "paidMediaDateDisplay": "",
-      "primaryActivation": "Organic Social",
+      "primaryActivation": "Paid Social, Organic Social",
       "marketingEmail": null,
       "outboundEmailEnterprise": null,
       "outboundBannerEnterprise": null,
@@ -12078,8 +12078,8 @@
       "audience": "Enterprise, Midmarket",
       "status": "In Production",
       "region": "Global",
-      "publishDate": "2026-12-07",
-      "publishDateDisplay": "Dec 07, 2026",
+      "publishDate": "2026-11-20",
+      "publishDateDisplay": "Nov 20, 2026",
       "partnerUse": false,
       "paidMediaDate": null,
       "paidMediaDateDisplay": "",
@@ -12166,7 +12166,7 @@
       "newsPublishedUrl": null,
       "newsPublishedDate": null,
       "marketoOutboundImage": null,
-      "partnerCampaignLink": "https://www.partnermarketing.hitachivantara.com/ai-data-foundation",
+      "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q3",
       "issueType": ""
@@ -12318,7 +12318,7 @@
       "funnelStage": "TOFU",
       "ownerTeam": "Brand",
       "audience": "Enterprise, Midmarket",
-      "status": "Planned",
+      "status": "In Production",
       "region": "Global",
       "publishDate": "2026-12-08",
       "publishDateDisplay": "Dec 08, 2026",
@@ -12353,8 +12353,8 @@
       "issueType": ""
     },
     {
-      "id": "restored-isn-t-resolved-what-gleaning-teaches-about-operational-resilience-511",
-      "title": "Restored isn't resolved: What gleaning teaches about operational resilience",
+      "id": "restored-isn-t-resolved-what-gleaning-teaches-about-operational-resilience-quality-month-511",
+      "title": "Restored isn't resolved: What gleaning teaches about operational resilience (quality month)",
       "url": null,
       "type": "Blog",
       "campaign": "Data Modernization & Resilience",
@@ -12394,6 +12394,50 @@
       "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q4",
+      "issueType": ""
+    },
+    {
+      "id": "sovereignty-requires-accountability-as-well-as-control-shannon-champion-blog-512",
+      "title": "Sovereignty requires accountability as well as control (Shannon Champion Blog)",
+      "url": null,
+      "type": "Blog",
+      "campaign": "",
+      "useCase": "",
+      "funnelStage": "",
+      "ownerTeam": "",
+      "audience": "",
+      "status": "",
+      "region": "",
+      "publishDate": null,
+      "publishDateDisplay": "",
+      "partnerUse": false,
+      "paidMediaDate": null,
+      "paidMediaDateDisplay": "",
+      "primaryActivation": "Organic Social",
+      "marketingEmail": null,
+      "outboundEmailEnterprise": null,
+      "outboundBannerEnterprise": null,
+      "marketoPreviewEnterprise": null,
+      "paidSocialAds": null,
+      "salesEmail": null,
+      "sdrEmail": null,
+      "usedInCampaign": "No",
+      "promotionDates": [],
+      "promotionPeriod": "",
+      "ownerIndividual": "",
+      "publishedByVendor": "",
+      "notes": "",
+      "actionRequired": "",
+      "abstract": "",
+      "webinarImage": null,
+      "approvedNewsImageUrl": null,
+      "newsAnnouncement": "Not Requested",
+      "newsPublishedUrl": null,
+      "newsPublishedDate": null,
+      "marketoOutboundImage": null,
+      "partnerCampaignLink": null,
+      "fiscalYear": "",
+      "fiscalQuarter": "",
       "issueType": ""
     }
   ]
