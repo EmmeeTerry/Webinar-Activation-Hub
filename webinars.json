@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-11-18T18:34:07.473199+00:00",
+  "lastRefreshed": "2026-11-19T01:36:10.325185+00:00",
   "webinars": [
     {
       "id": "the-economics-of-modern-storage-infrastructure-lower-risk-faster-ai-value-better-roi",
@@ -28,7 +28,7 @@
         "paidSocial": null,
         "social": null,
         "attendance": "https://hdscorp.lightning.force.com/lightning/r/Report/00OaZ00000D0ByTUAV/view?queryScope=userFolders",
-        "partnerCampaign": "https://www.partnermarketing.hitachivantara.com/data-modernization-resilience?utm_source=webinarhub#iw2gbxq"
+        "partnerCampaign": null
       },
       "sourceRow": 1,
       "relatedResources": [
@@ -93,7 +93,7 @@
         "paidSocial": null,
         "social": null,
         "attendance": "https://hdscorp.lightning.force.com/lightning/r/Report/00OaZ00000Cl4u5UAB/view?queryScope=userFolders",
-        "partnerCampaign": "https://www.partnermarketing.hitachivantara.com/ai-data-foundation?utm_source=webinarhub#isuioi"
+        "partnerCampaign": null
       },
       "sourceRow": 2,
       "relatedResources": [
@@ -158,7 +158,7 @@
         "paidSocial": null,
         "social": "https://advocacy.sproutsocial.com/current/15271643",
         "attendance": "https://hdscorp.lightning.force.com/lightning/r/Report/00OaZ00000Cs6uLUAR/view?queryScope=userFolders",
-        "partnerCampaign": "https://www.partnermarketing.hitachivantara.com/data-modernization-resilience?utm_source=webinarhub#iws2ym"
+        "partnerCampaign": null
       },
       "sourceRow": 3,
       "relatedResources": [
@@ -223,7 +223,7 @@
         "paidSocial": null,
         "social": null,
         "attendance": "https://hdscorp.lightning.force.com/lightning/r/sObject/00OaZ00000D0BTpUAN/view?queryScope=userFolders",
-        "partnerCampaign": "https://stwb.co/eheazlr"
+        "partnerCampaign": null
       },
       "sourceRow": 4,
       "relatedResources": [
@@ -288,7 +288,7 @@
         "paidSocial": null,
         "social": "https://advocacy.sproutsocial.com/current/15704013",
         "attendance": "https://hdscorp.lightning.force.com/lightning/r/sObject/00OaZ00000DLYiLUAX/view?queryScope=userFolders",
-        "partnerCampaign": "https://www.partnermarketing.hitachivantara.com/data-modernization-resilience?utm_source=webinarhub#itz8xf"
+        "partnerCampaign": null
       },
       "sourceRow": 5,
       "relatedResources": [
@@ -353,7 +353,7 @@
         "paidSocial": null,
         "social": null,
         "attendance": "https://hdscorp.lightning.force.com/lightning/r/sObject/00OaZ00000DjKXlUAN/view?queryScope=userFolders",
-        "partnerCampaign": "https://www.partnermarketing.hitachivantara.com/VSPOnePromo?utm_source=webinarhub#i53o9a"
+        "partnerCampaign": null
       },
       "sourceRow": 6,
       "relatedResources": [
