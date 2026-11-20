@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hitachi Vantara | Content Announcement</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;padding:0}body{font:14px Arial,Helvetica,sans-serif;color:#26313a;background:#fff}
+main{max-width:1050px;margin:0 auto}header{background:#111b2b;border-top:6px solid #e60012;color:white;padding:35px 38px}
+.eyebrow{font-size:11px;font-weight:bold;letter-spacing:1.45px;color:#e2e8f0}header h1{font-size:29px;line-height:1.25;margin:12px 0}header p{font-size:15px;line-height:1.55;color:#dde4ec;margin:0}
+.intro{padding:24px 36px 10px}.intro h2{font-size:20px;margin:0 0 8px;color:#111b2b}.intro p{font-size:14px;line-height:1.6;color:#586671;margin:0}
+section.asset{padding:27px 36px;border-bottom:1px solid #e2e6eb}.asset-main{display:flex;align-items:flex-start;gap:26px}
+.cover{width:150px;max-height:195px;object-fit:contain;flex:none;border-radius:5px;background:#f5f7f9;border:1px solid #e4e8ee}
+.category{color:#b40919;font-size:11px;font-weight:bold;letter-spacing:1px;text-transform:uppercase}
+.asset h2{font-size:22px;line-height:1.3;margin:9px 0;color:#111b2b}.description{font-size:14px;color:#485661;line-height:1.65;margin:10px 0 17px}
+.cta{display:inline-block;background:#e60012;color:white!important;padding:12px 16px;border-radius:4px;font-size:13px;font-weight:bold;text-decoration:none}
+.resources{margin-top:20px}.resources h3{font-size:15px;margin:0 0 11px}.resources-grid{display:flex;flex-wrap:wrap;gap:9px}.resources a{display:inline-block;border:1px solid #dce1e7;border-radius:5px;color:#b20617;padding:9px 12px;font-size:12px;font-weight:bold;text-decoration:none}.resources a:hover{text-decoration:underline}
+#warning{padding:15px 36px;color:#8c4c00;background:#fff7e7;font-size:13px}.loading{padding:26px;color:#586671}
+@media(max-width:600px){header{padding:26px 22px}header h1{font-size:23px}.intro{padding:20px 20px 8px}section.asset{padding:22px 20px}.asset-main{gap:15px}.cover{width:95px;max-height:130px}.asset h2{font-size:18px}}
+</style></head>
+<body><main><div id="loading" class="loading">Loading selected Content Library assets…</div><header id="hero" hidden><div class="eyebrow">GLOBAL CAMPAIGNS / CONTENT LIBRARY</div><h1 id="heading">New Content &amp; Activation Resources</h1><p>Explore useful customer-facing content and approved activation resources in one place.</p></header><div class="intro" id="intro" hidden><h2>Start the right customer conversation.</h2><p>Discover the assets, understand their relevance, and put approved resources to work.</p></div><div id="warning" hidden></div><div id="assets"></div></main>
+<script>
+const ROOT='https://emmeeterry.github.io/Webinar-Activation-Hub/';
+const qs=new URLSearchParams(location.search);
+const ids=[...new Set((qs.get('items')||qs.get('item')||'').split(',').map(v=>v.trim()).filter(Boolean))].slice(0,20);
+const e=v=>String(v||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+const card=x=>ROOT+'content-hub.html?item='+encodeURIComponent(x.id);
+const clean=v=>String(v||'').replace(/\s+/g,' ').trim();
+const title=v=>clean(v).replace(/^eBook Title:\s*/i,'').replace(/\s*\|\s*(eBook|Webinar|Whitepaper)$/i,'').replace(/[.\s]+$/,'');
+const fields=x=>[
+ ['Open asset',x.url],['Sales outreach email',x.salesEmail],['SDR email',x.sdrEmail],
+ ['PMH Campaign',x.partnerCampaignLink],['Marketo Campaign Email',x.outboundEmailEnterprise],
+ ['Enterprise outbound email banner',x.outboundBannerEnterprise],
+ ['Marketo Email Preview',x.marketoPreviewEnterprise],['Paid Media',x.paidSocialAds]
+].filter(([,url])=>/^https?:\/\//i.test(String(url||'').trim()));
+function imageFor(x,imageIds){
+ const image=x.approvedNewsImageUrl;
+ if(image && /^https:\/\//i.test(image) && !/^https:\/\/hitachivantara\.sharepoint\.com\//i.test(image))return image;
+ if(imageIds.has(x.id))return ROOT+'news-images/'+encodeURIComponent(x.id)+'.webp';
+ const webinar=x.webinarImage;
+ if(webinar && /^https:\/\//i.test(webinar) && !/^https:\/\/hitachivantara\.sharepoint\.com\//i.test(webinar))return webinar;
+ return '';
+}
+function renderAsset(x,imageIds){
+ const resources=fields(x),art=imageFor(x,imageIds);
+ const div=document.createElement('section');div.className='asset';
+ div.innerHTML='<div class="asset-main">'+(art?'<img class="cover" src="'+e(art)+'" alt="'+e(title(x.title))+' cover" loading="lazy">':'')
+ +'<div><div class="category">'+e(x.campaign||'GLOBAL CAMPAIGNS')+' / '+e(x.type||'CONTENT')+'</div>'
+ +'<h2>'+e(title(x.title))+'</h2>'
+ +'<p class="description">'+e(x.abstract||x.notes||'An approved description has not yet been provided in Smartsheet.')+'</p>'
+ +'<a class="cta" href="'+e(card(x))+'" target="_blank" rel="noopener noreferrer">Explore asset &amp; activation resources ↗</a></div></div>'
+ +(resources.length?'<div class="resources"><h3>Available activation resources</h3><div class="resources-grid">'+resources.map(([label,url])=>'<a href="'+e(url)+'" target="_blank" rel="noopener noreferrer">'+e(label)+' ↗</a>').join('')+'</div></div>':'');
+ return div;
+}
+async function start(){
+ if(!ids.length){document.getElementById('loading').textContent='No assets selected. Generate the iframe from the Content Announcement Builder after adding assets.';return}
+ try{
+ const [data,manifest]=await Promise.all([
+ fetch('./content.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Content Library data unavailable');return r.json()}),
+ fetch('./news-images-manifest.json',{cache:'no-store'}).then(r=>r.ok?r.json():{images:[]}).catch(()=>({images:[]}))
+ ]);
+ const map=new Map((data.items||[]).map(x=>[x.id,x]));
+ const selected=ids.map(id=>map.get(id)).filter(Boolean);
+ const missing=ids.filter(id=>!map.has(id));
+ if(!selected.length)throw Error('None of the selected assets were found in the Content Library.');
+ const imageIds=new Set((manifest.images||[]).map(x=>x.id));
+ document.getElementById('heading').textContent=selected.length===1?'New Resource: '+title(selected[0].title):'New Content & Activation Resources';
+ document.getElementById('hero').hidden=false;document.getElementById('intro').hidden=false;
+ const parent=document.getElementById('assets');
+ selected.forEach(x=>parent.appendChild(renderAsset(x,imageIds)));
+ if(missing.length){const warning=document.getElementById('warning');warning.hidden=false;warning.textContent=missing.length+' selected asset(s) could not be found. Check the source selection in the builder.'}
+ document.getElementById('loading').remove();
+ }catch(err){document.getElementById('loading').textContent='Unable to load the announcement: '+err.message}
+}
+start();
+</script></body></html>
