@@ -12,11 +12,11 @@
 </div>
 <div class="grid compact-filters" id="customDates" hidden><div><label for="dateFrom">Published from</label><input id="dateFrom" type="date"></div><div><label for="dateTo">Published through</label><input id="dateTo" type="date"></div></div>
 <p class="hint" style="margin:7px 0 0">Dates use the Content Library publish date from Smartsheet. Assets without a publish date appear only under “Any date.”</p>
-<section class="batch-panel"><div class="batch-top"><div><strong>Create one announcement with multiple assets</strong><p class="hint">Choose an asset above, click Add, then repeat. Copy the complete announcement into SharePoint in one step.</p></div><button class="secondary" id="batchAdd" type="button">+ Add selected asset</button></div><div id="batchList" class="batch-items" aria-live="polite"><span class="hint">No assets selected yet.</span></div><div class="actions"><button id="batchCopy" disabled>Copy combined article (0)</button><button class="secondary" id="batchPreviewButton" disabled>Preview article</button><button class="secondary" id="batchClear" disabled>Clear</button></div><div id="batchPreview" class="batch-preview" hidden></div><p class="hint">Includes titles, descriptions, resource links, and available cover artwork. Use View cover beside each selected asset to open the image for SharePoint. Pasted images may not survive in SharePoint News; use native Image web parts for reliable email distribution.</p></section><div class="publish-actions news-primary">
+<section class="batch-panel"><div class="batch-top"><div><strong>Create one announcement with multiple assets</strong><p class="hint">Choose an asset above, click Add, then repeat. Copy the complete announcement into SharePoint in one step.</p></div><button class="secondary" id="batchAdd" type="button">+ Add selected asset</button></div><div id="batchList" class="batch-items" aria-live="polite"><span class="hint">No assets selected yet.</span></div><div class="actions"><button id="batchCopy" disabled>Copy combined article (0)</button><button class="secondary" id="batchPreviewButton" disabled>Preview article</button><button class="secondary" id="batchClear" disabled>Clear</button></div><div id="batchPreview" class="batch-preview" hidden></div><p class="hint">Your selections also power Step 1 and Step 2 below. Copy to SharePoint includes all selected assets, with one navy header. View cover opens each image for SharePoint. Native SharePoint Image web parts remain the reliable choice for emailed news.</p></section><div class="publish-actions news-primary">
 <div class="publish-heading"><strong>Create a SharePoint news announcement</strong><span class="hint">Copy the approved asset information, then start a new page from your saved template.</span></div>
 <div class="grid"><div><label for="pageTitle">News title</label><input id="pageTitle"></div><div><label for="image">Approved image URL (optional)</label><input id="image" placeholder="Use only when replacing the displayed image"></div></div>
 <div class="actions" aria-label="Prepare SharePoint news announcement">
-<button id="copyTitle">1. Copy title</button><button id="copyRich">2. Copy article content</button><button id="saveImage" class="secondary">3. Save image for SharePoint</button><a id="imageFolder" class="secondary link-button" href="https://hitachivantara.sharepoint.com/:f:/r/sites/To-PartnerCommunicationsFY23/Shared%20Documents/Content%20Announcement%20Images?d=w675dca6995a843ac8688a306ccad7f22&amp;csf=1&amp;web=1&amp;e=slBQpO" target="_blank" rel="noopener noreferrer">View SharePoint image folder ↗</a><button id="sharepoint" class="secondary">4. Open SharePoint template</button>
+<button id="copyTitle">1. Copy title</button><button id="copyRich">2. Copy to SharePoint</button><button id="saveImage" class="secondary">3. Save image for SharePoint</button><a id="imageFolder" class="secondary link-button" href="https://hitachivantara.sharepoint.com/:f:/s/To-PartnerCommunicationsFY23/IgBpyl1nqJWsQ4aIowbMrX8iAZC1bDJHBF6aySr2uqX5uK0?e=VoTpIn" target="_blank" rel="noopener noreferrer">View SharePoint image folder ↗</a><button id="sharepoint" class="secondary">4. Open SharePoint template</button>
 </div>
 <p class="hint" style="margin:7px 0 0">Paste the title and article into a <b>new</b> page created from the <a href="https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Content-Sharing-Template.aspx" target="_blank" rel="noopener"><b>Content Sharing Template</b></a>, add the saved image in an Image web part, and review before publishing or emailing. <b>Do not edit the original template.</b></p>
 
@@ -96,6 +96,7 @@ function render(){
   $('status').classList.toggle('warn',!live);
   updateReadiness();
   if(!embedded)history.replaceState({},'', '?item='+encodeURIComponent(current.id));
+  if(batchIds.length)$('pageTitle').value='New Content & Activation Resources';
 }
 function htmlEsc(v){return String(v||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
 function assetImage(x){
@@ -136,7 +137,18 @@ function articlePackage(records){
  +records.map(assetAnnouncementHTML).join('')+'</div>';
 }
 function richHtml(){return current?articlePackage([current]):''}
-async function copyRich(){const html=richHtml(),plain=title(current.title)+'\n\n'+clean(current.abstract||current.notes||'')+'\n\n'+cardURL(current)+'\n\n'+availableResourceLinks(current).map(([label,url])=>label+': '+url).join('\n');try{if(!navigator.clipboard?.write||!window.ClipboardItem)throw Error('Rich clipboard unavailable');await navigator.clipboard.write([new ClipboardItem({'text/html':new Blob([html],{type:'text/html'}),'text/plain':new Blob([plain],{type:'text/plain'})})]);set('status','Branded article copied. Paste into a SharePoint News Text web part. Verify the cover image; for emailed news use a native Image web part when needed.')}catch(e){copy(plain);set('status','This browser could not copy HTML. Plain text copied instead. Use the SharePoint editor to add the image.')}}
+async function copyRich(){
+ const multi=batchIds.length>0,html=multi?batchHTML():richHtml();
+ if(!html)return;
+ const plain=multi?batchText():title(current.title)+'\n\n'+clean(current.abstract||current.notes||'')+'\n\n'+cardURL(current)+'\n\n'+availableResourceLinks(current).map(([label,url])=>label+': '+url).join('\n');
+ try{
+  if(!navigator.clipboard?.write||!window.ClipboardItem)throw Error('Rich clipboard unavailable');
+  await navigator.clipboard.write([new ClipboardItem({'text/html':new Blob([html],{type:'text/html'}),'text/plain':new Blob([plain],{type:'text/plain'})})]);
+  set('status',(multi?'Combined article for '+batchIds.length+' assets':'Single-asset article')+' copied for SharePoint, with the navy header, formatted resources, and available cover images. Verify images after pasting; use native Image web parts for email-safe output.');
+ }catch(e){
+  try{await navigator.clipboard.writeText(plain);set('status','Formatted clipboard unavailable. Plain text copied; format it in SharePoint.')}catch(err){window.prompt('Copy content:',plain)}
+ }
+}
 
 let batchIds=[];
 const batchEntries=()=>batchIds.map(id=>items.find(x=>x.id===id)).filter(Boolean);
@@ -148,12 +160,15 @@ function renderBatch(){
  entries.forEach(x=>{const chip=document.createElement('span');chip.className='batch-chip';const name=document.createElement('span');name.textContent=title(x.title);const b=document.createElement('button');b.type='button';b.textContent='×';b.setAttribute('aria-label','Remove '+title(x.title));b.onclick=()=>{batchIds=batchIds.filter(id=>id!==x.id);renderBatch()};chip.append(name);const art=assetImage(x);if(art){const link=document.createElement('a');link.textContent='View cover ↗';link.href=art;link.target='_blank';link.rel='noopener noreferrer';link.style.cssText='color:#b20617;font-weight:bold;white-space:nowrap';chip.append(link)}chip.append(b);el.append(chip)});
  $('batchCopy').disabled=$('batchPreviewButton').disabled=$('batchClear').disabled=!entries.length;
  $('batchCopy').textContent='Copy combined article ('+entries.length+')';
+ $('copyRich').textContent=entries.length?'2. Copy '+entries.length+' assets to SharePoint':'2. Copy to SharePoint';
+ $('copyTitle').textContent=entries.length?'1. Copy combined title':'1. Copy title';
+ $('pageTitle').value=entries.length?'New Content & Activation Resources':(current?'New Resource: '+title(current.title):'');
  if(!$('batchPreview').hidden)$('batchPreview').innerHTML=batchHTML();
 }
 $('batchAdd').onclick=()=>{const id=$('asset').value;if(!id||batchIds.includes(id)){set('status','Select an asset not already in the announcement.');return}if(batchIds.length>=20){set('status','Maximum 20 assets per announcement.');return}batchIds.push(id);renderBatch();set('status',batchIds.length+' assets in the combined announcement.')};
 $('batchClear').onclick=()=>{batchIds=[];$('batchPreview').hidden=true;$('batchPreviewButton').textContent='Preview article';renderBatch()};
 $('batchPreviewButton').onclick=()=>{const p=$('batchPreview');p.hidden=!p.hidden;$('batchPreviewButton').textContent=p.hidden?'Preview article':'Hide preview';if(!p.hidden)p.innerHTML=batchHTML()};
-$('batchCopy').onclick=async()=>{if(!batchIds.length)return;const html=batchHTML(),plain=batchText();try{if(!navigator.clipboard?.write||!window.ClipboardItem)throw Error('Rich clipboard unavailable');await navigator.clipboard.write([new ClipboardItem({'text/html':new Blob([html],{type:'text/html'}),'text/plain':new Blob([plain],{type:'text/plain'})})]);set('status','Branded announcement copied with images where available. Paste into a SharePoint News Text web part. Verify images in SharePoint; add artwork in native Image web parts if missing, especially for emailed news.')}catch(e){try{await navigator.clipboard.writeText(plain);set('status','Combined announcement copied as plain text. Add formatting and images in SharePoint.')}catch(e2){prompt('Copy announcement:',plain)}}};
+$('batchCopy').onclick=copyRich;
 
 async function imageBlob(){if(!current||$('art').hidden||!$('art').complete||!$('art').naturalWidth)throw Error('Image not available.');let im=$('art');const cv=document.createElement('canvas');cv.width=im.naturalWidth;cv.height=im.naturalHeight;const ctx=cv.getContext('2d');ctx.drawImage(im,0,0);return await new Promise((resolve,reject)=>cv.toBlob(b=>b?resolve(b):reject(Error('Image conversion failed.')),'image/png'))}
 // Local browser-only folder access: never stores user image data or paths on GitHub.
@@ -171,11 +186,11 @@ async function saveImageToFolder(){if(!current)return;
     let permission=await handle.queryPermission({mode:'readwrite'});
     if(permission!=='granted')permission=await handle.requestPermission({mode:'readwrite'});
     if(permission!=='granted')throw Error('Folder access was not granted.');
-    if(handle.name!=='Content Announcement Images')throw Error('Selected folder is '+handle.name+'. Expand Image saving options, choose a different save folder, and select Content Announcement Images.');
+    if(handle.name!=='Content Announcement Images')throw Error('Choose the locally synced Content Announcement Images folder to save automatically. The provided SharePoint URL is a browser link, not a writable local directory.');
     const blob=await imageBlob();const filename=(current.id||'announcement-artwork')+'.png';
     const file=await handle.getFileHandle(filename,{create:true});const output=await file.createWritable();await output.write(blob);await output.close();
     set('status','Saved '+filename+' to your local Content Announcement Images folder. OneDrive will sync it to SharePoint when connected. Use View SharePoint image folder to verify.');
-  }catch(e){if(e.name!=='AbortError')set('status','Unable to save directly: '+e.message+' If using the SharePoint-embedded builder, use Download image instead under Image saving options; then upload it to the shared folder.')}
+  }catch(e){if(e.name!=='AbortError')set('status','Unable to save directly: '+e.message+' Download the image and upload it using the View SharePoint image folder link.')}
 }
 async function changeImageFolder(){try{await chooseImageFolder()}catch(e){if(e.name!=='AbortError')set('status','Cannot choose folder: '+e.message+' Download image instead.');}}
 
@@ -209,7 +224,7 @@ function fillAssets(){
   render();
 }
 function copy(v){navigator.clipboard.writeText(v).then(()=>set('status','Copied to clipboard.')).catch(()=>prompt('Copy this value:',v))}
-$('image').value=params.get('image')||'';$('asset').onchange=()=>{$('image').value='';render()};$('image').oninput=render;$('copyTitle').onclick=()=>copy($('pageTitle').value);$('saveImage').onclick=saveImageToFolder;$('copyRich').onclick=copyRich;$('copyEmbed').onclick=()=>copy('<iframe src="'+articleURL(current)+'" width="100%" height="750" style="border:none;" loading="lazy" title="'+title(current.title).replace(/"/g,'&quot;')+'"></iframe>');$('view').onclick=()=>window.open(articleURL(current),'_blank');$('copyCard').onclick=()=>copy(cardURL(current));$('copyPacket').onclick=()=>copy(reviewPacket());$('sharepoint').onclick=()=>window.open('https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Content-Sharing-Template.aspx','_blank','noopener');
+$('image').value=params.get('image')||'';$('asset').onchange=()=>{$('image').value='';render()};$('image').oninput=render;$('copyTitle').onclick=()=>copy(batchIds.length?'New Content & Activation Resources':$('pageTitle').value);$('saveImage').onclick=saveImageToFolder;$('copyRich').onclick=copyRich;$('copyEmbed').onclick=()=>copy('<iframe src="'+articleURL(current)+'" width="100%" height="750" style="border:none;" loading="lazy" title="'+title(current.title).replace(/"/g,'&quot;')+'"></iframe>');$('view').onclick=()=>window.open(articleURL(current),'_blank');$('copyCard').onclick=()=>copy(cardURL(current));$('copyPacket').onclick=()=>copy(reviewPacket());$('sharepoint').onclick=()=>window.open('https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Content-Sharing-Template.aspx','_blank','noopener');
 $('search').oninput=fillAssets;$('filterNews').onchange=fillAssets;$('filterArtwork').onchange=fillAssets;
 $('sortAssets').onchange=fillAssets;
 $('datePreset').onchange=()=>{$('customDates').hidden=$('datePreset').value!=='custom';fillAssets()};
