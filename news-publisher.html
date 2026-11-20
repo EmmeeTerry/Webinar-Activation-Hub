@@ -158,4 +158,10 @@ $('search').oninput=fillAssets;$('filterNews').onchange=fillAssets;$('filterArtw
 $('sortAssets').onchange=fillAssets;
 $('datePreset').onchange=()=>{$('customDates').hidden=$('datePreset').value!=='custom';fillAssets()};
 $('dateFrom').onchange=fillAssets;$('dateTo').onchange=fillAssets;Promise.all([fetch('./content.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Unable to load content');return r.json()}),fetch('./news-images-manifest.json',{cache:'no-store'}).then(r=>r.ok?r.json():{images:[]}).catch(()=>({images:[]}))]).then(([d,m])=>{items=(d.items||[]).filter(x=>x.id&&x.title).sort((a,b)=>clean(a.title).localeCompare(clean(b.title)));imageIds=new Set((m.images||[]).map(x=>x.id));const item=params.get('item');if(item&&items.some(x=>x.id===item)){const chosen=items.find(x=>x.id===item);if(!hasArtwork(chosen))$('filterArtwork').value='all';$('datePreset').value='all'}fillAssets();if(items.some(x=>x.id===item)){$('asset').value=item;render()}}).catch(err=>set('status','Unable to load Content Library: '+err.message));
-</script></body></html>
+</script>
+<!-- Shared Global Campaigns Resource Hub footer -->
+<div class="gcrh-shared-footer" style="clear:both;position:relative;display:block;box-sizing:border-box;width:100%;max-width:1200px;margin:30px auto 16px;padding:0 12px;">
+  <iframe title="Global Campaigns Resource Hub — footer" src="https://emmeeterry.github.io/Global-Campaigns-Resource-Hub/news-footer.html" loading="lazy" scrolling="no" style="display:block;width:100%;height:172px;border:0;background:#fff;" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+</div>
+<!-- End shared Global Campaigns Resource Hub footer -->
+</body></html>
