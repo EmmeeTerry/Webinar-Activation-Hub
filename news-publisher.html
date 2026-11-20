@@ -12,13 +12,13 @@
 </div>
 <div class="grid compact-filters" id="customDates" hidden><div><label for="dateFrom">Published from</label><input id="dateFrom" type="date"></div><div><label for="dateTo">Published through</label><input id="dateTo" type="date"></div></div>
 <p class="hint" style="margin:7px 0 0">Dates use the Content Library publish date from Smartsheet. Assets without a publish date appear only under “Any date.”</p>
-<section class="batch-panel"><div class="batch-top"><div><strong>Create one announcement with multiple assets</strong><p class="hint">Choose an asset above, click Add, then repeat. Copy the complete announcement into SharePoint in one step.</p></div><button class="secondary" id="batchAdd" type="button">+ Add selected asset</button></div><div id="batchList" class="batch-items" aria-live="polite"><span class="hint">No assets selected yet.</span></div><div class="actions"><button id="batchCopy" disabled>Copy combined article (0)</button><button class="secondary" id="batchPreviewButton" disabled>Preview article</button><button class="secondary" id="batchClear" disabled>Clear</button></div><div id="batchPreview" class="batch-preview" hidden></div><p class="hint">Your selections also power Step 1 and Step 2 below. Copy to SharePoint includes all selected assets, with one navy header. View cover opens each image for SharePoint. Native SharePoint Image web parts remain the reliable choice for emailed news.</p></section><div class="publish-actions news-primary">
+<section class="batch-panel"><div class="batch-top"><div><strong>Create one announcement with multiple assets</strong><p class="hint">Choose an asset above, click Add, then repeat. Copy the complete announcement into SharePoint in one step.</p></div><button class="secondary" id="batchAdd" type="button">+ Add selected asset</button></div><div id="batchList" class="batch-items" aria-live="polite"><span class="hint">No assets selected yet.</span></div><div class="actions"><button id="batchCopy" disabled>Copy combined article (0)</button><button class="secondary" id="batchPreviewButton" disabled>Preview article</button><button class="secondary" id="batchClear" disabled>Clear</button></div><div id="batchPreview" class="batch-preview" hidden></div><p class="hint">Your selections also power Step 1 and Step 2 below. Copy to SharePoint includes all selected assets with one navy header and no embedded images, avoiding SharePoint paste errors. Add approved covers through native SharePoint Image web parts.</p></section><div class="publish-actions news-primary">
 <div class="publish-heading"><strong>Create a SharePoint news announcement</strong><span class="hint">Copy the approved asset information, then start a new page from your saved template.</span></div>
 <div class="grid"><div><label for="pageTitle">News title</label><input id="pageTitle"></div><div><label for="image">Approved image URL (optional)</label><input id="image" placeholder="Use only when replacing the displayed image"></div></div>
 <div class="actions" aria-label="Prepare SharePoint news announcement">
 <button id="copyTitle">1. Copy title</button><button id="copyRich">2. Copy to SharePoint</button><button id="saveImage" class="secondary">3. Save image for SharePoint</button><button id="sharepoint" class="secondary">4. Open SharePoint template</button>
 </div>
-<p class="hint" style="margin:7px 0 0">Paste the title and article into a <b>new</b> page created from the <a href="https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Content-Sharing-Template.aspx" target="_blank" rel="noopener"><b>Content Sharing Template</b></a>, add the saved image in an Image web part, and review before publishing or emailing. <b>Do not edit the original template.</b></p>
+<p class="hint" style="margin:7px 0 0">Paste the article into a <b>new</b> page created from the <a href="https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Content-Sharing-Template.aspx" target="_blank" rel="noopener"><b>Content Sharing Template</b></a>, add the saved image in an Image web part, and review before publishing or emailing. <b>Do not edit the original template.</b></p>
 
 </div>
 <details class="email-actions embed-optional"><summary>Publish as a branded SharePoint page (web only)</summary><div class="actions"><button id="copyEmbed">Copy SharePoint embed code</button><button id="view" class="secondary">Preview full page</button></div><p class="hint">For the fully designed web-page experience, add a SharePoint <b>Embed</b> web part and paste the generated iframe. <b>Do not use this for email.</b></p></details>
@@ -114,37 +114,38 @@ function announcementHeader(heading,eyebrow){
  +'<p style="font-size:14px;line-height:1.6;color:#e1e6ed;margin:0">Explore customer-facing content and approved activation resources in one place.</p>'
  +'</td></tr></table>';
 }
-function assetAnnouncementHTML(x){
+function assetAnnouncementHTML(x,includeImages=true){
  const d=clean(x.abstract||x.notes||'Approved description must be added in Smartsheet before publishing.');
  const artwork=assetImage(x),links=availableResourceLinks(x),titleText=title(x.title);
- const picture=artwork?'<div style="padding:0 0 13px"><img src="'+htmlEsc(artwork)+'" alt="'+htmlEsc(titleText)+' cover" width="130" style="display:block;max-width:130px;height:auto;border:1px solid #e5e9ef;border-radius:5px"></div>':'';
+ const picture=includeImages&&artwork?'<div style="padding:0 0 13px"><img src="'+htmlEsc(artwork)+'" alt="'+htmlEsc(titleText)+' cover" width="130" style="display:block;max-width:130px;height:auto;border:1px solid #e5e9ef;border-radius:5px"></div>':'';
+ const coverLink=!includeImages&&artwork&&/^https:\/\//i.test(artwork)?'<p style="font-size:12px;margin:3px 0 12px"><a href="'+htmlEsc(artwork)+'" style="color:#bf0014;text-decoration:underline">View approved cover artwork ↗</a></p>':'';
  const list=links.length?'<p style="font-size:13px;letter-spacing:.3px;font-weight:bold;color:#152132;margin:18px 0 6px">AVAILABLE ACTIVATION RESOURCES</p><ul style="padding-left:20px;margin:4px 0 10px;font-size:13px;line-height:1.85">'
  +links.map(([name,url])=>'<li><a style="color:#bf0014;text-decoration:underline" href="'+htmlEsc(url)+'">'+htmlEsc(name)+'</a></li>').join('')+'</ul>':'';
  return '<div style="padding:22px 28px;border-bottom:1px solid #e1e5e9;background:#ffffff;color:#1c2936;font-family:Arial,Helvetica,sans-serif">'
  +'<p style="font-size:10px;font-weight:bold;letter-spacing:1px;color:#c00016;margin:0 0 10px">'+htmlEsc(x.campaign||'GLOBAL CAMPAIGNS')+' / '+htmlEsc(x.type||'CONTENT')+'</p>'
  +picture+'<h2 style="font-size:21px;font-weight:bold;line-height:1.3;color:#111b2b;margin:0 0 10px">'+htmlEsc(titleText)+'</h2>'
- +'<p style="font-size:14px;line-height:1.7;color:#465362;margin:0 0 14px">'+htmlEsc(d)+'</p>'
+ +'<p style="font-size:14px;line-height:1.7;color:#465362;margin:0 0 14px">'+htmlEsc(d)+'</p>'+coverLink
  +'<p style="margin:0 0 7px"><a href="'+htmlEsc(cardURL(x))+'" style="display:inline-block;padding:11px 15px;background:#e60012;color:#ffffff;font-size:13px;font-weight:bold;text-decoration:none;border-radius:4px">Explore asset &amp; activation resources ↗</a></p>'
  +list+'</div>';
 }
-function articlePackage(records){
+function articlePackage(records,includeImages=true){
  if(!records.length)return '';
  const one=records.length===1,head=one?'New Resource: '+title(records[0].title):'New Content & Activation Resources';
  const eyebrow=one?'GLOBAL CAMPAIGNS / '+(records[0].campaign||'NEW CONTENT'):'GLOBAL CAMPAIGNS / CONTENT LIBRARY';
  return '<div style="font-family:Arial,Helvetica,sans-serif;max-width:760px;background:#ffffff;color:#1c2936">'
  +announcementHeader(head,eyebrow)
  +'<div style="padding:19px 28px 7px"><h2 style="font-size:17px;color:#111b2b;margin:0 0 7px">Start the right customer conversation.</h2><p style="font-size:13px;line-height:1.6;color:#506071;margin:0 0 9px">'+(one?'Discover the asset and put approved resources to work.':'Discover these assets and put approved resources to work in your next customer conversation.')+'</p></div>'
- +records.map(assetAnnouncementHTML).join('')+'</div>';
+ +records.map(x=>assetAnnouncementHTML(x,includeImages)).join('')+'</div>';
 }
 function richHtml(){return current?articlePackage([current]):''}
 async function copyRich(){
- const multi=batchIds.length>0,html=multi?batchHTML():richHtml();
+ const multi=batchIds.length>0,html=articlePackage(multi?batchEntries():[current],false);
  if(!html)return;
  const plain=multi?batchText():title(current.title)+'\n\n'+clean(current.abstract||current.notes||'')+'\n\n'+cardURL(current)+'\n\n'+availableResourceLinks(current).map(([label,url])=>label+': '+url).join('\n');
  try{
   if(!navigator.clipboard?.write||!window.ClipboardItem)throw Error('Rich clipboard unavailable');
   await navigator.clipboard.write([new ClipboardItem({'text/html':new Blob([html],{type:'text/html'}),'text/plain':new Blob([plain],{type:'text/plain'})})]);
-  set('status',(multi?'Combined article for '+batchIds.length+' assets':'Single-asset article')+' copied for SharePoint, with the navy header, formatted resources, and available cover images. Verify images after pasting; use native Image web parts for email-safe output.');
+  set('status',(multi?'Combined article for '+batchIds.length+' assets':'Single-asset article')+' copied without embedded images, to prevent SharePoint image-source errors. Use the View cover links or preview to add images using SharePoint Image web parts.');
  }catch(e){
   try{await navigator.clipboard.writeText(plain);set('status','Formatted clipboard unavailable. Plain text copied; format it in SharePoint.')}catch(err){window.prompt('Copy content:',plain)}
  }
