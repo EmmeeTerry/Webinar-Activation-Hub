@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-11-20T09:31:21.574272+00:00",
+  "lastRefreshed": "2026-11-20T18:12:35.146738+00:00",
   "webinars": [
     {
       "id": "the-economics-of-modern-storage-infrastructure-lower-risk-faster-ai-value-better-roi",
@@ -786,7 +786,7 @@
       "title": "Powering the AI Factory: From Distributed Data to Trusted Outcomes",
       "date": "2026-11-19",
       "dateDisplay": "Nov 19, 2026",
-      "status": "Upcoming",
+      "status": "On Demand",
       "campaign": "AI Data Foundation",
       "useCase": "High Performance AI-Ready Infrastructure",
       "audience": "Enterprise",
@@ -794,8 +794,8 @@
       "owner": "Stephanie Thompson, Steven Garbrecht",
       "quarter": "Q3",
       "partnerReady": true,
-      "activationStatus": "Partial",
-      "readiness": "Partially ready",
+      "activationStatus": "Activation Ready",
+      "readiness": "Activation ready",
       "whyUse": "Use this for enterprise conversations around high performance ai-ready infrastructure.",
       "abstract": "Discover how a trusted, resilient data foundation can help take AI from isolated pilots to industrial-scale operations, with practical insights into governance, workload placement, cyber resilience and production at scale. For more insights, read From AI Factories to the AI Industrial Cloud: The Data Foundation Comes First blog.",
       "webinarImage": null,
