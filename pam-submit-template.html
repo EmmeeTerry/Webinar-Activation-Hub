@@ -4,4 +4,10 @@ function toggle(){const word=document.querySelector('input[name="method"]:checke
 document.querySelectorAll('input[name="method"]').forEach(el=>el.addEventListener('change',toggle));
 $('form').onsubmit=e=>{e.preventDefault();const word=document.querySelector('input[name="method"]:checked').value==='word';const file=$('wordFile').files[0];if(word&&!file){$('result').textContent='Choose your Word document first.';return}if(word&&!/\.docx?$/i.test(file.name)){$('result').textContent='Please choose a .doc or .docx document.';return}
 const ids=['contributor','team','title','objective','campaign','region','language','subject','body','links','notes'];const q=s=>'"'+String(s).replace(/"/g,'""')+'"';const headers=['submissionMethod','wordFileName',...ids];const values=[word?'Word document':'Entered in form',word?file.name:'',...ids.map(id=>word&&['subject','body'].includes(id)?'':$(id).value)];const csv=headers.map(q).join(',')+'\r\n'+values.map(q).join(',')+'\r\n';const out=new Blob(['\ufeff',csv],{type:'text/csv;charset=utf-8'});const a=document.createElement('a');a.href=URL.createObjectURL(out);a.download='pam-email-submission-'+new Date().toISOString().slice(0,10)+'.csv';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);$('result').textContent=word?'Metadata packet prepared. Submit this CSV AND the original Word document together to your internal reviewer. The Word file has not been uploaded.':'Draft packet prepared. Submit the CSV to your internal reviewer. Nothing has been uploaded.'};
-</script></body></html>
+</script>
+<!-- Shared Global Campaigns Resource Hub footer -->
+<div class="gcrh-shared-footer" style="clear:both;position:relative;display:block;box-sizing:border-box;width:100%;max-width:1200px;margin:30px auto 16px;padding:0 12px;">
+  <iframe title="Global Campaigns Resource Hub — footer" src="https://emmeeterry.github.io/Global-Campaigns-Resource-Hub/news-footer.html" loading="lazy" scrolling="no" style="display:block;width:100%;height:172px;border:0;background:#fff;" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+</div>
+<!-- End shared Global Campaigns Resource Hub footer -->
+</body></html>
