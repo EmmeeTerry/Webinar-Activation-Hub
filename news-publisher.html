@@ -12,7 +12,7 @@
 </div>
 <div class="grid compact-filters" id="customDates" hidden><div><label for="dateFrom">Published from</label><input id="dateFrom" type="date"></div><div><label for="dateTo">Published through</label><input id="dateTo" type="date"></div></div>
 <p class="hint" style="margin:7px 0 0">Dates use the Content Library publish date from Smartsheet. Assets without a publish date appear only under “Any date.”</p>
-<section class="batch-panel"><div class="batch-top"><div><strong>Create one announcement with multiple assets</strong><p class="hint">Choose an asset above, click Add, then repeat. Copy the complete announcement into SharePoint in one step.</p></div><button class="secondary" id="batchAdd" type="button">+ Add selected asset</button></div><div id="batchList" class="batch-items" aria-live="polite"><span class="hint">No assets selected yet.</span></div><div class="actions"><button id="batchCopy" disabled>Copy combined article (0)</button><button class="secondary" id="batchPreviewButton" disabled>Preview article</button><button class="secondary" id="batchClear" disabled>Clear</button></div><div id="batchPreview" class="batch-preview" hidden></div><p class="hint">Includes each asset's approved description, direct links and available activation resources. Insert asset images in SharePoint separately.</p></section><div class="publish-actions news-primary">
+<section class="batch-panel"><div class="batch-top"><div><strong>Create one announcement with multiple assets</strong><p class="hint">Choose an asset above, click Add, then repeat. Copy the complete announcement into SharePoint in one step.</p></div><button class="secondary" id="batchAdd" type="button">+ Add selected asset</button></div><div id="batchList" class="batch-items" aria-live="polite"><span class="hint">No assets selected yet.</span></div><div class="actions"><button id="batchCopy" disabled>Copy combined article (0)</button><button class="secondary" id="batchPreviewButton" disabled>Preview article</button><button class="secondary" id="batchClear" disabled>Clear</button></div><div id="batchPreview" class="batch-preview" hidden></div><p class="hint">Includes each asset's approved description, direct links and available activation resources. Asset artwork appears in the preview when available. SharePoint may not preserve pasted images; use native Image web parts for reliable email distribution.</p></section><div class="publish-actions news-primary">
 <div class="publish-heading"><strong>Create a SharePoint news announcement</strong><span class="hint">Copy the approved asset information, then start a new page from your saved template.</span></div>
 <div class="grid"><div><label for="pageTitle">News title</label><input id="pageTitle"></div><div><label for="image">Approved image URL (optional)</label><input id="image" placeholder="Use only when replacing the displayed image"></div></div>
 <div class="actions" aria-label="Prepare SharePoint news announcement">
@@ -97,21 +97,51 @@ function render(){
   updateReadiness();
   if(!embedded)history.replaceState({},'', '?item='+encodeURIComponent(current.id));
 }
-function richHtml(){if(!current)return '';const t=title(current.title),d=clean(current.abstract||current.notes||'Approved description must be added to Smartsheet before publishing.');const esc=v=>String(v).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');return '<div style="font-family:Arial,Helvetica,sans-serif;color:#26313a;max-width:680px"><p style="font-size:12px;color:#b40919;font-weight:bold;letter-spacing:1px">'+esc(current.campaign||'GLOBAL CAMPAIGNS')+' / NEW RESOURCE</p><h2 style="font-size:25px;line-height:1.3;margin:10px 0">'+esc(t)+'</h2><p style="font-size:15px;line-height:1.65">'+esc(d)+'</p><p style="font-size:14px;line-height:1.6">Explore the asset and available approved promotional resources, including sharing options and presentation materials, in the Content Library.</p><p><a href="'+esc(cardURL(current))+'" style="color:#bf0014;font-weight:bold;text-decoration:underline">Explore asset and activation resources</a></p>'+(availableResourceLinks(current).length?'<h3 style="font-size:17px;margin:20px 0 8px">Available activation resources</h3><ul style="font-size:14px;line-height:1.8;padding-left:22px">'+availableResourceLinks(current).map(([label,url])=>'<li><a href="'+esc(url)+'" style="color:#bf0014;text-decoration:underline">'+esc(label)+'</a></li>').join('')+'</ul>':'')+'</div>'}
-async function copyRich(){const html=richHtml(),plain=title(current.title)+'\n\n'+clean(current.abstract||current.notes||'')+'\n\n'+cardURL(current)+'\n\n'+availableResourceLinks(current).map(([label,url])=>label+': '+url).join('\n');try{if(!navigator.clipboard?.write||!window.ClipboardItem)throw Error('Rich clipboard unavailable');await navigator.clipboard.write([new ClipboardItem({'text/html':new Blob([html],{type:'text/html'}),'text/plain':new Blob([plain],{type:'text/plain'})})]);set('status','Formatted text and CTA copied. Paste into a native SharePoint News Text web part. Use Copy image or Download image to insert artwork separately into an Image web part. Preview email before sending.')}catch(e){copy(plain);set('status','This browser could not copy HTML. Plain text copied instead. Use the SharePoint editor to add the image.')}}
+function htmlEsc(v){return String(v||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
+function assetImage(x){
+  if(x.id==='trust-continuity-and-competitive-advantage-in-the-ai-era-ebook-73')return trustArt;
+  if(x.id==='sovereign-ai-starts-with-resilient-data-267')return sovereignArt;
+  if(x.approvedNewsImageUrl&&!isSharePointImage(x.approvedNewsImageUrl)&&/^https:\/\//i.test(x.approvedNewsImageUrl))return x.approvedNewsImageUrl;
+  if(imageIds.has(x.id))return generatedImage(x);
+  if(x.webinarImage&&!isSharePointImage(x.webinarImage)&&/^https:\/\//i.test(x.webinarImage))return x.webinarImage;
+  return '';
+}
+function announcementHeader(heading,eyebrow){
+ return '<table cellpadding="0" cellspacing="0" role="presentation" style="width:100%;border-collapse:collapse;background:#111b2b;border-top:5px solid #e60012"><tr><td style="padding:28px 28px 30px;color:#ffffff;font-family:Arial,Helvetica,sans-serif">'
+ +'<p style="font-size:10px;letter-spacing:1.4px;font-weight:bold;color:#e0e6ee;margin:0 0 12px">'+htmlEsc(eyebrow||'GLOBAL CAMPAIGNS / NEW CONTENT')+'</p>'
+ +'<h1 style="font-size:27px;line-height:1.25;font-weight:bold;color:#ffffff;margin:0 0 10px">'+htmlEsc(heading)+'</h1>'
+ +'<p style="font-size:14px;line-height:1.6;color:#e1e6ed;margin:0">Explore customer-facing content and approved activation resources in one place.</p>'
+ +'</td></tr></table>';
+}
+function assetAnnouncementHTML(x){
+ const d=clean(x.abstract||x.notes||'Approved description must be added in Smartsheet before publishing.');
+ const artwork=assetImage(x),links=availableResourceLinks(x),titleText=title(x.title);
+ const picture=artwork?'<div style="padding:0 0 13px"><img src="'+htmlEsc(artwork)+'" alt="'+htmlEsc(titleText)+' cover" width="130" style="display:block;max-width:130px;height:auto;border:1px solid #e5e9ef;border-radius:5px"></div>':'';
+ const list=links.length?'<p style="font-size:13px;letter-spacing:.3px;font-weight:bold;color:#152132;margin:18px 0 6px">AVAILABLE ACTIVATION RESOURCES</p><ul style="padding-left:20px;margin:4px 0 10px;font-size:13px;line-height:1.85">'
+ +links.map(([name,url])=>'<li><a style="color:#bf0014;text-decoration:underline" href="'+htmlEsc(url)+'">'+htmlEsc(name)+'</a></li>').join('')+'</ul>':'';
+ return '<div style="padding:22px 28px;border-bottom:1px solid #e1e5e9;background:#ffffff;color:#1c2936;font-family:Arial,Helvetica,sans-serif">'
+ +'<p style="font-size:10px;font-weight:bold;letter-spacing:1px;color:#c00016;margin:0 0 10px">'+htmlEsc(x.campaign||'GLOBAL CAMPAIGNS')+' / '+htmlEsc(x.type||'CONTENT')+'</p>'
+ +picture+'<h2 style="font-size:21px;font-weight:bold;line-height:1.3;color:#111b2b;margin:0 0 10px">'+htmlEsc(titleText)+'</h2>'
+ +'<p style="font-size:14px;line-height:1.7;color:#465362;margin:0 0 14px">'+htmlEsc(d)+'</p>'
+ +'<p style="margin:0 0 7px"><a href="'+htmlEsc(cardURL(x))+'" style="display:inline-block;padding:11px 15px;background:#e60012;color:#ffffff;font-size:13px;font-weight:bold;text-decoration:none;border-radius:4px">Explore asset &amp; activation resources ↗</a></p>'
+ +list+'</div>';
+}
+function articlePackage(records){
+ if(!records.length)return '';
+ const one=records.length===1,head=one?'New Resource: '+title(records[0].title):'New Content & Activation Resources';
+ const eyebrow=one?'GLOBAL CAMPAIGNS / '+(records[0].campaign||'NEW CONTENT'):'GLOBAL CAMPAIGNS / CONTENT LIBRARY';
+ return '<div style="font-family:Arial,Helvetica,sans-serif;max-width:760px;background:#ffffff;color:#1c2936">'
+ +announcementHeader(head,eyebrow)
+ +'<div style="padding:19px 28px 7px"><h2 style="font-size:17px;color:#111b2b;margin:0 0 7px">Start the right customer conversation.</h2><p style="font-size:13px;line-height:1.6;color:#506071;margin:0 0 9px">'+(one?'Discover the asset and put approved resources to work.':'Discover these assets and put approved resources to work in your next customer conversation.')+'</p></div>'
+ +records.map(assetAnnouncementHTML).join('')+'</div>';
+}
+function richHtml(){return current?articlePackage([current]):''}
+async function copyRich(){const html=richHtml(),plain=title(current.title)+'\n\n'+clean(current.abstract||current.notes||'')+'\n\n'+cardURL(current)+'\n\n'+availableResourceLinks(current).map(([label,url])=>label+': '+url).join('\n');try{if(!navigator.clipboard?.write||!window.ClipboardItem)throw Error('Rich clipboard unavailable');await navigator.clipboard.write([new ClipboardItem({'text/html':new Blob([html],{type:'text/html'}),'text/plain':new Blob([plain],{type:'text/plain'})})]);set('status','Branded article copied. Paste into a SharePoint News Text web part. Verify the cover image; for emailed news use a native Image web part when needed.')}catch(e){copy(plain);set('status','This browser could not copy HTML. Plain text copied instead. Use the SharePoint editor to add the image.')}}
 
 let batchIds=[];
 const batchEntries=()=>batchIds.map(id=>items.find(x=>x.id===id)).filter(Boolean);
-const hesc=x=>String(x||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-function batchHTML(){
- const sections=batchEntries().map(x=>{
-  const desc=clean(x.abstract||x.notes||'Approved description is required before publishing.');
-  const links=availableResourceLinks(x);
-  return '<section style="font-family:Arial,sans-serif;border-bottom:1px solid #dce2e8;padding:15px 0;color:#26313a"><p style="font-size:12px;color:#b40919;font-weight:bold">'+hesc(x.campaign||'GLOBAL CAMPAIGNS')+' / '+hesc(x.type||'CONTENT')+'</p><h2 style="font-size:22px;margin:9px 0">'+hesc(title(x.title))+'</h2><p>'+hesc(desc)+'</p><p><a style="color:#b40919;font-weight:bold" href="'+hesc(cardURL(x))+'">Explore asset &amp; activation resources</a></p>'+(links.length?'<h3 style="font-size:15px">Available activation resources</h3><ul>'+links.map(([name,url])=>'<li><a style="color:#b40919" href="'+hesc(url)+'">'+hesc(name)+'</a></li>').join('')+'</ul>':'')+'</section>';
- }).join('');
- return '<div style="font-family:Arial,sans-serif;max-width:740px"><h1 style="color:#101b29;font-size:26px">New content and activation resources</h1><p>Discover new customer-facing assets and promotional resources in the Content Library.</p>'+sections+'</div>';
-}
-function batchText(){return ['New content and activation resources',...batchEntries().map(x=>[title(x.title),clean(x.abstract||x.notes||'Approved description is required before publishing.'),'Content Resources: '+cardURL(x),...availableResourceLinks(x).map(([name,url])=>name+': '+url)].join('\n'))].join('\n\n')}
+function batchHTML(){return articlePackage(batchEntries())}
+function batchText(){return ['New Content & Activation Resources',...batchEntries().map(x=>[title(x.title),clean(x.abstract||x.notes||'Approved description is required before publishing.'),'Content Resources: '+cardURL(x),...availableResourceLinks(x).map(([name,url])=>name+': '+url)].join('\n'))].join('\n\n')}
 function renderBatch(){
  const el=$('batchList'),entries=batchEntries();el.replaceChildren();
  if(!entries.length){const empty=document.createElement('span');empty.className='hint';empty.textContent='No assets selected yet.';el.append(empty)}
@@ -123,7 +153,7 @@ function renderBatch(){
 $('batchAdd').onclick=()=>{const id=$('asset').value;if(!id||batchIds.includes(id)){set('status','Select an asset not already in the announcement.');return}if(batchIds.length>=20){set('status','Maximum 20 assets per announcement.');return}batchIds.push(id);renderBatch();set('status',batchIds.length+' assets in the combined announcement.')};
 $('batchClear').onclick=()=>{batchIds=[];$('batchPreview').hidden=true;$('batchPreviewButton').textContent='Preview article';renderBatch()};
 $('batchPreviewButton').onclick=()=>{const p=$('batchPreview');p.hidden=!p.hidden;$('batchPreviewButton').textContent=p.hidden?'Preview article':'Hide preview';if(!p.hidden)p.innerHTML=batchHTML()};
-$('batchCopy').onclick=async()=>{if(!batchIds.length)return;const html=batchHTML(),plain=batchText();try{if(!navigator.clipboard?.write||!window.ClipboardItem)throw Error('Rich clipboard unavailable');await navigator.clipboard.write([new ClipboardItem({'text/html':new Blob([html],{type:'text/html'}),'text/plain':new Blob([plain],{type:'text/plain'})})]);set('status','Combined announcement copied with formatted content and links. Paste into a SharePoint News Text web part and add the approved images in separate Image web parts.')}catch(e){try{await navigator.clipboard.writeText(plain);set('status','Combined announcement copied as plain text. Add formatting and images in SharePoint.')}catch(e2){prompt('Copy announcement:',plain)}}};
+$('batchCopy').onclick=async()=>{if(!batchIds.length)return;const html=batchHTML(),plain=batchText();try{if(!navigator.clipboard?.write||!window.ClipboardItem)throw Error('Rich clipboard unavailable');await navigator.clipboard.write([new ClipboardItem({'text/html':new Blob([html],{type:'text/html'}),'text/plain':new Blob([plain],{type:'text/plain'})})]);set('status','Branded announcement copied with images where available. Paste into a SharePoint News Text web part. Verify images in SharePoint; add artwork in native Image web parts if missing, especially for emailed news.')}catch(e){try{await navigator.clipboard.writeText(plain);set('status','Combined announcement copied as plain text. Add formatting and images in SharePoint.')}catch(e2){prompt('Copy announcement:',plain)}}};
 
 async function imageBlob(){if(!current||$('art').hidden||!$('art').complete||!$('art').naturalWidth)throw Error('Image not available.');let im=$('art');const cv=document.createElement('canvas');cv.width=im.naturalWidth;cv.height=im.naturalHeight;const ctx=cv.getContext('2d');ctx.drawImage(im,0,0);return await new Promise((resolve,reject)=>cv.toBlob(b=>b?resolve(b):reject(Error('Image conversion failed.')),'image/png'))}
 // Local browser-only folder access: never stores user image data or paths on GitHub.
