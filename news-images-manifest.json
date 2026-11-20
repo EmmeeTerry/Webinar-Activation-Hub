@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-20T10:33:42.234372+00:00",
+  "generatedAt": "2026-11-20T18:52:18.876936+00:00",
   "images": [
     {
       "id": "451-research-market-hitachi-vantara-s-iq-increases-ai-storage-momentum-adds-ai-recovery-ca-14",
@@ -134,7 +134,7 @@
     {
       "id": "hitachi-integrated-systems-pdf-datasheet-130",
       "path": "news-images/hitachi-integrated-systems-pdf-datasheet-130.webp",
-      "type": "Datasheet"
+      "type": "Unknown"
     },
     {
       "id": "hitachi-integrated-systems-solution-with-microsoft-sql-server-reference-architecture-114",
@@ -159,237 +159,377 @@
     {
       "id": "hitachi-storage-and-hitachi-integrated-systems-solutions-in-vmware-vsphere-environments-re-120",
       "path": "news-images/hitachi-storage-and-hitachi-integrated-systems-solutions-in-vmware-vsphere-environments-re-120.webp",
-      "type": "Reference Architecture"
+      "type": "Unknown"
     },
     {
       "id": "hitachi-vantara-and-veeam-for-cyber-resilience-whitepaper-123",
       "path": "news-images/hitachi-vantara-and-veeam-for-cyber-resilience-whitepaper-123.webp",
-      "type": "Whitepaper"
+      "type": "Unknown"
     },
     {
       "id": "hitachi-vantara-flexible-consumption-and-financing-solutions-solution-profile-125",
       "path": "news-images/hitachi-vantara-flexible-consumption-and-financing-solutions-solution-profile-125.webp",
-      "type": "Solution Profile"
+      "type": "Unknown"
     },
     {
       "id": "hitachi-vantara-ransomware-detection-powered-by-cybersense-datasheet-129",
       "path": "news-images/hitachi-vantara-ransomware-detection-powered-by-cybersense-datasheet-129.webp",
-      "type": "Datasheet"
+      "type": "Unknown"
     },
     {
       "id": "hitachi-vantara-virtual-storage-platform-one-object-vsp-one-object-datasheet-128",
       "path": "news-images/hitachi-vantara-virtual-storage-platform-one-object-vsp-one-object-datasheet-128.webp",
-      "type": "Datasheet"
+      "type": "Unknown"
     },
     {
       "id": "hmax-and-iq-solutions-for-mining-and-mineral-exploration-solution-profile-131",
       "path": "news-images/hmax-and-iq-solutions-for-mining-and-mineral-exploration-solution-profile-131.webp",
-      "type": "Solution Profile"
+      "type": "Unknown"
     },
     {
       "id": "how-hitachi-block-storage-delivers-eight-nines-availability-whitepaper-132",
       "path": "news-images/how-hitachi-block-storage-delivers-eight-nines-availability-whitepaper-132.webp",
-      "type": "Whitepaper"
+      "type": "Unknown"
     },
     {
       "id": "hybrid-cloud-2-0-evolution-modernization-whitepaper-136",
       "path": "news-images/hybrid-cloud-2-0-evolution-modernization-whitepaper-136.webp",
-      "type": "Whitepaper"
+      "type": "Unknown"
     },
     {
       "id": "hybrid-cloud-buyer-s-guide-ebook-ebook-137",
       "path": "news-images/hybrid-cloud-buyer-s-guide-ebook-ebook-137.webp",
-      "type": "eBook"
+      "type": "Unknown"
     },
     {
       "id": "hybrid-cloud-storage-for-native-amazon-s3-workloads-solution-profile-138",
       "path": "news-images/hybrid-cloud-storage-for-native-amazon-s3-workloads-solution-profile-138.webp",
-      "type": "Solution Profile"
+      "type": "Unknown"
+    },
+    {
+      "id": "is-object-storage-the-new-ai-foundation-webinar-144",
+      "path": "news-images/is-object-storage-the-new-ai-foundation-webinar-144.webp",
+      "type": "Webinar"
     },
     {
       "id": "is-object-storage-the-new-ai-foundation-webinar-145",
       "path": "news-images/is-object-storage-the-new-ai-foundation-webinar-145.webp",
-      "type": "Webinar"
+      "type": "Unknown"
     },
     {
       "id": "keeping-the-lights-on-or-funding-innovation-whitepaper-148",
       "path": "news-images/keeping-the-lights-on-or-funding-innovation-whitepaper-148.webp",
-      "type": "Whitepaper"
+      "type": "Unknown"
+    },
+    {
+      "id": "mastering-the-art-of-ai-success-webinar-261",
+      "path": "news-images/mastering-the-art-of-ai-success-webinar-261.webp",
+      "type": "Webinar"
     },
     {
       "id": "mastering-the-art-of-ai-success-webinar-262",
       "path": "news-images/mastering-the-art-of-ai-success-webinar-262.webp",
-      "type": "Webinar"
+      "type": "Unknown"
     },
     {
       "id": "mission-critical-guarantees-and-slas-new-solution-profile-154",
       "path": "news-images/mission-critical-guarantees-and-slas-new-solution-profile-154.webp",
-      "type": "Solution Profile"
+      "type": "Unknown"
     },
     {
       "id": "modernize-data-lakehouse-environments-with-vsp-one-object-storage-solution-profile-159",
       "path": "news-images/modernize-data-lakehouse-environments-with-vsp-one-object-storage-solution-profile-159.webp",
-      "type": "Solution Profile"
+      "type": "Unknown"
+    },
+    {
+      "id": "modernize-it-with-hitachi-vsp-one-midrange-block-storage-159",
+      "path": "news-images/modernize-it-with-hitachi-vsp-one-midrange-block-storage-159.webp",
+      "type": "Webinar"
     },
     {
       "id": "modernize-it-with-hitachi-vsp-one-midrange-block-storage-160",
       "path": "news-images/modernize-it-with-hitachi-vsp-one-midrange-block-storage-160.webp",
-      "type": "Webinar"
+      "type": "Unknown"
     },
     {
       "id": "modernize-storage-with-storage-as-a-service-solution-profile-161",
       "path": "news-images/modernize-storage-with-storage-as-a-service-solution-profile-161.webp",
-      "type": "Solution Profile"
+      "type": "Unknown"
+    },
+    {
+      "id": "modernize-your-data-lakehouse-with-object-storage-trends-tech-and-the-road-ahead-webinar-161",
+      "path": "news-images/modernize-your-data-lakehouse-with-object-storage-trends-tech-and-the-road-ahead-webinar-161.webp",
+      "type": "Webinar"
     },
     {
       "id": "modernize-your-data-lakehouse-with-object-storage-trends-tech-and-the-road-ahead-webinar-162",
       "path": "news-images/modernize-your-data-lakehouse-with-object-storage-trends-tech-and-the-road-ahead-webinar-162.webp",
-      "type": "Webinar"
+      "type": "Unknown"
     },
     {
       "id": "modernize-your-environment-with-vsp-one-object-solution-profile-163",
       "path": "news-images/modernize-your-environment-with-vsp-one-object-solution-profile-163.webp",
-      "type": "Solution Profile"
+      "type": "Unknown"
     },
     {
       "id": "modernizing-data-protection-with-hitachi-and-commvault-infographic-164",
       "path": "news-images/modernizing-data-protection-with-hitachi-and-commvault-infographic-164.webp",
-      "type": "Infographic"
+      "type": "Unknown"
     },
     {
       "id": "omdia-the-storage-modernization-imperative-analyst-report-168",
       "path": "news-images/omdia-the-storage-modernization-imperative-analyst-report-168.webp",
-      "type": "Analyst Report"
+      "type": "Unknown"
+    },
+    {
+      "id": "omdia-what-modern-data-infrastructure-looks-like-in-the-ai-era-webinar-168",
+      "path": "news-images/omdia-what-modern-data-infrastructure-looks-like-in-the-ai-era-webinar-168.webp",
+      "type": "Webinar"
     },
     {
       "id": "omdia-what-modern-data-infrastructure-looks-like-in-the-ai-era-webinar-169",
       "path": "news-images/omdia-what-modern-data-infrastructure-looks-like-in-the-ai-era-webinar-169.webp",
-      "type": "Webinar"
+      "type": "Unknown"
     },
     {
       "id": "power-your-ai-future-on-a-foundation-of-trusted-modernized-data-solution-profile-173",
       "path": "news-images/power-your-ai-future-on-a-foundation-of-trusted-modernized-data-solution-profile-173.webp",
-      "type": "Solution Profile"
+      "type": "Unknown"
+    },
+    {
+      "id": "powering-the-ai-factory-from-distributed-data-to-trusted-outcomes-webinar-173",
+      "path": "news-images/powering-the-ai-factory-from-distributed-data-to-trusted-outcomes-webinar-173.webp",
+      "type": "Webinar"
     },
     {
       "id": "powering-the-ai-factory-from-distributed-data-to-trusted-outcomes-webinar-174",
       "path": "news-images/powering-the-ai-factory-from-distributed-data-to-trusted-outcomes-webinar-174.webp",
-      "type": "Webinar"
+      "type": "Unknown"
     },
     {
       "id": "remove-the-chaos-of-data-complexity-with-virtual-storage-platform-one-block-storage-for-mi-183",
       "path": "news-images/remove-the-chaos-of-data-complexity-with-virtual-storage-platform-one-block-storage-for-mi-183.webp",
-      "type": "Datasheet"
+      "type": "Unknown"
+    },
+    {
+      "id": "resilience-by-design-reducing-data-risk-downtime-and-regulatory-exposure-webinar-183",
+      "path": "news-images/resilience-by-design-reducing-data-risk-downtime-and-regulatory-exposure-webinar-183.webp",
+      "type": "Webinar"
     },
     {
       "id": "resilience-by-design-reducing-data-risk-downtime-and-regulatory-exposure-webinar-184",
       "path": "news-images/resilience-by-design-reducing-data-risk-downtime-and-regulatory-exposure-webinar-184.webp",
+      "type": "Unknown"
+    },
+    {
+      "id": "resilient-by-design-how-hitachi-vantara-vm2020-and-index-engines-deliver-faster-validated--184",
+      "path": "news-images/resilient-by-design-how-hitachi-vantara-vm2020-and-index-engines-deliver-faster-validated--184.webp",
       "type": "Webinar"
     },
     {
       "id": "resilient-by-design-how-hitachi-vantara-vm2020-and-index-engines-deliver-faster-validated--185",
       "path": "news-images/resilient-by-design-how-hitachi-vantara-vm2020-and-index-engines-deliver-faster-validated--185.webp",
-      "type": "Webinar"
+      "type": "Unknown"
+    },
+    {
+      "id": "secure-document-management-solutions-for-insurance-solution-profile-189",
+      "path": "news-images/secure-document-management-solutions-for-insurance-solution-profile-189.webp",
+      "type": "Solution Profile"
     },
     {
       "id": "secure-document-management-solutions-for-insurance-solution-profile-190",
       "path": "news-images/secure-document-management-solutions-for-insurance-solution-profile-190.webp",
-      "type": "Solution Profile"
+      "type": "Unknown"
+    },
+    {
+      "id": "shared-nothing-architecture-for-ai-whitepaper-191",
+      "path": "news-images/shared-nothing-architecture-for-ai-whitepaper-191.webp",
+      "type": "Whitepaper"
     },
     {
       "id": "shared-nothing-architecture-for-ai-whitepaper-192",
       "path": "news-images/shared-nothing-architecture-for-ai-whitepaper-192.webp",
-      "type": "Whitepaper"
+      "type": "Unknown"
     },
     {
       "id": "sovereign-ai-starts-with-resilient-data-267",
       "path": "news-images/sovereign-ai-starts-with-resilient-data-267.webp",
+      "type": "Unknown"
+    },
+    {
+      "id": "sovereign-ai-starts-with-resilient-data-whitepaper-266",
+      "path": "news-images/sovereign-ai-starts-with-resilient-data-whitepaper-266.webp",
       "type": "Whitepaper"
+    },
+    {
+      "id": "storage-as-a-service-enterprise-storage-delivered-with-a-simple-subscription-top-10-199",
+      "path": "news-images/storage-as-a-service-enterprise-storage-delivered-with-a-simple-subscription-top-10-199.webp",
+      "type": "Top 10"
     },
     {
       "id": "storage-as-a-service-enterprise-storage-delivered-with-a-simple-subscription-top-10-200",
       "path": "news-images/storage-as-a-service-enterprise-storage-delivered-with-a-simple-subscription-top-10-200.webp",
-      "type": "Top 10"
+      "type": "Unknown"
+    },
+    {
+      "id": "storage-as-a-service-modernization-made-simple-infographic-200",
+      "path": "news-images/storage-as-a-service-modernization-made-simple-infographic-200.webp",
+      "type": "Infographic"
     },
     {
       "id": "storage-as-a-service-modernization-made-simple-infographic-201",
       "path": "news-images/storage-as-a-service-modernization-made-simple-infographic-201.webp",
-      "type": "Infographic"
+      "type": "Unknown"
+    },
+    {
+      "id": "storage-as-a-service-standard-enterprise-grade-storage-with-flexible-consumption-datasheet-201",
+      "path": "news-images/storage-as-a-service-standard-enterprise-grade-storage-with-flexible-consumption-datasheet-201.webp",
+      "type": "Datasheet"
     },
     {
       "id": "storage-as-a-service-standard-enterprise-grade-storage-with-flexible-consumption-datasheet-202",
       "path": "news-images/storage-as-a-service-standard-enterprise-grade-storage-with-flexible-consumption-datasheet-202.webp",
-      "type": "Datasheet"
+      "type": "Unknown"
+    },
+    {
+      "id": "supercharge-kafka-accelerate-real-time-innovation-at-scale-solution-profile-202",
+      "path": "news-images/supercharge-kafka-accelerate-real-time-innovation-at-scale-solution-profile-202.webp",
+      "type": "Solution Profile"
     },
     {
       "id": "supercharge-kafka-accelerate-real-time-innovation-at-scale-solution-profile-203",
       "path": "news-images/supercharge-kafka-accelerate-real-time-innovation-at-scale-solution-profile-203.webp",
-      "type": "Solution Profile"
+      "type": "Unknown"
+    },
+    {
+      "id": "the-economics-of-modern-storage-infrastructure-lower-risk-faster-ai-value-better-roi-webin-208",
+      "path": "news-images/the-economics-of-modern-storage-infrastructure-lower-risk-faster-ai-value-better-roi-webin-208.webp",
+      "type": "Webinar"
     },
     {
       "id": "the-economics-of-modern-storage-infrastructure-lower-risk-faster-ai-value-better-roi-webin-209",
       "path": "news-images/the-economics-of-modern-storage-infrastructure-lower-risk-faster-ai-value-better-roi-webin-209.webp",
-      "type": "Webinar"
+      "type": "Unknown"
+    },
+    {
+      "id": "top-10-reasons-flexible-hybrid-cloud-with-hitachi-and-red-hat-openshift-virtualization-top-226",
+      "path": "news-images/top-10-reasons-flexible-hybrid-cloud-with-hitachi-and-red-hat-openshift-virtualization-top-226.webp",
+      "type": "Top 10"
     },
     {
       "id": "top-10-reasons-flexible-hybrid-cloud-with-hitachi-and-red-hat-openshift-virtualization-top-227",
       "path": "news-images/top-10-reasons-flexible-hybrid-cloud-with-hitachi-and-red-hat-openshift-virtualization-top-227.webp",
+      "type": "Unknown"
+    },
+    {
+      "id": "top-10-reasons-hitachi-content-software-for-file-top-10-227",
+      "path": "news-images/top-10-reasons-hitachi-content-software-for-file-top-10-227.webp",
       "type": "Top 10"
     },
     {
       "id": "top-10-reasons-hitachi-content-software-for-file-top-10-228",
       "path": "news-images/top-10-reasons-hitachi-content-software-for-file-top-10-228.webp",
+      "type": "Unknown"
+    },
+    {
+      "id": "top-10-reasons-hitachi-iq-top-10-228",
+      "path": "news-images/top-10-reasons-hitachi-iq-top-10-228.webp",
       "type": "Top 10"
     },
     {
       "id": "top-10-reasons-hitachi-iq-top-10-229",
       "path": "news-images/top-10-reasons-hitachi-iq-top-10-229.webp",
+      "type": "Unknown"
+    },
+    {
+      "id": "top-10-reasons-hitachi-vantara-virtual-storage-platform-one-object-top-10-229",
+      "path": "news-images/top-10-reasons-hitachi-vantara-virtual-storage-platform-one-object-top-10-229.webp",
       "type": "Top 10"
     },
     {
       "id": "top-10-reasons-hitachi-vantara-virtual-storage-platform-one-object-top-10-230",
       "path": "news-images/top-10-reasons-hitachi-vantara-virtual-storage-platform-one-object-top-10-230.webp",
+      "type": "Unknown"
+    },
+    {
+      "id": "top-10-reasons-to-choose-hitachi-vantara-for-microsoft-sql-server-infrastructure-top-10-221",
+      "path": "news-images/top-10-reasons-to-choose-hitachi-vantara-for-microsoft-sql-server-infrastructure-top-10-221.webp",
       "type": "Top 10"
     },
     {
       "id": "top-10-reasons-to-choose-hitachi-vantara-for-microsoft-sql-server-infrastructure-top-10-222",
       "path": "news-images/top-10-reasons-to-choose-hitachi-vantara-for-microsoft-sql-server-infrastructure-top-10-222.webp",
+      "type": "Unknown"
+    },
+    {
+      "id": "top-10-reasons-why-hitachi-data-lakehouse-top-10-222",
+      "path": "news-images/top-10-reasons-why-hitachi-data-lakehouse-top-10-222.webp",
       "type": "Top 10"
     },
     {
       "id": "top-10-reasons-why-hitachi-data-lakehouse-top-10-223",
       "path": "news-images/top-10-reasons-why-hitachi-data-lakehouse-top-10-223.webp",
+      "type": "Unknown"
+    },
+    {
+      "id": "top-10-reasons-why-hitachi-everflex-top-10-223",
+      "path": "news-images/top-10-reasons-why-hitachi-everflex-top-10-223.webp",
       "type": "Top 10"
     },
     {
       "id": "top-10-reasons-why-hitachi-everflex-top-10-224",
       "path": "news-images/top-10-reasons-why-hitachi-everflex-top-10-224.webp",
+      "type": "Unknown"
+    },
+    {
+      "id": "top-10-reasons-why-solutions-for-oracle-turbocharge-your-database-performance-top-10-224",
+      "path": "news-images/top-10-reasons-why-solutions-for-oracle-turbocharge-your-database-performance-top-10-224.webp",
       "type": "Top 10"
     },
     {
       "id": "top-10-reasons-why-solutions-for-oracle-turbocharge-your-database-performance-top-10-225",
       "path": "news-images/top-10-reasons-why-solutions-for-oracle-turbocharge-your-database-performance-top-10-225.webp",
+      "type": "Unknown"
+    },
+    {
+      "id": "top-10-reasons-why-vsp-one-sds-block-storage-hybrid-cloud-ready-software-defined-storage-f-225",
+      "path": "news-images/top-10-reasons-why-vsp-one-sds-block-storage-hybrid-cloud-ready-software-defined-storage-f-225.webp",
       "type": "Top 10"
     },
     {
       "id": "top-10-reasons-why-vsp-one-sds-block-storage-hybrid-cloud-ready-software-defined-storage-f-226",
       "path": "news-images/top-10-reasons-why-vsp-one-sds-block-storage-hybrid-cloud-ready-software-defined-storage-f-226.webp",
-      "type": "Top 10"
+      "type": "Unknown"
+    },
+    {
+      "id": "top-5-reasons-to-build-resilient-cloud-infrastructure-with-hitachi-storage-and-vmware-clou-230",
+      "path": "news-images/top-5-reasons-to-build-resilient-cloud-infrastructure-with-hitachi-storage-and-vmware-clou-230.webp",
+      "type": "eBook"
     },
     {
       "id": "top-5-reasons-to-build-resilient-cloud-infrastructure-with-hitachi-storage-and-vmware-clou-231",
       "path": "news-images/top-5-reasons-to-build-resilient-cloud-infrastructure-with-hitachi-storage-and-vmware-clou-231.webp",
+      "type": "Unknown"
+    },
+    {
+      "id": "top-5-reasons-to-choose-hitachi-storage-for-vmware-virtualization-success-ebook-231",
+      "path": "news-images/top-5-reasons-to-choose-hitachi-storage-for-vmware-virtualization-success-ebook-231.webp",
       "type": "eBook"
     },
     {
       "id": "top-5-reasons-to-choose-hitachi-storage-for-vmware-virtualization-success-ebook-232",
       "path": "news-images/top-5-reasons-to-choose-hitachi-storage-for-vmware-virtualization-success-ebook-232.webp",
-      "type": "eBook"
+      "type": "Unknown"
+    },
+    {
+      "id": "top-ten-reasons-why-hitachi-integrated-solutions-for-sap-future-ready-sap-proven-at-scale--232",
+      "path": "news-images/top-ten-reasons-why-hitachi-integrated-solutions-for-sap-future-ready-sap-proven-at-scale--232.webp",
+      "type": "Top 10"
     },
     {
       "id": "top-ten-reasons-why-hitachi-integrated-solutions-for-sap-future-ready-sap-proven-at-scale--233",
       "path": "news-images/top-ten-reasons-why-hitachi-integrated-solutions-for-sap-future-ready-sap-proven-at-scale--233.webp",
-      "type": "Top 10"
+      "type": "Unknown"
     },
     {
       "id": "trust-continuity-and-competitive-advantage-in-the-ai-era-ebook-73",
@@ -397,49 +537,94 @@
       "type": "eBook"
     },
     {
+      "id": "unbreakable-core-vsp-one-guarantees-proven-results-guaranteed-outcomes-ebook-234",
+      "path": "news-images/unbreakable-core-vsp-one-guarantees-proven-results-guaranteed-outcomes-ebook-234.webp",
+      "type": "eBook"
+    },
+    {
       "id": "unbreakable-core-vsp-one-guarantees-proven-results-guaranteed-outcomes-ebook-235",
       "path": "news-images/unbreakable-core-vsp-one-guarantees-proven-results-guaranteed-outcomes-ebook-235.webp",
+      "type": "Unknown"
+    },
+    {
+      "id": "unified-data-management-buyer-s-guide-ebook-235",
+      "path": "news-images/unified-data-management-buyer-s-guide-ebook-235.webp",
       "type": "eBook"
     },
     {
       "id": "unified-data-management-buyer-s-guide-ebook-236",
       "path": "news-images/unified-data-management-buyer-s-guide-ebook-236.webp",
-      "type": "eBook"
+      "type": "Unknown"
+    },
+    {
+      "id": "unlocking-roi-the-forrester-study-that-could-save-your-next-storage-investment-webinar-238",
+      "path": "news-images/unlocking-roi-the-forrester-study-that-could-save-your-next-storage-investment-webinar-238.webp",
+      "type": "Webinar"
     },
     {
       "id": "unlocking-roi-the-forrester-study-that-could-save-your-next-storage-investment-webinar-239",
       "path": "news-images/unlocking-roi-the-forrester-study-that-could-save-your-next-storage-investment-webinar-239.webp",
-      "type": "Webinar"
+      "type": "Unknown"
+    },
+    {
+      "id": "virtual-storage-platform-one-block-high-end-storage-datasheet-239",
+      "path": "news-images/virtual-storage-platform-one-block-high-end-storage-datasheet-239.webp",
+      "type": "Datasheet"
     },
     {
       "id": "virtual-storage-platform-one-block-high-end-storage-datasheet-240",
       "path": "news-images/virtual-storage-platform-one-block-high-end-storage-datasheet-240.webp",
-      "type": "Datasheet"
+      "type": "Unknown"
+    },
+    {
+      "id": "virtual-storage-platform-one-one-data-platform-no-limits-ebook-240",
+      "path": "news-images/virtual-storage-platform-one-one-data-platform-no-limits-ebook-240.webp",
+      "type": "eBook"
     },
     {
       "id": "virtual-storage-platform-one-one-data-platform-no-limits-ebook-241",
       "path": "news-images/virtual-storage-platform-one-one-data-platform-no-limits-ebook-241.webp",
-      "type": "eBook"
+      "type": "Unknown"
+    },
+    {
+      "id": "vsp-one-object-with-on-premise-native-s3-tables-for-data-lakehouse-ai-and-analytic-workloa-245",
+      "path": "news-images/vsp-one-object-with-on-premise-native-s3-tables-for-data-lakehouse-ai-and-analytic-workloa-245.webp",
+      "type": "Whitepaper"
     },
     {
       "id": "vsp-one-object-with-on-premise-native-s3-tables-for-data-lakehouse-ai-and-analytic-workloa-246",
       "path": "news-images/vsp-one-object-with-on-premise-native-s3-tables-for-data-lakehouse-ai-and-analytic-workloa-246.webp",
-      "type": "Whitepaper"
+      "type": "Unknown"
+    },
+    {
+      "id": "why-is-software-defined-storage-critical-for-unlocking-the-power-of-data-webinar-253",
+      "path": "news-images/why-is-software-defined-storage-critical-for-unlocking-the-power-of-data-webinar-253.webp",
+      "type": "Webinar"
     },
     {
       "id": "why-is-software-defined-storage-critical-for-unlocking-the-power-of-data-webinar-254",
       "path": "news-images/why-is-software-defined-storage-critical-for-unlocking-the-power-of-data-webinar-254.webp",
+      "type": "Unknown"
+    },
+    {
+      "id": "your-next-mainframe-migration-starts-before-the-deadline-webinar-258",
+      "path": "news-images/your-next-mainframe-migration-starts-before-the-deadline-webinar-258.webp",
       "type": "Webinar"
     },
     {
       "id": "your-next-mainframe-migration-starts-before-the-deadline-webinar-259",
       "path": "news-images/your-next-mainframe-migration-starts-before-the-deadline-webinar-259.webp",
-      "type": "Webinar"
+      "type": "Unknown"
+    },
+    {
+      "id": "your-postgresql-environment-with-hitachi-vsp-one-and-integrated-systems-infographic-259",
+      "path": "news-images/your-postgresql-environment-with-hitachi-vsp-one-and-integrated-systems-infographic-259.webp",
+      "type": "Infographic"
     },
     {
       "id": "your-postgresql-environment-with-hitachi-vsp-one-and-integrated-systems-infographic-260",
       "path": "news-images/your-postgresql-environment-with-hitachi-vsp-one-and-integrated-systems-infographic-260.webp",
-      "type": "Infographic"
+      "type": "Unknown"
     }
   ]
 }
