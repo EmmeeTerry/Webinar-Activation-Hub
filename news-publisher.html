@@ -254,12 +254,11 @@ function emailMarkup(records,inlineImages={},mode='standard'){
  const esc=htmlEsc;
  const font='Arial,Helvetica,sans-serif';
  const td=(html,padding='0 38px')=>'<tr><td style="padding:'+padding+';font-family:'+font+';font-size:16px;line-height:1.6;color:#334155">'+html+'</td></tr>';
- const heading='<tr><td bgcolor="#142136" style="background-color:#142136;padding:34px 38px 30px;border-top:7px solid #d70019;font-family:'+font+'">'
-  +'<h1 style="font-size:32px;line-height:1.2;font-weight:700;color:#ffffff;margin:0 0 16px">Global Campaigns<br>Promotional Resources</h1>'
-  +'<p style="font-size:17px;line-height:1.55;color:#e3e9f1;margin:0 0 23px">Discover new content and ready-to-use resources to strengthen your customer conversations.</p>'
-  +'<p style="font-size:14px;line-height:1.7;color:#ffffff;margin:0">'+[
-     ...navLinks()
-   ].map(([label,url])=>'<a href="'+esc(url)+'" style="color:#ffffff;text-decoration:underline;font-size:14px;font-weight:700">'+esc(label)+'</a>').join('&nbsp;&nbsp; | &nbsp;&nbsp;')+'</p>'
+ const heading='<tr><td bgcolor="#ffffff" style="background:#ffffff;padding:32px 38px 26px;border-top:7px solid #d5001b;font-family:'+font+';color:#172235">'
+  +'<p style="margin:0 0 12px;font-family:'+font+';font-size:13px;line-height:1.4;letter-spacing:1px;font-weight:bold;color:#b40018">CONTENT &amp; CAMPAIGN ACTIVATION</p>'
+  +'<h1 style="margin:0 0 16px;font-family:'+font+';font-size:31px;line-height:1.22;font-weight:bold;color:#172235">Global Campaigns<br>Promotional Resources</h1>'
+  +'<p style="margin:0 0 22px;font-family:'+font+';font-size:17px;line-height:1.6;color:#394a60">Discover new content and ready-to-use resources to strengthen customer conversations.</p>'
+  +'<div style="border-top:1px solid #dce3ec;padding-top:15px">'+emailNavigationHtml('header')+'</div>'
   +'</td></tr>';
  const clipboardHeader='<tr><td bgcolor="#ffffff" style="background:#ffffff;padding:24px 38px 18px;border-top:7px solid #d5001b;font-family:'+font+';color:#172235">'
   +'<h1 style="font-family:'+font+';font-size:29px;line-height:1.22;color:#172235;font-weight:bold;margin:0 0 15px">Global Campaigns Promotional Resources</h1>'
