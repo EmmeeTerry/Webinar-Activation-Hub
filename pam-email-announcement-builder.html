@@ -21,24 +21,24 @@ body.embedded{background:#fff}body.embedded header,body.embedded .links,body.emb
 .article-cta{display:inline-block;background:#ce0013;color:white!important;padding:12px 16px;border-radius:4px;text-decoration:none;margin:10px 0}.template-block h4{font-weight:800}.template-block ul li{margin:6px 0}
 .featured-links{background:#f6f8fa;border-left:4px solid #ce0013;padding:16px;margin:16px 0}.featured-links h3{margin:0 0 12px!important}.featured-links .article-cta{margin:4px 8px 6px 0;display:inline-block}.filters input{min-width:0}
 </style></head><body>
-<header><div class="eyebrow">HITACHI VANTARA / PARTNER PROGRAMS</div><h1>Pulse Post Builder</h1><p>Build a Partner Pulse story that gives PAMs the news, its value to partners and an email they can personalize.</p></header>
+<header><div class="eyebrow">HITACHI VANTARA / PARTNER PROGRAMS</div><h1>Pulse Post Builder</h1><p>Show PAMs which content to promote, where partners can activate it in the Partner Marketing Hub, and how to start customer conversations.</p></header>
 <main>
 <div class="links builder-only"><a href="./pam-email-announcement-builder.html" target="_blank" rel="noopener">Open builder in its own tab ↗</a><a href="./pam-email-hub.html" target="_blank" rel="noopener">PAM Email Hub ↗</a><a href="https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Content-Sharing-Template.aspx" target="_blank" rel="noopener">SharePoint news template ↗</a></div>
 <div class="layout">
 <section class="panel edit-panel">
 <h2>1. What news are you announcing?</h2><p class="muted">Choose partner emails, live content or partner-ready webinars. Combine related items in one post.</p>
 <div class="filters"><div><label for="filter">Show</label><select id="filter"><option value="recent">Recently added</option><option value="all" selected>All items</option></select></div><div><label for="category">Category</label><select id="category"><option value="">All categories</option></select></div></div>
-<div class="filters"><div><label for="source">Source</label><select id="source"><option value="">All sources</option><option>Partner email</option><option>Content Library</option><option>Webinar Hub</option></select></div><div><label for="region">Region</label><select id="region"><option value="">All regions</option></select></div></div><label for="search">Search news and resources</label><input id="search" type="search" placeholder="Title, campaign or topic">
+<div class="filters"><div><label for="source">Source</label><select id="source"><option value="">All sources</option><option>Partner email</option><option>Content Library</option><option>Webinar Hub</option></select></div><div><label for="region">Region</label><select id="region"><option value="">All regions</option></select></div></div><label for="campaignFilter">PMH campaign</label><select id="campaignFilter"><option value="">All items</option><option value="linked">Campaign link available</option><option value="missing">Needs a campaign link</option></select><label for="search">Search news and resources</label><input id="search" type="search" placeholder="Title, campaign or topic">
 <div class="actions"><button type="button" class="secondary" id="selectVisible">Select displayed</button><button type="button" class="secondary" id="clear">Clear</button><button type="button" class="secondary" id="reload">Refresh list</button></div>
 <div id="count" class="muted">Loading emails…</div><div id="emails" class="email-list">Loading email templates…</div>
-<div class="section"><h2>2. Which important links should stand out?</h2><p class="muted">Additional links appear near the bottom of the article as secondary resources. For the enhanced PMH announcement, the Partner Marketing Hub link fills in automatically. You can change it or add another important resource.</p>
+<div class="section"><h2>2. Which important links should stand out?</h2><p class="muted">The PMH campaign appears inside each linked story. Use these optional fields for additional resources at the bottom. For the enhanced PMH announcement, the Partner Marketing Hub link fills in automatically. You can change it or add another important resource.</p>
 <div class="filters"><div><label for="featuredLabel1">Featured link button</label><input id="featuredLabel1" placeholder="e.g., Open Partner Marketing Hub"></div><div><label for="featuredUrl1">Destination URL</label><input type="url" id="featuredUrl1" placeholder="https://..."></div></div>
 <details><summary>Add a second featured link (optional)</summary><div class="filters"><div><label for="featuredLabel2">Button label</label><input id="featuredLabel2" placeholder="e.g., Explore What's New"></div><div><label for="featuredUrl2">Destination URL</label><input type="url" id="featuredUrl2" placeholder="https://..."></div></div></details>
 </div>
 <div class="section"><h2>3. Is there a LinkedIn post to share?</h2><p class="muted">Optional. Add a link to an approved LinkedIn post. We'll automatically add “Share on your LinkedIn” to the announcement.</p>
 <label for="linkedinUrl">LinkedIn post URL (optional)</label><input id="linkedinUrl" type="url" placeholder="https://www.linkedin.com/posts/...">
 </div>
-<details><summary>Edit article wording (optional)</summary>
+<details><summary>Edit campaign links and article wording</summary>
 <p>The article is generated for you. If needed, edit the headline, introduction, partner benefits, PAM instructions or closing below. Changes appear immediately in the preview and are included in the copied post and embed.</p>
 <label for="headline">Headline</label><input id="headline" value="New PAM-to-Partner Emails Are Ready to Share">
 <label for="intro">Introduction</label><textarea id="intro">We've added ready-to-share partner emails to the PAM Email Hub. Each template helps you introduce a useful resource or opportunity to partners without writing from scratch. Explore what's available and open the emails below.</textarea>
@@ -79,7 +79,7 @@ let savedDraft=null;
 try{if(embedMode&&params.get("data"))savedDraft=JSON.parse(decodeURIComponent(escape(atob(params.get("data").replace(/-/g,"+").replace(/_/g,"/")))))}catch(e){console.warn("Could not read embedded draft",e)}
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const status=(msg,error=false)=>{$("status").textContent=msg;$("status").className="status builder-only"+(error?" error":"")};
-const link=id=>{const item=state.emails.find(x=>x.id===id);if(item?.assetURL){const u=new URL(HUB,location.href);u.search=new URLSearchParams({source:item.source==="Webinar Hub"?"webinar":"content",title:item.title,description:item.body.slice(0,420),url:item.assetURL});return u.href}const u=new URL(HUB,location.href);u.searchParams.set("email",id);return u.href};
+const link=id=>{const item=state.emails.find(x=>x.id===id);if(item?.assetURL){const u=new URL(HUB,location.href);u.search=new URLSearchParams({source:item.source==="Webinar Hub"?"webinar":"content",title:item.title,description:item.body.slice(0,420),url:item.assetURL});const pmh=campaignFor(item);if(pmh){u.searchParams.set("pmh",pmh);u.searchParams.set("topic",item.topic||item.category)}return u.href}const u=new URL(HUB,location.href);u.searchParams.set("email",id);return u.href};
 const allLink=()=>new URL(HUB,location.href).href;
 const isLegacy=e=>/^(DPAE|HCPO|CMR|CRMR)(?:\b|[\s·-])/i.test(e.title||"");
 function getDate(e){const d=e.addedDate||e.createdDate||e.createdAt;const n=Date.parse(d||"");if(Number.isFinite(n))return n;const m=String(e.id||"").match(/20\d{6}/);return m?Date.parse(m[0].slice(0,4)+"-"+m[0].slice(4,6)+"-"+m[0].slice(6,8))||0:0}
@@ -102,7 +102,14 @@ function newsName(e){if(e.assetURL)return e.title;
  return e.title;
 }
 function guidance(e){
- if(e.assetURL)return {why:e.body||e.title,share:e.value||"Share this "+e.kind+" with partners working on "+e.category+".",action:"Open the PAM-to-Partner email, tailor the introduction and share the "+e.kind+" with the partners who can use it.",points:[],resources:e.links};
+ if(campaignFor(e)){
+  const topic=e.topic||e.category||"the customer’s priorities";
+  return {why:e.assetURL?(e.body||e.title):summary(e),
+   share:e.value||"Partners can use "+newsName(e)+" to start a discussion with customers working on "+topic+".",
+   action:"Send the partner email below to partners with customers focused on "+topic+". Ask each partner to choose an audience and a launch date, then agree on how their sales team will follow up with interested accounts.",
+   points:[],resources:(e.assetURL?[]:sourceLinks(e)).filter(x=>campaignURL(x.url)!==campaignFor(e))};
+ }
+ if(e.assetURL)return {why:e.body||e.title,share:e.value||"Share this "+e.kind+" with partners working on "+e.category+".",action:"Open the PAM-to-Partner email, tailor the introduction and share the "+e.kind+" with the partners who can use it.",points:[],resources:[]};
  if(isPMH(e))return{
   why:"The enhanced Partner Marketing Hub makes it easier for partners to discover ready-to-use campaigns, personalize approved content and put demand generation activities in market without starting from scratch.",
   share:"Partners can get campaigns into market faster without needing a large marketing team. Ready-to-use co-branded content reduces production time, AI assistance helps tailor messaging to customers, and integrated email, social, reporting and website tools make it easier to reach prospects and understand engagement. PAMs can use these benefits to start a discussion about the partner’s current demand generation priorities.",
@@ -117,13 +124,13 @@ function guidance(e){
   why:first,
   share:second.join(" ")||"The email gives partners a relevant "+kind+" to bring into customer discussions about "+(e.category||"this program")+".",
   points:[],
-  action:"Open the PAM email template and tailor its introduction to the partner's priorities. Encourage the partner to use the linked "+kind+" in relevant customer conversations and follow up on interest in the associated campaign.",
+  action:"Open the PAM email template and tailor its introduction to the partner's priorities. Encourage the partner to use the linked "+kind+" in relevant customer conversations and follow up with customers who show interest.",
   resources:sourceLinks(e)
  };
 }
-function headline(){const a=selected();if(a.length===1)return newsName(a[0])+": Resources Available";if(a.length&&a.every(e=>e.category===a[0].category))return a[0].category+": Resources Available";return "Partner Campaign and Program Updates: Resources Available"}
-function intro(){const a=selected();if(a.length===1&&isPMH(a[0]))return "The enhanced Hitachi Vantara Partner Marketing Hub gives partners new ways to discover campaigns, personalize content and activate demand generation. We have a ready-to-share partner announcement and practical resources to help PAMs introduce what's new and guide partners through their first steps.";if(a.length===1)return "New partner-ready resources are available for "+newsName(a[0])+". Here is what has been released, why it matters to partners and how PAMs can put it to work.";return "New partner-ready resources are available across key campaigns and programs. Here is what's new for partners, which materials they can use and how PAMs can activate each opportunity."}
-function closing(){return "Use the relevant email CTA above to open the approved partner communication, personalize it and share it with the appropriate partners. Follow up with a specific campaign or customer conversation based on their interest."}
+function headline(){const a=selected();if(a.length===1&&campaignFor(a[0]))return "Help partners promote "+newsName(a[0]);if(a.length>1&&a.every(campaignFor))return "Ready for partner outreach: "+(a.every(x=>x.category===a[0].category)?a[0].category:"customer campaign resources");if(a.length===1)return newsName(a[0])+": Resources Available";if(a.length&&a.every(e=>e.category===a[0].category))return a[0].category+": Resources Available";return "Partner Campaign and Program Updates: Resources Available"}
+function intro(){const a=selected();if(a.some(campaignFor))return "Help your partners put this content in front of customers. Use the campaign links in the stories below to show partners where to start, then personalize the partner email for the accounts they want to reach.";if(a.length===1&&isPMH(a[0]))return "The enhanced Hitachi Vantara Partner Marketing Hub gives partners new ways to discover campaigns, personalize content and activate demand generation. We have a ready-to-share partner announcement and practical resources to help PAMs introduce what's new and guide partners through their first steps.";if(a.length===1)return "New partner-ready resources are available for "+newsName(a[0])+". Here is what has been released, why it matters to partners and how PAMs can put it to work.";return "New partner-ready resources are available across key campaigns and programs. Here is what's new for partners, which materials they can use and how PAMs can activate each opportunity."}
+function closing(){if(selected().some(campaignFor))return "After launch, ask which customers engaged and which conversations the partner’s sellers want to pursue together.";return "Use the relevant email CTA above to open the approved partner communication, personalize it and share it with the appropriate partners. Follow up with a specific campaign or customer conversation based on their interest."}
 let featuredAuto=true;
 function featuredDefaults(){
  if(!featuredAuto||savedDraft)return;
@@ -138,13 +145,19 @@ function featuredLinks(){
  return pairs.map(([label,raw])=>{try{const u=new URL(raw.trim());if(u.protocol!=="https:")return null;return {label:label.trim()||"Explore resource",url:u.href}}catch(e){return null}}).filter(Boolean);
 }
 const edited=new Set(); function syncDefaults(){for(const [id,value] of [["headline",headline()],["intro",intro()],["closing",closing()]])if(!edited.has(id))$(id).value=value;featuredDefaults()}
-function article(){return {title:$("headline").value.trim()||headline(),intro:$("intro").value.trim()||intro(),closing:$("closing").value.trim()||closing(),blocks:selected().map(e=>({title:newsName(e),url:link(e.id),...guidance(e),...Object.fromEntries(Object.entries(state.sectionEdits[e.id]||{}).filter(([k,v])=>["why","share","action"].includes(k)&&typeof v==="string"))})),featured:featuredLinks(),linkedin:linkedIn()}}
+function article(){return {title:$("headline").value.trim()||headline(),intro:$("intro").value.trim()||intro(),closing:$("closing").value.trim()||closing(),blocks:selected().map(e=>({title:newsName(e),url:link(e.id),asset:e.assetURL,pmh:campaignFor(e),...guidance(e),...Object.fromEntries(Object.entries(state.sectionEdits[e.id]||{}).filter(([k,v])=>["why","share","action"].includes(k)&&typeof v==="string"))})),featured:featuredLinks(),linkedin:linkedIn()}}
+const activationCopy="Open the linked campaign in the Partner Marketing Hub. Choose a customer segment and a channel offered in the campaign, such as email or social. Co-brand the available materials, personalize the message and launch your outreach. Give sellers the asset and a question they can use to follow up with customers who engage.";
+function campaignMarkup(x){
+ const asset=x.asset?'<p><a href="'+esc(x.asset)+'">Preview the customer asset</a></p>':'';
+ return asset+(x.pmh?'<h3>How partners can activate the campaign</h3><p>'+activationCopy+'</p><p><a href="'+esc(x.pmh)+'"><strong>Open the PMH campaign</strong></a></p>':'');
+}
 function richBody(){const a=article();let h='<div style="font:15px/1.65 Arial,sans-serif;color:#253440"><p>'+esc(a.intro).replace(/\n/g,"<br>")+'</p>';
  for(const x of a.blocks){
   h+='<section style="padding:20px 0;border-top:1px solid #e0e5e9"><h2 style="font-size:21px;color:#263746">'+esc(x.title)+'</h2>';
   h+='<p style="font-size:15px;color:#253440;margin:9px 0 16px">'+esc(x.why)+'</p>';
   h+='<h3 style="font-size:16px;color:#b50016">What\'s in it for partners</h3><p>'+esc(x.share)+'</p>';
   if(x.points.length)h+='<ul>'+x.points.map(z=>'<li>'+esc(z)+'</li>').join("")+'</ul>';
+  h+=campaignMarkup(x);
   h+='<h3 style="font-size:16px;color:#b50016">What PAMs should do</h3><p>'+esc(x.action)+'</p>';
   h+='<p style="margin:20px 0 8px"><a href="'+esc(x.url)+'" style="display:inline-block;background:#ce0013;color:#fff;padding:14px 22px;text-decoration:none;font-weight:bold">Open the PAM-to-Partner Email</a></p>';
   if(a.linkedin&&x===a.blocks[0])h+='<p style="margin:6px 0 18px"><a href="'+esc(a.linkedin)+'" style="color:#0a66c2;font-weight:bold;text-decoration:underline">Share on your LinkedIn</a></p>';
@@ -155,13 +168,14 @@ function richBody(){const a=article();let h='<div style="font:15px/1.65 Arial,sa
 
  h+='<p style="font-size:13px;color:#5c6972;margin-top:20px">'+esc(a.closing)+'</p></div>';return h
 }
-function textBody(){const a=article();const extras=[...a.featured,...a.blocks.flatMap(x=>x.resources)].filter((x,i,all)=>all.findIndex(y=>y.url===x.url)===i);return a.title+"\n\n"+a.intro+"\n\n"+a.blocks.map(x=>x.title+"\n\n"+x.why+"\n\nWhat's in it for partners\n"+x.share+(x.points.length?"\n"+x.points.map(z=>"- "+z).join("\n"):"")+"\n\nWhat PAMs should do\n"+x.action+"\n\nOpen the PAM-to-Partner Email: "+x.url+(a.linkedin&&x===a.blocks[0]?"\nShare on your LinkedIn: "+a.linkedin:"")).join("\n\n")+(extras.length?"\n\nAdditional resources\n"+extras.map(x=>x.label+": "+x.url).join("\n"):"")+"\n\n"+a.closing}
+function textBody(){const a=article();const extras=[...a.featured,...a.blocks.flatMap(x=>x.resources)].filter((x,i,all)=>all.findIndex(y=>y.url===x.url)===i);return a.title+"\n\n"+a.intro+"\n\n"+a.blocks.map(x=>x.title+"\n\n"+x.why+"\n\nWhat's in it for partners\n"+x.share+(x.points.length?"\n"+x.points.map(z=>"- "+z).join("\n"):"")+(x.asset?"\nPreview the customer asset: "+x.asset:"")+(x.pmh?"\n\nHow partners can activate the campaign\n"+activationCopy+"\nOpen the PMH campaign: "+x.pmh:"")+"\n\nWhat PAMs should do\n"+x.action+"\n\nOpen the PAM-to-Partner Email: "+x.url+(a.linkedin&&x===a.blocks[0]?"\nShare on your LinkedIn: "+a.linkedin:"")).join("\n\n")+(extras.length?"\n\nAdditional resources\n"+extras.map(x=>x.label+": "+x.url).join("\n"):"")+"\n\n"+a.closing}
 function renderPreview(){const a=article(),root=$("preview");root.replaceChildren();const head=document.createElement("div");head.className="preview-head";const kicker=document.createElement("small");kicker.textContent="PARTNER NEWS / PAM ACTIVATION";const heading=document.createElement("h2");heading.textContent=a.title;const sub=document.createElement("p");sub.textContent="What partners need to know and how PAMs can help";head.append(kicker,heading,sub);
  const body=document.createElement("div");body.className="preview-body";const opening=document.createElement("p");opening.textContent=a.intro;body.append(opening);
  for(const b of a.blocks){const section=document.createElement("section");section.className="template-block";const h=document.createElement("h3");h.textContent=b.title;const item=selected()[a.blocks.indexOf(b)],src=artwork(item);if(src){const img=document.createElement("img");img.src=src;img.alt=item.title;img.loading="lazy";img.style.cssText="max-width:100%;max-height:200px;display:block;margin-bottom:12px";img.onerror=()=>img.remove();section.append(img)}section.append(h);
  const row=(title,copy)=>{const heading=document.createElement("h4");heading.style.cssText="color:#b00015;font-size:14px;margin:14px 0 5px";heading.textContent=title;const p=document.createElement("p");p.textContent=copy;section.append(heading,p)};
  const lead=document.createElement("p");lead.style.cssText="font-size:14px;line-height:1.65;margin:10px 0 16px";lead.textContent=b.why;section.append(lead);row("What's in it for partners",b.share);
  if(b.points.length){const ul=document.createElement("ul");ul.style.cssText="font-size:13px;color:#526271;padding-left:21px";b.points.forEach(s=>{const li=document.createElement("li");li.textContent=s;ul.append(li)});section.append(ul)}
+ section.insertAdjacentHTML("beforeend",campaignMarkup(b));section.querySelectorAll("a").forEach(a=>{a.target="_blank";a.rel="noopener noreferrer"});
  row("What PAMs should do",b.action);const cta=document.createElement("a");cta.href=b.url;cta.target="_blank";cta.rel="noopener noreferrer";cta.className="article-cta";cta.textContent="Open the PAM-to-Partner Email ↗";section.append(cta);
  if(a.linkedin&&b===a.blocks[0]){const social=document.createElement("p");social.style.cssText="margin:6px 0 12px";const l=document.createElement("a");l.href=a.linkedin;l.target="_blank";l.rel="noopener noreferrer";l.textContent="Share on your LinkedIn ↗";l.style.color="#0a66c2";social.append(l);section.append(social)}
  body.append(section)}
@@ -176,14 +190,22 @@ function update(){if(!savedDraft)syncDefaults();renderEdits();renderPreview();$(
 function renderEdits(){const root=$("summaries");root.replaceChildren();selected().forEach(e=>{
  const defaults=guidance(e),edits=state.sectionEdits[e.id]||{},block=document.createElement("div");block.className="summary-edit";
  const title=document.createElement("strong");title.textContent=newsName(e);block.append(title);
+ if(e.assetURL){
+  const label=document.createElement("label");label.textContent="PMH campaign link for this asset";
+  const input=document.createElement("input");input.type="url";input.placeholder="Paste the partner-facing campaign URL";input.value=edits.campaignURL??e.pmh??"";
+  const note=document.createElement("small");const explain=()=>{note.textContent=campaignFor(e)?"Included in the post and partner email.":"No campaign linked. The post will offer the asset for direct sharing."};explain();
+  input.onchange=()=>{const raw=input.value.trim();if(raw&&!campaignURL(raw)){status("Enter a partner-facing PMH campaign URL for "+e.title,true);input.value=campaignFor(e);return}
+   (state.sectionEdits[e.id]??={}).campaignURL=raw;update();renderChoices()};
+  label.append(input);block.append(label,note);
+ }
  const fields=[["why","Lead paragraph (no heading)"],["share","What's in it for partners"],["action","What PAMs should do"]];
  fields.forEach(([key,label])=>{const fieldLabel=document.createElement("label");fieldLabel.textContent=label;const ta=document.createElement("textarea");ta.value=edits[key]??defaults[key];ta.setAttribute("aria-label",label+" for "+e.title);ta.style.minHeight="115px";ta.addEventListener("input",()=>{state.sectionEdits[e.id]??={};state.sectionEdits[e.id][key]=ta.value;renderPreview();$("embedCode").value=""});block.append(fieldLabel,ta)});
  root.append(block)
 })}
-function visible(){const q=$("search").value.toLowerCase().trim(),cat=$("category").value;let arr=$("filter").value==="recent"?state.emails.slice(0,20):state.emails;return arr.filter(e=>(!cat||e.category===cat)&&(!$("source").value||e.source===$("source").value)&&(!$("region").value||(e.region||"Global")===$("region").value)&&(!q||[e.title,e.category,e.subject,e.kind,e.topic].join(" ").toLowerCase().includes(q)))}
-function renderChoices(){const list=visible(),root=$("emails");root.replaceChildren();for(const e of list){const label=document.createElement("label");label.className="email-choice";const cb=document.createElement("input");cb.type="checkbox";cb.checked=state.selected.has(e.id);cb.addEventListener("change",()=>{cb.checked?state.selected.add(e.id):state.selected.delete(e.id);renderChoices();update()});const span=document.createElement("span");const strong=document.createElement("strong");strong.textContent=e.title;const small=document.createElement("small");small.textContent=[e.source,e.category,e.region].filter(Boolean).join(" · ");span.append(strong,small);label.append(cb,span);root.append(label)}$("count").textContent=list.length+" shown · "+state.selected.size+" selected · "+state.emails.length+" in Hub";if(!list.length)root.textContent="No matching items. Try another source, region or search term."}
+function visible(){const q=$("search").value.toLowerCase().trim(),cat=$("category").value;let arr=$("filter").value==="recent"?state.emails.slice(0,20):state.emails;return arr.filter(e=>(!$("campaignFilter").value||($("campaignFilter").value==="linked")===!!campaignFor(e))&&(!cat||e.category===cat)&&(!$("source").value||e.source===$("source").value)&&(!$("region").value||(e.region||"Global")===$("region").value)&&(!q||[e.title,e.category,e.subject,e.kind,e.topic].join(" ").toLowerCase().includes(q)))}
+function renderChoices(){const list=visible(),root=$("emails");root.replaceChildren();for(const e of list){const label=document.createElement("label");label.className="email-choice";const cb=document.createElement("input");cb.type="checkbox";cb.checked=state.selected.has(e.id);cb.addEventListener("change",()=>{cb.checked?state.selected.add(e.id):state.selected.delete(e.id);renderChoices();update()});const span=document.createElement("span");const strong=document.createElement("strong");strong.textContent=e.title;const small=document.createElement("small");small.textContent=[e.source,e.category,e.region,campaignFor(e)?"PMH campaign linked":""].filter(Boolean).join(" · ");span.append(strong,small);label.append(cb,span);root.append(label)}$("count").textContent=list.length+" shown · "+state.selected.size+" selected · "+state.emails.length+" in Hub";if(!list.length)root.textContent="No matching items. Try another source, region or search term."}
 async function fetchJson(p){const r=await fetch(p+"?v="+Date.now(),{cache:"no-store"});if(!r.ok)throw new Error("Could not load "+p);return r.json()}
-async function refresh(){status("");$("count").textContent="Loading emails…";try{const feeds=await Promise.all([fetchJson("./pam-email-repository.json"),fetchJson("./pam-uploaded-emails.json"),fetchJson("./pam-partner-submissions.json").catch(()=>({emails:[]}))]);const ids=new Set();const catalog=await loadResources();state.emails=[...feeds.flatMap(f=>f.emails||[]).map(e=>({...e,source:"Partner email"})),...catalog].filter(e=>{if(!e.id||!e.subject||!e.title||isLegacy(e)||ids.has(e.id))return false;ids.add(e.id);return true}).sort((a,b)=>getDate(b)-getDate(a)||a.title.localeCompare(b.title));const previousRegion=$("region").value;$("region").replaceChildren(new Option("All regions",""));for(const r of [...new Set(state.emails.map(e=>e.region||"Global"))].sort())$("region").add(new Option(r,r));$("region").value=previousRegion;const old=$("category").value;const categories=[...new Set(state.emails.map(e=>e.category).filter(Boolean))].sort();$("category").replaceChildren(new Option("All categories",""));for(const x of categories)$("category").add(new Option(x,x));if(categories.includes(old))$("category").value=old;
+async function refresh(){status("");$("count").textContent="Loading emails…";try{const feeds=await Promise.all([fetchJson("./pam-email-repository.json"),fetchJson("./pam-uploaded-emails.json"),fetchJson("./pam-partner-submissions.json").catch(()=>({emails:[]}))]);const ids=new Set();const catalog=await loadResources();state.emails=[...feeds.flatMap(f=>f.emails||[]).map(e=>({...e,source:"Partner email"})),...catalog].filter(e=>{if(!e.id||!e.subject||!e.title||isLegacy(e)||ids.has(e.id))return false;ids.add(e.id);return true}).sort((a,b)=>getDate(b)-getDate(a)||a.title.localeCompare(b.title));connectCampaigns(state.emails);const previousRegion=$("region").value;$("region").replaceChildren(new Option("All regions",""));for(const r of [...new Set(state.emails.map(e=>e.region||"Global"))].sort())$("region").add(new Option(r,r));$("region").value=previousRegion;const old=$("category").value;const categories=[...new Set(state.emails.map(e=>e.category).filter(Boolean))].sort();$("category").replaceChildren(new Option("All categories",""));for(const x of categories)$("category").add(new Option(x,x));if(categories.includes(old))$("category").value=old;
 if(savedDraft){const ids=new Set(state.emails.map(e=>e.id));state.selected=new Set((savedDraft.ids||[]).filter(x=>ids.has(x)));state.summaryEdits=savedDraft.edits||{};state.sectionEdits=savedDraft.sections||{};for(const x of ["headline","intro","closing","linkedinUrl","featuredLabel1","featuredUrl1","featuredLabel2","featuredUrl2"])if(typeof savedDraft[x]==="string")$(x).value=savedDraft[x]}else{state.selected.forEach(x=>{if(!ids.has(x))state.selected.delete(x)})}
 state.ready=true;renderChoices();update();if(savedDraft)renderPreview()}catch(e){status("Unable to load email templates: "+e.message,true);$("count").textContent="Loading failed"}}
 async function copyText(s){try{await navigator.clipboard.writeText(s);status("Copied successfully");return true}catch(e){const t=$("manualCopy");t.hidden=false;t.value=s;t.focus();t.select();status("Clipboard blocked in this browser. The content is selected below. Press Ctrl+C to copy.",true);return false}}
@@ -196,7 +218,7 @@ function iframe(){if(!selected().length){status("Select at least one email templ
 if($("linkedinUrl").value.trim()&&!linkedIn()){status("That does not look like a LinkedIn post URL. Please check the link.",true);return ""}
 const u=embedURL();if(u.length>12000){status("The embed is too long. Select fewer templates or shorten the optional descriptions.",true);return ""}
 const code='<iframe src="'+esc(u)+'" width="100%" height="1400" style="border:none;width:100%" loading="lazy" title="Hitachi Vantara PAM Email Announcement"></iframe>';$("embedCode").value=code;status("Embed generated. Copy the code below into a SharePoint web page Embed web part.");return code}
-function connect(){for(const id of ["headline","intro","closing","linkedinUrl","featuredLabel1","featuredUrl1","featuredLabel2","featuredUrl2"])$(id).addEventListener("input",()=>{edited.add(id);if(id.startsWith("featured"))featuredAuto=false;renderPreview();$("embedCode").value=""});for(const id of ["filter","category","source","region"])$(id).addEventListener("change",renderChoices);$("search").addEventListener("input",renderChoices);
+function connect(){for(const id of ["headline","intro","closing","linkedinUrl","featuredLabel1","featuredUrl1","featuredLabel2","featuredUrl2"])$(id).addEventListener("input",()=>{edited.add(id);if(id.startsWith("featured"))featuredAuto=false;renderPreview();$("embedCode").value=""});for(const id of ["filter","category","source","region","campaignFilter"])$(id).addEventListener("change",renderChoices);$("search").addEventListener("input",renderChoices);
 $("selectVisible").onclick=()=>{visible().forEach(e=>state.selected.add(e.id));renderChoices();update()};
 $("clear").onclick=()=>{state.selected.clear();renderChoices();update()};
 $("reload").onclick=refresh;
@@ -211,10 +233,47 @@ window.addEventListener("error",e=>status("Builder error: "+e.message,true));
 function secureURL(value){
  try{const url=new URL(value);return url.protocol==="https:"&&!url.username&&!url.password?url.href:""}catch{return ""}
 }
+function campaignURL(raw){
+ const secure=secureURL(raw);if(!secure)return "";
+ let u=new URL(secure);
+ if(u.hostname.endsWith(".safelinks.protection.outlook.com")){
+  const target=secureURL(u.searchParams.get("url"));if(!target)return "";u=new URL(target);
+ }
+ if(!/^(?:www\.)?partnermarketing\.hitachivantara\.com$|^hitachivantara\.atworkweb\.com$|^(?:app\.)?structured\.ai$|^stwb\.co$/i.test(u.hostname))return "";
+ return u.pathname!=="/"&&!/^\/(?:home|login|signin)\/?$/i.test(u.pathname)?u.href:"";
+}
+function campaignFor(item){return item.assetURL&&state.sectionEdits[item.id]?.campaignURL!==undefined?campaignURL(state.sectionEdits[item.id].campaignURL):item.pmh||""}
 function sourceLinks(email){
  const doc=new DOMParser().parseFromString(email.htmlBody||"","text/html");
  const links=[...(email.links||[]),...Array.from(doc.querySelectorAll("a[href]"),a=>({label:a.textContent.trim()||a.querySelector("img")?.alt,url:a.getAttribute("href")}))];
  return links.filter(x=>x.label&&secureURL(x.url)&&!/unsubscribe|privacy|view in browser|manage preferences/i.test(x.label));
+}
+// Published emails containing the activation link for these specific assets.
+const assetTemplates={
+ "451-research-rising-data-challenges-drive-storage-modernization-analyst-report-16": "uploaded-campaign-20261111-04",
+ "buyer-s-guide-for-cyber-resilient-data-infrastructure-ebook-43": "uploaded-campaign-20261111-05",
+ "cyber-resilience-for-dummies-ebook-57": "uploaded-campaign-20261111-07",
+ "hitachi-everflex-success-stories-how-six-organizations-modernized-without-owning-the-risk--110": "uploaded-campaign-20261111-01",
+ "how-hitachi-block-storage-delivers-eight-nines-availability-whitepaper-131": "uploaded-campaign-20261111-08",
+ "hybrid-cloud-buyer-s-guide-ebook-ebook-136": "uploaded-campaign-20261111-02",
+ "mit-tech-review-adapting-to-new-threats-with-proactive-cyber-risk-management-analyst-repor-155": "uploaded-campaign-20261111-03",
+ "navigating-complexity-and-cost-with-hitachi-everflex-whitepaper-164": "uploaded-campaign-20261111-09",
+ "protect-smarter-recover-faster-your-guide-to-data-protection-as-a-service-ebook-175": "uploaded-campaign-20261111-12",
+ "resilient-by-design-how-hitachi-vantara-vm2020-and-index-engines-deliver-faster-validated--184": "uploaded-campaign-20261111-13",
+ "solve-the-six-data-storage-challenges-ebook-ebook-192": "uploaded-campaign-20261111-14",
+ "university-mary-hardin-baylor-shaping-outstanding-digital-learning-experiences-with-a-reli-236": "uploaded-campaign-20261111-15",
+ "resilient-by-design-how-hitachi-vantara-vm2020-and-index-engines-deliver-faster-validated-": "uploaded-campaign-20261111-13"
+};
+function connectCampaigns(items){
+ const byId=new Map(items.map(x=>[x.id,x]));
+ for(const item of items.filter(x=>!x.assetURL)){
+  const link=sourceLinks(item).find(x=>/activat.*campaign|ready.to.launch marketing campaign|block for mainframe campaign/i.test(x.label)&&campaignURL(x.url));
+  item.pmh=link?campaignURL(link.url):"";
+ }
+ for(const item of items.filter(x=>x.assetURL&&!x.pmh)){
+  const template=byId.get(assetTemplates[item.originalId]);
+  if(template?.pmh)item.pmh=template.pmh;
+ }
 }
 const covers=new Map();
 async function loadResources(){
@@ -237,11 +296,11 @@ async function loadResources(){
 }
 function resource(x,source,kind,url,campaign,date){
  const links=[{label:x.title,url}];
- if(secureURL(campaign))links.push({label:"PMH Campaign · "+x.title,url:campaign});
- return {id:source+"-"+x.id,originalId:x.id,source,kind,assetURL:url,links,subject:x.title,title:x.title,category:x.campaign||kind,region:x.region,topic:x.useCase,body:x.abstract||"",value:x.whyUse||"",addedDate:date};
+
+ return {id:source+"-"+x.id,originalId:x.id,pmh:campaignURL(campaign),source,kind,assetURL:url,links,subject:x.title,title:x.title,category:x.campaign||kind,region:x.region,topic:x.useCase,body:x.abstract||"",value:x.whyUse||"",addedDate:date};
 }
 function copilotText(){
- return "Create a new Partner Pulse SharePoint News draft for internal Hitachi Vantara Partner Account Managers using a Made for email template. Keep the approved wording and destinations below. Use native headings, text, images and links. Place each PAM email CTA beneath its story, then the optional LinkedIn link. Put additional resources at the bottom. Leave the draft for review.\n\n"+textBody();
+ return "Create a new Partner Pulse SharePoint News draft for internal Hitachi Vantara Partner Account Managers using a Made for email template. Keep the approved wording and destinations below. Use native headings, text, images and links. Present the customer asset and its value first, then its linked PMH campaign and activation instructions. Only claim PMH availability for items with a campaign link. Place each PAM email CTA beneath its story, then the optional LinkedIn link. Put additional resources at the bottom. Leave the draft for review.\n\n"+textBody();
 }
 function artwork(item){
  const path=covers.get(item.originalId);
