@@ -42,7 +42,7 @@ Each article in the SharePoint iframe, formatted Outlook email, and native Share
 - Available approved promotional links from the Content Library.
 - **Share & Create:** **Create Customer Email** (when a shareable asset URL exists), **Create PAM-to-Partner Email**, and **Overview Slide**, linking to the same tools used by that asset's Content Library card.
 - **Asset details:** available campaign, use case, funnel stage, ownership, audience, region, status, publish date, promotion period and primary activation from the source.
-- Unavailable resource links are omitted, not replaced with broken placeholders. Calendar actions for already-passed webinars are not included.
+- Unavailable resource links are omitted, not replaced with broken placeholders. Upcoming webinars link back to their Content Library card for the **Add to calendar** action; already-passed webinar calendar actions are omitted.
 
 These are internal enablement actions and metadata. Check the recipients before emailing the announcement outside the organization.
 
