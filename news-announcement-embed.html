@@ -11,7 +11,7 @@ section.asset{padding:27px 36px;border-bottom:1px solid #e2e6eb}.asset-main{disp
 .category{color:#b40919;font-size:11px;font-weight:bold;letter-spacing:1px;text-transform:uppercase}
 .asset h2{font-size:22px;line-height:1.3;margin:9px 0;color:#111b2b}.description{font-size:14px;color:#485661;line-height:1.65;margin:10px 0 17px}
 .cta{display:inline-block;background:#e60012;color:white!important;padding:12px 16px;border-radius:4px;font-size:13px;font-weight:bold;text-decoration:none}
-.resources{margin-top:20px}.resources h3{font-size:15px;margin:0 0 11px}.resources-grid{display:flex;flex-wrap:wrap;gap:9px}.resources a{display:inline-block;border:1px solid #dce1e7;border-radius:5px;color:#b20617;padding:9px 12px;font-size:12px;font-weight:bold;text-decoration:none}.resources a:hover{text-decoration:underline}
+.resources{margin-top:20px}.resources h3{font-size:15px;margin:0 0 11px}.resources-grid{display:flex;flex-wrap:wrap;gap:9px}.resources a{display:inline-block;border:1px solid #dce1e7;border-radius:5px;color:#b20617;padding:9px 12px;font-size:12px;font-weight:bold;text-decoration:none}.resources a:hover{text-decoration:underline}.asset-details{margin-top:17px;padding:15px 18px;border:1px solid #e2e8ef;border-radius:6px;background:#f8fafc}.asset-details h3{margin:0 0 9px;font-size:13px;color:#182639}.details-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 14px;font-size:12px;line-height:1.55;color:#475565}@media(max-width:600px){.details-grid{grid-template-columns:1fr}}
 .activation-footer{margin:26px 34px 30px;background:#f6f7f9;border:1px solid #e3e7eb;border-radius:8px;padding:25px 28px}.activation-footer h2{font-size:20px;color:#111b2b;margin:0 0 10px}.activation-footer p{font-size:14px;line-height:1.65;color:#52616e;margin:0 0 17px}.activation-footer a{display:inline-block;background:#d60016;color:white;text-decoration:none;font-weight:bold;font-size:13px;padding:12px 18px;border-radius:5px}.activation-footer a:hover{background:#ae0012}.global-hub-footer{margin:0 34px 34px;min-height:240px;overflow:hidden}.global-hub-footer iframe{display:block;width:100%;height:240px;border:0;background:#fff;overflow:hidden}@media(max-width:600px){.global-hub-footer{margin:0 20px 24px}.global-hub-footer iframe{height:265px}}#warning{padding:15px 36px;color:#8c4c00;background:#fff7e7;font-size:13px}.loading{padding:26px;color:#586671}
 @media(max-width:600px){header{padding:26px 22px}header h1{font-size:23px}.intro{padding:20px 20px 8px}section.asset{padding:22px 20px}.asset-main{gap:15px}.cover{width:95px;max-height:130px}.asset h2{font-size:18px}}
 </style></head>
@@ -30,6 +30,24 @@ const fields=x=>[
  ['Enterprise outbound email banner',x.outboundBannerEnterprise],
  ['Marketo Email Preview',x.marketoPreviewEnterprise],['Paid Media',x.paidSocialAds]
 ].filter(([,url])=>/^https?:\/\//i.test(String(url||'').trim()));
+function shareActionLinks(x){
+ const args=new URLSearchParams({source:'content',title:x.title||'',description:x.abstract||'',url:x.url||''});
+ const customer=new URLSearchParams(args);customer.set('useCase',x.useCase||'');customer.set('campaign',x.campaign||'');
+ return [
+  ...(/^https?:\/\//i.test(x.url||'')?[['Create Customer Email',ROOT+'customer-email-hub.html?'+customer.toString()]]:[]),
+  ['Overview Slide',ROOT+'build-slide.html?v=20261112-3&id='+encodeURIComponent(x.id)],
+  ['Create PAM-to-Partner Email',ROOT+'pam-email-hub.html?'+args.toString()]
+ ];
+}
+function assetDetails(x){
+ return [
+ ['Campaign',x.campaign],['Use case',x.useCase],['Funnel stage',x.funnelStage],
+ ['Owner team',x.ownerTeam],['Owner individual',x.ownerIndividual],
+ ['Audience',x.audience],['Region',x.region],['Status',x.status],
+ ['Publish date',x.publishDateDisplay],['Promotion period',x.promotionPeriod],
+ ['Primary activation',x.primaryActivation]
+ ].filter(([,value])=>String(value||'').trim());
+}
 function imageFor(x,imageIds){
  const image=x.approvedNewsImageUrl;
  if(image && /^https:\/\//i.test(image) && !/^https:\/\/hitachivantara\.sharepoint\.com\//i.test(image))return image;
@@ -49,7 +67,9 @@ function renderAsset(x,imageIds){
  +'<h2>'+e(title(x.title))+'</h2>'
  +'<p class="description">'+e(x.abstract||x.notes||'An approved description has not yet been provided in Smartsheet.')+'</p>'
  +'<a class="cta" href="'+e(card(x))+'" target="_blank" rel="noopener noreferrer">Explore asset &amp; activation resources ↗</a></div></div>'
- +(resources.length?'<div class="resources"><h3>Available activation resources</h3><div class="resources-grid">'+resources.map(([label,url])=>'<a href="'+e(url)+'" target="_blank" rel="noopener noreferrer">'+e(label)+' ↗</a>').join('')+'</div></div>':'');
+ +(resources.length?'<div class="resources"><h3>Available activation resources</h3><div class="resources-grid">'+resources.map(([label,url])=>'<a href="'+e(url)+'" target="_blank" rel="noopener noreferrer">'+e(label)+' ↗</a>').join('')+'</div></div>':'')
+ +'<div class="resources"><h3>Share &amp; create</h3><div class="resources-grid">'+shareActionLinks(x).map(([label,url])=>'<a href="'+e(url)+'" target="_blank" rel="noopener noreferrer">'+e(label)+' ↗</a>').join('')+'</div></div>'
+ +(assetDetails(x).length?'<div class="asset-details"><h3>Asset details</h3><div class="details-grid">'+assetDetails(x).map(([label,value])=>'<div><strong>'+e(label)+':</strong> '+e(value)+'</div>').join('')+'</div></div>':'');
  return div;
 }
 async function start(){
