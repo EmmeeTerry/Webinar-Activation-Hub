@@ -6,7 +6,7 @@ The builder uses one source of truth, the Smartsheet-synced Content Library. It 
 
 ## 1. Select and review content
 
-Use the visible **Artwork, News status, Publish date, and Sort** filters to find the right assets. Select an asset and click **+ Add selected asset to announcement**. Repeat for multiple assets. Confirm the selected content chips. The single combined preview is below the publishing actions. Check descriptions, artwork, working resource links and Smartsheet approval before distributing.
+Use the visible **Artwork, News status, Publish date, and Sort** filters to find the right assets. Select an asset and click **+ Add selected asset to announcement**. Repeat for multiple assets. Confirm the selected content chips. The single combined preview is above the publishing actions. Check descriptions, artwork, working resource links and Smartsheet approval before distributing.
 
 ## 2. Choose ONE of two publishing workflows
 
@@ -14,7 +14,7 @@ Use the visible **Artwork, News status, Publish date, and Sort** filters to find
 **Use if you want one SharePoint news post that is also sent as a full-body SharePoint email.**
 
 1. Click **1. Copy content + links** and **2. Save approved covers**.
-2. Click **3. Open SharePoint news template**. Create a *new* **Made for email** news post or an approved email-compatible copy of the template. Do not edit the original template.
+2. Click **3. Open SharePoint news template** ([SharePoint Content Sharing Template](https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Content-Sharing-Template.aspx)). Create a *new* **Made for email** news post or an approved email-compatible copy of the template. Do not edit the original template.
 3. Paste the content into native **Text** web parts and add covers separately through native **Image** web parts.
 4. Check the SharePoint page and **Send as email → Preview**. Publish and send only after approval.
 
@@ -25,7 +25,7 @@ Use the visible **Artwork, News status, Publish date, and Sort** filters to find
 
 **Part 1: Publish the SharePoint page**
 1. Click **1. Copy SharePoint iframe** (and **Preview branded SharePoint page** if needed).
-2. Create a new SharePoint page, insert an **Embed** web part and paste the iframe.
+2. Open the [SharePoint Content Sharing Template](https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Content-Sharing-Template.aspx), create a **new copy** without changing the original, insert an **Embed** web part and paste the iframe.
 3. Review and publish the page after approval. The iframe includes all selected assets and both resource footers.
 
 **Part 2: Send the matching Outlook announcement**
