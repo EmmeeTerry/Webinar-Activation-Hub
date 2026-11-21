@@ -1,39 +1,51 @@
 # Global Campaigns | Content Announcement Builder
-## Team quick start for Suchi and Steph
+## Quick team instructions
 
 **Builder:** https://emmeeterry.github.io/Webinar-Activation-Hub/news-publisher.html
 
-**Purpose:** Prepare approved Global Campaigns content announcements from the Content Library, using the data synchronized from Smartsheet. Do not recreate content cards or maintain a separate list of links.
+Use the builder to prepare announcements from the Smartsheet-synced Content Library. It assembles the selected titles, approved descriptions, images and available promotional links. There is no need to recreate resource cards or maintain a second list of links.
 
-### The standard workflow: SharePoint News that can also be emailed
+### Start here for EVERY announcement
+1. Search or filter content. Choose an asset and click **+ Add selected asset to announcement**. Repeat to include multiple assets. Only added assets are included.
+2. Review the combined announcement preview. Check descriptions, titles, artwork, links and Smartsheet approval status. *Ready for review* does not mean approved to publish.
+3. Choose the publishing method below. Nothing is published or sent by the builder.
 
-1. **Find and select approved content.** Search/filter, choose an asset, and click **+ Add selected asset to announcement**. Repeat for multiple assets. Only assets you explicitly add appear in the combined announcement.
-2. **Review the combined preview.** Verify full titles, the approved Smartsheet descriptions, available artwork and promotional resource links. Confirm actual editorial/News Announcement approval status in Smartsheet. *Ready for review* does not mean approved to publish.
-3. **1. Copy page title.** The title includes all selected asset titles in selection order.
-4. **2. Copy text + links.** The builder copies a formatted HTML/text fragment for a SharePoint **Text** web part. SharePoint may simplify styling. This does **not** copy artwork into SharePoint.
-5. **3. Download approved covers.** In Chrome/Edge choose a local folder, or use the downloaded ZIP where the folder picker is unavailable. The builder attempts to save every selected cover and tells you if an image could not be retrieved. Unzip if necessary and upload covers into the appropriate native SharePoint **Image** web parts. Saving locally does not upload to SharePoint unless the folder is actually OneDrive-synced.
-6. **4. Open SharePoint template.** Use the **Content Sharing Template**, make **New → Copy of this post** when available, and never overwrite the original. If you intend to distribute the full article by email, start with an approved **Made for email** news template; a generic copied post is not guaranteed to support it. Paste your title and copy, and add covers as native Image web parts.
-7. **Review before publishing.** Confirm that text, images, links and spacing look right in the SharePoint page. For full-body email, use **Send as email → Preview** and verify the entire article appears. Obtain normal approval before publishing or sending.
-8. **Record publication.** After publishing, update the source Smartsheet row(s) with the published news URL and date and the correct News Announcement status.
+### A. SharePoint News + SharePoint's full-body email
+**Use when the same news post must appear on SharePoint and in a SharePoint email.**
 
-**Important limitation:** A pasted Text web part will not look identical to the custom web iframe. SharePoint can alter inline styles and won't reliably paste images. A native, email-supported SharePoint layout is the reliable path for full-body SharePoint emails.
+- Use **Copy all selected titles**, **1. Copy text + links**, **2. Save approved covers**, and **3. Open SharePoint template**.
+- Create a new **Made for email** news post or an approved copy of the original template. Never edit the original.
+- Paste the copied content into a SharePoint **Text** web part. Add each approved image separately using native **Image** web parts. The pasted HTML may be restyled by SharePoint and is not a pixel-perfect match for the iframe.
+- Check the **SharePoint page preview** AND **Send as email → Preview** before publishing. Obtain sign-off. Once published, update Smartsheet News Announcement status, published URL and date.
+- Local image downloads are not automatically SharePoint uploads unless your selected folder is actually OneDrive-synced.
 
-### Optional: fully branded web-only page
+### B. SharePoint branded web embed
+**Use when the priority is the polished, full branded experience on a SharePoint page, not full-body SharePoint news email.**
 
-Expand **Other publishing options → Web-only: full branded iframe**, preview the rendered page and click **Copy web iframe code**. Paste into a SharePoint **Embed** web part. This includes the combined assets, their available covers, and both shared resource footers. It looks closest to the original design, but **cannot be sent as a full-body SharePoint News email**. If the page itself must be emailed, use a link to the web page or use the standard native-news path above.
+- Click **Preview branded page**, then **Copy iframe for SharePoint**.
+- Create a new SharePoint page. Add an **Embed** web part and paste the copied iframe code.
+- The iframe includes all added assets, available cover art, resource links and two shared footer sections.
+- An iframe is **not** included when SharePoint sends a full-body News email. If sharing by email, send a link to the published page or use Outlook option C.
 
-### Optional: separate email from an HTML-capable platform
+### C. Formatted Outlook email
+**Use to send a designed announcement directly from Outlook, separately from SharePoint's Send as email.**
 
-Under **Other publishing options → Separate email outside SharePoint**, use **Copy formatted email** or **Download email HTML file**. This is for an editor that supports HTML and is **not** a direct input to SharePoint's Send as email. Verify external image loading and test-send.
+- Click **Copy formatted email + open Outlook**.
+- **Important: Outlook opens with a blank email body.** The builder attempts to copy the designed email to your clipboard at the same time.
+- Wait for the builder's **Copied!** confirmation, then click inside the blank Outlook message and press **Ctrl+V**.
+- The subject is prefilled. Verify the covers, links and styling; add recipients and send yourself a test first.
+- If automatic copy fails, click **Copy email only** and paste into Outlook. **Download formatted Outlook .eml** is another option, but some Outlook versions open .eml files read-only.
+- The Outlook option includes selected covers where accessible via public image URLs, and can render differently in some email clients.
 
-### Advanced only
+### Keep it clean
 
-The Copilot briefing and technical ZIP are tucked into **Advanced**. In the tested Microsoft Copilot session, the available tools couldn't create or edit the modern SharePoint page. Do not treat these files as finished pages or publication actions.
+- Use approved descriptions and resources from the Smartsheet Content Mapping Master List and the Content Library. Fix missing or incorrect source information there.
+- Never create duplicate content inventories, manually redraw resource cards, or email screenshots in place of working Hub links.
+- Preview and obtain approval before publishing or sending.
+- **Optional/advanced tools** (Copilot and developer exports) are not needed for the normal process and do not create a SharePoint page.
 
-### Useful links
+**Useful links**
 
-- **Content Library:** https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Content-Library.aspx
-- **Content Sharing Template:** https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Content-Sharing-Template.aspx
-- **Announcement Builder:** https://emmeeterry.github.io/Webinar-Activation-Hub/news-publisher.html
-
-**Source of truth:** Smartsheet Content Mapping Master List, as synchronized into the Content Library. Correct missing descriptions, links, or artwork in the source workflow, not in a separate announcement spreadsheet.
+- [Content Announcement Builder](https://emmeeterry.github.io/Webinar-Activation-Hub/news-publisher.html)
+- [Content Sharing Template](https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Content-Sharing-Template.aspx)
+- [Content Library](https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Content-Library.aspx)
