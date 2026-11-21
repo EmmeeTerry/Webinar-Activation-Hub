@@ -289,7 +289,7 @@ function emailMarkup(records,inlineImages={},mode='standard'){
   const description=td('<p style="font-size:16px;line-height:1.68;color:#425267;margin:0 0 20px">'+esc(descr)+'</p>');
   const action=pasteSafe
    ?td('<p style="margin:3px 0 22px;font-family:'+font+';font-size:16px;line-height:1.5"><a href="'+esc(cardURL(x))+'" style="color:#b00019;text-decoration:underline;font-weight:bold">Explore asset &amp; activation resources &#8599;</a></p>')
-   :td('<table cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse"><tr><td bgcolor="#d5001b" style="background:#d5001b;padding:14px 20px"><a href="'+esc(cardURL(x))+'" style="font-size:15px;line-height:1.4;font-weight:700;color:#ffffff;text-decoration:none">Explore asset &amp; activation resources &nbsp; &#8599;</a></td></tr></table>','0 38px 24px');
+   :td('<table cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse"><tr><td bgcolor="#ffffff" style="background:#ffffff;border:2px solid #c9001b;padding:13px 18px"><a href="'+esc(cardURL(x))+'" style="font-family:'+font+';font-size:15px;line-height:1.4;font-weight:bold;color:#af0016;text-decoration:underline">Explore asset &amp; activation resources &nbsp; &#8599;</a></td></tr></table>','0 38px 24px');
   const links=resources.length?td('<p style="font-size:14px;line-height:1.5;font-weight:700;color:#142136;letter-spacing:.4px;margin:0 0 12px">AVAILABLE ACTIVATION RESOURCES</p>'+linkRows(resources),'0 38px 24px'):'';
   const share=actions.length?td('<p style="font-size:14px;line-height:1.5;font-weight:700;color:#142136;letter-spacing:.4px;margin:0 0 12px">SHARE &amp; CREATE</p>'+linkRows(actions),'0 38px 22px'):'';
   const details=articleDetailFields(x);
