@@ -6,7 +6,7 @@ The builder uses one source of truth, the Smartsheet-synced Content Library. It 
 
 ## 1. Select and review content
 
-Use the visible **Artwork, News status, Publish date, and Sort** filters to find the right assets. Select an asset and click **+ Add selected asset to announcement**. Repeat for multiple assets. Confirm the selected content chips. The single combined preview is above the publishing actions. Check descriptions, artwork, working resource links and Smartsheet approval before distributing.
+Use the visible **Artwork, News status, Publish date, and Sort** filters to find the right assets. Select an asset and click **+ Add selected asset to announcement**. Repeat for multiple assets. Confirm the selected content chips. The single combined preview is above the publishing actions. **Click the introduction, an article title or its description inside the preview to edit the announcement copy.** Your changes carry into SharePoint News copy, the branded SharePoint iframe and Outlook email (including the embedded-image .eml). Review the preview after editing and validate approved source links and artwork before distribution. The resource links stay sourced from Smartsheet and are not directly editable in the preview.
 
 ## 2. Choose ONE of two publishing workflows
 
@@ -57,7 +57,7 @@ The Customer Email and PAM-to-Partner Email tools launched from each content car
 
 ## 3. Keep the process efficient
 
-- Only one combined content preview is shown below the publishing buttons. It does not guarantee how Outlook or SharePoint will render.
+- The combined editable preview is shown **above** the publishing buttons. Use **Share these filters and selections → Save this view** to copy a reopenable link that includes your announcement edits. The actual email and SharePoint rendering can vary.
 - Filters are always visible. Saved views, Copilot exports and technical tools are optional.
 - Update incorrect source content in Smartsheet, not in recreated screenshots, copied resource cards or duplicate spreadsheets.
 - Confirm content approval. Never overwrite the original SharePoint template. After publishing, record the News Published URL, date and status in Smartsheet.
