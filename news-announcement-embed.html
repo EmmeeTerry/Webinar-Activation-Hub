@@ -4,7 +4,7 @@
 <style>
 *{box-sizing:border-box}html,body{margin:0;padding:0}body{font:14px Arial,Helvetica,sans-serif;color:#26313a;background:#fff}
 main{max-width:1050px;margin:0 auto}header{background:#111b2b;border-top:6px solid #e60012;color:white;padding:35px 38px}
-.eyebrow{font-size:11px;font-weight:bold;letter-spacing:1.45px;color:#e2e8f0}header h1{font-size:29px;line-height:1.25;margin:12px 0}header p{font-size:15px;line-height:1.55;color:#dde4ec;margin:0}
+.eyebrow{font-size:11px;font-weight:bold;letter-spacing:1.45px;color:#e2e8f0}header h1{font-size:29px;line-height:1.25;margin:12px 0;overflow-wrap:anywhere}header p{font-size:15px;line-height:1.55;color:#dde4ec;margin:0}
 .intro{padding:24px 36px 10px}.intro h2{font-size:20px;margin:0 0 8px;color:#111b2b}.intro p{font-size:14px;line-height:1.6;color:#586671;margin:0}
 section.asset{padding:27px 36px;border-bottom:1px solid #e2e6eb}.asset-main{display:flex;align-items:flex-start;gap:26px}
 .cover{width:150px;max-height:195px;object-fit:contain;flex:none;border-radius:5px;background:#f5f7f9;border:1px solid #e4e8ee}
@@ -39,13 +39,7 @@ function imageFor(x,imageIds){
  return '';
 }
 function announcementTitle(records){
- const titles=records.map(x=>title(x.title));
- if(titles.length===1)return 'New Resource: '+titles[0];
- const complete=titles.join(' | ');
- if(complete.length<=135)return 'New Content: '+complete;
- const first=titles[0],second=titles[1];
- const prefix='New Content: '+(first.length>60?first.slice(0,57).replace(/\s+\S*$/,'')+'…':first);
- return prefix+' + '+(titles.length-1)+' more '+(titles.length===2?'resource':'resources');
+ return records.map(x=>title(x.title)).join(' | ');
 }
 function renderAsset(x,imageIds){
  const resources=fields(x),art=imageFor(x,imageIds);
@@ -70,7 +64,7 @@ async function start(){
  const missing=ids.filter(id=>!map.has(id));
  if(!selected.length)throw Error('None of the selected assets were found in the Content Library.');
  const imageIds=new Set((manifest.images||[]).map(x=>x.id));
- document.getElementById('heading').textContent=announcementTitle(selected);
+ document.getElementById('heading').textContent=announcementTitle(selected);document.title=announcementTitle(selected)+' | Hitachi Vantara';
  document.getElementById('hero').hidden=false;document.getElementById('intro').hidden=false;document.getElementById('activationFooter').hidden=false;
  const parent=document.getElementById('assets');
  selected.forEach(x=>parent.appendChild(renderAsset(x,imageIds)));
