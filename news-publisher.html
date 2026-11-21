@@ -13,11 +13,11 @@
 <div class="grid compact-filters" id="customDates" hidden><div><label for="dateFrom">Published from</label><input id="dateFrom" type="date"></div><div><label for="dateTo">Published through</label><input id="dateTo" type="date"></div></div>
 <p class="hint" style="margin:7px 0 0">Dates use the Content Library publish date from Smartsheet. Assets without a publish date appear only under “Any date.”</p>
 <div class="saved-view-controls"><button id="saveView" class="secondary" type="button">Save this view ↗</button><span class="hint">Copy a shareable link with your current filters, sort order, selected asset and announcement selections.</span></div>
-<section class="batch-panel"><div class="batch-top"><div><strong>Create one announcement with multiple assets</strong><p class="hint">Choose an asset above, click Add, then repeat. Copy the complete announcement into SharePoint in one step.</p></div><button class="secondary" id="batchAdd" type="button">+ Add selected asset</button></div><div id="batchList" class="batch-items" aria-live="polite"><span class="hint">No assets selected yet.</span></div><div class="actions"><button id="batchCopy" disabled>Copy combined article (0)</button><button class="secondary" id="batchClear" disabled>Clear</button></div><div id="batchPreview" class="batch-preview" aria-label="Live combined announcement preview"><p class="hint">Add an asset to see the combined announcement preview here.</p></div><p class="hint">Your selections also power Step 1 and Step 2 below. Copy to SharePoint includes all selected assets with one navy header and no embedded images, avoiding SharePoint paste errors. Add approved covers through native SharePoint Image web parts.</p></section><div class="publish-actions news-primary">
+<section class="batch-panel"><div class="batch-top"><div><strong>Create one announcement with multiple assets</strong><p class="hint">Choose an asset above, click Add, then repeat. Copy the complete announcement into SharePoint in one step.</p></div><button class="secondary" id="batchAdd" type="button">+ Add selected asset</button></div><div id="batchList" class="batch-items" aria-live="polite"><span class="hint">No assets selected yet.</span></div><div class="actions"><button id="batchCopy" disabled>Copy combined article (0)</button><button class="secondary" id="batchClear" disabled>Clear</button></div><div id="batchPreview" class="batch-preview" aria-label="Live combined announcement preview"><p class="hint">Add an asset to see the combined announcement preview here.</p></div><p class="hint">Your selections also power Step 1 and Step 2 below. Download each approved cover individually from its asset chip, then upload it with a native SharePoint Image web part. The copy-to-SharePoint content excludes embedded images to avoid paste errors.</p></section><div class="publish-actions news-primary">
 <div class="publish-heading"><strong>Create a SharePoint news announcement</strong><span class="hint">Copy the approved asset information, then start a new page from your saved template.</span></div>
 <div class="grid"><div><label for="pageTitle">News title</label><input id="pageTitle"></div><div><label for="image">Approved image URL (optional)</label><input id="image" placeholder="Use only when replacing the displayed image"></div></div>
 <div class="actions" aria-label="Prepare SharePoint news announcement">
-<button id="copyTitle">1. Copy title</button><button id="copyRich">2. Copy to SharePoint</button><button id="saveImage" class="secondary">3. Save image for SharePoint</button><button id="sharepoint" class="secondary">4. Open SharePoint template</button>
+<button id="copyTitle">1. Copy title</button><button id="copyRich">2. Copy to SharePoint</button><button id="saveImage" class="secondary">3. Download approved image</button><button id="sharepoint" class="secondary">4. Open SharePoint template</button>
 </div>
 <p class="hint" style="margin:7px 0 0">Paste the article into a <b>new</b> page created from the <a href="https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Content-Sharing-Template.aspx" target="_blank" rel="noopener"><b>Content Sharing Template</b></a>, add the saved image in an Image web part, and review before publishing or emailing. <b>Do not edit the original template.</b></p>
 
@@ -159,7 +159,7 @@ function batchText(){return ['New Content & Activation Resources',...batchEntrie
 function renderBatch(){
  const el=$('batchList'),entries=batchEntries();el.replaceChildren();
  if(!entries.length){const empty=document.createElement('span');empty.className='hint';empty.textContent='No assets selected yet.';el.append(empty)}
- entries.forEach(x=>{const chip=document.createElement('span');chip.className='batch-chip';const name=document.createElement('span');name.textContent=title(x.title);const b=document.createElement('button');b.type='button';b.textContent='×';b.setAttribute('aria-label','Remove '+title(x.title));b.onclick=()=>{batchIds=batchIds.filter(id=>id!==x.id);renderBatch()};chip.append(name);const art=assetImage(x);if(art){const link=document.createElement('a');link.textContent='View cover ↗';link.href=art;link.target='_blank';link.rel='noopener noreferrer';link.style.cssText='color:#b20617;font-weight:bold;white-space:nowrap';chip.append(link)}chip.append(b);el.append(chip)});
+ entries.forEach(x=>{const chip=document.createElement('span');chip.className='batch-chip';const name=document.createElement('span');name.textContent=title(x.title);const b=document.createElement('button');b.type='button';b.textContent='×';b.setAttribute('aria-label','Remove '+title(x.title));b.onclick=()=>{batchIds=batchIds.filter(id=>id!==x.id);renderBatch()};chip.append(name);const art=assetImage(x);if(art){const download=document.createElement('button');download.type='button';download.textContent='Download cover ↓';download.title='Save approved cover for '+title(x.title);download.style.cssText='font-size:12px;color:#b20617;font-weight:bold;white-space:nowrap';download.onclick=()=>downloadAssetImage(x);chip.append(download)}chip.append(b);el.append(chip)});
  $('batchCopy').disabled=$('batchClear').disabled=!entries.length;
  $('batchCopy').textContent='Copy combined article ('+entries.length+')';
  $('copyRich').textContent=entries.length?'2. Copy '+entries.length+' assets to SharePoint':'2. Copy to SharePoint';
@@ -172,31 +172,49 @@ $('batchClear').onclick=()=>{batchIds=[];renderBatch()};
 
 $('batchCopy').onclick=copyRich;
 
-async function imageBlob(){if(!current||$('art').hidden||!$('art').complete||!$('art').naturalWidth)throw Error('Image not available.');let im=$('art');const cv=document.createElement('canvas');cv.width=im.naturalWidth;cv.height=im.naturalHeight;const ctx=cv.getContext('2d');ctx.drawImage(im,0,0);return await new Promise((resolve,reject)=>cv.toBlob(b=>b?resolve(b):reject(Error('Image conversion failed.')),'image/png'))}
-// Local browser-only folder access: never stores user image data or paths on GitHub.
-const IMAGE_FOLDER_DB='hvc-news-publisher',IMAGE_FOLDER_KEY='image-folder';
-function folderDB(){return new Promise((resolve,reject)=>{if(!window.indexedDB)return reject(Error('Browser cannot remember a folder.'));const req=indexedDB.open(IMAGE_FOLDER_DB,1);req.onupgradeneeded=()=>req.result.createObjectStore('settings');req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error||Error('Folder storage unavailable'));})}
-async function folderGet(){const db=await folderDB();return new Promise((resolve,reject)=>{const tx=db.transaction('settings','readonly');const q=tx.objectStore('settings').get(IMAGE_FOLDER_KEY);q.onsuccess=()=>{db.close();resolve(q.result||null)};q.onerror=()=>{db.close();reject(q.error)}})}
-async function folderSet(handle){const db=await folderDB();return new Promise((resolve,reject)=>{const tx=db.transaction('settings','readwrite');tx.objectStore('settings').put(handle,IMAGE_FOLDER_KEY);tx.oncomplete=()=>{db.close();resolve()};tx.onerror=()=>{db.close();reject(tx.error)}})}
-async function chooseImageFolder(){if(!window.showDirectoryPicker)throw Error('Folder saving requires desktop Chrome or Edge on a secure page. Use Download image instead.');const handle=await window.showDirectoryPicker({id:'hvc-news-image-folder',mode:'readwrite',startIn:'documents'});if(handle.name!=='Content Announcement Images')set('status','Selected folder: '+handle.name+'. Confirm it is your OneDrive-synced Content Announcement Images folder before saving.');else set('status','Folder selected: Content Announcement Images. Future saves will use this folder when permitted.');await folderSet(handle);return handle}
-async function saveImageToFolder(){if(!current)return;
-  // The first interaction has to invoke the native folder chooser directly.
-  if(!window.showDirectoryPicker){await downloadImage();return;}
-  try{
-    let handle=await folderGet().catch(()=>null);
-    if(!handle){handle=await chooseImageFolder();}
-    let permission=await handle.queryPermission({mode:'readwrite'});
-    if(permission!=='granted')permission=await handle.requestPermission({mode:'readwrite'});
-    if(permission!=='granted')throw Error('Folder access was not granted.');
-    if(handle.name!=='Content Announcement Images')throw Error('Choose the locally synced Content Announcement Images folder to save automatically. The provided SharePoint URL is a browser link, not a writable local directory.');
-    const blob=await imageBlob();const filename=(current.id||'announcement-artwork')+'.png';
-    const file=await handle.getFileHandle(filename,{create:true});const output=await file.createWritable();await output.write(blob);await output.close();
-    set('status','Saved '+filename+' to your local Content Announcement Images folder. OneDrive will sync it to SharePoint when connected. Use View SharePoint image folder to verify.');
-  }catch(e){if(e.name!=='AbortError')set('status','Unable to save directly: '+e.message+' Download the image and upload it using the View SharePoint image folder link.')}
+// Save the original supplied image bytes rather than extracting them from the preview canvas.
+// This supports same-origin WebP assets and embedded artwork and avoids cross-origin canvas failures.
+function imageSourceForDownload(x){
+ if(!x)return '';
+ const custom=x.id===current?.id?$('image').value.trim():'';
+ if(/^https:\/\//i.test(custom))return custom;
+ return assetImage(x);
 }
-async function changeImageFolder(){try{await chooseImageFolder()}catch(e){if(e.name!=='AbortError')set('status','Cannot choose folder: '+e.message+' Download image instead.');}}
-
-async function downloadImage(){try{const blob=await imageBlob();const u=URL.createObjectURL(blob);const a=document.createElement('a');a.href=u;a.download=(current.id||'news-artwork')+'.png';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),1500);set('status','PNG image downloaded. Upload it to the native SharePoint news Image web part.')}catch(e){set('status','Cannot download image: '+e.message+'. Open the approved source file instead.')}} 
+async function downloadAssetImage(x){
+ if(!x)return;
+ const src=imageSourceForDownload(x);
+ if(!src){set('status','No downloadable approved image is available for '+title(x.title)+'. Add an approved image link in Smartsheet.');return}
+ try{
+  let blob,mime='';
+  if(src.startsWith('data:')){
+   const response=await fetch(src);blob=await response.blob();mime=blob.type;
+  }else{
+   const url=new URL(src,location.href);
+   // Browsers cannot read many protected SharePoint and third-party image URLs.
+   const response=await fetch(url.href,{mode:'cors',credentials:url.origin===location.origin?'same-origin':'omit'});
+   if(!response.ok)throw Error('Image source returned '+response.status);
+   blob=await response.blob();mime=blob.type;
+  }
+  if(!blob.size||(!mime.startsWith('image/')&&!/\.webp(?:\?|$)|\.png(?:\?|$)|\.jpe?g(?:\?|$)/i.test(src)))throw Error('The source did not return an image file.');
+  const ext=mime.includes('png')?'png':mime.includes('jpeg')?'jpg':mime.includes('gif')?'gif':mime.includes('svg')?'svg':mime.includes('webp')?'webp':(/\.([a-z]{3,4})(?:\?|$)/i.exec(src)||[])[1]||'webp';
+  const name=(x.id||'announcement-artwork').replace(/[^a-z0-9_-]/gi,'-')+'.'+ext;
+  const u=URL.createObjectURL(blob),a=document.createElement('a');
+  a.href=u;a.download=name;document.body.appendChild(a);a.click();a.remove();
+  setTimeout(()=>URL.revokeObjectURL(u),60000);
+  set('status','Downloaded '+name+'. Upload it into SharePoint using an Image web part. Your browser may ask where to save it.');
+ }catch(err){
+  if(/^https:\/\//i.test(src)){
+   window.open(src,'_blank','noopener');
+   set('status','The image host blocked direct downloading ('+err.message+'). Opened the approved image in a new tab; save it from there, or download the approved source from the Content Library.');
+  }else set('status','Unable to save the approved image: '+err.message);
+ }
+}
+async function saveImageToFolder(){
+ if(!current){set('status','Select an asset first.');return}
+ if(batchIds.length>1)set('status','Download each cover individually using Download cover beside each selected asset.');
+ await downloadAssetImage(current);
+}
+async function downloadImage(){await downloadAssetImage(current)}
 function reviewPacket(){const a=current;if(!a)return '';const art=$('art').hidden?'Image not available':($('art').src.startsWith('data:')?'Artwork embedded in preview':$('art').src);return ['NEWS REVIEW PACKET','Asset: '+title(a.title),'Campaign: '+(a.campaign||''),'Type: '+(a.type||''),'Smartsheet News Announcement: '+(a.newsAnnouncement||'Not Requested'),'Asset status: '+(a.status||''),'SharePoint page title: '+$('pageTitle').value,'', 'Description:',clean(a.abstract||'MISSING APPROVED DESCRIPTION'),'', 'Artwork:',art,'','Content Library resource card:',cardURL(a),'','Before publishing: confirm approved copy and image, create native SharePoint News using a Made for email template, set the page thumbnail, preview email, obtain approval, and update the Smartsheet News Published URL and News Published Date.'].join('\n')}
 function hasArtwork(x){return imageIds.has(x.id)||x.id==='trust-continuity-and-competitive-advantage-in-the-ai-era-ebook-73'||x.id==='sovereign-ai-starts-with-resilient-data-267'||(!!x.approvedNewsImageUrl&&!isSharePointImage(x.approvedNewsImageUrl))||!!x.webinarImage&&!isSharePointImage(x.webinarImage)}
 function contentDate(x){return /^\d{4}-\d{2}-\d{2}$/.test(x.publishDate||'')?x.publishDate:''}
