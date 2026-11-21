@@ -26,9 +26,9 @@
 <div class="publish-methods" aria-label="Choose how to publish the SharePoint announcement">
 <div class="publish-method" style="grid-column:1/-1;border:2px solid #d0dbe7;background:#f7f9fc">
 <strong>Recommended next step: Prepare a native SharePoint news draft</strong>
-<p class="hint">One click packages all selected titles, descriptions, promotional links, approved covers and a Microsoft Graph native-page draft blueprint. <b>No iframe, no duplicated copy.</b> The package is ready for a Microsoft-authorized automation once connected. <b>Downloading it does not create or publish a SharePoint page.</b></p>
-<button id="prepareNativeDraft">Prepare SharePoint draft package (.zip)</button>
-<p class="hint">The package includes a text-web-part draft blueprint, separate cover files when downloadable, and instructions for completing native Image web parts. SharePoint <b>Made for email</b> compatibility must be verified on a news post before sending.</p>
+<p class="hint">For Microsoft Copilot, use a <b>supported .txt file</b> or copy the complete briefing straight into Copilot. Includes every selected title, description, link, artwork URL and clear publishing instructions. No JSON or ZIP upload needed. Copilot may still be unable to create SharePoint pages directly.</p>
+<button id="downloadCopilotBrief">Download Copilot briefing (.txt)</button> <button id="copyCopilotBrief" class="secondary">Copy briefing for Copilot</button><details><summary>Advanced: developer draft package</summary><p class="hint">For authorized Microsoft Graph automation only. Not a Copilot reference file.</p><button id="prepareNativeDraft" class="secondary">Download technical ZIP</button></details>
+<p class="hint">Use the text file as your Copilot reference or paste the copied briefing into Copilot Chat. SharePoint <b>Made for email</b> compatibility needs to be verified before sending.</p>
 </div>
 <div class="publish-method">
 <strong>A. SharePoint news page, including Send as email</strong>
@@ -354,6 +354,61 @@ async function zipCoverFiles(files){
  return new Blob([...parts,...central,footer],{type:'application/zip'});
 }
 
+function copilotBrief(){
+ const records=emailSelectedAssets();
+ if(!records.length)return '';
+ const lines=[
+ 'GLOBAL CAMPAIGNS - SHAREPOINT NEWS DRAFT BRIEFING',
+ '',
+ 'OBJECTIVE: Create ONE new unpublished SharePoint News page using a Made for email template, if this Copilot environment supports authoring it. DO NOT publish, email, or replace the existing template.',
+ 'SharePoint site: https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23',
+ 'Reference template: https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Content-Sharing-Template.aspx',
+ 'Design reference: https://emmeeterry.github.io/Webinar-Activation-Hub/news-announcement-embed.html',
+ '',
+ 'PAGE TITLE (PRESERVE EVERY TITLE):',
+ announcementPageTitle(records),
+ '',
+ 'DESIGN: Global Campaigns only; navy, white and red; clean native SharePoint Text and Image web parts with strong headings, spacing, asset cards, approved covers, links and a Content Library footer. No iframes, screenshots, duplicate content, custom scripts or HTML pasted as raw code.',
+ 'The entire page should be suitable for native SharePoint Send as email if the Made for email template supports it. Verify in SharePoint email preview before any publication. Do not claim compatibility without checking.',
+ '',
+ 'SOURCE OF TRUTH: Approved Content Library data below. Use EVERY selected asset in the order listed, without inventing content.',
+ ''
+ ];
+ records.forEach((x,i)=>{
+  lines.push('ASSET '+(i+1),'Title: '+title(x.title),'Campaign: '+clean(x.campaign||''),'Type: '+clean(x.type||''),
+   'Approved description: '+clean(x.abstract||x.notes||'[MISSING: source description needs approval]'),
+   'Content Library card: '+cardURL(x),'Approved cover URL: '+(emailCoverURL(x)||'[NO PUBLIC COVER URL AVAILABLE: use separately uploaded approved cover]'),
+   'Approved promotion links:');
+  const links=availableResourceLinks(x);
+  lines.push(...(links.length?links.map(([label,url])=>'- '+label+': '+url):['- No promotional links available']));
+  lines.push('');
+ });
+ lines.push('FOOTER: Everything you need to activate, in one place.',
+ 'Content Library: https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Content-Library.aspx',
+ 'Global Campaigns Resource Hub: https://emmeeterry.github.io/Global-Campaigns-Resource-Hub/',
+ '',
+ 'REQUIRED OUTPUT:',
+ '1. If page creation is supported here, create a NEW UNPUBLISHED draft using native email-supported SharePoint web parts and use approved covers.',
+ '2. Confirm whether this environment supports Made for email News authoring and which actions you actually completed.',
+ '3. Check all asset sections, images, resource links and both SharePoint page and full-body email previews.',
+ '4. If you CANNOT create a page or read an image URL, say so explicitly. Provide the assembled SharePoint-ready content and the shortest exact manual steps instead. Do not imply a draft exists.',
+ '5. Never publish or send the email without explicit approval.');
+ return lines.join('\n');
+}
+function downloadCopilotBrief(){
+ const brief=copilotBrief();if(!brief){set('status','Select at least one asset first.');return}
+ const blob=new Blob([brief],{type:'text/plain;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');
+ a.href=url;a.download='global-campaigns-copilot-news-brief.txt';document.body.appendChild(a);a.click();a.remove();
+ setTimeout(()=>URL.revokeObjectURL(url),60000);
+ set('status','Downloaded Copilot-ready .txt briefing for '+emailSelectedAssets().length+' asset(s). Upload THIS text file to Microsoft Copilot, not the technical ZIP.');
+}
+async function copyCopilotBrief(){
+ const brief=copilotBrief();if(!brief){set('status','Select at least one asset first.');return}
+ try{await navigator.clipboard.writeText(brief);set('status','Copilot briefing copied. Paste it directly into Microsoft Copilot Chat. No file upload is necessary.')}
+ catch(err){window.prompt('Copy this Copilot briefing:',brief)}
+}
+$('downloadCopilotBrief').onclick=downloadCopilotBrief;
+$('copyCopilotBrief').onclick=copyCopilotBrief;
 function nativeDraftBlueprint(records){
  const uid=()=>('xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx').replace(/[xy]/g,c=>{const r=Math.floor(Math.random()*16);return (c==='x'?r:(r&3|8)).toString(16)});
  const textPart=markup=>({id:uid(),innerHtml:markup});
