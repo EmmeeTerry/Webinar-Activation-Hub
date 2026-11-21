@@ -14,26 +14,35 @@
 <p class="hint" style="margin:7px 0 0">Dates use the Content Library publish date from Smartsheet. Assets without a publish date appear only under “Any date.”</p>
 <div class="saved-view-controls"><button id="saveView" class="secondary" type="button">Save this view ↗</button><span class="hint">Copy a shareable link with your current filters, sort order, selected asset and announcement selections.</span></div>
 <section class="batch-panel"><div class="batch-top"><div><strong>1. Choose the content to feature</strong><p class="hint">Use the prominent red <b>Add selected asset</b> button next to the title dropdown above. Your chosen assets appear here. No content is copied until you use a publishing action below.</p></div></div><div id="batchList" class="batch-items" aria-live="polite"><span class="hint">No assets selected yet.</span></div><div class="actions"><button class="secondary" id="batchClear" disabled>Clear selection</button></div><div class="batch-preview-heading" style="margin:15px 0 8px"><strong>2. Preview your announcement</strong><p class="hint" style="margin:5px 0">This is a live visual preview, not a copy button. It updates as you add or remove content and includes the shared footer.</p></div><div id="batchPreview" class="batch-preview" aria-label="Live combined announcement preview"><p class="hint">Add an asset to see the combined announcement preview here.</p></div><p class="hint">When ready, use the <b>SharePoint page steps below</b>. Need to send the entire news post as an email? Use the separate email-compatible option instead.</p></section><div class="publish-actions news-primary">
-<div class="publish-heading"><strong>3. Create your SharePoint page</strong><span class="hint">Copy the page title, then choose <b>one</b> method below depending on how you want to publish. Both work with all selected assets.</span></div>
+<div class="publish-heading"><strong>3. Create your SharePoint page</strong><span class="hint">Copy the page title and choose the output you need. All three options use your same selected assets; email HTML excludes the web embed.</span></div>
 <div class="grid"><div><label for="pageTitle">Suggested SharePoint page title (editable)</label><input id="pageTitle"></div><div><label for="image">Approved image URL (optional)</label><input id="image" placeholder="Use only when replacing the displayed image"></div></div>
 <div class="actions" aria-label="Copy SharePoint page title"><button id="copyTitle">Copy SharePoint Page Title</button></div>
 <div class="publish-methods" aria-label="Choose how to publish the SharePoint announcement">
 <div class="publish-method">
-<strong>Option A: Paste into SharePoint (also works for news sent by email)</strong>
-<p class="hint">Copies formatted titles, descriptions, and resource links for <b>all added assets</b>. Paste into a SharePoint <b>Text</b> web part. Images cannot be pasted reliably; add them separately using native <b>Image</b> web parts.</p>
+<strong>Option A: Paste formatted content into SharePoint Text</strong>
+<p class="hint">Copies branded headings, descriptions and links for <b>all selected assets</b> into a SharePoint <b>Text</b> web part. Add images separately with native <b>Image</b> web parts. Suitable for email-capable SharePoint News when supported by your template.</p>
 <button id="copyRich">Copy content to paste into SharePoint</button>
 <button id="saveImage" class="secondary">Save selected cover(s) to folder</button>
 <p class="hint">This saves <b>all selected covers</b> to a local folder you choose (Chrome or Edge). If folder access is unavailable, the builder downloads a ZIP with the available covers. You can also download covers individually above. The footer must be added separately for native SharePoint news.</p>
 </div>
 <div class="publish-method">
-<strong>Option B: Embed the complete branded page (web only)</strong>
-<p class="hint">Copies the iframe for <b>all added assets</b>, including images and the shared activation footer. Paste into a SharePoint <b>Embed</b> web part. <b>This option cannot be sent as a full-body SharePoint News email.</b></p>
+<strong>Option B: Download or copy branded email HTML (no iframe)</strong>
+<p class="hint">Uses the <b>same selected assets and approved links</b> with navy branding, images, red CTA buttons, and a Content Library footer. This is HTML for an email editor that accepts HTML. <b>It is not a SharePoint Text web part or a way to send an iframe by email.</b></p>
+<button id="copyEmailHTML">Copy email HTML</button>
+<button id="downloadEmailHTML" class="secondary">Download email HTML (.html)</button>
+<p class="hint">Images load from public Content Library artwork URLs where available. Some email systems block remote images. Review the email preview and test-send before distributing.</p>
+</div>
+<div class="publish-method">
+<strong>Option C: Embed the complete branded page (web only)</strong>
+<p class="hint">Copies the iframe for <b>all selected assets</b>, their images and both resource footers. Paste into a SharePoint <b>Embed</b> web part. <b>SharePoint cannot include the iframe in its full-body News email.</b></p>
 <button id="view" class="secondary">Preview embedded page</button>
 <button id="copyEmbed">Copy SharePoint iframe code</button>
 </div>
 </div>
+<div style="margin:16px 0 9px"><strong style="font-size:14px">Live email preview (always visible)</strong><p class="hint" style="margin:5px 0 7px">The email version below uses the selected assets, with no iframe. Review it before copying or downloading.</p></div>
+<iframe id="emailPreview" title="Preview of branded email without embed" sandbox="allow-popups allow-popups-to-escape-sandbox" style="display:block;width:100%;height:490px;border:1px solid #dbe2ea;border-radius:8px;background:white"></iframe>
 <div class="actions"><button id="sharepoint" class="secondary">Open SharePoint page template</button></div>
-<p class="hint" style="margin:7px 0 0">Create a <b>new page</b> from the <a href="https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Content-Sharing-Template.aspx" target="_blank" rel="noopener"><b>Content Sharing Template</b></a>. Do not edit the original. Paste the copied page title, then use <b>either Option A or Option B</b> above.</p>
+<p class="hint" style="margin:7px 0 0">Create a <b>new page</b> from the <a href="https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Content-Sharing-Template.aspx" target="_blank" rel="noopener"><b>Content Sharing Template</b></a>. Do not edit the original. Paste the copied title, then use the appropriate output above. Email HTML is for a separate HTML-capable email workflow, not a SharePoint Embed web part.</p>
 </div>
 <details class="more-tools"><summary>More options</summary><div class="actions"><button id="copyCard" class="secondary">Copy resource-card URL</button><button id="copyPacket" class="secondary">Copy review checklist</button></div></details>
 <div class="status" id="status" role="status"></div><div class="hint" id="newsState" style="margin-top:6px"></div><div id="readiness" style="font-size:12px;line-height:1.45;margin-top:7px;color:#596675"></div>
@@ -110,6 +119,7 @@ function render(){
   updateReadiness();
   if(!embedded && !params.has('savedView'))history.replaceState({},'', '?item='+encodeURIComponent(current.id));
   if(batchIds.length)$('pageTitle').value=announcementPageTitle(batchEntries());
+  updateEmailPreview();
 }
 function htmlEsc(v){return String(v||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
 function assetImage(x){
@@ -155,6 +165,71 @@ function articlePackage(records,includeImages=true){
  +'<div style="padding:19px 28px 7px"><h2 style="font-size:17px;color:#111b2b;margin:0 0 7px">Start the right customer conversation.</h2><p style="font-size:13px;line-height:1.6;color:#506071;margin:0 0 9px">'+(one?'Discover the asset and put approved resources to work.':'Discover these assets and put approved resources to work in your next customer conversation.')+'</p></div>'
  +records.map(x=>assetAnnouncementHTML(x,includeImages)).join('')+'</div>';
 }
+
+// Email output is built independently of the web iframe. Public, absolute image URLs
+// avoid unsupported data: sources in email clients, while missing covers are omitted.
+function emailSelectedAssets(){return batchIds.length?batchEntries():(current?[current]:[])}
+function emailCoverURL(x){
+ if(imageIds.has(x.id))return generatedImage(x);
+ const u=x.approvedNewsImageUrl;
+ if(/^https:\/\//i.test(u||'')&&!isSharePointImage(u))return u;
+ const w=x.webinarImage;
+ if(/^https:\/\//i.test(w||'')&&!isSharePointImage(w))return w;
+ return '';
+}
+function emailMarkup(records){
+ if(!records.length)return '<p style="font-family:Arial,sans-serif;padding:20px">Choose content to preview your email.</p>';
+ const cell=(html,extra='')=>'<tr><td style="padding:0 26px;'+extra+'">'+html+'</td></tr>';
+ const titleBlock='<tr><td bgcolor="#111b2b" style="background:#111b2b;border-top:5px solid #e60012;padding:25px 28px 29px;color:#ffffff;font-family:Arial,sans-serif">'
+  +'<p style="font-size:11px;font-weight:bold;letter-spacing:1.5px;color:#e4e9ee;margin:0 0 12px">GLOBAL CAMPAIGNS</p>'
+  +'<h1 style="font-size:24px;line-height:1.3;color:#ffffff;margin:0 0 12px;font-weight:bold">'+htmlEsc(announcementPageTitle(records))+'</h1>'
+  +'<p style="font-size:14px;line-height:1.6;color:#e4e9ee;margin:0">Explore approved customer-facing content and activation resources.</p></td></tr>';
+ const sections=records.map((x,i)=>{
+  const art=emailCoverURL(x),links=availableResourceLinks(x),d=clean(x.abstract||x.notes||'Approved description not available. Confirm before sending.');
+  const picture=art?'<tr><td style="padding:20px 26px 0"><img src="'+htmlEsc(art)+'" alt="'+htmlEsc(title(x.title))+' cover" width="135" style="display:block;width:135px;max-width:100%;height:auto;border:1px solid #e5e9ef;border-radius:4px"></td></tr>':'';
+  const items=links.map(([label,url])=>'<li style="margin:4px 0"><a href="'+htmlEsc(url)+'" style="color:#b30016;text-decoration:underline">'+htmlEsc(label)+'</a></li>').join('');
+  const resources=items?cell('<p style="font-size:12px;font-weight:bold;color:#192537;letter-spacing:.4px;margin:18px 0 6px">AVAILABLE ACTIVATION RESOURCES</p><ul style="padding-left:20px;margin:0 0 17px;font-size:13px;line-height:1.7">'+items+'</ul>'):'';
+  return '<tr><td style="border-bottom:1px solid #e4e7ea;padding:0 0 18px"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse">'
+   +picture
+   +cell('<p style="font-size:10px;letter-spacing:1px;font-weight:bold;color:#b90019;text-transform:uppercase;margin:18px 0 7px">'+htmlEsc(x.campaign||'GLOBAL CAMPAIGNS')+' / '+htmlEsc(x.type||'CONTENT')+'</p>'
+    +'<h2 style="font-size:20px;line-height:1.35;margin:0 0 10px;color:#111b2b">'+htmlEsc(title(x.title))+'</h2>'
+    +'<p style="color:#44525f;font-size:14px;line-height:1.7;margin:0 0 15px">'+htmlEsc(d)+'</p>')
+   +cell('<table role="presentation" cellpadding="0" cellspacing="0"><tr><td bgcolor="#d40016" style="background:#d40016;border-radius:4px;padding:12px 17px"><a href="'+htmlEsc(cardURL(x))+'" style="font-family:Arial,sans-serif;font-size:13px;font-weight:bold;color:#ffffff;text-decoration:none">Explore asset &amp; activation resources &#8599;</a></td></tr></table>')
+   +resources+'</table></td></tr>';
+ }).join('');
+ const footer='<tr><td style="padding:25px 28px;background:#f5f7f9;border-top:2px solid #e5e9ed;font-family:Arial,sans-serif"><strong style="font-size:17px;color:#111b2b">Everything you need to activate, in one place.</strong><p style="font-size:13px;line-height:1.6;color:#52616e">Find more approved campaign content and ready-to-use activation resources in the Content Library.</p><a href="https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Content-Library.aspx" style="font-size:13px;font-weight:bold;color:#b30016;text-decoration:underline">Explore the Content Library &#8599;</a></td></tr>';
+ return '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;font-family:Arial,Helvetica,sans-serif;max-width:660px;background:#fff" align="center">'
+  +titleBlock+sections+footer+'</table>';
+}
+function emailDocument(){
+ const html=emailMarkup(emailSelectedAssets());
+ return '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+htmlEsc(announcementPageTitle(emailSelectedAssets()))+'</title></head><body style="margin:0;padding:15px 5px;background:#f2f4f7">'+html+'</body></html>';
+}
+function updateEmailPreview(){
+ const preview=$('emailPreview');
+ if(preview)preview.srcdoc=emailDocument();
+}
+async function copyEmailHTML(){
+ const records=emailSelectedAssets();if(!records.length){set('status','Select an asset before copying email HTML.');return}
+ const html=emailMarkup(records);
+ const plain=records.map(x=>title(x.title)+'\n'+clean(x.abstract||x.notes||'')+'\n'+cardURL(x)).join('\n\n');
+ try{
+  if(navigator.clipboard?.write && window.ClipboardItem){
+   await navigator.clipboard.write([new ClipboardItem({'text/html':new Blob([html],{type:'text/html'}),'text/plain':new Blob([plain],{type:'text/plain'})})]);
+   set('status','Branded email HTML copied for '+records.length+' asset(s), without an iframe. Paste into an HTML-capable editor and test images, links and formatting.');
+  }else throw Error('Rich clipboard not supported');
+ }catch(err){set('status','Rich HTML clipboard unavailable. Use Download email HTML instead: '+err.message)}
+}
+function downloadEmailHTML(){
+ const records=emailSelectedAssets();if(!records.length){set('status','Select an asset first.');return}
+ const url=URL.createObjectURL(new Blob([emailDocument()],{type:'text/html;charset=utf-8'})),a=document.createElement('a');
+ a.href=url;a.download='global-campaigns-email-announcement.html';document.body.appendChild(a);a.click();a.remove();
+ setTimeout(()=>URL.revokeObjectURL(url),60000);
+ set('status','Downloaded standalone email HTML with '+records.length+' asset(s), no iframe. Review in an email editor and send a test before distributing.');
+}
+$('copyEmailHTML').onclick=copyEmailHTML;
+$('downloadEmailHTML').onclick=downloadEmailHTML;
+
 function richHtml(){return current?articlePackage([current]):''}
 async function copyRich(){
  const multi=batchIds.length>0,html=articlePackage(multi?batchEntries():[current],false);
@@ -183,6 +258,7 @@ function renderBatch(){
  $('saveImage').textContent=entries.length?'Save '+entries.length+' selected cover'+(entries.length===1?'':'s')+' to folder':'Save current cover to folder';
  $('copyTitle').textContent='1. Copy SharePoint Page Title';
  $('pageTitle').value=announcementPageTitle(entries.length?entries:[current]);
+ updateEmailPreview();
  $('batchPreview').innerHTML=entries.length?batchHTML()+`<div style="margin:20px 0 0;padding:22px 24px;background:#f6f7f9;border:1px solid #e3e7eb;border-radius:7px"><strong style="display:block;font-size:17px;color:#111b2b">Everything you need to activate, in one place.</strong><p style="color:#53626e;font-size:13px;line-height:1.6">Find approved assets and promotional resources, share content with customers or partners, and create overview slides in the Content Library.</p><a href="https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Content-Library.aspx" target="_blank" rel="noopener noreferrer" style="font-size:13px;font-weight:bold;color:#b20617">Explore the Content Library ↗</a></div>`:'<p class="hint">Add an asset to see the combined announcement preview here.</p>';
 }
 $('batchAdd').onclick=()=>{const id=$('asset').value;if(!id||batchIds.includes(id)){set('status','Select an asset not already in the announcement.');return}if(batchIds.length>=20){set('status','Maximum 20 assets per announcement.');return}batchIds.push(id);renderBatch();set('status',batchIds.length+' assets in the combined announcement.')};
@@ -348,7 +424,7 @@ $('image').value=params.get('image')||'';$('asset').onchange=()=>{$('image').val
 $('search').oninput=fillAssets;$('filterNews').onchange=fillAssets;$('filterArtwork').onchange=fillAssets;
 $('sortAssets').onchange=fillAssets;
 $('datePreset').onchange=()=>{$('customDates').hidden=$('datePreset').value!=='custom';fillAssets()};
-$('dateFrom').onchange=fillAssets;$('dateTo').onchange=fillAssets;Promise.all([fetch('./content.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Unable to load content');return r.json()}),fetch('./news-images-manifest.json',{cache:'no-store'}).then(r=>r.ok?r.json():{images:[]}).catch(()=>({images:[]}))]).then(([d,m])=>{items=(d.items||[]).filter(x=>x.id&&x.title).sort((a,b)=>clean(a.title).localeCompare(clean(b.title)));imageIds=new Set((m.images||[]).map(x=>x.id));const saved=restoreSavedView();const item=params.get('item');if(!saved&&item&&items.some(x=>x.id===item)){const chosen=items.find(x=>x.id===item);if(!hasArtwork(chosen))$('filterArtwork').value='all';$('datePreset').value='all'}fillAssets();if(item&&items.some(x=>x.id===item)&&[...$('asset').options].some(o=>o.value===item)){$('asset').value=item;render()}if(saved)renderBatch();const requestedIds=(params.get('items')||'').split(',').filter(Boolean);if(embedded&&requestedIds.length){const records=[...new Set(requestedIds)].map(id=>items.find(x=>x.id===id)).filter(Boolean);if(records.length){document.querySelector('article.preview').innerHTML=articlePackage(records);document.querySelectorAll('.gcrh-shared-footer').forEach(e=>e.remove())}}}).catch(err=>set('status','Unable to load Content Library: '+err.message));
+$('dateFrom').onchange=fillAssets;$('dateTo').onchange=fillAssets;Promise.all([fetch('./content.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Unable to load content');return r.json()}),fetch('./news-images-manifest.json',{cache:'no-store'}).then(r=>r.ok?r.json():{images:[]}).catch(()=>({images:[]}))]).then(([d,m])=>{items=(d.items||[]).filter(x=>x.id&&x.title).sort((a,b)=>clean(a.title).localeCompare(clean(b.title)));imageIds=new Set((m.images||[]).map(x=>x.id));const saved=restoreSavedView();const item=params.get('item');if(!saved&&item&&items.some(x=>x.id===item)){const chosen=items.find(x=>x.id===item);if(!hasArtwork(chosen))$('filterArtwork').value='all';$('datePreset').value='all'}fillAssets();if(item&&items.some(x=>x.id===item)&&[...$('asset').options].some(o=>o.value===item)){$('asset').value=item;render()}if(saved)renderBatch();updateEmailPreview();const requestedIds=(params.get('items')||'').split(',').filter(Boolean);if(embedded&&requestedIds.length){const records=[...new Set(requestedIds)].map(id=>items.find(x=>x.id===id)).filter(Boolean);if(records.length){document.querySelector('article.preview').innerHTML=articlePackage(records);document.querySelectorAll('.gcrh-shared-footer').forEach(e=>e.remove())}}}).catch(err=>set('status','Unable to load Content Library: '+err.message));
 </script>
 <!-- Shared Global Campaigns Resource Hub footer -->
 <div class="gcrh-shared-footer" style="clear:both;position:relative;display:block;box-sizing:border-box;width:100%;max-width:1200px;margin:30px auto 16px;padding:0 12px;">
