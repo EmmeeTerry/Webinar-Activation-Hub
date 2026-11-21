@@ -44,14 +44,14 @@
 <button id="copyEmbed">Copy web iframe code</button></div>
 <div class="publish-method"><strong>Separate email outside SharePoint</strong>
 <p class="hint">For an HTML-capable email platform. This is not SharePoint's Send as email feature. Hosted images and HTML styling may vary by recipient.</p>
-<button id="openOutlookWithBody">Open Outlook with email text</button>
+<button id="downloadOutlookDraft">Download formatted Outlook email (.eml)</button>
 <button id="openOutlookEmail" class="secondary">Copy designed email + open Outlook (paste required)</button>
-<button id="downloadOutlookDraft" class="secondary">Download formatted Outlook file (.eml)</button>
+<details><summary>Plain-text Outlook fallback</summary><button id="openOutlookWithBody" class="secondary">Open text-only email in Outlook</button></details>
 <details style="margin-top:9px"><summary>Other email formats</summary><div class="actions"><button id="copyEmailHTML" class="secondary">Copy formatted email only</button><button id="downloadEmailHTML" class="secondary">Download email HTML file</button></div></details>
-<p class="hint"><b>Open Outlook with email text</b> fills the subject and plain-text body automatically, including the selected asset links, but it cannot preserve the navy layout or images. For the <b>designed</b> email, click <b>Copy designed email + open Outlook</b> and then click the blank message body and press <b>Ctrl+V</b>. Outlook links cannot prefill an HTML-designed body. The .eml file may open in read-only mode depending on your Outlook version.</p></div>
+<p class="hint"><b>Recommended:</b> Download the formatted <b>.eml</b> and open it in Outlook, as with the PAM Email Hub. If Outlook opens it read-only, use <b>Copy designed email + open Outlook</b>, then click the blank body and press <b>Ctrl+V</b>. The text-only option is a fallback, not the branded version.</p></div>
 </div>
 <div style="margin:15px 0 7px"><strong>Preview: separate HTML email</strong><p class="hint">Review hosted images and buttons before distribution.</p></div>
-<iframe id="emailPreview" title="Separate email preview" sandbox="allow-popups allow-popups-to-escape-sandbox" style="display:block;width:100%;height:490px;border:1px solid #dbe2ea;border-radius:8px;background:white"></iframe>
+<iframe id="emailPreview" title="Separate email preview" sandbox="allow-popups allow-popups-to-escape-sandbox" style="display:block;width:100%;height:600px;border:1px solid #dbe2ea;border-radius:8px;background:white"></iframe>
 </details>
 <details class="more-tools" style="margin-top:10px"><summary>Advanced: Copilot briefing and technical draft package</summary>
 <p class="hint">Copilot Chat in our environment did not create the SharePoint page. These exports are optional and do not publish anything.</p>
@@ -195,10 +195,11 @@ function emailCoverURL(x){
 function emailMarkup(records){
  if(!records.length)return '<p style="font-family:Arial,sans-serif;padding:20px">Choose content to preview your email.</p>';
  const cell=(html,extra='')=>'<tr><td style="padding:0 26px;'+extra+'">'+html+'</td></tr>';
- const titleBlock='<tr><td bgcolor="#111b2b" style="background:#111b2b;border-top:5px solid #e60012;padding:25px 28px 29px;color:#ffffff;font-family:Arial,sans-serif">'
-  +'<p style="font-size:11px;font-weight:bold;letter-spacing:1.5px;color:#e4e9ee;margin:0 0 12px">GLOBAL CAMPAIGNS</p>'
-  +'<h1 style="font-size:24px;line-height:1.3;color:#ffffff;margin:0 0 12px;font-weight:bold">'+htmlEsc(announcementPageTitle(records))+'</h1>'
-  +'<p style="font-size:14px;line-height:1.6;color:#e4e9ee;margin:0">Explore approved customer-facing content and activation resources.</p></td></tr>';
+ const titleBlock='<tr><td bgcolor="#ffffff" style="background:#ffffff;border-top:6px solid #d60016;padding:26px 30px 25px;color:#111b2b;font-family:Arial,Helvetica,sans-serif">'
+  +'<p style="font-family:Arial,Helvetica,sans-serif;font-size:12px;letter-spacing:1.4px;font-weight:bold;color:#c90016;margin:0 0 13px">GLOBAL CAMPAIGNS</p>'
+  +'<h1 style="font-family:Arial,Helvetica,sans-serif;font-size:27px;line-height:1.28;font-weight:bold;color:#111b2b;margin:0 0 12px">New Content &amp; Activation Resources</h1>'
+  +'<p style="font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:1.6;color:#435465;margin:0 0 12px">Explore approved customer-facing content and activation resources.</p>'
+  +'<p style="font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:1.55;color:#465768;margin:0"><strong>Featured:</strong> '+htmlEsc(records.map(x=>title(x.title)).join(' | '))+'</p></td></tr>';
  const sections=records.map((x,i)=>{
   const art=emailCoverURL(x),links=availableResourceLinks(x),d=clean(x.abstract||x.notes||'Approved description not available. Confirm before sending.');
   const picture=art?'<tr><td style="padding:20px 26px 0"><img src="'+htmlEsc(art)+'" alt="'+htmlEsc(title(x.title))+' cover" width="135" style="display:block;width:135px;max-width:100%;height:auto;border:1px solid #e5e9ef;border-radius:4px"></td></tr>':'';
@@ -213,12 +214,12 @@ function emailMarkup(records){
    +resources+'</table></td></tr>';
  }).join('');
  const footer='<tr><td style="padding:25px 28px;background:#f5f7f9;border-top:2px solid #e5e9ed;font-family:Arial,sans-serif"><strong style="font-size:17px;color:#111b2b">Everything you need to activate, in one place.</strong><p style="font-size:13px;line-height:1.6;color:#52616e">Find more approved campaign content and ready-to-use activation resources in the Content Library.</p><a href="https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Content-Library.aspx" style="font-size:13px;font-weight:bold;color:#b30016;text-decoration:underline">Explore the Content Library &#8599;</a></td></tr>';
- return '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;font-family:Arial,Helvetica,sans-serif;max-width:660px;background:#fff" align="center">'
+ return '<table role="presentation" width="760" cellpadding="0" cellspacing="0" style="width:100%;border-collapse:collapse;font-family:Arial,Helvetica,sans-serif;max-width:760px;background:#fff" align="center">'
   +titleBlock+sections+footer+'</table>';
 }
 function emailDocument(){
  const html=emailMarkup(emailSelectedAssets());
- return '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+htmlEsc(announcementPageTitle(emailSelectedAssets()))+'</title></head><body style="margin:0;padding:15px 5px;background:#f2f4f7">'+html+'</body></html>';
+ return '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+htmlEsc(announcementPageTitle(emailSelectedAssets()))+'</title></head><body style="margin:0;padding:12px 0;background:#ffffff">'+html+'</body></html>';
 }
 function updateEmailPreview(){
  const preview=$('emailPreview');
