@@ -20,6 +20,17 @@ section.asset{padding:27px 36px;border-bottom:1px solid #e2e6eb}.asset-main{disp
 const ROOT='https://emmeeterry.github.io/Webinar-Activation-Hub/';
 const qs=new URLSearchParams(location.search);
 const ids=[...new Set((qs.get('items')||qs.get('item')||'').split(',').map(v=>v.trim()).filter(Boolean))].slice(0,20);
+function readAnnouncementOverrides(){
+ try{
+  const raw=(qs.get('custom')||'').replace(/-/g,'+').replace(/_/g,'/');
+  if(!raw||raw.length>25000)return {intro:'',records:{}};
+  const decoded=Uint8Array.from(atob(raw),c=>c.charCodeAt(0));
+  const obj=JSON.parse(new TextDecoder().decode(decoded));
+  return {intro:typeof obj.intro==='string'?obj.intro.slice(0,2500):'',records:obj.records&&typeof obj.records==='object'?obj.records:{}};
+ }catch(e){return {intro:'',records:{}}}
+}
+const edits=readAnnouncementOverrides();
+
 const e=v=>String(v||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 const card=x=>ROOT+'content-hub.html?item='+encodeURIComponent(x.id);
 const clean=v=>String(v||'').replace(/\s+/g,' ').trim();
@@ -81,11 +92,18 @@ async function start(){
  fetch('./news-images-manifest.json',{cache:'no-store'}).then(r=>r.ok?r.json():{images:[]}).catch(()=>({images:[]}))
  ]);
  const map=new Map((data.items||[]).map(x=>[x.id,x]));
- const selected=ids.map(id=>map.get(id)).filter(Boolean);
+ const selected=ids.map(id=>{
+  const original=map.get(id);if(!original)return null;
+  const override=edits.records[id]||{};
+  const allowed={};
+  for(const key of ['title','abstract'])if(typeof override[key]==='string'&&override[key].trim())allowed[key]=override[key].slice(0,4000);
+  return {...original,...allowed};
+ }).filter(Boolean);
  const missing=ids.filter(id=>!map.has(id));
  if(!selected.length)throw Error('None of the selected assets were found in the Content Library.');
  const imageIds=new Set((manifest.images||[]).map(x=>x.id));
  document.getElementById('heading').textContent=announcementTitle(selected);document.title=announcementTitle(selected)+' | Global Campaigns';const list=document.getElementById('includedTitleList');selected.forEach(x=>{const li=document.createElement('li');li.textContent=title(x.title);list.appendChild(li)});document.getElementById('includedTitles').hidden=false;
+ if(edits.intro)document.querySelector('#intro p').textContent=edits.intro;
  document.getElementById('hero').hidden=false;document.getElementById('intro').hidden=false;document.getElementById('activationFooter').hidden=false;document.getElementById('globalHubFooter').hidden=false;
  const parent=document.getElementById('assets');
  selected.forEach(x=>parent.appendChild(renderAsset(x,imageIds)));
