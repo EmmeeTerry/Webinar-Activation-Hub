@@ -33,6 +33,8 @@ Use the visible **Artwork, News status, Publish date, and Sort** filters to find
 2. Open the downloaded .eml with Classic Outlook. Confirm images and links, and whether the message can be edited. Some versions open .eml read-only. The builder will report any cover it cannot retrieve/convert.
 3. Add recipients, send yourself a test, then distribute after approval. Nothing sends automatically.
 
+**Classic Outlook formatting:** Copying HTML directly from the builder into Outlook can alter spacing, image placement and styles. Prefer **Download Outlook email with embedded covers (.eml)**. If that opens read-only, try **Other email methods → Download Word-compatible email (.doc)**, open it in Word, verify the covers, and copy the content into a new Outlook email. Send a test first. Neither route guarantees identical rendering in every Outlook version.
+
 **Important:** The SharePoint iframe is web-only. It does not appear inside SharePoint's full-body email. The Outlook email is a separate communication. If the .eml file cannot be edited or does not show covers, use an approved internal email workflow or send a normal Outlook message linking to the published SharePoint page. The optional HTML paste method is not recommended in Classic Outlook because it has lost artwork in testing.
 
 ## Actions included for EVERY selected article
