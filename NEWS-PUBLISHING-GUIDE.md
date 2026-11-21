@@ -34,7 +34,9 @@ Use the builder to prepare announcements from the Smartsheet-synced Content Libr
 - **Important: Outlook opens with a blank email body.** The builder attempts to copy the designed email to your clipboard at the same time.
 - Wait for the builder's **Copied!** confirmation, then click inside the blank Outlook message and press **Ctrl+V**.
 - The subject is prefilled. Verify the covers, links and styling; add recipients and send yourself a test first.
-- If automatic copy fails, click **Copy email only** and paste into Outlook. **Download formatted Outlook .eml** is another option, but some Outlook versions open .eml files read-only.
+- **For Classic Outlook and reliable images:** use **Download Outlook with embedded images (.eml)**. The builder downloads accessible approved covers and embeds them inside the message, converting WebP to PNG where needed. Open the file in Outlook, review its layout and confirm it can be edited. Some Outlook versions open .eml read-only. Images blocked by permissions cannot be embedded, and the builder reports them.
+- If using **Copy formatted email + open Outlook**, the compose window opens with an empty body. Wait for the builder to confirm the formatted email was copied, then click the message body and press **Ctrl+V**. Remote images may still be blocked by Outlook.
+- If automatic copying fails, click **Copy email only** and paste into Outlook. The **Open plain-text Outlook email** option is the robust fallback with prefilled text and working links but no embedded cover images.
 - The Outlook option includes selected covers where accessible via public image URLs, and can render differently in some email clients.
 
 ### Keep it clean
