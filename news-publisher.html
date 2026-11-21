@@ -95,6 +95,24 @@ function availableResourceLinks(item){
     ['Paid Media',item.paidSocialAds]
   ].filter(([,url])=>/^https?:\/\//i.test(String(url||'').trim()));
 }
+function shareActionLinks(item){
+ const base=ROOT,source=String(item.url||''),args=new URLSearchParams({source:'content',title:item.title||'',description:item.abstract||'',url:source});
+ const customer=new URLSearchParams(args);customer.set('useCase',item.useCase||'');customer.set('campaign',item.campaign||'');
+ return [
+  ...( /^https?:\/\//i.test(source) ? [['Create Customer Email',base+'customer-email-hub.html?'+customer.toString()]]:[] ),
+  ['Overview Slide',base+'build-slide.html?v=20261112-3&id='+encodeURIComponent(item.id)],
+  ['Create PAM-to-Partner Email',base+'pam-email-hub.html?'+args.toString()]
+ ];
+}
+function articleDetailFields(x){
+ return [
+ ['Campaign',x.campaign],['Use case',x.useCase],['Funnel stage',x.funnelStage],
+ ['Owner team',x.ownerTeam],['Owner individual',x.ownerIndividual],
+ ['Audience',x.audience],['Region',x.region],['Status',x.status],
+ ['Publish date',x.publishDateDisplay],['Promotion period',x.promotionPeriod],
+ ['Primary activation',x.primaryActivation]
+ ].filter(([,v])=>String(v||'').trim());
+}
 function renderResourceLinks(item){
   const links=availableResourceLinks(item),container=$('resourceLinks');
   container.replaceChildren(...links.map(([label,url])=>{
@@ -166,7 +184,9 @@ function assetAnnouncementHTML(x,includeImages=true){
  +picture+'<h2 style="font-size:21px;font-weight:bold;line-height:1.3;color:#111b2b;margin:0 0 10px">'+htmlEsc(titleText)+'</h2>'
  +'<p style="font-size:14px;line-height:1.7;color:#465362;margin:0 0 14px">'+htmlEsc(d)+'</p>'+coverLink
  +'<p style="margin:0 0 7px"><a href="'+htmlEsc(cardURL(x))+'" style="display:inline-block;padding:11px 15px;background:#e60012;color:#ffffff;font-size:13px;font-weight:bold;text-decoration:none;border-radius:4px">Explore asset &amp; activation resources ↗</a></p>'
- +list+'</div>';
+ +(shareActionLinks(x).length?'<p style="font-size:13px;font-weight:bold;color:#152132;margin:20px 0 8px">SHARE &amp; CREATE</p><ul style="padding-left:20px;margin:0 0 14px;font-size:13px;line-height:1.9">'+shareActionLinks(x).map(([label,url])=>'<li><a href="'+htmlEsc(url)+'" style="color:#bf0014">'+htmlEsc(label)+'</a></li>').join('')+'</ul>':'')
+ +(articleDetailFields(x).length?'<div style="font-size:12px;line-height:1.75;color:#465362;background:#f7f9fb;padding:12px 15px;margin-top:14px"><strong style="color:#111b2b">ASSET DETAILS</strong><div>'+articleDetailFields(x).map(([label,value])=>'<div><strong>'+htmlEsc(label)+':</strong> '+htmlEsc(value)+'</div>').join('')+'</div></div>':'')
+ +'</div>';
 }
 function announcementPageTitle(records){
  const titles=records.filter(Boolean).map(x=>title(x.title));
@@ -213,7 +233,10 @@ function emailMarkup(records,inlineImages={}){
     +'<h2 style="font-size:20px;line-height:1.35;margin:0 0 10px;color:#111b2b">'+htmlEsc(title(x.title))+'</h2>'
     +'<p style="color:#44525f;font-size:14px;line-height:1.7;margin:0 0 15px">'+htmlEsc(d)+'</p>')
    +cell('<table role="presentation" cellpadding="0" cellspacing="0"><tr><td bgcolor="#d40016" style="background:#d40016;border-radius:4px;padding:12px 17px"><a href="'+htmlEsc(cardURL(x))+'" style="font-family:Arial,sans-serif;font-size:13px;font-weight:bold;color:#ffffff;text-decoration:none">Explore asset &amp; activation resources &#8599;</a></td></tr></table>')
-   +resources+'</table></td></tr>';
+   +resources
+   +cell('<p style="font-size:12px;font-weight:bold;color:#172437;margin:14px 0 7px">SHARE &amp; CREATE</p><ul style="padding-left:20px;margin:0 0 16px;font-size:13px;line-height:1.7">'+shareActionLinks(x).map(([label,url])=>'<li><a style="color:#b30016" href="'+htmlEsc(url)+'">'+htmlEsc(label)+'</a></li>').join('')+'</ul>')
+   +cell('<div style="background:#f7f9fb;padding:12px 14px;font-size:12px;line-height:1.6;color:#465362;margin:0 0 12px"><strong>ASSET DETAILS</strong><div>'+articleDetailFields(x).map(([label,value])=>'<div><b>'+htmlEsc(label)+':</b> '+htmlEsc(value)+'</div>').join('')+'</div></div>')
+   +'</table></td></tr>';
  }).join('');
  const footer='<tr><td style="padding:25px 28px;background:#f5f7f9;border-top:2px solid #e5e9ed;font-family:Arial,sans-serif"><strong style="font-size:17px;color:#111b2b">Everything you need to activate, in one place.</strong><p style="font-size:13px;line-height:1.6;color:#52616e">Find more approved campaign content and ready-to-use activation resources in the Content Library.</p><a href="https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Content-Library.aspx" style="font-size:13px;font-weight:bold;color:#b30016;text-decoration:underline">Explore the Content Library &#8599;</a></td></tr>';
  return '<table role="presentation" width="760" cellpadding="0" cellspacing="0" style="width:100%;border-collapse:collapse;font-family:Arial,Helvetica,sans-serif;max-width:760px;background:#fff" align="center">'
@@ -227,7 +250,7 @@ function updateEmailPreview(){ /* One combined preview is shown after publishing
 async function copyEmailHTML(){
  const records=emailSelectedAssets();if(!records.length){set('status','Select an asset before copying email HTML.');return}
  const html=emailMarkup(records);
- const plain=records.map(x=>title(x.title)+'\n'+clean(x.abstract||x.notes||'')+'\n'+cardURL(x)).join('\n\n');
+ const plain=records.map(x=>title(x.title)+'\n'+clean(x.abstract||x.notes||'')+'\n'+cardURL(x)+'\n'+shareActionLinks(x).map(([label,url])=>label+': '+url).join('\n')).join('\n\n');
  try{
   if(navigator.clipboard?.write && window.ClipboardItem){
    await navigator.clipboard.write([new ClipboardItem({'text/html':new Blob([html],{type:'text/html'}),'text/plain':new Blob([plain],{type:'text/plain'})})]);
@@ -247,6 +270,8 @@ function outlookText(records){
  records.forEach(x=>{
   lines.push(title(x.title),'',clean(x.abstract||x.notes||''),'','Explore asset & activation resources: '+cardURL(x));
   availableResourceLinks(x).forEach(([label,url])=>lines.push(label+': '+url));
+  shareActionLinks(x).forEach(([label,url])=>lines.push(label+': '+url));
+  articleDetailFields(x).forEach(([label,value])=>lines.push(label+': '+value));
   lines.push('','');
  });
  lines.push('Everything you need to activate, in one place.','Content Library: https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Content-Library.aspx');
@@ -373,7 +398,7 @@ async function copyRich(){
 let batchIds=[];
 const batchEntries=()=>batchIds.map(id=>items.find(x=>x.id===id)).filter(Boolean);
 function batchHTML(){return articlePackage(batchEntries())}
-function batchText(){return [announcementPageTitle(batchEntries()),...batchEntries().map(x=>[title(x.title),clean(x.abstract||x.notes||'Approved description is required before publishing.'),'Content Resources: '+cardURL(x),...availableResourceLinks(x).map(([name,url])=>name+': '+url)].join('\n'))].join('\n\n')}
+function batchText(){return [announcementPageTitle(batchEntries()),...batchEntries().map(x=>[title(x.title),clean(x.abstract||x.notes||'Approved description is required before publishing.'),'Content Resources: '+cardURL(x),...availableResourceLinks(x).map(([name,url])=>name+': '+url),...shareActionLinks(x).map(([name,url])=>name+': '+url),...articleDetailFields(x).map(([name,value])=>name+': '+value)].join('\n'))].join('\n\n')}
 function renderBatch(){
  const el=$('batchList'),entries=batchEntries();el.replaceChildren();
  if(!entries.length){const empty=document.createElement('span');empty.className='hint';empty.textContent='No assets selected yet.';el.append(empty)}
