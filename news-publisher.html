@@ -240,33 +240,54 @@ function emailNavigationHtml(locationLabel){
 }
 function emailNavigationText(){return 'News and Updates: '+NEWS_HUB_URL+'\nGlobal Campaigns Hub: '+NEWS_HUB_URL;}
 function emailMarkup(records,inlineImages={}){
- if(!records.length)return '<p style="font-family:Arial,sans-serif;padding:20px">Choose content to preview your email.</p>';
- const cell=(html,extra='')=>'<tr><td style="padding:0 26px;'+extra+'">'+html+'</td></tr>';
- const titleBlock='<tr><td bgcolor="#ffffff" style="background:#ffffff;border-top:6px solid #d60016;padding:26px 30px 25px;color:#111b2b;font-family:Arial,Helvetica,sans-serif">'
-  +'<p style="font-family:Arial,Helvetica,sans-serif;font-size:12px;letter-spacing:1.4px;font-weight:bold;color:#c90016;margin:0 0 13px">GLOBAL CAMPAIGNS</p>'
-  +'<h1 style="font-family:Arial,Helvetica,sans-serif;font-size:27px;line-height:1.28;font-weight:bold;color:#111b2b;margin:0 0 12px">New Content &amp; Activation Resources</h1>'
-  +'<p style="font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:1.6;color:#435465;margin:0 0 12px">Explore approved customer-facing content and activation resources.</p>'
-  +'<p style="font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:1.55;color:#465768;margin:0 0 15px"><strong>Featured:</strong> '+htmlEsc(records.map(x=>title(x.title)).join(' | '))+'</p>'
- +emailNavigationHtml('header')+'</td></tr>';
+ if(!records.length)return '<p style="font-family:Arial,sans-serif;padding:24px">Choose content to preview your email.</p>';
+ const esc=htmlEsc;
+ const font='Arial,Helvetica,sans-serif';
+ const td=(html,padding='0 38px')=>'<tr><td style="padding:'+padding+';font-family:'+font+';font-size:16px;line-height:1.6;color:#334155">'+html+'</td></tr>';
+ const heading='<tr><td bgcolor="#142136" style="background-color:#142136;padding:34px 38px 30px;border-top:7px solid #d70019;font-family:'+font+'">'
+  +'<p style="font-size:13px;line-height:1.4;font-weight:700;letter-spacing:1.5px;color:#ffffff;margin:0 0 18px">HITACHI VANTARA <span style="color:#ff5365">&nbsp; / &nbsp;</span> GLOBAL CAMPAIGNS</p>'
+  +'<h1 style="font-size:32px;line-height:1.2;font-weight:700;color:#ffffff;margin:0 0 16px">New Content &amp;<br>Activation Resources</h1>'
+  +'<p style="font-size:17px;line-height:1.55;color:#e3e9f1;margin:0 0 23px">Discover new content and ready-to-use resources to strengthen your customer conversations.</p>'
+  +'<p style="font-size:14px;line-height:1.7;color:#ffffff;margin:0">'+[
+    ['News and Updates',NEWS_HUB_URL],['Global Campaigns Hub',NEWS_HUB_URL]
+   ].map(([label,url])=>'<a href="'+esc(url)+'" style="color:#ffffff;text-decoration:underline;font-size:14px;font-weight:700">'+esc(label)+'</a>').join('&nbsp;&nbsp; | &nbsp;&nbsp;')+'</p>'
+  +'</td></tr>';
+ const intro=td('<p style="margin:29px 0 4px;font-size:13px;letter-spacing:1px;font-weight:700;color:#bd0018">FEATURED CONTENT &nbsp; / &nbsp; '+records.length+' '+(records.length===1?'RESOURCE':'RESOURCES')+'</p>'
+  +'<h2 style="font-size:22px;line-height:1.35;color:#142136;font-weight:700;margin:5px 0 10px">Start the right customer conversation.</h2>'
+  +'<p style="font-size:16px;line-height:1.65;color:#46556a;margin:0 0 26px">'+esc(editAnnouncementIntro())+'</p>');
+ function linkRows(list){
+  if(!list.length)return '';
+  const rows=[];
+  for(let i=0;i<list.length;i+=2){
+   const cells=list.slice(i,i+2).map(([label,url])=>'<td width="50%" valign="top" style="width:50%;padding:0 9px 9px 0;font-family:'+font+'"><table width="100%" role="presentation" cellpadding="0" cellspacing="0" style="border-collapse:collapse"><tr><td style="border:1px solid #d8e0e9;background:#ffffff;padding:12px 13px;font-size:14px;line-height:1.4;font-weight:700"><a href="'+esc(url)+'" style="color:#b60019;text-decoration:none">'+esc(label)+' &#8599;</a></td></tr></table></td>').join('');
+   rows.push('<tr>'+cells+(i+1>=list.length?'<td width="50%" style="width:50%">&nbsp;</td>':'')+'</tr>');
+  }
+  return '<table width="100%" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse">'+rows.join('')+'</table>';
+ }
  const sections=records.map((x,i)=>{
-  const art=Object.prototype.hasOwnProperty.call(inlineImages,x.id)?inlineImages[x.id]:emailCoverURL(x),links=availableResourceLinks(x),d=clean(x.abstract||x.notes||'Approved description not available. Confirm before sending.');
-  const picture=art?'<tr><td style="padding:20px 26px 0"><img src="'+htmlEsc(art)+'" alt="'+htmlEsc(title(x.title))+' cover" width="135" style="display:block;width:135px;max-width:100%;height:auto;border:1px solid #e5e9ef;border-radius:4px"></td></tr>':'';
-  const items=links.map(([label,url])=>'<li style="margin:4px 0"><a href="'+htmlEsc(url)+'" style="color:#b30016;text-decoration:underline">'+htmlEsc(label)+'</a></li>').join('');
-  const resources=items?cell('<p style="font-size:12px;font-weight:bold;color:#192537;letter-spacing:.4px;margin:18px 0 6px">AVAILABLE ACTIVATION RESOURCES</p><ul style="padding-left:20px;margin:0 0 17px;font-size:13px;line-height:1.7">'+items+'</ul>'):'';
-  return '<tr><td style="border-bottom:1px solid #e4e7ea;padding:0 0 18px"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse">'
-   +cell('<p style="font-size:10px;letter-spacing:1px;font-weight:bold;color:#b90019;text-transform:uppercase;margin:18px 0 7px">'+htmlEsc(x.campaign||'GLOBAL CAMPAIGNS')+' / '+htmlEsc(x.type||'CONTENT')+'</p>'
-    +'<h2 style="font-size:20px;line-height:1.35;margin:0 0 10px;color:#111b2b">'+htmlEsc(title(x.title))+'</h2>')
-   +picture
-   +cell('<p style="color:#44525f;font-size:14px;line-height:1.7;margin:12px 0 15px">'+htmlEsc(d)+'</p>')
-   +cell('<table role="presentation" cellpadding="0" cellspacing="0"><tr><td bgcolor="#d40016" style="background:#d40016;border-radius:4px;padding:12px 17px"><a href="'+htmlEsc(cardURL(x))+'" style="font-family:Arial,sans-serif;font-size:13px;font-weight:bold;color:#ffffff;text-decoration:none">Explore asset &amp; activation resources &#8599;</a></td></tr></table>')
-   +resources
-   +cell('<p style="font-size:12px;font-weight:bold;color:#172437;margin:14px 0 7px">SHARE &amp; CREATE</p><ul style="padding-left:20px;margin:0 0 16px;font-size:13px;line-height:1.7">'+shareActionLinks(x).map(([label,url])=>'<li><a style="color:#b30016" href="'+htmlEsc(url)+'">'+htmlEsc(label)+'</a></li>').join('')+'</ul>')
-   +cell('<div style="background:#f7f9fb;padding:12px 14px;font-size:12px;line-height:1.6;color:#465362;margin:0 0 12px"><strong>ASSET DETAILS</strong><div>'+articleDetailFields(x).map(([label,value])=>'<div><b>'+htmlEsc(label)+':</b> '+htmlEsc(value)+'</div>').join('')+'</div></div>')
-   +'</table></td></tr>';
+  const image=Object.prototype.hasOwnProperty.call(inlineImages,x.id)?inlineImages[x.id]:emailCoverURL(x);
+  const resources=availableResourceLinks(x),actions=shareActionLinks(x);
+  const descr=clean(x.abstract||x.notes||'Approved description not available. Confirm before sending.');
+  const cover=image?td('<img src="'+esc(image)+'" alt="'+esc(title(x.title))+' cover" width="200" style="display:block;width:200px;max-width:100%;height:auto;border:1px solid #e2e8f0">','0 38px 19px'):'';
+  const divider=i?'<tr><td style="padding:0 38px"><div style="height:1px;border-top:1px solid #dfe5ec;margin-top:6px"></div></td></tr>':'';
+  const label=td('<p style="font-size:12px;line-height:1.5;font-weight:700;letter-spacing:1.1px;color:#bf0018;margin:25px 0 9px">'+esc(x.campaign||'GLOBAL CAMPAIGNS')+' &nbsp; / &nbsp; '+esc(x.type||'CONTENT')+'</p>'
+   +'<h2 style="font-size:25px;line-height:1.28;color:#142136;font-weight:700;margin:0 0 19px">'+esc(title(x.title))+'</h2>');
+  const description=td('<p style="font-size:16px;line-height:1.68;color:#425267;margin:0 0 20px">'+esc(descr)+'</p>');
+  const action=td('<table cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse"><tr><td bgcolor="#d5001b" style="background:#d5001b;padding:14px 20px"><a href="'+esc(cardURL(x))+'" style="font-size:15px;line-height:1.4;font-weight:700;color:#ffffff;text-decoration:none">Explore asset &amp; activation resources &nbsp; &#8599;</a></td></tr></table>','0 38px 24px');
+  const links=resources.length?td('<p style="font-size:14px;line-height:1.5;font-weight:700;color:#142136;letter-spacing:.4px;margin:0 0 12px">AVAILABLE ACTIVATION RESOURCES</p>'+linkRows(resources),'0 38px 24px'):'';
+  const share=actions.length?td('<p style="font-size:14px;line-height:1.5;font-weight:700;color:#142136;letter-spacing:.4px;margin:0 0 12px">SHARE &amp; CREATE</p>'+linkRows(actions),'0 38px 22px'):'';
+  const details=articleDetailFields(x);
+  const metadata=details.length?td('<div style="border-top:1px solid #e0e6ed;padding:15px 0 22px"><p style="font-size:12px;font-weight:700;letter-spacing:.5px;color:#66768a;margin:0 0 7px">ASSET DETAILS</p>'+details.map(([label,value])=>'<p style="font-size:13px;line-height:1.6;color:#64748b;margin:2px 0"><strong>'+esc(label)+':</strong> '+esc(value)+'</p>').join('')+'</div>'):'';
+  return divider+label+cover+description+action+links+share+metadata;
  }).join('');
- const footer='<tr><td style="padding:25px 28px;background:#f5f7f9;border-top:2px solid #e5e9ed;font-family:Arial,sans-serif"><strong style="font-size:17px;color:#111b2b">Everything you need to activate, in one place.</strong><p style="font-size:13px;line-height:1.6;color:#52616e">Find more approved campaign content and ready-to-use activation resources in the Content Library.</p><a href="https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Content-Library.aspx" style="font-size:13px;font-weight:bold;color:#b30016;text-decoration:underline">Explore the Content Library &#8599;</a><div style="margin-top:17px;border-top:1px solid #dbe2ea;padding-top:13px">'+emailNavigationHtml('footer')+'</div></td></tr>';
- return '<table role="presentation" width="760" cellpadding="0" cellspacing="0" style="width:100%;border-collapse:collapse;font-family:Arial,Helvetica,sans-serif;max-width:760px;background:#fff" align="center">'
-  +titleBlock+cell('<p style="font-size:14px;line-height:1.6;margin:18px 0 0;color:#465362">'+htmlEsc(editAnnouncementIntro())+'</p>')+sections+footer+'</table>';
+ const footer='<tr><td bgcolor="#f1f4f8" style="background-color:#f1f4f8;border-top:3px solid #d5001b;padding:28px 38px 32px;font-family:'+font+'">'
+  +'<h2 style="font-size:21px;line-height:1.3;font-weight:700;color:#142136;margin:0 0 10px">Everything you need to activate, in one place.</h2>'
+  +'<p style="font-size:15px;line-height:1.6;color:#4a5a6e;margin:0 0 14px">Explore more approved campaign content, outreach emails and promotional resources in the Content Library.</p>'
+  +'<p style="font-size:15px;margin:0 0 24px"><a href="https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Content-Library.aspx" style="color:#b60019;font-weight:700;text-decoration:underline">Explore the Content Library &#8599;</a></p>'
+  +'<div style="border-top:1px solid #ccd6e3;padding-top:18px">'+emailNavigationHtml('footer')+'</div>'
+  +'</td></tr>';
+ return '<table role="presentation" width="700" align="center" cellpadding="0" cellspacing="0" style="width:700px;max-width:100%;border-collapse:collapse;background:#ffffff;font-family:'+font+';color:#243247">'
+   +heading+intro+sections+footer+'</table>';
 }
 function emailDocument(records=emailSelectedAssets(),inlineImages={}){
  const html=emailMarkup(records,inlineImages);
