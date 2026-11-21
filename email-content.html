@@ -22,11 +22,13 @@ let mailto='',body='',subject='';
    const boundary=Math.max(chunk.lastIndexOf('. '),chunk.lastIndexOf('? '),chunk.lastIndexOf('! '));
    summary=chunk.slice(0,boundary>170?boundary+1:(chunk.lastIndexOf(' ')||450)).trim()+'…';
  }
+const newsHubLink='https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Global%20Campaigns.aspx';
+const newsNav='News and Updates: '+newsHubLink+'\nGlobal Campaigns Hub: '+newsHubLink;
  const type=(it.type||'').toLowerCase();
  const status=(it.status||'').toLowerCase();
  const isWebinar=type.includes('webinar');
  const action=isWebinar?(status.includes('on demand')||status.includes('on-demand')?'Watch the webinar':'Register for the webinar'):'View the '+(it.type||'resource').toLowerCase();
- body=['Hi,','','I thought this resource might be relevant to your team.','',title,'',summary,'',action+': '+it.url,'','Happy to discuss how this may apply to your organization.','','Best,'].filter((line,i,all)=>!(line===''&&all[i-1]==='')).join('\n');
+ body=[newsNav,'','Hi,','','I thought this resource might be relevant to your team.','',title,'',summary,'',action+': '+it.url,'','Happy to discuss how this may apply to your organization.','','Best,','',''+newsNav].filter((line,i,all)=>!(line===''&&all[i-1]==='')).join('\n');
  mailto='mailto:?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
  document.getElementById('status').textContent=it.title;
  document.getElementById('preview').textContent='Subject: '+subject+'\n\n'+body;
