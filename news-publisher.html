@@ -44,8 +44,10 @@
 <button id="copyEmbed">Copy web iframe code</button></div>
 <div class="publish-method"><strong>Separate email outside SharePoint</strong>
 <p class="hint">For an HTML-capable email platform. This is not SharePoint's Send as email feature. Hosted images and HTML styling may vary by recipient.</p>
-<button id="copyEmailHTML">Copy formatted email</button>
-<button id="downloadEmailHTML" class="secondary">Download email HTML file</button></div>
+<button id="openOutlookEmail">Open Outlook + copy formatted email</button>
+<button id="downloadOutlookDraft" class="secondary">Download Outlook draft (.eml)</button>
+<details style="margin-top:9px"><summary>Other email formats</summary><div class="actions"><button id="copyEmailHTML" class="secondary">Copy formatted email only</button><button id="downloadEmailHTML" class="secondary">Download email HTML file</button></div></details>
+<p class="hint">Recommended: click <b>Open Outlook + copy formatted email</b>, click in the new message body and press <b>Ctrl+V</b>. The subject is prefilled. Alternatively open the .eml file in Outlook; some Outlook versions open it for viewing instead of editing, so check before sending.</p></div>
 </div>
 <div style="margin:15px 0 7px"><strong>Preview: separate HTML email</strong><p class="hint">Review hosted images and buttons before distribution.</p></div>
 <iframe id="emailPreview" title="Separate email preview" sandbox="allow-popups allow-popups-to-escape-sandbox" style="display:block;width:100%;height:490px;border:1px solid #dbe2ea;border-radius:8px;background:white"></iframe>
@@ -239,6 +241,43 @@ function downloadEmailHTML(){
  setTimeout(()=>URL.revokeObjectURL(url),60000);
  set('status','Downloaded standalone email HTML with '+records.length+' asset(s), no iframe. Review in an email editor and send a test before distributing.');
 }
+async function openOutlookEmail(){
+ const records=emailSelectedAssets();
+ if(!records.length){set('status','Select at least one asset first.');return}
+ const subject=announcementPageTitle(records);
+ const url='https://outlook.office.com/mail/deeplink/compose?subject='+encodeURIComponent(subject);
+ // Open synchronously in the click handler before clipboard permission prompts.
+ const tab=window.open(url,'_blank');
+ try{
+  if(!navigator.clipboard?.write||!window.ClipboardItem)throw Error('Rich clipboard is not available');
+  const html=emailMarkup(records);
+  const plain=records.map(x=>[title(x.title),clean(x.abstract||x.notes||''),cardURL(x)].join('\n')).join('\n\n');
+  await navigator.clipboard.write([new ClipboardItem({
+   'text/html':new Blob([html],{type:'text/html'}),
+   'text/plain':new Blob([plain],{type:'text/plain'})
+  })]);
+  set('status',(tab?'Outlook compose opened with the subject. ':'Outlook pop-up blocked: allow pop-ups or open Outlook yourself. ')+'Formatted email copied. Click the message body in Outlook and press Ctrl+V. Verify all images and links before sending.');
+ }catch(err){
+  set('status','Outlook compose '+(tab?'opened':'may have been blocked')+', but formatting could not be copied automatically. Use Copy formatted email or Download email HTML. '+err.message);
+ }
+}
+function downloadOutlookDraft(){
+ const records=emailSelectedAssets();
+ if(!records.length){set('status','Select at least one asset first.');return}
+ const subject=announcementPageTitle(records);
+ const enc=new TextEncoder();
+ const b64=bytes=>{let binary='';for(let i=0;i<bytes.length;i+=8192)binary+=String.fromCharCode(...bytes.subarray(i,i+8192));return btoa(binary)};
+ const utf8header='=?UTF-8?B?'+b64(enc.encode(subject))+'?=';
+ const encoded=b64(enc.encode(emailDocument())).match(/.{1,76}/g).join('\r\n');
+ const mime=['X-Unsent: 1','MIME-Version: 1.0','Subject: '+utf8header,'Content-Type: text/html; charset=UTF-8','Content-Transfer-Encoding: base64','',''+encoded,''].join('\r\n');
+ const blob=new Blob([mime],{type:'message/rfc822'}),url=URL.createObjectURL(blob),a=document.createElement('a');
+ a.href=url;a.download='global-campaigns-outlook-draft.eml';document.body.appendChild(a);a.click();a.remove();
+ setTimeout(()=>URL.revokeObjectURL(url),60000);
+ set('status','Outlook draft file downloaded. Open the .eml file with Outlook, check whether it opens in editable compose mode, then review the formatted images and links. If read-only, use Open Outlook + copy formatted email.');
+}
+$('openOutlookEmail').onclick=openOutlookEmail;
+$('downloadOutlookDraft').onclick=downloadOutlookDraft;
+
 $('copyEmailHTML').onclick=copyEmailHTML;
 $('downloadEmailHTML').onclick=downloadEmailHTML;
 
