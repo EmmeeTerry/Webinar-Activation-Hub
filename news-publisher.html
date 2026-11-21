@@ -736,6 +736,7 @@ function savedViewURL(){
  u.searchParams.set('savedView','1');
  const values=[['q',$('search').value.trim()],['artwork',$('filterArtwork').value],['news',$('filterNews').value],['date',$('datePreset').value],['sort',$('sortAssets').value],['from',$('dateFrom').value],['to',$('dateTo').value],['item',$('asset').value],['selection',batchIds.join(',')]];
  values.forEach(([name,value])=>{if(value)u.searchParams.set(name,value)});
+ if(announcementIntroEdit||Object.values(announcementEdits).some(v=>Object.keys(v).length))u.searchParams.set('custom',encodeAnnouncementOverrides(emailSelectedAssets()));
  return u.toString();
 }
 function restoreSavedView(){
@@ -746,11 +747,12 @@ function restoreSavedView(){
  $('dateFrom').value=params.get('from')||'';$('dateTo').value=params.get('to')||'';
  $('customDates').hidden=$('datePreset').value!=='custom';
  batchIds=[...new Set((params.get('selection')||'').split(',').filter(Boolean))].filter(id=>items.some(x=>x.id===id)).slice(0,20);
+ try{const raw=(params.get('custom')||'').replace(/-/g,'+').replace(/_/g,'/');if(raw){const data=JSON.parse(new TextDecoder().decode(Uint8Array.from(atob(raw),c=>c.charCodeAt(0))));if(typeof data.intro==='string')announcementIntroEdit=data.intro.slice(0,2500);for(const [id,edit] of Object.entries(data.records||{})){if(!items.some(x=>x.id===id)||!edit||typeof edit!=='object')continue;announcementEdits[id]={};for(const k of ['title','abstract'])if(typeof edit[k]==='string')announcementEdits[id][k]=edit[k].slice(0,4000)}}}catch(e){console.warn('Could not restore announcement edits',e)}
  return true;
 }
 $('saveView').onclick=async()=>{
  const url=savedViewURL();
- try{await navigator.clipboard.writeText(url);set('status','Shareable view link copied. Filters, sort order and selected announcement assets will be restored when opened.')}
+ try{await navigator.clipboard.writeText(url);set('status','Shareable view link copied, including any announcement copy edits. Reopen it to restore your draft.')}
  catch(e){window.prompt('Copy this view link:',url);set('status','Use this link to share your saved filtered view.')}
 };
 function copy(v){navigator.clipboard.writeText(v).then(()=>set('status','Copied to clipboard.')).catch(()=>prompt('Copy this value:',v))}
