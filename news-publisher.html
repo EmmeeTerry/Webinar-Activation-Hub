@@ -13,7 +13,7 @@
 <div class="grid compact-filters" id="customDates" hidden><div><label for="dateFrom">Published from</label><input id="dateFrom" type="date"></div><div><label for="dateTo">Published through</label><input id="dateTo" type="date"></div></div>
 <p class="hint" style="margin:7px 0 0">Dates use the Content Library publish date from Smartsheet. Assets without a publish date appear only under “Any date.”</p>
 <div class="saved-view-controls"><button id="saveView" class="secondary" type="button">Save this view ↗</button><span class="hint">Copy a shareable link with your current filters, sort order, selected asset and announcement selections.</span></div>
-<section class="batch-panel"><div class="batch-top"><div><strong>Create one announcement with multiple assets</strong><p class="hint">Choose an asset above, click Add, then repeat. The live preview updates as you add assets. The embed includes every added asset.</p></div><button class="secondary" id="batchAdd" type="button">+ Add selected asset</button></div><div id="batchList" class="batch-items" aria-live="polite"><span class="hint">No assets selected yet.</span></div><div class="actions"><button id="batchCopy" disabled>Copy formatted text (0)</button><button class="secondary" id="batchClear" disabled>Clear</button></div><div id="batchPreview" class="batch-preview" aria-label="Live combined announcement preview"><p class="hint">Add an asset to see the combined announcement preview here.</p></div><p class="hint">All added assets appear in the live preview and embed, with one shared activation footer. For email-compatible news, use native SharePoint Text and Image web parts; download each cover using its asset chip.</p></section><div class="publish-actions news-primary">
+<section class="batch-panel"><div class="batch-top"><div><strong>Create one announcement with multiple assets</strong><p class="hint">Choose an asset above, click Add, then repeat. The live preview updates as you add assets. The embed includes every added asset.</p></div><button class="secondary" id="batchAdd" type="button">+ Add selected asset</button></div><div id="batchList" class="batch-items" aria-live="polite"><span class="hint">No assets selected yet.</span></div><div class="actions"><button class="secondary" id="batchClear" disabled>Clear selected assets</button></div><div id="batchPreview" class="batch-preview" aria-label="Live combined announcement preview"><p class="hint">Add an asset to see the combined announcement preview here.</p></div><p class="hint">All added assets appear in the live preview and embed, with one shared activation footer. For email-compatible news, use native SharePoint Text and Image web parts; download each cover using its asset chip.</p></section><div class="publish-actions news-primary">
 <div class="publish-heading"><strong>Publish your announcement in SharePoint</strong><span class="hint">For a fully branded page with all selected assets, use the web embed. For SharePoint news sent by email, use the native-text option below instead.</span></div>
 <div class="grid"><div><label for="pageTitle">Suggested SharePoint page title (editable)</label><input id="pageTitle"></div><div><label for="image">Approved image URL (optional)</label><input id="image" placeholder="Use only when replacing the displayed image"></div></div>
 <div class="actions" aria-label="Prepare SharePoint news announcement">
@@ -135,7 +135,7 @@ function announcementPageTitle(records){
  if(titles.length===1)return 'New Resource: '+titles[0];
  const complete=titles.join(' | ');
  if(complete.length<=135)return 'New Content: '+complete;
- const first=titles[0],short=first.length>60?first.slice(0,57).replace(/\\s+\\S*$/,'')+'…':first;
+ const first=titles[0],short=first.length>60?first.slice(0,57).replace(/\s+\S*$/,'')+'…':first;
  return 'New Content: '+short+' + '+(titles.length-1)+' more '+(titles.length===2?'resource':'resources');
 }
 function articlePackage(records,includeImages=true){
@@ -169,17 +169,17 @@ function renderBatch(){
  const el=$('batchList'),entries=batchEntries();el.replaceChildren();
  if(!entries.length){const empty=document.createElement('span');empty.className='hint';empty.textContent='No assets selected yet.';el.append(empty)}
  entries.forEach(x=>{const chip=document.createElement('span');chip.className='batch-chip';const name=document.createElement('span');name.textContent=title(x.title);const b=document.createElement('button');b.type='button';b.textContent='×';b.setAttribute('aria-label','Remove '+title(x.title));b.onclick=()=>{batchIds=batchIds.filter(id=>id!==x.id);renderBatch()};chip.append(name);const art=assetImage(x);if(art){const download=document.createElement('button');download.type='button';download.textContent='Download cover ↓';download.title='Save approved cover for '+title(x.title);download.style.cssText='font-size:12px;color:#b20617;font-weight:bold;white-space:nowrap';download.onclick=()=>downloadAssetImage(x);chip.append(download)}chip.append(b);el.append(chip)});
- $('batchCopy').disabled=$('batchClear').disabled=!entries.length;
- $('batchCopy').textContent='Copy formatted text ('+entries.length+')';
+ $('batchClear').disabled=!entries.length;
+
  $('copyRich').textContent=entries.length?'2. Copy '+entries.length+' assets to SharePoint':'2. Copy to SharePoint';
  $('copyTitle').textContent='1. Copy SharePoint Page Title';
  $('pageTitle').value=announcementPageTitle(entries.length?entries:[current]);
- $('batchPreview').innerHTML=entries.length?batchHTML():'<p class="hint">Add an asset to see the combined announcement preview here.</p>';
+ $('batchPreview').innerHTML=entries.length?batchHTML()+`<div style="margin:20px 0 0;padding:22px 24px;background:#f6f7f9;border:1px solid #e3e7eb;border-radius:7px"><strong style="display:block;font-size:17px;color:#111b2b">Everything you need to activate, in one place.</strong><p style="color:#53626e;font-size:13px;line-height:1.6">Find approved assets and promotional resources, share content with customers or partners, and create overview slides in the Content Library.</p><a href="https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Content-Library.aspx" target="_blank" rel="noopener noreferrer" style="font-size:13px;font-weight:bold;color:#b20617">Explore the Content Library ↗</a></div>`:'<p class="hint">Add an asset to see the combined announcement preview here.</p>';
 }
 $('batchAdd').onclick=()=>{const id=$('asset').value;if(!id||batchIds.includes(id)){set('status','Select an asset not already in the announcement.');return}if(batchIds.length>=20){set('status','Maximum 20 assets per announcement.');return}batchIds.push(id);renderBatch();set('status',batchIds.length+' assets in the combined announcement.')};
 $('batchClear').onclick=()=>{batchIds=[];renderBatch()};
 
-$('batchCopy').onclick=copyRich;
+
 
 // Save the original supplied image bytes rather than extracting them from the preview canvas.
 // This supports same-origin WebP assets and embedded artwork and avoids cross-origin canvas failures.
