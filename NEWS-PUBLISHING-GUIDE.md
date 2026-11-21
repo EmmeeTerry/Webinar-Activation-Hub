@@ -1,53 +1,34 @@
-# Global Campaigns | Content Announcement Builder
-## Quick team instructions
+# Global Campaigns Content Announcement Builder | Team Instructions
 
-**Builder:** https://emmeeterry.github.io/Webinar-Activation-Hub/news-publisher.html
+**Open the builder:** https://emmeeterry.github.io/Webinar-Activation-Hub/news-publisher.html
 
-Use the builder to prepare announcements from the Smartsheet-synced Content Library. It assembles the selected titles, approved descriptions, images and available promotional links. There is no need to recreate resource cards or maintain a second list of links.
+The builder uses the Smartsheet-synced Content Library as the single source of approved asset titles, descriptions, covers and promotion links.
 
-### Start here for EVERY announcement
-1. Search or filter content. Choose an asset and click **+ Add selected asset to announcement**. Repeat to include multiple assets. Only added assets are included.
-2. Review the combined announcement preview. Check descriptions, titles, artwork, links and Smartsheet approval status. *Ready for review* does not mean approved to publish.
-3. Choose the publishing method below. Nothing is published or sent by the builder.
+## 1. Select content
+Search for an asset, select it, and click **+ Add selected asset to announcement**. Repeat for multiple assets. Check the **Selected content** chips. Optional filters, sort and saved views are collapsed out of the way.
 
-### A. SharePoint News + SharePoint's full-body email
-**Use when the same news post must appear on SharePoint and in a SharePoint email.**
+## 2. Choose the publishing output immediately below the selection
 
-- Use **Copy all selected titles**, **1. Copy text + links**, **2. Save approved covers**, and **3. Open SharePoint template**.
-- Create a new **Made for email** news post or an approved copy of the original template. Never edit the original.
-- Paste the copied content into a SharePoint **Text** web part. Add each approved image separately using native **Image** web parts. The pasted HTML may be restyled by SharePoint and is not a pixel-perfect match for the iframe.
-- Check the **SharePoint page preview** AND **Send as email → Preview** before publishing. Obtain sign-off. Once published, update Smartsheet News Announcement status, published URL and date.
-- Local image downloads are not automatically SharePoint uploads unless your selected folder is actually OneDrive-synced.
+**A. SharePoint News + Send as email**
+Use this when the news post must be distributed as a *full-body email through SharePoint*. Copy the selected title and text/links, save the covers and open the SharePoint template. Create a new **Made for email** news post (or an approved compatible copy of the template), using native **Text** and **Image** web parts. Paste formatting may be simplified by SharePoint; add artwork via native Image web parts. Review both the news page and **Send as email → Preview** before distributing. **Do not use an iframe** for this scenario.
 
-### B. SharePoint branded web embed
-**Use when the priority is the polished, full branded experience on a SharePoint page, not full-body SharePoint news email.**
+**B. SharePoint page (branded iframe)**
+Use this for the most polished **web** announcement. Click **Copy iframe for SharePoint**, create a *new* SharePoint page, insert an **Embed** web part and paste. The iframe includes all added asset titles, descriptions, artwork, promotional links and two shared resource footers. It is **not compatible with full-body SharePoint News email**. To notify stakeholders, send them the page link, or use Outlook option C.
 
-- Click **Preview branded page**, then **Copy iframe for SharePoint**.
-- Create a new SharePoint page. Add an **Embed** web part and paste the copied iframe code.
-- The iframe includes all added assets, available cover art, resource links and two shared footer sections.
-- An iframe is **not** included when SharePoint sends a full-body News email. If sharing by email, send a link to the published page or use Outlook option C.
+**C. Outlook email (embedded images)**
+This is recommended when distributing an announcement directly by **Classic Outlook**, separate from SharePoint's Send as email. Click **Create Outlook email with embedded images (.eml)**. The browser downloads an email file with approved cover images inserted as inline MIME attachments wherever retrievable; WebP images are converted to PNG where possible. Open the .eml in Classic Outlook, confirm it is editable, check every cover and link, and send a test to yourself before distributing. *Some Outlook installations open .eml files read-only.* The builder reports any covers it could not embed.
 
-### C. Formatted Outlook email
-**Use to send a designed announcement directly from Outlook, separately from SharePoint's Send as email.**
+Alternative methods are tucked into **Other email methods (optional)**. The previous **Open blank Outlook + copy HTML** workflow requires you to paste with **Ctrl+V** and has not reliably preserved cover images in Classic Outlook. **Open Outlook with text and links only** is a formatting-free fallback.
 
-- Click **Copy formatted email + open Outlook**.
-- **Important: Outlook opens with a blank email body.** The builder attempts to copy the designed email to your clipboard at the same time.
-- Wait for the builder's **Copied!** confirmation, then click inside the blank Outlook message and press **Ctrl+V**.
-- The subject is prefilled. Verify the covers, links and styling; add recipients and send yourself a test first.
-- **For Classic Outlook and reliable images:** use **Download Outlook with embedded images (.eml)**. The builder downloads accessible approved covers and embeds them inside the message, converting WebP to PNG where needed. Open the file in Outlook, review its layout and confirm it can be edited. Some Outlook versions open .eml read-only. Images blocked by permissions cannot be embedded, and the builder reports them.
-- If using **Copy formatted email + open Outlook**, the compose window opens with an empty body. Wait for the builder to confirm the formatted email was copied, then click the message body and press **Ctrl+V**. Remote images may still be blocked by Outlook.
-- If automatic copying fails, click **Copy email only** and paste into Outlook. The **Open plain-text Outlook email** option is the robust fallback with prefilled text and working links but no embedded cover images.
-- The Outlook option includes selected covers where accessible via public image URLs, and can render differently in some email clients.
+## 3. Preview and finish
 
-### Keep it clean
+There is now **one combined content preview below the publishing actions**. Use it to validate the selected titles, copy, links and artwork. The actual SharePoint or Outlook email may render differently.
 
-- Use approved descriptions and resources from the Smartsheet Content Mapping Master List and the Content Library. Fix missing or incorrect source information there.
-- Never create duplicate content inventories, manually redraw resource cards, or email screenshots in place of working Hub links.
-- Preview and obtain approval before publishing or sending.
-- **Optional/advanced tools** (Copilot and developer exports) are not needed for the normal process and do not create a SharePoint page.
+Always verify Smartsheet content approval. Nothing is automatically published, sent or approved. Don't overwrite the original SharePoint template. After publishing, record the News Published URL, date and status back in Smartsheet.
 
-**Useful links**
-
+### Useful links
 - [Content Announcement Builder](https://emmeeterry.github.io/Webinar-Activation-Hub/news-publisher.html)
-- [Content Sharing Template](https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Content-Sharing-Template.aspx)
+- [SharePoint Content Sharing Template](https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Content-Sharing-Template.aspx)
 - [Content Library](https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Content-Library.aspx)
+
+Keep using the Content Library as the source of truth. Do not manually recreate resource cards, screenshots or separate lists of promotional links.
