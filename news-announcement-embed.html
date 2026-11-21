@@ -38,7 +38,7 @@ function setupAnnouncementNavigation(){
   const nav=document.getElementById(id);if(!nav)continue;
   nav.replaceChildren();
   labels.forEach((label,i)=>{
-   const raw=edits.nav?.[label];const url=label==='News and Updates'?newsUpdatesUrl:(typeof raw==='string'&&/^https?:\/\/\S+$/i.test(raw)?raw:defaultNav);
+   const raw=edits.nav?.[label];const fallback=label==='News and Updates'?newsUpdatesUrl:defaultNav;const url=typeof raw==='string'&&/^https?:\/\/\S+$/i.test(raw)?raw:fallback;
    const a=document.createElement('a');a.textContent=label;a.href=url;a.target='_blank';a.rel='noopener noreferrer';a.style.cssText=id==='announcementHeaderNav'?'color:#fff;font-size:13px;font-weight:bold;text-decoration:underline':'color:#b20617;font-size:13px;font-weight:bold;text-decoration:underline';
    if(i){const divider=document.createElement('span');divider.textContent='  |  ';divider.style.margin='0 9px';nav.append(divider)}
    nav.append(a);
