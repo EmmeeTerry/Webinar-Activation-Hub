@@ -144,11 +144,7 @@ function assetAnnouncementHTML(x,includeImages=true){
 function announcementPageTitle(records){
  const titles=records.filter(Boolean).map(x=>title(x.title));
  if(!titles.length)return 'Content Announcement';
- if(titles.length===1)return 'New Resource: '+titles[0];
- const complete=titles.join(' | ');
- if(complete.length<=135)return 'New Content: '+complete;
- const first=titles[0],short=first.length>60?first.slice(0,57).replace(/\s+\S*$/,'')+'…':first;
- return 'New Content: '+short+' + '+(titles.length-1)+' more '+(titles.length===2?'resource':'resources');
+ return titles.join(' | ');
 }
 function articlePackage(records,includeImages=true){
  if(!records.length)return '';
@@ -348,7 +344,7 @@ $('saveView').onclick=async()=>{
  catch(e){window.prompt('Copy this view link:',url);set('status','Use this link to share your saved filtered view.')}
 };
 function copy(v){navigator.clipboard.writeText(v).then(()=>set('status','Copied to clipboard.')).catch(()=>prompt('Copy this value:',v))}
-$('image').value=params.get('image')||'';$('asset').onchange=()=>{$('image').value='';render()};$('image').oninput=render;$('copyTitle').onclick=()=>copy($('pageTitle').value);$('saveImage').onclick=saveImageToFolder;$('copyRich').onclick=copyRich;$('copyEmbed').onclick=()=>{const ids=batchIds.length?batchIds:(current?[current.id]:[]);if(!ids.length){set('status','Select at least one asset first.');return}const count=ids.length,height=Math.max(920,360+count*570),label='Content announcement with '+count+' asset'+(count===1?'':'s');copy('<iframe src="'+articleURL(current)+'" width="100%" height="'+height+'" style="border:none;" loading="lazy" title="'+label+'"></iframe>');set('status','Embed code generated for '+count+' selected asset'+(count===1?'':'s')+'. Replace the previous iframe in SharePoint with this new code.')};$('view').onclick=()=>window.open(articleURL(current),'_blank');$('copyCard').onclick=()=>copy(cardURL(current));$('copyPacket').onclick=()=>copy(reviewPacket());$('sharepoint').onclick=()=>window.open('https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Content-Sharing-Template.aspx','_blank','noopener');
+$('image').value=params.get('image')||'';$('asset').onchange=()=>{$('image').value='';render()};$('image').oninput=render;$('copyTitle').onclick=()=>copy($('pageTitle').value);$('saveImage').onclick=saveImageToFolder;$('copyRich').onclick=copyRich;$('copyEmbed').onclick=()=>{const ids=batchIds.length?batchIds:(current?[current.id]:[]);if(!ids.length){set('status','Select at least one asset first.');return}const count=ids.length,height=Math.max(920,360+count*570),label=announcementPageTitle(ids.map(id=>items.find(x=>x.id===id)).filter(Boolean));copy('<iframe src="'+articleURL(current)+'" width="100%" height="'+height+'" style="border:none;" loading="lazy" title="'+htmlEsc(label)+'"></iframe>');set('status','Embed code generated for '+count+' selected asset'+(count===1?'':'s')+'. Replace the previous iframe in SharePoint with this new code.')};$('view').onclick=()=>window.open(articleURL(current),'_blank');$('copyCard').onclick=()=>copy(cardURL(current));$('copyPacket').onclick=()=>copy(reviewPacket());$('sharepoint').onclick=()=>window.open('https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Content-Sharing-Template.aspx','_blank','noopener');
 $('search').oninput=fillAssets;$('filterNews').onchange=fillAssets;$('filterArtwork').onchange=fillAssets;
 $('sortAssets').onchange=fillAssets;
 $('datePreset').onchange=()=>{$('customDates').hidden=$('datePreset').value!=='custom';fillAssets()};
