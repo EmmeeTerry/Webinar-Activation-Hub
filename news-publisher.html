@@ -18,7 +18,7 @@
 </details>
 </section>
 <section class="batch-panel"><div class="batch-top"><div><strong>1. Selected assets</strong><p class="hint">Use <b>+ Add selected asset to announcement</b> above. Repeat to feature multiple assets; remove any you do not want.</p></div></div><div id="batchList" class="batch-items" aria-live="polite"><span class="hint">No assets selected yet.</span></div><div class="actions"><button class="secondary" id="batchClear" disabled>Clear selection</button></div></section>
-<section class="batch-panel" style="margin-top:16px"><div class="batch-preview-heading"><strong>2. Edit and preview your announcement</strong><p class="hint" style="margin:5px 0">Click the article title, description or introduction to edit copy. Use Edit header & footer links to update only the two navigation destinations for this announcement. Changes are used in both publishing options.</p></div><div id="batchPreview" class="batch-preview" aria-label="Live combined announcement preview"><p class="hint">Add an asset to see the combined announcement preview here.</p></div></section>
+<section class="batch-panel" style="margin-top:16px"><div class="batch-preview-heading"><strong>2. Edit and preview your announcement</strong><p class="hint" style="margin:5px 0">Click the article title, description or introduction to edit copy. Use Edit header & footer links to update Global Campaigns Hub only; News and Updates always links to All News Posts. Changes are used in both publishing options.</p></div><div id="batchPreview" class="batch-preview" aria-label="Live combined announcement preview"><p class="hint">Add an asset to see the combined announcement preview here.</p></div></section>
 <div class="publish-actions news-primary" id="publish">
 <div class="publish-heading"><strong>3. Choose ONE way to publish AND email</strong><span class="hint">Both options result in a SharePoint page and an email. They differ in where the email is sent from.</span></div>
 <div class="status" id="status" role="status" aria-live="polite"></div>
@@ -233,9 +233,10 @@ function emailCoverURL(x){
  if(/^https:\/\//i.test(w||'')&&!isSharePointImage(w))return w;
  return '';
 }
-const NEWS_HUB_URL='https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Global%20Campaigns.aspx';
-const navDestinations={'News and Updates':NEWS_HUB_URL,'Global Campaigns Hub':NEWS_HUB_URL};
-function navLinks(){return [['News and Updates',navDestinations['News and Updates']],['Global Campaigns Hub',navDestinations['Global Campaigns Hub']]]}
+const NEWS_HUB_URL='https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/All-News-Posts.aspx';
+const GLOBAL_CAMPAIGNS_URL='https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Global%20Campaigns.aspx';
+const navDestinations={'Global Campaigns Hub':GLOBAL_CAMPAIGNS_URL};
+function navLinks(){return [['News and Updates',NEWS_HUB_URL],['Global Campaigns Hub',navDestinations['Global Campaigns Hub']]]}
 function emailNavigationHtml(locationLabel){
  return '<p style="font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:1.65;margin:0;color:#223148">'
  +navLinks().map(([label,url])=>'<a href="'+htmlEsc(url)+'" style="color:#b30016;text-decoration:underline;font-weight:bold">'+htmlEsc(label)+'</a>').join(' &nbsp; | &nbsp; ')+'</p>';
@@ -244,8 +245,9 @@ function emailNavigationText(){return navLinks().map(([label,url])=>label+': '+u
 function previewNavigationEditor(){
  return '<div style="margin:10px 28px 14px;padding:12px 15px;background:#f7f9fb;border:1px solid #dce3ed;border-radius:6px">'
  +'<details><summary style="cursor:pointer;font-weight:700;font-size:13px;color:#ac0016">Edit header &amp; footer links</summary>'
- +'<p style="font-size:12px;margin:9px 0;color:#536274">These two destinations update both the header and footer in the email and SharePoint outputs. Article resource links remain unchanged.</p>'
- +navLinks().map(([label,url])=>'<label style="display:block;font-size:12px;font-weight:700;margin:9px 0 5px">'+htmlEsc(label)+'<input type="url" data-nav-label="'+htmlEsc(label)+'" value="'+htmlEsc(url)+'" style="display:block;box-sizing:border-box;width:100%;padding:8px 9px;margin-top:4px;border:1px solid #bcc8d6;border-radius:4px;font-size:13px;font-weight:400"></label>').join('')
+ +'<p style="font-size:12px;margin:9px 0;color:#536274">News and Updates always links to All News Posts. You can change only the Global Campaigns Hub destination. Header and footer stay in sync; article resource links remain unchanged.</p>'
+ +'<p style="font-size:12px;margin:8px 0"><b>News and Updates (fixed):</b> <a href="'+htmlEsc(NEWS_HUB_URL)+'" target="_blank" rel="noopener noreferrer">All News Posts ↗</a></p>'
+ +navLinks().filter(([label])=>label==='Global Campaigns Hub').map(([label,url])=>'<label style="display:block;font-size:12px;font-weight:700;margin:9px 0 5px">'+htmlEsc(label)+'<input type="url" data-nav-label="'+htmlEsc(label)+'" value="'+htmlEsc(url)+'" style="display:block;box-sizing:border-box;width:100%;padding:8px 9px;margin-top:4px;border:1px solid #bcc8d6;border-radius:4px;font-size:13px;font-weight:400"></label>').join('')
  +'</details></div>';
 }
 function emailMarkup(records,inlineImages={}){
@@ -491,7 +493,8 @@ $('batchPreview').addEventListener('change',event=>{
  const value=input.value.trim();
  let valid=false;try{const parsed=new URL(value);valid=['http:','https:'].includes(parsed.protocol)}catch(e){}
  if(!valid){input.setCustomValidity('Enter a valid https:// or http:// URL');input.reportValidity();return}
- input.setCustomValidity('');navDestinations[input.dataset.navLabel]=value;
+ if(input.dataset.navLabel!=='Global Campaigns Hub')return;
+ input.setCustomValidity('');navDestinations['Global Campaigns Hub']=value;
  const details=input.closest('details');const reopen=Boolean(details?.open);
  renderBatch();
  if(reopen){const updated=$('batchPreview').querySelector('[data-nav-label]')?.closest('details');if(updated)updated.open=true}
@@ -794,7 +797,7 @@ function savedViewURL(){
  u.searchParams.set('savedView','1');
  const values=[['q',$('search').value.trim()],['artwork',$('filterArtwork').value],['news',$('filterNews').value],['date',$('datePreset').value],['sort',$('sortAssets').value],['from',$('dateFrom').value],['to',$('dateTo').value],['item',$('asset').value],['selection',batchIds.join(',')]];
  values.forEach(([name,value])=>{if(value)u.searchParams.set(name,value)});
- if(announcementIntroEdit||Object.values(announcementEdits).some(v=>Object.keys(v).length)||navLinks().some(([,url])=>url!==NEWS_HUB_URL))u.searchParams.set('custom',encodeAnnouncementOverrides(emailSelectedAssets()));
+ if(announcementIntroEdit||Object.values(announcementEdits).some(v=>Object.keys(v).length)||navDestinations['Global Campaigns Hub']!==GLOBAL_CAMPAIGNS_URL)u.searchParams.set('custom',encodeAnnouncementOverrides(emailSelectedAssets()));
  return u.toString();
 }
 function restoreSavedView(){
@@ -805,7 +808,7 @@ function restoreSavedView(){
  $('dateFrom').value=params.get('from')||'';$('dateTo').value=params.get('to')||'';
  $('customDates').hidden=$('datePreset').value!=='custom';
  batchIds=[...new Set((params.get('selection')||'').split(',').filter(Boolean))].filter(id=>items.some(x=>x.id===id)).slice(0,20);
- try{const raw=(params.get('custom')||'').replace(/-/g,'+').replace(/_/g,'/');if(raw){const data=JSON.parse(new TextDecoder().decode(Uint8Array.from(atob(raw),c=>c.charCodeAt(0))));if(typeof data.intro==='string')announcementIntroEdit=data.intro.slice(0,2500);if(data.nav&&typeof data.nav==='object')for(const label of ['News and Updates','Global Campaigns Hub']){const url=data.nav[label];if(typeof url==='string'&&/^https?:\/\/\S+$/i.test(url))navDestinations[label]=url}for(const [id,edit] of Object.entries(data.records||{})){if(!items.some(x=>x.id===id)||!edit||typeof edit!=='object')continue;announcementEdits[id]={};for(const k of ['title','abstract'])if(typeof edit[k]==='string')announcementEdits[id][k]=edit[k].slice(0,4000);if(edit._links&&typeof edit._links==='object'){announcementEdits[id]._links={};for(const [label,url] of Object.entries(edit._links))if(/^https?:\/\/\S+$/i.test(url))announcementEdits[id]._links[label]=url}}}}catch(e){console.warn('Could not restore announcement edits',e)}
+ try{const raw=(params.get('custom')||'').replace(/-/g,'+').replace(/_/g,'/');if(raw){const data=JSON.parse(new TextDecoder().decode(Uint8Array.from(atob(raw),c=>c.charCodeAt(0))));if(typeof data.intro==='string')announcementIntroEdit=data.intro.slice(0,2500);if(data.nav&&typeof data.nav==='object'){const url=data.nav['Global Campaigns Hub'];if(typeof url==='string'&&/^https?:\/\/\S+$/i.test(url))navDestinations['Global Campaigns Hub']=url}for(const [id,edit] of Object.entries(data.records||{})){if(!items.some(x=>x.id===id)||!edit||typeof edit!=='object')continue;announcementEdits[id]={};for(const k of ['title','abstract'])if(typeof edit[k]==='string')announcementEdits[id][k]=edit[k].slice(0,4000);if(edit._links&&typeof edit._links==='object'){announcementEdits[id]._links={};for(const [label,url] of Object.entries(edit._links))if(/^https?:\/\/\S+$/i.test(url))announcementEdits[id]._links[label]=url}}}}catch(e){console.warn('Could not restore announcement edits',e)}
  return true;
 }
 $('saveView').onclick=async()=>{
