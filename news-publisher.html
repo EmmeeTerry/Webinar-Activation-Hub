@@ -22,8 +22,8 @@
 <strong>Option A: Paste into SharePoint (also works for news sent by email)</strong>
 <p class="hint">Copies formatted titles, descriptions, and resource links for <b>all added assets</b>. Paste into a SharePoint <b>Text</b> web part. Images cannot be pasted reliably; add them separately using native <b>Image</b> web parts.</p>
 <button id="copyRich">Copy content to paste into SharePoint</button>
-<button id="saveImage" class="secondary">Download current asset cover</button>
-<p class="hint">For several assets, use each <b>Download cover</b> button beside the selected asset above. The shared footer must be added separately in a native Text or Image web part.</p>
+<button id="saveImage" class="secondary">Save selected cover(s) to folder</button>
+<p class="hint">This saves <b>all selected covers</b> to a local folder you choose (Chrome or Edge). If folder access is unavailable, the builder downloads a ZIP with the available covers. You can also download covers individually above. The footer must be added separately for native SharePoint news.</p>
 </div>
 <div class="publish-method">
 <strong>Option B: Embed the complete branded page (web only)</strong>
@@ -184,6 +184,7 @@ function renderBatch(){
  $('batchClear').disabled=!entries.length;
 
  $('copyRich').textContent=entries.length?'Copy content to paste ('+entries.length+' assets)':'Copy content to paste (current asset)';
+ $('saveImage').textContent=entries.length?'Save '+entries.length+' selected cover'+(entries.length===1?'':'s')+' to folder':'Save current cover to folder';
  $('copyTitle').textContent='1. Copy SharePoint Page Title';
  $('pageTitle').value=announcementPageTitle(entries.length?entries:[current]);
  $('batchPreview').innerHTML=entries.length?batchHTML()+`<div style="margin:20px 0 0;padding:22px 24px;background:#f6f7f9;border:1px solid #e3e7eb;border-radius:7px"><strong style="display:block;font-size:17px;color:#111b2b">Everything you need to activate, in one place.</strong><p style="color:#53626e;font-size:13px;line-height:1.6">Find approved assets and promotional resources, share content with customers or partners, and create overview slides in the Content Library.</p><a href="https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Content-Library.aspx" target="_blank" rel="noopener noreferrer" style="font-size:13px;font-weight:bold;color:#b20617">Explore the Content Library ↗</a></div>`:'<p class="hint">Add an asset to see the combined announcement preview here.</p>';
@@ -230,10 +231,71 @@ async function downloadAssetImage(x){
   }else set('status','Unable to save the approved image: '+err.message);
  }
 }
+async function collectCoverFile(x){
+ const src=imageSourceForDownload(x);
+ if(!src)throw Error('No approved cover image');
+ let blob;
+ if(src.startsWith('data:'))blob=await (await fetch(src)).blob();
+ else{
+  const url=new URL(src,location.href);
+  const response=await fetch(url.href,{mode:'cors',credentials:url.origin===location.origin?'same-origin':'omit'});
+  if(!response.ok)throw Error('Image source returned '+response.status);
+  blob=await response.blob();
+ }
+ if(!blob.size||!blob.type.startsWith('image/'))throw Error('Source did not return an image');
+ const type=blob.type.toLowerCase(),ext=type.includes('png')?'png':type.includes('jpeg')?'jpg':type.includes('gif')?'gif':type.includes('svg')?'svg':type.includes('webp')?'webp':'img';
+ return {filename:(x.id||'cover').replace(/[^a-z0-9_-]/gi,'-')+'.'+ext,blob};
+}
+// Small dependency-free ZIP writer for browsers that cannot select a save folder.
+async function zipCoverFiles(files){
+ const encoder=new TextEncoder(),parts=[],central=[];let offset=0;
+ const table=new Uint32Array(256);
+ for(let n=0;n<256;n++){let c=n;for(let k=0;k<8;k++)c=(c&1)?0xedb88320^(c>>>1):c>>>1;table[n]=c>>>0}
+ const crc32=data=>{let crc=0xffffffff;for(const v of data)crc=table[(crc^v)&255]^(crc>>>8);return (crc^0xffffffff)>>>0};
+ const u16=(v,x)=>v.setUint16(x,arguments[2]||0,true);
+ for(const file of files){
+  const name=encoder.encode(file.filename),data=new Uint8Array(await file.blob.arrayBuffer()),crc=crc32(data);
+  const h=new Uint8Array(30+name.length),hv=new DataView(h.buffer);
+  hv.setUint32(0,0x04034b50,true);hv.setUint16(4,20,true);hv.setUint16(6,0,true);hv.setUint16(8,0,true);
+  hv.setUint32(14,crc,true);hv.setUint32(18,data.length,true);hv.setUint32(22,data.length,true);hv.setUint16(26,name.length,true);h.set(name,30);
+  parts.push(h,data);
+  const c=new Uint8Array(46+name.length),cv=new DataView(c.buffer);
+  cv.setUint32(0,0x02014b50,true);cv.setUint16(4,20,true);cv.setUint16(6,20,true);
+  cv.setUint32(16,crc,true);cv.setUint32(20,data.length,true);cv.setUint32(24,data.length,true);
+  cv.setUint16(28,name.length,true);cv.setUint32(42,offset,true);c.set(name,46);central.push(c);
+  offset+=h.length+data.length;
+ }
+ const centralSize=central.reduce((n,x)=>n+x.length,0),footer=new Uint8Array(22),v=new DataView(footer.buffer);
+ v.setUint32(0,0x06054b50,true);v.setUint16(8,files.length,true);v.setUint16(10,files.length,true);
+ v.setUint32(12,centralSize,true);v.setUint32(16,offset,true);
+ return new Blob([...parts,...central,footer],{type:'application/zip'});
+}
 async function saveImageToFolder(){
- if(!current){set('status','Select an asset first.');return}
- if(batchIds.length>1)set('status','Download each cover individually using Download cover beside each selected asset.');
- await downloadAssetImage(current);
+ const entries=batchIds.length?batchEntries():(current?[current]:[]);
+ if(!entries.length){set('status','Select an asset before saving covers.');return}
+ // This must run inside the click event before fetching images, or Chrome rejects the folder picker.
+ let folder=null;
+ if(window.showDirectoryPicker){
+  try{folder=await window.showDirectoryPicker({id:'content-announcement-covers',mode:'readwrite',startIn:'downloads'})}
+  catch(err){if(err.name==='AbortError'){set('status','Folder selection cancelled; nothing saved.');return}}
+ }
+ set('status','Preparing '+entries.length+' approved cover image'+(entries.length===1?'':'s')+'…');
+ const files=[],failed=[];
+ for(const x of entries){
+  try{files.push(await collectCoverFile(x))}
+  catch(err){failed.push(title(x.title)+': '+err.message)}
+ }
+ if(!files.length){set('status','No covers could be saved. '+failed.join(' | '));return}
+ try{
+  if(folder){
+   for(const f of files){const h=await folder.getFileHandle(f.filename,{create:true}),stream=await h.createWritable();await stream.write(f.blob);await stream.close()}
+   set('status','Saved '+files.length+' of '+entries.length+' cover(s) to folder "'+folder.name+'".'+(failed.length?' Not saved: '+failed.join(' | '):'')+' A local folder is not automatically a SharePoint folder unless synced.');
+  }else{
+   const zip=await zipCoverFiles(files),url=URL.createObjectURL(zip),a=document.createElement('a');
+   a.href=url;a.download='content-announcement-covers.zip';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),60000);
+   set('status','Downloaded ZIP with '+files.length+' of '+entries.length+' cover(s).'+(failed.length?' Not included: '+failed.join(' | '):'')+' Unzip and upload images to SharePoint.');
+  }
+ }catch(err){set('status','Could not save images: '+err.message)}
 }
 async function downloadImage(){await downloadAssetImage(current)}
 function reviewPacket(){const a=current;if(!a)return '';const art=$('art').hidden?'Image not available':($('art').src.startsWith('data:')?'Artwork embedded in preview':$('art').src);return ['NEWS REVIEW PACKET','Asset: '+title(a.title),'Campaign: '+(a.campaign||''),'Type: '+(a.type||''),'Smartsheet News Announcement: '+(a.newsAnnouncement||'Not Requested'),'Asset status: '+(a.status||''),'SharePoint page title: '+$('pageTitle').value,'', 'Description:',clean(a.abstract||'MISSING APPROVED DESCRIPTION'),'', 'Artwork:',art,'','Content Library resource card:',cardURL(a),'','Before publishing: confirm approved copy and image, create native SharePoint News using a Made for email template, set the page thumbnail, preview email, obtain approval, and update the Smartsheet News Published URL and News Published Date.'].join('\n')}
