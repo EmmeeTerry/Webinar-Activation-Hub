@@ -46,6 +46,15 @@ Each article in the SharePoint iframe, formatted Outlook email, and native Share
 
 These are internal enablement actions and metadata. Check the recipients before emailing the announcement outside the organization.
 
+## Standard links in every email
+
+All generated announcement email formats, including Outlook HTML, embedded-image EML, plain-text email, and SharePoint news copy for email, include these links in both the **header and footer**:
+
+- **News and Updates:** https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Global%20Campaigns.aspx
+- **Global Campaigns Hub:** https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Global%20Campaigns.aspx
+
+The Customer Email and PAM-to-Partner Email tools launched from each content card also apply the same links to generated email output. Both labels currently use the exact same SharePoint URL as provided.
+
 ## 3. Keep the process efficient
 
 - Only one combined content preview is shown below the publishing buttons. It does not guarantee how Outlook or SharePoint will render.
