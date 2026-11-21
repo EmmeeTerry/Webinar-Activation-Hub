@@ -50,8 +50,8 @@
 <p class="hint"><b>For Classic Outlook:</b> If the embedded-image .eml opens read-only, try the Word-compatible file. Open it in Word, verify images, select the email content, then copy into a new Outlook message. This may preserve more formatting than copying directly from a browser. Neither method is guaranteed; test before sending.</p>
 <div class="actions" style="display:flex;flex-wrap:wrap;gap:8px">
 <button id="downloadWordEmail" class="secondary">Download Word-compatible email (.doc)</button>
-<button id="openOutlookEmail" class="secondary">Try formatted copy/paste (Outlook may change layout)</button>
-<button id="copyEmailHTML" class="secondary">Copy HTML (for an HTML-capable editor)</button>
+<button id="openOutlookEmail" class="secondary">Copy Outlook-friendly email + open Outlook</button>
+<button id="copyEmailHTML" class="secondary">Copy Outlook-friendly formatted email</button>
 <button id="openOutlookWithBody" class="secondary">Open text-only Outlook email</button>
 <button id="downloadEmailHTML" class="secondary">Download HTML file</button>
 </div><p id="outlookActionHelp" class="hint" role="status" aria-live="polite"></p></details>
@@ -248,7 +248,8 @@ function previewNavigationEditor(){
  +navLinks().map(([label,url])=>'<label style="display:block;font-size:12px;font-weight:700;margin:9px 0 5px">'+htmlEsc(label)+'<input type="url" data-nav-label="'+htmlEsc(label)+'" value="'+htmlEsc(url)+'" style="display:block;box-sizing:border-box;width:100%;padding:8px 9px;margin-top:4px;border:1px solid #bcc8d6;border-radius:4px;font-size:13px;font-weight:400"></label>').join('')
  +'</details></div>';
 }
-function emailMarkup(records,inlineImages={}){
+function emailMarkup(records,inlineImages={},mode='standard'){
+ const pasteSafe=mode==='outlook-paste';
  if(!records.length)return '<p style="font-family:Arial,sans-serif;padding:24px">Choose content to preview your email.</p>';
  const esc=htmlEsc;
  const font='Arial,Helvetica,sans-serif';
@@ -260,10 +261,16 @@ function emailMarkup(records,inlineImages={}){
      ...navLinks()
    ].map(([label,url])=>'<a href="'+esc(url)+'" style="color:#ffffff;text-decoration:underline;font-size:14px;font-weight:700">'+esc(label)+'</a>').join('&nbsp;&nbsp; | &nbsp;&nbsp;')+'</p>'
   +'</td></tr>';
+ const clipboardHeader='<tr><td bgcolor="#ffffff" style="background:#ffffff;padding:24px 38px 18px;border-top:7px solid #d5001b;font-family:'+font+';color:#172235">'
+  +'<h1 style="font-family:'+font+';font-size:29px;line-height:1.22;color:#172235;font-weight:bold;margin:0 0 15px">Global Campaigns Promotional Resources</h1>'
+  +'<p style="font-family:'+font+';font-size:16px;line-height:1.6;color:#364558;margin:0 0 20px">Discover new content and ready-to-use resources to strengthen customer conversations.</p>'
+  +'<div style="border-top:1px solid #dce3ec;padding-top:14px">'+emailNavigationHtml('header')+'</div>'
+  +'</td></tr>';
  const intro=td('<p style="margin:29px 0 4px;font-size:13px;letter-spacing:1px;font-weight:700;color:#bd0018">FEATURED CONTENT &nbsp; / &nbsp; '+records.length+' '+(records.length===1?'RESOURCE':'RESOURCES')+'</p>'
   +'<h2 style="font-size:22px;line-height:1.35;color:#142136;font-weight:700;margin:5px 0 10px">Start the right customer conversation.</h2>'
   +'<p style="font-size:16px;line-height:1.65;color:#46556a;margin:0 0 26px">'+esc(editAnnouncementIntro())+'</p>');
  function linkRows(list){
+  if(pasteSafe)return '<div style="margin:0 0 6px">'+list.map(([label,url])=>'<p style="margin:0 0 12px;font-family:'+font+';font-size:15px;line-height:1.5"><a href="'+esc(url)+'" style="color:#a90016;text-decoration:underline;font-weight:bold">'+esc(label)+' &#8599;</a></p>').join('')+'</div>';
   if(!list.length)return '';
   const rows=[];
   for(let i=0;i<list.length;i+=2){
@@ -281,7 +288,9 @@ function emailMarkup(records,inlineImages={}){
   const label=td('<p style="font-size:12px;line-height:1.5;font-weight:700;letter-spacing:1.1px;color:#bf0018;margin:25px 0 9px">'+esc(x.campaign||'GLOBAL CAMPAIGNS')+' &nbsp; / &nbsp; '+esc(x.type||'CONTENT')+'</p>'
    +'<h2 style="font-size:25px;line-height:1.28;color:#142136;font-weight:700;margin:0 0 19px">'+esc(title(x.title))+'</h2>');
   const description=td('<p style="font-size:16px;line-height:1.68;color:#425267;margin:0 0 20px">'+esc(descr)+'</p>');
-  const action=td('<table cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse"><tr><td bgcolor="#d5001b" style="background:#d5001b;padding:14px 20px"><a href="'+esc(cardURL(x))+'" style="font-size:15px;line-height:1.4;font-weight:700;color:#ffffff;text-decoration:none">Explore asset &amp; activation resources &nbsp; &#8599;</a></td></tr></table>','0 38px 24px');
+  const action=pasteSafe
+   ?td('<p style="margin:3px 0 22px;font-family:'+font+';font-size:16px;line-height:1.5"><a href="'+esc(cardURL(x))+'" style="color:#b00019;text-decoration:underline;font-weight:bold">Explore asset &amp; activation resources &#8599;</a></p>')
+   :td('<table cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse"><tr><td bgcolor="#d5001b" style="background:#d5001b;padding:14px 20px"><a href="'+esc(cardURL(x))+'" style="font-size:15px;line-height:1.4;font-weight:700;color:#ffffff;text-decoration:none">Explore asset &amp; activation resources &nbsp; &#8599;</a></td></tr></table>','0 38px 24px');
   const links=resources.length?td('<p style="font-size:14px;line-height:1.5;font-weight:700;color:#142136;letter-spacing:.4px;margin:0 0 12px">AVAILABLE ACTIVATION RESOURCES</p>'+linkRows(resources),'0 38px 24px'):'';
   const share=actions.length?td('<p style="font-size:14px;line-height:1.5;font-weight:700;color:#142136;letter-spacing:.4px;margin:0 0 12px">SHARE &amp; CREATE</p>'+linkRows(actions),'0 38px 22px'):'';
   const details=articleDetailFields(x);
@@ -295,21 +304,21 @@ function emailMarkup(records,inlineImages={}){
   +'<div style="border-top:1px solid #ccd6e3;padding-top:18px">'+emailNavigationHtml('footer')+'</div>'
   +'</td></tr>';
  return '<table role="presentation" width="700" align="center" cellpadding="0" cellspacing="0" style="width:700px;max-width:100%;border-collapse:collapse;background:#ffffff;font-family:'+font+';color:#243247">'
-   +heading+intro+sections+footer+'</table>';
+   +(pasteSafe?clipboardHeader:heading)+intro+sections+footer+'</table>';
 }
-function emailDocument(records=emailSelectedAssets(),inlineImages={}){
- const html=emailMarkup(records,inlineImages);
+function emailDocument(records=emailSelectedAssets(),inlineImages={},mode='standard'){
+ const html=emailMarkup(records,inlineImages,mode);
  return '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+htmlEsc(announcementPageTitle(emailSelectedAssets()))+'</title></head><body style="margin:0;padding:12px 0;background:#ffffff">'+html+'</body></html>';
 }
 function updateEmailPreview(){ /* One combined preview is shown after publishing actions. */ }
 async function copyEmailHTML(){
  const records=emailSelectedAssets();if(!records.length){set('status','Select an asset before copying email HTML.');return}
- const html=emailMarkup(records);
+ const html=emailDocument(records,{},'outlook-paste');
  const plain=emailNavigationText()+'\n\n'+records.map(x=>title(x.title)+'\n'+clean(x.abstract||x.notes||'')+'\n'+cardURL(x)+'\n'+shareActionLinks(x).map(([label,url])=>label+': '+url).join('\n')).join('\n\n')+'\n\n'+emailNavigationText();
  try{
   if(navigator.clipboard?.write && window.ClipboardItem){
    await navigator.clipboard.write([new ClipboardItem({'text/html':new Blob([html],{type:'text/html'}),'text/plain':new Blob([plain],{type:'text/plain'})})]);
-   set('status','Email HTML copied for '+records.length+' asset(s). This is intended for an HTML-compatible editor; Outlook may reformat pasted HTML. Prefer the .eml Outlook draft.');
+   set('status','Outlook-friendly formatted email copied for '+records.length+' asset(s). Paste into Outlook and inspect images, links and layout before sending.');
   }else throw Error('Rich clipboard not supported');
  }catch(err){set('status','Rich HTML clipboard unavailable. Use Download email HTML instead: '+err.message)}
 }
@@ -363,17 +372,17 @@ async function openOutlookEmail(){
  const url='https://outlook.office.com/mail/deeplink/compose?subject='+encodeURIComponent(subject);
  // Open synchronously in the click handler before clipboard permission prompts.
  const tab=window.open(url,'_blank');
- const help=$('outlookActionHelp');help.textContent='Experimental: Outlook may change table spacing, fonts and cover placement on paste. The .eml draft is the preferred version.';
+ const help=$('outlookActionHelp');help.textContent='Copying the white-header Outlook-compatible design with dark text and simple links. Paste with Ctrl+V and review before sending.';
  try{
   if(!navigator.clipboard?.write||!window.ClipboardItem)throw Error('Rich clipboard is not available');
-  const html=emailMarkup(records);
+  const html=emailDocument(records,{},'outlook-paste');
   const plain=emailNavigationText()+'\n\n'+records.map(x=>[title(x.title),clean(x.abstract||x.notes||''),cardURL(x)].join('\n')).join('\n\n')+'\n\n'+emailNavigationText();
   await navigator.clipboard.write([new ClipboardItem({
    'text/html':new Blob([html],{type:'text/html'}),
    'text/plain':new Blob([plain],{type:'text/plain'})
   })]);
-  help.textContent='Copied. Paste into Outlook, then inspect the entire layout and covers. If styling breaks, use the .eml download or Word-compatible option instead.';
-  set('status',(tab?'Outlook opened. ':'Outlook pop-up blocked. ')+'Formatting may change when pasted into Outlook. The embedded-image .eml download is preferred; try Word export if needed.');
+  help.textContent='Outlook-friendly email copied. Paste with Ctrl+V, check images and links, then send yourself a test.';
+  set('status',(tab?'Outlook opened. ':'Outlook pop-up blocked. ')+'Copied Outlook-friendly email with a white header, readable dark text, and simple links. Paste and check the result.');
  }catch(err){
   help.textContent='Automatic copy failed. Click Copy email only and paste manually, or download the .eml file.';
   set('status','Formatting could not be copied: '+err.message);
