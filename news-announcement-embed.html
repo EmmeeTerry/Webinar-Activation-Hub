@@ -32,7 +32,7 @@ function readAnnouncementOverrides(){
 const edits=readAnnouncementOverrides();
 
 const e=v=>String(v||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-const card=x=>ROOT+'content-hub.html?item='+encodeURIComponent(x.id);
+const card=x=>x?._links?.['Content Library card']||ROOT+'content-hub.html?item='+encodeURIComponent(x.id);
 const clean=v=>String(v||'').replace(/\s+/g,' ').trim();
 const title=v=>clean(v).replace(/^eBook Title:\s*/i,'').replace(/\s*\|\s*(eBook|Webinar|Whitepaper)$/i,'').replace(/[.\s]+$/,'');
 const fields=x=>[
@@ -40,7 +40,7 @@ const fields=x=>[
  ['PMH Campaign',x.partnerCampaignLink],['Marketo Campaign Email',x.outboundEmailEnterprise],
  ['Enterprise outbound email banner',x.outboundBannerEnterprise],
  ['Marketo Email Preview',x.marketoPreviewEnterprise],['Paid Media',x.paidSocialAds]
-].filter(([,url])=>/^https?:\/\//i.test(String(url||'').trim()));
+].map(([label,url])=>[label,x._links?.[label]||url]).filter(([,url])=>/^https?:\/\//i.test(String(url||'').trim()));
 function shareActionLinks(x){
  const args=new URLSearchParams({source:'content',title:x.title||'',description:x.abstract||'',url:x.url||''});
  const customer=new URLSearchParams(args);customer.set('useCase',x.useCase||'');customer.set('campaign',x.campaign||'');
@@ -49,7 +49,7 @@ function shareActionLinks(x){
   ['Overview Slide',ROOT+'build-slide.html?v=20261112-3&id='+encodeURIComponent(x.id)],
   ['Create PAM-to-Partner Email',ROOT+'pam-email-hub.html?'+args.toString()],
   ...(x.type==='Webinar' && /^\d{4}-\d{2}-\d{2}$/.test(x.publishDate||'') && x.publishDate>=new Date().toLocaleDateString('en-CA') ? [['Add to calendar (in Content Library)',card(x)]]:[])
- ];
+ ].map(([label,url])=>[label,x._links?.[label]||url]);
 }
 function assetDetails(x){
  return [
@@ -97,6 +97,7 @@ async function start(){
   const override=edits.records[id]||{};
   const allowed={};
   for(const key of ['title','abstract'])if(typeof override[key]==='string'&&override[key].trim())allowed[key]=override[key].slice(0,4000);
+  if(override._links&&typeof override._links==='object'){allowed._links={};for(const [label,url] of Object.entries(override._links))if(/^https?:\/\/\S+$/i.test(url))allowed._links[label]=url}
   return {...original,...allowed};
  }).filter(Boolean);
  const missing=ids.filter(id=>!map.has(id));
