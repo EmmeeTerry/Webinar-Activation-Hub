@@ -6,7 +6,7 @@ The builder uses one source of truth, the Smartsheet-synced Content Library. It 
 
 ## 1. Select and review content
 
-Use the visible **Artwork, News status, Publish date, and Sort** filters to find the right assets. Select an asset and click **+ Add selected asset to announcement**. Repeat for multiple assets. Confirm the selected content chips. The single combined preview is above the publishing actions. **Click the introduction, an article title or its description inside the preview to edit the announcement copy.** Your changes carry into SharePoint News copy, the branded SharePoint iframe and Outlook email (including the embedded-image .eml). Review the preview after editing and validate approved source links and artwork before distribution. To update the two header/footer navigation destinations, expand **Edit header & footer links** in the preview. Enter the URL for **News and Updates** and/or **Global Campaigns Hub**, then press Tab. These changes apply to the top and bottom links in generated emails and SharePoint announcements. Article promotional resource links are not editable here and continue to come from the Content Library/Smartsheet.
+Use the visible **Artwork, News status, Publish date, and Sort** filters to find the right assets. Select an asset and click **+ Add selected asset to announcement**. Repeat for multiple assets. Confirm the selected content chips. The single combined preview is above the publishing actions. **Click the introduction, an article title or its description inside the preview to edit the announcement copy.** Your changes carry into SharePoint News copy, the branded SharePoint iframe and Outlook email (including the embedded-image .eml). Review the preview after editing and validate approved source links and artwork before distribution. To review the header/footer navigation links, expand **Edit header & footer links** in the preview. **News and Updates** is permanently linked to All News Posts. You may edit the **Global Campaigns Hub** destination, then press Tab. These changes apply to the top and bottom links in generated emails and SharePoint announcements. Article promotional resource links are not editable here and continue to come from the Content Library/Smartsheet.
 
 ## 2. Choose ONE of two publishing workflows
 
@@ -52,10 +52,10 @@ These are internal enablement actions and metadata. Check the recipients before 
 
 All generated announcement email formats, including Outlook HTML, embedded-image EML, plain-text email, and SharePoint news copy for email, include these links in both the **header and footer**:
 
-- **News and Updates:** https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Global%20Campaigns.aspx
+- **News and Updates (permanent):** https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/All-News-Posts.aspx
 - **Global Campaigns Hub:** https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Global%20Campaigns.aspx
 
-The Customer Email and PAM-to-Partner Email tools launched from each content card also apply the same links to generated email output. Both labels currently use the exact same SharePoint URL as provided.
+The Customer Email and PAM-to-Partner Email tools launched from each content card also apply the same links to generated email output. News and Updates always points to the All News Posts page. Global Campaigns Hub uses its own URL, which may be customized in the builder.
 
 ## 3. Keep the process efficient
 
