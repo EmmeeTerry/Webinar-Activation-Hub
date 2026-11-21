@@ -201,8 +201,10 @@ function articlePackage(records,includeImages=true){
  const eyebrow=one?'GLOBAL CAMPAIGNS / '+(records[0].campaign||'NEW CONTENT'):'GLOBAL CAMPAIGNS / CONTENT LIBRARY';
  return '<div style="font-family:Arial,Helvetica,sans-serif;max-width:760px;background:#ffffff;color:#1c2936">'
  +announcementHeader(head,eyebrow)
+ +'<div style="padding:12px 28px;border-bottom:1px solid #e6e9ed">'+emailNavigationHtml('header')+'</div>'
  +'<div style="padding:19px 28px 7px"><h2 style="font-size:17px;color:#111b2b;margin:0 0 7px">Start the right customer conversation.</h2><p style="font-size:13px;line-height:1.6;color:#506071;margin:0 0 9px">'+(one?'Discover the asset and put approved resources to work.':'Discover these assets and put approved resources to work in your next customer conversation.')+'</p></div>'
- +records.map(x=>assetAnnouncementHTML(x,includeImages)).join('')+'</div>';
+ +records.map(x=>assetAnnouncementHTML(x,includeImages)).join('')
+ +'<div style="padding:18px 28px;background:#f7f9fb;border-top:1px solid #e6e9ed">'+emailNavigationHtml('footer')+'</div></div>';
 }
 
 // Email output is built independently of the web iframe. Public, absolute image URLs
@@ -395,7 +397,7 @@ function richHtml(){return current?articlePackage([current]):''}
 async function copyRich(){
  const multi=batchIds.length>0,html=articlePackage(multi?batchEntries():[current],false);
  if(!html)return;
- const plain=multi?batchText():title(current.title)+'\n\n'+clean(current.abstract||current.notes||'')+'\n\n'+cardURL(current)+'\n\n'+availableResourceLinks(current).map(([label,url])=>label+': '+url).join('\n');
+ const plain=multi?batchText():emailNavigationText()+'\n\n'+title(current.title)+'\n\n'+clean(current.abstract||current.notes||'')+'\n\n'+cardURL(current)+'\n\n'+availableResourceLinks(current).map(([label,url])=>label+': '+url).join('\n')+'\n\n'+emailNavigationText();
  try{
   if(!navigator.clipboard?.write||!window.ClipboardItem)throw Error('Rich clipboard unavailable');
   await navigator.clipboard.write([new ClipboardItem({'text/html':new Blob([html],{type:'text/html'}),'text/plain':new Blob([plain],{type:'text/plain'})})]);
@@ -408,7 +410,7 @@ async function copyRich(){
 let batchIds=[];
 const batchEntries=()=>batchIds.map(id=>items.find(x=>x.id===id)).filter(Boolean);
 function batchHTML(){return articlePackage(batchEntries())}
-function batchText(){return [announcementPageTitle(batchEntries()),...batchEntries().map(x=>[title(x.title),clean(x.abstract||x.notes||'Approved description is required before publishing.'),'Content Resources: '+cardURL(x),...availableResourceLinks(x).map(([name,url])=>name+': '+url),...shareActionLinks(x).map(([name,url])=>name+': '+url),...articleDetailFields(x).map(([name,value])=>name+': '+value)].join('\n'))].join('\n\n')}
+function batchText(){return [emailNavigationText(),announcementPageTitle(batchEntries()),...batchEntries().map(x=>[title(x.title),clean(x.abstract||x.notes||'Approved description is required before publishing.'),'Content Resources: '+cardURL(x),...availableResourceLinks(x).map(([name,url])=>name+': '+url),...shareActionLinks(x).map(([name,url])=>name+': '+url),...articleDetailFields(x).map(([name,value])=>name+': '+value)].join('\n')),emailNavigationText()].join('\n\n')}
 function renderBatch(){
  const el=$('batchList'),entries=batchEntries();el.replaceChildren();
  if(!entries.length){const empty=document.createElement('span');empty.className='hint';empty.textContent='No assets selected yet.';el.append(empty)}
