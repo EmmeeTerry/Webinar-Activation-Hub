@@ -35,6 +35,17 @@ Use the visible **Artwork, News status, Publish date, and Sort** filters to find
 
 **Important:** The SharePoint iframe is web-only. It does not appear inside SharePoint's full-body email. The Outlook email is a separate communication. If the .eml file cannot be edited or does not show covers, use an approved internal email workflow or send a normal Outlook message linking to the published SharePoint page. The optional HTML paste method is not recommended in Classic Outlook because it has lost artwork in testing.
 
+## Actions included for EVERY selected article
+
+Each article in the SharePoint iframe, formatted Outlook email, and native SharePoint copy includes:
+
+- Available approved promotional links from the Content Library.
+- **Share & Create:** **Create Customer Email** (when a shareable asset URL exists), **Create PAM-to-Partner Email**, and **Overview Slide**, linking to the same tools used by that asset's Content Library card.
+- **Asset details:** available campaign, use case, funnel stage, ownership, audience, region, status, publish date, promotion period and primary activation from the source.
+- Unavailable resource links are omitted, not replaced with broken placeholders. Calendar actions for already-passed webinars are not included.
+
+These are internal enablement actions and metadata. Check the recipients before emailing the announcement outside the organization.
+
 ## 3. Keep the process efficient
 
 - Only one combined content preview is shown below the publishing buttons. It does not guarantee how Outlook or SharePoint will render.
