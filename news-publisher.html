@@ -216,6 +216,13 @@ function emailCoverURL(x){
  if(/^https:\/\//i.test(w||'')&&!isSharePointImage(w))return w;
  return '';
 }
+const NEWS_HUB_URL='https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Global%20Campaigns.aspx';
+function emailNavigationHtml(locationLabel){
+ const links=[['News and Updates',NEWS_HUB_URL],['Global Campaigns Hub',NEWS_HUB_URL]];
+ return '<p style="font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:1.65;margin:0;color:#223148">'
+ +links.map(([label,url])=>'<a href="'+htmlEsc(url)+'" style="color:#b30016;text-decoration:underline;font-weight:bold">'+htmlEsc(label)+'</a>').join(' &nbsp; | &nbsp; ')+'</p>';
+}
+function emailNavigationText(){return 'News and Updates: '+NEWS_HUB_URL+'\nGlobal Campaigns Hub: '+NEWS_HUB_URL;}
 function emailMarkup(records,inlineImages={}){
  if(!records.length)return '<p style="font-family:Arial,sans-serif;padding:20px">Choose content to preview your email.</p>';
  const cell=(html,extra='')=>'<tr><td style="padding:0 26px;'+extra+'">'+html+'</td></tr>';
@@ -223,7 +230,8 @@ function emailMarkup(records,inlineImages={}){
   +'<p style="font-family:Arial,Helvetica,sans-serif;font-size:12px;letter-spacing:1.4px;font-weight:bold;color:#c90016;margin:0 0 13px">GLOBAL CAMPAIGNS</p>'
   +'<h1 style="font-family:Arial,Helvetica,sans-serif;font-size:27px;line-height:1.28;font-weight:bold;color:#111b2b;margin:0 0 12px">New Content &amp; Activation Resources</h1>'
   +'<p style="font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:1.6;color:#435465;margin:0 0 12px">Explore approved customer-facing content and activation resources.</p>'
-  +'<p style="font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:1.55;color:#465768;margin:0"><strong>Featured:</strong> '+htmlEsc(records.map(x=>title(x.title)).join(' | '))+'</p></td></tr>';
+  +'<p style="font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:1.55;color:#465768;margin:0 0 15px"><strong>Featured:</strong> '+htmlEsc(records.map(x=>title(x.title)).join(' | '))+'</p>'
+ +emailNavigationHtml('header')+'</td></tr>';
  const sections=records.map((x,i)=>{
   const art=Object.prototype.hasOwnProperty.call(inlineImages,x.id)?inlineImages[x.id]:emailCoverURL(x),links=availableResourceLinks(x),d=clean(x.abstract||x.notes||'Approved description not available. Confirm before sending.');
   const picture=art?'<tr><td style="padding:20px 26px 0"><img src="'+htmlEsc(art)+'" alt="'+htmlEsc(title(x.title))+' cover" width="135" style="display:block;width:135px;max-width:100%;height:auto;border:1px solid #e5e9ef;border-radius:4px"></td></tr>':'';
@@ -240,7 +248,7 @@ function emailMarkup(records,inlineImages={}){
    +cell('<div style="background:#f7f9fb;padding:12px 14px;font-size:12px;line-height:1.6;color:#465362;margin:0 0 12px"><strong>ASSET DETAILS</strong><div>'+articleDetailFields(x).map(([label,value])=>'<div><b>'+htmlEsc(label)+':</b> '+htmlEsc(value)+'</div>').join('')+'</div></div>')
    +'</table></td></tr>';
  }).join('');
- const footer='<tr><td style="padding:25px 28px;background:#f5f7f9;border-top:2px solid #e5e9ed;font-family:Arial,sans-serif"><strong style="font-size:17px;color:#111b2b">Everything you need to activate, in one place.</strong><p style="font-size:13px;line-height:1.6;color:#52616e">Find more approved campaign content and ready-to-use activation resources in the Content Library.</p><a href="https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Content-Library.aspx" style="font-size:13px;font-weight:bold;color:#b30016;text-decoration:underline">Explore the Content Library &#8599;</a></td></tr>';
+ const footer='<tr><td style="padding:25px 28px;background:#f5f7f9;border-top:2px solid #e5e9ed;font-family:Arial,sans-serif"><strong style="font-size:17px;color:#111b2b">Everything you need to activate, in one place.</strong><p style="font-size:13px;line-height:1.6;color:#52616e">Find more approved campaign content and ready-to-use activation resources in the Content Library.</p><a href="https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Content-Library.aspx" style="font-size:13px;font-weight:bold;color:#b30016;text-decoration:underline">Explore the Content Library &#8599;</a><div style="margin-top:17px;border-top:1px solid #dbe2ea;padding-top:13px">'+emailNavigationHtml('footer')+'</div></td></tr>';
  return '<table role="presentation" width="760" cellpadding="0" cellspacing="0" style="width:100%;border-collapse:collapse;font-family:Arial,Helvetica,sans-serif;max-width:760px;background:#fff" align="center">'
   +titleBlock+sections+footer+'</table>';
 }
@@ -252,7 +260,7 @@ function updateEmailPreview(){ /* One combined preview is shown after publishing
 async function copyEmailHTML(){
  const records=emailSelectedAssets();if(!records.length){set('status','Select an asset before copying email HTML.');return}
  const html=emailMarkup(records);
- const plain=records.map(x=>title(x.title)+'\n'+clean(x.abstract||x.notes||'')+'\n'+cardURL(x)+'\n'+shareActionLinks(x).map(([label,url])=>label+': '+url).join('\n')).join('\n\n');
+ const plain=emailNavigationText()+'\n\n'+records.map(x=>title(x.title)+'\n'+clean(x.abstract||x.notes||'')+'\n'+cardURL(x)+'\n'+shareActionLinks(x).map(([label,url])=>label+': '+url).join('\n')).join('\n\n')+'\n\n'+emailNavigationText();
  try{
   if(navigator.clipboard?.write && window.ClipboardItem){
    await navigator.clipboard.write([new ClipboardItem({'text/html':new Blob([html],{type:'text/html'}),'text/plain':new Blob([plain],{type:'text/plain'})})]);
@@ -268,7 +276,7 @@ function downloadEmailHTML(){
  set('status','Downloaded standalone email HTML with '+records.length+' asset(s), no iframe. Review in an email editor and send a test before distributing.');
 }
 function outlookText(records){
- const lines=['GLOBAL CAMPAIGNS',announcementPageTitle(records),'','New content and activation resources','','Discover these approved assets and ready-to-use resources.',''];
+ const lines=['GLOBAL CAMPAIGNS',emailNavigationText(),'',announcementPageTitle(records),'','New content and activation resources','','Discover these approved assets and ready-to-use resources.',''];
  records.forEach(x=>{
   lines.push(title(x.title),'',clean(x.abstract||x.notes||''),'','Explore asset & activation resources: '+cardURL(x));
   availableResourceLinks(x).forEach(([label,url])=>lines.push(label+': '+url));
@@ -276,7 +284,7 @@ function outlookText(records){
   articleDetailFields(x).forEach(([label,value])=>lines.push(label+': '+value));
   lines.push('','');
  });
- lines.push('Everything you need to activate, in one place.','Content Library: https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Content-Library.aspx');
+ lines.push('Everything you need to activate, in one place.','Content Library: https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Content-Library.aspx','',emailNavigationText());
  return lines.join('\n');
 }
 function openOutlookWithBody(){
@@ -302,7 +310,7 @@ async function openOutlookEmail(){
  try{
   if(!navigator.clipboard?.write||!window.ClipboardItem)throw Error('Rich clipboard is not available');
   const html=emailMarkup(records);
-  const plain=records.map(x=>[title(x.title),clean(x.abstract||x.notes||''),cardURL(x)].join('\n')).join('\n\n');
+  const plain=emailNavigationText()+'\n\n'+records.map(x=>[title(x.title),clean(x.abstract||x.notes||''),cardURL(x)].join('\n')).join('\n\n')+'\n\n'+emailNavigationText();
   await navigator.clipboard.write([new ClipboardItem({
    'text/html':new Blob([html],{type:'text/html'}),
    'text/plain':new Blob([plain],{type:'text/plain'})
