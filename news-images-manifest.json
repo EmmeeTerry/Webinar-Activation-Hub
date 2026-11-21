@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-20T18:52:18.876936+00:00",
+  "generatedAt": "2026-11-21T01:47:18.725467+00:00",
   "images": [
     {
       "id": "451-research-market-hitachi-vantara-s-iq-increases-ai-storage-momentum-adds-ai-recovery-ca-14",
@@ -132,6 +132,11 @@
       "type": "eBook"
     },
     {
+      "id": "hitachi-integrated-systems-pdf-datasheet-129",
+      "path": "news-images/hitachi-integrated-systems-pdf-datasheet-129.webp",
+      "type": "Datasheet"
+    },
+    {
       "id": "hitachi-integrated-systems-pdf-datasheet-130",
       "path": "news-images/hitachi-integrated-systems-pdf-datasheet-130.webp",
       "type": "Unknown"
@@ -157,9 +162,19 @@
       "type": "Whitepaper"
     },
     {
+      "id": "hitachi-storage-and-hitachi-integrated-systems-solutions-in-vmware-vsphere-environments-re-119",
+      "path": "news-images/hitachi-storage-and-hitachi-integrated-systems-solutions-in-vmware-vsphere-environments-re-119.webp",
+      "type": "Reference Architecture"
+    },
+    {
       "id": "hitachi-storage-and-hitachi-integrated-systems-solutions-in-vmware-vsphere-environments-re-120",
       "path": "news-images/hitachi-storage-and-hitachi-integrated-systems-solutions-in-vmware-vsphere-environments-re-120.webp",
       "type": "Unknown"
+    },
+    {
+      "id": "hitachi-vantara-and-veeam-for-cyber-resilience-whitepaper-122",
+      "path": "news-images/hitachi-vantara-and-veeam-for-cyber-resilience-whitepaper-122.webp",
+      "type": "Whitepaper"
     },
     {
       "id": "hitachi-vantara-and-veeam-for-cyber-resilience-whitepaper-123",
@@ -167,9 +182,19 @@
       "type": "Unknown"
     },
     {
+      "id": "hitachi-vantara-flexible-consumption-and-financing-solutions-solution-profile-124",
+      "path": "news-images/hitachi-vantara-flexible-consumption-and-financing-solutions-solution-profile-124.webp",
+      "type": "Solution Profile"
+    },
+    {
       "id": "hitachi-vantara-flexible-consumption-and-financing-solutions-solution-profile-125",
       "path": "news-images/hitachi-vantara-flexible-consumption-and-financing-solutions-solution-profile-125.webp",
       "type": "Unknown"
+    },
+    {
+      "id": "hitachi-vantara-ransomware-detection-powered-by-cybersense-datasheet-128",
+      "path": "news-images/hitachi-vantara-ransomware-detection-powered-by-cybersense-datasheet-128.webp",
+      "type": "Datasheet"
     },
     {
       "id": "hitachi-vantara-ransomware-detection-powered-by-cybersense-datasheet-129",
@@ -177,9 +202,19 @@
       "type": "Unknown"
     },
     {
+      "id": "hitachi-vantara-virtual-storage-platform-one-object-vsp-one-object-datasheet-127",
+      "path": "news-images/hitachi-vantara-virtual-storage-platform-one-object-vsp-one-object-datasheet-127.webp",
+      "type": "Datasheet"
+    },
+    {
       "id": "hitachi-vantara-virtual-storage-platform-one-object-vsp-one-object-datasheet-128",
       "path": "news-images/hitachi-vantara-virtual-storage-platform-one-object-vsp-one-object-datasheet-128.webp",
       "type": "Unknown"
+    },
+    {
+      "id": "hmax-and-iq-solutions-for-mining-and-mineral-exploration-solution-profile-130",
+      "path": "news-images/hmax-and-iq-solutions-for-mining-and-mineral-exploration-solution-profile-130.webp",
+      "type": "Solution Profile"
     },
     {
       "id": "hmax-and-iq-solutions-for-mining-and-mineral-exploration-solution-profile-131",
@@ -187,9 +222,19 @@
       "type": "Unknown"
     },
     {
+      "id": "how-hitachi-block-storage-delivers-eight-nines-availability-whitepaper-131",
+      "path": "news-images/how-hitachi-block-storage-delivers-eight-nines-availability-whitepaper-131.webp",
+      "type": "Whitepaper"
+    },
+    {
       "id": "how-hitachi-block-storage-delivers-eight-nines-availability-whitepaper-132",
       "path": "news-images/how-hitachi-block-storage-delivers-eight-nines-availability-whitepaper-132.webp",
       "type": "Unknown"
+    },
+    {
+      "id": "hybrid-cloud-2-0-evolution-modernization-whitepaper-135",
+      "path": "news-images/hybrid-cloud-2-0-evolution-modernization-whitepaper-135.webp",
+      "type": "Whitepaper"
     },
     {
       "id": "hybrid-cloud-2-0-evolution-modernization-whitepaper-136",
@@ -197,9 +242,19 @@
       "type": "Unknown"
     },
     {
+      "id": "hybrid-cloud-buyer-s-guide-ebook-ebook-136",
+      "path": "news-images/hybrid-cloud-buyer-s-guide-ebook-ebook-136.webp",
+      "type": "eBook"
+    },
+    {
       "id": "hybrid-cloud-buyer-s-guide-ebook-ebook-137",
       "path": "news-images/hybrid-cloud-buyer-s-guide-ebook-ebook-137.webp",
       "type": "Unknown"
+    },
+    {
+      "id": "hybrid-cloud-storage-for-native-amazon-s3-workloads-solution-profile-137",
+      "path": "news-images/hybrid-cloud-storage-for-native-amazon-s3-workloads-solution-profile-137.webp",
+      "type": "Solution Profile"
     },
     {
       "id": "hybrid-cloud-storage-for-native-amazon-s3-workloads-solution-profile-138",
@@ -217,6 +272,11 @@
       "type": "Unknown"
     },
     {
+      "id": "keeping-the-lights-on-or-funding-innovation-whitepaper-147",
+      "path": "news-images/keeping-the-lights-on-or-funding-innovation-whitepaper-147.webp",
+      "type": "Whitepaper"
+    },
+    {
       "id": "keeping-the-lights-on-or-funding-innovation-whitepaper-148",
       "path": "news-images/keeping-the-lights-on-or-funding-innovation-whitepaper-148.webp",
       "type": "Unknown"
@@ -232,9 +292,19 @@
       "type": "Unknown"
     },
     {
+      "id": "mission-critical-guarantees-and-slas-new-solution-profile-153",
+      "path": "news-images/mission-critical-guarantees-and-slas-new-solution-profile-153.webp",
+      "type": "Solution Profile"
+    },
+    {
       "id": "mission-critical-guarantees-and-slas-new-solution-profile-154",
       "path": "news-images/mission-critical-guarantees-and-slas-new-solution-profile-154.webp",
       "type": "Unknown"
+    },
+    {
+      "id": "modernize-data-lakehouse-environments-with-vsp-one-object-storage-solution-profile-158",
+      "path": "news-images/modernize-data-lakehouse-environments-with-vsp-one-object-storage-solution-profile-158.webp",
+      "type": "Solution Profile"
     },
     {
       "id": "modernize-data-lakehouse-environments-with-vsp-one-object-storage-solution-profile-159",
@@ -252,6 +322,11 @@
       "type": "Unknown"
     },
     {
+      "id": "modernize-storage-with-storage-as-a-service-solution-profile-160",
+      "path": "news-images/modernize-storage-with-storage-as-a-service-solution-profile-160.webp",
+      "type": "Solution Profile"
+    },
+    {
       "id": "modernize-storage-with-storage-as-a-service-solution-profile-161",
       "path": "news-images/modernize-storage-with-storage-as-a-service-solution-profile-161.webp",
       "type": "Unknown"
@@ -267,14 +342,29 @@
       "type": "Unknown"
     },
     {
+      "id": "modernize-your-environment-with-vsp-one-object-solution-profile-162",
+      "path": "news-images/modernize-your-environment-with-vsp-one-object-solution-profile-162.webp",
+      "type": "Solution Profile"
+    },
+    {
       "id": "modernize-your-environment-with-vsp-one-object-solution-profile-163",
       "path": "news-images/modernize-your-environment-with-vsp-one-object-solution-profile-163.webp",
       "type": "Unknown"
     },
     {
+      "id": "modernizing-data-protection-with-hitachi-and-commvault-infographic-163",
+      "path": "news-images/modernizing-data-protection-with-hitachi-and-commvault-infographic-163.webp",
+      "type": "Infographic"
+    },
+    {
       "id": "modernizing-data-protection-with-hitachi-and-commvault-infographic-164",
       "path": "news-images/modernizing-data-protection-with-hitachi-and-commvault-infographic-164.webp",
       "type": "Unknown"
+    },
+    {
+      "id": "omdia-the-storage-modernization-imperative-analyst-report-167",
+      "path": "news-images/omdia-the-storage-modernization-imperative-analyst-report-167.webp",
+      "type": "Analyst Report"
     },
     {
       "id": "omdia-the-storage-modernization-imperative-analyst-report-168",
@@ -292,6 +382,11 @@
       "type": "Unknown"
     },
     {
+      "id": "power-your-ai-future-on-a-foundation-of-trusted-modernized-data-solution-profile-172",
+      "path": "news-images/power-your-ai-future-on-a-foundation-of-trusted-modernized-data-solution-profile-172.webp",
+      "type": "Solution Profile"
+    },
+    {
       "id": "power-your-ai-future-on-a-foundation-of-trusted-modernized-data-solution-profile-173",
       "path": "news-images/power-your-ai-future-on-a-foundation-of-trusted-modernized-data-solution-profile-173.webp",
       "type": "Unknown"
@@ -305,6 +400,11 @@
       "id": "powering-the-ai-factory-from-distributed-data-to-trusted-outcomes-webinar-174",
       "path": "news-images/powering-the-ai-factory-from-distributed-data-to-trusted-outcomes-webinar-174.webp",
       "type": "Unknown"
+    },
+    {
+      "id": "remove-the-chaos-of-data-complexity-with-virtual-storage-platform-one-block-storage-for-mi-182",
+      "path": "news-images/remove-the-chaos-of-data-complexity-with-virtual-storage-platform-one-block-storage-for-mi-182.webp",
+      "type": "Datasheet"
     },
     {
       "id": "remove-the-chaos-of-data-complexity-with-virtual-storage-platform-one-block-storage-for-mi-183",
