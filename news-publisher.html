@@ -101,7 +101,8 @@ function shareActionLinks(item){
  return [
   ...( /^https?:\/\//i.test(source) ? [['Create Customer Email',base+'customer-email-hub.html?'+customer.toString()]]:[] ),
   ['Overview Slide',base+'build-slide.html?v=20261112-3&id='+encodeURIComponent(item.id)],
-  ['Create PAM-to-Partner Email',base+'pam-email-hub.html?'+args.toString()]
+  ['Create PAM-to-Partner Email',base+'pam-email-hub.html?'+args.toString()],
+  ...(item.type==='Webinar' && /^\d{4}-\d{2}-\d{2}$/.test(item.publishDate||'') && item.publishDate>=new Date().toLocaleDateString('en-CA') ? [['Add to calendar (in Content Library)',cardURL(item)]]:[])
  ];
 }
 function articleDetailFields(x){
