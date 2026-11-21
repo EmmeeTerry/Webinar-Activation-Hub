@@ -252,7 +252,6 @@ async function zipCoverFiles(files){
  const table=new Uint32Array(256);
  for(let n=0;n<256;n++){let c=n;for(let k=0;k<8;k++)c=(c&1)?0xedb88320^(c>>>1):c>>>1;table[n]=c>>>0}
  const crc32=data=>{let crc=0xffffffff;for(const v of data)crc=table[(crc^v)&255]^(crc>>>8);return (crc^0xffffffff)>>>0};
- const u16=(v,x)=>v.setUint16(x,arguments[2]||0,true);
  for(const file of files){
   const name=encoder.encode(file.filename),data=new Uint8Array(await file.blob.arrayBuffer()),crc=crc32(data);
   const h=new Uint8Array(30+name.length),hv=new DataView(h.buffer);
