@@ -18,7 +18,7 @@
 </details>
 </section>
 <section class="batch-panel"><div class="batch-top"><div><strong>1. Selected assets</strong><p class="hint">Use <b>+ Add selected asset to announcement</b> above. Repeat to feature multiple assets; remove any you do not want.</p></div></div><div id="batchList" class="batch-items" aria-live="polite"><span class="hint">No assets selected yet.</span></div><div class="actions"><button class="secondary" id="batchClear" disabled>Clear selection</button></div></section>
-<section class="batch-panel" style="margin-top:16px"><div class="batch-preview-heading"><strong>2. Edit and preview your announcement</strong><p class="hint" style="margin:5px 0">Click an article title, description or introduction to edit it, or select Edit links for this article to update URLs for this announcement. Changes are used in both publishing options.</p></div><div id="batchPreview" class="batch-preview" aria-label="Live combined announcement preview"><p class="hint">Add an asset to see the combined announcement preview here.</p></div></section>
+<section class="batch-panel" style="margin-top:16px"><div class="batch-preview-heading"><strong>2. Edit and preview your announcement</strong><p class="hint" style="margin:5px 0">Click the article title, description or introduction to edit copy. Use Edit header & footer links to update only the two navigation destinations for this announcement. Changes are used in both publishing options.</p></div><div id="batchPreview" class="batch-preview" aria-label="Live combined announcement preview"><p class="hint">Add an asset to see the combined announcement preview here.</p></div></section>
 <div class="publish-actions news-primary" id="publish">
 <div class="publish-heading"><strong>3. Choose ONE way to publish AND email</strong><span class="hint">Both options result in a SharePoint page and an email. They differ in where the email is sent from.</span></div>
 <div class="status" id="status" role="status" aria-live="polite"></div>
@@ -191,7 +191,7 @@ function assetAnnouncementHTML(x,includeImages=true,editable=false){
  +'<p '+(editable?'contenteditable="true" role="textbox" aria-label="Edit article description" data-edit-id="'+htmlEsc(x.id)+'" data-edit-field="abstract"':'')+' style="font-size:14px;line-height:1.7;color:#465362;margin:0 0 14px">'+htmlEsc(d)+'</p>'
  +'<p style="margin:0 0 7px"><a href="'+htmlEsc(cardURL(x))+'" style="display:inline-block;padding:11px 15px;background:#e60012;color:#ffffff;font-size:13px;font-weight:bold;text-decoration:none;border-radius:4px">Explore asset &amp; activation resources ↗</a></p>'
  +list
- +(editable?'<div style="margin:12px 0"><button type="button" data-edit-links-toggle="'+htmlEsc(x.id)+'" style="font-size:12px;padding:7px 10px;color:#ae0016;background:#fff;border:1px solid #ca5060;border-radius:4px;cursor:pointer">Edit links for this article</button><div hidden data-link-editor="'+htmlEsc(x.id)+'" style="padding:12px;background:#f8fafc;border:1px solid #dce3eb;margin-top:7px"><p style="font-size:12px;margin:0 0 9px">Edit the destination URL, then press Tab or click outside the field. Changes apply only to this announcement.</p>'+[['Content Library card',cardURL(x)],...links,...shareActionLinks(x)].map(([label,url])=>'<label style="display:block;font-size:12px;font-weight:bold;margin:8px 0 4px">'+htmlEsc(label)+'<input type="url" data-link-id="'+htmlEsc(x.id)+'" data-link-label="'+htmlEsc(label)+'" value="'+htmlEsc(url)+'" style="display:block;box-sizing:border-box;width:100%;margin:4px 0 0;padding:8px;border:1px solid #b9c7d5;border-radius:4px;font-size:12px;font-weight:normal"></label>').join('')+'</div></div>':'')
+
  +(shareActionLinks(x).length?'<p style="font-size:13px;font-weight:bold;color:#152132;margin:20px 0 8px">SHARE &amp; CREATE</p><ul style="padding-left:20px;margin:0 0 14px;font-size:13px;line-height:1.9">'+shareActionLinks(x).map(([label,url])=>'<li><a href="'+htmlEsc(url)+'" style="color:#bf0014">'+htmlEsc(label)+'</a></li>').join('')+'</ul>':'')
  +(articleDetailFields(x).length?'<div style="font-size:12px;line-height:1.75;color:#465362;background:#f7f9fb;padding:12px 15px;margin-top:14px"><strong style="color:#111b2b">ASSET DETAILS</strong><div>'+articleDetailFields(x).map(([label,value])=>'<div><strong>'+htmlEsc(label)+':</strong> '+htmlEsc(value)+'</div>').join('')+'</div></div>':'')
  +'</div>';
@@ -208,6 +208,7 @@ function articlePackage(records,includeImages=true,editable=false){
  return '<div style="font-family:Arial,Helvetica,sans-serif;max-width:760px;background:#ffffff;color:#1c2936">'
  +announcementHeader(head,eyebrow)
  +'<div style="padding:12px 28px;border-bottom:1px solid #e6e9ed">'+emailNavigationHtml('header')+'</div>'
+ +(editable?previewNavigationEditor():'')
  +editableIntroHTML(editable)
  +records.map(x=>assetAnnouncementHTML(x,includeImages,editable)).join('')
  +'<div style="padding:18px 28px;background:#f7f9fb;border-top:1px solid #e6e9ed">'+emailNavigationHtml('footer')+'</div></div>';
@@ -233,12 +234,20 @@ function emailCoverURL(x){
  return '';
 }
 const NEWS_HUB_URL='https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Global%20Campaigns.aspx';
+const navDestinations={'News and Updates':NEWS_HUB_URL,'Global Campaigns Hub':NEWS_HUB_URL};
+function navLinks(){return [['News and Updates',navDestinations['News and Updates']],['Global Campaigns Hub',navDestinations['Global Campaigns Hub']]]}
 function emailNavigationHtml(locationLabel){
- const links=[['News and Updates',NEWS_HUB_URL],['Global Campaigns Hub',NEWS_HUB_URL]];
- return '<p style="font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:1.65;margin:0;color:#223148">'
- +links.map(([label,url])=>'<a href="'+htmlEsc(url)+'" style="color:#b30016;text-decoration:underline;font-weight:bold">'+htmlEsc(label)+'</a>').join(' &nbsp; | &nbsp; ')+'</p>';
+ return '<p style="font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:1.65;margin:0;color:#223148">'
+ +navLinks().map(([label,url])=>'<a href="'+htmlEsc(url)+'" style="color:#b30016;text-decoration:underline;font-weight:bold">'+htmlEsc(label)+'</a>').join(' &nbsp; | &nbsp; ')+'</p>';
 }
-function emailNavigationText(){return 'News and Updates: '+NEWS_HUB_URL+'\nGlobal Campaigns Hub: '+NEWS_HUB_URL;}
+function emailNavigationText(){return navLinks().map(([label,url])=>label+': '+url).join('\n');}
+function previewNavigationEditor(){
+ return '<div style="margin:10px 28px 14px;padding:12px 15px;background:#f7f9fb;border:1px solid #dce3ed;border-radius:6px">'
+ +'<details><summary style="cursor:pointer;font-weight:700;font-size:13px;color:#ac0016">Edit header &amp; footer links</summary>'
+ +'<p style="font-size:12px;margin:9px 0;color:#536274">These two destinations update both the header and footer in the email and SharePoint outputs. Article resource links remain unchanged.</p>'
+ +navLinks().map(([label,url])=>'<label style="display:block;font-size:12px;font-weight:700;margin:9px 0 5px">'+htmlEsc(label)+'<input type="url" data-nav-label="'+htmlEsc(label)+'" value="'+htmlEsc(url)+'" style="display:block;box-sizing:border-box;width:100%;padding:8px 9px;margin-top:4px;border:1px solid #bcc8d6;border-radius:4px;font-size:13px;font-weight:400"></label>').join('')
+ +'</details></div>';
+}
 function emailMarkup(records,inlineImages={}){
  if(!records.length)return '<p style="font-family:Arial,sans-serif;padding:24px">Choose content to preview your email.</p>';
  const esc=htmlEsc;
@@ -249,7 +258,7 @@ function emailMarkup(records,inlineImages={}){
   +'<h1 style="font-size:32px;line-height:1.2;font-weight:700;color:#ffffff;margin:0 0 16px">New Content &amp;<br>Activation Resources</h1>'
   +'<p style="font-size:17px;line-height:1.55;color:#e3e9f1;margin:0 0 23px">Discover new content and ready-to-use resources to strengthen your customer conversations.</p>'
   +'<p style="font-size:14px;line-height:1.7;color:#ffffff;margin:0">'+[
-    ['News and Updates',NEWS_HUB_URL],['Global Campaigns Hub',NEWS_HUB_URL]
+     ...navLinks()
    ].map(([label,url])=>'<a href="'+esc(url)+'" style="color:#ffffff;text-decoration:underline;font-size:14px;font-weight:700">'+esc(label)+'</a>').join('&nbsp;&nbsp; | &nbsp;&nbsp;')+'</p>'
   +'</td></tr>';
  const intro=td('<p style="margin:29px 0 4px;font-size:13px;letter-spacing:1px;font-weight:700;color:#bd0018">FEATURED CONTENT &nbsp; / &nbsp; '+records.length+' '+(records.length===1?'RESOURCE':'RESOURCES')+'</p>'
@@ -466,7 +475,7 @@ function editableIntroHTML(editable){
 }
 function announcementOverrides(records){
  const entries=records.map(x=>[x.id,announcementEdits[x.id]]).filter(([,v])=>v&&Object.keys(v).length);
- return {intro:announcementIntroEdit,records:Object.fromEntries(entries)};
+ return {intro:announcementIntroEdit,records:Object.fromEntries(entries),nav:{...navDestinations}};
 }
 function encodeAnnouncementOverrides(records){
  const raw=JSON.stringify(announcementOverrides(records));
@@ -477,25 +486,16 @@ function encodeAnnouncementOverrides(records){
 
 function batchHTML(){return articlePackage(batchEntries(),true,true)}
 function batchText(){return [emailNavigationText(),announcementPageTitle(batchEntries()),...batchEntries().map(x=>[title(x.title),clean(x.abstract||x.notes||'Approved description is required before publishing.'),'Content Resources: '+cardURL(x),...availableResourceLinks(x).map(([name,url])=>name+': '+url),...shareActionLinks(x).map(([name,url])=>name+': '+url),...articleDetailFields(x).map(([name,value])=>name+': '+value)].join('\n')),emailNavigationText()].join('\n\n')}
-$('batchPreview').addEventListener('click',event=>{
- const button=event.target.closest('[data-edit-links-toggle]');if(!button)return;
- const panel=[...$('batchPreview').querySelectorAll('[data-link-editor]')].find(el=>el.dataset.linkEditor===button.dataset.editLinksToggle);
- if(panel){panel.hidden=!panel.hidden;button.textContent=panel.hidden?'Edit links for this article':'Close link editor'}
-});
 $('batchPreview').addEventListener('change',event=>{
- const node=event.target.closest('[data-link-id]');if(!node)return;
- const id=node.dataset.linkId,label=node.dataset.linkLabel,url=node.value.trim();
- if(!/^https?:\/\/\S+$/i.test(url)){set('status','Enter a complete http:// or https:// destination for '+label+'.');node.setCustomValidity('Enter a full http or https URL.');node.reportValidity();return}
- node.setCustomValidity('');
- const original=items.find(x=>x.id===id);if(!original)return;
- if(!announcementEdits[id])announcementEdits[id]={};
- if(!announcementEdits[id]._links)announcementEdits[id]._links={};
- announcementEdits[id]._links[label]=url;
- const text=label==='Content Library card'?'Content Library card':label;
- set('status',text+' updated for this announcement. SharePoint and email will use the new destination.');
+ const input=event.target.closest('[data-nav-label]');if(!input)return;
+ const value=input.value.trim();
+ let valid=false;try{const parsed=new URL(value);valid=['http:','https:'].includes(parsed.protocol)}catch(e){}
+ if(!valid){input.setCustomValidity('Enter a valid https:// or http:// URL');input.reportValidity();return}
+ input.setCustomValidity('');navDestinations[input.dataset.navLabel]=value;
+ const details=input.closest('details');const reopen=Boolean(details?.open);
  renderBatch();
- const button=[...$('batchPreview').querySelectorAll('[data-edit-links-toggle]')].find(el=>el.dataset.editLinksToggle===id);
- if(button)button.click();
+ if(reopen){const updated=$('batchPreview').querySelector('[data-nav-label]')?.closest('details');if(updated)updated.open=true}
+ set('status',input.dataset.navLabel+' updated in the header and footer for this announcement.');
 });
 function applyPreviewEdit(node){
  if(node.dataset.editIntro){announcementIntroEdit=(node.innerText||'').trim();return}
@@ -794,7 +794,7 @@ function savedViewURL(){
  u.searchParams.set('savedView','1');
  const values=[['q',$('search').value.trim()],['artwork',$('filterArtwork').value],['news',$('filterNews').value],['date',$('datePreset').value],['sort',$('sortAssets').value],['from',$('dateFrom').value],['to',$('dateTo').value],['item',$('asset').value],['selection',batchIds.join(',')]];
  values.forEach(([name,value])=>{if(value)u.searchParams.set(name,value)});
- if(announcementIntroEdit||Object.values(announcementEdits).some(v=>Object.keys(v).length))u.searchParams.set('custom',encodeAnnouncementOverrides(emailSelectedAssets()));
+ if(announcementIntroEdit||Object.values(announcementEdits).some(v=>Object.keys(v).length)||navLinks().some(([,url])=>url!==NEWS_HUB_URL))u.searchParams.set('custom',encodeAnnouncementOverrides(emailSelectedAssets()));
  return u.toString();
 }
 function restoreSavedView(){
@@ -805,7 +805,7 @@ function restoreSavedView(){
  $('dateFrom').value=params.get('from')||'';$('dateTo').value=params.get('to')||'';
  $('customDates').hidden=$('datePreset').value!=='custom';
  batchIds=[...new Set((params.get('selection')||'').split(',').filter(Boolean))].filter(id=>items.some(x=>x.id===id)).slice(0,20);
- try{const raw=(params.get('custom')||'').replace(/-/g,'+').replace(/_/g,'/');if(raw){const data=JSON.parse(new TextDecoder().decode(Uint8Array.from(atob(raw),c=>c.charCodeAt(0))));if(typeof data.intro==='string')announcementIntroEdit=data.intro.slice(0,2500);for(const [id,edit] of Object.entries(data.records||{})){if(!items.some(x=>x.id===id)||!edit||typeof edit!=='object')continue;announcementEdits[id]={};for(const k of ['title','abstract'])if(typeof edit[k]==='string')announcementEdits[id][k]=edit[k].slice(0,4000);if(edit._links&&typeof edit._links==='object'){announcementEdits[id]._links={};for(const [label,url] of Object.entries(edit._links))if(/^https?:\/\/\S+$/i.test(url))announcementEdits[id]._links[label]=url}}}}catch(e){console.warn('Could not restore announcement edits',e)}
+ try{const raw=(params.get('custom')||'').replace(/-/g,'+').replace(/_/g,'/');if(raw){const data=JSON.parse(new TextDecoder().decode(Uint8Array.from(atob(raw),c=>c.charCodeAt(0))));if(typeof data.intro==='string')announcementIntroEdit=data.intro.slice(0,2500);if(data.nav&&typeof data.nav==='object')for(const label of ['News and Updates','Global Campaigns Hub']){const url=data.nav[label];if(typeof url==='string'&&/^https?:\/\/\S+$/i.test(url))navDestinations[label]=url}for(const [id,edit] of Object.entries(data.records||{})){if(!items.some(x=>x.id===id)||!edit||typeof edit!=='object')continue;announcementEdits[id]={};for(const k of ['title','abstract'])if(typeof edit[k]==='string')announcementEdits[id][k]=edit[k].slice(0,4000);if(edit._links&&typeof edit._links==='object'){announcementEdits[id]._links={};for(const [label,url] of Object.entries(edit._links))if(/^https?:\/\/\S+$/i.test(url))announcementEdits[id]._links[label]=url}}}}catch(e){console.warn('Could not restore announcement edits',e)}
  return true;
 }
 $('saveView').onclick=async()=>{
