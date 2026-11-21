@@ -24,6 +24,12 @@
 <div class="grid"><div><label for="pageTitle">SharePoint page title (editable, includes all selected titles)</label><input id="pageTitle"></div><div><label for="image">Approved image URL (optional)</label><input id="image" placeholder="Use only when replacing the displayed image"></div></div>
 <div class="actions" aria-label="Copy SharePoint page title"><button id="copyTitle" class="secondary">Copy SharePoint page title</button><span class="hint">Use this for a new SharePoint page, not for the email subject automatically.</span></div>
 <div class="publish-methods" aria-label="Choose how to publish the SharePoint announcement">
+<div class="publish-method" style="grid-column:1/-1;border:2px solid #d0dbe7;background:#f7f9fc">
+<strong>Recommended next step: Prepare a native SharePoint news draft</strong>
+<p class="hint">One click packages all selected titles, descriptions, promotional links, approved covers and a Microsoft Graph native-page draft blueprint. <b>No iframe, no duplicated copy.</b> The package is ready for a Microsoft-authorized automation once connected. <b>Downloading it does not create or publish a SharePoint page.</b></p>
+<button id="prepareNativeDraft">Prepare SharePoint draft package (.zip)</button>
+<p class="hint">The package includes a text-web-part draft blueprint, separate cover files when downloadable, and instructions for completing native Image web parts. SharePoint <b>Made for email</b> compatibility must be verified on a news post before sending.</p>
+</div>
 <div class="publish-method">
 <strong>A. SharePoint news page, including Send as email</strong>
 <p class="hint"><b>Use this if you want SharePoint to send the full news post by email.</b> Copy formatted text and links into a native SharePoint <b>Text</b> web part. Add approved covers separately in <b>Image</b> web parts. Do not add an Embed web part.</p>
@@ -347,6 +353,76 @@ async function zipCoverFiles(files){
  v.setUint32(12,centralSize,true);v.setUint32(16,offset,true);
  return new Blob([...parts,...central,footer],{type:'application/zip'});
 }
+
+function nativeDraftBlueprint(records){
+ const uid=()=>('xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx').replace(/[xy]/g,c=>{const r=Math.floor(Math.random()*16);return (c==='x'?r:(r&3|8)).toString(16)});
+ const textPart=markup=>({id:uid(),innerHtml:markup});
+ const parts=[textPart('<p><strong>GLOBAL CAMPAIGNS</strong></p><h2>New Content &amp; Activation Resources</h2><p>Explore approved content and resources to activate your customer conversations.</p>')];
+ for(const x of records){
+  const t=htmlEsc(title(x.title)),description=htmlEsc(clean(x.abstract||x.notes||'Approved description pending review.')),links=availableResourceLinks(x);
+  const rows=links.map(([label,url])=>'<li><a href="'+htmlEsc(url)+'">'+htmlEsc(label)+'</a></li>').join('');
+  parts.push(textPart('<h2>'+t+'</h2><p>'+description+'</p><p><strong><a href="'+htmlEsc(cardURL(x))+'">Explore asset and activation resources</a></strong></p>'+(rows?'<p><strong>Available promotional resources</strong></p><ul>'+rows+'</ul>':'')));
+ }
+ parts.push(textPart('<h2>Everything you need to activate, in one place</h2><p>Find approved content, promotional assets and ready-to-use activation resources in the <a href="https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Content-Library.aspx">Content Library</a>.</p><p><a href="https://emmeeterry.github.io/Global-Campaigns-Resource-Hub/">Explore Global Campaigns resources</a></p>'));
+ return {
+  '@odata.type':'#microsoft.graph.sitePage',
+  name:'global-campaigns-announcement-'+new Date().toISOString().slice(0,10)+'.aspx',
+  title:announcementPageTitle(records),
+  pageLayout:'article',showComments:false,showRecommendedPages:false,
+  canvasLayout:{horizontalSections:[{layout:'oneColumn',id:'1',emphasis:'none',columns:[{id:'1',width:12,webparts:parts}]}]}
+ };
+}
+async function prepareNativeDraft(){
+ const records=emailSelectedAssets();
+ if(!records.length){set('status','Select at least one asset before preparing a SharePoint draft.');return}
+ const button=$('prepareNativeDraft');button.disabled=true;button.textContent='Preparing draft package...';
+ try{
+  const blueprint=nativeDraftBlueprint(records),manifest={pageTitle:blueprint.title,siteUrl:'https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23',createdAt:new Date().toISOString(),assets:[]};
+  const files=[],missing=[];
+  for(const x of records){
+   const record={id:x.id,title:title(x.title),description:clean(x.abstract||x.notes||''),contentLibraryUrl:cardURL(x),coverSource:emailCoverURL(x),links:availableResourceLinks(x).map(([label,url])=>({label,url}))};
+   try{const cover=await collectCoverFile(x);files.push({filename:'images/'+cover.filename,blob:cover.blob});record.coverFile='images/'+cover.filename}
+   catch(err){record.coverIssue=err.message;missing.push(title(x.title)+': '+err.message)}
+   manifest.assets.push(record);
+  }
+  const instructions=[
+   'GLOBAL CAMPAIGNS: NATIVE SHAREPOINT NEWS DRAFT PACKAGE',
+   '',
+   'This ZIP is a staging package. It DOES NOT create, publish or email a page.',
+   'Its page-blueprint.json contains a Microsoft Graph sitePage POST request body with native Text web parts.',
+   'Graph API: POST https://graph.microsoft.com/v1.0/sites/{site-id}/pages',
+   'Requires an approved Microsoft Entra app with delegated Sites.ReadWrite.All and an authorized site editor.',
+   '',
+   'IMPORTANT FOR FULL-BODY SHAREPOINT NEWS EMAIL:',
+   'Microsoft says to start from News post > Made for email template.',
+   'A Graph-created article page is NOT proven to inherit Made for email distribution compatibility.',
+   'Do NOT publish or distribute until you validate the resulting page in SharePoint email preview.',
+   '',
+   'FINISHING THE NATIVE PAGE:',
+   '1. Start a new Made for email News post on the target site and use your branded template.',
+   '2. Use the manifest for approved text and resource links. The Graph blueprint is for a future authorized automation, NOT something to paste into a Text web part.',
+   '3. Upload images from images/ and use native Image web parts beside the matching asset sections.',
+   '4. Review formatting and links and verify the full-body Send as email preview.',
+   '5. Seek content approval, then Post and send using SharePoint.',
+   '6. Record the published URL and date in Smartsheet.',
+   '',
+   'If automated Graph draft creation is enabled, upload/share assets to the SharePoint Site Assets library before binding image web parts.',
+   'Never place a Microsoft access token, client secret or privileged webhook in a public GitHub Pages page.',
+   '',
+   'IMAGE NOTES:',
+   missing.length?missing.join('\n'):'All selected cover images were included.',
+  ].join('\n');
+  files.push({filename:'page-blueprint.json',blob:new Blob([JSON.stringify(blueprint,null,2)],{type:'application/json'})});
+  files.push({filename:'content-and-images-manifest.json',blob:new Blob([JSON.stringify(manifest,null,2)],{type:'application/json'})});
+  files.push({filename:'README.txt',blob:new Blob([instructions],{type:'text/plain'})});
+  const zip=await zipCoverFiles(files),url=URL.createObjectURL(zip),a=document.createElement('a');
+  a.href=url;a.download='global-campaigns-sharepoint-draft.zip';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),60000);
+  set('status','Prepared draft package for '+records.length+' selected asset(s) with '+(files.length-3)+' cover(s).'+(missing.length?' Review cover issues in README.':'')+' No SharePoint draft was created yet. Microsoft authorization and Made for email validation are still required.');
+ }catch(err){set('status','Unable to prepare native draft package: '+err.message)}
+ finally{button.disabled=false;button.textContent='Prepare SharePoint draft package (.zip)'}
+}
+$('prepareNativeDraft').onclick=prepareNativeDraft;
+
 async function saveImageToFolder(){
  const entries=batchIds.length?batchEntries():(current?[current]:[]);
  if(!entries.length){set('status','Select an asset before saving covers.');return}
