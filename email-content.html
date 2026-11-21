@@ -23,7 +23,8 @@ let mailto='',body='',subject='';
    summary=chunk.slice(0,boundary>170?boundary+1:(chunk.lastIndexOf(' ')||450)).trim()+'…';
  }
 const newsHubLink='https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Global%20Campaigns.aspx';
-const newsNav='News and Updates: '+newsHubLink+'\nGlobal Campaigns Hub: '+newsHubLink;
+const newsUpdatesLink='https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/All-News-Posts.aspx';
+const newsNav='News and Updates: '+newsUpdatesLink+'\nGlobal Campaigns Hub: '+newsHubLink;
  const type=(it.type||'').toLowerCase();
  const status=(it.status||'').toLowerCase();
  const isWebinar=type.includes('webinar');
