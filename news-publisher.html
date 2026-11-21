@@ -29,12 +29,12 @@
 <p class="hint">Create a new SharePoint page, add an <b>Embed</b> web part, and paste the iframe code. Email a link to the page separately if needed.</p></section>
 <section class="publish-method" style="border:2px solid #cbd7e2;background:#fafbfd">
 <strong style="font-size:16px">C. Formatted Outlook email</strong>
-<p class="hint"><b>Use to send a polished announcement from Outlook.</b> Includes approved cover images and available resources.</p>
+<p class="hint"><b>Classic Outlook:</b> Download the Outlook email with embedded images. This avoids remote image-loading issues when the approved covers are accessible to the builder. Alternatively use the copy + paste workflow below.</p>
 <button id="openOutlookEmail">Copy formatted email + open Outlook</button>
 <div style="border-left:4px solid #d60016;padding:10px 12px;margin:10px 0;background:#fff;color:#111b2b;font-size:13px;line-height:1.6"><b>Outlook will open with a blank body.</b> The button also copies the formatted email. <b>Click inside the new email and press Ctrl+V</b> to insert it.</div>
 <p id="outlookActionHelp" role="status" aria-live="polite" class="hint" style="font-weight:600"></p>
-<div class="actions"><button id="downloadOutlookDraft" class="secondary">Download formatted Outlook .eml</button><button id="copyEmailHTML" class="secondary">Copy email only</button></div>
-<details><summary>More email formats</summary><div class="actions"><button id="downloadEmailHTML" class="secondary">Download HTML</button><button id="openOutlookWithBody" class="secondary">Open plain-text Outlook email</button></div><p class="hint">An .eml may open read-only depending on Outlook version. The plain-text option has text prefilled but no designed formatting.</p></details>
+<div class="actions"><button id="downloadOutlookDraft" class="secondary">Download Outlook with embedded images (.eml)</button><button id="copyEmailHTML" class="secondary">Copy email only</button></div>
+<details><summary>More email formats</summary><div class="actions"><button id="downloadEmailHTML" class="secondary">Download HTML</button><button id="openOutlookWithBody" class="secondary">Open plain-text Outlook email</button></div><p class="hint">The .eml includes cover images inside the email where downloadable, converted to PNG if needed for Classic Outlook. Some Outlook versions may open .eml read-only; check before sending. The plain-text option has text prefilled but no designed formatting.</p></details>
 </section></div>
 <details class="more-tools"><summary>Preview formatted Outlook email</summary><p class="hint">Review artwork and links before distributing.</p><iframe id="emailPreview" title="Formatted email preview" sandbox="allow-popups allow-popups-to-escape-sandbox" style="display:block;width:100%;height:600px;border:1px solid #dbe2ea;border-radius:8px;background:white"></iframe></details>
 <details class="more-tools"><summary>Advanced: Copilot and developer files</summary><p class="hint">Optional only. These exports do not create SharePoint pages.</p><div class="actions"><button id="copyCopilotBrief" class="secondary">Copy Copilot briefing</button><button id="downloadCopilotBrief" class="secondary">Download Copilot .txt</button></div><details><summary>Developer export</summary><button id="prepareNativeDraft" class="secondary">Download technical ZIP</button></details></details>
@@ -173,7 +173,7 @@ function emailCoverURL(x){
  if(/^https:\/\//i.test(w||'')&&!isSharePointImage(w))return w;
  return '';
 }
-function emailMarkup(records){
+function emailMarkup(records,inlineImages={}){
  if(!records.length)return '<p style="font-family:Arial,sans-serif;padding:20px">Choose content to preview your email.</p>';
  const cell=(html,extra='')=>'<tr><td style="padding:0 26px;'+extra+'">'+html+'</td></tr>';
  const titleBlock='<tr><td bgcolor="#ffffff" style="background:#ffffff;border-top:6px solid #d60016;padding:26px 30px 25px;color:#111b2b;font-family:Arial,Helvetica,sans-serif">'
@@ -182,7 +182,7 @@ function emailMarkup(records){
   +'<p style="font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:1.6;color:#435465;margin:0 0 12px">Explore approved customer-facing content and activation resources.</p>'
   +'<p style="font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:1.55;color:#465768;margin:0"><strong>Featured:</strong> '+htmlEsc(records.map(x=>title(x.title)).join(' | '))+'</p></td></tr>';
  const sections=records.map((x,i)=>{
-  const art=emailCoverURL(x),links=availableResourceLinks(x),d=clean(x.abstract||x.notes||'Approved description not available. Confirm before sending.');
+  const art=Object.prototype.hasOwnProperty.call(inlineImages,x.id)?inlineImages[x.id]:emailCoverURL(x),links=availableResourceLinks(x),d=clean(x.abstract||x.notes||'Approved description not available. Confirm before sending.');
   const picture=art?'<tr><td style="padding:20px 26px 0"><img src="'+htmlEsc(art)+'" alt="'+htmlEsc(title(x.title))+' cover" width="135" style="display:block;width:135px;max-width:100%;height:auto;border:1px solid #e5e9ef;border-radius:4px"></td></tr>':'';
   const items=links.map(([label,url])=>'<li style="margin:4px 0"><a href="'+htmlEsc(url)+'" style="color:#b30016;text-decoration:underline">'+htmlEsc(label)+'</a></li>').join('');
   const resources=items?cell('<p style="font-size:12px;font-weight:bold;color:#192537;letter-spacing:.4px;margin:18px 0 6px">AVAILABLE ACTIVATION RESOURCES</p><ul style="padding-left:20px;margin:0 0 17px;font-size:13px;line-height:1.7">'+items+'</ul>'):'';
@@ -198,8 +198,8 @@ function emailMarkup(records){
  return '<table role="presentation" width="760" cellpadding="0" cellspacing="0" style="width:100%;border-collapse:collapse;font-family:Arial,Helvetica,sans-serif;max-width:760px;background:#fff" align="center">'
   +titleBlock+sections+footer+'</table>';
 }
-function emailDocument(){
- const html=emailMarkup(emailSelectedAssets());
+function emailDocument(records=emailSelectedAssets(),inlineImages={}){
+ const html=emailMarkup(records,inlineImages);
  return '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+htmlEsc(announcementPageTitle(emailSelectedAssets()))+'</title></head><body style="margin:0;padding:12px 0;background:#ffffff">'+html+'</body></html>';
 }
 function updateEmailPreview(){
@@ -269,19 +269,68 @@ async function openOutlookEmail(){
   set('status','Formatting could not be copied: '+err.message);
  }
 }
-function downloadOutlookDraft(){
+async function downloadOutlookDraft(){
  const records=emailSelectedAssets();
  if(!records.length){set('status','Select at least one asset first.');return}
- const subject=announcementPageTitle(records);
+ const button=$('downloadOutlookDraft');button.disabled=true;button.textContent='Preparing embedded images...';
  const enc=new TextEncoder();
- const b64=bytes=>{let binary='';for(let i=0;i<bytes.length;i+=8192)binary+=String.fromCharCode(...bytes.subarray(i,i+8192));return btoa(binary)};
- const utf8header='=?UTF-8?B?'+b64(enc.encode(subject))+'?=';
- const encoded=b64(enc.encode(emailDocument())).match(/.{1,76}/g).join('\r\n');
- const mime=['X-Unsent: 1','MIME-Version: 1.0','Subject: '+utf8header,'Content-Type: text/html; charset=UTF-8','Content-Transfer-Encoding: base64','',''+encoded,''].join('\r\n');
- const blob=new Blob([mime],{type:'message/rfc822'}),url=URL.createObjectURL(blob),a=document.createElement('a');
- a.href=url;a.download='global-campaigns-outlook-draft.eml';document.body.appendChild(a);a.click();a.remove();
- setTimeout(()=>URL.revokeObjectURL(url),60000);
- set('status','Outlook draft file downloaded. Open the .eml file with Outlook, check whether it opens in editable compose mode, then review the formatted images and links. If read-only, use Open Outlook + copy formatted email.');
+ const b64=bytes=>{let parts=[];for(let i=0;i<bytes.length;i+=8192)parts.push(String.fromCharCode(...bytes.subarray(i,i+8192)));return btoa(parts.join(''))};
+ const lines76=bytes=>(b64(bytes).match(/.{1,76}/g)||[]).join('\r\n');
+ const boundary='GCampaignsImages_'+Date.now().toString(36);
+ const mappings={},images=[],unavailable=[];
+ try{
+  for(const x of records){
+   const src=emailCoverURL(x);
+   if(!src){mappings[x.id]='';unavailable.push(title(x.title)+': no public approved image');continue}
+   try{
+    const url=new URL(src,location.href),res=await fetch(url.href,{mode:'cors',credentials:url.origin===location.origin?'same-origin':'omit'});
+    if(!res.ok)throw Error('image download returned '+res.status);
+    let blob=await res.blob();
+    if(!blob.type.startsWith('image/'))throw Error('image content was not returned');
+    // Classic Outlook does not reliably support WebP. Convert to PNG in the browser.
+    if(!/image\/(?:png|jpeg|gif)/i.test(blob.type)){
+     const bitmap=await createImageBitmap(blob);
+     const canvas=document.createElement('canvas');canvas.width=bitmap.width;canvas.height=bitmap.height;
+     canvas.getContext('2d').drawImage(bitmap,0,0);bitmap.close?.();
+     blob=await new Promise((resolve,reject)=>canvas.toBlob(result=>result?resolve(result):reject(Error('PNG conversion failed')),'image/png'));
+    }
+    const cid='cover'+images.length+'-'+x.id.replace(/[^a-z0-9-]/gi,'').slice(0,50)+'@globalcampaigns';
+    mappings[x.id]='cid:'+cid;
+    images.push({cid,blob,name:'asset-'+(images.length+1)+(blob.type==='image/jpeg'?'.jpg':blob.type==='image/gif'?'.gif':'.png')});
+   }catch(err){mappings[x.id]='';unavailable.push(title(x.title)+': '+err.message)}
+  }
+  const subject=announcementPageTitle(records),utf8Subject='=?UTF-8?B?'+b64(enc.encode(subject))+'?=';
+  const html=emailDocument(records,mappings);
+  const mime=[
+    'X-Unsent: 1',
+    'MIME-Version: 1.0',
+    'Subject: '+utf8Subject,
+    'Content-Type: multipart/related; boundary="'+boundary+'"',
+    '',
+    '--'+boundary,
+    'Content-Type: text/html; charset="UTF-8"',
+    'Content-Transfer-Encoding: base64',
+    '',
+    lines76(enc.encode(html)),
+    ''
+  ];
+  for(const img of images){
+   mime.push('--'+boundary,
+    'Content-Type: '+img.blob.type+'; name="'+img.name+'"',
+    'Content-Transfer-Encoding: base64',
+    'Content-ID: <'+img.cid+'>',
+    'Content-Disposition: inline; filename="'+img.name+'"',
+    '',
+    lines76(new Uint8Array(await img.blob.arrayBuffer())),
+    '');
+  }
+  mime.push('--'+boundary+'--','');
+  const file=new Blob([mime.join('\r\n')],{type:'message/rfc822'}),url=URL.createObjectURL(file),link=document.createElement('a');
+  link.href=url;link.download='global-campaigns-outlook-with-images.eml';document.body.appendChild(link);link.click();link.remove();
+  setTimeout(()=>URL.revokeObjectURL(url),60000);
+  set('status','Downloaded Outlook email with '+images.length+' cover image(s) embedded directly (PNG/JPEG/GIF).'+(unavailable.length?' Not embedded: '+unavailable.join(' | ')+'.':'')+' Open .eml in Classic Outlook and check its editable status, formatting and images before sending.');
+ }catch(err){set('status','Could not prepare the Outlook draft: '+err.message)}
+ finally{button.disabled=false;button.textContent='Download Outlook with embedded images (.eml)'}
 }
 $('openOutlookEmail').onclick=openOutlookEmail;
 $('downloadOutlookDraft').onclick=downloadOutlookDraft;
