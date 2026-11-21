@@ -260,7 +260,7 @@ function openOutlookWithBody(){
   set('status','This announcement is too long for a reliable Outlook compose link. Use Download formatted Outlook file, or Copy designed email + open Outlook and paste with Ctrl+V.');
   return;
  }
- const tab=window.open(url,'_blank','noopener');
+ const tab=window.open(url,'_blank');
  set('status',tab?'Outlook opened with a text email body and subject. This version is plain text with full links, not the designed email. Verify content before sending.':'Allow Outlook pop-ups for this builder if nothing opened. This opens text, not a formatted HTML email.');
 }
 $('openOutlookWithBody').onclick=openOutlookWithBody;
