@@ -3,8 +3,7 @@
 (() => {
 'use strict';
 const byId=id=>document.getElementById(id);
-const originalChoose=choose,originalMatches=matches,originalExport=downloadFormattedOutlook;
-const originalFillLead=fillLead;
+const originalMatches=matches,originalExport=downloadFormattedOutlook;
 const audienceOf=item=>item.audience || (item.id==='resource-draft'?'Both':'PAM');
 const showAudience=item=>{
  const v=byId('audienceFilter')?.value||'All';
@@ -18,7 +17,6 @@ const filter=document.createElement('select');filter.id='audienceFilter';filter.
 sidebar.parentElement.insertBefore(label,sidebar);
 sidebar.parentElement.insertBefore(filter,sidebar);
 filter.addEventListener('change',applyFilters);
-const oldClear=byId('clearFilters').onclick;
 byId('clearFilters').addEventListener('click',()=>{filter.value='All';applyFilters()});
 const pageTitle=document.querySelector('header h1');if(pageTitle)pageTitle.textContent='Sales & Partner Email Hub';
 const eyebrow=document.querySelector('header .eyebrow');if(eyebrow)eyebrow.textContent='HITACHI VANTARA / SALES & PARTNER PROGRAMS';
@@ -91,6 +89,7 @@ byId('richMimeImport').addEventListener('change',async event=>{
   });
   let preview=originalHtml;
   for(const im of images)preview=preview.replaceAll('cid:'+im.cid,im.dataUrl);
+  preview=fullPreservedEmail(preview); // safe preview, while exact original HTML is kept for export
   const subject=decodeHeader(header(first,'Subject'))||'Branded email invitation';
   const item={id:'imported-rich-'+Date.now(),title:subject,subject,body:(parts.find(p=>/^text\/plain\b/i.test(p.contentType))?decodeText(parts.find(p=>/^text\/plain\b/i.test(p.contentType))):'').trim(),htmlBody:preview,category:'Event Invitation',region:'Global',audience:'Sales',objective:'Event invitation',status:'Local pilot · not published',addedDate:new Date().toISOString(),embeddedImages:images,originalHtml};
   imported.set(item.id,item);items.unshift(item);choose(item);
@@ -102,10 +101,9 @@ byId('richMimeImport').addEventListener('change',async event=>{
 // Preserve original CID image references for MIME packaging, even after editing in the iframe.
 function exportMimeWithImages(item){
  const subject=byId('subject').value.replace(/[\r\n]/g,' ').trim();
- let html=currentRichHtml()||item.htmlBody;
+ let html=byId('richEmail').dataset.edited?(currentRichHtml()||item.htmlBody):item.originalHtml;
  for(const im of item.embeddedImages)html=html.split(im.dataUrl).join('cid:'+im.cid);
  // For exact visual fidelity, do not add the standard navigation header/footer to imported invitations.
- const bound='=_SalesPartnerHub_'+Date.now();
  const related='=_RichImages_'+Date.now();
  const utf8=new TextEncoder();
  const lines=['MIME-Version: 1.0','X-Unsent: 1','Subject: =?UTF-8?B?'+encode64(utf8.encode(subject))+'?=','Content-Type: multipart/related; boundary="'+related+'"','','--'+related,'Content-Type: text/html; charset=UTF-8','Content-Transfer-Encoding: base64','',folded64(utf8.encode(html))];
