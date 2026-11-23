@@ -51,8 +51,14 @@ assert(v2.includes("a==='Both'&&(v==='Sales'||v==='PAM')"),'Both audience should
 assert(v2.includes("['Both','Both']"),'Importer must offer Both as a publishing audience');
 assert(v2.includes("const CES_ID='sales-ces-2027-invitation'"),'CES pilot should appear in the hub');
 assert(v2.includes('loadCesApprovedLayout()'),'CES exact-layout loader must exist');
-assert(v2.includes("actions.after(sendStatus,subjectLabel,emailSubject,emailPreview,plainFields,help)"),'Email preview should follow compact actions and subject');
+assert(v2.includes("actions.after(quickTools,sendStatus,subjectLabel,emailSubject,emailPreview,plainFields,help)"),'Compact translation and contact personalization controls precede subject and email preview');
 assert(v2.includes("helpTitle.textContent='More tools and help'"),'Extra help is collapsed');
+assert(v2.includes("leadSummary.textContent='Personalize from contact list'"),'Contact-list personalization must be visible in top controls');
+assert(v2.includes("translation.querySelector('summary').textContent='Translate'"),'Translate must be visible in top controls');
+const hubCode=readFileSync(new URL('../pam-email-hub.html',import.meta.url),'utf8');
+assert(hubCode.includes("node.nodeValue=repl(node.nodeValue)"),'CSV personalization must update rich HTML text');
+assert(hubCode.includes("frame.dataset.edited='yes'"),'HTML personalizations must be included in exported EML');
+assert(hubCode.includes("const doc=new DOMParser().parseFromString(selected.htmlBody"),'Each selected contact should start from approved template');
 assert(v2.includes('sidebarPanel.appendChild(hint)'),'Import control stays in the sidebar, away from email preview');
 assert(!v2.includes('cesRegistrationCode')&&!v2.includes('cesCodeWrap'),'Do not show separate registration-code form');
 assert(v2.includes("get('embed')==='customer'"),'Provide customer-only embed mode');
