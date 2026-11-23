@@ -253,14 +253,43 @@ const briefIntro=emailEditor.querySelector('#templateMetadata + p.muted');
 const meta=byId('templateMetadata');
 const translation=byId('translatePanel');
 const previewNote=byId('richEmailNote');
-const leadTools=byId('jumpToLeads');
 const leadAnchor=byId('leadPersonalizationLink');
-for(const n of [meta,briefIntro,previewNote,leadAnchor,translation,advanced,...notes]){
- if(n)helpContent.appendChild(n);
-}
+const leadPanel=byId('leadPersonalization');
+const leadTools=byId('jumpToLeads');
+for(const n of [meta,briefIntro,previewNote,advanced,...notes])if(n)helpContent.appendChild(n);
+if(leadAnchor)leadAnchor.remove();
+if(leadTools)leadTools.remove();
 help.appendChild(helpContent);
-if(leadTools)advancedButtons.prepend(leadTools);
-actions.after(sendStatus,subjectLabel,emailSubject,emailPreview,plainFields,help);
+const quickTools=document.createElement('div');
+quickTools.id='personalizationTools';
+quickTools.style.cssText='display:flex;align-items:flex-start;gap:8px;flex-wrap:wrap;margin:0 0 9px';
+if(translation){
+ translation.querySelector('summary').textContent='Translate';
+ translation.style.cssText='flex:1 1 220px;margin:0;padding:8px 10px;border:1px solid #dedee2;border-radius:4px;background:#fafafa';
+ quickTools.appendChild(translation);
+ const availability=document.createElement('p');
+ availability.className='muted';
+ availability.style.cssText='font-size:11px;margin:4px 0';
+ availability.textContent='Translation depends on browser support. Review the result before sending.';
+ translation.appendChild(availability);
+}
+if(leadPanel){
+ const leadDisclosure=document.createElement('details');
+ leadDisclosure.id='contactPersonalizeOptions';
+ leadDisclosure.style.cssText='flex:1 1 250px;margin:0;padding:8px 10px;border:1px solid #dedee2;border-radius:4px;background:#fafafa';
+ const leadSummary=document.createElement('summary');
+ leadSummary.textContent='Personalize from contact list';
+ leadSummary.style.cssText='cursor:pointer;font-weight:600;color:#444';
+ leadDisclosure.appendChild(leadSummary);
+ leadPanel.style.cssText='padding:8px 0 0;margin:0;border:0;background:transparent';
+ const leadIntro=leadPanel.querySelector('p.muted');
+ if(leadIntro)leadIntro.textContent='Upload a CSV with columns such as First Name, Company, Email, Your Name. Select one contact to fill matching [placeholders] in the subject and email. Review before sending.';
+ const leadButton=byId('csvTemplate');
+ if(leadButton)leadButton.textContent='Download sample CSV';
+ leadDisclosure.appendChild(leadPanel);
+ quickTools.appendChild(leadDisclosure);
+}
+actions.after(quickTools,sendStatus,subjectLabel,emailSubject,emailPreview,plainFields,help);
 const editorStyle=document.createElement('style');
 editorStyle.textContent=[
  '#edit > .actions{margin:5px 0 9px!important;gap:8px!important;align-items:center}',
