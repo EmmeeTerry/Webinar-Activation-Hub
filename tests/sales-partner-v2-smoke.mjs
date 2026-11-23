@@ -54,6 +54,8 @@ assert(v2.includes('loadCesApprovedLayout()'),'CES exact-layout loader must exis
 assert(v2.includes("actions.after(quickTools,sendStatus,subjectLabel,emailSubject,emailPreview,plainFields,help)"),'Compact translation and contact personalization controls precede subject and email preview');
 assert(v2.includes("helpTitle.textContent='More tools and help'"),'Extra help is collapsed');
 assert(v2.includes("leadSummary.textContent='Personalize from contact list'"),'Contact-list personalization must be visible in top controls');
+assert(v2.includes("byId('copy').remove()"),'Unreliable formatted copy must be removed in embedded SharePoint');
+assert(!v2.includes("byId('copy').hidden=false"),'Do not expose blocked clipboard action');
 assert(v2.includes("translation.querySelector('summary').textContent='Translate'"),'Translate must be visible in top controls');
 const hubCode=readFileSync(new URL('../pam-email-hub.html',import.meta.url),'utf8');
 assert(hubCode.includes("node.nodeValue=repl(node.nodeValue)"),'CSV personalization must update rich HTML text');
