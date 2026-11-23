@@ -233,6 +233,38 @@ formattedCopyButton.hidden=false;
 formattedCopyButton.textContent='Copy formatted email';
 formattedCopyButton.title='Copy the formatted message, or open it in a separate tab if your browser restricts copying';
 formattedCopyButton.classList.remove('primary');
+
+// Sending happens in the employee's existing Outlook account. This app does
+// not authenticate to Microsoft 365 and does not send mail.
+const openOutlookWeb=document.createElement('a');
+openOutlookWeb.id='openOutlookWeb';
+openOutlookWeb.className='btn';
+openOutlookWeb.textContent='Open Outlook (web)';
+openOutlookWeb.target='_blank';
+openOutlookWeb.rel='noopener noreferrer';
+openOutlookWeb.title='Open a new Outlook web draft. After copying, paste the formatted email into the message body.';
+openOutlookWeb.style.cssText='display:inline-flex;align-items:center;text-decoration:none';
+const openDesktopEmail=document.createElement('a');
+openDesktopEmail.id='openDesktopEmail';
+openDesktopEmail.className='btn';
+openDesktopEmail.textContent='Open desktop email app';
+openDesktopEmail.title='Open your default installed email app with a blank message and the subject filled in';
+openDesktopEmail.style.cssText='display:inline-flex;align-items:center;text-decoration:none';
+function outlookComposeUrls(){
+ const subject=byId('subject').value.trim();
+ openOutlookWeb.href='https://outlook.office.com/mail/deeplink/compose?subject='+encodeURIComponent(subject);
+ openDesktopEmail.href='mailto:?subject='+encodeURIComponent(subject);
+}
+outlookComposeUrls();
+byId('subject').addEventListener('input',outlookComposeUrls);
+actions.insertBefore(openOutlookWeb,byId('reset'));
+actions.insertBefore(openDesktopEmail,byId('reset'));
+const compactHelp=document.createElement('p');
+compactHelp.id='emailActionHelp';
+compactHelp.className='muted';
+compactHelp.style.cssText='margin:3px 0 9px;font-size:12px;line-height:1.4';
+compactHelp.textContent='For exact design: Download formatted Outlook email and open the file. Or Copy formatted email, open Outlook, then paste above your signature. Always review before sending.';
+
 function safeRichDocument(){
  const source=selected?.htmlBody ? (currentRichHtml()||selected.htmlBody) : linkedEmailHtml();
  const parsed=new DOMParser().parseFromString(source,'text/html');
@@ -279,7 +311,12 @@ function copyFormattedFallback(){
  copy.style.cssText='background:#c00;color:#fff;border:0;padding:10px 14px;font-weight:700;cursor:pointer;margin-right:12px';
  const info=popup.document.createElement('span');
  info.textContent='If copying is blocked, select the email below and press Ctrl+C (Windows) or Command+C (Mac).';
- bar.append(copy,info);
+ const outlookLink=popup.document.createElement('a');
+ outlookLink.href='https://outlook.office.com/mail/deeplink/compose?subject='+encodeURIComponent(byId('subject').value.trim());
+ outlookLink.target='_blank';outlookLink.rel='noopener noreferrer';
+ outlookLink.textContent='Open Outlook (web)';
+ outlookLink.style.cssText='display:inline-block;background:#f6f6f6;color:#333;text-decoration:none;padding:9px 12px;border:1px solid #aaa;margin-right:10px';
+ bar.append(copy,outlookLink,info);
  const wrapper=popup.document.createElement('div');
  wrapper.style.cssText='padding:12px;max-width:1000px;margin:0 auto';
  const original=[...popup.document.body.childNodes];
@@ -290,7 +327,7 @@ function copyFormattedFallback(){
   else{const range=popup.document.createRange();range.selectNodeContents(wrapper);popup.getSelection().removeAllRanges();popup.getSelection().addRange(range);info.textContent='Email selected. Press Ctrl+C or Command+C, then paste into Outlook.';}
  };
  popup.focus();
- byId('outlookStatus').textContent='Opened a full browser tab for copying, since SharePoint blocks clipboard access here.';
+ byId('outlookStatus').textContent='Opened a browser tab with the email and an Open Outlook link. Copy there, then paste into Outlook and review.';
 }
 formattedCopyButton.onclick=async()=>{
  if(!selected){byId('outlookStatus').textContent='Select an email first.';return}
@@ -306,7 +343,7 @@ formattedCopyButton.onclick=async()=>{
  document.body.appendChild(temp);
  copied=browserSelectAndCopy(document,temp);
  temp.remove();
- if(copied){byId('outlookStatus').textContent='Formatted email copied. Paste into Outlook and check the images and links.';return}
+ if(copied){byId('outlookStatus').textContent='Formatted email copied. Next, choose Open Outlook (web) or Open desktop email app, click in the message and paste (Ctrl+V / Command+V). Review before sending.';return}
  copyFormattedFallback();
 };
 byId('reset').textContent='Reset';
@@ -511,7 +548,7 @@ if(leadPanel){
 
  quickTools.appendChild(leadDisclosure);
 }
-actions.after(quickTools,sendStatus,subjectLabel,emailSubject,emailPreview,plainFields,help);
+actions.after(compactHelp,quickTools,sendStatus,subjectLabel,emailSubject,emailPreview,plainFields,help);
 const editorStyle=document.createElement('style');
 editorStyle.textContent=[
  '#edit > .actions{margin:5px 0 9px!important;gap:8px!important;align-items:center}',
