@@ -135,7 +135,7 @@ choose=function(item){previousChoose(item);const blocked=!!item.requiresImport;
  pendingNote.style.display=blocked?'block':'none';
  byId('eml').disabled=blocked;
  if(blocked)byId('outlookStatus').textContent='Import the approved CES EML before exporting. The placeholder is not a sendable email.';
- if(item===cesPilot&&!blocked)byId('outlookStatus').textContent='The formatted invitation is ready. Personalize it and download your Outlook email.';
+ if(item===cesPilot&&!blocked)byId('outlookStatus').textContent='';
 };
 const imported=new Map();
 byId('richMimeImport').addEventListener('change',async event=>{
@@ -235,6 +235,55 @@ userGuidance.className='muted';
 userGuidance.style.cssText='font-size:12px;margin:6px 0 12px';
 userGuidance.textContent='Sales and PAM teams: choose an email for your customer or partner, personalize it, then download the formatted Outlook email. Check images and links before sending. Nothing sends automatically.';
 actions.after(userGuidance);
+
+// Email-first editor: prioritize actual content rather than repeating help above it.
+const emailEditor=byId('edit');
+const subjectLabel=emailEditor.querySelector('label[for="subject"]');
+const emailSubject=byId('subject');
+const emailPreview=byId('richEmail');
+const plainFields=byId('plainEmailFields');
+const sendStatus=byId('outlookStatus');
+const help=document.createElement('details');
+help.id='emailHelp';
+help.className='email-secondary';
+help.style.cssText='margin:12px 0;padding:10px 12px;border:1px solid #e4e4e7;border-radius:4px;background:#fafafa';
+const helpTitle=document.createElement('summary');
+helpTitle.textContent='Help, language and other options';
+helpTitle.style.cssText='font-size:12px;font-weight:700;cursor:pointer;color:#555';
+help.appendChild(helpTitle);
+const helpContent=document.createElement('div');
+helpContent.style.cssText='padding-top:8px';
+const notes=[...emailEditor.querySelectorAll(':scope > p.note')].filter(n=>n!==sendStatus);
+const briefIntro=emailEditor.querySelector('#templateMetadata + p.muted');
+const meta=byId('templateMetadata');
+const translation=byId('translatePanel');
+const previewNote=byId('richEmailNote');
+const leadTools=byId('jumpToLeads');
+for(const n of [meta,briefIntro,userGuidance,previewNote,translation,advanced,...notes]){
+ if(n)helpContent.appendChild(n);
+}
+help.appendChild(helpContent);
+if(leadTools)advancedButtons.prepend(leadTools);
+actions.after(sendStatus,subjectLabel,emailSubject,emailPreview,plainFields,help);
+const editorStyle=document.createElement('style');
+editorStyle.textContent=[
+ '#edit > .actions{margin:5px 0 9px!important;gap:8px!important;align-items:center}',
+ '#edit > .actions > .btn{padding:9px 12px}',
+ '#edit > .actions > .btn.primary{font-weight:700}',
+ '#outlookStatus:empty{display:none!important}',
+ '#outlookStatus:not(:empty){margin:6px 0!important;padding:6px 8px!important;font-size:12px}',
+ '#edit > label[for="subject"]{display:block;margin:8px 0 4px}',
+ '#edit > #subject{margin:0 0 8px!important}',
+ '#richEmail{margin:4px 0 8px!important}',
+ '#edit > .email-secondary{margin-top:10px}',
+ '#edit > .email-secondary .note{font-size:12px}'
+].join('\n');
+document.head.appendChild(editorStyle);
+const contribution=document.querySelector('.submission-section');
+const jump=document.querySelector('.contribute-jump');
+if(contribution&&jump)contribution.before(jump);
+if(contribution)contribution.after(hint);
+
 // For SharePoint: a compact, customer-only view, with locked recipient filter.
 const embedCustomer=new URLSearchParams(location.search).get('embed')==='customer';
 if(embedCustomer){
