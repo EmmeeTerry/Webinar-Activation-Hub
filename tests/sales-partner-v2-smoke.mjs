@@ -52,10 +52,13 @@ assert(v2.includes("['Both','Both']"),'Importer must offer Both as a publishing 
 assert(v2.includes("const CES_ID='sales-ces-2027-invitation'"),'CES pilot should appear in the hub');
 assert(v2.includes('loadCesApprovedLayout()'),'CES exact-layout loader must exist');
 assert(v2.includes("actions.after(sendStatus,subjectLabel,emailSubject,emailPreview,plainFields,help)"),'Email preview should follow compact actions and subject');
-assert(v2.includes("helpTitle.textContent='Help, language and other options'"),'Extra help is collapsed');
-assert(v2.includes("contribution.after(hint)"),'Import section must not displace email preview');
+assert(v2.includes("helpTitle.textContent='More tools and help'"),'Extra help is collapsed');
+assert(v2.includes('sidebarPanel.appendChild(hint)'),'Import control stays in the sidebar, away from email preview');
 assert(!v2.includes('cesRegistrationCode')&&!v2.includes('cesCodeWrap'),'Do not show separate registration-code form');
 assert(v2.includes("get('embed')==='customer'"),'Provide customer-only embed mode');
+assert(v2.includes("importSummary.textContent='Import an email (.eml)'"),'Visible import label must identify recommended format');
+assert(v2.includes("if(!/\\.(eml|emltpl)$/i.test(file.name))"),'Unsupported import formats must be rejected');
+assert(!v2.includes("const userGuidance=document.createElement('p')"),'Do not generate duplicate introductory instructions');
 assert(v2.includes("'More options (plain text and alternate formats)'"),'Plain text tools belong in advanced disclosure');
 assert(v2.includes("['Sales','To Customer']")&&v2.includes("['PAM','To Partner']"),'Use recipient labels');
 const cesHTML=readFileSync(new URL('../email-assets/ces-2027-invitation-approved-layout.html',import.meta.url),'utf8');
