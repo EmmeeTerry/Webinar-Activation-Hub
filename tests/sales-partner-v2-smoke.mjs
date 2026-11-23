@@ -51,6 +51,9 @@ assert(v2.includes("a==='Both'&&(v==='Sales'||v==='PAM')"),'Both audience should
 assert(v2.includes("['Both','Both']"),'Importer must offer Both as a publishing audience');
 assert(v2.includes("const CES_ID='sales-ces-2027-invitation'"),'CES pilot should appear in the hub');
 assert(v2.includes('loadCesApprovedLayout()'),'CES exact-layout loader must exist');
+assert(v2.includes("actions.after(sendStatus,subjectLabel,emailSubject,emailPreview,plainFields,help)"),'Email preview should follow compact actions and subject');
+assert(v2.includes("helpTitle.textContent='Help, language and other options'"),'Extra help is collapsed');
+assert(v2.includes("contribution.after(hint)"),'Import section must not displace email preview');
 assert(!v2.includes('cesRegistrationCode')&&!v2.includes('cesCodeWrap'),'Do not show separate registration-code form');
 assert(v2.includes("get('embed')==='customer'"),'Provide customer-only embed mode');
 assert(v2.includes("'More options (plain text and alternate formats)'"),'Plain text tools belong in advanced disclosure');
