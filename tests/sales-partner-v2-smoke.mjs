@@ -53,7 +53,7 @@ assert(v2.includes("const CES_ID='sales-ces-2027-invitation'"),'CES pilot should
 assert(v2.includes('loadCesApprovedLayout()'),'CES exact-layout loader must exist');
 assert(v2.includes("['Sales','To Customer']")&&v2.includes("['PAM','To Partner']"),'Use recipient labels');
 const cesHTML=readFileSync(new URL('../email-assets/ces-2027-invitation-approved-layout.html',import.meta.url),'utf8');
-assert.equal((cesHTML.match(/data:image\\/png;base64,/g)||[]).length,4,'Approved invitation must include four embedded images');
+assert.equal((cesHTML.match(/data:image\/png;base64,/g)||[]).length,4,'Approved invitation must include four embedded images');
 assert(cesHTML.includes('cid:')===false,'CES web preview images must be inline');
 assert(!cesHTML.includes('ECCMc3Oo'),'Do not publicly publish invitation registration code');
 assert(cesHTML.includes('[CODE]'),'Approved code should be supplied privately');
