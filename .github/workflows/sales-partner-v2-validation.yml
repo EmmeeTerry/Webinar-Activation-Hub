@@ -1,21 +1,20 @@
 name: Sales & Partner Email Hub v2 validation
+# Run once when a relevant change is proposed, not for every branch push and
+# again after merge. Manual runs remain available via Actions > Run workflow.
 on:
-  push:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
     paths:
       - 'sales-partner-v2.js'
       - 'pam-email-hub.html'
       - 'content-hub.html'
       - 'sales-partner-email-catalog.json'
+      - 'sales-partner-email-quick-start.html'
+      - 'email-assets/**'
       - 'tests/sales-partner-v2-smoke.mjs'
       - 'tests/sales-partner-e2e.mjs'
-      - '.github/workflows/sales-partner-v2-validation.yml'
-  pull_request:
-    paths:
-      - 'sales-partner-v2.js'
-      - 'pam-email-hub.html'
-      - 'content-hub.html'
-      - 'sales-partner-email-catalog.json'
-      - 'tests/sales-partner-v2-smoke.mjs'
       - '.github/workflows/sales-partner-v2-validation.yml'
 jobs:
   smoke:
