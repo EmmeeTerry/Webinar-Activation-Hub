@@ -2,7 +2,7 @@ import { chromium } from 'playwright';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 const url='http://127.0.0.1:8765/pam-email-hub.html?email=sales-ces-2027-invitation&audience=Sales';
-const browser=await chromium.launch({headless:true});
+const browser=await chromium.launch({headless:true,channel:'chrome'});
 const context=await browser.newContext({acceptDownloads:true});
 const page=await context.newPage();
 try{
