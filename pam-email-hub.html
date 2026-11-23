@@ -11,7 +11,7 @@
 <p id="outlookStatus" class="note" role="status" aria-live="polite"></p>
 
 <a href="#leadPersonalization" id="leadPersonalizationLink" style="font-size:12px;display:inline-block;margin:3px 0 8px">Personalize from a contact list</a>
-<details id="translatePanel" style="margin:6px 0 10px;padding:8px 12px;border:1px solid #dedee2;background:#fafafa"><summary style="cursor:pointer;font-weight:600;color:#444">Translate email / Language options</summary><div style="display:flex;gap:8px;flex-wrap:wrap;align-items:end;margin-top:9px"><div><label for="targetLanguage">Language</label><select id="targetLanguage" style="padding:8px;min-width:190px"><option value="en">English (original)</option><option value="es">Spanish</option><option value="pt">Portuguese</option><option value="fr">French</option><option value="de">German</option><option value="ja">Japanese</option></select></div><button class="btn" type="button" id="translateNow">Apply language</button></div><p id="translateStatus" class="muted" style="font-size:12px;margin:6px 0 0" aria-live="polite"></p><p class="muted" style="font-size:11px;margin:5px 0 0">Review names, links, incentives and program terms before sending.</p></details><label for="subject">Email subject</label><input id="subject"><iframe id="richEmail" hidden title="Formatted email editor" sandbox="allow-same-origin allow-popups allow-popups-to-escape-sandbox" style="width:100%;min-height:500px;height:700px;border:1px solid #caccd0;background:#fff;margin:12px 0"></iframe><p id="richEmailNote" class="muted" style="font-size:12px">Click in the email below to edit. Check the result in Outlook before sending.</p><div id="plainEmailFields"><label for="body">Email body — edit freely</label><textarea id="body"></textarea></div>
+<label for="subject">Email subject</label><input id="subject"><iframe id="richEmail" hidden title="Formatted email editor" sandbox="allow-same-origin allow-popups allow-popups-to-escape-sandbox" style="width:100%;min-height:500px;height:700px;border:1px solid #caccd0;background:#fff;margin:12px 0"></iframe><p id="richEmailNote" class="muted" style="font-size:12px">Click in the email below to edit. Check the result in Outlook before sending.</p><div id="plainEmailFields"><label for="body">Email body — edit freely</label><textarea id="body"></textarea></div>
 <div id="leadPersonalization" class="panel" tabindex="-1" style="padding:14px;margin:12px 0;background:#fafafa;scroll-margin-top:22px"><strong>Personalize from a lead list</strong><p class="muted">Upload a CSV file with columns such as <strong>First Name, Partner Company, Event Name*, Your Name, and Email</strong>. Use the sample file below.<br><em>*Event Name is optional (for event emails only).</em></p><div style="margin:10px 0"><button class="btn" id="csvTemplate" type="button">Download sample CSV</button></div><input type="file" id="leadFile" accept=".csv,text/csv"><label for="leadSelect">Choose recipient</label><select id="leadSelect" style="width:100%;padding:10px;border:1px solid #ccc"><option value="">No list loaded</option></select><div id="leadStatus" class="muted" role="status"></div></div>
 
 <aside style="padding:14px;margin:12px 0;border:1px solid #8993a2;border-left:5px solid #65758b;background:#f5f7fa"><strong>INTERNAL TEAM SHARING ONLY</strong><p style="margin:5px 0">Share this template with a colleague—not with external contacts.</p><button id="shareLink" class="btn">Copy internal template link</button></aside>
@@ -201,58 +201,6 @@ function linkedEmailHtml(){
 }
 function filename(){return (selected?.id||'pam-email').replace(/[^a-z0-9-]/gi,'-')}
 $('leadPersonalizationLink').onclick=e=>{e.preventDefault();$('jumpToLeads').click()};$('jumpToLeads').onclick=()=>{const target=$('leadPersonalization');target.scrollIntoView({behavior:'smooth',block:'start'});target.focus({preventScroll:true})};
-$('translateNow').onclick=async()=>{
- const btn=$('translateNow'),status=$('translateStatus'),lang=$('targetLanguage').value;
- if(lang==='en'){
-  if(englishDraft){$('subject').value=englishDraft.subject;$('body').value=englishDraft.body}
-  if(selected?.htmlBody)loadRichEmail(selected.htmlBody);
-  status.textContent='Original English subject and formatted email restored.';
-  return;
- }
- btn.disabled=true;status.textContent='Translating subject and the entire formatted email…';
- try{
-  const API=window.Translator;
-  if(!API||typeof API.create!=='function')throw Error('This browser does not provide an enabled Translator API.');
-  const available=typeof API.availability==='function'?await API.availability({sourceLanguage:'en',targetLanguage:lang}):'available';
-  if(available==='unavailable')throw Error('Translation unavailable for this language.');
-  const translator=await API.create({sourceLanguage:'en',targetLanguage:lang});
-  const originalSubject=englishDraft?.subject||selected?.subject||$('subject').value;
-  let translatedSubject=await translator.translate(originalSubject);
-  let translatedBody='';
-  let doc=null;
-  if(selected?.htmlBody){
-   const frame=$('richEmail');doc=frame.contentDocument;
-   if(!doc?.body)throw Error('The formatted email is still loading. Try again.');
-   // Return to the English source before each translation to avoid double-translation.
-   if(frame.dataset.translationLanguage){
-    await new Promise(resolve=>{frame.addEventListener('load',resolve,{once:true});loadRichEmail(selected.htmlBody)});
-    doc=frame.contentDocument;
-   }
-   const walker=doc.createTreeWalker(doc.body,NodeFilter.SHOW_TEXT);
-   const nodes=[];
-   while(walker.nextNode()){
-    const node=walker.currentNode,text=node.nodeValue||'';
-    if(text.trim()&&!node.parentElement?.closest('style,script,noscript,svg')&&!/^[\s\d\W]+$/u.test(text))nodes.push(node);
-   }
-   if(nodes.length>350)throw Error('This template contains too many text fragments to translate safely.');
-   for(let i=0;i<nodes.length;i++){
-    const text=nodes[i].nodeValue||'';
-    const translated=await translator.translate(text.trim());
-    nodes[i].nodeValue=text.slice(0,text.indexOf(text.trim()))+translated+text.slice(text.indexOf(text.trim())+text.trim().length);
-    if(i%12===0)status.textContent='Translating formatted email: '+(i+1)+' of '+nodes.length+' text sections…';
-   }
-   frame.dataset.edited='yes';frame.dataset.translationLanguage=lang;resizeRichEmail();
-   translatedBody=doc.body.innerText||'';
-  }else{
-   translatedBody=await translator.translate(englishDraft?.body||$('body').value);
-  }
-  $('subject').value=translatedSubject;
-  $('body').value=translatedBody;
-  status.textContent='Translated the subject and email text into '+$('targetLanguage').selectedOptions[0].text+'. The HTML layout and hyperlinks are retained. Review terminology before sending.';
- }catch(err){
-  status.textContent='Translation did not complete: '+String(err.message||err)+'. Keep the English version or use an approved translation service. No external translation endpoint was called.';
- }finally{btn.disabled=false}
-};
 function downloadFormattedOutlook(){
  if(!selected){$('outlookStatus').textContent='Choose an email first.';return;}
  const subject=$('subject').value.replace(/[\r\n]/g,' ').trim();
@@ -336,7 +284,7 @@ if(pmh&&/^https:\/\/(?:[a-z0-9.-]+)\//i.test(pmh)){
 }
 choose(draft);$('resourceContext').style.display='none';render();$('templateMetadata').textContent='New draft based on selected '+type+' · Customize before sending';$('title').textContent='Create partner email — '+r.title;}else{if(items.length)choose(items.find(x=>x.id===params.get('email'))||items[0]);applyFilters()}}).catch(e=>{$('emails').textContent=e.message});
 </script>
-<script src="./sales-partner-v2.js?v=20261123-10"></script>
+<script src="./sales-partner-v2.js?v=20261123-11"></script>
 <!-- Shared Global Campaigns Resource Hub footer -->
 <div class="gcrh-shared-footer" style="clear:both;position:relative;display:block;box-sizing:border-box;width:100%;max-width:1200px;margin:30px auto 16px;padding:0 12px;">
   <iframe title="Global Campaigns Resource Hub — footer" src="https://emmeeterry.github.io/Global-Campaigns-Resource-Hub/news-footer.html" loading="lazy" scrolling="no" style="display:block;width:100%;height:172px;border:0;background:#fff;" referrerpolicy="strict-origin-when-cross-origin"></iframe>
