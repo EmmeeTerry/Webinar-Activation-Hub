@@ -18,7 +18,8 @@ const editedHtml='<html><body><p>Personalized</p><img src="data:image/png;base64
 const context=vm.createContext({
   TextEncoder,TextDecoder,Uint8Array,atob,btoa,Date,
   byId:id=>id==='subject'?{value:'CES invitation pilot'}:id==='richEmail'?{dataset:{edited:wasEdited?'yes':''}}:null,
-  currentRichHtml:()=>editedHtml
+  currentRichHtml:()=>editedHtml,
+  selectedContactEmail:()=> 'alex@example.com'
 });
 vm.runInContext(mimeCore+'\n'+mimeExport+'\nglobalThis.testExports={parseMime,partBytes,decodeText,decodeHeader,exportMimeWithImages}',context);
 const {parseMime,partBytes,decodeText,decodeHeader,exportMimeWithImages}=context.testExports;
@@ -35,6 +36,7 @@ assert.deepEqual(Array.from(partBytes(sourceParts[1].body,sourceParts[1].transfe
 const item={originalHtml,htmlBody:editedHtml,embeddedImages:[{cid:'hero@test',base64:b64,dataUrl:'data:image/png;base64,'+b64,contentType:'image/png'}]};
 const exported=exportMimeWithImages(item);
 assert(exported.includes('X-Unsent: 1'),'Export must be an Outlook editable draft');
+assert(exported.includes('To: alex@example.com'),'The EML must include the chosen contact email as the recipient');
 const exportedParts=parseMime(exported);
 assert.equal(exportedParts.length,2,'Export must include image part');
 assert.equal(decodeText(exportedParts[0]),originalHtml,'Unedited export must retain original HTML verbatim');
@@ -54,11 +56,17 @@ assert(v2.includes('loadCesApprovedLayout()'),'CES exact-layout loader must exis
 assert(v2.includes("actions.after(quickTools,sendStatus,subjectLabel,emailSubject,emailPreview,plainFields,help)"),'Contact-list personalization precedes subject and email preview');
 assert(v2.includes("helpTitle.textContent='More tools and help'"),'Extra help is collapsed');
 assert(v2.includes("leadSummary.textContent='Personalize from contact list'"),'Contact-list personalization must be visible in top controls');
-assert(v2.includes("byId('copy').remove()"),'Unreliable formatted copy must be removed in embedded SharePoint');
+assert(v2.includes("formattedCopyButton.textContent='Copy formatted email'"),'Restore formatted copy UI');
+assert(v2.includes('browserSelectAndCopy'),'Copy must have a browser selection fallback');
 assert(!v2.includes("byId('copy').hidden=false"),'Do not expose blocked clipboard action');
-assert(!v2.includes("const translation=byId('translatePanel')"),'Unavailable translation must not be rendered');
+assert(v2.includes("translationDisclosure.id='translateOptions'"),'Restore translation controls with fallback');
+assert(v2.includes("worksheetDownload.onclick="),'Provide translation worksheet export');
+assert(v2.includes("uploadTranslation.onchange="),'Provide translation worksheet import');
+assert(v2.includes("applyTranslatedDocument("),'Translation must be applied inside the formatted email');
+assert(v2.includes("prepareButton.textContent='Prepare Outlook email for this contact'"),'Contact list must offer an addressed Outlook email');
 const hubCode=readFileSync(new URL('../pam-email-hub.html',import.meta.url),'utf8');
-assert(!hubCode.includes("window.Translator"),'Experimental browser translation code must be removed');
+assert(hubCode.includes("function selectedContactEmail()"),'Contact recipient helper must exist');
+assert(hubCode.includes("'To: '+selectedContactEmail()"),'Standard EML export must address the selected contact');
 assert(hubCode.includes("node.nodeValue=repl(node.nodeValue)"),'CSV personalization must update rich HTML text');
 assert(hubCode.includes("frame.dataset.edited='yes'"),'HTML personalizations must be included in exported EML');
 assert(hubCode.includes("const doc=new DOMParser().parseFromString(selected.htmlBody"),'Each selected contact should start from approved template');

@@ -177,7 +177,7 @@ function exportMimeWithImages(item){
  // For exact visual fidelity, do not add the standard navigation header/footer to imported invitations.
  const related='=_RichImages_'+Date.now();
  const utf8=new TextEncoder();
- const lines=['MIME-Version: 1.0','X-Unsent: 1','Subject: =?UTF-8?B?'+encode64(utf8.encode(subject))+'?=','Content-Type: multipart/related; boundary="'+related+'"','','--'+related,'Content-Type: text/html; charset=UTF-8','Content-Transfer-Encoding: base64','',folded64(utf8.encode(html))];
+ const lines=['MIME-Version: 1.0','X-Unsent: 1',...(selectedContactEmail()?['To: '+selectedContactEmail()]:[]),'Subject: =?UTF-8?B?'+encode64(utf8.encode(subject))+'?=','Content-Type: multipart/related; boundary="'+related+'"','','--'+related,'Content-Type: text/html; charset=UTF-8','Content-Transfer-Encoding: base64','',folded64(utf8.encode(html))];
  for(const img of item.embeddedImages){
   lines.push('--'+related,'Content-Type: '+img.contentType,'Content-Transfer-Encoding: base64','Content-ID: <'+img.cid+'>','Content-Disposition: inline','',''+(img.base64.match(/.{1,76}/g)||[]).join('\r\n'));
  }
@@ -226,9 +226,89 @@ for(const id of ['outlookWeb','defaultMail','copyEmail','word','macTemplate','ma
 advanced.append(summary,advancedButtons);
 actions.appendChild(advanced);
 byId('eml').textContent='Download formatted Outlook email';
-// Clipboard writes are blocked by SharePoint's embedded-frame permissions.
- // Remove this unreliable action; formatted EML download is the supported path.
-byId('copy').remove();
+// SharePoint iframes can block navigator.clipboard. Try an actual rich HTML
+// selection/copy before offering a full-size browser-tab fallback.
+const formattedCopyButton=byId('copy');
+formattedCopyButton.hidden=false;
+formattedCopyButton.textContent='Copy formatted email';
+formattedCopyButton.title='Copy the formatted message, or open it in a separate tab if your browser restricts copying';
+formattedCopyButton.classList.remove('primary');
+function safeRichDocument(){
+ const source=selected?.htmlBody ? (currentRichHtml()||selected.htmlBody) : linkedEmailHtml();
+ const parsed=new DOMParser().parseFromString(source,'text/html');
+ parsed.querySelectorAll('script,iframe,object,embed,form,meta[http-equiv="refresh"]').forEach(el=>el.remove());
+ parsed.querySelectorAll('*').forEach(el=>{
+  for(const attr of [...el.attributes]){
+   if(/^on/i.test(attr.name)||/^(?:javascript|data:text\/html)/i.test(attr.value.trim()) && /^(?:href|src)$/i.test(attr.name))el.removeAttribute(attr.name);
+  }
+ });
+ return parsed;
+}
+function browserSelectAndCopy(documentRef,node){
+ const range=documentRef.createRange();range.selectNodeContents(node);
+ const selection=documentRef.defaultView.getSelection();
+ selection.removeAllRanges();selection.addRange(range);
+ let success=false;
+ try{success=!!documentRef.execCommand('copy')}catch{}
+ selection.removeAllRanges();
+ return success;
+}
+function copyFormattedFallback(){
+ const doc=safeRichDocument();
+ const html=doc.documentElement.outerHTML;
+ const popup=window.open('','_blank');
+ if(!popup){
+  const richFrame=byId('richEmail');
+  try{
+   const richDoc=richFrame.contentDocument;
+   const range=richDoc.createRange();range.selectNodeContents(richDoc.body);
+   const selection=richFrame.contentWindow.getSelection();
+   selection.removeAllRanges();selection.addRange(range);
+   richFrame.contentWindow.focus();
+   byId('outlookStatus').textContent='Email selected. Press Ctrl+C on Windows or Command+C on Mac, then paste into Outlook.';
+  }catch{
+   byId('outlookStatus').textContent='SharePoint prevented copying. Download the formatted Outlook email instead.';
+  }
+  return;
+ }
+ popup.document.open();popup.document.write(html);popup.document.close();
+ const bar=popup.document.createElement('div');
+ bar.style.cssText='position:sticky;top:0;z-index:9999;background:#fff;color:#222;padding:12px;border-bottom:2px solid #d20000;font:14px Arial';
+ const copy=popup.document.createElement('button');
+ copy.textContent='Copy email';
+ copy.style.cssText='background:#c00;color:#fff;border:0;padding:10px 14px;font-weight:700;cursor:pointer;margin-right:12px';
+ const info=popup.document.createElement('span');
+ info.textContent='If copying is blocked, select the email below and press Ctrl+C (Windows) or Command+C (Mac).';
+ bar.append(copy,info);
+ const wrapper=popup.document.createElement('div');
+ wrapper.style.cssText='padding:12px;max-width:1000px;margin:0 auto';
+ const original=[...popup.document.body.childNodes];
+ original.forEach(n=>wrapper.appendChild(n));
+ popup.document.body.append(bar,wrapper);
+ copy.onclick=()=>{
+  if(browserSelectAndCopy(popup.document,wrapper))info.textContent='Copied. Paste into an Outlook message and check the images.';
+  else{const range=popup.document.createRange();range.selectNodeContents(wrapper);popup.getSelection().removeAllRanges();popup.getSelection().addRange(range);info.textContent='Email selected. Press Ctrl+C or Command+C, then paste into Outlook.';}
+ };
+ popup.focus();
+ byId('outlookStatus').textContent='Opened a full browser tab for copying, since SharePoint blocks clipboard access here.';
+}
+formattedCopyButton.onclick=async()=>{
+ if(!selected){byId('outlookStatus').textContent='Select an email first.';return}
+ const doc=safeRichDocument();
+ const html=doc.documentElement.outerHTML;
+ let copied=false;
+ // execCommand is a synchronous copy method that may still be allowed where the
+ // asynchronous Clipboard API is blocked by an embedding permissions policy.
+ const temp=document.createElement('div');
+ temp.contentEditable='true';
+ temp.style.cssText='position:fixed;left:-10000px;top:0;opacity:0;pointer-events:none';
+ temp.innerHTML=doc.body.innerHTML;
+ document.body.appendChild(temp);
+ copied=browserSelectAndCopy(document,temp);
+ temp.remove();
+ if(copied){byId('outlookStatus').textContent='Formatted email copied. Paste into Outlook and check the images and links.';return}
+ copyFormattedFallback();
+};
 byId('reset').textContent='Reset';
 // Email-first editor: prioritize actual content rather than repeating help above it.
 const emailEditor=byId('edit');
@@ -258,9 +338,136 @@ for(const n of [meta,briefIntro,previewNote,advanced,...notes])if(n)helpContent.
 if(leadAnchor)leadAnchor.remove();
 if(leadTools)leadTools.remove();
 help.appendChild(helpContent);
+
+function translationNodes(doc){
+ const walker=doc.createTreeWalker(doc.body,NodeFilter.SHOW_TEXT);
+ const found=[];let node;
+ while((node=walker.nextNode())){
+  const value=node.nodeValue||'';
+  if(!value.trim()||!/[A-Za-z]/.test(value)||node.parentElement?.closest('script,style,noscript,svg'))continue;
+  found.push(node);
+ }
+ return found;
+}
+function translationDocument(){
+ const html=selected?.htmlBody?(currentRichHtml()||selected.htmlBody):linkedEmailHtml();
+ return new DOMParser().parseFromString(html,'text/html');
+}
+function applyTranslatedDocument(doc,subject,info){
+ if(!doc?.body)return;
+ const html='<!doctype html><html><head>'+doc.head.innerHTML+'</head>'+doc.body.outerHTML+'</html>';
+ byId('subject').value=subject;
+ loadRichEmail(html);
+ byId('richEmail').addEventListener('load',()=>{
+  byId('richEmail').dataset.edited='yes';
+  resizeRichEmail();
+ },{once:true});
+ if(!selected?.htmlBody){byId('body').value=doc.body.textContent||''}
+ info.textContent='Translation applied to the editable draft. Review all wording, buttons, dates and links before sending.';
+}
+const translationDisclosure=document.createElement('details');
+translationDisclosure.id='translateOptions';
+translationDisclosure.style.cssText='flex:1 1 240px;margin:0;padding:8px 10px;border:1px solid #dedee2;border-radius:4px;background:#fafafa';
+const translateSummary=document.createElement('summary');
+translateSummary.textContent='Translate';
+translateSummary.style.cssText='font-weight:600;cursor:pointer';
+translationDisclosure.appendChild(translateSummary);
+const translationControls=document.createElement('div');
+translationControls.style.cssText='padding:8px 0 0;font-size:12px';
+const language=document.createElement('select');
+language.id='translationLanguage';language.setAttribute('aria-label','Translation language');
+language.style.cssText='padding:7px;max-width:155px;margin:0 6px 5px 0';
+[['es','Spanish'],['pt','Portuguese'],['fr','French'],['de','German'],['ja','Japanese']].forEach(([id,name])=>language.add(new Option(name,id)));
+const nativeTranslate=document.createElement('button');
+nativeTranslate.className='btn';nativeTranslate.type='button';nativeTranslate.textContent='Translate in browser';
+const translationText=document.createElement('p');
+translationText.id='translationInstructions';translationText.className='muted';
+translationText.style.cssText='font-size:12px;margin:6px 0';
+translationText.textContent='Translate in your browser if available, or use the approved translation worksheet below.';
+const worksheetDownload=document.createElement('button');
+worksheetDownload.className='btn';worksheetDownload.type='button';worksheetDownload.textContent='Download translation worksheet';
+const uploadTranslation=document.createElement('input');
+uploadTranslation.type='file';uploadTranslation.accept='.csv,text/csv';
+uploadTranslation.id='translatedWorksheet';
+uploadTranslation.setAttribute('aria-label','Upload completed translated CSV worksheet');
+uploadTranslation.style.cssText='display:block;max-width:100%;font-size:12px;margin:8px 0';
+const translationStatus=document.createElement('p');
+translationStatus.id='translateStatus';translationStatus.setAttribute('role','status');
+translationStatus.style.cssText='margin:5px 0;font-size:12px';
+translationControls.append(language,nativeTranslate,translationText,worksheetDownload,uploadTranslation,translationStatus);
+translationDisclosure.appendChild(translationControls);
+let translationBase=null;
+function worksheetSource(){
+ const doc=translationDocument();
+ return {doc,subject:byId('subject').value,segments:translationNodes(doc)};
+}
+function csvCell(v){return '"'+String(v??'').replace(/"/g,'""')+'"'}
+worksheetDownload.onclick=()=>{
+ if(!selected){translationStatus.textContent='Choose an email first.';return}
+ translationBase=worksheetSource();
+ const lines=[['ID','Original','Translation'],['SUBJECT',translationBase.subject,'']];
+ translationBase.segments.forEach((node,i)=>lines.push(['TEXT'+String(i+1).padStart(4,'0'),node.nodeValue.trim(),'']));
+ const csv=lines.map(row=>row.map(csvCell).join(',')).join('\r\n');
+ download('\uFEFF'+csv,filename()+'-translation.csv','text/csv;charset=utf-8');
+ translationStatus.textContent='Fill the Translation column in the CSV, keeping the ID column unchanged, then upload the completed worksheet here.';
+};
+uploadTranslation.onchange=async e=>{
+ const file=e.target.files?.[0];if(!file)return;
+ try{
+  if(file.size>1e6)throw Error('Use a translation worksheet smaller than 1 MB.');
+  const rows=csvParse((await file.text()).replace(/^\uFEFF/,''));
+  if(rows.length<2||rows[0].map(v=>v.trim().toLowerCase()).join(',')!=='id,original,translation')throw Error('Use the translation worksheet downloaded from this Hub.');
+  const base=translationBase||worksheetSource();
+  const expected=base.segments.length+1;
+  if(rows.length-1!==expected)throw Error('The worksheet does not match this email. Download a new worksheet.');
+  const map=new Map(rows.slice(1).map(row=>[row[0],row[2]]));
+  if(map.size!==expected||![...map.values()].every(x=>x&&x.trim()))throw Error('Complete every Translation cell before uploading.');
+  if(!map.has('SUBJECT'))throw Error('Missing SUBJECT translation row.');
+  base.segments.forEach((node,i)=>{
+   const id='TEXT'+String(i+1).padStart(4,'0');
+   const translation=map.get(id);
+   if(!translation)throw Error('Missing '+id+' translation row.');
+   const original=node.nodeValue,trimmed=original.trim();
+   node.nodeValue=original.slice(0,original.indexOf(trimmed))+translation+original.slice(original.indexOf(trimmed)+trimmed.length);
+  });
+  applyTranslatedDocument(base.doc,map.get('SUBJECT'),translationStatus);
+  translationBase=null;
+ }catch(err){translationStatus.textContent=String(err.message||err)}
+ e.target.value='';
+};
+nativeTranslate.onclick=async()=>{
+ if(!selected){translationStatus.textContent='Choose an email first.';return}
+ const TranslatorApi=window.Translator;
+ if(!TranslatorApi?.create){
+  translationStatus.textContent='Browser translation is unavailable. Download the worksheet, have it translated using an approved tool, and upload it here.';
+  return;
+ }
+ nativeTranslate.disabled=true;
+ try{
+  const code=language.value;
+  if(typeof TranslatorApi.availability==='function'){
+   const state=await TranslatorApi.availability({sourceLanguage:'en',targetLanguage:code});
+   if(state==='unavailable')throw Error('This browser does not have a usable language model for '+language.selectedOptions[0].text+'. Use the worksheet instead.');
+  }
+  translationStatus.textContent='Translating; this may download a language model the first time…';
+  const translator=await TranslatorApi.create({sourceLanguage:'en',targetLanguage:code});
+  const data=worksheetSource();
+  const translatedSubject=await translator.translate(data.subject);
+  for(let i=0;i<data.segments.length;i++){
+   const node=data.segments[i],source=node.nodeValue,trimmed=source.trim();
+   const replacement=await translator.translate(trimmed);
+   node.nodeValue=source.slice(0,source.indexOf(trimmed))+replacement+source.slice(source.indexOf(trimmed)+trimmed.length);
+   if(i%8===0)translationStatus.textContent='Translating '+(i+1)+' of '+data.segments.length+' text sections…';
+  }
+  applyTranslatedDocument(data.doc,translatedSubject,translationStatus);
+ }catch(e){translationStatus.textContent='Browser translation could not finish: '+String(e.message||e)+' Use the translation worksheet instead.'}
+ finally{nativeTranslate.disabled=false}
+};
+
 const quickTools=document.createElement('div');
 quickTools.id='personalizationTools';
 quickTools.style.cssText='display:flex;align-items:flex-start;gap:8px;flex-wrap:wrap;margin:0 0 9px';
+quickTools.appendChild(translationDisclosure);
 if(leadPanel){
  const leadDisclosure=document.createElement('details');
  leadDisclosure.id='contactPersonalizeOptions';
@@ -275,6 +482,33 @@ if(leadPanel){
  const leadButton=byId('csvTemplate');
  if(leadButton)leadButton.textContent='Download sample CSV';
  leadDisclosure.appendChild(leadPanel);
+
+ const prepareRow=document.createElement('div');
+ prepareRow.style.cssText='margin:9px 0 0;display:flex;gap:7px;align-items:center;flex-wrap:wrap';
+ const prepareButton=document.createElement('button');
+ prepareButton.type='button';prepareButton.id='prepareContactEmail';prepareButton.className='btn primary';
+ prepareButton.textContent='Prepare Outlook email for this contact';
+ const recipientInfo=document.createElement('span');
+ recipientInfo.id='recipientDraftInfo';recipientInfo.className='muted';
+ recipientInfo.style.cssText='font-size:12px';
+ prepareRow.append(prepareButton,recipientInfo);
+ leadPanel.appendChild(prepareRow);
+ const refreshRecipient=()=>{
+  const value=byId('leadSelect').value;
+  const contact=value===''?null:leads[Number(value)];
+  prepareButton.disabled=!contact||!selectedContactEmail();
+  recipientInfo.textContent=contact?(selectedContactEmail()?'To: '+selectedContactEmail():'Missing valid Email in CSV'):'Select one contact first';
+ };
+ leadPanel.querySelector('#leadSelect').addEventListener('change',refreshRecipient);
+ leadPanel.querySelector('#leadFile').addEventListener('change',()=>{prepareButton.disabled=true;recipientInfo.textContent='Choose a contact after loading the file';});
+ prepareButton.disabled=true;
+ prepareButton.onclick=()=>{
+  const destination=selectedContactEmail();
+  if(!destination){byId('leadStatus').textContent='Select a contact with a valid Email address in your CSV.';return}
+  downloadFormattedOutlook();
+  byId('leadStatus').textContent='Prepared an Outlook email addressed to '+destination+'. Open the downloaded draft, review the layout and recipient, then click Send in Outlook.';
+ };
+
  quickTools.appendChild(leadDisclosure);
 }
 actions.after(quickTools,sendStatus,subjectLabel,emailSubject,emailPreview,plainFields,help);
