@@ -499,8 +499,8 @@ if(leadPanel){
   prepareButton.disabled=!contact||!selectedContactEmail();
   recipientInfo.textContent=contact?(selectedContactEmail()?'To: '+selectedContactEmail():'Missing valid Email in CSV'):'Select one contact first';
  };
- byId('leadSelect').addEventListener('change',refreshRecipient);
- byId('leadFile').addEventListener('change',()=>{prepareButton.disabled=true;recipientInfo.textContent='Choose a contact after loading the file';});
+ leadPanel.querySelector('#leadSelect').addEventListener('change',refreshRecipient);
+ leadPanel.querySelector('#leadFile').addEventListener('change',()=>{prepareButton.disabled=true;recipientInfo.textContent='Choose a contact after loading the file';});
  prepareButton.disabled=true;
  prepareButton.onclick=()=>{
   const destination=selectedContactEmail();
