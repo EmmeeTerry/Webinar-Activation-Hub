@@ -57,8 +57,8 @@ assert(v2.includes("leadSummary.textContent='Personalize from contact list'"),'C
 assert(v2.includes("byId('copy').remove()"),'Unreliable formatted copy must be removed in embedded SharePoint');
 assert(!v2.includes("byId('copy').hidden=false"),'Do not expose blocked clipboard action');
 assert(!v2.includes("const translation=byId('translatePanel')"),'Unavailable translation must not be rendered');
-assert(!hubCode.includes("window.Translator"),'Experimental browser translation code must be removed');
 const hubCode=readFileSync(new URL('../pam-email-hub.html',import.meta.url),'utf8');
+assert(!hubCode.includes("window.Translator"),'Experimental browser translation code must be removed');
 assert(hubCode.includes("node.nodeValue=repl(node.nodeValue)"),'CSV personalization must update rich HTML text');
 assert(hubCode.includes("frame.dataset.edited='yes'"),'HTML personalizations must be included in exported EML');
 assert(hubCode.includes("const doc=new DOMParser().parseFromString(selected.htmlBody"),'Each selected contact should start from approved template');
