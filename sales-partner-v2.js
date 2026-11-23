@@ -7,13 +7,14 @@ const originalMatches=matches,originalExport=downloadFormattedOutlook;
 const audienceOf=item=>item.audience || (item.id==='resource-draft'?'Both':'PAM');
 const showAudience=item=>{
  const v=byId('audienceFilter')?.value||'All';
- return v==='All'||audienceOf(item)==='Both'||audienceOf(item)===v;
+ const a=audienceOf(item);
+ return v==='All'||a===v||a==='Both'&&(v==='Sales'||v==='PAM');
 };
 matches=function(){return originalMatches().filter(showAudience)};
 const sidebar=byId('categoryFilter');
 const label=document.createElement('label');label.htmlFor='audienceFilter';label.textContent='Audience';
 const filter=document.createElement('select');filter.id='audienceFilter';filter.className='search';
-[['All','All audiences'],['Sales','Sales'],['PAM','PAMs'],['Both','Both audiences']].forEach(([value,name])=>filter.add(new Option(name,value)));
+[['All','All emails'],['Sales','Customers (Sales)'],['PAM','Partners (PAMs)'],['Both','Both audiences only']].forEach(([value,name])=>filter.add(new Option(name,value)));
 sidebar.parentElement.insertBefore(label,sidebar);
 sidebar.parentElement.insertBefore(filter,sidebar);
 filter.addEventListener('change',applyFilters);
@@ -26,6 +27,10 @@ const editorLabel=document.querySelector('.editor .kicker');if(editorLabel)edito
 const hint=document.createElement('section');hint.className='panel';hint.style.cssText='margin:0 0 14px;padding:13px 17px;background:#fff';
 hint.innerHTML='<strong>Rich-format invitations</strong><p class="muted" style="margin:5px 0">Pilot: Hitachi at CES 2027. Import the approved .EML or .EMLTPL from your computer to preview, personalize, and export an Outlook draft with its embedded images intact. The file remains on your device and is not published in this public repository.</p><label for="richMimeImport" class="btn primary" style="display:inline-block;cursor:pointer">Import branded invitation (.eml / .emltpl)</label><input id="richMimeImport" type="file" accept=".eml,.emltpl,message/rfc822" style="position:absolute;width:1px;height:1px;opacity:0"><p id="richMimeStatus" class="muted" role="status" style="margin:8px 0 0"></p>';
 document.querySelector('main').insertBefore(hint,document.querySelector('.layout'));
+const audienceLabel=document.createElement('label');audienceLabel.htmlFor='importAudience';audienceLabel.textContent='Who can use this email?';audienceLabel.style.cssText='display:block;margin-top:14px;font-weight:700';
+const importAudience=document.createElement('select');importAudience.id='importAudience';importAudience.style.cssText='display:block;padding:9px;margin:6px 0 10px;border:1px solid #aaa;max-width:260px;width:100%';
+[['Sales','Customers / Sales'],['PAM','Partners / PAMs'],['Both','Both: Customers and Partners']].forEach(([value,name])=>importAudience.add(new Option(name,value)));
+hint.append(audienceLabel,importAudience);
 const resourceJump=document.createElement('p');resourceJump.className='muted';resourceJump.style.cssText='margin:6px 0;font-size:12px';
 resourceJump.innerHTML='<a href="./content-hub.html" target="_blank" rel="noopener noreferrer">Browse the Content Library</a> for assets to share. Approved email templates can also be opened directly with <code>?email=template-id</code>.';
 hint.append(resourceJump);
@@ -81,7 +86,7 @@ const cesPilot={
  objective:'Customer and prospect invitation',status:'Import approved .EML to activate',
  addedDate:'2026-11-23',requiresImport:true
 };
-items.unshift(cesPilot);
+window.__CES_PILOT__=cesPilot;
 const importAction=document.createElement('button');
 importAction.type='button';importAction.className='btn primary';
 importAction.id='importSelectedInvitation';
@@ -124,9 +129,10 @@ byId('richMimeImport').addEventListener('change',async event=>{
   for(const im of images)preview=preview.replaceAll('cid:'+im.cid,im.dataUrl);
   preview=fullPreservedEmail(preview); // safe preview, while exact original HTML is kept for export
   const subject=decodeHeader(header(first,'Subject'))||'Branded email invitation';
-  const isCES=/\bCES\s*2027\b/i.test(subject);\n  const item={id:isCES?CES_ID:'imported-rich-'+Date.now(),title:isCES?cesPilot.title:subject,subject,body:(parts.find(p=>/^text\/plain\b/i.test(p.contentType))?decodeText(parts.find(p=>/^text\/plain\b/i.test(p.contentType))):'').trim(),htmlBody:preview,category:'Event Invitation',region:'Global',audience:'Sales',objective:'Event invitation',status:'Branded invitation loaded locally',addedDate:new Date().toISOString(),embeddedImages:images,originalHtml};
+  const isCES=/\bCES\s*2027\b/i.test(subject);
+  const item={id:isCES?CES_ID:'imported-rich-'+Date.now(),title:isCES?cesPilot.title:subject,subject,body:(parts.find(p=>/^text\/plain\b/i.test(p.contentType))?decodeText(parts.find(p=>/^text\/plain\b/i.test(p.contentType))):'').trim(),htmlBody:preview,category:'Event Invitation',region:'Global',audience:byId('importAudience').value,objective:'Event invitation',status:'Branded invitation loaded locally',addedDate:new Date().toISOString(),embeddedImages:images,originalHtml};
   imported.set(item.id,item);const oldIndex=items.findIndex(x=>x.id===item.id);if(oldIndex>=0)items.splice(oldIndex,1);items.unshift(item);choose(item);
-  filter.value='Sales';byId('categoryFilter').value='';byId('regionFilter').value='';byId('search').value='';render();
+  filter.value=item.audience==='Both'?'All':item.audience;byId('categoryFilter').value='';byId('regionFilter').value='';byId('search').value='';render();
   status.textContent='Imported '+file.name+' with '+images.length+' embedded image(s). Review the preview and links, then export the formatted .EML. This template is available only in this browser session.';
  }catch(e){status.textContent='Could not import invitation: '+String(e.message||e)}
  event.target.value='';
