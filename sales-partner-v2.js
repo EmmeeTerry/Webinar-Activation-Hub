@@ -193,6 +193,17 @@ downloadFormattedOutlook=function(){
 byId('eml').onclick=()=>downloadFormattedOutlook();
 byId('richMimeImport').setAttribute('aria-label','Import a formatted EML or EMLTPL invitation');
 
+// Import is optional; keep it out of the main template-selection experience.
+const importDisclosure=document.createElement('details');
+importDisclosure.id='importEmailDisclosure';
+const importSummary=document.createElement('summary');
+importSummary.textContent='Import another formatted invitation';
+importSummary.style.cssText='cursor:pointer;font-weight:700;color:#a00';
+while(hint.firstChild)importDisclosure.appendChild(hint.firstChild);
+importDisclosure.prepend(importSummary);
+hint.appendChild(importDisclosure);
+hint.style.cssText='margin:0 0 12px;padding:11px 15px;background:#fff';
+
 // Keep the main actions simple. Plain-text and compatibility exports remain available
 // under a collapsed menu rather than next to the recommended formatted actions.
 const actions=byId('eml').closest('.actions');
