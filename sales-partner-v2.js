@@ -28,7 +28,7 @@ const eyebrow=document.querySelector('header .eyebrow');if(eyebrow)eyebrow.textC
 const editorLabel=document.querySelector('.editor .kicker');if(editorLabel)editorLabel.textContent='CUSTOMER & PARTNER OUTREACH';
 const guideLink=document.createElement('a');guideLink.href='./sales-partner-email-quick-start.html';guideLink.textContent='How to use this Hub';guideLink.target='_blank';guideLink.rel='noopener noreferrer';guideLink.className='header-text-link';const navLinks=document.querySelector('header .head-actions');if(navLinks)navLinks.prepend(guideLink);
 const hint=document.createElement('section');hint.className='panel';hint.style.cssText='margin:0 0 14px;padding:13px 17px;background:#fff';
-hint.innerHTML='<strong>Bring your own approved email</strong><p class="muted" style="margin:5px 0">Already have a branded invitation? Import it to personalize and prepare a formatted Outlook email.</p><label for="richMimeImport" class="btn" style="display:inline-block;cursor:pointer">Import formatted invitation</label><input id="richMimeImport" type="file" accept=".eml,.emltpl,message/rfc822" style="position:absolute;width:1px;height:1px;opacity:0"><p id="richMimeStatus" class="muted" role="status" style="margin:8px 0 0"></p>';
+hint.innerHTML='<p class="muted" style="margin:0 0 8px">Choose an Outlook email file: <strong>.eml (recommended)</strong>. An <strong>.emltpl</strong> may work if it contains standard email data. Files such as .oft, .msg, Word and PDF are not supported.</p><label for="richMimeImport" class="btn" style="display:inline-block;cursor:pointer">Choose .eml file</label><input id="richMimeImport" type="file" accept=".eml,.emltpl,message/rfc822" style="position:absolute;width:1px;height:1px;opacity:0"><p class="muted" style="margin:6px 0 0;font-size:12px">Include images when saving the email. Imported files are available only during this session; they are not automatically added to the shared library.</p><p id="richMimeStatus" class="muted" role="status" style="margin:8px 0 0"></p>';
 document.querySelector('main').insertBefore(hint,document.querySelector('.layout'));
 const audienceLabel=document.createElement('label');audienceLabel.htmlFor='importAudience';audienceLabel.textContent='Send this email to';audienceLabel.style.cssText='display:block;margin-top:14px;font-weight:700';
 const importAudience=document.createElement('select');importAudience.id='importAudience';importAudience.style.cssText='display:block;padding:9px;margin:6px 0 10px;border:1px solid #aaa;max-width:260px;width:100%';
@@ -142,14 +142,15 @@ byId('richMimeImport').addEventListener('change',async event=>{
  const status=byId('richMimeStatus');
  const file=event.target.files?.[0];if(!file)return;
  try{
-  if(file.size>8*1024*1024)throw Error('The file must be 8 MB or smaller.');
+  if(file.size>8*1024*1024)throw Error('Please choose a file smaller than 8 MB.');
+  if(!/\.(eml|emltpl)$/i.test(file.name))throw Error('Use an Outlook email file (.eml). Word, PDF, .msg and .oft files cannot be imported.');
   // Latin-1 conversion preserves each byte while MIME parts are parsed.
   const bytes=new Uint8Array(await file.arrayBuffer());
   const raw=Array.from({length:Math.ceil(bytes.length/8192)},(_,k)=>String.fromCharCode(...bytes.slice(k*8192,(k+1)*8192))).join('');
   const first=raw.split(/\r?\n\r?\n/,1)[0].replace(/\r\n/g,'\n');
   const parts=parseMime(raw);
   const htmlPart=parts.find(p=>/^text\/html\b/i.test(p.contentType));
-  if(!htmlPart)throw Error('No HTML invitation was found inside this email.');
+  if(!htmlPart)throw Error('This file does not contain a formatted email. Save or export the original email as .eml, including its images, then try again.');
   const originalHtml=decodeText(htmlPart);
   const images=parts.filter(p=>/^image\/(png|jpeg|gif|webp)\b/i.test(p.contentType)&&p.cid).map(p=>{
    const contentType=p.contentType.split(';')[0].trim().toLowerCase();
@@ -198,12 +199,12 @@ byId('richMimeImport').setAttribute('aria-label','Import a formatted EML or EMLT
 const importDisclosure=document.createElement('details');
 importDisclosure.id='importEmailDisclosure';
 const importSummary=document.createElement('summary');
-importSummary.textContent='Import another formatted invitation';
+importSummary.textContent='Import an email (.eml)';
 importSummary.style.cssText='cursor:pointer;font-weight:700;color:#a00';
 while(hint.firstChild)importDisclosure.appendChild(hint.firstChild);
 importDisclosure.prepend(importSummary);
 hint.appendChild(importDisclosure);
-hint.style.cssText='margin:0 0 12px;padding:11px 15px;background:#fff';
+hint.style.cssText='margin:12px 0 0;padding:10px;background:#fff';
 
 // Keep the main actions simple. Plain-text and compatibility exports remain available
 // under a collapsed menu rather than next to the recommended formatted actions.
@@ -230,12 +231,6 @@ byId('copy').textContent='Copy formatted email';
 byId('copy').title='Paste into Outlook, then check images and spacing before sending';
 byId('copy').classList.remove('primary');
 byId('reset').textContent='Reset';
-const userGuidance=document.createElement('p');
-userGuidance.className='muted';
-userGuidance.style.cssText='font-size:12px;margin:6px 0 12px';
-userGuidance.textContent='Sales and PAM teams: choose an email for your customer or partner, personalize it, then download the formatted Outlook email. Check images and links before sending. Nothing sends automatically.';
-actions.after(userGuidance);
-
 // Email-first editor: prioritize actual content rather than repeating help above it.
 const emailEditor=byId('edit');
 const subjectLabel=emailEditor.querySelector('label[for="subject"]');
@@ -248,7 +243,7 @@ help.id='emailHelp';
 help.className='email-secondary';
 help.style.cssText='margin:12px 0;padding:10px 12px;border:1px solid #e4e4e7;border-radius:4px;background:#fafafa';
 const helpTitle=document.createElement('summary');
-helpTitle.textContent='Help, language and other options';
+helpTitle.textContent='More tools and help';
 helpTitle.style.cssText='font-size:12px;font-weight:700;cursor:pointer;color:#555';
 help.appendChild(helpTitle);
 const helpContent=document.createElement('div');
@@ -259,7 +254,8 @@ const meta=byId('templateMetadata');
 const translation=byId('translatePanel');
 const previewNote=byId('richEmailNote');
 const leadTools=byId('jumpToLeads');
-for(const n of [meta,briefIntro,userGuidance,previewNote,translation,advanced,...notes]){
+const leadAnchor=byId('leadPersonalizationLink');
+for(const n of [meta,briefIntro,previewNote,leadAnchor,translation,advanced,...notes]){
  if(n)helpContent.appendChild(n);
 }
 help.appendChild(helpContent);
@@ -282,7 +278,8 @@ document.head.appendChild(editorStyle);
 const contribution=document.querySelector('.submission-section');
 const jump=document.querySelector('.contribute-jump');
 if(contribution&&jump)contribution.before(jump);
-if(contribution)contribution.after(hint);
+const sidebarPanel=document.querySelector('.layout > aside');
+if(sidebarPanel)sidebarPanel.appendChild(hint);
 
 // For SharePoint: a compact, customer-only view, with locked recipient filter.
 const embedCustomer=new URLSearchParams(location.search).get('embed')==='customer';
