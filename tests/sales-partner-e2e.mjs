@@ -54,6 +54,16 @@ try{
  await page.locator('#copy').click();
  await page.waitForFunction(()=>/copied|selected|Opened a full browser tab/i.test(document.querySelector('#outlookStatus')?.textContent||''),{timeout:15000});
  console.log('PASS: formatted copy confirms a copy or usable fallback');
+ const webOpen=page.locator('#openOutlookWeb');
+ const desktopOpen=page.locator('#openDesktopEmail');
+ assert(await webOpen.isVisible(),'Open Outlook web action should be visible beside Copy');
+ assert(await desktopOpen.isVisible(),'Open default desktop email app should be visible');
+ assert((await webOpen.getAttribute('href')).startsWith('https://outlook.office.com/mail/deeplink/compose?subject='));
+ assert((await desktopOpen.getAttribute('href')).startsWith('mailto:?subject='));
+ await page.locator('#subject').fill('Personalized CES invitation');
+ assert((await webOpen.getAttribute('href')).includes('Personalized%20CES%20invitation'),'Outlook link should follow edited subject');
+ console.log('PASS: Outlook web and desktop compose links are visible and use the edited subject');
+
  // Simulate a SharePoint-like sandbox that does not grant popup or clipboard
  // permissions. Users must still get a selectable email rather than an error.
  const embedded=await context.newPage();
