@@ -226,9 +226,76 @@ for(const id of ['outlookWeb','defaultMail','copyEmail','word','macTemplate','ma
 advanced.append(summary,advancedButtons);
 actions.appendChild(advanced);
 byId('eml').textContent='Download formatted Outlook email';
-// Clipboard writes are blocked by SharePoint's embedded-frame permissions.
- // Remove this unreliable action; formatted EML download is the supported path.
-byId('copy').remove();
+// SharePoint iframes can block navigator.clipboard. Try an actual rich HTML
+// selection/copy before offering a full-size browser-tab fallback.
+const formattedCopyButton=byId('copy');
+formattedCopyButton.hidden=false;
+formattedCopyButton.textContent='Copy formatted email';
+formattedCopyButton.title='Copy the formatted message, or open it in a separate tab if your browser restricts copying';
+formattedCopyButton.classList.remove('primary');
+function safeRichDocument(){
+ const source=selected?.htmlBody ? (currentRichHtml()||selected.htmlBody) : linkedEmailHtml();
+ const parsed=new DOMParser().parseFromString(source,'text/html');
+ parsed.querySelectorAll('script,iframe,object,embed,form,meta[http-equiv="refresh"]').forEach(el=>el.remove());
+ parsed.querySelectorAll('*').forEach(el=>{
+  for(const attr of [...el.attributes]){
+   if(/^on/i.test(attr.name)||/^(?:javascript|data:text\/html)/i.test(attr.value.trim()) && /^(?:href|src)$/i.test(attr.name))el.removeAttribute(attr.name);
+  }
+ });
+ return parsed;
+}
+function browserSelectAndCopy(documentRef,node){
+ const range=documentRef.createRange();range.selectNodeContents(node);
+ const selection=documentRef.defaultView.getSelection();
+ selection.removeAllRanges();selection.addRange(range);
+ let success=false;
+ try{success=!!documentRef.execCommand('copy')}catch{}
+ selection.removeAllRanges();
+ return success;
+}
+function copyFormattedFallback(){
+ const doc=safeRichDocument();
+ const html=doc.documentElement.outerHTML;
+ const popup=window.open('','_blank');
+ if(!popup){byId('outlookStatus').textContent='Your browser blocked the new tab. Use Download formatted Outlook email instead.';return}
+ popup.document.open();popup.document.write(html);popup.document.close();
+ const bar=popup.document.createElement('div');
+ bar.style.cssText='position:sticky;top:0;z-index:9999;background:#fff;color:#222;padding:12px;border-bottom:2px solid #d20000;font:14px Arial';
+ const copy=popup.document.createElement('button');
+ copy.textContent='Copy email';
+ copy.style.cssText='background:#c00;color:#fff;border:0;padding:10px 14px;font-weight:700;cursor:pointer;margin-right:12px';
+ const info=popup.document.createElement('span');
+ info.textContent='If copying is blocked, select the email below and press Ctrl+C (Windows) or Command+C (Mac).';
+ bar.append(copy,info);
+ const wrapper=popup.document.createElement('div');
+ wrapper.style.cssText='padding:12px;max-width:1000px;margin:0 auto';
+ const original=[...popup.document.body.childNodes];
+ original.forEach(n=>wrapper.appendChild(n));
+ popup.document.body.append(bar,wrapper);
+ copy.onclick=()=>{
+  if(browserSelectAndCopy(popup.document,wrapper))info.textContent='Copied. Paste into an Outlook message and check the images.';
+  else{const range=popup.document.createRange();range.selectNodeContents(wrapper);popup.getSelection().removeAllRanges();popup.getSelection().addRange(range);info.textContent='Email selected. Press Ctrl+C or Command+C, then paste into Outlook.';}
+ };
+ popup.focus();
+ byId('outlookStatus').textContent='Opened a full browser tab for copying, since SharePoint blocks clipboard access here.';
+}
+formattedCopyButton.onclick=async()=>{
+ if(!selected){byId('outlookStatus').textContent='Select an email first.';return}
+ const doc=safeRichDocument();
+ const html=doc.documentElement.outerHTML;
+ let copied=false;
+ // execCommand is a synchronous copy method that may still be allowed where the
+ // asynchronous Clipboard API is blocked by an embedding permissions policy.
+ const temp=document.createElement('div');
+ temp.contentEditable='true';
+ temp.style.cssText='position:fixed;left:-10000px;top:0;opacity:0;pointer-events:none';
+ temp.innerHTML=doc.body.innerHTML;
+ document.body.appendChild(temp);
+ copied=browserSelectAndCopy(document,temp);
+ temp.remove();
+ if(copied){byId('outlookStatus').textContent='Formatted email copied. Paste into Outlook and check the images and links.';return}
+ copyFormattedFallback();
+};
 byId('reset').textContent='Reset';
 // Email-first editor: prioritize actual content rather than repeating help above it.
 const emailEditor=byId('edit');
