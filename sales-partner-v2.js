@@ -257,7 +257,20 @@ function copyFormattedFallback(){
  const doc=safeRichDocument();
  const html=doc.documentElement.outerHTML;
  const popup=window.open('','_blank');
- if(!popup){byId('outlookStatus').textContent='Your browser blocked the new tab. Use Download formatted Outlook email instead.';return}
+ if(!popup){
+  const richFrame=byId('richEmail');
+  try{
+   const richDoc=richFrame.contentDocument;
+   const range=richDoc.createRange();range.selectNodeContents(richDoc.body);
+   const selection=richFrame.contentWindow.getSelection();
+   selection.removeAllRanges();selection.addRange(range);
+   richFrame.contentWindow.focus();
+   byId('outlookStatus').textContent='Email selected. Press Ctrl+C on Windows or Command+C on Mac, then paste into Outlook.';
+  }catch{
+   byId('outlookStatus').textContent='SharePoint prevented copying. Download the formatted Outlook email instead.';
+  }
+  return;
+ }
  popup.document.open();popup.document.write(html);popup.document.close();
  const bar=popup.document.createElement('div');
  bar.style.cssText='position:sticky;top:0;z-index:9999;background:#fff;color:#222;padding:12px;border-bottom:2px solid #d20000;font:14px Arial';
