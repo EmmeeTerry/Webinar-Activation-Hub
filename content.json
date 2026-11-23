@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-11-23T07:56:34.353035+00:00",
+  "lastRefreshed": "2026-11-23T20:25:06.022879+00:00",
   "items": [
     {
       "id": "10-reasons-to-buy-build-or-borrow-ai-implementation-ebook-1",
@@ -2750,14 +2750,14 @@
     {
       "id": "cyber-resilience-vs-cybersecurity-what-leaders-need-to-know-chris-m-blog-61",
       "title": "Cyber Resilience vs Cybersecurity: What Leaders Need to Know (Chris M) | Blog",
-      "url": null,
+      "url": "https://www.hitachivantara.com/en-us/blog/cyber-resilience-versus-cybersecurity-what-business-leaders-need-to-know",
       "type": "Blog",
       "campaign": "Data Modernization & Resilience",
       "useCase": "Cyber Risk Mitigation & Recovery",
       "funnelStage": "TOFU",
       "ownerTeam": "Brand",
       "audience": "Enterprise, Midmarket",
-      "status": "In Production",
+      "status": "Live",
       "region": "Global",
       "publishDate": "2026-11-23",
       "publishDateDisplay": "Nov 23, 2026",
@@ -2778,7 +2778,7 @@
       "ownerIndividual": "Emily Smith",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "",
-      "actionRequired": "",
+      "actionRequired": "Add customer-facing URL",
       "abstract": "",
       "webinarImage": null,
       "approvedNewsImageUrl": null,
@@ -2789,7 +2789,7 @@
       "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q3",
-      "issueType": ""
+      "issueType": "; No URL"
     },
     {
       "id": "cyber-resilience-beyond-traditional-security-in-the-age-of-inevitable-breaches-ebook-62",
@@ -7493,7 +7493,7 @@
       "ownerIndividual": "Steven Garbrecht",
       "publishedByVendor": "Hitachi Vantara",
       "notes": "\u00a0",
-      "actionRequired": "",
+      "actionRequired": "Review content freshness (24+ months)",
       "abstract": "Examines how Hitachi EverFlex can simplify infrastructure consumption and make costs more predictable.",
       "webinarImage": null,
       "approvedNewsImageUrl": null,
@@ -7504,7 +7504,7 @@
       "partnerCampaignLink": null,
       "fiscalYear": "FY25",
       "fiscalQuarter": "Q3",
-      "issueType": ""
+      "issueType": "; 24+ Months Old"
     },
     {
       "id": "nvidia-cloud-partner-hitachi-iq-reference-architecture-165",
