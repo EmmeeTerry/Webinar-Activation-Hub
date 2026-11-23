@@ -1,0 +1,55 @@
+import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+import vm from 'node:vm';
+
+const src=readFileSync(new URL('../sales-partner-v2.js',import.meta.url),'utf8');
+const between=(start,end)=>{
+  const i=src.indexOf(start),j=src.indexOf(end,i+start.length);
+  assert(i>=0&&j>i,'Missing MIME source section '+start);
+  return src.slice(i,j);
+};
+const mimeCore=between('function partBytes(body,encoding){','const imported=new Map();');
+const mimeExport=between('function exportMimeWithImages(item){','const oldChoose=choose;');
+let wasEdited=false;
+const bytes=Uint8Array.from([137,80,78,71,13,10,26,10,0,255,100]);
+const b64=Buffer.from(bytes).toString('base64');
+const originalHtml='<html><body><table><tr><td><img src="cid:hero@test" alt="Hero"></td></tr></table></body></html>';
+const editedHtml='<html><body><p>Personalized</p><img src="data:image/png;base64,'+b64+'"></body></html>';
+const context=vm.createContext({
+  TextEncoder,TextDecoder,Uint8Array,atob,btoa,Date,
+  byId:id=>id==='subject'?{value:'CES invitation pilot'}:id==='richEmail'?{dataset:{edited:wasEdited?'yes':''}}:null,
+  currentRichHtml:()=>editedHtml
+});
+vm.runInContext(mimeCore+'\n'+mimeExport+'\nglobalThis.testExports={parseMime,partBytes,decodeText,decodeHeader,exportMimeWithImages}',context);
+const {parseMime,partBytes,decodeText,decodeHeader,exportMimeWithImages}=context.testExports;
+const source=[
+  'MIME-Version: 1.0','Subject: Pilot','Content-Type: multipart/related; boundary="testboundary"','','--testboundary',
+  'Content-Type: text/html; charset=UTF-8','Content-Transfer-Encoding: base64','',
+  Buffer.from(originalHtml).toString('base64'),'--testboundary',
+  'Content-Type: image/png','Content-ID: <hero@test>','Content-Transfer-Encoding: base64','',b64,'--testboundary--',''
+].join('\r\n');
+const sourceParts=parseMime(source);
+assert.equal(sourceParts.length,2,'Should parse HTML and inline PNG');
+assert.equal(decodeText(sourceParts[0]),originalHtml,'Should decode HTML');
+assert.deepEqual(Array.from(partBytes(sourceParts[1].body,sourceParts[1].transfer)),Array.from(bytes),'Should decode image bytes');
+const item={originalHtml,htmlBody:editedHtml,embeddedImages:[{cid:'hero@test',base64:b64,dataUrl:'data:image/png;base64,'+b64,contentType:'image/png'}]};
+const exported=exportMimeWithImages(item);
+assert(exported.includes('X-Unsent: 1'),'Export must be an Outlook editable draft');
+const exportedParts=parseMime(exported);
+assert.equal(exportedParts.length,2,'Export must include image part');
+assert.equal(decodeText(exportedParts[0]),originalHtml,'Unedited export must retain original HTML verbatim');
+assert.deepEqual(Array.from(partBytes(exportedParts[1].body,exportedParts[1].transfer)),Array.from(bytes),'Export must preserve original PNG bytes');
+wasEdited=true;
+const updated=exportMimeWithImages(item);
+const updatedParts=parseMime(updated);
+assert(decodeText(updatedParts[0]).includes('Personalized'),'Edited text should survive');
+assert(decodeText(updatedParts[0]).includes('cid:hero@test'),'Edited HTML should link to embedded image by CID');
+assert(!decodeText(updatedParts[0]).includes('data:image/png;base64,'),'Data URLs should not remain in exported HTML');
+const catalog=JSON.parse(readFileSync(new URL('../sales-partner-email-catalog.json',import.meta.url),'utf8'));
+assert(Array.isArray(catalog.emails));
+assert(catalog.emails.every(x=>x.approvalStatus==='Approved'&&['Sales','PAM','Both'].includes(x.audience)));
+const hub=readFileSync(new URL('../pam-email-hub.html',import.meta.url),'utf8');
+assert(hub.includes('sales-partner-v2.js')&&hub.includes('sales-partner-email-catalog.json'));
+const library=readFileSync(new URL('../content-hub.html',import.meta.url),'utf8');
+assert(library.includes('Create Sales Email')&&library.includes('Create PAM-to-Partner Email'));
+console.log('PASS: MIME import / CID image round-trip / edited export / approval catalog / hub integration');

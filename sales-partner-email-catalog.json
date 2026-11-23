@@ -1,0 +1,6 @@
+{
+  "version": "2.0",
+  "updated": "2026-11-23",
+  "notes": "Only email records with approvalStatus Approved, an explicit audience and a complete body or HTML body are surfaced. Do not commit CES invitation source, complimentary codes, CID attachments, recipient lists, or private campaign materials in this public repository.",
+  "emails": []
+}
