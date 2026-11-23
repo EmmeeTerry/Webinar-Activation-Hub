@@ -163,6 +163,8 @@ h1{font-family:"Hitachi Sans",Arial,Helvetica,sans-serif;font-weight:400;font-si
 .pipeline-status{font-size:10px;background:var(--gray1);border-radius:20px;padding:5px 8px;color:var(--gray5);white-space:nowrap}
 @media(max-width:800px){.soon-grid{grid-template-columns:1fr}.calendar-day{min-height:76px;padding:3px}.calendar-event{font-size:9px;padding:3px}.upcoming-row{grid-template-columns:53px minmax(0,1fr);gap:8px}.pipeline-status{grid-column:2;justify-self:start}.calendar-shell{padding:8px}}
 
+ .content-cover{float:left;width:76px;height:96px;object-fit:contain;margin:0 14px 8px 0;border:1px solid #e2e6eb;border-radius:4px;background:white}
+ .content-cover-large{display:block;max-width:220px;max-height:270px;object-fit:contain;margin:0 0 16px;border:1px solid #e2e6eb;border-radius:4px;background:white}
 </style>
 </head>
 <body>
@@ -243,6 +245,19 @@ const EMBEDDED_DATA = [];
 
 let DATA = EMBEDDED_DATA;
 let LAST_REFRESHED = null;
+let CONTENT_IMAGE_IDS = new Set();
+function contentImage(item){
+  const approved = item.approvedNewsImageUrl || '';
+  if(/^https:\/\//i.test(approved) && !/^https:\/\/hitachivantara\.sharepoint\.com\//i.test(approved)) return approved;
+  if(CONTENT_IMAGE_IDS.has(item.id)) return './news-images/' + encodeURIComponent(item.id) + '.webp';
+  const webinar = item.webinarImage || '';
+  if(/^https:\/\//i.test(webinar) && !/^https:\/\/hitachivantara\.sharepoint\.com\//i.test(webinar)) return webinar;
+  return '';
+}
+function contentArtwork(item, css='content-cover'){
+ const url=contentImage(item);
+ return url ? `<img class="${css}" src="${esc(url)}" alt="${esc(item.title)} artwork" loading="lazy" onerror="this.remove()">` : '';
+}
 
 const FILTER_FIELDS = [
   {key:'status', label:'Status', multi:true},
@@ -403,6 +418,10 @@ function downloadCSV(){
 
 async function loadData(){
   try {
+    const im = await fetch('./news-images-manifest.json?ts=' + Date.now(), {cache:'no-store'});
+    if(im.ok){ const manifest=await im.json(); CONTENT_IMAGE_IDS=new Set((manifest.images||[]).map(x=>x.id)); }
+  } catch(e){}
+  try {
     if(location.protocol !== 'file:') {
       const r = await fetch('./content.json?ts=' + Date.now(), {cache:'no-store'});
       if(r.ok) {
@@ -523,7 +542,7 @@ function summary(){
 function row(item){
   const links = `<button type="button" class="btn small" onclick="openModal('${esc(item.id)}')">Resources &#8599;</button>`;
   return `<div class="row">
-    <div><div class="row-title" style="cursor:pointer" onclick="openModal('${esc(item.id)}')">${esc(item.title)}</div>${item.abstract?`<div class="abstract-snippet">${esc(item.abstract)}</div>`:''}${item.type?`<span class="tag">${esc(item.type)}</span>`:''}${item.partnerUse?`<span class="tag green">Partner-use</span>`:''}</div>
+    <div>${contentArtwork(item)}<div class="row-title" style="cursor:pointer" onclick="openModal('${esc(item.id)}')">${esc(item.title)}</div>${item.abstract?`<div class="abstract-snippet">${esc(item.abstract)}</div>`:''}${item.type?`<span class="tag">${esc(item.type)}</span>`:''}${item.partnerUse?`<span class="tag green">Partner-use</span>`:''}</div>
     <div class="meta"><strong>${esc(item.campaign||'\u2014')}</strong><br>${esc(item.useCase||'')}</div>
     <div class="meta">${item.primaryActivation?`<strong>${esc(item.primaryActivation)}</strong><br>`:''}${item.paidMediaDateDisplay?'Paid media date: '+esc(item.paidMediaDateDisplay):(item.primaryActivation?'':'\u2014')}</div>
     <div class="meta">${esc(item.audience||'\u2014')}<br>${esc(item.region||'')}</div>
@@ -621,6 +640,7 @@ function openModal(id){
 
   document.getElementById('mBody').innerHTML = `
     <div>
+      ${contentArtwork(item,'content-cover-large')}
       ${item.abstract?.trim() ? `<div class="modal-box"><h3>Description</h3><div class="modal-meta">${esc(item.abstract)}</div></div>` : ''}
       ${item.notes?.trim() ? `<div class="modal-box"><h3>Notes</h3><div class="modal-meta">${esc(item.notes)}</div></div>` : ''}
       ${promotionDates.length ? `<div class="modal-box"><h3>Promotion dates</h3><div class="modal-meta">${promotionDates.map(({channel,date}) => `<div><strong>${esc(channel)}:</strong> ${esc(date)}</div>`).join('')}</div></div>` : ''}
@@ -837,7 +857,7 @@ function renderSpotlight(){
 
   function block(label, item){
     if(!item) return `<div class="spotlight-card" style="cursor:default"><div class="spotlight-label">${esc(label)}</div><div class="spotlight-empty">Nothing to show right now.</div></div>`;
-    const inner = `<div class="spotlight-label">${esc(label)}</div>
+    const inner = `<div class="spotlight-label">${esc(label)}</div>${contentArtwork(item)}
       <div class="spotlight-title">${esc(item.title)}</div>
       <div class="spotlight-meta">${esc(item.publishDateDisplay||'')} &middot; ${esc(item.campaign||'')}</div>`;
     return `<div class="spotlight-card" onclick="openModal('${esc(item.id)}')">${inner}</div>`;
