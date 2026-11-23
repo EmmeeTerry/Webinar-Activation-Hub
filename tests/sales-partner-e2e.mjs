@@ -5,9 +5,11 @@ const url='http://127.0.0.1:8765/pam-email-hub.html?email=sales-ces-2027-invitat
 const browser=await chromium.launch({headless:true,channel:'chrome'});
 const context=await browser.newContext({acceptDownloads:true});
 const page=await context.newPage();
+page.on('pageerror',e=>console.error('BROWSER ERROR:',e.message));
+page.on('console',m=>{if(m.type()==='error')console.error('BROWSER CONSOLE:',m.text())});
 try{
  await page.goto(url,{waitUntil:'domcontentloaded'});
- await page.locator('#title').getByText('Hitachi at CES 2027').waitFor({timeout:25000});
+ await page.locator('#title').filter({hasText:'Hitachi at CES 2027'}).waitFor({timeout:25000});
  await page.waitForFunction(()=>document.querySelector('#eml')?.disabled===false,{timeout:25000});
  await page.locator('#contactPersonalizeOptions summary').click();
  const csv='First Name,Partner Company,Email,Your Name\nAlex,Sample Partner,alex@example.com,Sales Representative\n';
