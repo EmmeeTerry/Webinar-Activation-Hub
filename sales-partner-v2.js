@@ -135,7 +135,7 @@ choose=function(item){previousChoose(item);const blocked=!!item.requiresImport;
  pendingNote.style.display=blocked?'block':'none';
  byId('eml').disabled=blocked;
  if(blocked)byId('outlookStatus').textContent='Import the approved CES EML before exporting. The placeholder is not a sendable email.';
- if(item===cesPilot&&!blocked)byId('outlookStatus').textContent='The formatted invitation is ready. Personalize it and download your Outlook email.';
+ if(item===cesPilot&&!blocked)byId('outlookStatus').textContent='';
 };
 const imported=new Map();
 byId('richMimeImport').addEventListener('change',async event=>{
