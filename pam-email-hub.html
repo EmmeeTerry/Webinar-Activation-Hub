@@ -164,8 +164,10 @@ function currentRichHtml(){
 const GC_NAV_URL='https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Global%20Campaigns.aspx';
 const NEWS_UPDATES_URL='https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/All-News-Posts.aspx';
 const GC_NAV_TEXT='News and Updates: '+NEWS_UPDATES_URL+'\nGlobal Campaigns Hub: '+GC_NAV_URL;
-function withEmailNavigationText(body){return GC_NAV_TEXT+'\n\n'+String(body||'')+'\n\n'+GC_NAV_TEXT}
+function isPmhLaunch(){return selected?.id==='uploaded-pmh-enhanced-experience-20261111'}
+function withEmailNavigationText(body){if(isPmhLaunch())return String(body||'');return GC_NAV_TEXT+'\n\n'+String(body||'')+'\n\n'+GC_NAV_TEXT}
 function withEmailNavigationHtml(html){
+ if(isPmhLaunch())return html;
  const links=[['News and Updates',NEWS_UPDATES_URL],['Global Campaigns Hub',GC_NAV_URL]];
  const nav='<p style="font:12px Arial,Helvetica,sans-serif;line-height:1.6;margin:0;color:#223148">'+links.map(([label,url])=>'<a href="'+url+'" style="color:#b30016;text-decoration:underline;font-weight:bold">'+label+'</a>').join(' &nbsp; | &nbsp; ')+'</p>';
  const top='<div style="padding:14px 18px;border-bottom:1px solid #e3e7ec;background:#fff">'+nav+'</div>',bottom='<div style="padding:15px 18px;border-top:1px solid #e3e7ec;background:#f7f9fb">'+nav+'</div>';

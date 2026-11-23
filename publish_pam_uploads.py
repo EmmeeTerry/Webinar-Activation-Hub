@@ -20,5 +20,8 @@ for f in sorted(FOLDER.glob("*.json")):
     if obj["id"] in emails:
         raise ValueError(f"{f}: duplicate ID")
     emails[obj["id"]]={k:v for k,v in obj.items() if k in ALLOWED}
-OUT.write_text(json.dumps({"version":"1.0","emails":list(emails.values())},ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+# The feed also carries newsletters maintained outside this submissions folder.
+existing=json.loads(OUT.read_text(encoding="utf-8"))["emails"] if OUT.exists() else []
+external=[item for item in existing if not item["id"].startswith("uploaded-")]
+OUT.write_text(json.dumps({"version":"1.0","emails":list(emails.values())+external},ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
 print(f"Validated {len(emails)} published PAM templates.")
