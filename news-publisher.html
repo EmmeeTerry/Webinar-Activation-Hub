@@ -661,7 +661,7 @@ function copilotBrief(){
 function downloadCopilotBrief(){
  const brief=copilotBrief();if(!brief){set('status','Select at least one asset first.');return}
  const blob=new Blob([brief],{type:'text/plain;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');
- a.href=url;a.download='global-campaigns-copilot-news-brief.txt';document.body.appendChild(a);a.click();a.remove();
+ a.href=url;a.download=announcementDownloadName(emailSelectedAssets(),'txt').replace(/\.txt$/,'-Copilot-brief.txt');document.body.appendChild(a);a.click();a.remove();
  setTimeout(()=>URL.revokeObjectURL(url),60000);
  set('status','Downloaded Copilot-ready .txt briefing for '+emailSelectedAssets().length+' asset(s). Upload THIS text file to Microsoft Copilot, not the technical ZIP.');
 }
@@ -734,7 +734,7 @@ async function prepareNativeDraft(){
   files.push({filename:'content-and-images-manifest.json',blob:new Blob([JSON.stringify(manifest,null,2)],{type:'application/json'})});
   files.push({filename:'README.txt',blob:new Blob([instructions],{type:'text/plain'})});
   const zip=await zipCoverFiles(files),url=URL.createObjectURL(zip),a=document.createElement('a');
-  a.href=url;a.download='global-campaigns-sharepoint-draft.zip';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),60000);
+  a.href=url;a.download=announcementDownloadName(records,'zip').replace(/\.zip$/,'-SharePoint-draft.zip');document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),60000);
   set('status','Prepared draft package for '+records.length+' selected asset(s) with '+(files.length-3)+' cover(s).'+(missing.length?' Review cover issues in README.':'')+' No SharePoint draft was created yet. Microsoft authorization and Made for email validation are still required.');
  }catch(err){set('status','Unable to prepare native draft package: '+err.message)}
  finally{button.disabled=false;button.textContent='Prepare SharePoint draft package (.zip)'}
@@ -763,7 +763,7 @@ async function saveImageToFolder(){
    set('status','Saved '+files.length+' of '+entries.length+' cover(s) to folder "'+folder.name+'".'+(failed.length?' Not saved: '+failed.join(' | '):'')+' A local folder is not automatically a SharePoint folder unless synced.');
   }else{
    const zip=await zipCoverFiles(files),url=URL.createObjectURL(zip),a=document.createElement('a');
-   a.href=url;a.download='content-announcement-covers.zip';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),60000);
+   a.href=url;a.download=announcementDownloadName(entries,'zip').replace(/\.zip$/,'-cover-images.zip');document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),60000);
    set('status','Downloaded ZIP with '+files.length+' of '+entries.length+' cover(s).'+(failed.length?' Not included: '+failed.join(' | '):'')+' Unzip and upload images to SharePoint.');
   }
  }catch(err){set('status','Could not save images: '+err.message)}

@@ -420,7 +420,7 @@ nativeTranslate.className='btn';nativeTranslate.type='button';nativeTranslate.te
 const translationText=document.createElement('p');
 translationText.id='translationInstructions';translationText.className='muted';
 translationText.style.cssText='font-size:12px;margin:6px 0';
-translationText.textContent='Translate in your browser if available, or use the approved translation worksheet below.';
+translationText.textContent='Choose a language and select Translate in browser. If you are sending the original language, skip this section.';
 const worksheetDownload=document.createElement('button');
 worksheetDownload.className='btn';worksheetDownload.type='button';worksheetDownload.textContent='Download translation worksheet';
 const uploadTranslation=document.createElement('input');
@@ -431,7 +431,13 @@ uploadTranslation.style.cssText='display:block;max-width:100%;font-size:12px;mar
 const translationStatus=document.createElement('p');
 translationStatus.id='translateStatus';translationStatus.setAttribute('role','status');
 translationStatus.style.cssText='margin:5px 0;font-size:12px';
-translationControls.append(language,nativeTranslate,translationText,worksheetDownload,uploadTranslation,translationStatus);
+const manualTranslation=document.createElement('details');
+const manualLabel=document.createElement('summary');
+manualLabel.textContent='Use a translator or translation tool instead';
+const manualSteps=document.createElement('p');
+manualSteps.textContent='1. Download the CSV and open it in Excel. 2. Have your translator or approved tool fill in every Translation cell, including the subject. Keep ID and Original as provided, then save as CSV. 3. Choose the completed file below to apply the wording to this draft. Review the email before sending.';
+manualTranslation.append(manualLabel,manualSteps,worksheetDownload,uploadTranslation);
+translationControls.append(translationText,language,nativeTranslate,manualTranslation,translationStatus);
 translationDisclosure.appendChild(translationControls);
 let translationBase=null;
 function worksheetSource(){
@@ -445,7 +451,7 @@ worksheetDownload.onclick=()=>{
  const lines=[['ID','Original','Translation'],['SUBJECT',translationBase.subject,'']];
  translationBase.segments.forEach((node,i)=>lines.push(['TEXT'+String(i+1).padStart(4,'0'),node.nodeValue.trim(),'']));
  const csv=lines.map(row=>row.map(csvCell).join(',')).join('\r\n');
- download('\uFEFF'+csv,filename()+'-translation.csv','text/csv;charset=utf-8');
+ download('\uFEFF'+csv,filename()+' - '+language.selectedOptions[0].text+' translation.csv','text/csv;charset=utf-8');
  translationStatus.textContent='Fill the Translation column in the CSV, keeping the ID column unchanged, then upload the completed worksheet here.';
 };
 uploadTranslation.onchange=async e=>{
@@ -454,9 +460,11 @@ uploadTranslation.onchange=async e=>{
   if(file.size>1e6)throw Error('Use a translation worksheet smaller than 1 MB.');
   const rows=csvParse((await file.text()).replace(/^\uFEFF/,''));
   if(rows.length<2||rows[0].map(v=>v.trim().toLowerCase()).join(',')!=='id,original,translation')throw Error('Use the translation worksheet downloaded from this Hub.');
-  const base=translationBase||worksheetSource();
+  const base=worksheetSource();
   const expected=base.segments.length+1;
   if(rows.length-1!==expected)throw Error('The worksheet does not match this email. Download a new worksheet.');
+  const originalById=new Map([['SUBJECT',base.subject],...base.segments.map((node,i)=>['TEXT'+String(i+1).padStart(4,'0'),node.nodeValue.trim()])]);
+  if(rows.slice(1).some(([id,original])=>originalById.get(id)!==original))throw Error('This CSV belongs to a different or earlier draft. Download the CSV for the current email.');
   const map=new Map(rows.slice(1).map(row=>[row[0],row[2]]));
   if(map.size!==expected||![...map.values()].every(x=>x&&x.trim()))throw Error('Complete every Translation cell before uploading.');
   if(!map.has('SUBJECT'))throw Error('Missing SUBJECT translation row.');
@@ -476,6 +484,7 @@ nativeTranslate.onclick=async()=>{
  if(!selected){translationStatus.textContent='Choose an email first.';return}
  const TranslatorApi=window.Translator;
  if(!TranslatorApi?.create){
+  manualTranslation.open=true;
   translationStatus.textContent='Browser translation is unavailable. Download the worksheet, have it translated using an approved tool, and upload it here.';
   return;
  }
@@ -497,7 +506,7 @@ nativeTranslate.onclick=async()=>{
    if(i%8===0)translationStatus.textContent='Translating '+(i+1)+' of '+data.segments.length+' text sections…';
   }
   applyTranslatedDocument(data.doc,translatedSubject,translationStatus);
- }catch(e){translationStatus.textContent='Browser translation could not finish: '+String(e.message||e)+' Use the translation worksheet instead.'}
+ }catch(e){manualTranslation.open=true;translationStatus.textContent='Browser translation could not finish: '+String(e.message||e)+' Use the translation worksheet instead.'}
  finally{nativeTranslate.disabled=false}
 };
 

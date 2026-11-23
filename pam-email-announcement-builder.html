@@ -314,7 +314,11 @@ if(!state.ready&&!savedDraft&&params.get("story")===launchId&&ids.has(launchId))
 state.ready=true;renderChoices();update();if(savedDraft)renderPreview()}catch(e){status("Unable to load email templates: "+e.message,true);$("count").textContent="Loading failed"}}
 async function copyText(s){try{await navigator.clipboard.writeText(s);status("Copied successfully");return true}catch(e){const t=$("manualCopy");t.hidden=false;t.value=s;t.focus();t.select();status("Clipboard blocked in this browser. The content is selected below. Press Ctrl+C to copy.",true);return false}}
 function save(blob,name){const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),30000)}
-function download(){save(new Blob([documentHTML()],{type:"text/html"}),"partner-pulse.html")}
+function postFilename(kind,extension){
+ const title=inlineValue(article().title,"label").replace(/[^\p{L}\p{N} -]+/gu," ").replace(/\s+/g," ").trim().slice(0,96).trim();
+ return (title||"Partner Pulse")+" - "+kind+"."+extension;
+}
+function download(){save(new Blob([documentHTML()],{type:"text/html"}),postFilename("Pulse post","html"))}
 function documentHTML(){return '<!doctype html><meta charset="utf-8"><title>'+esc(inlineValue(article().title,"label"))+'</title><h1>'+inlineValue(article().title,"html")+'</h1>'+richBody()}
 function encodeDraft(d){return btoa(unescape(encodeURIComponent(JSON.stringify(d)))).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/,"")}
 function embedURL(){const d={nav,pmhRevision:1,ids:[...state.selected],edits:state.summaryEdits,sections:Object.fromEntries(selected().map(e=>[e.id,state.sectionEdits[e.id]||{}])),headline:$("headline").value,intro:$("intro").value,closing:$("closing").value,linkedinUrl:$("linkedinUrl").value,featuredLabel1:$("featuredLabel1").value,featuredUrl1:$("featuredUrl1").value,featuredLabel2:$("featuredLabel2").value,featuredUrl2:$("featuredUrl2").value};const u=new URL(location.href);u.search="";u.hash="";u.searchParams.set("view","embed");u.searchParams.set("data",encodeDraft(d));return u.href}
@@ -459,7 +463,7 @@ async function exportPost(mode){
    const files=images.map((data,i)=>({filename:"images/story-"+i+".png",blob:new Blob([Uint8Array.from(atob(data),c=>c.charCodeAt(0))])}));
    const blueprint={"@odata.type":"#microsoft.graph.sitePage",name:"partner-pulse-"+Date.now()+".aspx",title:inlineValue(a.title,"label"),pageLayout:"article",canvasLayout:{horizontalSections:[{id:"1",layout:"oneColumn",columns:[{id:"1",width:12,webparts:[{"@odata.type":"#microsoft.graph.textWebPart",id:crypto.randomUUID(),innerHtml:body}]}]}]}};
    for(const [name,value] of [["page-blueprint.json",JSON.stringify(blueprint,null,2)],["README.txt","Start a new Made for email SharePoint news post. Copy the title and article from post.html, then upload the PNGs into native Image web parts. The Copilot brief contains the same wording and links. The JSON blueprint is available for an authorized site integration. Preview and approve before posting and emailing PAMs."],["post.html",html],["copilot-brief.txt",brief],["post.txt",plain]])files.push({filename:name,blob:new Blob([value])});
-   save(await zipCoverFiles(files),"partner-pulse-draft.zip");status("Draft package downloaded with the article, Copilot brief and artwork.");return;
+   save(await zipCoverFiles(files),postFilename("SharePoint draft","zip"));status("Draft package downloaded with the article, Copilot brief and artwork.");return;
   }
   const boundary="pulse-related-"+Date.now(),alt="pulse-alt-"+Date.now();
   const subject=Array.from(inlineValue(a.title,"label").replace(/[\r\n]/g," ")).join("").match(/.{1,12}/gu)||["Partner Pulse"];
@@ -468,7 +472,7 @@ async function exportPost(mode){
   lines.push("--"+alt+"--");
   images.forEach((data,i)=>lines.push("--"+boundary,"Content-Type: image/png","Content-Transfer-Encoding: base64","Content-ID: <story-"+i+">","Content-Disposition: inline","",wrap64(data)));
   lines.push("--"+boundary+"--","");
-  save(new Blob([lines.join("\r\n")],{type:"message/rfc822"}),"partner-pulse.eml");status("Outlook draft downloaded. Open it, review it and add your PAM recipients.");
+  save(new Blob([lines.join("\r\n")],{type:"message/rfc822"}),postFilename("PAM announcement","eml"));status("Outlook draft downloaded. Open it, review it and add your PAM recipients.");
  }catch(err){status("Download failed: "+err.message,true)}finally{btn.disabled=!selected().length}
 }
 $("pamLaunchDraft").onclick=()=>exportPost("pamLaunchDraft");$("eml").onclick=()=>exportPost("eml");$("packet").onclick=()=>exportPost("packet");$("brief").onclick=()=>copyText(copilotText());

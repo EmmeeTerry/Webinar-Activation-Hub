@@ -31,6 +31,7 @@ try{
  // Translation worksheet can be completed outside the browser and reimported
  // without converting the email to plain text or stripping embedded images.
  await page.locator('#translateOptions summary').click();
+ await page.getByText('Use a translator or translation tool instead',{exact:true}).click();
  const [worksheet]=await Promise.all([page.waitForEvent('download'),page.getByRole('button',{name:'Download translation worksheet'}).click()]);
  const text=await readFile(await worksheet.path(),'utf8');
  const rows=await page.evaluate(str=>csvParse(str.replace(/^\uFEFF/,'')),text);
