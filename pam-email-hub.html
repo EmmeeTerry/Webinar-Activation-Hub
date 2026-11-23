@@ -25,7 +25,39 @@
 </section>
 </main>
 <script>
-const $=id=>document.getElementById(id);let items=[],selected=null,leads=[],resourceContext=null,englishDraft=null;const cleanKey=s=>String(s||'').toLowerCase().replace(/[^a-z0-9]/g,'');function csvParse(t){let rows=[],row=[],field='',quoted=false;for(let i=0;i<t.length;i++){let c=t[i];if(c==='"'){if(quoted&&t[i+1]==='"'){field+='"';i++}else quoted=!quoted}else if(c===','&&!quoted){row.push(field);field=''}else if((c==='\n'||c==='\r')&&!quoted){if(c==='\r'&&t[i+1]==='\n')i++;row.push(field);if(row.some(x=>x.trim()))rows.push(row);row=[];field=''}else field+=c}row.push(field);if(row.some(x=>x.trim()))rows.push(row);return rows}function fillLead(v){let lead=leads[Number(v)];if(!lead||!selected)return;const placeholders={'firstname':['firstname','first'],'partnercompany':['partnercompany','company','companyname','accountname'],'eventname':['eventname','event'],'yourname':['yourname','pamname','sendername','owner']};const repl=t=>String(t).replace(/\[([^\]]+)\]/g,(all,k)=>{let names=placeholders[cleanKey(k)]||[cleanKey(k)];let val=names.map(n=>lead[n]).find(Boolean);return val||all});$('subject').value=repl(selected.subject);$('body').value=repl(selected.body);$('leadStatus').textContent='Prepared draft for '+(lead.firstname||'recipient')+'. Review all fields before sending.'}
+const $=id=>document.getElementById(id);let items=[],selected=null,leads=[],resourceContext=null,englishDraft=null;const cleanKey=s=>String(s||'').toLowerCase().replace(/[^a-z0-9]/g,'');function csvParse(t){let rows=[],row=[],field='',quoted=false;for(let i=0;i<t.length;i++){let c=t[i];if(c==='"'){if(quoted&&t[i+1]==='"'){field+='"';i++}else quoted=!quoted}else if(c===','&&!quoted){row.push(field);field=''}else if((c==='\n'||c==='\r')&&!quoted){if(c==='\r'&&t[i+1]==='\n')i++;row.push(field);if(row.some(x=>x.trim()))rows.push(row);row=[];field=''}else field+=c}row.push(field);if(row.some(x=>x.trim()))rows.push(row);return rows}function fillLead(v){
+ const lead=leads[Number(v)];if(!lead||!selected)return;
+ const placeholders={'firstname':['firstname','first'],'partnercompany':['partnercompany','company','companyname','accountname'],'eventname':['eventname','event'],'yourname':['yourname','pamname','sendername','owner']};
+ const repl=t=>String(t||'').replace(/\[([^\]]+)\]/g,(all,k)=>{
+   const names=placeholders[cleanKey(k)]||[cleanKey(k)];
+   const val=names.map(n=>lead[n]).find(Boolean);
+   return val||all;
+ });
+ $('subject').value=repl(selected.subject||$('subject').value);
+ $('body').value=repl(selected.body||$('body').value);
+ const recipient=lead.firstname||lead.name||'selected contact';
+ if(selected.htmlBody){
+   // Refresh from the approved HTML source so switching contacts never carries over
+   // private information from the previously selected contact.
+   const doc=new DOMParser().parseFromString(selected.htmlBody,'text/html');
+   const walker=doc.createTreeWalker(doc.body,NodeFilter.SHOW_TEXT);
+   let node;
+   while((node=walker.nextNode())){
+     if(node.parentElement?.closest('script,style,noscript'))continue;
+     node.nodeValue=repl(node.nodeValue);
+   }
+   for(const node of doc.body.querySelectorAll('[alt],[title]')){
+     for(const attr of ['alt','title'])if(node.hasAttribute(attr))node.setAttribute(attr,repl(node.getAttribute(attr)));
+   }
+   const html='<!doctype html><html><head>'+doc.head.innerHTML+'</head>'+doc.body.outerHTML+'</html>';
+   loadRichEmail(html);
+   // Mark the personalized HTML as an edit so the exported MIME includes the
+   // chosen contact rather than reverting to its unpersonalized original.
+   const frame=$('richEmail');
+   frame.addEventListener('load',()=>{frame.dataset.edited='yes'},{once:true});
+ }
+ $('leadStatus').textContent='Personalized for '+recipient+'. Review the email before downloading. One recipient at a time; nothing is sent.';
+}
 function textEl(tag,content,klass){const el=document.createElement(tag);el.textContent=content;if(klass)el.className=klass;return el}
 function regionValues(value){
  const region=String(value||'Global').trim();
@@ -304,7 +336,7 @@ if(pmh&&/^https:\/\/(?:[a-z0-9.-]+)\//i.test(pmh)){
 }
 choose(draft);$('resourceContext').style.display='none';render();$('templateMetadata').textContent='New draft based on selected '+type+' · Customize before sending';$('title').textContent='Create partner email — '+r.title;}else{if(items.length)choose(items.find(x=>x.id===params.get('email'))||items[0]);applyFilters()}}).catch(e=>{$('emails').textContent=e.message});
 </script>
-<script src="./sales-partner-v2.js?v=20261123-9"></script>
+<script src="./sales-partner-v2.js?v=20261123-10"></script>
 <!-- Shared Global Campaigns Resource Hub footer -->
 <div class="gcrh-shared-footer" style="clear:both;position:relative;display:block;box-sizing:border-box;width:100%;max-width:1200px;margin:30px auto 16px;padding:0 12px;">
   <iframe title="Global Campaigns Resource Hub — footer" src="https://emmeeterry.github.io/Global-Campaigns-Resource-Hub/news-footer.html" loading="lazy" scrolling="no" style="display:block;width:100%;height:172px;border:0;background:#fff;" referrerpolicy="strict-origin-when-cross-origin"></iframe>
