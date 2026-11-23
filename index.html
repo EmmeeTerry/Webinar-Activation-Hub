@@ -393,7 +393,7 @@ function listRow(w){
   <div class="meta"><strong>${esc(w.campaign||'Campaign TBD')}</strong><br>${esc(w.useCase)}</div>
   <div class="meta">${esc(w.audience)}<br>${esc(w.region)} · Owner: ${esc(w.owner)}</div>
   <div class="ready ${readinessClass(w.readiness)}">${esc(w.readiness)}</div>
-  <div>${w.links.watch?linkBtn(w.status==='On Demand'?'Watch':'Open',w.links.watch,true):'<span class="meta">Link pending</span>'}</div>
+  <div><button type="button" class="btn primary" onclick="openModal('${esc(w.id)}')">View Resources &#8599;</button></div>
  </div>`;
 }
 
