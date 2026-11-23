@@ -54,6 +54,17 @@ try{
  await page.locator('#copy').click();
  await page.waitForFunction(()=>/copied|selected|Opened a full browser tab/i.test(document.querySelector('#outlookStatus')?.textContent||''),{timeout:15000});
  console.log('PASS: formatted copy confirms a copy or usable fallback');
+ // Simulate a SharePoint-like sandbox that does not grant popup or clipboard
+ // permissions. Users must still get a selectable email rather than an error.
+ const embedded=await context.newPage();
+ await embedded.setContent('<iframe id="sharepoint" sandbox="allow-scripts allow-same-origin allow-forms" src="'+url+'" style="width:1200px;height:1000px"></iframe>');
+ const inner=embedded.frameLocator('#sharepoint');
+ await inner.locator('#title').filter({hasText:'Hitachi at CES 2027'}).waitFor({timeout:25000});
+ await inner.locator('#copy').click();
+ const sandboxResult=await inner.locator('#outlookStatus').innerText();
+ assert(/copied|selected|Opened a full browser tab/i.test(sandboxResult),'Sandboxed copy should offer usable copy instructions: '+sandboxResult);
+ console.log('PASS: sandboxed SharePoint-style embed provides a clipboard fallback');
+ await embedded.close();
 }finally{
  await browser.close();
 }
