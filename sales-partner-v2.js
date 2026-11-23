@@ -250,7 +250,6 @@ helpContent.style.cssText='padding-top:8px';
 const notes=[...emailEditor.querySelectorAll(':scope > p.note')].filter(n=>n!==sendStatus);
 const briefIntro=emailEditor.querySelector('#templateMetadata + p.muted');
 const meta=byId('templateMetadata');
-const translation=byId('translatePanel');
 const previewNote=byId('richEmailNote');
 const leadAnchor=byId('leadPersonalizationLink');
 const leadPanel=byId('leadPersonalization');
@@ -262,16 +261,6 @@ help.appendChild(helpContent);
 const quickTools=document.createElement('div');
 quickTools.id='personalizationTools';
 quickTools.style.cssText='display:flex;align-items:flex-start;gap:8px;flex-wrap:wrap;margin:0 0 9px';
-if(translation){
- translation.querySelector('summary').textContent='Translate';
- translation.style.cssText='flex:1 1 220px;margin:0;padding:8px 10px;border:1px solid #dedee2;border-radius:4px;background:#fafafa';
- quickTools.appendChild(translation);
- const availability=document.createElement('p');
- availability.className='muted';
- availability.style.cssText='font-size:11px;margin:4px 0';
- availability.textContent='Translation depends on browser support. Review the result before sending.';
- translation.appendChild(availability);
-}
 if(leadPanel){
  const leadDisclosure=document.createElement('details');
  leadDisclosure.id='contactPersonalizeOptions';
