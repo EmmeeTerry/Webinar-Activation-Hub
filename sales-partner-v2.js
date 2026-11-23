@@ -4,6 +4,7 @@
 'use strict';
 const byId=id=>document.getElementById(id);
 const originalMatches=matches,originalExport=downloadFormattedOutlook;
+// Audience describes the recipient, not the sender. Legacy PAM catalog emails are to partners.
 const audienceOf=item=>item.audience || (item.id==='resource-draft'?'Both':'PAM');
 const showAudience=item=>{
  const v=byId('audienceFilter')?.value||'All';
@@ -14,7 +15,7 @@ matches=function(){return originalMatches().filter(showAudience)};
 const sidebar=byId('categoryFilter');
 const label=document.createElement('label');label.htmlFor='audienceFilter';label.textContent='Audience';
 const filter=document.createElement('select');filter.id='audienceFilter';filter.className='search';
-[['All','All emails'],['Sales','Customers (Sales)'],['PAM','Partners (PAMs)'],['Both','Both audiences only']].forEach(([value,name])=>filter.add(new Option(name,value)));
+[['All','All emails'],['Sales','To Customer'],['PAM','To Partner'],['Both','Both']].forEach(([value,name])=>filter.add(new Option(name,value)));
 sidebar.parentElement.insertBefore(label,sidebar);
 sidebar.parentElement.insertBefore(filter,sidebar);
 filter.addEventListener('change',applyFilters);
@@ -27,9 +28,9 @@ const editorLabel=document.querySelector('.editor .kicker');if(editorLabel)edito
 const hint=document.createElement('section');hint.className='panel';hint.style.cssText='margin:0 0 14px;padding:13px 17px;background:#fff';
 hint.innerHTML='<strong>Rich-format invitations</strong><p class="muted" style="margin:5px 0">Pilot: Hitachi at CES 2027. Import the approved .EML or .EMLTPL from your computer to preview, personalize, and export an Outlook draft with its embedded images intact. The file remains on your device and is not published in this public repository.</p><label for="richMimeImport" class="btn primary" style="display:inline-block;cursor:pointer">Import branded invitation (.eml / .emltpl)</label><input id="richMimeImport" type="file" accept=".eml,.emltpl,message/rfc822" style="position:absolute;width:1px;height:1px;opacity:0"><p id="richMimeStatus" class="muted" role="status" style="margin:8px 0 0"></p>';
 document.querySelector('main').insertBefore(hint,document.querySelector('.layout'));
-const audienceLabel=document.createElement('label');audienceLabel.htmlFor='importAudience';audienceLabel.textContent='Who can use this email?';audienceLabel.style.cssText='display:block;margin-top:14px;font-weight:700';
+const audienceLabel=document.createElement('label');audienceLabel.htmlFor='importAudience';audienceLabel.textContent='Who is this email for?';audienceLabel.style.cssText='display:block;margin-top:14px;font-weight:700';
 const importAudience=document.createElement('select');importAudience.id='importAudience';importAudience.style.cssText='display:block;padding:9px;margin:6px 0 10px;border:1px solid #aaa;max-width:260px;width:100%';
-[['Sales','Customers / Sales'],['PAM','Partners / PAMs'],['Both','Both: Customers and Partners']].forEach(([value,name])=>importAudience.add(new Option(name,value)));
+[['Sales','To Customer'],['PAM','To Partner'],['Both','Both']].forEach(([value,name])=>importAudience.add(new Option(name,value)));
 hint.append(audienceLabel,importAudience);
 const resourceJump=document.createElement('p');resourceJump.className='muted';resourceJump.style.cssText='margin:6px 0;font-size:12px';
 resourceJump.innerHTML='<a href="./content-hub.html" target="_blank" rel="noopener noreferrer">Browse the Content Library</a> for assets to share. Approved email templates can also be opened directly with <code>?email=template-id</code>.';
