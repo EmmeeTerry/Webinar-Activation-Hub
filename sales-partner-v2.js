@@ -26,7 +26,7 @@ byId('clearFilters').addEventListener('click',()=>{filter.value='All';applyFilte
 const pageTitle=document.querySelector('header h1');if(pageTitle)pageTitle.textContent='Sales & PAM Email Template Hub';
 const eyebrow=document.querySelector('header .eyebrow');if(eyebrow)eyebrow.textContent='HITACHI VANTARA / SALES & PAM ENABLEMENT';
 const editorLabel=document.querySelector('.editor .kicker');if(editorLabel)editorLabel.textContent='CUSTOMER & PARTNER OUTREACH';
-const guideLink=document.createElement('a');guideLink.href='./sales-partner-email-quick-start.html';guideLink.textContent='How to use this Hub';guideLink.target='_blank';guideLink.rel='noopener noreferrer';guideLink.className='header-text-link';const navLinks=document.querySelector('header .head-actions');if(navLinks)navLinks.prepend(guideLink);
+const guideLink=document.createElement('a');guideLink.href='https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/How-to-Use-Templates.aspx';guideLink.textContent='How to use email templates';guideLink.target='_blank';guideLink.rel='noopener noreferrer';guideLink.className='btn';const navLinks=document.querySelector('header .head-actions');if(navLinks)navLinks.prepend(guideLink);
 const hint=document.createElement('section');hint.className='panel';hint.style.cssText='margin:0 0 14px;padding:13px 17px;background:#fff';
 hint.innerHTML='<p class="muted" style="margin:0 0 8px">Choose an Outlook email file: <strong>.eml (recommended)</strong>. An <strong>.emltpl</strong> may work if it contains standard email data. Files such as .oft, .msg, Word and PDF are not supported.</p><label for="richMimeImport" class="btn" style="display:inline-block;cursor:pointer">Choose .eml file</label><input id="richMimeImport" type="file" accept=".eml,.emltpl,message/rfc822" style="position:absolute;width:1px;height:1px;opacity:0"><p class="muted" style="margin:6px 0 0;font-size:12px">Include images when saving the email. Imported files are available only during this session; they are not automatically added to the shared library.</p><p id="richMimeStatus" class="muted" role="status" style="margin:8px 0 0"></p>';
 document.querySelector('main').insertBefore(hint,document.querySelector('.layout'));
@@ -263,7 +263,7 @@ const compactHelp=document.createElement('p');
 compactHelp.id='emailActionHelp';
 compactHelp.className='muted';
 compactHelp.style.cssText='margin:3px 0 9px;font-size:12px;line-height:1.4';
-compactHelp.textContent='For exact design: Download formatted Outlook email and open the file. Or Copy formatted email, open Outlook, then paste above your signature. Always review before sending.';
+compactHelp.textContent='Download the email and open the file in Outlook, or choose Copy formatted email to copy the message body. Then open Outlook below, paste above your signature (Ctrl+V or Command+V), add recipients, review and send.';
 
 function safeRichDocument(){
  const source=selected?.htmlBody ? (currentRichHtml()||selected.htmlBody) : linkedEmailHtml();
@@ -557,7 +557,14 @@ if(leadPanel){
 
  quickTools.appendChild(leadDisclosure);
 }
-actions.after(compactHelp,quickTools,sendStatus,subjectLabel,emailSubject,emailPreview,plainFields,help);
+const editHeading=document.createElement('h3');
+editHeading.textContent='1. Edit your email';
+const editIntro=document.createElement('p');
+editIntro.append('Click the subject or message to make changes. When you’re ready, use the Outlook options below to send it. ');
+editIntro.append(guideLink.cloneNode(true));
+const sendHeading=document.createElement('h3');
+sendHeading.textContent='2. Send your email in Outlook';
+emailEditor.append(editHeading,editIntro,quickTools,subjectLabel,emailSubject,emailPreview,plainFields,sendHeading,compactHelp,actions,sendStatus,help);
 const editorStyle=document.createElement('style');
 editorStyle.textContent=[
  '#edit > .actions{margin:5px 0 9px!important;gap:8px!important;align-items:center}',

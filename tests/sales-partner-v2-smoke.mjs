@@ -53,7 +53,7 @@ assert(v2.includes("a==='Both'&&(v==='Sales'||v==='PAM')"),'Both audience should
 assert(v2.includes("['Both','Both']"),'Importer must offer Both as a publishing audience');
 assert(v2.includes("const CES_ID='sales-ces-2027-invitation'"),'CES pilot should appear in the hub');
 assert(v2.includes('loadCesApprovedLayout()'),'CES exact-layout loader must exist');
-assert(v2.includes("actions.after(compactHelp,quickTools,sendStatus,subjectLabel,emailSubject,emailPreview,plainFields,help)"),'Contact-list personalization precedes subject and email preview');
+assert(v2.includes("emailEditor.append(editHeading,editIntro,quickTools,subjectLabel,emailSubject,emailPreview,plainFields,sendHeading,compactHelp,actions,sendStatus,help)"),'Editor precedes Outlook send actions');
 assert(v2.includes("helpTitle.textContent='More tools and help'"),'Extra help is collapsed');
 assert(v2.includes("leadSummary.textContent='Personalize from contact list'"),'Contact-list personalization must be visible in top controls');
 assert(v2.includes("formattedCopyButton.textContent='Copy formatted email'"),'Restore formatted copy UI');

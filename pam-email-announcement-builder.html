@@ -22,22 +22,22 @@ body.embedded{background:#fff}body.embedded header,body.embedded .links,body.emb
 .featured-links{background:#f6f8fa;border-left:4px solid #ce0013;padding:16px;margin:16px 0}.featured-links h3{margin:0 0 12px!important}.featured-links .article-cta{margin:4px 8px 6px 0;display:inline-block}.filters input{min-width:0}
 [contenteditable=true]:focus{outline:2px solid #647891;outline-offset:3px}dialog{border:1px solid #bbc5ce;border-radius:8px;width:min(450px,92vw)}
 .layout{display:block;max-width:960px;margin:auto}.panel+.panel{margin-top:18px}#publish{margin-top:24px;border-top:3px solid var(--red);padding-top:18px}.publish-path{margin:16px 0;padding:18px;border:1px solid var(--line);border-radius:6px}.publish-path h3{font-size:17px}.publish-path ol{padding-left:22px}.publish-path li{margin:8px 0}.post-nav{padding:12px 20px;background:#f4f6f8;font:600 13px Arial}.post-nav a{color:#9f0014}
-</style></head><body>
+.publish-options{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(min(100%,330px),1fr))}.publish-options .publish-path{min-width:0;margin:8px 0}.publish-options input,.publish-options textarea{max-width:100%}</style></head><body>
 <header><div class="eyebrow">HITACHI VANTARA / PARTNER PROGRAMS</div><h1>Pulse Post Builder</h1><p>Show PAMs which content to promote, where partners can activate it in the Partner Marketing Hub, and how to start customer conversations.</p></header>
 <main>
-<div class="links builder-only"><a href="./pam-email-announcement-builder.html" target="_blank" rel="noopener">Open builder in its own tab ↗</a><button class="secondary" id="copyBuilderFrame">Copy builder iframe</button><a href="./pam-email-hub.html" target="_blank" rel="noopener">PAM Email Hub ↗</a><a href="https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Content-Sharing-Template.aspx" target="_blank" rel="noopener">SharePoint news template ↗</a></div>
+<div class="links builder-only"><a href="./pam-email-announcement-builder.html" target="_blank" rel="noopener">Open builder in its own tab ↗</a><a href="./pam-email-hub.html" target="_blank" rel="noopener">PAM Email Hub ↗</a><a href="https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Content-Sharing-Template.aspx" target="_blank" rel="noopener">SharePoint news template ↗</a></div>
 <div class="layout">
 <section class="panel edit-panel">
-<h2>1. Choose the news and resources for PAMs</h2><p class="muted">Choose partner emails, live content or partner-ready webinars. Combine related items in one post.</p>
-<div class="filters"><div><label for="filter">Show</label><select id="filter"><option value="recent">Recently added</option><option value="all" selected>All items</option></select></div><div><label for="category">Category</label><select id="category"><option value="">All categories</option></select></div></div>
-<div class="filters"><div><label for="source">Source</label><select id="source"><option value="">All sources</option><option>Partner email</option><option>Content Library</option><option>Webinar Hub</option></select></div><div><label for="region">Region</label><select id="region"><option value="">All regions</option></select></div></div><label for="campaignFilter">PMH campaign</label><select id="campaignFilter"><option value="">All items</option><option value="linked">Campaign link available</option><option value="missing">Needs a campaign link</option></select><label for="search">Search news and resources</label><input id="search" type="search" placeholder="Title, campaign or topic">
+<h2>1. Choose the news and resources for PAMs</h2><p class="muted">Choose partner announcements, live content or partner-ready webinars. Combine related items in one post.</p>
+<div class="filters"><div><label for="category">Category</label><select id="category"><option value="">All categories</option></select></div></div>
+<div class="filters"><div><label for="source">Source</label><select id="source"><option value="">All sources</option><option>Partner Announcement</option><option>Content Library</option><option>Webinar Hub</option></select></div><div><label for="region">Region</label><select id="region"><option value="">All regions</option></select></div></div><label for="campaignFilter">PMH campaign</label><select id="campaignFilter"><option value="">All items</option><option value="linked">Campaign link available</option><option value="missing">Needs a campaign link</option></select><label for="search">Search news and resources</label><input id="search" type="search" placeholder="Title, campaign or topic">
 <div class="actions"><button type="button" class="secondary" id="selectVisible">Select displayed</button><button type="button" class="secondary" id="clear">Clear</button><button type="button" class="secondary" id="reload">Refresh list</button></div>
 <div id="count" class="muted">Loading emails…</div><div id="emails" class="email-list">Loading email templates…</div>
 </section>
 <section class="panel output">
 <h2 class="builder-only">2. Edit and preview your announcement</h2><p class="muted builder-only">Review the news, why it matters to partners and what PAMs should send. Your edits carry through to both publishing options.</p>
+<div id="preview" class="preview"></div>
 <div class="builder-only"><p>Edit the headline or story text directly in the preview. To link a phrase, select its words, then choose <strong>Add link</strong>.</p><button type="button" id="addInlineLink">Add link</button></div>
-<a href="#embedActions" class="builder-only action-link secondary">Jump to post iframe</a>
 <details class="builder-only"><summary>Edit header &amp; footer links</summary><p>These links appear at the top and bottom of the internal PAM post and email. News and Updates opens All News Posts by default.</p><label for="newsNav">News and Updates URL</label><input id="newsNav" type="url"><label for="hubNav">Global Campaigns Hub URL</label><input id="hubNav" type="url"><button id="applyNav" type="button">Apply links</button><span id="navStatus" role="status"></span></details>
 <details class="builder-only"><summary>Edit featured resources and LinkedIn post</summary><p class="muted">The PMH campaign appears inside each linked story. Use these optional fields for additional resources at the bottom. For the enhanced PMH announcement, the Partner Marketing Hub link fills in automatically. You can change it or add another important resource.</p>
 <div class="filters"><div><label for="featuredLabel1">Featured link button</label><input id="featuredLabel1" placeholder="e.g., Open Partner Marketing Hub"></div><div><label for="featuredUrl1">Destination URL</label><input type="url" id="featuredUrl1" placeholder="https://..."></div></div>
@@ -53,11 +53,10 @@ body.embedded{background:#fff}body.embedded header,body.embedded .links,body.emb
 <div id="summaries"></div>
 </details>
 <dialog id="inlineDialog"><form id="linkForm"><h2>Add a link</h2><label for="inlineLabel">Link text</label><input id="inlineLabel" required><label for="inlineURL">Destination URL</label><input id="inlineURL" type="url" placeholder="https://" required><div class="actions"><button>Apply link</button><button type="button" id="cancelInline">Cancel</button></div></form></dialog>
-<div id="preview" class="preview"></div>
 <div id="status" class="status builder-only" role="status"></div>
 <div class="builder-only" id="publish">
-<h2>3. Choose one way to publish and email</h2><p>Both options give PAMs a SharePoint page and an email. Choose based on where you want to send the email.</p>
-<section class="publish-path"><h3>Option A · Publish and email from SharePoint</h3>
+<h2>3. Choose ONE way to publish AND email</h2><p>Both options give PAMs a SharePoint page and an email. Choose based on where you want to send the email.</p>
+<div class="publish-options"><section class="publish-path"><h3>Option A · Publish and email from SharePoint</h3>
 <ol><li><strong>Create the news post.</strong> Open the SharePoint template and start a new Made for email news post.</li>
 <li><strong>Add your announcement.</strong> Paste the copied title into the page title and the formatted post into a Text web part. To add artwork, download the draft package, unzip it and upload the matching files from its images folder into Image web parts.</li>
 <li><strong>Preview and send.</strong> Check the artwork, partner email button and links in SharePoint’s email preview. Choose Post and send, select your PAM audience and send.</li></ol>
@@ -71,7 +70,7 @@ body.embedded{background:#fff}body.embedded header,body.embedded .links,body.emb
 
 <h3>2. Prepare and send the Outlook email</h3><p>Paste the SharePoint page URL below and download the .eml draft. Open it in Outlook, add your PAM recipients, check the link back to the published page and click Send.</p>
 <label for="published">Published SharePoint page URL</label><input type="url" id="published" placeholder="https://hitachivantara.sharepoint.com/…">
-<div class="actions"><button id="eml">Download Outlook draft (.eml)</button></div></section>
+<div class="actions"><button id="eml">Download Outlook draft (.eml)</button></div></section></div>
 <details><summary>Other outputs</summary><p>Copy plain text for a text-only message, or download HTML to review the formatted article in a browser.</p><div class="actions"><button id="copyPlain">Copy plain text</button><button id="downloadDraft">Download HTML</button><button id="pamLaunchDraft" hidden>Download standalone PMH announcement to PAMs (.eml)</button></div></details>
 <textarea id="manualCopy" aria-label="Text to copy" hidden readonly></textarea>
 </div></section>
@@ -92,7 +91,7 @@ const status=(msg,error=false)=>{$("status").textContent=msg;$("status").classNa
 const link=id=>{const item=state.emails.find(x=>x.id===id);if(item?.assetURL){const u=new URL(HUB,location.href);u.search=new URLSearchParams({source:item.source==="Webinar Hub"?"webinar":"content",title:item.title,description:item.body.slice(0,420),url:item.assetURL});const pmh=campaignFor(item);if(pmh){u.searchParams.set("pmh",pmh);u.searchParams.set("topic",item.topic||item.category)}return u.href}const u=new URL(HUB,location.href);u.searchParams.set("email",id);return u.href};
 const allLink=()=>new URL(HUB,location.href).href;
 const isLegacy=e=>/^(DPAE|HCPO|CMR|CRMR)(?:\b|[\s·-])/i.test(e.title||"");
-function getDate(e){const d=e.addedDate||e.createdDate||e.createdAt;const n=Date.parse(d||"");if(Number.isFinite(n))return n;const m=String(e.id||"").match(/20\d{6}/);return m?Date.parse(m[0].slice(0,4)+"-"+m[0].slice(4,6)+"-"+m[0].slice(6,8))||0:0}
+function getDate(e){const d=e.addedDate||e.createdDate||e.createdAt||e.dateAdded||e.publishedAt||e.date;const n=Date.parse(d||"");if(Number.isFinite(n))return n;const m=String(e.id||"").match(/20\d{6}/);return m?Date.parse(m[0].slice(0,4)+"-"+m[0].slice(4,6)+"-"+m[0].slice(6,8))||0:0}
 function linkedIn(){const v=$("linkedinUrl").value.trim();if(!v)return "";try{const u=new URL(v);if(u.origin==="https://lnkd.in"&&/^\/p\/[a-z0-9_-]+\/?$/i.test(u.pathname))return u.href;return u.protocol==="https:"&&/(^|\.)linkedin\.com$/i.test(u.hostname)&&/\/(posts|feed\/update|pulse)\//.test(u.pathname)?u.href:""}catch(e){return ""}}
 function extract(e){if(e.htmlBody){const d=new DOMParser().parseFromString(e.htmlBody,"text/html");d.querySelectorAll("script,style,head").forEach(x=>x.remove());return (d.body?.textContent||"").replace(/\s+/g," ").trim()}return String(e.body||"").replace(/\s+/g," ").trim()}
 
@@ -299,10 +298,10 @@ function renderEdits(){const root=$("summaries");root.replaceChildren();selected
  fields.forEach(([key,label])=>{const fieldLabel=document.createElement("label");fieldLabel.textContent=label;const ta=document.createElement("textarea");ta.dataset.item=e.id;ta.dataset.field=key;ta.value=edits[key]??defaults[key];ta.setAttribute("aria-label",label+" for "+e.title);ta.style.minHeight="115px";ta.addEventListener("input",()=>{state.sectionEdits[e.id]??={};state.sectionEdits[e.id][key]=ta.value;renderPreview();$("embedFeedback").textContent="";$("embedCode").hidden=true;$("embedCode").value=""});block.append(fieldLabel,ta)});
  root.append(block)
 })}
-function visible(){const q=$("search").value.toLowerCase().trim(),cat=$("category").value;let arr=$("filter").value==="recent"?state.emails.slice(0,20):state.emails;return arr.filter(e=>(!$("campaignFilter").value||($("campaignFilter").value==="linked")===!!campaignFor(e))&&(!cat||e.category===cat)&&(!$("source").value||e.source===$("source").value)&&(!$("region").value||(e.region||"Global")===$("region").value)&&(!q||[e.title,e.category,e.subject,e.kind,e.topic].join(" ").toLowerCase().includes(q)))}
+function visible(){const q=$("search").value.toLowerCase().trim(),cat=$("category").value;return state.emails.filter(e=>(!$("campaignFilter").value||($("campaignFilter").value==="linked")===!!campaignFor(e))&&(!cat||e.category===cat)&&(!$("source").value||e.source===$("source").value)&&(!$("region").value||(e.region||"Global")===$("region").value)&&(!q||[e.title,e.category,e.subject,e.kind,e.topic].join(" ").toLowerCase().includes(q)))}
 function renderChoices(){const list=visible(),root=$("emails");root.replaceChildren();for(const e of list){const label=document.createElement("label");label.className="email-choice";const cb=document.createElement("input");cb.type="checkbox";cb.checked=state.selected.has(e.id);cb.addEventListener("change",()=>{cb.checked?state.selected.add(e.id):state.selected.delete(e.id);renderChoices();update()});const span=document.createElement("span");const strong=document.createElement("strong");strong.textContent=e.title;const small=document.createElement("small");small.textContent=[e.source,e.category,e.region,campaignFor(e)?"PMH campaign linked":""].filter(Boolean).join(" · ");span.append(strong,small);label.append(cb,span);root.append(label)}$("count").textContent=list.length+" shown · "+state.selected.size+" selected · "+state.emails.length+" in Hub";if(!list.length)root.textContent="No matching items. Try another source, region or search term."}
 async function fetchJson(p){const r=await fetch(p+"?v="+Date.now(),{cache:"no-store"});if(!r.ok)throw new Error("Could not load "+p);return r.json()}
-async function refresh(){status("");$("count").textContent="Loading emails…";try{const feeds=await Promise.all([fetchJson("./pam-email-repository.json"),fetchJson("./pam-uploaded-emails.json"),fetchJson("./pam-partner-submissions.json").catch(()=>({emails:[]}))]);const ids=new Set();const catalog=await loadResources();state.emails=[...feeds.flatMap(f=>f.emails||[]).map(e=>({...e,source:"Partner email"})),...catalog].filter(e=>{if(!e.id||!e.subject||!e.title||isLegacy(e)||ids.has(e.id))return false;ids.add(e.id);return true}).sort((a,b)=>getDate(b)-getDate(a)||a.title.localeCompare(b.title));connectCampaigns(state.emails);const previousRegion=$("region").value;$("region").replaceChildren(new Option("All regions",""));for(const r of [...new Set(state.emails.map(e=>e.region||"Global"))].sort())$("region").add(new Option(r,r));$("region").value=previousRegion;const old=$("category").value;const categories=[...new Set(state.emails.map(e=>e.category).filter(Boolean))].sort();$("category").replaceChildren(new Option("All categories",""));for(const x of categories)$("category").add(new Option(x,x));if(categories.includes(old))$("category").value=old;
+async function refresh(){status("");$("count").textContent="Loading emails…";try{const feeds=await Promise.all([fetchJson("./pam-email-repository.json"),fetchJson("./pam-uploaded-emails.json"),fetchJson("./pam-partner-submissions.json").catch(()=>({emails:[]}))]);const ids=new Set();const catalog=await loadResources();state.emails=[...feeds.flatMap(f=>f.emails||[]).map(e=>({...e,source:"Partner Announcement"})),...catalog].filter(e=>{if(!e.id||!e.subject||!e.title||isLegacy(e)||ids.has(e.id))return false;ids.add(e.id);return true}).sort((a,b)=>Number(b.source==="Partner Announcement")-Number(a.source==="Partner Announcement")||getDate(b)-getDate(a)||a.title.localeCompare(b.title));connectCampaigns(state.emails);const previousRegion=$("region").value;$("region").replaceChildren(new Option("All regions",""));for(const r of [...new Set(state.emails.map(e=>e.region||"Global"))].sort())$("region").add(new Option(r,r));$("region").value=previousRegion;const old=$("category").value;const categories=[...new Set(state.emails.map(e=>e.category).filter(Boolean))].sort();$("category").replaceChildren(new Option("All categories",""));for(const x of categories)$("category").add(new Option(x,x));if(categories.includes(old))$("category").value=old;
 if(savedDraft?.ids?.includes(launchId)){
  if(savedDraft.headline==="Ready to send: introduce your partners to the enhanced Partner Marketing Hub")savedDraft.headline="Introduce your partners to the enhanced Partner Marketing Hub: Your Partner Resources";
  if(savedDraft.intro?.startsWith("PAMs, please send the launch email to your partners."))savedDraft.intro=savedDraft.intro.replace("the launch email","the [launch email]("+link(launchId)+")");
@@ -310,7 +309,10 @@ if(savedDraft?.ids?.includes(launchId)){
  if(!savedDraft.pmhRevision&&!savedDraft.linkedinUrl)savedDraft.linkedinUrl=launchSocial;
 }
 if(savedDraft){const ids=new Set(state.emails.map(e=>e.id));state.selected=new Set((savedDraft.ids||[]).filter(x=>ids.has(x)));state.summaryEdits=savedDraft.edits||{};state.sectionEdits=savedDraft.sections||{};for(const x of ["headline","intro","closing","linkedinUrl","featuredLabel1","featuredUrl1","featuredLabel2","featuredUrl2"])if(typeof savedDraft[x]==="string")$(x).value=savedDraft[x]}else{state.selected.forEach(x=>{if(!ids.has(x))state.selected.delete(x)})}
-if(!state.ready&&!savedDraft&&params.get("story")===launchId&&ids.has(launchId))state.selected.add(launchId);
+if(!state.ready&&!savedDraft&&state.emails.length){
+ const requested=params.get("story");
+ state.selected.add(ids.has(requested)?requested:state.emails[0].id);
+}
 state.ready=true;renderChoices();update();if(savedDraft)renderPreview()}catch(e){status("Unable to load email templates: "+e.message,true);$("count").textContent="Loading failed"}}
 async function copyText(s){try{await navigator.clipboard.writeText(s);status("Copied successfully");return true}catch(e){const t=$("manualCopy");t.hidden=false;t.value=s;t.focus();t.select();status("Clipboard blocked in this browser. The content is selected below. Press Ctrl+C to copy.",true);return false}}
 function save(blob,name){const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),30000)}
@@ -326,7 +328,7 @@ function iframe(){if(!selected().length){status("Select at least one email templ
 if($("linkedinUrl").value.trim()&&!linkedIn()){status("That does not look like a LinkedIn post URL. Please check the link.",true);return ""}
 const u=embedURL();if(u.length>12000){status("The embed is too long. Select fewer templates or shorten the optional descriptions.",true);return ""}
 const code='<iframe src="'+esc(u)+'" width="100%" height="1400" style="border:none;width:100%" loading="lazy" title="Hitachi Vantara PAM Email Announcement"></iframe>';$("embedCode").value=code;status("Embed generated. Copy the code below into a SharePoint web page Embed web part.");return code}
-function connect(){for(const id of ["headline","intro","closing","linkedinUrl","featuredLabel1","featuredUrl1","featuredLabel2","featuredUrl2"])$(id).addEventListener("input",()=>{edited.add(id);if(id.startsWith("featured"))featuredAuto=false;renderPreview();$("embedFeedback").textContent="";$("embedCode").hidden=true;$("embedCode").value=""});for(const id of ["filter","category","source","region","campaignFilter"])$(id).addEventListener("change",renderChoices);$("search").addEventListener("input",renderChoices);
+function connect(){for(const id of ["headline","intro","closing","linkedinUrl","featuredLabel1","featuredUrl1","featuredLabel2","featuredUrl2"])$(id).addEventListener("input",()=>{edited.add(id);if(id.startsWith("featured"))featuredAuto=false;renderPreview();$("embedFeedback").textContent="";$("embedCode").hidden=true;$("embedCode").value=""});for(const id of ["category","source","region","campaignFilter"])$(id).addEventListener("change",renderChoices);$("search").addEventListener("input",renderChoices);
 $("selectVisible").onclick=()=>{visible().forEach(e=>state.selected.add(e.id));renderChoices();update()};
 $("clear").onclick=()=>{state.selected.clear();renderChoices();update()};
 $("reload").onclick=refresh;
@@ -506,10 +508,6 @@ async function zipCoverFiles(files){
 }
 
 
-$("copyBuilderFrame").onclick=()=>{
- const url=new URL(location.pathname,location.href);
- copyText('<iframe src="'+esc(url.href)+'" width="100%" height="1500" style="border:0" title="Partner Pulse Post Builder"></iframe>').then(ok=>{if(ok)$("copyBuilderFrame").textContent="Builder iframe copied"});
-};
 connect();refresh();
 })();
 </script></body></html>
