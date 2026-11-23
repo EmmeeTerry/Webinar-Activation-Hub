@@ -88,6 +88,56 @@ const cesPilot={
  addedDate:'2026-11-23',requiresImport:true
 };
 window.__CES_PILOT__=cesPilot;
+// The approved layout is a self-contained copy of the FIXED invitation, not a
+// recreated marketing card. The registration code is intentionally excluded
+// from public GitHub Pages; the user may supply it locally before exporting.
+const cesCodeWrap=document.createElement('div');
+cesCodeWrap.id='cesCodeWrap';
+cesCodeWrap.style.cssText='display:none;margin:10px 0;padding:12px;background:#fff8eb;border:1px solid #e0c48c';
+cesCodeWrap.innerHTML='<label for="cesRegistrationCode" style="font-weight:700">Registration code for CES invitation</label><p class="muted" style="margin:5px 0">Enter the approved complimentary code from the original invitation. It stays in this browser session and is not published to GitHub.</p><input id="cesRegistrationCode" type="text" autocomplete="off" placeholder="Approved event code" style="padding:9px;width:210px;max-width:100%;border:1px solid #aaa"><button type="button" class="btn" id="applyCesCode" style="margin-left:8px">Apply code to invitation</button><div id="cesCodeStatus" role="status" style="font-size:12px;margin-top:5px"></div>';
+byId('edit').insertBefore(cesCodeWrap,byId('edit').firstChild);
+let cesTemplateOriginal='';
+async function loadCesApprovedLayout(){
+ try{
+  const resp=await fetch('./email-assets/ces-2027-invitation-approved-layout.html',{cache:'no-store'});
+  if(!resp.ok)throw Error('HTTP '+resp.status);
+  const html=await resp.text();
+  const documentHtml=new DOMParser().parseFromString(html,'text/html');
+  const imgs=[...documentHtml.querySelectorAll('img[src^="data:image/"]')];
+  if(imgs.length!==4)throw Error('Expected all four original invitation images; found '+imgs.length);
+  const assets=imgs.map((img,index)=>{
+   const dataUrl=img.getAttribute('src');
+   const m=/^data:(image\/(?:png|jpeg|gif|webp));base64,([A-Za-z0-9+/=]+)$/.exec(dataUrl);
+   if(!m)throw Error('Unsupported image '+(index+1));
+   const cid='ces-2027-embedded-'+(index+1)+'@hitachi';
+   return {cid,contentType:m[1],base64:m[2],dataUrl};
+  });
+  cesTemplateOriginal=html;
+  cesPilot.htmlBody=html;
+  cesPilot.embeddedImages=assets;
+  cesPilot.originalHtml=assets.reduce((text,img)=>text.replaceAll(img.dataUrl,'cid:'+img.cid),html);
+  cesPilot.requiresImport=false;
+  cesPilot.status='Branded layout ready · enter registration code';
+  if(selected?.id===CES_ID){choose(cesPilot)}
+  else if(items.some(x=>x.id===CES_ID))render();
+ }catch(error){
+  byId('richMimeStatus').textContent='CES preview could not load: '+String(error.message||error)+'. Import the corrected .EML to load the exact invitation.';
+ }
+}
+function applyCesCode(){
+ const code=byId('cesRegistrationCode').value.trim();
+ if(!code||/[^A-Za-z0-9-]/.test(code)){byId('cesCodeStatus').textContent='Enter a valid approved code from the original invitation.';return}
+ if(!cesTemplateOriginal)return;
+ const html=cesTemplateOriginal.replaceAll('[CODE]',code);
+ cesPilot.htmlBody=html;
+ cesPilot.originalHtml=cesPilot.embeddedImages.reduce((text,img)=>text.replaceAll(img.dataUrl,'cid:'+img.cid),html);
+ cesPilot.codeApplied=true;
+ cesPilot.status='Branded invitation ready to personalize';
+ byId('cesCodeStatus').textContent='Code applied locally. Review the full invitation and export a test draft.';
+ if(selected===cesPilot)choose(cesPilot);
+}
+byId('applyCesCode').addEventListener('click',applyCesCode);
+loadCesApprovedLayout();
 const importAction=document.createElement('button');
 importAction.type='button';importAction.className='btn primary';
 importAction.id='importSelectedInvitation';
@@ -104,8 +154,10 @@ const previousChoose=choose;
 choose=function(item){previousChoose(item);const blocked=!!item.requiresImport;
  importAction.style.display=blocked?'inline-block':'none';
  pendingNote.style.display=blocked?'block':'none';
- byId('eml').disabled=blocked;
+ cesCodeWrap.style.display=item===cesPilot&&!blocked?'block':'none';
+ byId('eml').disabled=blocked||(item===cesPilot&&!cesPilot.codeApplied);
  if(blocked)byId('outlookStatus').textContent='Import the approved CES EML before exporting. The placeholder is not a sendable email.';
+ if(item===cesPilot&&!blocked&&!cesPilot.codeApplied)byId('outlookStatus').textContent='The complete corrected CES design is displayed. Enter the approved registration code before exporting, or import the corrected EML.';
 };
 const imported=new Map();
 byId('richMimeImport').addEventListener('change',async event=>{
