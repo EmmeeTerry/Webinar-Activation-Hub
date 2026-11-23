@@ -8,7 +8,7 @@ const between=(start,end)=>{
   assert(i>=0&&j>i,'Missing MIME source section '+start);
   return src.slice(i,j);
 };
-const mimeCore=between('function partBytes(body,encoding){','const imported=new Map();');
+const mimeCore=between('function partBytes(body,encoding){',"const CES_ID='sales-ces-2027-invitation';");
 const mimeExport=between('function exportMimeWithImages(item){','const oldChoose=choose;');
 let wasEdited=false;
 const bytes=Uint8Array.from([137,80,78,71,13,10,26,10,0,255,100]);
@@ -51,12 +51,15 @@ assert(v2.includes("a==='Both'&&(v==='Sales'||v==='PAM')"),'Both audience should
 assert(v2.includes("['Both','Both']"),'Importer must offer Both as a publishing audience');
 assert(v2.includes("const CES_ID='sales-ces-2027-invitation'"),'CES pilot should appear in the hub');
 assert(v2.includes('loadCesApprovedLayout()'),'CES exact-layout loader must exist');
+assert(!v2.includes('cesRegistrationCode')&&!v2.includes('cesCodeWrap'),'Do not show separate registration-code form');
+assert(v2.includes("get('embed')==='customer'"),'Provide customer-only embed mode');
+assert(v2.includes("'More options (plain text and alternate formats)'"),'Plain text tools belong in advanced disclosure');
 assert(v2.includes("['Sales','To Customer']")&&v2.includes("['PAM','To Partner']"),'Use recipient labels');
 const cesHTML=readFileSync(new URL('../email-assets/ces-2027-invitation-approved-layout.html',import.meta.url),'utf8');
 assert.equal((cesHTML.match(/data:image\/png;base64,/g)||[]).length,4,'Approved invitation must include four embedded images');
 assert(cesHTML.includes('cid:')===false,'CES web preview images must be inline');
-assert(!cesHTML.includes('ECCMc3Oo'),'Do not publicly publish invitation registration code');
-assert(cesHTML.includes('[CODE]'),'Approved code should be supplied privately');
+assert(cesHTML.includes('ECCMc3Oo'),'CES invitation must retain the registration code from the approved original');
+assert(!cesHTML.includes('[CODE]'),'The complete approved invitation should not ask for a separate code');
 assert(hubMarkerPresent(),'CES must be injected after email feeds complete');
 function hubMarkerPresent(){return readFileSync(new URL('../pam-email-hub.html',import.meta.url),'utf8').includes("window.__CES_PILOT__")}
 const catalog=JSON.parse(readFileSync(new URL('../sales-partner-email-catalog.json',import.meta.url),'utf8'));
