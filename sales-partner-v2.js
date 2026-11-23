@@ -231,12 +231,6 @@ byId('copy').textContent='Copy formatted email';
 byId('copy').title='Paste into Outlook, then check images and spacing before sending';
 byId('copy').classList.remove('primary');
 byId('reset').textContent='Reset';
-const userGuidance=document.createElement('p');
-userGuidance.className='muted';
-userGuidance.style.cssText='font-size:12px;margin:6px 0 12px';
-userGuidance.textContent='';
-actions.after(userGuidance);
-
 // Email-first editor: prioritize actual content rather than repeating help above it.
 const emailEditor=byId('edit');
 const subjectLabel=emailEditor.querySelector('label[for="subject"]');
