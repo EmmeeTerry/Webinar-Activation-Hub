@@ -7,6 +7,7 @@ on:
       - 'content-hub.html'
       - 'sales-partner-email-catalog.json'
       - 'tests/sales-partner-v2-smoke.mjs'
+      - 'tests/sales-partner-e2e.mjs'
       - '.github/workflows/sales-partner-v2-validation.yml'
   pull_request:
     paths:
@@ -30,3 +31,11 @@ jobs:
         run: node --check sales-partner-v2.js
       - name: Test embedded image MIME round trip and hub integration
         run: node tests/sales-partner-v2-smoke.mjs
+      - name: Install browser test dependencies
+        run: |
+          npm install --no-save playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Exercise real browser email workflows
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/email-hub-server.log 2>&1 &
+          node tests/sales-partner-e2e.mjs
