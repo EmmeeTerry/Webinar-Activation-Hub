@@ -51,12 +51,13 @@ assert(v2.includes("a==='Both'&&(v==='Sales'||v==='PAM')"),'Both audience should
 assert(v2.includes("['Both','Both']"),'Importer must offer Both as a publishing audience');
 assert(v2.includes("const CES_ID='sales-ces-2027-invitation'"),'CES pilot should appear in the hub');
 assert(v2.includes('loadCesApprovedLayout()'),'CES exact-layout loader must exist');
-assert(v2.includes("actions.after(quickTools,sendStatus,subjectLabel,emailSubject,emailPreview,plainFields,help)"),'Compact translation and contact personalization controls precede subject and email preview');
+assert(v2.includes("actions.after(quickTools,sendStatus,subjectLabel,emailSubject,emailPreview,plainFields,help)"),'Contact-list personalization precedes subject and email preview');
 assert(v2.includes("helpTitle.textContent='More tools and help'"),'Extra help is collapsed');
 assert(v2.includes("leadSummary.textContent='Personalize from contact list'"),'Contact-list personalization must be visible in top controls');
 assert(v2.includes("byId('copy').remove()"),'Unreliable formatted copy must be removed in embedded SharePoint');
 assert(!v2.includes("byId('copy').hidden=false"),'Do not expose blocked clipboard action');
-assert(v2.includes("translation.querySelector('summary').textContent='Translate'"),'Translate must be visible in top controls');
+assert(!v2.includes("const translation=byId('translatePanel')"),'Unavailable translation must not be rendered');
+assert(!hubCode.includes("window.Translator"),'Experimental browser translation code must be removed');
 const hubCode=readFileSync(new URL('../pam-email-hub.html',import.meta.url),'utf8');
 assert(hubCode.includes("node.nodeValue=repl(node.nodeValue)"),'CSV personalization must update rich HTML text');
 assert(hubCode.includes("frame.dataset.edited='yes'"),'HTML personalizations must be included in exported EML');
