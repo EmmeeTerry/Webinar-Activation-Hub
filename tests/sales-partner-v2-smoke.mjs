@@ -56,7 +56,7 @@ assert(v2.includes('loadCesApprovedLayout()'),'CES exact-layout loader must exis
 assert(v2.includes("emailEditor.append(editHeading,editIntro,quickTools,subjectLabel,emailSubject,emailPreview,plainFields,sendHeading,compactHelp,actions,sendStatus,help)"),'Editor precedes Outlook send actions');
 assert(v2.includes("helpTitle.textContent='More tools and help'"),'Extra help is collapsed');
 assert(v2.includes("leadSummary.textContent='Personalize from contact list'"),'Contact-list personalization must be visible in top controls');
-assert(v2.includes("formattedCopyButton.textContent='Copy formatted email'"),'Restore formatted copy UI');
+assert(v2.includes("formattedCopyButton.textContent='Copy email body for Outlook'"),'Restore formatted copy UI');
 assert(v2.includes('browserSelectAndCopy'),'Copy must have a browser selection fallback');
 assert(!v2.includes("byId('copy').hidden=false"),'Do not expose blocked clipboard action');
 assert(v2.includes("translationDisclosure.id='translateOptions'"),'Restore translation controls with fallback');

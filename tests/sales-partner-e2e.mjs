@@ -30,7 +30,7 @@ try{
 
  // Translation worksheet can be completed outside the browser and reimported
  // without converting the email to plain text or stripping embedded images.
- await page.locator('#translateOptions summary').click();
+ await page.locator('#translateOptions > summary').click();
  await page.getByText('Use a translator or translation tool instead',{exact:true}).click();
  const [worksheet]=await Promise.all([page.waitForEvent('download'),page.getByRole('button',{name:'Download translation worksheet'}).click()]);
  const text=await readFile(await worksheet.path(),'utf8');
@@ -60,7 +60,8 @@ try{
  assert(await webOpen.isVisible(),'Open Outlook web action should be visible beside Copy');
  assert(await desktopOpen.isVisible(),'Open default desktop email app should be visible');
  assert((await webOpen.getAttribute('href')).startsWith('https://outlook.office.com/mail/deeplink/compose?subject='));
- assert((await desktopOpen.getAttribute('href')).startsWith('mailto:?subject='));
+ assert.equal(new URL(await webOpen.getAttribute('href')).searchParams.get('to'),'alex@example.com');
+ assert(decodeURIComponent(await desktopOpen.getAttribute('href')).startsWith('mailto:alex@example.com?subject='));
  await page.locator('#subject').fill('Personalized CES invitation');
  assert((await webOpen.getAttribute('href')).includes('Personalized%20CES%20invitation'),'Outlook link should follow edited subject');
  console.log('PASS: Outlook web and desktop compose links are visible and use the edited subject');

@@ -185,7 +185,7 @@ function exportMimeWithImages(item){
  return lines.join('\r\n');
 }
 const oldChoose=choose;
-choose=function(item){oldChoose(item);byId('eml').textContent='Download formatted Outlook email';};
+choose=function(item){oldChoose(item);outlookComposeUrls();byId('eml').textContent='Download formatted Outlook email';};
 downloadFormattedOutlook=function(){
  if(!selected?.embeddedImages?.length)return originalExport();
  const blob=exportMimeWithImages(selected);
@@ -230,7 +230,7 @@ byId('eml').textContent='Download formatted Outlook email';
 // selection/copy before offering a full-size browser-tab fallback.
 const formattedCopyButton=byId('copy');
 formattedCopyButton.hidden=false;
-formattedCopyButton.textContent='Copy formatted email';
+formattedCopyButton.textContent='Copy email body for Outlook';
 formattedCopyButton.title='Copy the formatted message, or open it in a separate tab if your browser restricts copying';
 formattedCopyButton.classList.remove('primary');
 
@@ -252,18 +252,21 @@ openDesktopEmail.title='Open your default installed email app with a blank messa
 openDesktopEmail.style.cssText='display:inline-flex;align-items:center;text-decoration:none';
 function outlookComposeUrls(){
  const subject=byId('subject').value.trim();
- openOutlookWeb.href='https://outlook.office.com/mail/deeplink/compose?subject='+encodeURIComponent(subject);
- openDesktopEmail.href='mailto:?subject='+encodeURIComponent(subject);
+ const recipient=selectedContactEmail();
+ openOutlookWeb.href='https://outlook.office.com/mail/deeplink/compose?subject='+encodeURIComponent(subject)+(recipient?'&to='+encodeURIComponent(recipient):'');
+ openDesktopEmail.href='mailto:'+encodeURIComponent(recipient)+'?subject='+encodeURIComponent(subject);
 }
 outlookComposeUrls();
 byId('subject').addEventListener('input',outlookComposeUrls);
+byId('leadSelect').addEventListener('change',outlookComposeUrls);
+for(const action of [openOutlookWeb,openDesktopEmail])action.addEventListener('click',outlookComposeUrls);
 actions.insertBefore(openOutlookWeb,byId('reset'));
 actions.insertBefore(openDesktopEmail,byId('reset'));
 const compactHelp=document.createElement('p');
 compactHelp.id='emailActionHelp';
 compactHelp.className='muted';
 compactHelp.style.cssText='margin:3px 0 9px;font-size:12px;line-height:1.4';
-compactHelp.textContent='Download the email and open the file in Outlook, or choose Copy formatted email to copy the message body. Then open Outlook below, paste above your signature (Ctrl+V or Command+V), add recipients, review and send.';
+compactHelp.textContent='Download the email and open the file in Outlook, or choose Copy email body for Outlook to copy the message body. Then open Outlook below, paste above your signature (Ctrl+V or Command+V), add recipients, review and send.';
 
 function safeRichDocument(){
  const source=selected?.htmlBody ? (currentRichHtml()||selected.htmlBody) : linkedEmailHtml();
@@ -312,7 +315,8 @@ function copyFormattedFallback(){
  const info=popup.document.createElement('span');
  info.textContent='If copying is blocked, select the email below and press Ctrl+C (Windows) or Command+C (Mac).';
  const outlookLink=popup.document.createElement('a');
- outlookLink.href='https://outlook.office.com/mail/deeplink/compose?subject='+encodeURIComponent(byId('subject').value.trim());
+ outlookComposeUrls();
+ outlookLink.href=openOutlookWeb.href;
  outlookLink.target='_blank';outlookLink.rel='noopener noreferrer';
  outlookLink.textContent='Open Outlook (web)';
  outlookLink.style.cssText='display:inline-block;background:#f6f6f6;color:#333;text-decoration:none;padding:9px 12px;border:1px solid #aaa;margin-right:10px';
