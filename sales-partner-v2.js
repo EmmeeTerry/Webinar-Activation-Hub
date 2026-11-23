@@ -26,6 +26,7 @@ byId('clearFilters').addEventListener('click',()=>{filter.value='All';applyFilte
 const pageTitle=document.querySelector('header h1');if(pageTitle)pageTitle.textContent='Sales & Partner Email Hub';
 const eyebrow=document.querySelector('header .eyebrow');if(eyebrow)eyebrow.textContent='HITACHI VANTARA / SALES & PARTNER PROGRAMS';
 const editorLabel=document.querySelector('.editor .kicker');if(editorLabel)editorLabel.textContent='SALES & PARTNER COMMUNICATION';
+const guideLink=document.createElement('a');guideLink.href='./sales-partner-email-quick-start.html';guideLink.textContent='How to use this Hub';guideLink.target='_blank';guideLink.rel='noopener noreferrer';guideLink.className='header-text-link';const navLinks=document.querySelector('header .head-actions');if(navLinks)navLinks.prepend(guideLink);
 const hint=document.createElement('section');hint.className='panel';hint.style.cssText='margin:0 0 14px;padding:13px 17px;background:#fff';
 hint.innerHTML='<strong>Bring your own approved email</strong><p class="muted" style="margin:5px 0">Already have a branded invitation? Import it to personalize and prepare a formatted Outlook email.</p><label for="richMimeImport" class="btn" style="display:inline-block;cursor:pointer">Import formatted invitation</label><input id="richMimeImport" type="file" accept=".eml,.emltpl,message/rfc822" style="position:absolute;width:1px;height:1px;opacity:0"><p id="richMimeStatus" class="muted" role="status" style="margin:8px 0 0"></p>';
 document.querySelector('main').insertBefore(hint,document.querySelector('.layout'));
@@ -183,7 +184,7 @@ function exportMimeWithImages(item){
  return lines.join('\r\n');
 }
 const oldChoose=choose;
-choose=function(item){oldChoose(item);byId('eml').textContent=item?.embeddedImages?.length?'Download Outlook email with embedded images (.eml)':'Download formatted Outlook email (.eml)';};
+choose=function(item){oldChoose(item);byId('eml').textContent='Download formatted Outlook email';};
 downloadFormattedOutlook=function(){
  if(!selected?.embeddedImages?.length)return originalExport();
  const blob=exportMimeWithImages(selected);
@@ -238,6 +239,7 @@ actions.after(userGuidance);
 const embedCustomer=new URLSearchParams(location.search).get('embed')==='customer';
 if(embedCustomer){
  filter.value='Sales';
+ byId('clearFilters').addEventListener('click',()=>{filter.value='Sales';applyFilters()});
  filter.disabled=true;
  label.hidden=true;
  filter.hidden=true;
