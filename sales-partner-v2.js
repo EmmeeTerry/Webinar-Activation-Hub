@@ -17,6 +17,8 @@ const filter=document.createElement('select');filter.id='audienceFilter';filter.
 sidebar.parentElement.insertBefore(label,sidebar);
 sidebar.parentElement.insertBefore(filter,sidebar);
 filter.addEventListener('change',applyFilters);
+const requestedAudience=new URLSearchParams(location.search).get('audience');
+if(['Sales','PAM','Both'].includes(requestedAudience))filter.value=requestedAudience;
 byId('clearFilters').addEventListener('click',()=>{filter.value='All';applyFilters()});
 const pageTitle=document.querySelector('header h1');if(pageTitle)pageTitle.textContent='Sales & Partner Email Hub';
 const eyebrow=document.querySelector('header .eyebrow');if(eyebrow)eyebrow.textContent='HITACHI VANTARA / SALES & PARTNER PROGRAMS';
