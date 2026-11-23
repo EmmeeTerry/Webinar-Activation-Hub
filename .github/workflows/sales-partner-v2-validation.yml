@@ -19,7 +19,7 @@ on:
       - '.github/workflows/sales-partner-v2-validation.yml'
 jobs:
   smoke:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     permissions:
       contents: read
     steps:
