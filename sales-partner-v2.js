@@ -13,11 +13,12 @@ const showAudience=item=>{
 };
 matches=function(){return originalMatches().filter(showAudience)};
 const sidebar=byId('categoryFilter');
-const label=document.createElement('label');label.htmlFor='audienceFilter';label.textContent='Audience';
+const label=document.createElement('label');label.htmlFor='audienceFilter';label.textContent='Recipient audience';
 const filter=document.createElement('select');filter.id='audienceFilter';filter.className='search';
 [['All','All emails'],['Sales','To Customer'],['PAM','To Partner'],['Both','Both']].forEach(([value,name])=>filter.add(new Option(name,value)));
-sidebar.parentElement.insertBefore(label,sidebar);
-sidebar.parentElement.insertBefore(filter,sidebar);
+const categoryLabel=sidebar.parentElement.querySelector('label[for="categoryFilter"]');
+sidebar.parentElement.insertBefore(label,categoryLabel);
+sidebar.parentElement.insertBefore(filter,categoryLabel);
 filter.addEventListener('change',applyFilters);
 const requestedAudience=new URLSearchParams(location.search).get('audience');
 if(['Sales','PAM','Both'].includes(requestedAudience))filter.value=requestedAudience;
@@ -26,14 +27,14 @@ const pageTitle=document.querySelector('header h1');if(pageTitle)pageTitle.textC
 const eyebrow=document.querySelector('header .eyebrow');if(eyebrow)eyebrow.textContent='HITACHI VANTARA / SALES & PARTNER PROGRAMS';
 const editorLabel=document.querySelector('.editor .kicker');if(editorLabel)editorLabel.textContent='SALES & PARTNER COMMUNICATION';
 const hint=document.createElement('section');hint.className='panel';hint.style.cssText='margin:0 0 14px;padding:13px 17px;background:#fff';
-hint.innerHTML='<strong>Rich-format invitations</strong><p class="muted" style="margin:5px 0">Pilot: Hitachi at CES 2027. Import the approved .EML or .EMLTPL from your computer to preview, personalize, and export an Outlook draft with its embedded images intact. The file remains on your device and is not published in this public repository.</p><label for="richMimeImport" class="btn primary" style="display:inline-block;cursor:pointer">Import branded invitation (.eml / .emltpl)</label><input id="richMimeImport" type="file" accept=".eml,.emltpl,message/rfc822" style="position:absolute;width:1px;height:1px;opacity:0"><p id="richMimeStatus" class="muted" role="status" style="margin:8px 0 0"></p>';
+hint.innerHTML='<strong>Bring your own approved email</strong><p class="muted" style="margin:5px 0">Already have a branded invitation? Import it to personalize and prepare a formatted Outlook email.</p><label for="richMimeImport" class="btn" style="display:inline-block;cursor:pointer">Import formatted invitation</label><input id="richMimeImport" type="file" accept=".eml,.emltpl,message/rfc822" style="position:absolute;width:1px;height:1px;opacity:0"><p id="richMimeStatus" class="muted" role="status" style="margin:8px 0 0"></p>';
 document.querySelector('main').insertBefore(hint,document.querySelector('.layout'));
 const audienceLabel=document.createElement('label');audienceLabel.htmlFor='importAudience';audienceLabel.textContent='Who is this email for?';audienceLabel.style.cssText='display:block;margin-top:14px;font-weight:700';
 const importAudience=document.createElement('select');importAudience.id='importAudience';importAudience.style.cssText='display:block;padding:9px;margin:6px 0 10px;border:1px solid #aaa;max-width:260px;width:100%';
 [['Sales','To Customer'],['PAM','To Partner'],['Both','Both']].forEach(([value,name])=>importAudience.add(new Option(name,value)));
 hint.append(audienceLabel,importAudience);
 const resourceJump=document.createElement('p');resourceJump.className='muted';resourceJump.style.cssText='margin:6px 0;font-size:12px';
-resourceJump.innerHTML='<a href="./content-hub.html" target="_blank" rel="noopener noreferrer">Browse the Content Library</a> for assets to share. Approved email templates can also be opened directly with <code>?email=template-id</code>.';
+resourceJump.innerHTML='<a href="./content-hub.html" target="_blank" rel="noopener noreferrer">Browse the Content Library</a> for related assets and outreach.';
 hint.append(resourceJump);
 // Decode RFC 2045 quoted printable and base64, keeping Windows-1252 HTML intact.
 function partBytes(body,encoding){
@@ -88,15 +89,6 @@ const cesPilot={
  addedDate:'2026-11-23',requiresImport:true
 };
 window.__CES_PILOT__=cesPilot;
-// The approved layout is a self-contained copy of the FIXED invitation, not a
-// recreated marketing card. The registration code is intentionally excluded
-// from public GitHub Pages; the user may supply it locally before exporting.
-const cesCodeWrap=document.createElement('div');
-cesCodeWrap.id='cesCodeWrap';
-cesCodeWrap.style.cssText='display:none;margin:10px 0;padding:12px;background:#fff8eb;border:1px solid #e0c48c';
-cesCodeWrap.innerHTML='<label for="cesRegistrationCode" style="font-weight:700">Registration code for CES invitation</label><p class="muted" style="margin:5px 0">Enter the approved complimentary code from the original invitation. It stays in this browser session and is not published to GitHub.</p><input id="cesRegistrationCode" type="text" autocomplete="off" placeholder="Approved event code" style="padding:9px;width:210px;max-width:100%;border:1px solid #aaa"><button type="button" class="btn" id="applyCesCode" style="margin-left:8px">Apply code to invitation</button><div id="cesCodeStatus" role="status" style="font-size:12px;margin-top:5px"></div>';
-byId('edit').insertBefore(cesCodeWrap,byId('edit').firstChild);
-let cesTemplateOriginal='';
 async function loadCesApprovedLayout(){
  try{
   const resp=await fetch('./email-assets/ces-2027-invitation-approved-layout.html',{cache:'no-store'});
@@ -112,31 +104,17 @@ async function loadCesApprovedLayout(){
    const cid='ces-2027-embedded-'+(index+1)+'@hitachi';
    return {cid,contentType:m[1],base64:m[2],dataUrl};
   });
-  cesTemplateOriginal=html;
   cesPilot.htmlBody=html;
   cesPilot.embeddedImages=assets;
   cesPilot.originalHtml=assets.reduce((text,img)=>text.replaceAll(img.dataUrl,'cid:'+img.cid),html);
   cesPilot.requiresImport=false;
-  cesPilot.status='Branded layout ready · enter registration code';
+  cesPilot.status='Branded invitation ready';
   if(selected?.id===CES_ID){choose(cesPilot)}
   else if(items.some(x=>x.id===CES_ID))render();
  }catch(error){
   byId('richMimeStatus').textContent='CES preview could not load: '+String(error.message||error)+'. Import the corrected .EML to load the exact invitation.';
  }
 }
-function applyCesCode(){
- const code=byId('cesRegistrationCode').value.trim();
- if(!code||/[^A-Za-z0-9-]/.test(code)){byId('cesCodeStatus').textContent='Enter a valid approved code from the original invitation.';return}
- if(!cesTemplateOriginal)return;
- const html=cesTemplateOriginal.replaceAll('[CODE]',code);
- cesPilot.htmlBody=html;
- cesPilot.originalHtml=cesPilot.embeddedImages.reduce((text,img)=>text.replaceAll(img.dataUrl,'cid:'+img.cid),html);
- cesPilot.codeApplied=true;
- cesPilot.status='Branded invitation ready to personalize';
- byId('cesCodeStatus').textContent='Code applied locally. Review the full invitation and export a test draft.';
- if(selected===cesPilot)choose(cesPilot);
-}
-byId('applyCesCode').addEventListener('click',applyCesCode);
 loadCesApprovedLayout();
 const importAction=document.createElement('button');
 importAction.type='button';importAction.className='btn primary';
@@ -148,16 +126,15 @@ importAction.addEventListener('click',()=>byId('richMimeImport').click());
 const pendingNote=document.createElement('p');pendingNote.id='pendingRichSource';
 pendingNote.setAttribute('role','status');pendingNote.className='muted';
 pendingNote.style.cssText='font-size:13px;display:none';
-pendingNote.textContent='The CES template is listed, but its complete branded email and embedded images must be loaded from the approved EML file. This is a public GitHub Pages site, so the invitation was not published here.';
+pendingNote.textContent='The formatted invitation is loading. If it does not appear, select Import invitation to use a saved copy.';
 importAction.after(pendingNote);
 const previousChoose=choose;
 choose=function(item){previousChoose(item);const blocked=!!item.requiresImport;
  importAction.style.display=blocked?'inline-block':'none';
  pendingNote.style.display=blocked?'block':'none';
- cesCodeWrap.style.display=item===cesPilot&&!blocked?'block':'none';
- byId('eml').disabled=blocked||(item===cesPilot&&!cesPilot.codeApplied);
+ byId('eml').disabled=blocked;
  if(blocked)byId('outlookStatus').textContent='Import the approved CES EML before exporting. The placeholder is not a sendable email.';
- if(item===cesPilot&&!blocked&&!cesPilot.codeApplied)byId('outlookStatus').textContent='The complete corrected CES design is displayed. Enter the approved registration code before exporting, or import the corrected EML.';
+ if(item===cesPilot&&!blocked)byId('outlookStatus').textContent='The formatted invitation is ready. Personalize it and download your Outlook email.';
 };
 const imported=new Map();
 byId('richMimeImport').addEventListener('change',async event=>{
@@ -215,5 +192,52 @@ downloadFormattedOutlook=function(){
 };
 byId('eml').onclick=()=>downloadFormattedOutlook();
 byId('richMimeImport').setAttribute('aria-label','Import a formatted EML or EMLTPL invitation');
+
+// Keep the main actions simple. Plain-text and compatibility exports remain available
+// under a collapsed menu rather than next to the recommended formatted actions.
+const actions=byId('eml').closest('.actions');
+const advanced=document.createElement('details');
+advanced.id='advancedEmailOptions';
+advanced.className='advanced-email-options';
+advanced.style.cssText='width:100%;padding:8px 10px;border:1px solid #dfe1e5;border-radius:4px;background:#fafafa';
+const summary=document.createElement('summary');
+summary.textContent='More options (plain text and alternate formats)';
+summary.style.cssText='cursor:pointer;font-size:12px;font-weight:600;color:#555';
+const advancedButtons=document.createElement('div');
+advancedButtons.className='actions';
+advancedButtons.style.cssText='margin:10px 0 2px;gap:8px';
+for(const id of ['outlookWeb','defaultMail','copyEmail','word','macTemplate','macHtml']){
+ const btn=byId(id);
+ if(btn)advancedButtons.appendChild(btn);
+}
+advanced.append(summary,advancedButtons);
+actions.appendChild(advanced);
+byId('eml').textContent='Download formatted Outlook email';
+byId('copy').hidden=false;
+byId('copy').textContent='Copy formatted email';
+byId('copy').title='Paste into Outlook, then check images and spacing before sending';
+byId('copy').classList.remove('primary');
+byId('reset').textContent='Reset';
+const userGuidance=document.createElement('p');
+userGuidance.className='muted';
+userGuidance.style.cssText='font-size:12px;margin:6px 0 12px';
+userGuidance.textContent='For the most reliable branded layout, use Download formatted Outlook email. Open it in Outlook for Mac or Windows, personalize, check images and links, then send. Nothing sends automatically.';
+actions.after(userGuidance);
+// For SharePoint: a compact, customer-only view, with locked recipient filter.
+const embedCustomer=new URLSearchParams(location.search).get('embed')==='customer';
+if(embedCustomer){
+ filter.value='Sales';
+ filter.disabled=true;
+ label.hidden=true;
+ filter.hidden=true;
+ hint.hidden=true;
+ const css=document.createElement('style');
+ css.textContent='header,.contribute-jump,.submission-section,.gcrh-shared-footer,.top{display:none!important}main{margin:0 auto;padding:8px;max-width:1200px}.layout{grid-template-columns:minmax(225px,280px) minmax(0,1fr);gap:12px}.side h2{font-size:16px}.editor{min-width:0}body{background:white}@media(max-width:700px){.layout{grid-template-columns:1fr}}';
+ document.head.append(css);
+ const requested=new URL(location.href);
+ requested.searchParams.set('audience','Sales');
+ history.replaceState(null,'',requested.pathname+requested.search+requested.hash);
+}
+
 // Existing plain-text emails stay with the previous renderer/exporter.
 })();
