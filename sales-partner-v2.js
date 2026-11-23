@@ -70,6 +70,37 @@ function decodeHeader(value){
   }catch{return payload}
  }).replace(/\r?\n[ \t]+/g,' ');
 }
+// Always-visible CES pilot listing. Actual invitation payload is imported from an approved file,
+// never published to this public GitHub Pages repository.
+const CES_ID='sales-ces-2027-invitation';
+const cesPilot={
+ id:CES_ID,title:'Hitachi at CES 2027 | Customer invitation',
+ subject:'You’re invited: Hitachi at CES 2027 | January 6–9, Las Vegas',
+ body:'CES 2027 | January 6–9 | Las Vegas Convention Center, North Hall, Booth 11116.\n\nSelect Import approved CES invitation to load the complete branded email, including images, links, registration instructions, and meeting call-to-action. Do not send this placeholder.',
+ audience:'Sales',category:'Event invitation',region:'Global',
+ objective:'Customer and prospect invitation',status:'Import approved .EML to activate',
+ addedDate:'2026-11-23',requiresImport:true
+};
+items.unshift(cesPilot);
+const importAction=document.createElement('button');
+importAction.type='button';importAction.className='btn primary';
+importAction.id='importSelectedInvitation';
+importAction.textContent='Import approved CES invitation (.eml)';
+importAction.style.cssText='margin:10px 0;display:none';
+byId('edit').insertBefore(importAction,byId('edit').firstChild);
+importAction.addEventListener('click',()=>byId('richMimeImport').click());
+const pendingNote=document.createElement('p');pendingNote.id='pendingRichSource';
+pendingNote.setAttribute('role','status');pendingNote.className='muted';
+pendingNote.style.cssText='font-size:13px;display:none';
+pendingNote.textContent='The CES template is listed, but its complete branded email and embedded images must be loaded from the approved EML file. This is a public GitHub Pages site, so the invitation was not published here.';
+importAction.after(pendingNote);
+const previousChoose=choose;
+choose=function(item){previousChoose(item);const blocked=!!item.requiresImport;
+ importAction.style.display=blocked?'inline-block':'none';
+ pendingNote.style.display=blocked?'block':'none';
+ byId('eml').disabled=blocked;
+ if(blocked)byId('outlookStatus').textContent='Import the approved CES EML before exporting. The placeholder is not a sendable email.';
+};
 const imported=new Map();
 byId('richMimeImport').addEventListener('change',async event=>{
  const status=byId('richMimeStatus');
@@ -93,8 +124,8 @@ byId('richMimeImport').addEventListener('change',async event=>{
   for(const im of images)preview=preview.replaceAll('cid:'+im.cid,im.dataUrl);
   preview=fullPreservedEmail(preview); // safe preview, while exact original HTML is kept for export
   const subject=decodeHeader(header(first,'Subject'))||'Branded email invitation';
-  const item={id:'imported-rich-'+Date.now(),title:subject,subject,body:(parts.find(p=>/^text\/plain\b/i.test(p.contentType))?decodeText(parts.find(p=>/^text\/plain\b/i.test(p.contentType))):'').trim(),htmlBody:preview,category:'Event Invitation',region:'Global',audience:'Sales',objective:'Event invitation',status:'Local pilot · not published',addedDate:new Date().toISOString(),embeddedImages:images,originalHtml};
-  imported.set(item.id,item);items.unshift(item);choose(item);
+  const isCES=/\bCES\s*2027\b/i.test(subject);\n  const item={id:isCES?CES_ID:'imported-rich-'+Date.now(),title:isCES?cesPilot.title:subject,subject,body:(parts.find(p=>/^text\/plain\b/i.test(p.contentType))?decodeText(parts.find(p=>/^text\/plain\b/i.test(p.contentType))):'').trim(),htmlBody:preview,category:'Event Invitation',region:'Global',audience:'Sales',objective:'Event invitation',status:'Branded invitation loaded locally',addedDate:new Date().toISOString(),embeddedImages:images,originalHtml};
+  imported.set(item.id,item);const oldIndex=items.findIndex(x=>x.id===item.id);if(oldIndex>=0)items.splice(oldIndex,1);items.unshift(item);choose(item);
   filter.value='Sales';byId('categoryFilter').value='';byId('regionFilter').value='';byId('search').value='';render();
   status.textContent='Imported '+file.name+' with '+images.length+' embedded image(s). Review the preview and links, then export the formatted .EML. This template is available only in this browser session.';
  }catch(e){status.textContent='Could not import invitation: '+String(e.message||e)}
