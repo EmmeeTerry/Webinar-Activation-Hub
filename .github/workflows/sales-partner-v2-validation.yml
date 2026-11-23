@@ -1,0 +1,32 @@
+name: Sales & Partner Email Hub v2 validation
+on:
+  push:
+    paths:
+      - 'sales-partner-v2.js'
+      - 'pam-email-hub.html'
+      - 'content-hub.html'
+      - 'sales-partner-email-catalog.json'
+      - 'tests/sales-partner-v2-smoke.mjs'
+      - '.github/workflows/sales-partner-v2-validation.yml'
+  pull_request:
+    paths:
+      - 'sales-partner-v2.js'
+      - 'pam-email-hub.html'
+      - 'content-hub.html'
+      - 'sales-partner-email-catalog.json'
+      - 'tests/sales-partner-v2-smoke.mjs'
+      - '.github/workflows/sales-partner-v2-validation.yml'
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check source syntax
+        run: node --check sales-partner-v2.js
+      - name: Test embedded image MIME round trip and hub integration
+        run: node tests/sales-partner-v2-smoke.mjs
