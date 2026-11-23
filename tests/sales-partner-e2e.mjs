@@ -5,7 +5,7 @@ const url='http://127.0.0.1:8765/pam-email-hub.html?email=sales-ces-2027-invitat
 const browser=await chromium.launch({headless:true,channel:'chrome'});
 const context=await browser.newContext({acceptDownloads:true});
 const page=await context.newPage();
-page.on('pageerror',e=>console.error('BROWSER ERROR:',e.message));
+page.on('pageerror',e=>console.error('BROWSER ERROR:',e.stack||e.message));
 page.on('console',m=>{if(m.type()==='error')console.error('BROWSER CONSOLE:',m.text())});
 try{
  await page.goto(url,{waitUntil:'domcontentloaded'});
