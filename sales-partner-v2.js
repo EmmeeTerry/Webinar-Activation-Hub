@@ -226,10 +226,9 @@ for(const id of ['outlookWeb','defaultMail','copyEmail','word','macTemplate','ma
 advanced.append(summary,advancedButtons);
 actions.appendChild(advanced);
 byId('eml').textContent='Download formatted Outlook email';
-byId('copy').hidden=false;
-byId('copy').textContent='Copy formatted email';
-byId('copy').title='Paste into Outlook, then check images and spacing before sending';
-byId('copy').classList.remove('primary');
+// Clipboard writes are blocked by SharePoint's embedded-frame permissions.
+ // Remove this unreliable action; formatted EML download is the supported path.
+byId('copy').remove();
 byId('reset').textContent='Reset';
 // Email-first editor: prioritize actual content rather than repeating help above it.
 const emailEditor=byId('edit');
