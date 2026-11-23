@@ -45,6 +45,13 @@ const updatedParts=parseMime(updated);
 assert(decodeText(updatedParts[0]).includes('Personalized'),'Edited text should survive');
 assert(decodeText(updatedParts[0]).includes('cid:hero@test'),'Edited HTML should link to embedded image by CID');
 assert(!decodeText(updatedParts[0]).includes('data:image/png;base64,'),'Data URLs should not remain in exported HTML');
+// Audience coverage: a Both email appears in Customers, Partners, Both and All.
+const v2=readFileSync(new URL('../sales-partner-v2.js',import.meta.url),'utf8');
+assert(v2.includes("a==='Both'&&(v==='Sales'||v==='PAM')"),'Both audience should be included in customer and partner views');
+assert(v2.includes("['Both','Both: Customers and Partners']"),'Importer must offer Both as a publishing audience');
+assert(v2.includes("const CES_ID='sales-ces-2027-invitation'"),'CES pilot should appear in the hub');
+assert(hubMarkerPresent(),'CES must be injected after email feeds complete');
+function hubMarkerPresent(){return readFileSync(new URL('../pam-email-hub.html',import.meta.url),'utf8').includes("window.__CES_PILOT__")}
 const catalog=JSON.parse(readFileSync(new URL('../sales-partner-email-catalog.json',import.meta.url),'utf8'));
 assert(Array.isArray(catalog.emails));
 assert(catalog.emails.every(x=>x.approvalStatus==='Approved'&&['Sales','PAM','Both'].includes(x.audience)));
