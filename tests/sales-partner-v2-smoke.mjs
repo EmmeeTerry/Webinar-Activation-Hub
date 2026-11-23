@@ -65,5 +65,5 @@ assert(catalog.emails.every(x=>x.approvalStatus==='Approved'&&['Sales','PAM','Bo
 const hub=readFileSync(new URL('../pam-email-hub.html',import.meta.url),'utf8');
 assert(hub.includes('sales-partner-v2.js')&&hub.includes('sales-partner-email-catalog.json'));
 const library=readFileSync(new URL('../content-hub.html',import.meta.url),'utf8');
-assert(library.includes('Create Sales Email')&&library.includes('Create PAM-to-Partner Email'));
+assert(library.includes('Use Email: To Customer')&&library.includes('Use Email: To Partner'));
 console.log('PASS: MIME import / CID image round-trip / edited export / approval catalog / hub integration');
