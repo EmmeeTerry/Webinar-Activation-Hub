@@ -177,7 +177,7 @@ function exportMimeWithImages(item){
  // For exact visual fidelity, do not add the standard navigation header/footer to imported invitations.
  const related='=_RichImages_'+Date.now();
  const utf8=new TextEncoder();
- const lines=['MIME-Version: 1.0','X-Unsent: 1','Subject: =?UTF-8?B?'+encode64(utf8.encode(subject))+'?=','Content-Type: multipart/related; boundary="'+related+'"','','--'+related,'Content-Type: text/html; charset=UTF-8','Content-Transfer-Encoding: base64','',folded64(utf8.encode(html))];
+ const lines=['MIME-Version: 1.0','X-Unsent: 1',...(selectedContactEmail()?['To: '+selectedContactEmail()]:[]),'Subject: =?UTF-8?B?'+encode64(utf8.encode(subject))+'?=','Content-Type: multipart/related; boundary="'+related+'"','','--'+related,'Content-Type: text/html; charset=UTF-8','Content-Transfer-Encoding: base64','',folded64(utf8.encode(html))];
  for(const img of item.embeddedImages){
   lines.push('--'+related,'Content-Type: '+img.contentType,'Content-Transfer-Encoding: base64','Content-ID: <'+img.cid+'>','Content-Disposition: inline','',''+(img.base64.match(/.{1,76}/g)||[]).join('\r\n'));
  }
@@ -342,6 +342,33 @@ if(leadPanel){
  const leadButton=byId('csvTemplate');
  if(leadButton)leadButton.textContent='Download sample CSV';
  leadDisclosure.appendChild(leadPanel);
+
+ const prepareRow=document.createElement('div');
+ prepareRow.style.cssText='margin:9px 0 0;display:flex;gap:7px;align-items:center;flex-wrap:wrap';
+ const prepareButton=document.createElement('button');
+ prepareButton.type='button';prepareButton.id='prepareContactEmail';prepareButton.className='btn primary';
+ prepareButton.textContent='Prepare Outlook email for this contact';
+ const recipientInfo=document.createElement('span');
+ recipientInfo.id='recipientDraftInfo';recipientInfo.className='muted';
+ recipientInfo.style.cssText='font-size:12px';
+ prepareRow.append(prepareButton,recipientInfo);
+ leadPanel.appendChild(prepareRow);
+ const refreshRecipient=()=>{
+  const value=byId('leadSelect').value;
+  const contact=value===''?null:leads[Number(value)];
+  prepareButton.disabled=!contact||!selectedContactEmail();
+  recipientInfo.textContent=contact?(selectedContactEmail()?'To: '+selectedContactEmail():'Missing valid Email in CSV'):'Select one contact first';
+ };
+ byId('leadSelect').addEventListener('change',refreshRecipient);
+ byId('leadFile').addEventListener('change',()=>{prepareButton.disabled=true;recipientInfo.textContent='Choose a contact after loading the file';});
+ prepareButton.disabled=true;
+ prepareButton.onclick=()=>{
+  const destination=selectedContactEmail();
+  if(!destination){byId('leadStatus').textContent='Select a contact with a valid Email address in your CSV.';return}
+  downloadFormattedOutlook();
+  byId('leadStatus').textContent='Prepared an Outlook email addressed to '+destination+'. Open the downloaded draft, review the layout and recipient, then click Send in Outlook.';
+ };
+
  quickTools.appendChild(leadDisclosure);
 }
 actions.after(quickTools,sendStatus,subjectLabel,emailSubject,emailPreview,plainFields,help);
