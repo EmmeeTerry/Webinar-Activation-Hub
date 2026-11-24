@@ -64,7 +64,7 @@ function shareActionLinks(x){
  return [
   ...(/^https?:\/\//i.test(x.url||'')?[['Create Customer Email',ROOT+'customer-email-hub.html?'+customer.toString()]]:[]),
   ['Overview Slide',ROOT+'build-slide.html?v=20261112-3&id='+encodeURIComponent(x.id)],
-  ['Create PAM-to-Partner Email',ROOT+'pam-email-hub.html?'+args.toString()],
+  ['Create PAM-to-Partner Email','https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/PAM-to-Partner-Email-Templates.aspx?'+args.toString()],
   ...(x.type==='Webinar' && /^\d{4}-\d{2}-\d{2}$/.test(x.publishDate||'') && x.publishDate>=new Date().toLocaleDateString('en-CA') ? [['Add to calendar (in Content Library)',card(x)]]:[])
  ].map(([label,url])=>[label,x._links?.[label]||url]);
 }

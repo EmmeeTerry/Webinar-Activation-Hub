@@ -25,7 +25,7 @@ body.embedded{background:#fff}body.embedded header,body.embedded .links,body.emb
 .publish-options{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(min(100%,330px),1fr))}.publish-options .publish-path{min-width:0;margin:8px 0}.publish-options input,.publish-options textarea{max-width:100%}</style></head><body>
 <header><div class="eyebrow">HITACHI VANTARA / PARTNER PROGRAMS</div><h1>Pulse Post Builder</h1><p>Show PAMs which content to promote, where partners can activate it in the Partner Marketing Hub, and how to start customer conversations.</p></header>
 <main>
-<div class="links builder-only"><a href="./pam-email-announcement-builder.html" target="_blank" rel="noopener">Open builder in its own tab ↗</a><a href="./pam-email-hub.html" target="_blank" rel="noopener">PAM Email Hub ↗</a><a href="https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Content-Sharing-Template.aspx" target="_blank" rel="noopener">SharePoint news template ↗</a></div>
+<div class="links builder-only"><a href="./pam-email-announcement-builder.html" target="_blank" rel="noopener">Open builder in its own tab ↗</a><a href="https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/PAM-to-Partner-Email-Templates.aspx" target="_blank" rel="noopener">PAM Email Hub ↗</a><a href="https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Content-Sharing-Template.aspx" target="_blank" rel="noopener">SharePoint news template ↗</a></div>
 <div class="layout">
 <section class="panel edit-panel">
 <h2>1. Choose the news and resources for PAMs</h2><p class="muted">Choose partner announcements, live content or partner-ready webinars. Combine related items in one post.</p>
@@ -37,7 +37,7 @@ body.embedded{background:#fff}body.embedded header,body.embedded .links,body.emb
 <h2 class="builder-only">2. Edit and preview your announcement</h2><p class="muted builder-only">Click the headline or story text in the preview to edit it. To add a hyperlink, select the words and choose <strong>Add link</strong> below the preview. Your edits appear in both publishing options.</p>
 <div id="preview" class="preview"></div>
 <div class="builder-only"><button type="button" id="addInlineLink">Add link</button></div>
-<details class="builder-only"><summary>Edit header &amp; footer links</summary><p>These links appear at the top and bottom of the internal PAM post and email. News and Updates opens All News Posts by default.</p><label for="newsNav">News and Updates URL</label><input id="newsNav" type="url"><label for="hubNav">Global Campaigns Hub URL</label><input id="hubNav" type="url"><button id="applyNav" type="button">Apply links</button><span id="navStatus" role="status"></span></details>
+<details class="builder-only"><summary>Edit header &amp; footer links</summary><p>These links appear at the top and bottom of the internal PAM post and email. News and Updates opens All News Posts by default.</p><label for="newsNav">News and Updates URL</label><input id="newsNav" type="url"><p>PAM Email Hub always opens the SharePoint email templates page.</p><button id="applyNav" type="button">Apply links</button><span id="navStatus" role="status"></span></details>
 <details class="builder-only"><summary>Edit featured resources and LinkedIn post</summary><p class="muted">The PMH campaign appears inside each linked story. Use these optional fields for additional resources at the bottom. For the enhanced PMH announcement, the Partner Marketing Hub link fills in automatically. You can change it or add another important resource.</p>
 <div class="filters"><div><label for="featuredLabel1">Featured link button</label><input id="featuredLabel1" placeholder="e.g., Open Partner Marketing Hub"></div><div><label for="featuredUrl1">Destination URL</label><input type="url" id="featuredUrl1" placeholder="https://..."></div></div>
 <details><summary>Add a second featured link (optional)</summary><div class="filters"><div><label for="featuredLabel2">Button label</label><input id="featuredLabel2" placeholder="e.g., Explore What's New"></div><div><label for="featuredUrl2">Destination URL</label><input type="url" id="featuredUrl2" placeholder="https://..."></div></div></details>
@@ -78,7 +78,7 @@ body.embedded{background:#fff}body.embedded header,body.embedded .links,body.emb
 <script>
 (function(){
 "use strict";
-const $=id=>document.getElementById(id), HUB="./pam-email-hub.html";
+const $=id=>document.getElementById(id), HUB="https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/PAM-to-Partner-Email-Templates.aspx";
 const state={emails:[],selected:new Set(),summaryEdits:{},sectionEdits:{},ready:false};
 const params=new URLSearchParams(location.search);
 const embedMode=params.get("view")==="embed";
@@ -173,7 +173,8 @@ function inlineValue(value,format){
  const literal=s=>format==="html"?esc(s).replace(/\n/g,"<br>"):s;
  let out="",last=0;
  for(const match of input.matchAll(/\[([^\]\n]+)\]\((https?:\/\/[^\s)]+|mailto:[^\s)]+)\)/gi)){
-  const [,label,href]=match;
+  const [,label,original]=match;
+  const href=original.replace(/^https:\/\/emmeeterry\.github\.io\/Webinar-Activation-Hub\/pam-email-hub\.html(?=[?#]|$)/i,HUB);
   if(!secureURL(href)&&!/^mailto:[^\s@<>]+@[^\s@<>]+$/i.test(href))continue;
   out+=literal(input.slice(last,match.index));
   out+=format==="html"?'<a target="_blank" rel="noopener noreferrer" href="'+esc(href)+'">'+esc(label)+'</a>' :format==="label"?label:label+' ('+href+')';
@@ -239,15 +240,16 @@ $("linkForm").onsubmit=event=>{
  field.dispatchEvent(new Event("input"));$("inlineDialog").close();linkRange=null;renderPreview();status("Link added to the announcement.");
 };
 
-const navDefaults={newsNav:"https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/All-News-Posts.aspx",hubNav:"https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Global%20Campaigns.aspx"};
+const navDefaults={newsNav:"https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/All-News-Posts.aspx",hubNav:HUB};
 const nav={...navDefaults};
-for(const key of Object.keys(nav)){nav[key]=secureURL(savedDraft?.nav?.[key])||nav[key];$(key).value=nav[key]}
-function navHTML(){return '<div class="post-nav" style="padding:12px 16px;background:#f4f6f8;font:600 13px Arial"><a target="_blank" rel="noopener" href="'+esc(nav.newsNav)+'">News and Updates</a> &nbsp;|&nbsp; <a target="_blank" rel="noopener" href="'+esc(nav.hubNav)+'">Global Campaigns Hub</a></div>'}
-function navText(){return "News and Updates: "+nav.newsNav+"\nGlobal Campaigns Hub: "+nav.hubNav}
+nav.newsNav=secureURL(savedDraft?.nav?.newsNav)||nav.newsNav;
+$("newsNav").value=nav.newsNav;
+function navHTML(){return '<div class="post-nav" style="padding:12px 16px;background:#f4f6f8;font:600 13px Arial"><a target="_blank" rel="noopener" href="'+esc(nav.newsNav)+'">News and Updates</a> &nbsp;|&nbsp; <a target="_blank" rel="noopener" href="'+esc(nav.hubNav)+'">PAM Email Hub</a></div>'}
+function navText(){return "News and Updates: "+nav.newsNav+"\nPAM Email Hub: "+nav.hubNav}
 $("applyNav").onclick=()=>{
- const next={};
- for(const key of Object.keys(nav)){next[key]=secureURL($(key).value);if(!next[key]){$("navStatus").textContent=" Enter a full HTTPS URL.";$(key).focus();return}}
- Object.assign(nav,next);renderPreview();$("embedCode").value="";$("embedCode").hidden=true;$("embedFeedback").textContent="";$("navStatus").textContent=" Links applied to the post and email.";
+ const news=secureURL($("newsNav").value);
+ if(!news){$("navStatus").textContent=" Enter a full HTTPS URL.";$("newsNav").focus();return}
+ nav.newsNav=news;renderPreview();$("embedCode").value="";$("embedCode").hidden=true;$("embedFeedback").textContent="";$("navStatus").textContent=" Links applied to the post and email.";
 };
 function richBody(){const a=article();let h=navHTML()+'<div style="font:15px/1.65 Arial,sans-serif;color:#253440"><p>'+inlineValue(a.intro,"html")+'</p>';
  for(const x of a.blocks){
