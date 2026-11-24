@@ -69,8 +69,8 @@ try{
  await assetPage.locator('#title').filter({hasText:'Regression test asset'}).waitFor({timeout:25000});
  assert((await assetPage.locator('#body').inputValue()).includes('https://example.com/asset'),'Generated partner draft must contain selected asset URL');
  await assetPage.goto(assetBase);
- await assetPage.locator('#title').filter({hasText:'not available to share yet'}).waitFor({timeout:25000});
- assert(await assetPage.locator('#edit').isHidden(),'Missing asset must not select an unrelated draft');
+ await assetPage.locator('#title').filter({hasText:'Regression test asset'}).waitFor({timeout:25000});
+ assert((await assetPage.locator('#body').inputValue()).includes('[Insert published asset link before sending]'),'Planned asset must produce a contextual draft with a link placeholder');
  await assetPage.close();
  console.log('PASS: contextual partner draft and missing asset guard');
 
