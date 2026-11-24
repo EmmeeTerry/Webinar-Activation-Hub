@@ -563,14 +563,19 @@ if(leadPanel){
 }
 const editHeading=document.createElement('h3');
 editHeading.textContent='1. Edit your email';
-const editIntro=document.createElement('p');
-editIntro.append('Click the subject or message to make changes. When you’re ready, use the Outlook options below to send it. ');
-editIntro.append(guideLink.cloneNode(true));
+const editIntro=document.createElement('div');
+editIntro.className='email-edit-instructions';
+const instructionText=document.createElement('p');
+instructionText.textContent='Edit the subject and message below. When you’re ready, use the Outlook options to send your email.';
+editIntro.append(instructionText,guideLink.cloneNode(true));
 const sendHeading=document.createElement('h3');
 sendHeading.textContent='2. Send your email in Outlook';
 emailEditor.append(editHeading,editIntro,quickTools,subjectLabel,emailSubject,emailPreview,plainFields,sendHeading,compactHelp,actions,sendStatus,help);
 const editorStyle=document.createElement('style');
 editorStyle.textContent=[
+ '.email-edit-instructions{display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;margin:0 0 12px}',
+ '.email-edit-instructions p{flex:1 1 320px;min-width:0;margin:0}',
+ '.email-edit-instructions a{display:inline-block;flex:none;max-width:100%;box-sizing:border-box}',
  '#edit > .actions{margin:5px 0 9px!important;gap:8px!important;align-items:center}',
  '#edit > .actions > .btn{padding:9px 12px}',
  '#edit > .actions > .btn.primary{font-weight:700}',
