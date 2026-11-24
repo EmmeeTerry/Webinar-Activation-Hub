@@ -79,6 +79,10 @@ body.embedded{background:#fff}body.embedded header,body.embedded .links,body.emb
 (function(){
 "use strict";
 const $=id=>document.getElementById(id), HUB="https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/PAM-to-Partner-Email-Templates.aspx";
+// Links to a specific email open the hub page directly. The SharePoint page embeds the
+// hub in a frame that never receives the page's ?email= value, so it would open the
+// default email instead. HUB stays for the general "PAM Email Hub" navigation link.
+const HUB_DIRECT="https://emmeeterry.github.io/Webinar-Activation-Hub/pam-email-hub.html";
 const state={emails:[],selected:new Set(),summaryEdits:{},sectionEdits:{},ready:false};
 const params=new URLSearchParams(location.search);
 const embedMode=params.get("view")==="embed";
@@ -90,7 +94,12 @@ const status=(msg,error=false)=>{$("status").textContent=msg;$("status").classNa
 const link=id=>{const item=state.emails.find(x=>x.id===id);if(item?.assetURL){
  const template=state.emails.find(e=>e.id===assetTemplates[item.originalId]);
  if(template?.pmh&&template.pmh===campaignFor(item))return link(template.id);
- const u=new URL(HUB,location.href);u.search=new URLSearchParams({source:item.source==="Webinar Hub"?"webinar":"content",title:item.title,description:item.body.slice(0,420),url:item.assetURL});const pmh=campaignFor(item);if(pmh){u.searchParams.set("pmh",pmh);u.searchParams.set("topic",item.topic||item.category)}return u.href}const u=new URL(HUB,location.href);u.searchParams.set("email",id);return u.href};
+ const u=new URL(HUB_DIRECT);u.search=new URLSearchParams({audience:"PAM",source:item.source==="Webinar Hub"?"webinar":"content",title:item.title,description:item.body.slice(0,420),url:item.assetURL});const pmh=campaignFor(item);if(pmh){u.searchParams.set("pmh",pmh);u.searchParams.set("topic",item.topic||item.category)}return u.href}const u=new URL(HUB_DIRECT);u.searchParams.set("audience","PAM");u.searchParams.set("email",id);return u.href};
+// A SharePoint hub link that names an email is rewritten to open that email directly.
+function deepHubLink(raw){
+ try{const u=new URL(raw);if(u.origin+u.pathname!==HUB||!u.searchParams.has("email"))return raw;
+  const d=new URL(HUB_DIRECT);u.searchParams.forEach((v,k)=>d.searchParams.set(k,v));if(!d.searchParams.has("audience"))d.searchParams.set("audience","PAM");return d.href}catch{return raw}
+}
 const allLink=()=>new URL(HUB,location.href).href;
 const isLegacy=e=>/^(DPAE|HCPO|CMR|CRMR)(?:\b|[\s·-])/i.test(e.title||"");
 function getDate(e){const d=e.addedDate||e.createdDate||e.createdAt||e.dateAdded||e.publishedAt||e.date;const n=Date.parse(d||"");if(Number.isFinite(n))return n;const m=String(e.id||"").match(/20\d{6}/);return m?Date.parse(m[0].slice(0,4)+"-"+m[0].slice(4,6)+"-"+m[0].slice(6,8))||0:0}
@@ -174,7 +183,7 @@ function inlineValue(value,format){
  let out="",last=0;
  for(const match of input.matchAll(/\[([^\]\n]+)\]\((https?:\/\/[^\s)]+|mailto:[^\s)]+)\)/gi)){
   const [,label,original]=match;
-  const href=original.replace(/^https:\/\/emmeeterry\.github\.io\/Webinar-Activation-Hub\/pam-email-hub\.html(?=[?#]|$)/i,HUB);
+  const href=deepHubLink(original.replace(/^https:\/\/emmeeterry\.github\.io\/Webinar-Activation-Hub\/pam-email-hub\.html(?=#|$)/i,HUB));
   if(!secureURL(href)&&!/^mailto:[^\s@<>]+@[^\s@<>]+$/i.test(href))continue;
   out+=literal(input.slice(last,match.index));
   out+=format==="html"?'<a target="_blank" rel="noopener noreferrer" href="'+esc(href)+'">'+esc(label)+'</a>' :format==="label"?label:label+' ('+href+')';
