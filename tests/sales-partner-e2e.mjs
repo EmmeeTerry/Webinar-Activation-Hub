@@ -38,7 +38,7 @@ try{
  // When clipboard APIs are blocked, the action must expose a selectable
  // HTML alternative, not a broken promise or an uncaught permission error.
  await page.locator('#copy').click();
- await page.waitForFunction(()=>/copied|selected|Opened a full browser tab/i.test(document.querySelector('#outlookStatus')?.textContent||''),{timeout:15000});
+ await page.waitForFunction(()=>/copied|selected|Opened a (?:full )?browser tab/i.test(document.querySelector('#outlookStatus')?.textContent||''),{timeout:15000});
  console.log('PASS: formatted copy confirms a copy or usable fallback');
  const webOpen=page.locator('#openOutlookWeb');
  const desktopOpen=page.locator('#openDesktopEmail');
@@ -59,9 +59,21 @@ try{
  await inner.locator('#title').filter({hasText:'Hitachi at CES 2027'}).waitFor({timeout:25000});
  await inner.locator('#copy').click();
  const sandboxResult=await inner.locator('#outlookStatus').innerText();
- assert(/copied|selected|Opened a full browser tab/i.test(sandboxResult),'Sandboxed copy should offer usable copy instructions: '+sandboxResult);
+ assert(/copied|selected|Opened a (?:full )?browser tab/i.test(sandboxResult),'Sandboxed copy should offer usable copy instructions: '+sandboxResult);
  console.log('PASS: sandboxed SharePoint-style embed provides a clipboard fallback');
  await embedded.close();
+
+ const assetPage=await context.newPage();
+ const assetBase='http://127.0.0.1:8765/pam-email-hub.html?audience=PAM&source=content&title=Regression%20test%20asset';
+ await assetPage.goto(assetBase+'&description=Test%20description&url=https%3A%2F%2Fexample.com%2Fasset');
+ await assetPage.locator('#title').filter({hasText:'Regression test asset'}).waitFor({timeout:25000});
+ assert((await assetPage.locator('#body').inputValue()).includes('https://example.com/asset'),'Generated partner draft must contain selected asset URL');
+ await assetPage.goto(assetBase);
+ await assetPage.locator('#title').filter({hasText:'not available to share yet'}).waitFor({timeout:25000});
+ assert(await assetPage.locator('#edit').isHidden(),'Missing asset must not select an unrelated draft');
+ await assetPage.close();
+ console.log('PASS: contextual partner draft and missing asset guard');
+
 }finally{
  await browser.close();
 }
