@@ -140,6 +140,8 @@ function sanitizePreservedEmail(html){
    const k=attr.name.toLowerCase();
    if(k.startsWith('on')||!allowed.has(k)){n.removeAttribute(attr.name);continue}
    if(k==='href'){
+    const raw=(attr.value||'').trim();
+    if(/^mailto:[^\s<>"'`]+$/i.test(raw)){n.setAttribute('href',raw);continue}
     const url=safeUrl(attr.value);
     if(url){n.setAttribute('href',url);n.setAttribute('target','_blank');n.setAttribute('rel','noopener noreferrer')}else n.removeAttribute('href');
    }else if(k==='background'){
@@ -188,8 +190,50 @@ function currentRichHtml(){
  const edited=sanitizePreservedEmail(doc.body.outerHTML);
  return '<!doctype html><html><head><meta charset="utf-8">'+original.head+'</head>'+edited.body+'</html>';
 }
+// Convert the edited rich email DOM to clean plain text. Links keep their URL,
+// bullet table rows become "• " lines, decorative glyphs and layout whitespace go.
+function richEmailPlainText(root){
+ if(!root)return '';
+ const BLOCK=/^(P|DIV|H[1-6]|LI|UL|OL|TABLE|TBODY|THEAD|TFOOT|TR|SECTION|ARTICLE|HEADER|FOOTER|BLOCKQUOTE|CENTER)$/;
+ const GLYPHS=/[\u25A0-\u25FF\u2022\u2023\u2043\u2219\u27A4\u2794\u25B6\u25BA]/g;
+ const flat=s=>String(s||'').replace(/[\s\u00a0]+/g,' ').trim();
+ const walk=n=>{
+  if(n.nodeType===3)return n.textContent.replace(/[\s\u00a0]+/g,' ');
+  if(n.nodeType!==1)return '';
+  const tag=n.nodeName;
+  if(/^(SCRIPT|STYLE|HEAD|TITLE|IMG|SVG)$/.test(tag))return '';
+  if(tag==='BR')return '\n';
+  if(tag==='A'){
+   const text=flat(n.textContent);
+   if(!text)return '';
+   const href=(n.getAttribute('href')||'').trim();
+   if(!href||/^(#|javascript:)/i.test(href))return text;
+   const shown=href.replace(/^mailto:/i,'').split('?')[0];
+   if(flat(shown).toLowerCase()===text.toLowerCase()||href===text)return text;
+   const block=n.parentElement?.closest('p,td,th,li,div,h1,h2,h3,h4,h5,h6');
+   const standalone=!block||flat(block.textContent)===text;
+   return standalone?text+': '+shown:text+' ('+shown+')';
+  }
+  if(tag==='TR'){
+   const cells=[...n.children].filter(c=>/^T[DH]$/.test(c.nodeName));
+   const marker=cells.length>1?flat(cells[0].textContent):'';
+   if(marker&&marker.replace(GLYPHS,'').trim()===''){
+    return '\n\n• '+flat(cells.slice(1).map(walk).join(' ').replace(GLYPHS,''))+'\n\n';
+   }
+  }
+  const inner=Array.from(n.childNodes,walk).join('');
+  if(tag==='LI')return '\n\n• '+inner.replace(GLYPHS,'').trim()+'\n\n';
+  if(/^T[DH]$/.test(tag))return ' '+inner+' ';
+  return BLOCK.test(tag)?'\n\n'+inner+'\n\n':inner;
+ };
+ return walk(root)
+  .split('\n').map(line=>line.replace(/[ \t]+/g,' ').trim()).join('\n')
+  .replace(/^• /gm,'\u0000').replace(GLYPHS,'').replace(/\u0000/g,'• ')
+  .split('\n').map(line=>line.trim()).join('\n')
+  .replace(/\n{3,}/g,'\n\n').trim();
+}
 function emailBodyText(){
- const richText=selected?.htmlBody && $('richEmail').contentDocument?.body?.innerText;
+ const richText=selected?.htmlBody && richEmailPlainText($('richEmail').contentDocument?.body);
  return richText || $('body').value;
 }
 function linkedEmailHtml(){
