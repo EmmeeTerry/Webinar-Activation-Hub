@@ -28,9 +28,9 @@ try{
  assert(mime.includes('X-Unsent: 1'),'Outlook MIME must remain unsent');
  console.log('PASS: CSV -> selected contact -> addressed EML with four embedded images');
 
- // Send actions sit above the editor, and the share link copies the selected email.
- const order=await page.evaluate(()=>{const e=document.getElementById('edit');return [e.querySelector('#eml'),document.getElementById('richEmail')].map(n=>[...e.querySelectorAll('*')].indexOf(n))});
- assert(order[0]>=0&&order[0]<order[1],'Download formatted Outlook email must appear above the email preview');
+ // Flow: review the email (step 2), then send it (step 3).
+ const order=await page.evaluate(()=>{const e=document.getElementById('edit');return [document.getElementById('richEmail'),e.querySelector('#eml'),document.getElementById('contactPersonalizeOptions')].map(n=>[...e.querySelectorAll('*')].indexOf(n))});
+ assert(order[0]>=0&&order[0]<order[1]&&order[1]<order[2],'Preview, then Outlook send actions, then contact-list sending');
  assert.equal(await page.locator('#translateOptions').count(),0,'Translate controls were removed');
  assert.equal(await page.getByText('How to use email templates',{exact:true}).count(),1,'Guide link should appear once');
  console.log('PASS: send actions first, Translate removed, guide link shown once');

@@ -53,7 +53,8 @@ assert(v2.includes("a==='Both'&&(v==='Sales'||v==='PAM')"),'Both audience should
 assert(v2.includes("['Both','Both']"),'Importer must offer Both as a publishing audience');
 assert(v2.includes("const CES_ID='sales-ces-2027-invitation'"),'CES pilot should appear in the hub');
 assert(v2.includes('loadCesApprovedLayout()'),'CES exact-layout loader must exist');
-assert(v2.includes("emailEditor.append(sendHeading,compactHelp,actions,secondaryActions,sendStatus,editHeading,editIntro,quickTools,subjectLabel,emailSubject,emailPreview,plainFields,help,internalLinks)"),'Outlook send actions come first, above the editor');
+assert(v2.includes("emailEditor.append(editHeading,editIntro,subjectLabel,emailSubject,emailPreview,plainFields,sendHeading,compactHelp,actions,sendStatus,quickTools,secondaryActions,help,internalLinks)"),'Flow is review, then send with Outlook and contact-list options');
+assert(v2.includes("jumpToSend.textContent='Ready to send? Go to step 3 ↓'"),'Step 2 offers a shortcut to sending');
 assert(v2.includes("secondaryActions.appendChild(shareButton)"),'Copy link to this email sits with the send actions');
 assert(!v2.includes("guideLink.cloneNode"),'How to use email templates appears once, in the header');
 assert(v2.includes("helpTitle.textContent='More tools and help'"),'Extra help is collapsed');

@@ -429,17 +429,27 @@ if(leadPanel){
 
  quickTools.appendChild(leadDisclosure);
 }
+// Flow: 1. choose (sidebar), 2. review or customize, 3. send. A shortcut at the top of
+// step 2 jumps straight to sending for PAMs who don't need to edit.
 const editHeading=document.createElement('h3');
-editHeading.textContent='3. Review or customize your email';
+editHeading.textContent='2. Review or customize your email';
 const editIntro=document.createElement('div');
 editIntro.className='email-edit-instructions';
 const instructionText=document.createElement('p');
-instructionText.textContent='Edit the subject and message below if needed. Your changes are included when you use the send options above.';
-editIntro.append(instructionText);
+instructionText.textContent='Click in the email to edit the subject or message if needed. Your changes are included when you send it in step 3.';
 const sendHeading=document.createElement('h3');
-sendHeading.textContent='2. Send your email in Outlook';
-// Sending is the main reason PAMs visit, so the send actions sit above the editor.
-// The share link sits with them so it always copies the email currently selected.
+sendHeading.id='sendStep';
+sendHeading.textContent='3. Send your email in Outlook';
+const jumpToSend=document.createElement('a');
+jumpToSend.href='#sendStep';jumpToSend.className='jump-to-send';
+jumpToSend.textContent='Ready to send? Go to step 3 ↓';
+jumpToSend.addEventListener('click',e=>{e.preventDefault();sendHeading.scrollIntoView({behavior:'smooth',block:'start'})});
+editIntro.append(instructionText,jumpToSend);
+// Contact-list personalization creates an addressed Outlook draft, so it belongs with sending.
+const leadSummaryEl=quickTools.querySelector('#contactPersonalizeOptions > summary');
+if(leadSummaryEl)leadSummaryEl.textContent='Or send to one contact from your list (CSV)';
+quickTools.style.margin='4px 0 10px';
+// The share link sits with the send actions so it always copies the email currently selected.
 const secondaryActions=document.createElement('div');
 secondaryActions.className='secondary-actions';
 secondaryActions.append(byId('reset'));
@@ -448,7 +458,7 @@ if(shareButton){shareButton.textContent='Copy link to this email';shareButton.ti
 const internalLinks=byId('internalTemplateLinks');
 internalLinks?.querySelector(':scope > p')?.remove();
 if(internalLinks&&!internalLinks.querySelector('details,form,button'))internalLinks.hidden=true;
-emailEditor.append(sendHeading,compactHelp,actions,secondaryActions,sendStatus,editHeading,editIntro,quickTools,subjectLabel,emailSubject,emailPreview,plainFields,help,internalLinks);
+emailEditor.append(editHeading,editIntro,subjectLabel,emailSubject,emailPreview,plainFields,sendHeading,compactHelp,actions,sendStatus,quickTools,secondaryActions,help,internalLinks);
 const editorStyle=document.createElement('style');
 editorStyle.textContent=[
  '.email-edit-instructions{display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;margin:0 0 12px}',
@@ -460,6 +470,8 @@ editorStyle.textContent=[
  '@media(max-width:560px){#edit > .actions{grid-template-columns:1fr}}',
  '#edit > .actions > .btn{display:flex;align-items:center;justify-content:center;text-align:center;min-height:42px;padding:9px 14px;font-size:13px;line-height:1.2;border-radius:3px}',
  '.secondary-actions{display:flex;gap:20px;align-items:center;margin:0 0 12px}',
+ '.jump-to-send{flex:none;color:#a00;font-size:12px;font-weight:700;text-decoration:underline;text-underline-offset:3px}',
+ '#sendStep{scroll-margin-top:12px;margin-top:22px;padding-top:16px;border-top:1px solid #e4e4e7}',
  '.secondary-actions .btn{background:none;border:0;padding:0;color:#a00;text-decoration:underline;text-underline-offset:3px;font-weight:600;font-size:12px}',
  '.secondary-actions .btn:hover{color:#700}',
  'header .head-actions .head-link{display:inline-flex;align-items:center;min-height:36px}',
