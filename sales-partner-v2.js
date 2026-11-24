@@ -26,7 +26,9 @@ byId('clearFilters').addEventListener('click',()=>{filter.value='All';applyFilte
 const pageTitle=document.querySelector('header h1');if(pageTitle)pageTitle.textContent='Sales & PAM Email Template Hub';
 const eyebrow=document.querySelector('header .eyebrow');if(eyebrow)eyebrow.textContent='HITACHI VANTARA / SALES & PAM ENABLEMENT';
 const editorLabel=document.querySelector('.editor .kicker');if(editorLabel)editorLabel.textContent='CUSTOMER & PARTNER OUTREACH';
-const guideLink=document.createElement('a');guideLink.href='https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/How-to-Use-Templates.aspx';guideLink.textContent='How to use email templates';guideLink.target='_blank';guideLink.rel='noopener noreferrer';guideLink.className='btn';const navLinks=document.querySelector('header .head-actions');if(navLinks)navLinks.prepend(guideLink);
+const guideLink=document.createElement('a');guideLink.href='https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/How-to-Use-Templates.aspx';guideLink.textContent='How to use email templates';guideLink.target='_blank';guideLink.rel='noopener noreferrer';guideLink.className='head-link';const navLinks=document.querySelector('header .head-actions');if(navLinks)navLinks.prepend(guideLink);
+// Inside SharePoint the "Sales & PAM Email Template Hub" button links to the page already open.
+if(window.parent!==window)document.querySelector('header .partner-hub-highlight')?.setAttribute('hidden','');
 const hint=document.createElement('section');hint.className='panel';hint.style.cssText='margin:0 0 14px;padding:13px 17px;background:#fff';
 hint.innerHTML='<p class="muted" style="margin:0 0 8px">Choose an Outlook email file: <strong>.eml (recommended)</strong>. An <strong>.emltpl</strong> may work if it contains standard email data. Files such as .oft, .msg, Word and PDF are not supported.</p><label for="richMimeImport" class="btn" style="display:inline-block;cursor:pointer">Choose .eml file</label><input id="richMimeImport" type="file" accept=".eml,.emltpl,message/rfc822" style="position:absolute;width:1px;height:1px;opacity:0"><p class="muted" style="margin:6px 0 0;font-size:12px">Include images when saving the email. Imported files are available only during this session; they are not automatically added to the shared library.</p><p id="richMimeStatus" class="muted" role="status" style="margin:8px 0 0"></p>';
 document.querySelector('main').insertBefore(hint,document.querySelector('.layout'));
@@ -438,19 +440,29 @@ const sendHeading=document.createElement('h3');
 sendHeading.textContent='2. Send your email in Outlook';
 // Sending is the main reason PAMs visit, so the send actions sit above the editor.
 // The share link sits with them so it always copies the email currently selected.
+const secondaryActions=document.createElement('div');
+secondaryActions.className='secondary-actions';
+secondaryActions.append(byId('reset'));
 const shareButton=byId('shareLink');
-if(shareButton){shareButton.textContent='Copy link to this email';shareButton.title='Copy a SharePoint link that opens this exact email';actions.appendChild(shareButton)}
+if(shareButton){shareButton.textContent='Copy link to this email';shareButton.title='Copy a link that opens this exact email';secondaryActions.appendChild(shareButton)}
 const internalLinks=byId('internalTemplateLinks');
 internalLinks?.querySelector(':scope > p')?.remove();
 if(internalLinks&&!internalLinks.querySelector('details,form,button'))internalLinks.hidden=true;
-emailEditor.append(sendHeading,compactHelp,actions,sendStatus,editHeading,editIntro,quickTools,subjectLabel,emailSubject,emailPreview,plainFields,help,internalLinks);
+emailEditor.append(sendHeading,compactHelp,actions,secondaryActions,sendStatus,editHeading,editIntro,quickTools,subjectLabel,emailSubject,emailPreview,plainFields,help,internalLinks);
 const editorStyle=document.createElement('style');
 editorStyle.textContent=[
  '.email-edit-instructions{display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;margin:0 0 12px}',
  '.email-edit-instructions p{flex:1 1 320px;min-width:0;margin:0}',
  '.email-edit-instructions a{display:inline-block;flex:none;max-width:100%;box-sizing:border-box}',
- '#edit > .actions{margin:5px 0 9px!important;gap:8px!important;align-items:center}',
- '#edit > .actions > .btn{padding:9px 12px}',
+ '#edit > .actions{margin:5px 0 9px!important;gap:8px!important;align-items:stretch}',
+ '[hidden]{display:none!important}',
+ '#edit > .actions{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))}',
+ '@media(max-width:560px){#edit > .actions{grid-template-columns:1fr}}',
+ '#edit > .actions > .btn{display:flex;align-items:center;justify-content:center;text-align:center;min-height:42px;padding:9px 14px;font-size:13px;line-height:1.2;border-radius:3px}',
+ '.secondary-actions{display:flex;gap:20px;align-items:center;margin:0 0 12px}',
+ '.secondary-actions .btn{background:none;border:0;padding:0;color:#a00;text-decoration:underline;text-underline-offset:3px;font-weight:600;font-size:12px}',
+ '.secondary-actions .btn:hover{color:#700}',
+ 'header .head-actions .head-link{display:inline-flex;align-items:center;min-height:36px}',
  '#edit > .actions > .btn.primary{font-weight:700}',
  '#outlookStatus:empty{display:none!important}',
  '#outlookStatus:not(:empty){margin:6px 0!important;padding:6px 8px!important;font-size:12px}',
@@ -477,7 +489,7 @@ if(embedCustomer){
  filter.hidden=true;
  hint.hidden=true;
  const css=document.createElement('style');
- css.textContent='header,.contribute-jump,.submission-section,.gcrh-shared-footer,.top{display:none!important}main{margin:0 auto;padding:8px;max-width:1200px}.layout{grid-template-columns:minmax(225px,280px) minmax(0,1fr);gap:12px}.side h2{font-size:16px}.editor{min-width:0}body{background:white}@media(max-width:700px){.layout{grid-template-columns:1fr}}';
+ css.textContent='header,#contentLibraryInvite,.contribute-jump,.submission-section,.gcrh-shared-footer,.top{display:none!important}main{margin:0 auto;padding:8px;max-width:1200px}.layout{grid-template-columns:minmax(225px,280px) minmax(0,1fr);gap:12px}.side h2{font-size:16px}.editor{min-width:0}body{background:white}@media(max-width:700px){.layout{grid-template-columns:1fr}}';
  document.head.append(css);
  const requested=new URL(location.href);
  requested.searchParams.set('audience','Sales');
