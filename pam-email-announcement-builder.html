@@ -54,20 +54,20 @@ body.embedded{background:#fff}body.embedded header,body.embedded .links,body.emb
 <dialog id="inlineDialog"><form id="linkForm"><h2>Add a link</h2><label for="inlineLabel">Link text</label><input id="inlineLabel" required><label for="inlineURL">Destination URL</label><input id="inlineURL" type="url" placeholder="https://" required><div class="actions"><button>Apply link</button><button type="button" id="cancelInline">Cancel</button></div></form></dialog>
 <div id="status" class="status builder-only" role="status"></div>
 <div class="builder-only" id="publish">
-<h2>3. Choose ONE way to publish AND email</h2><p>Both options give PAMs a SharePoint page and an email. Choose based on where you want to send the email.</p>
-<div class="publish-options"><section class="publish-path"><h3>Option A · SharePoint News and email from SharePoint</h3>
-<ol><li><strong>Create the news post.</strong> Open the SharePoint template and start a new Made for email news post.</li>
-<li><strong>Add your announcement.</strong> Paste the copied title into the page title and the formatted post into a Text web part. To add artwork, download the draft package, unzip it and upload the matching files from its images folder into Image web parts.</li>
-<li><strong>Preview and send.</strong> Check the artwork, partner email button and links in SharePoint’s email preview. Choose Post and send, select your PAM audience and send.</li></ol>
-<div class="actions"><a class="action-link" id="openSP" href="https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Content-Sharing-Template.aspx" target="_blank" rel="noopener">Open SharePoint template ↗</a><button id="copyTitle">Copy title</button><button id="copyRich">Copy formatted post</button><button id="packet">Download draft package</button></div>
-<details><summary>Draft the page with Copilot</summary><p>Copy the brief and paste it into SharePoint Copilot when creating your news draft. Review the resulting text, artwork and links before sending.</p><button id="brief">Copy Copilot brief</button></details></section>
-<section class="publish-path"><h3>Option B · Branded SharePoint page and separate Outlook email</h3>
-<section class="builder-only" id="embedActions" style="border-top:4px solid #ce0013;background:#f5f7f9;padding:15px;margin-bottom:18px"><h3>1. Publish the branded page on SharePoint</h3><p>Preview the embedded post, then copy its iframe. Open the <a href="https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Content-Sharing-Template.aspx" target="_blank" rel="noopener">SharePoint page template</a>, create a new page from it, add an Embed web part, paste the code and publish. Copy the URL of the published SharePoint page. If you edit the post later, replace the iframe and republish.</p>
-<div class="actions"><button id="copyEmbed">Copy post embed code</button><button class="secondary" id="openEmbed">Preview embedded post</button><button class="secondary" id="makeEmbed">Show iframe code</button></div>
-<label for="embedCode" hidden>Post iframe code</label><textarea id="embedCode" aria-label="Post iframe code" hidden readonly></textarea>
+<h2>3. Choose ONE way to publish AND email</h2><p>Choose how to send the announcement to PAMs.</p>
+<div class="publish-options"><section class="publish-path"><h3>Option A · Publish and email from SharePoint</h3>
+<ol><li><strong>Create the news post.</strong> Open the template and create a <strong>Made for email</strong> news post.</li>
+<li><strong>Add your announcement.</strong> Copy the title and formatted post below. Paste them into the page title and a Text web part.</li>
+<li><strong>Preview and send.</strong> Preview the post, choose <strong>Post and send</strong>, and select your PAM audience.</li></ol>
+<div class="actions"><a class="action-link" id="openSP" href="https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Content-Sharing-Template.aspx" target="_blank" rel="noopener">Open SharePoint template ↗</a><button id="copyTitle">Copy title</button><button id="copyRich">Copy formatted post</button></div>
+<details><summary>Optional artwork and Copilot tools</summary><p>For artwork, unzip the draft package and upload the files from its images folder to SharePoint Image web parts.</p><button id="packet">Download draft package</button><p>Copy the brief and paste it into SharePoint Copilot when creating your news draft. Review the resulting text, artwork and links before sending.</p><button id="brief">Copy Copilot brief</button></details></section>
+<section class="publish-path"><h3>Option B · Publish on SharePoint, then email from Outlook</h3>
+<section id="embedActions"><h3>1. Publish the SharePoint page</h3><p>Copy the embed below. Create a page from the <a href="https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Content-Sharing-Template.aspx" target="_blank" rel="noopener">SharePoint template</a>, paste the code into an <strong>Embed</strong> web part and publish.</p>
+<div class="actions"><button id="copyEmbed">Copy embed for SharePoint</button></div>
+<textarea id="embedCode" aria-label="SharePoint embed code to copy manually" hidden readonly></textarea>
 <div id="embedFeedback" role="status"></div></section>
 
-<h3>2. Prepare and send the Outlook email</h3><p>Paste the SharePoint page URL below and download the .eml draft. Open it in Outlook, add your PAM recipients, check the link back to the published page and click Send.</p>
+<h3>2. Send the separate Outlook email</h3><p>Paste the published page link below and download the email. Open it in Outlook, add your PAM recipients and send.</p>
 <label for="published">Published SharePoint page URL</label><input type="url" id="published" placeholder="https://hitachivantara.sharepoint.com/…">
 <div class="actions"><button id="eml">Download Outlook draft (.eml)</button></div></section></div>
 <details><summary>Other outputs</summary><p>Copy plain text for a text-only message, or download HTML to review the formatted article in a browser.</p><div class="actions"><button id="copyPlain">Copy plain text</button><button id="downloadDraft">Download HTML</button><button id="pamLaunchDraft" hidden>Download standalone PMH announcement to PAMs (.eml)</button></div></details>
@@ -284,7 +284,7 @@ function renderPreview(){const a=article(),root=$("preview");root.replaceChildre
  if(extras.length){const sec=document.createElement("section");sec.className="featured-links";const heading=document.createElement("h3");heading.textContent="Additional resources";sec.append(heading);extras.forEach(x=>{const p=document.createElement("p");const link=document.createElement("a");link.href=x.url;link.target="_blank";link.rel="noopener noreferrer";link.textContent=x.label+" ↗";p.append(link);sec.append(p)});body.append(sec)}
 
  if(a.blocks.length){const foot=document.createElement("p");foot.style.cssText="font-size:12px;color:#65717b;border-top:1px solid #e2e7eb;padding-top:14px;margin-top:20px";editableField(foot,"closing",a.closing);body.append(foot)}
- root.append(head,body);head.insertAdjacentHTML("afterend",navHTML());body.insertAdjacentHTML("afterend",navHTML());$("pamLaunchDraft").hidden=!a.blocks.some(b=>b.launch);["copyTitle","brief","packet","eml","copyRich","copyPlain","downloadDraft","makeEmbed","copyEmbed","openEmbed"].forEach(id=>$(id).disabled=!a.blocks.length)
+ root.append(head,body);head.insertAdjacentHTML("afterend",navHTML());body.insertAdjacentHTML("afterend",navHTML());$("pamLaunchDraft").hidden=!a.blocks.some(b=>b.launch);["copyTitle","brief","packet","eml","copyRich","copyPlain","downloadDraft","copyEmbed"].forEach(id=>$(id).disabled=!a.blocks.length)
 }
 function update(){if(!savedDraft)syncDefaults();renderEdits();renderPreview();$("embedFeedback").textContent="";$("embedCode").hidden=true;$("embedCode").value=""}
 function renderEdits(){const root=$("summaries");root.replaceChildren();selected().forEach(e=>{
@@ -331,7 +331,7 @@ function embedURL(){const d={nav,pmhRevision:1,ids:[...state.selected],edits:sta
 function iframe(){if(!selected().length){status("Select at least one email template first.",true);return ""}
 if($("linkedinUrl").value.trim()&&!linkedIn()){status("That does not look like a LinkedIn post URL. Please check the link.",true);return ""}
 const u=embedURL();if(u.length>12000){status("The embed is too long. Select fewer templates or shorten the optional descriptions.",true);return ""}
-const code='<iframe src="'+esc(u)+'" width="100%" height="1400" style="border:none;width:100%" loading="lazy" title="Hitachi Vantara PAM Email Announcement"></iframe>';$("embedCode").value=code;status("Embed generated. Copy the code below into a SharePoint web page Embed web part.");return code}
+const code='<iframe src="'+esc(u)+'" width="100%" height="1400" style="border:none;width:100%" loading="lazy" title="Hitachi Vantara PAM Email Announcement"></iframe>';$("embedCode").value=code;return code}
 function connect(){for(const id of ["headline","intro","closing","linkedinUrl","featuredLabel1","featuredUrl1","featuredLabel2","featuredUrl2"])$(id).addEventListener("input",()=>{edited.add(id);if(id.startsWith("featured"))featuredAuto=false;renderPreview();$("embedFeedback").textContent="";$("embedCode").hidden=true;$("embedCode").value=""});for(const id of ["category","source","region","campaignFilter"])$(id).addEventListener("change",renderChoices);$("search").addEventListener("input",renderChoices);
 $("selectVisible").onclick=()=>{visible().forEach(e=>state.selected.add(e.id));renderChoices();update()};
 $("clear").onclick=()=>{state.selected.clear();renderChoices();update()};
@@ -340,9 +340,8 @@ $("copyTitle").onclick=()=>copyText(inlineValue(article().title,"label"));
 $("copyPlain").onclick=()=>{if(selected().length)copyText(textBody())};
 $("copyRich").onclick=async()=>{if(!selected().length)return;try{if(!navigator.clipboard?.write||typeof ClipboardItem==="undefined")throw Error("Rich clipboard not supported");await navigator.clipboard.write([new ClipboardItem({"text/html":new Blob([richBody()],{type:"text/html"}),"text/plain":new Blob([textBody()],{type:"text/plain"})})]);status("Formatted article copied. Paste into the SharePoint news template.")}catch(e){status("Formatted copy was blocked. Open the builder in its own tab, or use Download HTML.",true)}};
 $("downloadDraft").onclick=()=>{if(selected().length)download()};
-$("makeEmbed").onclick=()=>{if(iframe()){$("embedCode").hidden=false;$("embedCode").select()}};
-$("copyEmbed").onclick=async()=>{const code=iframe();if(!code)return;try{await navigator.clipboard.writeText(code);$("embedFeedback").textContent="Post iframe copied."}catch{$("embedCode").hidden=false;$("embedCode").focus();$("embedCode").select();$("embedFeedback").textContent="The iframe is selected. Copy it into your SharePoint Embed web part."}};
-$("openEmbed").onclick=()=>{if(!selected().length)return;const code=iframe();if(code){const u=embedURL();const a=document.createElement("a");a.href=u;a.target="_blank";a.rel="noopener noreferrer";document.body.append(a);a.click();a.remove();status("Opened the announcement preview in a new tab. If blocked, open the builder outside SharePoint.")}}}
+$("copyEmbed").onclick=async()=>{const code=iframe();if(!code)return;try{await navigator.clipboard.writeText(code);$("embedCode").hidden=true;$("embedFeedback").textContent="Copied. Paste into a SharePoint Embed web part."}catch{$("embedCode").hidden=false;$("embedCode").focus();$("embedCode").select();$("embedFeedback").textContent="Copy the selected code, then paste it into a SharePoint Embed web part."}};
+}
 window.addEventListener("error",e=>status("Builder error: "+e.message,true));
 function secureURL(value){
  try{const url=new URL(value);return url.protocol==="https:"&&!url.username&&!url.password?url.href:""}catch{return ""}
