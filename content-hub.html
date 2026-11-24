@@ -111,6 +111,12 @@ h1{font-family:"Hitachi Sans",Arial,Helvetica,sans-serif;font-weight:400;font-si
 .modal-close{border:1px solid var(--gray2);background:var(--white);border-radius:50%;width:34px;height:34px;font-size:20px;cursor:pointer;color:var(--black);flex-shrink:0}
 .resource-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .resource-btn{padding:11px;border:1px solid var(--black);border-radius:2px;text-decoration:none;font-size:11px;font-weight:700;background:var(--white);color:var(--black);display:block;text-align:center}
+.resource-image-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:10px}
+.resource-image-tile{display:flex;flex-direction:column;gap:7px;padding:7px;border:1px solid var(--gray2);border-radius:3px;background:var(--white);text-decoration:none;color:var(--gray6);font-size:11px}
+.resource-image-tile:hover{border-color:var(--black)}
+.resource-image-tile img{width:100%;max-height:210px;object-fit:contain;background:var(--gray1);display:block}
+.resource-image-tile .resource-image-fallback{font-size:12px;color:var(--gray5);padding:10px 3px}
+.resource-image-caption{font-size:11px;line-height:1.4}
 .resource-btn:hover{background:var(--black);color:var(--white)}
 .resource-btn.unavailable{color:var(--gray3);border-color:var(--gray2);background:var(--gray1);pointer-events:none}
 .modal-meta{font-size:13px;color:var(--gray5);line-height:1.8}
@@ -638,6 +644,21 @@ function openModal(id){
     ].filter(([, url]) => url),
   ];
 
+  // Use the same image-source fields already exported from Smartsheet.
+  // Non-image SharePoint/Marketo links remain clickable when an inline preview fails.
+  const images = [
+    ['Webinar artwork', item.webinarImage],
+    ['Approved content artwork', item.approvedNewsImageUrl],
+    ['Outbound banner - Enterprise', item.outboundBannerEnterprise],
+    ['Marketo outbound - Enterprise', item.marketoPreviewEnterprise]
+  ].filter(([, url]) => /^https:\/\//i.test(String(url || '').trim()));
+  const imageSection = images.length ? `<div class="modal-box"><h3>Email &amp; banner images</h3><div class="resource-image-grid">${images.map(([label,url]) =>
+    `<a class="resource-image-tile" href="${esc(url)}" target="_blank" rel="noopener noreferrer">
+      <img loading="lazy" src="${esc(url)}" alt="${esc(label)}" onerror="this.style.display='none';this.nextElementSibling.hidden=false">
+      <span class="resource-image-fallback" hidden>Preview unavailable. Open source image &#8599;</span>
+      <span class="resource-image-caption">${esc(label)}</span></a>`
+  ).join('')}</div></div>` : '';
+
   document.getElementById('mBody').innerHTML = `
     <div>
       ${contentArtwork(item,'content-cover-large')}
@@ -648,6 +669,7 @@ function openModal(id){
         u ? `<a class="resource-btn" href="${esc(u)}" target="_blank">${esc(n)} &#8599;</a>`
           : `<div class="resource-btn unavailable">${esc(n)} &middot; not available</div>`
       ).join('')}</div></div>
+      ${imageSection}
       <div class="modal-box"><h3>Share</h3><div class="resource-grid">
         ${item.url ? `<a class="resource-btn" href="./customer-email-hub.html?source=content&title=${encodeURIComponent(item.title)}&description=${encodeURIComponent(item.abstract||'')}&url=${encodeURIComponent(item.url||'')}&useCase=${encodeURIComponent(item.useCase||'')}&campaign=${encodeURIComponent(item.campaign||'')}" target="_blank" rel="noopener">Create Customer Email &#8599;</a>` : `<div class="resource-btn unavailable">Email this &middot; nothing to share yet</div>`}
         <a class="resource-btn" href="./build-slide.html?v=20261112-3&id=${encodeURIComponent(item.id)}" target="_blank" rel="noopener">Overview Slide &#8599;</a>\n        <a class="resource-btn" href="https://emmeeterry.github.io/Webinar-Activation-Hub/pam-email-hub.html?audience=Sales&source=content&title=${encodeURIComponent(item.title)}&description=${encodeURIComponent(item.abstract||'')}&url=${encodeURIComponent(item.url||'')}" target="_blank" rel="noopener">Sales & PAM Email: To Customer ↗</a>
