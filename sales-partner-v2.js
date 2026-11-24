@@ -232,8 +232,8 @@ byId('eml').textContent='Download formatted Outlook email';
 // selection/copy before offering a full-size browser-tab fallback.
 const formattedCopyButton=byId('copy');
 formattedCopyButton.hidden=false;
-formattedCopyButton.textContent='Copy email body for Outlook';
-formattedCopyButton.title='Copy the formatted message, or open it in a separate tab if your browser restricts copying';
+formattedCopyButton.textContent='Copy email & open Outlook';
+formattedCopyButton.title='Copy the formatted message and open a new Outlook web draft';
 formattedCopyButton.classList.remove('primary');
 
 // Sending happens in the employee's existing Outlook account. This app does
@@ -268,7 +268,7 @@ const compactHelp=document.createElement('p');
 compactHelp.id='emailActionHelp';
 compactHelp.className='muted';
 compactHelp.style.cssText='margin:3px 0 9px;font-size:12px;line-height:1.4';
-compactHelp.textContent='Download the email and open the file in Outlook, or choose Copy email body for Outlook to copy the message body. Then open Outlook below, paste above your signature (Ctrl+V or Command+V), add recipients, review and send.';
+compactHelp.textContent='Choose Copy email & open Outlook to copy the formatted message and open a new draft in one click. Paste above your signature (Ctrl+V or Command+V), add recipients, review and send. For Classic Outlook, you can also download the formatted email.';
 
 function safeRichDocument(){
  const source=selected?.htmlBody ? (currentRichHtml()||selected.htmlBody) : linkedEmailHtml();
@@ -329,7 +329,7 @@ function copyFormattedFallback(){
  original.forEach(n=>wrapper.appendChild(n));
  popup.document.body.append(bar,wrapper);
  copy.onclick=()=>{
-  if(browserSelectAndCopy(popup.document,wrapper))info.textContent='Copied. Paste into an Outlook message and check the images.';
+  if(browserSelectAndCopy(popup.document,wrapper)){popup.open(outlookLink.href,'_blank','noopener');info.textContent='Copied. Paste into the Outlook draft and check the images.';}
   else{const range=popup.document.createRange();range.selectNodeContents(wrapper);popup.getSelection().removeAllRanges();popup.getSelection().addRange(range);info.textContent='Email selected. Press Ctrl+C or Command+C, then paste into Outlook.';}
  };
  popup.focus();
@@ -349,7 +349,7 @@ formattedCopyButton.onclick=async()=>{
  document.body.appendChild(temp);
  copied=browserSelectAndCopy(document,temp);
  temp.remove();
- if(copied){byId('outlookStatus').textContent='Formatted email copied. Next, choose Open Outlook (web) or Open desktop email app, click in the message and paste (Ctrl+V / Command+V). Review before sending.';return}
+ if(copied){outlookComposeUrls();window.open(openOutlookWeb.href,'_blank','noopener');byId('outlookStatus').textContent='Formatted email copied. In the Outlook draft, paste above your signature (Ctrl+V / Command+V). If Outlook did not open, use Open Outlook (web) below. Review before sending.';return}
  copyFormattedFallback();
 };
 byId('reset').textContent='Reset';
