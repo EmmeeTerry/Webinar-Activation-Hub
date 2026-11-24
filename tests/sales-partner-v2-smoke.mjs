@@ -96,6 +96,6 @@ const guide=readFileSync(new URL('../sales-partner-email-quick-start.html',impor
 assert(guide.includes('Sales &amp; PAM Email Template Hub'),'Quick Start title must match the Hub');
 assert(guide.includes('recipient')&&guide.includes('Sales and PAM teams'),'Guide should clarify sender versus recipient');
 const library=readFileSync(new URL('../content-hub.html',import.meta.url),'utf8');
-assert(library.includes('Sales & PAM Email: To Customer')&&library.includes('Sales & PAM Email: To Partner'));
+assert(library.includes('Email to Customer')&&library.includes('Email to Partner'),'Content Library uses simplified recipient-specific labels');
 console.log('PASS: MIME import / CID image round-trip / edited export / approval catalog / hub integration');
 assert(v2.includes("window.open(openOutlookWeb.href,'_blank','noopener')"),'Successful formatted copy opens Outlook');
