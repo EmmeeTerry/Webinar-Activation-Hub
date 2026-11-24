@@ -303,7 +303,9 @@ function renderEdits(){const root=$("summaries");root.replaceChildren();selected
  root.append(block)
 })}
 function visible(){const q=$("search").value.toLowerCase().trim(),cat=$("category").value;return state.emails.filter(e=>(!$("campaignFilter").value||($("campaignFilter").value==="linked")===!!campaignFor(e))&&(!cat||e.category===cat)&&(!$("source").value||e.source===$("source").value)&&(!$("region").value||(e.region||"Global")===$("region").value)&&(!q||[e.title,e.category,e.subject,e.kind,e.topic].join(" ").toLowerCase().includes(q)))}
-function renderChoices(){const list=visible(),root=$("emails");root.replaceChildren();for(const e of list){const label=document.createElement("label");label.className="email-choice";const cb=document.createElement("input");cb.type="checkbox";cb.checked=state.selected.has(e.id);cb.addEventListener("change",()=>{cb.checked?state.selected.add(e.id):state.selected.delete(e.id);renderChoices();update()});const span=document.createElement("span");const strong=document.createElement("strong");strong.textContent=e.title;const small=document.createElement("small");small.textContent=[e.source,e.category,e.region,campaignFor(e)?"PMH campaign linked":""].filter(Boolean).join(" · ");span.append(strong,small);label.append(cb,span);root.append(label)}$("count").textContent=list.length+" shown · "+state.selected.size+" selected · "+state.emails.length+" in Hub";if(!list.length)root.textContent="No matching items. Try another source, region or search term."}
+function renderChoices(){const list=visible(),root=$("emails");root.replaceChildren();
+ // Selected items always stay listed (first) so a filter can never hide what is in the post.
+ for(const e of [...selected().filter(x=>!list.includes(x)),...list]){const label=document.createElement("label");label.className="email-choice";const cb=document.createElement("input");cb.type="checkbox";cb.checked=state.selected.has(e.id);cb.addEventListener("change",()=>{cb.checked?state.selected.add(e.id):state.selected.delete(e.id);renderChoices();update()});const span=document.createElement("span");const strong=document.createElement("strong");strong.textContent=e.title;const small=document.createElement("small");small.textContent=[e.source,e.category,e.region,campaignFor(e)?"PMH campaign linked":""].filter(Boolean).join(" · ");span.append(strong,small);label.append(cb,span);root.append(label)}$("count").textContent=list.length+" shown · "+state.selected.size+" selected · "+state.emails.length+" in Hub";if(!list.length)root.textContent="No matching items. Try another source, region or search term."}
 async function fetchJson(p){const r=await fetch(p+"?v="+Date.now(),{cache:"no-store"});if(!r.ok)throw new Error("Could not load "+p);return r.json()}
 async function refresh(){status("");$("count").textContent="Loading emails…";try{const feeds=await Promise.all([fetchJson("./pam-email-repository.json"),fetchJson("./pam-uploaded-emails.json"),fetchJson("./pam-partner-submissions.json").catch(()=>({emails:[]}))]);const ids=new Set();const catalog=await loadResources();state.emails=[...feeds.flatMap(f=>f.emails||[]).map(e=>({...e,source:"Partner Announcement"})),...catalog].filter(e=>{if(!e.id||!e.subject||!e.title||isLegacy(e)||ids.has(e.id))return false;ids.add(e.id);return true}).sort((a,b)=>Number(b.source==="Partner Announcement")-Number(a.source==="Partner Announcement")||getDate(b)-getDate(a)||a.title.localeCompare(b.title));connectCampaigns(state.emails);const previousRegion=$("region").value;$("region").replaceChildren(new Option("All regions",""));for(const r of [...new Set(state.emails.map(e=>e.region||"Global"))].sort())$("region").add(new Option(r,r));$("region").value=previousRegion;const old=$("category").value;const categories=[...new Set(state.emails.map(e=>e.category).filter(Boolean))].sort();$("category").replaceChildren(new Option("All categories",""));for(const x of categories)$("category").add(new Option(x,x));if(categories.includes(old))$("category").value=old;
 if(savedDraft?.ids?.includes(launchId)){
@@ -313,10 +315,9 @@ if(savedDraft?.ids?.includes(launchId)){
  if(!savedDraft.pmhRevision&&!savedDraft.linkedinUrl)savedDraft.linkedinUrl=launchSocial;
 }
 if(savedDraft){const ids=new Set(state.emails.map(e=>e.id));state.selected=new Set((savedDraft.ids||[]).filter(x=>ids.has(x)));state.summaryEdits=savedDraft.edits||{};state.sectionEdits=savedDraft.sections||{};for(const x of ["headline","intro","closing","linkedinUrl","featuredLabel1","featuredUrl1","featuredLabel2","featuredUrl2"])if(typeof savedDraft[x]==="string")$(x).value=savedDraft[x]}else{state.selected.forEach(x=>{if(!ids.has(x))state.selected.delete(x)})}
-if(!state.ready&&!savedDraft&&state.emails.length){
- const requested=params.get("story");
- state.selected.add(ids.has(requested)?requested:state.emails[0].id);
-}
+// Preselect only an explicitly requested story. Never default to the newest email:
+// a hidden default selection mixed unrelated articles and CTA links into the post.
+if(!state.ready&&!savedDraft&&ids.has(params.get("story")))state.selected.add(params.get("story"));
 state.ready=true;renderChoices();update();if(savedDraft)renderPreview()}catch(e){status("Unable to load email templates: "+e.message,true);$("count").textContent="Loading failed"}}
 async function copyText(s){try{await navigator.clipboard.writeText(s);status("Copied successfully");return true}catch(e){const t=$("manualCopy");t.hidden=false;t.value=s;t.focus();t.select();status("Clipboard blocked in this browser. The content is selected below. Press Ctrl+C to copy.",true);return false}}
 function save(blob,name){const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),30000)}
@@ -447,6 +448,44 @@ async function storyPNG(item){
  lines.slice(0,4).forEach((line,i)=>ctx.fillText(line,30,82+i*30,735));
  return canvas.toDataURL("image/png").split(",")[1];
 }
+// Outlook-safe PAM email, using the same 700px table design as the Content
+// Announcement Builder email: red top border, kicker, headline, bordered buttons, footer band.
+function emailHTML(a,pics,page){
+ const F="font-family:Arial,Helvetica,sans-serif;";
+ const linkStyle="color:#b30016;text-decoration:underline;font-weight:bold";
+ const inl=v=>inlineValue(v,"html").replace(/<a target="_blank" rel="noopener noreferrer" href=/g,'<a style="'+linkStyle+'" href=');
+ const row=(html,pad)=>'<tr><td style="padding:'+(pad||"0 38px")+';'+F+'font-size:16px;line-height:1.6;color:#334155">'+html+'</td></tr>';
+ const label=t=>'<p style="'+F+'font-size:14px;line-height:1.5;font-weight:700;color:#142136;letter-spacing:.4px;margin:0 0 8px">'+t+'</p>';
+ const para=(v,margin)=>'<p style="'+F+'font-size:16px;line-height:1.65;color:#425267;margin:'+(margin||"0 0 20px")+'">'+inl(v)+'</p>';
+ const solid=(href,text)=>'<table cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse"><tr><td bgcolor="#c9001b" style="background:#c9001b;padding:14px 22px"><a href="'+esc(href)+'" style="'+F+'font-size:15px;line-height:1.4;font-weight:bold;color:#ffffff;text-decoration:none">'+esc(text)+' &nbsp;&#8599;</a></td></tr></table>';
+ const outline=(href,text,color)=>'<table cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse"><tr><td bgcolor="#ffffff" style="background:#ffffff;border:2px solid '+(color||"#c9001b")+';padding:11px 16px"><a href="'+esc(href)+'" style="'+F+'font-size:14px;line-height:1.4;font-weight:bold;color:'+(color||"#af0016")+';text-decoration:underline">'+esc(text)+' &nbsp;&#8599;</a></td></tr></table>';
+ const navLinks='<p style="'+F+'font-size:13px;line-height:1.65;margin:0;color:#223148"><a href="'+esc(nav.newsNav)+'" style="'+linkStyle+'">News and Updates</a> &nbsp; | &nbsp; <a href="'+esc(nav.hubNav)+'" style="'+linkStyle+'">PAM Email Hub</a></p>';
+ const cell=x=>'<td width="50%" valign="top" style="width:50%;padding:0 9px 9px 0;'+F+'"><table width="100%" role="presentation" cellpadding="0" cellspacing="0" style="border-collapse:collapse"><tr><td style="border:1px solid #d8e0e9;background:#ffffff;padding:12px 13px;font-size:14px;line-height:1.4;font-weight:700"><a href="'+esc(x.url)+'" style="color:#b60019;text-decoration:none">'+esc(x.label)+' &#8599;</a></td></tr></table></td>';
+ const grid=list=>{let g='<table width="100%" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse">';for(let i=0;i<list.length;i+=2)g+='<tr>'+cell(list[i])+(list[i+1]?cell(list[i+1]):'<td width="50%" style="width:50%">&nbsp;</td>')+'</tr>';return g+'</table>'};
+ let h='<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+esc(inlineValue(a.title,"label"))+'</title></head><body style="margin:0;padding:12px 0;background:#ffffff"><table role="presentation" width="700" align="center" cellpadding="0" cellspacing="0" style="width:700px;max-width:100%;border-collapse:collapse;background:#ffffff;'+F+'color:#243247">';
+ h+='<tr><td bgcolor="#ffffff" style="background:#ffffff;padding:32px 38px 26px;border-top:7px solid #d5001b;'+F+'color:#172235"><p style="margin:0 0 12px;'+F+'font-size:13px;line-height:1.4;letter-spacing:1px;font-weight:bold;color:#b40018">PARTNER NEWS &nbsp;/&nbsp; PAM ACTIVATION</p><h1 style="margin:0 0 16px;'+F+'font-size:31px;line-height:1.22;font-weight:bold;color:#172235">'+inl(a.title)+'</h1><p style="margin:0 0 22px;'+F+'font-size:17px;line-height:1.6;color:#394a60">What partners need to know and how PAMs can help</p>'+(page?'<div style="margin:0 0 20px">'+outline(page,"Read this Partner Pulse post in SharePoint")+'</div>':'')+'<div style="border-top:1px solid #dce3ec;padding-top:15px">'+navLinks+'</div></td></tr>';
+ h+=row(para(a.intro,"26px 0 6px"));
+ a.blocks.forEach((x,i)=>{
+  const kicker=a.blocks.length>1?"STORY "+(i+1)+" OF "+a.blocks.length:"FEATURED STORY";
+  h+=row('<div style="border-top:1px solid #e0e6ed;margin-top:20px;padding-top:22px"><p style="'+F+'font-size:12px;line-height:1.5;font-weight:700;letter-spacing:1.1px;color:#bf0018;margin:0 0 9px">'+kicker+'</p><h2 style="'+F+'font-size:25px;line-height:1.28;color:#142136;font-weight:700;margin:0 0 19px">'+inl(x.title)+'</h2></div>');
+  const pic=pics[i];
+  if(pic)h+=row('<img src="cid:'+pic.cid+'" alt="'+esc(inlineValue(x.title,"label"))+'" width="'+pic.width+'" style="display:block;width:'+pic.width+'px;max-width:100%;height:auto;border:1px solid #e2e8f0">',"0 38px 19px");
+  h+=row(para(x.why));
+  h+=row(label("WHAT&#8217;S IN IT FOR PARTNERS")+para(x.share)+(x.points.length?'<ul style="margin:0 0 20px;padding-left:22px;color:#425267">'+x.points.map(z=>'<li style="margin:0 0 6px">'+esc(z)+'</li>').join("")+'</ul>':''));
+  if(x.asset)h+=row('<p style="margin:0 0 20px"><a href="'+esc(x.asset)+'" style="'+linkStyle+'">Preview the customer asset &#8599;</a></p>');
+  if(x.pmh)h+=row(label("HOW PARTNERS CAN ACTIVATE THE CAMPAIGN")+para(activationCopy)+outline(x.pmh,"Open the PMH campaign"),"0 38px 24px");
+  h+=row(label("WHAT PAMS SHOULD DO")+para(x.action));
+  h+=row(solid(x.url,"Open the PAM-to-Partner Email"),"0 38px 14px");
+  if(a.linkedin&&x===socialBlock(a))h+=row(outline(a.linkedin,"Share on your LinkedIn","#0a66c2"),"0 38px 24px");
+ });
+ const more=[...a.featured,...a.blocks.flatMap(x=>x.resources)].filter((x,i,all)=>all.findIndex(y=>y.url===x.url)===i);
+ if(more.length)h+=row('<div style="border-top:1px solid #e0e6ed;margin-top:14px;padding-top:20px">'+label("ADDITIONAL RESOURCES")+grid(more)+'</div>',"0 38px 22px");
+ h+='<tr><td bgcolor="#f1f4f8" style="background-color:#f1f4f8;border-top:3px solid #d5001b;padding:28px 38px 32px;'+F+'"><p style="'+F+'font-size:16px;line-height:1.6;color:#4a5a6e;margin:0 0 20px">'+inl(a.closing)+'</p><div style="border-top:1px solid #ccd6e3;padding-top:18px">'+navLinks+'</div></td></tr></table></body></html>';
+ return h;
+}
+function imageWidths(images){
+ return Promise.all(images.map(data=>new Promise(res=>{const im=new Image();im.onload=()=>res(im.naturalWidth/Math.max(1,im.naturalHeight)>=1.6?624:240);im.onerror=()=>res(624);im.src="data:image/png;base64,"+data})));
+}
 function b64(text){return btoa(Array.from(new TextEncoder().encode(text),x=>String.fromCharCode(x)).join(""))}
 function wrap64(value){return value.match(/.{1,76}/g)?.join("\r\n")||""}
 async function exportPost(mode){
@@ -463,7 +502,9 @@ async function exportPost(mode){
   const doc=new DOMParser().parseFromString(body,"text/html");
   const sections=doc.querySelectorAll("section");
   images.forEach((_,i)=>{const img=doc.createElement("img");img.setAttribute("src",mode!=="packet"?"cid:story-"+i:"images/story-"+i+".png");img.setAttribute("width","440");img.setAttribute("style","max-width:100%;height:auto");img.alt=items[i].title;sections[i].prepend(img)});
-  const html='<!doctype html><meta charset="utf-8"><h1>'+inlineValue(a.title,"html")+'</h1>'+(page?'<p><a href="'+esc(page)+'">Read this Partner Pulse post in SharePoint</a></p>':'')+doc.body.innerHTML;
+  const html=mode==="packet"
+   ?'<!doctype html><meta charset="utf-8"><h1>'+inlineValue(a.title,"html")+'</h1>'+doc.body.innerHTML
+   :emailHTML(a,(await imageWidths(images)).map((width,i)=>({cid:"story-"+i,width})),page);
   if(mode==="packet"){
    const files=images.map((data,i)=>({filename:"images/story-"+i+".png",blob:new Blob([Uint8Array.from(atob(data),c=>c.charCodeAt(0))])}));
    const blueprint={"@odata.type":"#microsoft.graph.sitePage",name:"partner-pulse-"+Date.now()+".aspx",title:inlineValue(a.title,"label"),pageLayout:"article",canvasLayout:{horizontalSections:[{id:"1",layout:"oneColumn",columns:[{id:"1",width:12,webparts:[{"@odata.type":"#microsoft.graph.textWebPart",id:crypto.randomUUID(),innerHtml:body}]}]}]}};

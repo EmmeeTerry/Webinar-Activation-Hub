@@ -28,27 +28,12 @@ try{
  assert(mime.includes('X-Unsent: 1'),'Outlook MIME must remain unsent');
  console.log('PASS: CSV -> selected contact -> addressed EML with four embedded images');
 
- // Translation worksheet can be completed outside the browser and reimported
- // without converting the email to plain text or stripping embedded images.
- await page.locator('#translateOptions > summary').click();
- await page.getByText('Use a translator or translation tool instead',{exact:true}).click();
- const [worksheet]=await Promise.all([page.waitForEvent('download'),page.getByRole('button',{name:'Download translation worksheet'}).click()]);
- const text=await readFile(await worksheet.path(),'utf8');
- const rows=await page.evaluate(str=>csvParse(str.replace(/^\uFEFF/,'')),text);
- assert(rows.length>4,'Expected a worksheet with subject and email text segments');
- const done=rows.map((row,i)=>i===0?row:[row[0],row[1],'TR '+row[1]]);
- const enc=v=>'"'+String(v??'').replace(/"/g,'""')+'"';
- const completed=done.map(r=>r.map(enc).join(',')).join('\r\n')+'\r\n';
- await page.locator('#translatedWorksheet').setInputFiles({name:'translation.csv',mimeType:'text/csv',buffer:Buffer.from(completed)});
- await page.waitForFunction(()=>document.querySelector('#translateStatus')?.textContent?.includes('Translation applied'),{timeout:20000});
- assert((await page.locator('#subject').inputValue()).startsWith('TR '),'Translated subject should update');
- const frame=page.frameLocator('#richEmail');
- await frame.locator('body').getByText(/TR /).first().waitFor({timeout:15000});
- const [translated]=await Promise.all([page.waitForEvent('download'),page.locator('#eml').click()]);
- const translatedMime=await readFile(await translated.path(),'utf8');
- assert.equal((translatedMime.match(/Content-ID: </g)||[]).length,4,'Translated email must retain four CID images');
- assert(translatedMime.includes('To: alex@example.com'),'Translated draft should retain chosen contact');
- console.log('PASS: translation worksheet -> formatted email -> addressed EML + original four images');
+ // Send actions sit above the editor, and the share link copies the selected email.
+ const order=await page.evaluate(()=>{const e=document.getElementById('edit');return [e.querySelector('#eml'),document.getElementById('richEmail')].map(n=>[...e.querySelectorAll('*')].indexOf(n))});
+ assert(order[0]>=0&&order[0]<order[1],'Download formatted Outlook email must appear above the email preview');
+ assert.equal(await page.locator('#translateOptions').count(),0,'Translate controls were removed');
+ assert.equal(await page.getByText('How to use email templates',{exact:true}).count(),1,'Guide link should appear once');
+ console.log('PASS: send actions first, Translate removed, guide link shown once');
 
  // When clipboard APIs are blocked, the action must expose a selectable
  // HTML alternative, not a broken promise or an uncaught permission error.
