@@ -59,7 +59,7 @@ assert(v2.includes("secondaryActions.appendChild(shareButton)"),'Copy link to th
 assert(!v2.includes("guideLink.cloneNode"),'How to use email templates appears once, in the header');
 assert(v2.includes("helpTitle.textContent='More tools and help'"),'Extra help is collapsed');
 assert(v2.includes("leadSummary.textContent='Personalize from contact list'"),'Contact-list personalization must be visible in top controls');
-assert(v2.includes("formattedCopyButton.textContent='Copy email body for Outlook'"),'Restore formatted copy UI');
+assert(v2.includes("formattedCopyButton.textContent='Copy email & open Outlook'"),'Restore formatted copy UI');
 assert(v2.includes('browserSelectAndCopy'),'Copy must have a browser selection fallback');
 assert(!v2.includes("byId('copy').hidden=false"),'Do not expose blocked clipboard action');
 assert(!v2.includes("translateOptions"),'Translate was removed because it did not work inside SharePoint');
@@ -98,3 +98,4 @@ assert(guide.includes('recipient')&&guide.includes('Sales and PAM teams'),'Guide
 const library=readFileSync(new URL('../content-hub.html',import.meta.url),'utf8');
 assert(library.includes('Sales & PAM Email: To Customer')&&library.includes('Sales & PAM Email: To Partner'));
 console.log('PASS: MIME import / CID image round-trip / edited export / approval catalog / hub integration');
+assert(v2.includes("window.open(openOutlookWeb.href,'_blank','noopener')"),'Successful formatted copy opens Outlook');
