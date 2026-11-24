@@ -562,15 +562,15 @@ if(leadPanel){
  quickTools.appendChild(leadDisclosure);
 }
 const editHeading=document.createElement('h3');
-editHeading.textContent='1. Edit your email';
+editHeading.textContent='2. Customize your email';
 const editIntro=document.createElement('div');
 editIntro.className='email-edit-instructions';
 const instructionText=document.createElement('p');
 instructionText.textContent='Edit the subject and message below. When you’re ready, use the Outlook options to send your email.';
 editIntro.append(instructionText,guideLink.cloneNode(true));
 const sendHeading=document.createElement('h3');
-sendHeading.textContent='2. Send your email in Outlook';
-emailEditor.append(editHeading,editIntro,quickTools,subjectLabel,emailSubject,emailPreview,plainFields,sendHeading,compactHelp,actions,sendStatus,help);
+sendHeading.textContent='3. Send your email in Outlook';
+emailEditor.append(editHeading,editIntro,quickTools,subjectLabel,emailSubject,emailPreview,plainFields,sendHeading,compactHelp,actions,sendStatus,help,byId('internalTemplateLinks'));
 const editorStyle=document.createElement('style');
 editorStyle.textContent=[
  '.email-edit-instructions{display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;margin:0 0 12px}',
