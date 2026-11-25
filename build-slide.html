@@ -70,7 +70,20 @@
  const paidArtwork = safeUrl(webinar ? entry.links?.paidSocial : resources.find(resource => resource.label === 'Paid Media' || resource.label.startsWith('Paid social ads'))?.url);
  const directAdImage = /\.(?:gif|png|jpe?g|webp|bmp|avif)(?:[?#]|$)/i.test(paidArtwork) ? paidArtwork : '';
  fields.paidArtwork = paidArtwork;
- fields.visualCandidates = JSON.stringify([...new Set([directAdImage, entry.webinarImage, entry.marketoOutboundImage].filter(safeUrl))]);
+ let manifestImages=[];
+ try{const response=await fetch('./news-images-manifest.json',{cache:'no-store'});if(response.ok)manifestImages=(await response.json()).images||[];}catch(_){}
+ const cached=manifestImages.filter(x=>x.id&&(x.id===entry.id||(webinar&&x.id.startsWith(entry.id+'-')))&&/^news-images\/[a-z0-9-]+\.webp$/i.test(x.path||'')).map(x=>new URL('./'+x.path,location.href).href);
+ const approved=safeUrl(entry.approvedNewsImageUrl);
+ const candidates=[approved,...cached,entry.webinarImage,entry.marketoOutboundImage,directAdImage].filter(x=>safeUrl(x)&&!/^https:\/\/hitachivantara\.sharepoint\.com\//i.test(x));
+ fields.visualCandidates=JSON.stringify([...new Set(candidates)]);
+ if(!webinar){
+   add('Sales outreach email',entry.salesEmail);
+   add('SDR email',entry.sdrEmail);
+   add('Marketo campaign email',entry.outboundEmailEnterprise);
+   add('Enterprise outbound email banner',entry.outboundBannerEnterprise);
+   add('Marketo email preview',entry.marketoPreviewEnterprise);
+   add('Paid media creative',entry.paidSocialAds);
+ }
  fields.promotion=channels.join(' • ');
  fields.promotionResources=JSON.stringify(resources);
  fields.promotionPeriod=webinar?'':(entry.promotionPeriod||'');
