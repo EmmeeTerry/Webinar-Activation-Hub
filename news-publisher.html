@@ -818,10 +818,10 @@ function fillAssets(){
  select.replaceChildren();
  select.appendChild(new Option(matches.length?'Select content to announce...':'No matching content found',''));
  for(const x of matches){const opt=new Option((contentDate(x)?contentDate(x)+' · ':'')+title(x.title),x.id);select.appendChild(opt)}
- select.value=matches.some(x=>x.id===previous)?previous:'';
+ select.value=matches.some(x=>x.id===previous)?previous:(q&&matches.length===1?matches[0].id:'');
  select.disabled=!matches.length;updateAddButton();
  if(!matches.length){set('selectionFeedback','No matching content found. Adjust your filters. Previously selected content stays below.')}
- else if(!batchIds.length)set('selectionFeedback','');
+ else if(q&&matches.length===1){set('selectionFeedback','✓ Found in the Content Library: '+title(matches[0].title)+'. Click the red button to add it to your announcement.')}else if(!batchIds.length)set('selectionFeedback','');
  if(select.value)render();
 }
 function savedViewURL(){
