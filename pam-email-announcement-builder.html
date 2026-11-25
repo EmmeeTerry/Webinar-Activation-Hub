@@ -78,7 +78,7 @@ body.embedded .preview{max-width:1050px;margin:0 auto;border:0}body.embedded .pr
 <ol><li><strong>Create the news post.</strong> Open the template and create a <strong>Made for email</strong> news post.</li>
 <li><strong>Add your announcement.</strong> Copy the title and formatted post below. Paste them into the page title and a Text web part.</li>
 <li><strong>Preview and send.</strong> Preview the post, choose <strong>Post and send</strong>, and select your PAM audience.</li></ol>
-<div class="actions"><a class="action-link" id="openSP" href="https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Content-Sharing-Template.aspx" target="_blank" rel="noopener">Open SharePoint template ↗</a><button id="copyTitle">Copy title</button><button id="copyRich">Copy formatted post</button></div>
+<div class="actions"><a class="action-link" id="openSP" href="https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Content-Sharing-Template.aspx" target="_blank" rel="noopener">Open SharePoint template ↗</a><button id="copyTitle">Copy title</button><button id="copyRich">Copy formatted post</button></div><div id="manualRichArea" hidden style="margin:12px 0;padding:12px;border:1px solid #cbd5e1;background:#f8fafc"><p>Automatic copying was blocked. Click Select, press Ctrl+C, then paste into your SharePoint Text web part.</p><button type="button" id="selectRichPost">Select formatted post</button><div id="manualRichContent" style="background:#fff;border:1px solid #dbe1e8;padding:12px;max-height:340px;overflow:auto;margin-top:10px"></div></div>
 <details><summary>Optional artwork and Copilot tools</summary><p>For artwork, unzip the draft package and upload the files from its images folder to SharePoint Image web parts.</p><button id="packet">Download draft package</button><p>Copy the brief and paste it into SharePoint Copilot when creating your news draft. Review the resulting text, artwork and links before sending.</p><button id="brief">Copy Copilot brief</button></details></section>
 <section class="publish-path"><h3>Option B · Publish on SharePoint, then email from Outlook</h3>
 <section id="embedActions"><h3>1. Publish the SharePoint page</h3><p>Copy the embed below. Create a page from the <a href="https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Content-Sharing-Template.aspx" target="_blank" rel="noopener">SharePoint template</a>, paste the code into an <strong>Embed</strong> web part and publish.</p>
@@ -383,7 +383,26 @@ $("clear").onclick=()=>{state.selected.clear();renderChoices();update()};
 $("reload").onclick=refresh;
 $("copyTitle").onclick=()=>copyText(inlineValue(article().title,"label"));
 $("copyPlain").onclick=()=>{if(selected().length)copyText(textBody())};
-$("copyRich").onclick=async()=>{if(!selected().length)return;try{if(!navigator.clipboard?.write||typeof ClipboardItem==="undefined")throw Error("Rich clipboard not supported");await navigator.clipboard.write([new ClipboardItem({"text/html":new Blob([richBody()],{type:"text/html"}),"text/plain":new Blob([textBody()],{type:"text/plain"})})]);status("Formatted article copied. Paste into the SharePoint news template.")}catch(e){status("Formatted copy was blocked. Open the builder in its own tab, or use Download HTML.",true)}};
+function selectFormattedPost(){const range=document.createRange();range.selectNodeContents($("manualRichContent"));const selection=window.getSelection();selection.removeAllRanges();selection.addRange(range)}
+$("selectRichPost").onclick=()=>{selectFormattedPost();status("Formatted post selected. Press Ctrl+C, then paste into SharePoint.")};
+$("copyRich").onclick=async()=>{
+ if(!selected().length){status("Select an email template first.",true);return}
+ const html=richBody(),plain=textBody();$("manualRichArea").hidden=true;
+ try{
+  if(!navigator.clipboard?.write||typeof ClipboardItem==="undefined")throw Error("Rich clipboard not available");
+  await navigator.clipboard.write([new ClipboardItem({"text/html":new Blob([html],{type:"text/html"}),"text/plain":new Blob([plain],{type:"text/plain"})})]);
+  status("Formatted post copied. Paste into your SharePoint Text web part.");return
+ }catch(e){}
+ try{
+  const temp=document.createElement("div");temp.innerHTML=html;temp.style.cssText="position:fixed;left:-10000px;top:0;width:650px;background:#fff";
+  document.body.appendChild(temp);const selection=window.getSelection(),range=document.createRange();range.selectNodeContents(temp);
+  selection.removeAllRanges();selection.addRange(range);
+  let copied=false;try{copied=document.execCommand("copy")}finally{selection.removeAllRanges();temp.remove()}
+  if(copied){status("Formatted post copied. Paste into your SharePoint Text web part.");return}
+ }catch(e){}
+ $("manualRichContent").innerHTML=html;$("manualRichArea").hidden=false;selectFormattedPost();
+ status("Automatic copying was blocked. Formatted post selected below: press Ctrl+C, then paste into SharePoint.",true)
+};
 $("downloadDraft").onclick=()=>{if(selected().length)download()};
 // Opens the exact page the SharePoint embed will show, like the Content Announcement Builder.
 $("previewEmbed").onclick=()=>{if(iframe())window.open(embedURL(),"_blank","noopener")};
