@@ -6,8 +6,8 @@
 main{max-width:1050px;margin:0 auto}header{background:#111b2b;border-top:6px solid #e60012;color:white;padding:35px 38px}
 .eyebrow{font-size:11px;font-weight:bold;letter-spacing:1.45px;color:#e2e8f0}header h1{font-size:29px;line-height:1.25;margin:12px 0;overflow-wrap:anywhere;white-space:normal}header p{font-size:15px;line-height:1.55;color:#dde4ec;margin:0}
 .included-titles{padding:14px 36px 16px;border-bottom:1px solid #e4e7eb;background:#f8fafc}.included-titles h2{font-size:12px;text-transform:uppercase;letter-spacing:1px;color:#576574;margin:0 0 9px}.included-titles ul{padding-left:20px;margin:0;line-height:1.65;color:#111b2b}.included-titles li{font-size:14px;font-weight:600;margin:3px 0}.intro{padding:24px 36px 10px}.intro h2{font-size:20px;margin:0 0 8px;color:#111b2b}.intro p{font-size:14px;line-height:1.6;color:#586671;margin:0}
-section.asset{padding:27px 36px;border-bottom:1px solid #e2e6eb}.asset-main{display:flex;align-items:flex-start;gap:26px}
-.cover{width:150px;max-height:195px;object-fit:contain;flex:none;border-radius:5px;background:#f5f7f9;border:1px solid #e4e8ee}
+section.asset{padding:27px 36px;border-bottom:1px solid #e2e6eb}.asset-main{display:block;min-height:36px}.asset-main:after{content:'';display:block;clear:both}
+.cover{float:left;width:auto;max-width:35%;max-height:260px;object-fit:contain;margin:0 18px 12px 0;border-radius:5px;background:#f5f7f9;border:1px solid #e4e8ee}
 .category{color:#b40919;font-size:11px;font-weight:bold;letter-spacing:1px;text-transform:uppercase}
 .asset h2{font-size:22px;line-height:1.3;margin:9px 0;color:#111b2b}.description{font-size:14px;color:#485661;line-height:1.65;margin:10px 0 17px}
 .cta{display:inline-block;background:#e60012;color:white!important;padding:12px 16px;border-radius:4px;font-size:13px;font-weight:bold;text-decoration:none}
@@ -78,6 +78,7 @@ function assetDetails(x){
  ].filter(([,value])=>String(value||'').trim());
 }
 function imageFor(x,imageIds){
+ if(x.announcementImageUrl&&/^https:\/\//i.test(x.announcementImageUrl))return x.announcementImageUrl;
  const image=x.approvedNewsImageUrl;
  if(image && /^https:\/\//i.test(image) && !/^https:\/\/hitachivantara\.sharepoint\.com\//i.test(image))return image;
  if(imageIds.has(x.id))return ROOT+'news-images/'+encodeURIComponent(x.id)+'.webp';
@@ -94,7 +95,7 @@ function renderAsset(x,imageIds){
  div.innerHTML='<div class="asset-main">'+(art?'<img class="cover" src="'+e(art)+'" alt="'+e(title(x.title))+' cover" loading="lazy">':'')
  +'<div><div class="category">'+e(x.campaign||'GLOBAL CAMPAIGNS')+' / '+e(x.type||'CONTENT')+'</div>'
  +'<h2>'+e(title(x.title))+'</h2>'
- +'<p class="description">'+e(x.abstract||x.notes||'An approved description has not yet been provided in Smartsheet.')+'</p>'
+ +'<p class="description">'+e(x.abstract||'Description missing: The content owner has not provided a description. Please add one to the Master Content Library Smartsheet.')+'</p>'
  +'<a class="cta" href="'+e(card(x))+'" target="_blank" rel="noopener noreferrer">Explore asset &amp; activation resources ↗</a></div></div>'
  +(resources.length?'<div class="resources"><h3>Available activation resources</h3><div class="resources-grid">'+resources.map(([label,url])=>'<a href="'+e(url)+'" target="_blank" rel="noopener noreferrer">'+e(label)+' ↗</a>').join('')+'</div></div>':'')
  +'<div class="resources"><h3>Share &amp; create</h3><div class="resources-grid">'+shareActionLinks(x).map(([label,url])=>'<a href="'+e(url)+'" target="_blank" rel="noopener noreferrer">'+e(label)+' ↗</a>').join('')+'</div></div>'
@@ -113,7 +114,7 @@ async function start(){
   const original=map.get(id);if(!original)return null;
   const override=edits.records[id]||{};
   const allowed={};
-  for(const key of ['title','abstract'])if(typeof override[key]==='string'&&override[key].trim())allowed[key]=override[key].slice(0,4000);
+  for(const key of ['title','abstract','announcementImageUrl'])if(typeof override[key]==='string'&&override[key].trim())allowed[key]=override[key].slice(0,4000);
   if(override._links&&typeof override._links==='object'){allowed._links={};for(const [label,url] of Object.entries(override._links))if(/^https?:\/\/\S+$/i.test(url))allowed._links[label]=url}
   return {...original,...allowed};
  }).filter(Boolean);
