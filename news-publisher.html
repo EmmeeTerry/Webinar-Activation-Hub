@@ -154,10 +154,10 @@ function render(){
   $('art').hidden=true;
   if(im){if($('art').getAttribute('src')!==im){$('art').src=im;}else if($('art').complete&&$('art').naturalWidth){$('art').hidden=false;} }
   else{$('art').removeAttribute('src');$('missing').hidden=false;$('missing').textContent='No displayable image available'}
-  set('status',!live?'Asset not Live. This is a draft preview.':'Review the copy and artwork, then prepare the native SharePoint news post.');
+  if(!live)set('status','This asset is not currently Live. Review its availability before sharing.');
   $('status').classList.toggle('warn',!live);
   updateReadiness();
-  if(!embedded && !params.has('savedView'))history.replaceState({},'', '?item='+encodeURIComponent(current.id));
+  if(!embedded && !params.has('savedView')&&params.has('item'))history.replaceState({},'', '?item='+encodeURIComponent(current.id));
   if(batchIds.length)$('pageTitle').value=announcementPageTitle(batchEntries());
   updateEmailPreview();
 }
@@ -530,7 +530,7 @@ $('batchPreview').addEventListener('focusout',event=>{
 function renderBatch(){
  const el=$('batchList'),entries=batchEntries();el.replaceChildren();
  if(!entries.length){const empty=document.createElement('span');empty.className='hint';empty.textContent='No assets selected yet.';el.append(empty)}
- entries.forEach(x=>{const chip=document.createElement('span');chip.className='batch-chip';const name=document.createElement('span');name.textContent=title(x.title);const b=document.createElement('button');b.type='button';b.textContent='×';b.setAttribute('aria-label','Remove '+title(x.title));b.onclick=()=>{batchIds=batchIds.filter(id=>id!==x.id);renderBatch()};chip.append(name);const art=assetImage(x);if(art){const download=document.createElement('button');download.type='button';download.textContent='Download cover image ↓';download.title='Save approved cover for '+title(x.title);download.style.cssText='font-size:12px;color:#b20617;font-weight:bold;white-space:nowrap';download.onclick=()=>downloadAssetImage(x);chip.append(download)}chip.append(b);el.append(chip)});
+ entries.forEach(x=>{const chip=document.createElement('span');chip.className='batch-chip';const name=document.createElement('span');name.textContent=title(x.title);const b=document.createElement('button');b.type='button';b.textContent='×';b.setAttribute('aria-label','Remove '+title(x.title));b.onclick=()=>{batchIds=batchIds.filter(id=>id!==x.id);renderBatch();updateAddButton()};chip.append(name);const art=assetImage(x);if(art){const download=document.createElement('button');download.type='button';download.textContent='Download cover image ↓';download.title='Save approved cover for '+title(x.title);download.style.cssText='font-size:12px;color:#b20617;font-weight:bold;white-space:nowrap';download.onclick=()=>downloadAssetImage(x);chip.append(download)}chip.append(b);el.append(chip)});
  $('batchClear').disabled=!entries.length;set('selectedCount','('+entries.length+')');
 
  $('copyRich').textContent=entries.length?'Copy announcement for SharePoint News and email ('+entries.length+' assets)':'Copy announcement for SharePoint News and email';
@@ -541,8 +541,8 @@ function renderBatch(){
  renderImageControls(entries);
  $('batchPreview').innerHTML=entries.length?batchHTML()+`<div style="margin:20px 0 0;padding:22px 24px;background:#f6f7f9;border:1px solid #e3e7eb;border-radius:7px"><strong style="display:block;font-size:17px;color:#111b2b">Everything you need to activate, in one place.</strong><p style="color:#53626e;font-size:13px;line-height:1.6">Find content and promotional resources, share content with customers or partners, and create overview slides in the Content Library.</p><a href="https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Content-Library.aspx" target="_blank" rel="noopener noreferrer" style="font-size:13px;font-weight:bold;color:#b20617">Explore the Content Library ↗</a></div>`:'<p class="hint">Add an asset to see the combined announcement preview here.</p>';
 }
-$('batchAdd').onclick=()=>{const id=$('asset').value;if(!id||batchIds.includes(id)){set('status','Select new content to add to your announcement.');return}if(batchIds.length>=20){set('status','Maximum 20 assets per announcement.');return}batchIds.push(id);renderBatch();set('status',batchIds.length+' assets in the combined announcement.');set('selectionFeedback','✓ '+title(items.find(x=>x.id===id)?.title||'Asset')+' added to your announcement. Select another asset or clear search to add more content.')};
-$('batchClear').onclick=()=>{batchIds=[];renderBatch()};
+$('batchAdd').onclick=()=>{const id=$('asset').value;if(!id||batchIds.includes(id)){set('status','Select new content to add to your announcement.');return}if(batchIds.length>=20){set('status','Maximum 20 assets per announcement.');return}batchIds.push(id);renderBatch();updateAddButton();set('status',batchIds.length+' assets in the combined announcement.');set('selectionFeedback','✓ '+title(items.find(x=>x.id===id)?.title||'Asset')+' added to your announcement. Select another asset or clear search to add more content.')};
+$('batchClear').onclick=()=>{batchIds=[];renderBatch();updateAddButton();set('selectionFeedback','')};
 
 
 
@@ -782,34 +782,48 @@ function searchText(x){return [x.title,x.abstract,x.notes,x.description,x.campai
 const SEARCH_ALIASES={vmware:['virtualization','vcf','vvf','vsphere'],openshift:['red hat','kubernetes','oke'],blog:['article','community'],ebook:['e-book','guide'],modernization:['modernize','migration','migrate'],partner:['channel','pam'],customer:['end user','buyer']};
 function levenshteinOne(a,b){if(a===b)return true;let i=0,j=0,d=0;while(i<a.length&&j<b.length){if(a[i]===b[j]){i++;j++;continue}if(++d>1)return false;if(a.length>b.length)i++;else if(b.length>a.length)j++;else{i++;j++}}return d+(a.length-i)+(b.length-j)<=1}
 function searchScore(x,query){const words=query.toLowerCase().match(/[a-z0-9]+/g)||[];if(!words.length)return 1;const hay=searchText(x),name=title(x.title).toLowerCase(),parts=hay.match(/[a-z0-9]+/g)||[];let score=0;for(const w of words){const alternatives=[w,...(SEARCH_ALIASES[w]||[])];let hit=alternatives.some(t=>hay.includes(t));if(!hit&&w.length>=5)hit=parts.some(t=>Math.abs(t.length-w.length)<=1&&levenshteinOne(t,w));if(!hit)return 0;score+=name.includes(w)?10:hay.includes(w)?3:1}return score}
+function isLiveContent(x){return /^(live|published)$/i.test(clean(x.status))&&(!contentDate(x)||contentDate(x)<=dateBoundary(new Date()))}
+function isComingSoon(x){const status=clean(x.status).toLowerCase(),d=contentDate(x);return (d&&d>dateBoundary(new Date())&&['planned','in production','live','proposed'].includes(status))||['coming soon','upcoming'].includes(status)}
+function updateAddButton(){
+ const id=$('asset').value,selected=items.find(x=>x.id===id),exists=!!id&&batchIds.includes(id);
+ const button=$('batchAdd');button.disabled=!selected||exists||batchIds.length>=20;
+ button.textContent=!selected?'Select content to add':exists?'✓ Already added to announcement':batchIds.length>=20?'Announcement limit reached':'+ Add this content to announcement';
+ button.style.cursor=button.disabled?'not-allowed':'pointer';
+ button.style.background=button.disabled?'#aab4bf':'';
+}
 function fillAssets(){
-  const q=$('search').value.trim().toLowerCase(),st=$('filterNews').value,mode=$('filterArtwork').value,typeFilter=$('filterType').value;
-  const preset=$('datePreset').value,sort=$('sortAssets').value,today=new Date();
-  const todayISO=dateBoundary(today);
-  let from='',to='';
-  if(/^\d+$/.test(preset)){const d=new Date(today.getFullYear(),today.getMonth(),today.getDate()-Number(preset)+1);from=dateBoundary(d);to=todayISO}
-  else if(preset==='month'){from=dateBoundary(new Date(today.getFullYear(),today.getMonth(),1));to=todayISO}
-  else if(preset==='year'){from=dateBoundary(new Date(today.getFullYear(),0,1));to=todayISO}
-  else if(preset==='custom'){from=$('dateFrom').value;to=$('dateTo').value}
-  let matches=items.filter(x=>{
-    const d=contentDate(x),dateOK=preset==='all'||(d&&(!from||d>=from)&&(!to||d<=to));
-    return dateOK&&(!st||clean(x.newsAnnouncement||'Not Requested')===st)
-      &&(!typeFilter||clean(x.type)===typeFilter)&&(!$('filterOwner').value||clean(x.ownerIndividual)===$('filterOwner').value)&&($('descriptionFilter').value==='all'||($('descriptionFilter').value==='available'?!!clean(x.abstract):!clean(x.abstract)))&&(!q||searchScore(x,q)>0)
-      &&(mode==='all'||(mode==='missing'&&!hasArtwork(x))||(mode==='available'&&hasArtwork(x))||(mode==='ready'&&hasArtwork(x)&&clean(x.status).toLowerCase()==='live'&&!!clean(x.abstract)));
-  });
-  matches.sort((a,b)=>(q?searchScore(b,q)-searchScore(a,q):0)||(sort==='az'?title(a.title).localeCompare(title(b.title)):sort==='oldest'?(contentDate(a)||'9999').localeCompare(contentDate(b)||'9999')||title(a.title).localeCompare(title(b.title)):(contentDate(b)||'').localeCompare(contentDate(a)||'')||title(a.title).localeCompare(title(b.title))));
-  set('assetCount','');set('resultCount','('+matches.length+' matching assets)');$('batchAdd').disabled=!matches.length;$('asset').disabled=!matches.length;$('batchAdd').style.background=matches.length?'':'#aab4c0';$('batchAdd').style.cursor=matches.length?'':'not-allowed';$('batchAdd').textContent=matches.length?'+ Add this content to announcement':'No content to add';
-  const select=$('asset'),previous=select.value;
-  select.replaceChildren(...matches.map(x=>{const o=document.createElement('option');o.value=x.id;o.textContent=(contentDate(x)?contentDate(x)+' · ':'')+title(x.title);return o}));
-  if(!matches.length){const o=document.createElement('option');o.textContent='No matching assets';o.value='';select.appendChild(o);current=null;set('selectionFeedback','No matching content found. Try adjusting your filters. Previously selected content remains below.');return}
-  select.value=matches.some(x=>x.id===previous)?previous:matches[0].id;
-  if(select.value!==previous)$('image').value='';
-  render();
+ const q=$('search').value.trim().toLowerCase(),mode=$('filterArtwork').value,typeFilter=$('filterType').value,availability=$('availabilityFilter').value;
+ const preset=$('datePreset').value,sort=$('sortAssets').value,today=new Date(),todayISO=dateBoundary(today);
+ let from='',to='';
+ if(/^\d+$/.test(preset)){const d=new Date(today.getFullYear(),today.getMonth(),today.getDate()-Number(preset)+1);from=dateBoundary(d);to=todayISO}
+ else if(preset==='month'){from=dateBoundary(new Date(today.getFullYear(),today.getMonth(),1));to=todayISO}
+ else if(preset==='year'){from=dateBoundary(new Date(today.getFullYear(),0,1));to=todayISO}
+ else if(preset==='custom'){from=$('dateFrom').value;to=$('dateTo').value}
+ const matches=items.filter(x=>{
+  const d=contentDate(x),dateOK=preset==='all'||(d&&(!from||d>=from)&&(!to||d<=to));
+  const availabilityOK=availability==='all'||(availability==='live'?isLiveContent(x):isComingSoon(x));
+  return dateOK&&availabilityOK&&(!typeFilter||clean(x.type)===typeFilter)
+   &&(!$('filterOwner').value||clean(x.ownerIndividual)===$('filterOwner').value)
+   &&(!$('hasDescriptionOnly').checked||!!clean(x.abstract))
+   &&(!q||searchScore(x,q)>0)
+   &&(mode==='all'||(mode==='available'&&hasArtwork(x)));
+ });
+ matches.sort((a,b)=>(q?searchScore(b,q)-searchScore(a,q):0)||(sort==='az'?title(a.title).localeCompare(title(b.title)):sort==='oldest'?(contentDate(a)||'9999').localeCompare(contentDate(b)||'9999')||title(a.title).localeCompare(title(b.title)):(contentDate(b)||'').localeCompare(contentDate(a)||'')||title(a.title).localeCompare(title(b.title))));
+ set('assetCount','');set('resultCount','('+matches.length+' matching assets)');
+ const select=$('asset'),previous=select.value;
+ select.replaceChildren();
+ select.appendChild(new Option(matches.length?'Select content to announce...':'No matching content found',''));
+ for(const x of matches){const opt=new Option((contentDate(x)?contentDate(x)+' · ':'')+title(x.title),x.id);select.appendChild(opt)}
+ select.value=matches.some(x=>x.id===previous)?previous:'';
+ select.disabled=!matches.length;updateAddButton();
+ if(!matches.length){set('selectionFeedback','No matching content found. Adjust your filters. Previously selected content stays below.')}
+ else if(!batchIds.length)set('selectionFeedback','');
+ if(select.value)render();
 }
 function savedViewURL(){
  const u=new URL(ROOT+'news-publisher.html');
  u.searchParams.set('savedView','1');
- const values=[['q',$('search').value.trim()],['type',$('filterType').value],['artwork',$('filterArtwork').value],['description',$('descriptionFilter').value],['owner',$('filterOwner').value],['news',$('filterNews').value],['date',$('datePreset').value],['sort',$('sortAssets').value],['from',$('dateFrom').value],['to',$('dateTo').value],['item',$('asset').value],['selection',batchIds.join(',')]];
+ const values=[['q',$('search').value.trim()],['type',$('filterType').value],['artwork',$('filterArtwork').value],['description',$('descriptionFilter').value],['owner',$('filterOwner').value],['availability',$('availabilityFilter').value],['news',$('filterNews').value],['date',$('datePreset').value],['sort',$('sortAssets').value],['from',$('dateFrom').value],['to',$('dateTo').value],['item',$('asset').value],['selection',batchIds.join(',')]];
  values.forEach(([name,value])=>{if(value)u.searchParams.set(name,value)});
  if(announcementIntroEdit||Object.values(announcementEdits).some(v=>Object.keys(v).length)||navDestinations['News and Updates']!==NEWS_HUB_URL||navDestinations['Global Campaigns Hub']!==GLOBAL_CAMPAIGNS_URL)u.searchParams.set('custom',encodeAnnouncementOverrides(emailSelectedAssets()));
  return u.toString();
@@ -818,7 +832,7 @@ function restoreSavedView(){
  if(params.get('savedView')!=='1')return false;
  const select=(id,key)=>{const v=params.get(key);if(v!==null&&[...$(id).options].some(o=>o.value===v))$(id).value=v};
  $('search').value=params.get('q')||'';
- select('filterType','type');select('filterArtwork','artwork');select('descriptionFilter','description');select('filterOwner','owner');$('hasImageOnly').checked=$('filterArtwork').value==='available';select('filterNews','news');select('datePreset','date');select('sortAssets','sort');
+ select('filterType','type');select('filterArtwork','artwork');select('descriptionFilter','description');select('filterOwner','owner');select('availabilityFilter','availability');$('hasImageOnly').checked=$('filterArtwork').value==='available';$('hasDescriptionOnly').checked=$('descriptionFilter').value==='available';select('filterNews','news');select('datePreset','date');select('sortAssets','sort');
  $('dateFrom').value=params.get('from')||'';$('dateTo').value=params.get('to')||'';
  $('customDates').hidden=$('datePreset').value!=='custom';
  batchIds=[...new Set((params.get('selection')||'').split(',').filter(Boolean))].filter(id=>items.some(x=>x.id===id)).slice(0,20);
@@ -832,12 +846,12 @@ $('saveView').onclick=async()=>{
  catch(e){window.prompt('Copy this view link:',url);set('status','Use this link to share your saved filtered view.')}
 };
 function copy(v){navigator.clipboard.writeText(v).then(()=>set('status','Copied to clipboard.')).catch(()=>prompt('Copy this value:',v))}
-$('image').value=params.get('image')||'';$('asset').onchange=()=>{$('image').value='';render()};$('image').oninput=render;$('copyTitle').onclick=()=>copy($('pageTitle').value);$('saveImage').onclick=saveImageToFolder;$('copyRich').onclick=copyRich;$('copyEmbed').onclick=()=>{const ids=batchIds.length?batchIds:(current?[current.id]:[]);if(!ids.length){set('status','Select at least one asset first.');return}const count=ids.length,height=Math.max(1100,610+count*570),label=announcementPageTitle(ids.map(id=>items.find(x=>x.id===id)).filter(Boolean));copy('<iframe src="'+articleURL(current)+'" width="100%" height="'+height+'" style="border:none;" loading="lazy" title="'+htmlEsc(label)+'"></iframe>');set('status','Embed copied for '+count+' asset'+(count===1?'':'s')+', each title listed in its heading. Replace the existing iframe in SharePoint. Separately copy the SharePoint Page Title for the SharePoint page itself.')};$('view').onclick=()=>window.open(articleURL(current),'_blank');$('copyCard').onclick=()=>copy(cardURL(current));$('copyPacket').onclick=()=>copy(reviewPacket());$('sharepoint').onclick=()=>window.open('https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Content-Sharing-Template.aspx','_blank','noopener');
+$('image').value=params.get('image')||'';$('asset').onchange=()=>{$('image').value='';updateAddButton();if($('asset').value)render();else set('selectionFeedback','')};$('image').oninput=render;$('copyTitle').onclick=()=>copy($('pageTitle').value);$('saveImage').onclick=saveImageToFolder;$('copyRich').onclick=copyRich;$('copyEmbed').onclick=()=>{const ids=batchIds.length?batchIds:(current?[current.id]:[]);if(!ids.length){set('status','Select at least one asset first.');return}const count=ids.length,height=Math.max(1100,610+count*570),label=announcementPageTitle(ids.map(id=>items.find(x=>x.id===id)).filter(Boolean));copy('<iframe src="'+articleURL(current)+'" width="100%" height="'+height+'" style="border:none;" loading="lazy" title="'+htmlEsc(label)+'"></iframe>');set('status','Embed copied for '+count+' asset'+(count===1?'':'s')+', each title listed in its heading. Replace the existing iframe in SharePoint. Separately copy the SharePoint Page Title for the SharePoint page itself.')};$('view').onclick=()=>window.open(articleURL(current),'_blank');$('copyCard').onclick=()=>copy(cardURL(current));$('copyPacket').onclick=()=>copy(reviewPacket());$('sharepoint').onclick=()=>window.open('https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Content-Sharing-Template.aspx','_blank','noopener');
 document.querySelectorAll('input[name="shareMethod"]').forEach(r=>r.addEventListener('change',()=>{const m=document.querySelector('input[name="shareMethod"]:checked').value;$('shareNews').hidden=m!=='news';$('shareBranded').hidden=m==='news';$('brandedSteps').hidden=m!=='branded';$('brandedMethodTitle').textContent=m==='branded'?'Branded SharePoint Page + Outlook Email':'Email only: Create an Outlook announcement';$('brandedMethodDesc').textContent=m==='branded'?'First create and publish the SharePoint page, then send a matching Outlook email. Both actions are required.':'Customize your announcement, create an Outlook email, review recipients, and send. No SharePoint page required.';}));$('brandedSteps').prepend($('copyTitle'));$('copyTitle').hidden=false;
-$('hasImageOnly').onchange=()=>{$('filterArtwork').value=$('hasImageOnly').checked?'available':'all';fillAssets()};$('clearSearch').onclick=()=>{$('search').value='';$('filterType').value='';$('datePreset').value='all';$('sortAssets').value='newest';$('hasImageOnly').checked=false;$('filterArtwork').value='all';$('descriptionFilter').value='all';$('filterOwner').value='';$('dateFrom').value='';$('dateTo').value='';$('customDates').hidden=true;fillAssets();$('search').focus();set('selectionFeedback','')};$('search').oninput=fillAssets;$('filterType').onchange=fillAssets;$('filterNews').onchange=fillAssets;$('filterArtwork').onchange=fillAssets;
-$('sortAssets').onchange=fillAssets;$('descriptionFilter').onchange=fillAssets;$('filterOwner').onchange=fillAssets;
+$('hasImageOnly').onchange=()=>{$('filterArtwork').value=$('hasImageOnly').checked?'available':'all';fillAssets()};$('clearSearch').onclick=()=>{$('search').value='';$('filterType').value='';$('datePreset').value='all';$('sortAssets').value='newest';$('hasImageOnly').checked=false;$('filterArtwork').value='all';$('descriptionFilter').value='all';$('filterOwner').value='';$('availabilityFilter').value='live';$('hasDescriptionOnly').checked=false;$('dateFrom').value='';$('dateTo').value='';$('customDates').hidden=true;fillAssets();$('search').focus();set('selectionFeedback','')};$('search').oninput=fillAssets;$('filterType').onchange=fillAssets;$('filterNews').onchange=fillAssets;$('filterArtwork').onchange=fillAssets;
+$('sortAssets').onchange=fillAssets;$('availabilityFilter').onchange=fillAssets;$('hasDescriptionOnly').onchange=()=>{$('descriptionFilter').value=$('hasDescriptionOnly').checked?'available':'all';fillAssets()};$('descriptionFilter').onchange=fillAssets;$('filterOwner').onchange=fillAssets;
 $('datePreset').onchange=()=>{$('customDates').hidden=$('datePreset').value!=='custom';fillAssets()};
-$('dateFrom').onchange=fillAssets;$('dateTo').onchange=fillAssets;Promise.all([fetch('./content.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Unable to load content');return r.json()}),fetch('./news-images-manifest.json',{cache:'no-store'}).then(r=>r.ok?r.json():{images:[]}).catch(()=>({images:[]}))]).then(([d,m])=>{items=(d.items||[]).filter(x=>x.id&&x.title).sort((a,b)=>clean(a.title).localeCompare(clean(b.title)));imageIds=new Set((m.images||[]).map(x=>x.id));const types=[...new Set(items.map(x=>clean(x.type)).filter(Boolean))].sort((a,b)=>a.localeCompare(b));const owners=[...new Set(items.map(x=>clean(x.ownerIndividual)).filter(Boolean))].sort((a,b)=>a.localeCompare(b));$('filterOwner').replaceChildren(new Option('All owners',''),...owners.map(v=>new Option(v,v)));$('filterType').replaceChildren(new Option('All content types',''),...types.map(t=>new Option(t,t)));const saved=restoreSavedView();const item=params.get('item');if(!saved&&item&&items.some(x=>x.id===item)){const chosen=items.find(x=>x.id===item);if(!hasArtwork(chosen))$('filterArtwork').value='all';$('datePreset').value='all'}fillAssets();if(item&&items.some(x=>x.id===item)&&[...$('asset').options].some(o=>o.value===item)){$('asset').value=item;render()}if(saved)renderBatch();updateEmailPreview();const requestedIds=(params.get('items')||'').split(',').filter(Boolean);if(embedded&&requestedIds.length){const records=[...new Set(requestedIds)].map(id=>items.find(x=>x.id===id)).filter(Boolean);if(records.length){document.querySelector('article.preview').innerHTML=articlePackage(records);document.querySelectorAll('.gcrh-shared-footer').forEach(e=>e.remove())}}}).catch(err=>set('status','Unable to load Content Library: '+err.message));
+$('dateFrom').onchange=fillAssets;$('dateTo').onchange=fillAssets;Promise.all([fetch('./content.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Unable to load content');return r.json()}),fetch('./news-images-manifest.json',{cache:'no-store'}).then(r=>r.ok?r.json():{images:[]}).catch(()=>({images:[]}))]).then(([d,m])=>{items=(d.items||[]).filter(x=>x.id&&x.title).sort((a,b)=>clean(a.title).localeCompare(clean(b.title)));imageIds=new Set((m.images||[]).map(x=>x.id));const types=[...new Set(items.map(x=>clean(x.type)).filter(Boolean))].sort((a,b)=>a.localeCompare(b));const owners=[...new Set(items.map(x=>clean(x.ownerIndividual)).filter(Boolean))].sort((a,b)=>a.localeCompare(b));$('filterOwner').replaceChildren(new Option('All owners',''),...owners.map(v=>new Option(v,v)));$('filterType').replaceChildren(new Option('All content types',''),...types.map(t=>new Option(t,t)));const saved=restoreSavedView();const item=params.get('item');if(!saved&&item&&items.some(x=>x.id===item)){const chosen=items.find(x=>x.id===item);if(!isLiveContent(chosen))$('availabilityFilter').value='all';if(!hasArtwork(chosen)){$('filterArtwork').value='all';$('hasImageOnly').checked=false}$('datePreset').value='all'}fillAssets();if(item&&items.some(x=>x.id===item)&&[...$('asset').options].some(o=>o.value===item)){$('asset').value=item;updateAddButton();render()}if(saved){renderBatch();updateAddButton()}updateEmailPreview();const requestedIds=(params.get('items')||'').split(',').filter(Boolean);if(embedded&&requestedIds.length){const records=[...new Set(requestedIds)].map(id=>items.find(x=>x.id===id)).filter(Boolean);if(records.length){document.querySelector('article.preview').innerHTML=articlePackage(records);document.querySelectorAll('.gcrh-shared-footer').forEach(e=>e.remove())}}}).catch(err=>set('status','Unable to load Content Library: '+err.message));
 </script>
 <!-- Shared Global Campaigns Resource Hub footer -->
 <div class="gcrh-shared-footer" style="clear:both;position:relative;display:block;box-sizing:border-box;width:100%;max-width:1200px;margin:30px auto 16px;padding:0 12px;">
