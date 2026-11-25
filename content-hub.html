@@ -656,7 +656,6 @@ function openModal(id){
         u ? `<a class="resource-btn" href="${esc(u)}" target="_blank">${esc(n)} &#8599;</a>`
           : `<div class="resource-btn unavailable">${esc(n)} &middot; not available</div>`
       ).join('')}</div></div>
-      ${relatedContentAssets(item).length ? `<div class="modal-box"><h3>Related campaign resources</h3><p class="modal-meta">Explore live content from the same campaign or use case.</p><div style="display:grid;gap:8px">${relatedContentAssets(item).map(r=>`<a href="./content-hub.html?item=${encodeURIComponent(r.id)}" target="_blank" rel="noopener noreferrer" style="display:block;border:1px solid #dce2e8;border-left:3px solid #c90016;padding:10px 12px;color:#243141;text-decoration:none"><strong>${esc(r.title)}</strong><br><small>${esc(r.type||'Content')} · ${esc(r.campaign||'Campaign resource')}</small></a>`).join('')}</div></div>` : ''}
       <div class="modal-box"><h3>Share</h3><div class="resource-grid">
         ${item.url ? `<a class="resource-btn" href="./customer-email-hub.html?source=content&title=${encodeURIComponent(item.title)}&description=${encodeURIComponent(item.abstract||'')}&url=${encodeURIComponent(item.url||'')}&useCase=${encodeURIComponent(item.useCase||'')}&campaign=${encodeURIComponent(item.campaign||'')}" target="_blank" rel="noopener">Create Customer Email &#8599;</a>` : `<div class="resource-btn unavailable">Email this &middot; nothing to share yet</div>`}
         <a class="resource-btn" href="./build-slide.html?v=20261112-3&id=${encodeURIComponent(item.id)}" target="_blank" rel="noopener">Overview Slide &#8599;</a>\n        ${/^https:\/\//i.test(item.url||'') ? `<a class="resource-btn" href="https://emmeeterry.github.io/Webinar-Activation-Hub/pam-email-hub.html?audience=Sales&source=content&title=${encodeURIComponent(item.title)}&description=${encodeURIComponent(item.abstract||'')}&url=${encodeURIComponent(item.url||'')}" target="_blank" rel="noopener">Sales & PAM Email: To Customer ↗</a>` : `<div class="resource-btn unavailable">Sales &amp; PAM Email: To Customer &middot; asset link pending</div>`}
@@ -667,6 +666,7 @@ function openModal(id){
             : `<div class="resource-btn unavailable">Add to calendar &middot; already passed</div>`
         ) : ''}
       </div></div>
+      ${relatedContentAssets(item).length ? `<div class="modal-box"><h3>Related campaign resources</h3><p class="modal-meta">Explore live content from the same campaign or use case.</p><div style="display:grid;gap:8px">${relatedContentAssets(item).map(r=>`<a href="./content-hub.html?item=${encodeURIComponent(r.id)}" target="_blank" rel="noopener noreferrer" style="display:block;border:1px solid #dce2e8;border-left:3px solid #c90016;padding:10px 12px;color:#243141;text-decoration:none"><strong>${esc(r.title)}</strong><br><small>${esc(r.type||'Content')} · ${esc(r.campaign||'Campaign resource')}</small></a>`).join('')}</div></div>` : ''}
     </div>
     <div>
       <div class="modal-box"><h3>Details</h3>
