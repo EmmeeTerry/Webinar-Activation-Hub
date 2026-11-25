@@ -451,7 +451,7 @@ async function downloadOutlookDraft(){
   setTimeout(()=>URL.revokeObjectURL(url),60000);
   set('status','Saved '+announcementDownloadName(records,'eml')+' with '+images.length+' cover image(s) embedded directly (PNG/JPEG/GIF).'+(unavailable.length?' Not embedded: '+unavailable.join(' | ')+'.':'')+' Open .eml in Classic Outlook and check its editable status, formatting and images before sending.');
  }catch(err){set('status','Could not prepare the Outlook draft: '+err.message)}
- finally{button.disabled=false;button.textContent='2. Download Outlook email with embedded covers (.eml)'}
+ finally{button.disabled=false;button.textContent='Create Outlook email'}
 }
 $('openOutlookEmail').onclick=openOutlookEmail;
 $('downloadOutlookDraft').onclick=downloadOutlookDraft;
