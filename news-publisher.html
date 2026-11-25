@@ -163,6 +163,7 @@ function render(){
 }
 function htmlEsc(v){return String(v||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
 function assetImage(x){
+  if(x.announcementImageUrl&&/^https:\/\//i.test(x.announcementImageUrl))return x.announcementImageUrl;
   if(x.id==='trust-continuity-and-competitive-advantage-in-the-ai-era-ebook-73')return trustArt;
   if(x.id==='sovereign-ai-starts-with-resilient-data-267')return sovereignArt;
   if(x.approvedNewsImageUrl&&!isSharePointImage(x.approvedNewsImageUrl)&&/^https:\/\//i.test(x.approvedNewsImageUrl))return x.approvedNewsImageUrl;
@@ -177,9 +178,9 @@ function announcementHeader(heading,eyebrow){
  +'</td></tr></table>';
 }
 function assetAnnouncementHTML(x,includeImages=true,editable=false){
- const d=clean(x.abstract||x.notes||'Description missing: The content owner has not provided a description. Please add one to the Master Content Library Smartsheet.');
+ const d=clean(x.abstract||'Description missing: The content owner has not provided a description. Please add one to the Master Content Library Smartsheet.');
  const artwork=assetImage(x),links=availableResourceLinks(x),titleText=title(x.title);
- const picture=includeImages&&artwork?'<div style="padding:0 0 13px"><img src="'+htmlEsc(artwork)+'" alt="'+htmlEsc(titleText)+' cover" width="130" style="display:block;max-width:130px;height:auto;border:1px solid #e5e9ef;border-radius:5px"></div>':'';
+ const picture=includeImages&&artwork?'<div style="float:left;max-width:35%;margin:0 16px 12px 0"><a href="'+htmlEsc(artwork)+'" target="_blank" rel="noopener noreferrer" title="View full image"><img src="'+htmlEsc(artwork)+'" alt="'+htmlEsc(titleText)+' cover" width="175" style="display:block;width:auto;max-width:100%;max-height:260px;height:auto;object-fit:contain;border:1px solid #e5e9ef;border-radius:5px"></a></div>':'';
  const coverLink=!includeImages&&artwork&&/^https:\/\//i.test(artwork)?'<p style="font-size:12px;margin:3px 0 12px"><a href="'+htmlEsc(artwork)+'" style="color:#bf0014;text-decoration:underline">View approved cover artwork ↗</a></p>':'';
  const list=links.length?'<p style="font-size:13px;letter-spacing:.3px;font-weight:bold;color:#152132;margin:18px 0 6px">AVAILABLE ACTIVATION RESOURCES</p><ul style="padding-left:20px;margin:4px 0 10px;font-size:13px;line-height:1.85">'
  +links.map(([name,url])=>'<li><a style="color:#bf0014;text-decoration:underline" href="'+htmlEsc(url)+'">'+htmlEsc(name)+'</a></li>').join('')+'</ul>':'';
@@ -188,7 +189,7 @@ function assetAnnouncementHTML(x,includeImages=true,editable=false){
  +'<h2 '+(editable?'contenteditable="true" role="textbox" aria-label="Edit article title" data-edit-id="'+htmlEsc(x.id)+'" data-edit-field="title"':'')+' style="font-size:21px;font-weight:bold;line-height:1.3;color:#111b2b;margin:0 0 10px">'+htmlEsc(titleText)+'</h2>'
  +picture+coverLink
  +'<p '+(editable?'contenteditable="true" role="textbox" aria-label="Edit article description" data-edit-id="'+htmlEsc(x.id)+'" data-edit-field="abstract"':'')+' style="font-size:14px;line-height:1.7;color:#465362;margin:0 0 14px">'+htmlEsc(d)+'</p>'
- +'<p style="margin:0 0 7px"><a href="'+htmlEsc(cardURL(x))+'" style="display:inline-block;padding:11px 15px;background:#e60012;color:#ffffff;font-size:13px;font-weight:bold;text-decoration:none;border-radius:4px">Explore asset &amp; activation resources ↗</a></p>'
+ +'<div style="clear:both"></div><p style="margin:0 0 7px"><a href="'+htmlEsc(cardURL(x))+'" style="display:inline-block;padding:11px 15px;background:#e60012;color:#ffffff;font-size:13px;font-weight:bold;text-decoration:none;border-radius:4px">Explore asset &amp; activation resources ↗</a></p>'
  +list
 
  +(shareActionLinks(x).length?'<p style="font-size:13px;font-weight:bold;color:#152132;margin:20px 0 8px">SHARE &amp; CREATE</p><ul style="padding-left:20px;margin:0 0 14px;font-size:13px;line-height:1.9">'+shareActionLinks(x).map(([label,url])=>'<li><a href="'+htmlEsc(url)+'" style="color:#bf0014">'+htmlEsc(label)+'</a></li>').join('')+'</ul>':'')
@@ -210,12 +211,12 @@ function articlePackage(records,includeImages=true,editable=false){
  +(editable?previewNavigationEditor():'')
  +editableIntroHTML(editable)
  +records.map(x=>assetAnnouncementHTML(x,includeImages,editable)).join('')
- +'<div style="padding:18px 28px;background:#f7f9fb;border-top:1px solid #e6e9ed">'+emailNavigationHtml('footer')+'</div></div>';
+ +'<div style="padding:18px 28px;background:#f7f9fb;border-top:1px solid #e6e9ed">'+emailNavigationHtml('footer')+'</div></div>'.replace(/<a(?![^>]*target=)/g,'<a target="_blank" rel="noopener noreferrer"');
 }
 
 // Email output is built independently of the web iframe. Public, absolute image URLs
 // avoid unsupported data: sources in email clients, while missing covers are omitted.
-function emailSelectedAssets(){return batchIds.length?batchEntries():(current?[editRecord(current)]:[])}
+function emailSelectedAssets(){return batchEntries()}
 function announcementDownloadName(records,extension){
  const selected=records.filter(Boolean);
  const first=title(selected[0]?.title||'Content Announcement');
@@ -225,6 +226,7 @@ function announcementDownloadName(records,extension){
 }
 
 function emailCoverURL(x){
+  if(x.announcementImageUrl&&/^https:\/\//i.test(x.announcementImageUrl))return x.announcementImageUrl;
  if(imageIds.has(x.id))return generatedImage(x);
  const u=x.approvedNewsImageUrl;
  if(/^https:\/\//i.test(u||'')&&!isSharePointImage(u))return u;
@@ -473,6 +475,8 @@ async function copyRich(){
 
 let batchIds=[];
 const announcementEdits={};
+const defaultImageHelp='Changes here affect only this announcement, not Smartsheet or the Content Library.';
+function renderImageControls(entries){const area=$('announcementImages');area.replaceChildren();area.hidden=!entries.length;if(!entries.length)return;const heading=document.createElement('h3');heading.textContent='Announcement images (optional)';area.append(heading);const hint=document.createElement('p');hint.className='hint';hint.textContent='Use the Content Library image automatically, or change the image for this announcement. '+defaultImageHelp;area.append(hint);for(const x of entries){const wrap=document.createElement('div');wrap.className='image-edit-row';const left=document.createElement('div');const name=document.createElement('strong');name.style.fontSize='12px';name.textContent=title(x.title);left.append(name);const thumb=assetImage(x);if(thumb){const img=document.createElement('img');img.src=thumb;img.alt='Current announcement image';img.style.cssText='display:block;margin-top:8px;max-width:110px;max-height:130px;object-fit:contain';left.append(img)}else{const msg=document.createElement('p');msg.className='hint';msg.textContent='No image in the Content Library';left.append(msg)}const right=document.createElement('div');const label=document.createElement('label');label.textContent=thumb?'Change announcement image':'Add announcement image';right.append(label);const input=document.createElement('input');input.type='url';input.placeholder='Paste a direct HTTPS image URL';input.value=announcementEdits[x.id]?.announcementImageUrl||'';input.setAttribute('aria-label','Image URL for '+title(x.title));right.append(input);const buttons=document.createElement('div');buttons.className='actions';const apply=document.createElement('button');apply.type='button';apply.textContent='Preview image';apply.onclick=()=>{const url=input.value.trim();if(!/^https:\/\/[^\s]+$/i.test(url)){set('status','Enter a direct HTTPS image URL to preview.');input.focus();return}const probe=new Image();apply.disabled=true;probe.onload=()=>{if(!announcementEdits[x.id])announcementEdits[x.id]={};announcementEdits[x.id].announcementImageUrl=url;renderBatch();set('status','New image preview applied for '+title(x.title)+'. The Content Library image is unchanged.')};probe.onerror=()=>{apply.disabled=false;set('status','That URL did not load as an image. Try a direct, publicly accessible HTTPS image URL.')};probe.src=url};buttons.append(apply);const reset=document.createElement('button');reset.className='secondary';reset.type='button';reset.textContent='Use Content Library image';reset.onclick=()=>{if(announcementEdits[x.id])delete announcementEdits[x.id].announcementImageUrl;renderBatch();set('status','Restored Content Library image for '+title(x.title)+'.')};buttons.append(reset);right.append(buttons);wrap.append(left,right);area.append(wrap)}}
 let announcementIntroEdit='';
 const editRecord=x=>{if(!x)return x;const v=announcementEdits[x.id];return v?{...x,...v}:x};
 const batchEntries=()=>batchIds.map(id=>items.find(x=>x.id===id)).filter(Boolean).map(editRecord);
@@ -534,6 +538,7 @@ function renderBatch(){
  $('copyTitle').textContent='Copy SharePoint page title';
  $('pageTitle').value=announcementPageTitle(entries.length?entries:[editRecord(current)]);
  updateEmailPreview();
+ renderImageControls(entries);
  $('batchPreview').innerHTML=entries.length?batchHTML()+`<div style="margin:20px 0 0;padding:22px 24px;background:#f6f7f9;border:1px solid #e3e7eb;border-radius:7px"><strong style="display:block;font-size:17px;color:#111b2b">Everything you need to activate, in one place.</strong><p style="color:#53626e;font-size:13px;line-height:1.6">Find content and promotional resources, share content with customers or partners, and create overview slides in the Content Library.</p><a href="https://hitachivantara.sharepoint.com/sites/To-PartnerCommunicationsFY23/SitePages/Content-Library.aspx" target="_blank" rel="noopener noreferrer" style="font-size:13px;font-weight:bold;color:#b20617">Explore the Content Library ↗</a></div>`:'<p class="hint">Add an asset to see the combined announcement preview here.</p>';
 }
 $('batchAdd').onclick=()=>{const id=$('asset').value;if(!id||batchIds.includes(id)){set('status','Select new content to add to your announcement.');return}if(batchIds.length>=20){set('status','Maximum 20 assets per announcement.');return}batchIds.push(id);renderBatch();set('status',batchIds.length+' assets in the combined announcement.');set('selectionFeedback','✓ '+title(items.find(x=>x.id===id)?.title||'Asset')+' added to your announcement. Select another asset or clear search to add more content.')};
@@ -545,7 +550,7 @@ $('batchClear').onclick=()=>{batchIds=[];renderBatch()};
 // This supports same-origin WebP assets and embedded artwork and avoids cross-origin canvas failures.
 function imageSourceForDownload(x){
  if(!x)return '';
- const custom=x.id===current?.id?$('image').value.trim():'';
+ const custom=x.announcementImageUrl||'';
  if(/^https:\/\//i.test(custom))return custom;
  return assetImage(x);
 }
@@ -817,7 +822,7 @@ function restoreSavedView(){
  $('dateFrom').value=params.get('from')||'';$('dateTo').value=params.get('to')||'';
  $('customDates').hidden=$('datePreset').value!=='custom';
  batchIds=[...new Set((params.get('selection')||'').split(',').filter(Boolean))].filter(id=>items.some(x=>x.id===id)).slice(0,20);
- try{const raw=(params.get('custom')||'').replace(/-/g,'+').replace(/_/g,'/');if(raw){const data=JSON.parse(new TextDecoder().decode(Uint8Array.from(atob(raw),c=>c.charCodeAt(0))));if(typeof data.intro==='string')announcementIntroEdit=data.intro.slice(0,2500);if(data.nav&&typeof data.nav==='object'){for(const label of ['News and Updates','Global Campaigns Hub']){const url=data.nav[label];if(typeof url==='string'&&/^https?:\/\/\S+$/i.test(url))navDestinations[label]=url}}for(const [id,edit] of Object.entries(data.records||{})){if(!items.some(x=>x.id===id)||!edit||typeof edit!=='object')continue;announcementEdits[id]={};for(const k of ['title','abstract'])if(typeof edit[k]==='string')announcementEdits[id][k]=edit[k].slice(0,4000);if(edit._links&&typeof edit._links==='object'){announcementEdits[id]._links={};for(const [label,url] of Object.entries(edit._links))if(/^https?:\/\/\S+$/i.test(url))announcementEdits[id]._links[label]=url}}}}catch(e){console.warn('Could not restore announcement edits',e)}
+ try{const raw=(params.get('custom')||'').replace(/-/g,'+').replace(/_/g,'/');if(raw){const data=JSON.parse(new TextDecoder().decode(Uint8Array.from(atob(raw),c=>c.charCodeAt(0))));if(typeof data.intro==='string')announcementIntroEdit=data.intro.slice(0,2500);if(data.nav&&typeof data.nav==='object'){for(const label of ['News and Updates','Global Campaigns Hub']){const url=data.nav[label];if(typeof url==='string'&&/^https?:\/\/\S+$/i.test(url))navDestinations[label]=url}}for(const [id,edit] of Object.entries(data.records||{})){if(!items.some(x=>x.id===id)||!edit||typeof edit!=='object')continue;announcementEdits[id]={};for(const k of ['title','abstract','announcementImageUrl'])if(typeof edit[k]==='string')announcementEdits[id][k]=edit[k].slice(0,4000);if(edit._links&&typeof edit._links==='object'){announcementEdits[id]._links={};for(const [label,url] of Object.entries(edit._links))if(/^https?:\/\/\S+$/i.test(url))announcementEdits[id]._links[label]=url}}}}catch(e){console.warn('Could not restore announcement edits',e)}
  return true;
 }
 $('sharePreview').onclick=()=>{if(!emailSelectedAssets().length){set('status','Select content before sharing a preview.');return}$('saveView').click()};
