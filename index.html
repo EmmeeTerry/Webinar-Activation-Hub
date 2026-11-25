@@ -112,7 +112,7 @@ h1{font-family:"Hitachi Sans",Arial,Helvetica,sans-serif;font-weight:400;font-si
 
 
 /* Webinar planning views */
-.planning-nav{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 14px}
+.planning-nav{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 14px}.planning-nav button{flex:1 1 150px;min-height:44px;font-size:14px}
 .planning-nav button{border:1px solid var(--gray2);background:white;padding:10px 14px;border-radius:3px;font-family:inherit;font-size:12px;font-weight:700;cursor:pointer}
 .planning-nav button.active{background:var(--black);color:white;border-color:var(--black)}
 .planning-preview,.planning-panel{border:1px solid var(--line);border-radius:4px;background:white;padding:17px 20px;margin-bottom:18px}
@@ -162,7 +162,7 @@ h1{font-family:"Hitachi Sans",Arial,Helvetica,sans-serif;font-weight:400;font-si
 .webinar-art-large .webinar-art-label{font-size:26px}
 .spotlight-card .webinar-art{width:100%;height:105px;margin-bottom:12px;flex:none}
 @media(max-width:600px){.webinar-art{flex-basis:85px;width:85px;height:72px}.webinar-art-large{width:100%;height:150px}}
-</style>
+@media(min-width:901px){.spotlight{grid-template-columns:repeat(4,minmax(0,1fr))}}</style>
 </head>
 <body>
 <header class="header">
@@ -188,13 +188,14 @@ h1{font-family:"Hitachi Sans",Arial,Helvetica,sans-serif;font-weight:400;font-si
   </div>
 </header>
 <main class="main">
-  <div id="spotlight" class="spotlight"></div>
-  <div id="dataQualityAudit"></div>
   <nav class="planning-nav" aria-label="Webinar views">
     <button id="web-view-library" class="active" type="button" onclick="setWebinarView('library')">Webinar Library</button>
-    <button id="web-view-calendar" type="button" onclick="setWebinarView('calendar')">Webinar Calendar</button>
+    <button id="web-view-calendar" type="button" onclick="setWebinarView('calendar')">Calendar View</button>
     <button id="web-view-upcoming" type="button" onclick="setWebinarView('upcoming')">Upcoming Webinars</button>
   </nav>
+  <div id="spotlight" class="spotlight"></div>
+  <div id="dataQualityAudit"></div>
+
   <div class="toolbar">
     <input id="search" class="search" placeholder="Search by webinar, campaign, use case, owner, audience, region…">
     <div id="chips" class="filter-dropdowns"></div>
@@ -554,8 +555,10 @@ function renderSpotlight(){
  const past=withDates.filter(w=>w.date<todayStrVal).sort((a,b)=>b.date.localeCompare(a.date));
  const happeningToday=withDates.find(w=>w.date===todayStrVal);
 
- const next=future.find(w=>w.status==='Upcoming')||future[0];
- const current=happeningToday||past[0];
+ const ready=withDates.filter(w=>w.date<=todayStrVal&&w.status==='On Demand'&&isResourceUrl(w.links?.watch)).sort((a,b)=>b.date.localeCompare(a.date));
+ const invites=withDates.filter(w=>w.date>=todayStrVal&&w.status==='Upcoming'&&isResourceUrl(w.links?.watch)).sort((a,b)=>a.date.localeCompare(b.date));
+ const featured=[...invites.slice(0,1),...ready,...invites.slice(1)].slice(0,3);
+ const next=future.find(w=>!featured.includes(w));
 
  function block(label,w){
    if(!w) return `<div class="spotlight-card" style="cursor:default"><div class="spotlight-label">${esc(label)}</div><div class="spotlight-empty">Nothing to show right now.</div></div>`;
@@ -567,8 +570,8 @@ function renderSpotlight(){
  }
 
  document.getElementById('spotlight').innerHTML =
-   block(happeningToday?'Happening today':'Most recent', current) +
-   block('Coming up next', next);
+   featured.map(w=>block(w.status==='On Demand'?'Ready to promote · On demand':'Ready to promote · Register',w)).join('') +
+   (next?block('Coming up next', next):'');
 }
 function emailLink(w){
   // Customer-facing share template generated from the webinar's synced data.
