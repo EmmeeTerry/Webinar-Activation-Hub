@@ -165,7 +165,7 @@ h1{font-family:"Hitachi Sans",Arial,Helvetica,sans-serif;font-weight:400;font-si
 
  .content-cover{float:left;width:76px;height:96px;object-fit:contain;margin:0 14px 8px 0;border:1px solid #e2e6eb;border-radius:4px;background:white}
  .content-cover-large{display:block;max-width:220px;max-height:270px;object-fit:contain;margin:0 0 16px;border:1px solid #e2e6eb;border-radius:4px;background:white}
-</style>
+@media(min-width:901px){.spotlight{grid-template-columns:repeat(3,minmax(0,1fr))}}</style>
 </head>
 <body>
 <header class="header">
@@ -192,11 +192,7 @@ h1{font-family:"Hitachi Sans",Arial,Helvetica,sans-serif;font-weight:400;font-si
 <div class="main">
   <div id="spotlight" class="spotlight"></div>
   <div id="needsAttention"></div>
-  <section class="coming-soon" aria-label="Coming soon content">
-    <div class="coming-soon-head"><h2>Coming Soon</h2><button class="pipeline-link" type="button" onclick="setContentView('upcoming')">Explore all upcoming &#8594;</button></div>
-    <div class="coming-soon-caption">Upcoming content from the Smartsheet master list, based on target publish dates. Dates may change.</div>
-    <div id="comingSoonCards" class="soon-grid"></div>
-  </section>
+
   <div class="content-view-nav" role="group" aria-label="Content view">
     <button type="button" id="view-library" class="active" onclick="setContentView('library')">Content Library</button>
     <button type="button" id="view-calendar" onclick="setContentView('calendar')">Content Calendar</button>
@@ -657,9 +653,9 @@ function openModal(id){
           : `<div class="resource-btn unavailable">${esc(n)} &middot; not available</div>`
       ).join('')}</div></div>
       <div class="modal-box"><h3>Share</h3><div class="resource-grid">
-        ${item.url ? `<a class="resource-btn" href="./customer-email-hub.html?source=content&title=${encodeURIComponent(item.title)}&description=${encodeURIComponent(item.abstract||'')}&url=${encodeURIComponent(item.url||'')}&useCase=${encodeURIComponent(item.useCase||'')}&campaign=${encodeURIComponent(item.campaign||'')}" target="_blank" rel="noopener">Create Customer Email &#8599;</a>` : `<div class="resource-btn unavailable">Email this &middot; nothing to share yet</div>`}
-        <a class="resource-btn" href="./build-slide.html?v=20261112-3&id=${encodeURIComponent(item.id)}" target="_blank" rel="noopener">Overview Slide &#8599;</a>\n        ${/^https:\/\//i.test(item.url||'') ? `<a class="resource-btn" href="https://emmeeterry.github.io/Webinar-Activation-Hub/pam-email-hub.html?audience=Sales&source=content&title=${encodeURIComponent(item.title)}&description=${encodeURIComponent(item.abstract||'')}&url=${encodeURIComponent(item.url||'')}" target="_blank" rel="noopener">Sales & PAM Email: To Customer ↗</a>` : `<div class="resource-btn unavailable">Sales &amp; PAM Email: To Customer &middot; asset link pending</div>`}
-        ${/^https:\/\//i.test(item.url||'') ? `<a class="resource-btn" href="https://emmeeterry.github.io/Webinar-Activation-Hub/pam-email-hub.html?audience=PAM&source=content&title=${encodeURIComponent(item.title)}&description=${encodeURIComponent(item.abstract||'')}&url=${encodeURIComponent(item.url||'')}&pmh=${encodeURIComponent(item.partnerCampaignLink||'')}&topic=${encodeURIComponent(item.useCase||'')}" target="_blank" rel="noopener">Sales & PAM Email: To Partner ↗</a>` : `<div class="resource-btn unavailable">Sales &amp; PAM Email: To Partner &middot; asset link pending</div>`}
+        ${item.url ? `<a class="resource-btn" href="./customer-email-hub.html?v=20261125-batch01&source=content&title=${encodeURIComponent(item.title)}&description=${encodeURIComponent(item.abstract||'')}&url=${encodeURIComponent(item.url||'')}&useCase=${encodeURIComponent(item.useCase||'')}&campaign=${encodeURIComponent(item.campaign||'')}" target="_blank" rel="noopener">Create Customer Email &#8599;</a>` : `<div class="resource-btn unavailable">Email this &middot; nothing to share yet</div>`}
+        <a class="resource-btn" href="./build-slide.html?v=20261125-batch01&id=${encodeURIComponent(item.id)}" target="_blank" rel="noopener">Overview Slide &#8599;</a>
+        ${/^https:\/\//i.test(item.url||'') ? `<a class="resource-btn" href="./customer-email-hub.html?v=20261125-batch01&audience=PAM&source=content&title=${encodeURIComponent(item.title)}&description=${encodeURIComponent(item.abstract||'')}&url=${encodeURIComponent(item.url||'')}&pmh=${encodeURIComponent(item.partnerCampaignLink||'')}&topic=${encodeURIComponent(item.useCase||'')}" target="_blank" rel="noopener">Create PAM-to-Partner Email ↗</a>` : `<div class="resource-btn unavailable">Sales &amp; PAM Email: To Partner &middot; asset link pending</div>`}
         ${item.type === 'Webinar' && item.publishDate ? (
           item.publishDate >= todayStr()
             ? `<a class="resource-btn" href="#" onclick="event.preventDefault();downloadICS('${esc(item.id)}')">Add to calendar</a>`
@@ -699,7 +695,7 @@ const SORT_COLUMNS = [
   {label:'Status / Date', key:'publishDate'},
   {label:'Links', key:null},
 ];
-let sortKey = null, sortDir = 1;
+let sortKey = 'publishDate', sortDir = -1;
 function setSort(key){
   if(!key) return;
   if(sortKey === key) sortDir *= -1; else { sortKey = key; sortDir = 1; }
@@ -754,7 +750,7 @@ function bindContentButtons(scope){
 function renderComingSoon(){
   const el=document.getElementById('comingSoonCards');
   if(!el)return;
-  const next=upcomingItems(DATA).slice(0,3);
+  const next=upcomingItems(DATA).filter(x=>x.status!=='Live').slice(0,1);
   if(!next.length){el.innerHTML='<div class="soon-empty">No future-dated content is currently scheduled.</div>';return;}
   el.innerHTML=next.map(item=>itemButton(item,'soon-card '+eventCategory(item),
     '<div class="soon-date">'+esc(displayPublishDate(item.publishDate))+'</div>'+
@@ -859,7 +855,7 @@ function renderSpotlight(){
   const todayStr = now.getFullYear() + '-' + String(now.getMonth()+1).padStart(2,'0') + '-' + String(now.getDate()).padStart(2,'0');
   const withDates = DATA.filter(x => x.publishDate);
   const future = withDates.filter(x => x.publishDate > todayStr).sort((a,b) => a.publishDate.localeCompare(b.publishDate));
-  const past = withDates.filter(x => x.publishDate < todayStr).sort((a,b) => b.publishDate.localeCompare(a.publishDate));
+  const past = withDates.filter(x => x.publishDate <= todayStr && x.status==='Live' && /^https?:\/\//i.test(x.url||'')).sort((a,b) => b.publishDate.localeCompare(a.publishDate));
   const publishingToday = withDates.find(x => x.publishDate === todayStr);
 
   const next = future[0];
@@ -874,8 +870,7 @@ function renderSpotlight(){
   }
 
   document.getElementById('spotlight').innerHTML =
-    block(publishingToday ? 'Published today' : 'Most recently published', recent) +
-    block('Coming up next', next);
+    past.slice(0,3).map(item=>block('Ready to promote · Recently published',item)).join('');
 }
 let attentionExpanded = false;
 function findAttentionItems(){
