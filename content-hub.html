@@ -165,7 +165,7 @@ h1{font-family:"Hitachi Sans",Arial,Helvetica,sans-serif;font-weight:400;font-si
 
  .content-cover{float:left;width:76px;height:96px;object-fit:contain;margin:0 14px 8px 0;border:1px solid #e2e6eb;border-radius:4px;background:white}
  .content-cover-large{display:block;max-width:220px;max-height:270px;object-fit:contain;margin:0 0 16px;border:1px solid #e2e6eb;border-radius:4px;background:white}
-</style>
+@media(min-width:901px){.spotlight{grid-template-columns:repeat(3,minmax(0,1fr))}}</style>
 </head>
 <body>
 <header class="header">
@@ -754,7 +754,7 @@ function bindContentButtons(scope){
 function renderComingSoon(){
   const el=document.getElementById('comingSoonCards');
   if(!el)return;
-  const next=upcomingItems(DATA).slice(0,3);
+  const next=upcomingItems(DATA).filter(x=>x.status!=='Live').slice(0,1);
   if(!next.length){el.innerHTML='<div class="soon-empty">No future-dated content is currently scheduled.</div>';return;}
   el.innerHTML=next.map(item=>itemButton(item,'soon-card '+eventCategory(item),
     '<div class="soon-date">'+esc(displayPublishDate(item.publishDate))+'</div>'+
@@ -859,7 +859,7 @@ function renderSpotlight(){
   const todayStr = now.getFullYear() + '-' + String(now.getMonth()+1).padStart(2,'0') + '-' + String(now.getDate()).padStart(2,'0');
   const withDates = DATA.filter(x => x.publishDate);
   const future = withDates.filter(x => x.publishDate > todayStr).sort((a,b) => a.publishDate.localeCompare(b.publishDate));
-  const past = withDates.filter(x => x.publishDate < todayStr).sort((a,b) => b.publishDate.localeCompare(a.publishDate));
+  const past = withDates.filter(x => x.publishDate <= todayStr && x.status==='Live' && /^https?:\/\//i.test(x.url||'')).sort((a,b) => b.publishDate.localeCompare(a.publishDate));
   const publishingToday = withDates.find(x => x.publishDate === todayStr);
 
   const next = future[0];
@@ -874,8 +874,7 @@ function renderSpotlight(){
   }
 
   document.getElementById('spotlight').innerHTML =
-    block(publishingToday ? 'Published today' : 'Most recently published', recent) +
-    block('Coming up next', next);
+    past.slice(0,3).map(item=>block('Ready to promote · Recently published',item)).join('');
 }
 let attentionExpanded = false;
 function findAttentionItems(){
