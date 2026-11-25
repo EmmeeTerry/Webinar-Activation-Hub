@@ -202,6 +202,7 @@ function announcementPageTitle(records){
  if(!titles.length)return 'Content Announcement';
  return titles.join(' | ');
 }
+function announcementEmailSubject(records){return 'Content to Share with Customers and Partners | '+announcementPageTitle(records)}
 function articlePackage(records,includeImages=true,editable=false){
  if(!records.length)return '';
  const one=records.length===1,head=announcementPageTitle(records);
@@ -357,7 +358,7 @@ function outlookText(records){
 }
 function openOutlookWithBody(){
  const records=emailSelectedAssets();if(!records.length){set('status','Select an asset first.');return}
- const subject=announcementPageTitle(records),body=outlookText(records);
+ const subject=announcementEmailSubject(records),body=outlookText(records);
  const url='https://outlook.office.com/mail/deeplink/compose?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
  if(url.length>16000){
   set('status','This announcement is too long for a reliable Outlook compose link. Use Download formatted Outlook file, or Copy designed email + open Outlook and paste with Ctrl+V.');
@@ -370,7 +371,7 @@ $('openOutlookWithBody').onclick=openOutlookWithBody;
 async function openOutlookEmail(){
  const records=emailSelectedAssets();
  if(!records.length){set('status','Select at least one asset first.');return}
- const subject=announcementPageTitle(records);
+ const subject=announcementEmailSubject(records);
  const url='https://outlook.office.com/mail/deeplink/compose?subject='+encodeURIComponent(subject);
  // Open synchronously in the click handler before clipboard permission prompts.
  const tab=window.open(url,'_blank');
@@ -420,7 +421,7 @@ async function downloadOutlookDraft(){
     images.push({cid,blob,name:'asset-'+(images.length+1)+(blob.type==='image/jpeg'?'.jpg':blob.type==='image/gif'?'.gif':'.png')});
    }catch(err){mappings[x.id]='';unavailable.push(title(x.title)+': '+err.message)}
   }
-  const subject=announcementPageTitle(records),utf8Subject='=?UTF-8?B?'+b64(enc.encode(subject))+'?=';
+  const subject=announcementEmailSubject(records),utf8Subject='=?UTF-8?B?'+b64(enc.encode(subject))+'?=';
   const html=emailDocument(records,mappings);
   const mime=[
     'X-Unsent: 1',
