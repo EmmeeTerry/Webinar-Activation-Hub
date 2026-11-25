@@ -29,7 +29,7 @@ Use the visible **Artwork, News status, Publish date, and Sort** filters to find
 3. Review and publish the page after approval. The iframe includes all selected assets and both resource footers.
 
 **Part 2: Send the matching Outlook announcement**
-1. Click **2. Download Outlook email with embedded covers (.eml)**.
+1. Click **Create Outlook email**.
 2. Open the downloaded .eml with Classic Outlook. Confirm images and links, and whether the message can be edited. Some versions open .eml read-only. The builder will report any cover it cannot retrieve/convert.
 3. Add recipients, send yourself a test, then distribute after approval. Nothing sends automatically.
 
