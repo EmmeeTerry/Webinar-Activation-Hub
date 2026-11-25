@@ -1,0 +1,10 @@
+import assert from 'node:assert/strict';
+import utils from '../shared/hub-date-utils.js';
+assert.equal(utils.localDay(new Date(2026,0,2,23,59)), '2026-01-02');
+assert.equal(utils.localDay(new Date(2024,1,29)), '2024-02-29');
+assert.equal(utils.localDay(new Date(2026,11,31)), '2026-12-31');
+assert.equal(utils.todayStr(),utils.localDay(new Date()));
+assert.equal(utils.icsEscape('a,b;c\\d\ne'),'a\\,b\\;c\\\\d\\ne');
+assert.equal(utils.icsEscape(null),'');
+assert.equal(utils.icsEscape(''),'');
+console.log('Shared date utility tests passed');
