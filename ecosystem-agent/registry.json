@@ -1,0 +1,139 @@
+{
+  "version": 1,
+  "scope": "ecosystem",
+  "products": {
+    "content": [
+      "content-hub.html",
+      "build-slide.html",
+      "email-content.html",
+      "sync_content.py"
+    ],
+    "webinar": [
+      "index.html",
+      "event-slide.html",
+      "email-webinar.html",
+      "sync_webinars.py"
+    ],
+    "contentAnnouncement": [
+      "news-publisher.html",
+      "news-announcement-embed.html"
+    ],
+    "pulse": [
+      "pam-email-announcement-builder.html"
+    ],
+    "email": [
+      "pam-email-hub.html",
+      "customer-email-hub.html",
+      "sales-partner-v2.js"
+    ],
+    "campaignGateway": [
+      "Global-Campaigns-Resource-Hub/index.html",
+      "Global-Campaigns-Resource-Hub/global-events-calendar.html"
+    ]
+  },
+  "capabilities": [
+    {
+      "id": "search-filter",
+      "pattern": "filter|search",
+      "products": [
+        "content",
+        "webinar"
+      ],
+      "target": "shared configurable search and filter utilities"
+    },
+    {
+      "id": "calendar",
+      "pattern": "calendar|downloadICS",
+      "products": [
+        "content",
+        "webinar",
+        "campaignGateway"
+      ],
+      "target": "shared date utilities; preserve distinct event semantics"
+    },
+    {
+      "id": "resource-cards",
+      "pattern": "openModal|resource|relatedContent",
+      "products": [
+        "content",
+        "webinar"
+      ],
+      "target": "shared resource model and card rendering"
+    },
+    {
+      "id": "slides",
+      "pattern": "slide|pptx",
+      "products": [
+        "content",
+        "webinar"
+      ],
+      "target": "shared presentation utilities"
+    },
+    {
+      "id": "visuals",
+      "pattern": "image|artwork|cover",
+      "products": [
+        "content",
+        "webinar",
+        "contentAnnouncement",
+        "pulse",
+        "email"
+      ],
+      "target": "shared image resolution and validation"
+    },
+    {
+      "id": "sharing",
+      "pattern": "share|deepLink|copy.*Link",
+      "products": [
+        "content",
+        "webinar",
+        "contentAnnouncement",
+        "pulse",
+        "email"
+      ],
+      "target": "shared deep links and sharing"
+    },
+    {
+      "id": "promotion",
+      "pattern": "email|announcement",
+      "products": [
+        "content",
+        "webinar",
+        "contentAnnouncement",
+        "pulse",
+        "email"
+      ],
+      "target": "central message records and audience-specific outputs"
+    },
+    {
+      "id": "outlook",
+      "pattern": "outlook|copyFormatted|downloadEmail",
+      "products": [
+        "contentAnnouncement",
+        "pulse",
+        "email"
+      ],
+      "target": "shared email export and clipboard helpers"
+    },
+    {
+      "id": "sync",
+      "pattern": "smartsheet|sync",
+      "products": [
+        "content",
+        "webinar"
+      ],
+      "target": "shared utilities, preserve source mappings"
+    },
+    {
+      "id": "translation",
+      "pattern": "translat",
+      "products": [
+        "email",
+        "contentAnnouncement",
+        "pulse"
+      ],
+      "target": "verify before restoring; email v2 intentionally disabled"
+    }
+  ],
+  "status": "candidate inventory; source matches are evidence of possible capability, not proof of behavior"
+}
