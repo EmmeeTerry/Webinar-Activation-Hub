@@ -67,7 +67,7 @@
      add('Paid media',true);
    }
  }
- const paidArtwork = safeUrl(webinar ? entry.links?.paidSocial : resources.find(resource => resource.label === 'Paid Media' || resource.label.startsWith('Paid social ads'))?.url);
+ const paidArtwork = safeUrl(webinar ? entry.links?.paidSocial : entry.paidSocialAds);
  const directAdImage = /\.(?:gif|png|jpe?g|webp|bmp|avif)(?:[?#]|$)/i.test(paidArtwork) ? paidArtwork : '';
  fields.paidArtwork = paidArtwork;
  let manifestImages=[];
@@ -84,12 +84,12 @@
    add('Marketo email preview',entry.marketoPreviewEnterprise);
    add('Paid media creative',entry.paidSocialAds);
  }
- fields.promotion=channels.join(' • ');
- fields.promotionResources=JSON.stringify(resources);
+ fields.promotion=[...new Set(channels)].join(' • ');
+ const uniqueResources=resources.filter((r,i,a)=>!r.url||a.findIndex(x=>x.url===r.url)===i);fields.promotionResources=JSON.stringify(uniqueResources);
  fields.promotionPeriod=webinar?'':(entry.promotionPeriod||'');
  fields.promotionLabel=webinar?'PROMOTION RESOURCES AVAILABLE':'PLANNED PROMOTION / ACTIVATION';
  const hash=new URLSearchParams(fields).toString();
- location.replace('./event-slide.html?v=20261112-3#'+hash);
+ location.replace('./event-slide.html?v=20261125-batch01#'+hash);
 }catch(err){status.textContent='Unable to prepare slide: '+err.message;}})();
 </script>
 <!-- Shared Global Campaigns Resource Hub footer -->
