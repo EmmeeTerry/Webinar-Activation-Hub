@@ -1,5 +1,5 @@
 {
-  "lastRefreshed": "2026-11-26T11:11:54.288810+00:00",
+  "lastRefreshed": "2026-11-26T21:46:35.398476+00:00",
   "items": [
     {
       "id": "10-reasons-to-buy-build-or-borrow-ai-implementation-ebook-1",
@@ -1102,7 +1102,7 @@
       "ownerIndividual": "Sulochna Khokhrai",
       "publishedByVendor": "",
       "notes": "\u26a0\ufe0f POTENTIAL DUPLICATE \u2014 Review with \"Ai Data Foundation Roadmap Guide\" (Use Case: Data Readiness and Activation for AI). @stephanie.thompson@hitachivantara.com @sulochna.khokhrai@hitachivantara.com \u2014 Flagged by Smart Assist 10/1/2026.",
-      "actionRequired": "",
+      "actionRequired": "Update status or revise publish date",
       "abstract": "",
       "webinarImage": null,
       "approvedNewsImageUrl": null,
@@ -1113,7 +1113,7 @@
       "partnerCampaignLink": null,
       "fiscalYear": "FY27",
       "fiscalQuarter": "Q3",
-      "issueType": ""
+      "issueType": "Overdue"
     },
     {
       "id": "ai-discovery-service-booking-form-assessment-26",
@@ -4531,11 +4531,11 @@
       "paidMediaDateDisplay": "",
       "primaryActivation": "Content Syndication, Outbound Email, Paid Search, Organic Social, Campaign Landing Page, Sales Email",
       "marketingEmail": null,
-      "outboundEmailEnterprise": null,
-      "outboundBannerEnterprise": null,
+      "outboundEmailEnterprise": "https://hitachivantara.sharepoint.com/:w:/s/GlobalCampaignsAssets505/IQBKBtRpcgYJQaCFgZnBwiajAWaA_yaLSnpMrZWsM7jRfn8?e=1E6Mja",
+      "outboundBannerEnterprise": "https://brand.hitachivantara.com/studio/categories/127666?template=1005790",
       "marketoPreviewEnterprise": null,
       "paidSocialAds": null,
-      "salesEmail": null,
+      "salesEmail": "https://hitachivantara.sharepoint.com/:w:/s/GlobalCampaignsAssets505/IQBAtzoCbu-tTY17_8Tmv7S2AYsY2EQtr1VlkcF4iYtMKfo?e=Flhapy",
       "sdrEmail": null,
       "usedInCampaign": "No",
       "promotionDates": [],
